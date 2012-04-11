@@ -1,0 +1,106 @@
+.caixa {
+	border: 1px solid;
+	padding: 1em;
+}
+
+.centra {
+	text-align: center;
+}
+
+.cole {
+	float: left;
+	margin-left: 60px;
+	width: 270px;
+}
+
+.cold {
+	float: right;
+	margin-right: 60px;
+	width: 270px;
+}
+
+.clear {
+	clear: both;
+}
+
+.ident {
+	margin-left: 15px;
+}
+
+.news_image {
+	float: left;
+	margin: 3px 5px 3px 0;
+}
+
+.nolist {
+	list-style-type: none !important;
+}
+
+.red {
+	color: red;
+}
+
+.taula {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.td_53 {
+	width: 53%;
+}
+
+.td_50 {
+	width: 50%;
+}
+
+.td_47 {
+	width: 47%;
+}
+
+.td_45 {
+	width: 45%;
+}
+
+.td_28 {
+	width: 28%;
+}
+
+.td_25 {
+	width: 25%;
+}
+
+.td_15 {
+	width: 15%;
+}
+
+.td_10 {
+	width: 10%;
+}
+
+.text_lsize {
+	font-size: x-large;
+}
+
+.text_msize {
+	font-size: medium;
+}
+
+.text_ssize {
+	font-size: small;
+}
+
+.centres {
+	width: 100%;
+}
+
+.centres ul {
+	margin: 0;
+}
+
+.centres ul li {
+	display: inline;
+	float: left;
+	width: 40%;
+	margin: 0 0 2em 8%;
+	height:11em;
+}

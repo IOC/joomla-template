@@ -1,0 +1,30 @@
+#errorboxbody {
+	margin: 30px;
+}
+
+#errorboxbody h2 {
+	font-weight: normal;
+	font-size: 1.5em;
+}
+
+#searchbox {
+	background: #eee;
+	padding: 10px;
+	margin-top: 20px;
+	border: solid 1px #ddd;
+	width: 100%;
+}
+
+.errdesc {
+	background-color: #eee;
+	width: 100%;
+	text-align: center;
+	border: 1px solid #ddd;
+	padding: 10px;
+	font-size: 1.7em;
+}
+
+.errnum {
+	font-size: 0.7em;
+	font-weight: normal;
+}

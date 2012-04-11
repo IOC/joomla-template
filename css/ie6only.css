@@ -1,0 +1,19 @@
+/* IE 6 */
+
+.ie6{
+padding: 15px;
+margin-top:50px;
+width:780px;
+background:#fff;
+border-style:solid;
+border-color:#E0E0E0;
+border-width:thin;
+}
+
+.ie6 p{
+text-align:left;
+}
+
+.ie6 .logo{
+float:left;
+}
