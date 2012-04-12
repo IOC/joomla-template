@@ -125,7 +125,7 @@ padding-top:0
 #all
 {
       text-align:left;
-      border:solid 0px #000
+      border:0 !important;
 }
 
 #back
@@ -136,7 +136,7 @@ padding-top:0
 
 #right
 {
-      display: block;
+      display: none;
 }
 
 #header h1#logo
@@ -180,10 +180,11 @@ padding-top:0
   border-top:none!important;
 }
 
-#wrapper
+#wrapper, #wrapper2
 {
 	display:block;
 	width:100% !important;
+  border: 0 !important;
 }
 
 .item
@@ -465,4 +466,12 @@ legend
 #bottom ul li
 {
   border:solid 0px #c00
+}
+
+.left1{
+  display: none;
+}
+
+#main .col2, #main .col1 {
+  width:285px!important;
 }
