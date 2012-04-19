@@ -114,19 +114,8 @@ $doc->addScript($this->baseurl.'/templates/'.$this->template.'/javascript/md_sty
 						</span>
 						</h1>
 					</div><!-- end logoheader -->
-
-						<ul class="skiplinks">
-							<li><a href="#main" class="u2"><?php echo JText::_('TPL_IOC_SKIP_TO_CONTENT'); ?></a></li>
-							<li><a href="#nav" class="u2"><?php echo JText::_('TPL_IOC_JUMP_TO_NAV'); ?></a></li>
-							<?php if($showRightColumn ):?>
-							<li><a href="#additional" class="u2"><?php echo JText::_('TPL_IOC_JUMP_TO_INFO'); ?></a></li>
-							<?php endif; ?>
-						</ul>
-						<h2 class="unseen"><?php echo JText::_('TPL_IOC_NAV_VIEW_SEARCH'); ?></h2>
-						<h3 class="unseen"><?php echo JText::_('TPL_IOC_NAVIGATION'); ?></h3>
 						<jdoc:include type="modules" name="position-1" />
 						<div id="line">
-	<!--					<div id="fontsize"></div>-->
 						<h3 class="unseen"><?php echo JText::_('TPL_IOC_SEARCH'); ?></h3>
 						<jdoc:include type="modules" name="position-0" />
 						</div> <!-- end line -->
@@ -290,6 +279,6 @@ $doc->addScript($this->baseurl.'/templates/'.$this->template.'/javascript/md_sty
 
 			<jdoc:include type="modules" name="debug" />
 		<?php endif; ?>
+		<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/javascript/campus.js"></script>
 	</body>
-	<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/javascript/campus.js"></script>
 </html>
