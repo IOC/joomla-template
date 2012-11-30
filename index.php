@@ -280,5 +280,6 @@ $doc->addScript($this->baseurl.'/templates/'.$this->template.'/javascript/md_sty
 			<jdoc:include type="modules" name="debug" />
 		<?php endif; ?>
 		<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/javascript/campus.js"></script>
+		<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/javascript/analytics.js"></script>
 	</body>
 </html>
