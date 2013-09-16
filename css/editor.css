@@ -1,3 +1,12 @@
+
+body {
+	background: #fff;
+	font-family: Tahoma,Helvetica,Arial,sans-serif;
+	line-height: 1.3em;
+	font-size: 86%;
+	color: #333;
+}
+
 .caixa {
 	border: 1px solid;
 	padding: 1em;
