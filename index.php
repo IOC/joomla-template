@@ -98,6 +98,12 @@ $doc->addScript($this->baseurl.'/templates/'.$this->template.'/javascript/md_sty
         </div>
     <?php else :?>
     <div id="all">
+        <div class="cookiesPolicy">
+            <div class="cookiesPolicyMessage">
+                L'Institut Obert de Catalunya utilitza &apos;cookies&apos;, tant pr&ograve;pies com de tercers en tots els seus serveis per millorar l&apos;experi&egrave;ncia de navegaci&oacute;. Si continueu navegant entenem que accepteu el seu &uacute;s.
+            </div>
+            <div class="cookiesPolicyButton">D'acord</div>
+        </div>
         <div id="back">
         <?php if(!$templateparams->get('html5', 0)): ?>
             <div id="header">
@@ -280,6 +286,15 @@ $doc->addScript($this->baseurl.'/templates/'.$this->template.'/javascript/md_sty
             <jdoc:include type="modules" name="debug" />
         <?php endif; ?>
         <script type="text/javascript">
+            if (Cookie.read('cookiesAccept') != 'true') {
+               $('all').getElement('.cookiesPolicyButton').addEvent('click', function() {
+                    $('all').getElement('.cookiesPolicy').dispose();
+                    Cookie.write('cookiesAccept','true');
+                });
+            } else {
+               $('all').getElement('.cookiesPolicy').dispose();
+            }
+
             var a = new Request({
                 method: 'post',
                 url: '/campus/local/loggedinas.php',
