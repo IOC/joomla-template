@@ -289,7 +289,7 @@ $doc->addScript($this->baseurl.'/templates/'.$this->template.'/javascript/md_sty
             if (Cookie.read('cookiesAccept') != 'true') {
                $('all').getElement('.cookiesPolicyButton').addEvent('click', function() {
                     $('all').getElement('.cookiesPolicy').dispose();
-                    Cookie.write('cookiesAccept','true');
+                    Cookie.write('cookiesAccept','true', {duration: 365});
                 });
             } else {
                $('all').getElement('.cookiesPolicy').dispose();
