@@ -102,7 +102,7 @@ h1#logo {
 #line {
     float: right;
     position: absolute;
-    top: 4px;
+    top: 6px;
     right: 10px;
     text-align: right;
 }
@@ -112,6 +112,82 @@ h1#logo {
 }
 
 /* ##########################  header  ########################### */
+
+/* lang menu */
+#header .lang-icon {
+    display: inline-block;
+    background: url("../images/world.png") no-repeat center center transparent;
+    width: 30px;
+    height: 30px;
+    margin: 0 -5px 0 0;
+}
+
+#header .mod-languages .inputbox {
+    vertical-align: top;
+    margin: 2px 0;
+    width: 8em;
+    border-radius: 5px;
+    height: 2em;
+}
+
+#header .mod-languages .inputbox option{
+    padding: 0.2em;
+}
+
+#header .mod-languages .inputbox:focus {
+    margin: 2px 0;
+    border: 1px solid #2897E8;
+    outline: none;
+}
+
+
+#header .mod-languages .inputbox::-moz-focus-inner {
+  border: 0;
+}
+
+
+
+#header .mod-languages {
+    position: absolute;
+    top: 7px;
+    right: 280px;
+}
+
+#header .mod-languages li {
+    margin: 0 2px;
+}
+
+#header .mod-languages li a,
+#header .mod-languages li span {
+    -moz-box-sizing: content-box;
+    box-sizing: border-box;
+    background: #2897E8;
+    color: #fff;
+    display: inline-block;
+    padding-top: 0.35em;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    text-align: center;
+    height: 2em;
+    width: 2em;
+    font-family: sans-serif;
+    font-size: 1.1em;
+}
+
+#header .mod-languages li.lang-active span {
+    background: #105F85;
+    font-weight: bold;
+}
+
+#header .mod-languages li a {
+    color: #fff;
+}
+
+#header .mod-languages li a:hover {
+    background: #105F85;
+    font-weight: normal;
+}
 
 /* ++++++++++++++  lists, skiplinks  ++++++++++++++ */
 #header ul.menu {

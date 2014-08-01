@@ -121,6 +121,7 @@ $doc->addScript($this->baseurl.'/templates/'.$this->template.'/javascript/md_sty
                         </h1>
                     </div><!-- end logoheader -->
                         <jdoc:include type="modules" name="position-1" />
+                        <jdoc:include type="modules" name="lang-menu" />
                         <div id="line">
                         <h3 class="unseen"><?php echo JText::_('TPL_IOC_SEARCH'); ?></h3>
                         <jdoc:include type="modules" name="position-0" />
