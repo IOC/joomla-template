@@ -311,6 +311,11 @@ $doc->addScript($this->baseurl.'/templates/'.$this->template.'/javascript/md_sty
                             html: 'Heu entrat com:<br/>'+ responseText,
                             class: 'usercampus'
                         }).inject($("access"));
+                    } else {
+                        var username = $('username');
+                        if (username) {
+                            username.focus();
+                        }
                     }
                 }
             }).send();
