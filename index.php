@@ -268,7 +268,7 @@ $doc->addScript($this->baseurl.'/templates/'.$this->template.'/javascript/md_sty
                 <div class="innerfooter">
                     <div class="contact">
                         <p>INSTITUT OBERT DE CATALUNYA.  Av. del Paral·lel, 71-73. 08004. Barcelona.</p>
-                        <p><a target="_blank" href="http://www20.gencat.cat/portal/site/ensenyament" rel="external">Departament d'Ensenyament</a></p>
+                        <p><a target="_blank" href="http://ensenyament.gencat.cat/ca/inici" rel="external">Departament d'Ensenyament</a></p>
                     </div>
 
                     <ul class="infofooter">
