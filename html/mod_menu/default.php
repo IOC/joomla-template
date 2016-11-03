@@ -12,7 +12,21 @@ defined('_JEXEC') or die;
 // Note. It is important to remove spaces between elements.
 ?>
 <?php // The menu class is deprecated. Use nav instead. ?>
-<ul class="nav menu<?php echo $class_sfx;?>"<?php
+<?php
+
+if ($params->get('menutype') == 'topmenu') {
+	$class = "nav navbar-nav";
+	$menunavclass = "";
+} else {
+		$class = "nav navbar-nav";
+	$menunavclass = "";
+
+/*	$class = "panel-group";
+	$menunavclass = "panel panel-default";*/
+}
+
+?>
+<ul class="<?php echo $class;?>"<?php
 	$tag = '';
 
 	if ($params->get('tag_id') != null)
@@ -22,9 +36,15 @@ defined('_JEXEC') or die;
 	}
 ?>>
 <?php
+
+$studiesclass = '';
+if ($params->get('style') == 'Ioc-studies' || $params->get('style') == 'Ioc-sub_studies') {
+	$studiesclass = 'list-group-item col-lg-3 col-md-3 col-sm-6 col-xs-6 ';
+}
+
 foreach ($list as $i => &$item)
 {
-	$class = 'item-' . $item->id;
+	$class = $menunavclass . $studiesclass . 'item-' . $item->id;
 
 	if (($item->id == $active_id) OR ($item->type == 'alias' AND $item->params->get('aliasoptions') == $active_id))
 	{
@@ -71,6 +91,10 @@ foreach ($list as $i => &$item)
 
 	echo '<li' . $class . '>';
 
+	if (!empty($studiesclass)) {
+		echo '<div class="study-img">';
+	}
+
 	// Render the menu item.
 	switch ($item->type) :
 		case 'separator':
@@ -84,6 +108,10 @@ foreach ($list as $i => &$item)
 			require JModuleHelper::getLayoutPath('mod_menu', 'default_url');
 			break;
 	endswitch;
+
+	if (!empty($studiesclass)) {
+		echo '</div>';
+	}
 
 	// The next item is deeper.
 	if ($item->deeper)

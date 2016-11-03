@@ -54,5 +54,7 @@ headroom.init();
 				}
 			});
 		}
+
+		fakewaffle.responsiveTabs();
 	});
 })(jQuery);

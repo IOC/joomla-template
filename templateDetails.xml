@@ -44,7 +44,14 @@
         <position>footer</position>
         <position>copy</position>
         <position>panelnav</position>
-	<position>debug</position>
+		<position>debug</position>
+		<position>login-campus</position>
+		<position>studies</position>
+		<position>sub_studies</position>
+		<position>search</position>
+		<position>footer-info</position>
+		<position>footer-web</position>
+		<position>footer-banners</position>
 	</positions>
 	<config>
 		<fields name="params">

@@ -122,6 +122,7 @@ function pagination_list_render($list)
 				$page['data'] = preg_replace('#(<a.*?>).*?(</a>)#', '$1...$2', $page['data']);
 			}
 		}
+		$page['data'] = preg_replace('#<li>#', '<li class="pagenumber">', $page['data']);
 
 		$html .= $page['data'];
 	}
@@ -144,7 +145,15 @@ function pagination_list_render($list)
  */
 function pagination_item_active(&$item)
 {
-	return "<li><a title=\"" . $item->text . "\" href=\"" . $item->link . "\" class=\"pagenav\">" . $item->text . "</a><li>";
+	$anchor = '';
+	$app = JFactory::getApplication();
+	$menu = $app->getMenu();
+	$lang = JFactory::getLanguage();
+	if ($menu->getActive() == $menu->getDefault($lang->getTag())) {
+		$anchor = '#news';
+	}
+
+	return "<li><a title=\"" . $item->text . "\" href=\"" . $item->link . $anchor . "\" class=\"pagenav\">" . $item->text . "</a><li>";
 }
 
 /**

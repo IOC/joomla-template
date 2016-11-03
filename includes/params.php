@@ -17,6 +17,8 @@
 	$this->params->get('rightColumnWidth', 3);
 	// Add javascript files
 	// Include all compiled plugins (below), or include individual files as needed
+	$doc->addScript('templates/' . $this->template . '/js/responsive-tabs.js');
+	$doc->addScript('templates/' . $this->template . '/js/ioc.js');
 	$doc->addScript('templates/' . $this->template . '/js/holder.js');
 	$doc->addScript('templates/' . $this->template . '/js/headroom.min.js');
 	// Add Stylesheets

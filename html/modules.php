@@ -26,7 +26,7 @@ function modChrome_block($module, &$params, &$attribs)
 {
  	if (!empty ($module->content)) : ?>
            <div class="block <?php if ($params->get('moduleclass_sfx')!='') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
-           	<div class="moduletable">           	
+            <div class="moduletable">
 	           	<?php if ($module->showtitle != 0) : ?>
 			<div class="module-title">
 	                		<h3 class="title"><span class="<?php echo $params->get('header_class'); ?>" ></span><?php echo $module->title ; ?></h3>
@@ -35,7 +35,7 @@ function modChrome_block($module, &$params, &$attribs)
 	                	<div class="module-content">
 	                		<?php echo $module->content; ?>
 	                	</div>
-              </div>             	
+              </div>
            </div>
 	<?php endif;
 }
@@ -43,7 +43,7 @@ function modChrome_block($module, &$params, &$attribs)
 		if (!empty ($module->content)) :
 		?>
            <div class="MBstyle <?php  if ($params->get('moduleclass_sfx')!='') : ?><?php  echo $params->get('moduleclass_sfx'); ?><?php  endif; ?>">
-           	<div class="moduletable">           	
+            <div class="moduletable">
 	           	<?php  if ($module->showtitle != 0) : ?>
 			<div class="module-title">
 	                		<h3 class="title"><span class="<?php echo $params->get('header_class'); ?>" ></span><?php echo $module->title ; ?></h3>
@@ -53,9 +53,45 @@ function modChrome_block($module, &$params, &$attribs)
 	                	<div class="module-content">
 	                		<?php  echo $module->content; ?>
 	                	</div>
-              </div>             	
+              </div>
            </div>
 	<?php 
 		endif;
 	}
+
+function modChrome_studies($module, &$params, &$attribs)
+{
+    if (!empty ($module->content)) : ?>
+        <div class="block <?php if ($params->get('moduleclass_sfx')!='') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
+            <div class="studies">
+                <?php if ($module->showtitle != 0) : ?>
+                    <div class="page-header">
+                        <h2 class="title"><span class="<?php echo $params->get('header_class'); ?>" ></span><?php echo $module->title ; ?></h3>
+                    </div>
+                <?php endif; ?>
+                <div class="studies-content">
+                    <?php echo $module->content; ?>
+                </div>
+            </div>
+        </div>
+    <?php endif;
+}
+
+function modChrome_sub_studies($module, &$params, &$attribs)
+{
+    if (!empty ($module->content)) : ?>
+        <div class="block <?php if ($params->get('moduleclass_sfx')!='') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
+            <div class="substudies">
+                <?php if ($module->showtitle != 0) : ?>
+                    <div class="page-header">
+                        <h2 class="title"><span class="<?php echo $params->get('header_class'); ?>" ></span><?php echo $module->title ; ?></h3>
+                    </div>
+                <?php endif; ?>
+                <div class="studies-content">
+                    <?php echo $module->content; ?>
+                </div>
+            </div>
+        </div>
+    <?php endif;
+}
 ?>

@@ -13,7 +13,7 @@ if ($params->get('compile_sass', '0') === '1')
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <?php
  include 'includes/head.php'; ?>
 <body>
@@ -25,41 +25,97 @@ if ($params->get('compile_sass', '0') === '1')
 <!--Navigation-->
 <header id="header" class="header header--fixed hide-from-print" >
 <!--top-->
-<?php  if($this->countModules('top')) : ?>
+<?php  //if($this->countModules('top')) : ?>
 <div id="top" class="navbar-inverse">
 <div class="container">
+<div class="row">
+    <div class="col-lg-7 col-md-7 col-sm-8 col-xs-7 logoheader">
+        <a title="Generalitat de Catalunya" href="http://www.gencat.cat/">
+            <img alt="Generalitat de Catalunya" src="<?php echo JURI::base().'templates/'.$this->template.'/images/gencat.png';?>">
+        </a>
+    </div>
+    <div class="col-md-3 col-sm-3 text-right">
+        <jdoc:include type="modules" name="lang-menu" style="none" />
+    </div>
+    <div class="col-lg-2 col-md-2 col-md-3 social hidden-sm hidden-xs text-center">
+        <a href="https://es.linkedin.com/in/ioc-institut-obert-de-catalunya-bb4805b1" target="_blank">
+            <span class="glyphicon glyphicons-social-linked-in img-circle" aria-hidden="true"></span>
+        </a>
+        <a href="http://twitter.com/ioc" target="_blank">
+            <span class="glyphicon glyphicons-social-twitter img-circle" aria-hidden="true"></span>
+        </a>
+        <a href="https://vimeo.com/institutobert" target="_blank">
+            <span class="glyphicon glyphicons-social-vimeo img-circle" aria-hidden="true"></span>
+        </a>
+    </div>
+</div>
 <div class="row">
 <jdoc:include type="modules" name="top" style="none" />
 </div>
 </div>
 </div>
-<?php  endif; ?>
+<?php  //endif; ?>
 <!--top-->
 <div id="navigation">
 <div class="navbar navbar-default">
 <div class="container">
-<div class="navbar-header">
+<div class="navbar-header col-lg-3">
 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 <span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
 </button>
-                <div id="brand">
-                                <a href="<?php  echo $this->params->get('logo_link')   ?>">
-                                         <img style="width:<?php  echo $this->params->get('logo_width')   ?>px; height:<?php  echo $this->params->get('logo_height')   ?>px; " src="<?php  echo $this->params->get('logo_file')   ?>" alt="Logo" />
-                                        </a>
-                        </div>
+    <div id="brand">
+        <a href="<?php  echo $this->params->get('logo_link')   ?>">
+            <img class="hidden-xs hidden-sm logo" src="templates/ioc/images/ioc_logo.png" alt="Logotip Institut Obert de Catalunya" />
+            <img class="hidden-lg hidden-md logo-small" src="templates/ioc/images/ioc_logo_small.png" alt="Logotip Institut Obert de Catalunya" />
+        </a>
+    </div>
+    <!-- Search -->
+    <div class="col-md-1 col-lg-1 col-sm-1 visible-xs tiny-search">
+        <button type="button" class="navbar-toggle btn-lg" data-toggle="collapse" data-target="#search">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+    </div>
+    <!-- Campus -->
+    <?php  if ($this->countModules('login-campus')) : ?>
+        <div id="frm-login-campus-mobile" class="col-md-1 col-lg-1 col-sm-1 visible-xs tiny-campus">
+            <button type="button" class="navbar-toggle btn-lg" data-toggle="modal" data-target="#login-campus">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            </button>
+        </div>
+    <?php endif; ?>
 </div>
-<div class="navbar-collapse collapse">
+<div class="navbar-collapse collapse col-sm-6 col-md-8 col-lg-9">
 <?php  if ($this->countModules('navigation')) : ?>
-                        <nav class="navigation">
-                                <jdoc:include type="modules" name="navigation" style="none" />
-                        </nav>
+                        <jdoc:include type="modules" name="navigation" style="none" />
                         <?php  endif; ?>
 </div>
+<div class="navbar-collapse collapse navbar-right col-md-1 col-lg-1 col-sm-1 hidden-xs">
+    <ul class="nav navbar-nav search">
+        <li>
+            <button type="button" class="btn-md" data-toggle="collapse" data-target="#search">
+                <span class="glyphicon glyphicon-search white" aria-hidden="true"></span>
+                <span class="hidden-md hidden-sm hidden-xs"><?php echo JText::_('JSEARCH_FILTER_SUBMIT');?></span>
+            </button>
+        </li>
+    </ul>
+</div>
+<div id="frm-login-campus" class="navbar-collapse collapse navbar-right col-md-1 col-lg-1 col-sm-1 hidden-xs">
+<?php  if ($this->countModules('login-campus')) : ?>
+    <ul class="nav navbar-nav login-campus">
+        <li>
+            <button type="button" class="btn-md" data-toggle="modal" data-target="#login-campus">
+                <span class="glyphicon glyphicon-user white" aria-hidden="true"></span>
+                <span id="login-text" class="hidden-md hidden-sm hidden-xs"><?php echo JText::_('JLOGIN') . ' ';?>Campus</span>
+            </button>
+        </li>
+    </ul>
+<?php  endif; ?>
 </div>
 </div></div>
+</div>
 </header>
 <div class="clearfix"></div>
 <!--Navigation-->
@@ -97,7 +153,7 @@ if ($params->get('compile_sass', '0') === '1')
 <!--Feature-->
 <!--Breadcrum-->
 <?php  if($this->countModules('breadcrumbs')) : ?>
-<div id="breadcrumbs">
+<div id="breadcrumbs" class="hidden-xs">
 <div class="container">
 <div class="row">
 <jdoc:include type="modules" name="breadcrumbs" style="block" />
@@ -107,7 +163,7 @@ if ($params->get('compile_sass', '0') === '1')
 <!--Breadcrum-->
 <?php  endif; ?>
 <!-- Content -->
-<div class="container">
+<div class="fluid-container">
 <div id="main" class="row show-grid">
 <!-- Left -->
 <?php  if($this->countModules('left')) : ?>
@@ -119,9 +175,15 @@ if ($params->get('compile_sass', '0') === '1')
 <div id="container" class="col-sm-<?php  echo (12-$leftcolgrid-$rightcolgrid); ?>">
 <!-- Content-top Module Position -->
 <?php  if($this->countModules('content-top')) : ?>
-<div id="content-top">
-<div class="row">
-<jdoc:include type="modules" name="content-top" style="block" />
+<div id="content-top" class="container">
+<button type="button" class="collapsed" data-toggle="collapse" data-target=".menu-nav">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<div class="collapse menu-nav">
+    <jdoc:include type="modules" name="content-top" style="block" />
 </div>
 </div>
 <?php  endif; ?>
@@ -133,8 +195,32 @@ if ($params->get('compile_sass', '0') === '1')
 		// show on all pages
 		?>
 <div id="main-box">
+
 <jdoc:include type="message" />
+<div class="collapse form-search search-top" id="search" aria-labelledby="search" aria-hidden="true">
+    <div class="container">
+        <jdoc:include type="modules" name="search" style="modules" />
+    </div>
+</div>
 <jdoc:include type="component" />
+<?php  if ($this->countModules('sub_studies')) : ?>
+    <div class="container all-studies">
+        <jdoc:include type="modules" name="sub_studies" style="sub_studies" />
+    </div>
+<?php  endif; ?>
+<?php  if ($this->countModules('login-campus')) : ?>
+<div class="modal fade login-campus" id="login-campus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <jdoc:include type="modules" name="login-campus" style="modal" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php  endif; ?>
 </div>
 <?php
 	} else {
@@ -164,6 +250,7 @@ if ($params->get('compile_sass', '0') === '1')
 <?php  endif; ?>
 </div>
 </div>
+
 <!-- Content -->
 <!-- bottom -->
 <?php  if($this->countModules('bottom')) : ?>
@@ -178,10 +265,21 @@ if ($params->get('compile_sass', '0') === '1')
 <!-- bottom -->
 <!-- footer -->
 <?php  if($this->countModules('footer')) : ?>
-<div id="footer">
+<div id="footer" class="fluid-container">
+<div class="footer">
 <div class="container">
-<div class="row">
-<jdoc:include type="modules" name="footer" style="block" />
+    <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="col-lg-4 col-sm-4 col-md-4">
+            <jdoc:include type="modules" name="footer-info" style="xhtml" />
+        </div>
+        <div class="col-lg-4 col-sm-4 col-md-4">
+            <jdoc:include type="modules" name="footer-web" style="xhtml" />
+        </div>
+        <div class="col-lg-4 col-sm-4 col-md-4">
+            <jdoc:include type="modules" name="footer-banners" style="xhtml" />
+        </div>
+    </div>
+    <jdoc:include type="modules" name="footer" />
 </div>
 </div>
 </div>
@@ -206,7 +304,7 @@ if ($params->get('compile_sass', '0') === '1')
 </div><!-- end panelnav -->
 <?php  endif;// end panelnav  ?>
 <!-- menu slide -->
-<a href="#" class="back-to-top">Back to Top</a>
+<a href="#" class="back-to-top"><span class="glyphicon glyphicon-chevron-up"></span></a>
 <jdoc:include type="modules" name="debug" />
 </section></div>
 <?php
