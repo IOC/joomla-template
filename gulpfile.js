@@ -112,11 +112,18 @@ function compileScripts(src, ouputFileName, destinationFolder) {
 
 // Minify scripts
 gulp.task('scripts', function () {
-	return compileScripts(
+	compileScripts(
 		[
 			assetsPath + '/js/template.js'
 		],
 		'template.js',
+		'js'
+	);
+	return compileScripts(
+		[
+			assetsPath + '/js/ioc.js'
+		],
+		'ioc.js',
 		'js'
 	);
 });
