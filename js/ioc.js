@@ -38,4 +38,7 @@ jQuery.ready(function($){
             }
         }
     });
+    $(document).on('show.bs.collapse', '.panel-collapse', function (e) {
+        $(e.currentTarget).closest('.panel').siblings().find('.panel-collapse').collapse('hide');
+    });
 }(jQuery));
