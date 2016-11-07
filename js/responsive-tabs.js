@@ -107,6 +107,9 @@ var fakewaffle = ( function ( $, fakewaffle ) {
 
 		var tabGroups = $( '.nav-tabs.responsive' );
 
+		// Remove all active classes
+		$('.panel-group .panel-heading').removeClass('active');
+
 		$.each( tabGroups, function ( index, tabGroup ) {
 
 			// Find the tab
@@ -122,6 +125,10 @@ var fakewaffle = ( function ( $, fakewaffle ) {
 					.addClass( 'panel-body fw-previous-tab-pane' )
 					.appendTo( $( destinationId ) );
 
+				// Set active class to current active panel
+				if ($( tabContent ).hasClass('active')) {
+					$( tabContent ).closest('.panel-collapse').siblings('.panel-heading').addClass('active');
+				}
 			} );
 
 		} );
