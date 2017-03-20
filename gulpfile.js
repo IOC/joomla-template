@@ -88,8 +88,12 @@ function compileSassFile(src, destinationFolder, options)
 
 // Sass
 gulp.task('sass', function () {
-	return compileSassFile(
+	compileSassFile(
 		assetsPath + '/scss/template.scss',
+		'css'
+	);
+	return compileSassFile(
+		assetsPath + '/scss/editor.scss',
 		'css'
 	);
 });

@@ -26,22 +26,24 @@ $imgpath = JURI::base() . 'templates/' . $template . '/images';
 <?php endif; ?>
 
 <?php
-preg_match('/<img.+src="(([^"])+)"[^>]+>/', $this->item->introtext, $matches);
-if (isset($matches[1])) {
-    $src = $matches[1];
-    $this->item->introtext = preg_replace('/\s*<img[^>]*>\s*/', '', $this->item->introtext);
-} else {
-    $src = $imgpath . '/news_small.jpg';
-}
+$src = $imgpath . '/news_small.jpg';
 
+if (preg_match('~<figure class="imatge-noticia">(.*?)</figure>~s', $this->item->introtext, $matches)) {
+    $tagimg = $matches[1];
+    preg_match('/<img.+?src="(?!data:image)(([^"])+)"[^>]+>/', $tagimg, $matches);
+    if (isset($matches[1])) {
+        $src = $matches[1];
+        $this->item->introtext = preg_replace('~\s*<figure[^>]*>.*?</figure>~s', '', $this->item->introtext);
+        $this->item->introtext = preg_replace('/\s*<img[^>]*>\s*/', '', $this->item->introtext);
+        $this->item->introtext = preg_replace('~\s*<video[^>]*>.*?</video>\s*~', '', $this->item->introtext);
+    }
+}
 
 $articlelength = mb_strlen(strip_tags($this->item->introtext));
 
 if ($articlelength > MAXARTICLELENGHT) {
-    $bigarticle = true;
     $introclass = 'intro-featured-article';
 } else {
-    $bigarticle = false;
     $introclass = 'intro-featured-article tiny-article';
 }
 

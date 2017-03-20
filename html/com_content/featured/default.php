@@ -30,22 +30,31 @@ $frontpage = ($menu->getActive() == $menu->getDefault($lang->getTag()));
 <?php if (!empty($this->important)) : ?>
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="10000">
   <!-- Indicators -->
-  <ol class="carousel-indicators">
+  <ol class="carousel-indicators hidden">
   	<?php foreach ($this->important as $key => $article) : ?>
         <li data-target="#myCarousel" data-slide-to="<?php echo $key;?>" <?php if (!$key) { ?>class="active" <?php } ?>><?php echo $article->title;?></li>
   	<?php endforeach; ?>
   </ol>
+  <noscript>
+    <div class="carousel-indicators">
+      <?php foreach ($this->important as $key => $article) : ?>
+          <?php $link = JRoute::_(ContentHelperRoute::getArticleRoute($article->id, $article->catid, $article->language)); ?>
+          <a href="<?php echo $link;?>" title="<?php echo $article->title;?>"><?php echo $article->title;?></a>
+      <?php endforeach; ?>
+    </div>
+  </noscript>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <?php foreach ($this->important as $key => $article) :
             $article->introtext = preg_replace('~</?p[^>]*>~', '', $article->introtext);
-            preg_match('/<img.+src="(([^"])+)"[^>]+>/', $article->introtext, $matches);
-            if (isset($matches[1])) {
-                $src = $matches[1];
-                $article->introtext = preg_replace('/\s*<img[^>]*>\s*/', '', $article->introtext, 1);
-            } else {
-                $src = $imgpath . '/carousel-default.jpg';
+            $src = $imgpath . '/carousel-default.jpg';
+            if (preg_match('/class="imatge-noticia"/', $article->introtext)) {
+              preg_match('/<img.+src="(([^"])+)"[^>]+>/', $article->introtext, $matches);
+              if (isset($matches[1])) {
+                  $src = $matches[1];
+                  $article->introtext = preg_replace('/\s*<img[^>]*>\s*/', '', $article->introtext, 1);
+              }
             }
     ?>
             <div class="item <?php if (!$key) { ?> active <?php } ?>" style="background-image: url('<?php echo $src;?>')">

@@ -1,0 +1,116 @@
+$custom_red:    rgb(217, 83, 79);
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+#tinymce {
+
+    @mixin borderioc($width, $color) {
+        box-sizing: border-box;
+        border: $width dashed $color;
+        padding: 1em;
+        background-color: #fafafa;
+    }
+
+    @mixin numbertab($number) {
+        content: $number;
+        color: $custom_red;
+        margin: -1em 0 0 -0.5em;
+        float: left;
+    }
+
+    .study-main {
+        @include borderioc(2px, $custom_red);
+        height: 100%;
+        .study-overview {
+            @include borderioc(1px, $custom_red);
+            height: 100%;
+        }
+        .study-frame {
+            @include borderioc(1px, $custom_red);
+            .study-term, .study-definition {
+                h4 {
+                    @include borderioc(1px, $custom_red);
+                }
+                @include borderioc(1px, $custom_red);
+            }
+            h3:after {
+                color: #942A25;
+            }
+        }
+    }
+    .ioc-news {
+        .imatge-noticia {
+            margin-left: 0;
+            img, figcaption {
+                @include borderioc(2px, $custom_red);
+            }
+            figcaption {
+                margin-top: -2px;
+                padding-left: 5px;
+            }
+        }
+        .ioc-news-content {
+            padding: 0 0.5em;
+            @include borderioc(2px, $custom_red);
+        }
+    }
+    .study-tabs {
+        .nav-tabs{
+            counter-reset: numtab;
+            clear: both;
+            @include borderioc(2px, $custom_red);
+            li {
+                display: inline-block;
+                margin-left: 2em;
+                @include borderioc(1px, $custom_red);
+                &:before {
+                    counter-increment: numtab;
+                    @include numbertab(counter(numtab));
+                }
+            }
+            &:after {
+                content: '\002b';
+                color: $custom_red;
+                font-family: 'Glyphicons Halflings';
+                margin-left: 1em;
+                cursor: pointer;
+            }
+        }
+        .tab-content {
+            counter-reset: numtabcontent;
+            @include borderioc(2px, $custom_red);
+            .tab-pane {
+                @include borderioc(1px, $custom_red);
+                &:before {
+                    counter-increment: numtabcontent;
+                    @include numbertab(counter(numtabcontent));
+                }
+            }
+        }
+    }
+    .study-more-info {
+        @include borderioc(2px, $custom_red);
+        .panel-heading,
+        .panel-title,
+        .panel-body,
+        .more-section,
+        .more-section-content,
+        h3 {
+            @include borderioc(1px, $custom_red);
+        }
+    }
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+        float: left;
+    }
+    .col-md-8 {
+        width: 66.66666667%;
+    }
+    .col-md-4 {
+        width: 33.33333333%;
+    }
+}

@@ -92,7 +92,11 @@ foreach ($list as $i => &$item)
 	echo '<li' . $class . '>';
 
 	if (!empty($studiesclass)) {
-		echo '<div class="study-img">';
+		$style = '';
+		if ($item->menu_image) {
+			$style = 'style="background-image: url('. $item->menu_image .')"';
+		}
+		echo '<div class="study-img" '. $style . '>';
 	}
 
 	// Render the menu item.

@@ -20,11 +20,18 @@ if ($params->get('style') == 'Ioc-studies' || $params->get('style') == 'Ioc-sub_
     $study_end = '</div>';
 }
 
+$customclasses = explode(' ', $item->anchor_css);
+
+if (in_array('iocmatricula', $customclasses)) {
+    $study_start = '<div class="newmatricula">' . JText::_('MOD_MENU_REGISTRATION_OPEN'). '</div>' . $study_start;
+}
+
 if ($item->menu_image)
 {
-    $item->params->get('menu_text', 1) ?
-    $linktype = '<img src="' . $item->menu_image . '" alt="' . $item->title . '" /><span class="image-title">' . $item->title . '</span> ' :
-    $linktype = '<img src="' . $item->menu_image . '" alt="' . $item->title . '" />';
+    //$item->params->get('menu_text', 1) ?
+    //$linktype = '<img src="' . $item->menu_image . '" alt="' . $item->title . '" /><span class="image-title">' . $item->title . '</span> ' :
+    //$linktype = '<img src="' . $item->menu_image . '" alt="' . $item->title . '" />';
+    $linktype = $item->title;
 }
 else
 {
