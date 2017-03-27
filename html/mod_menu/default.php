@@ -39,7 +39,13 @@ if ($params->get('menutype') == 'topmenu') {
 
 $studiesclass = '';
 if ($params->get('style') == 'Ioc-studies' || $params->get('style') == 'Ioc-sub_studies') {
-	$studiesclass = 'list-group-item col-lg-3 col-md-3 col-sm-6 col-xs-6 ';
+	$numelements = count($list);
+	$col = 3;
+	$colsmall = 6;
+	if ($numelements < 4) {
+		$col = 12 / $numelements;
+	}
+	$studiesclass = "list-group-item col-lg-$col col-md-$col col-sm-$colsmall col-xs-$colsmall ";
 }
 
 foreach ($list as $i => &$item)
