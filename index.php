@@ -129,9 +129,8 @@ $doc->addScript($this->baseurl.'/templates/'.$this->template.'/javascript/md_sty
             <div id="header-image">
                 <jdoc:include type="modules" name="position-15" />
                 <?php if ($this->countModules('position-15')==0): ?>
-                    <?php $logo = $showRightColumn ? 'hdr_bg_home.jpg' : 'hdr_bg.jpg'; ?>
+                    <?php $logo = $showRightColumn ? 'hdr_bg.gif' : 'hdr_bg.gif'; ?>
                     <img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/<?php echo $logo?>"  alt="<?php echo JText::_('TPL_IOC_LOGO'); ?>" />
-                    <span class="title"><?php echo JText::_('L\'institut que va on tu vas'); ?></span>
                 <?php endif; ?>
             </div>
             <?php if (!$templateparams->get('html5', 0)): ?>
