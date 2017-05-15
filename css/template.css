@@ -868,6 +868,9 @@ h3 {
 h4, h5 {
   font-size: 14px;
 }
+button:focus {
+  outline: 0 !important;
+}
 .fluid-container {
   overflow: hidden;
 }
@@ -884,20 +887,17 @@ h4, h5 {
   margin-top: 1px;
 }
 .headroom--not-top .navbar-default .navbar-collapse .navbar-nav {
-  margin-top: 15px;
+  margin-top: 18px;
 }
-.headroom--not-top .navbar-default .navbar-collapse .navbar-nav li, .headroom--not-top .navbar-default .navbar-collapse .navbar-nav button {
-  padding: 4px 0 10px 0;
+.headroom--not-top .navbar-default .navbar-collapse .navbar-nav a, .headroom--not-top .navbar-default .navbar-collapse .navbar-nav button {
+  padding: 0 9px 11px;
 }
 .headroom--not-top .navbar-default .navbar-collapse .navbar-nav.login-campus, .headroom--not-top .navbar-default .navbar-collapse .navbar-nav.search {
   margin-top: 13px;
   padding: 0;
 }
-.headroom--not-top .navbar-default .navbar-collapse .navbar-nav.login-campus li, .headroom--not-top .navbar-default .navbar-collapse .navbar-nav.search li {
-  padding-bottom: 7px;
-}
 .headroom--not-top .navbar-default .navbar-collapse .navbar-nav.login-campus button, .headroom--not-top .navbar-default .navbar-collapse .navbar-nav.search button {
-  padding-bottom: 0;
+  padding-bottom: 11px;
 }
 #top {
   height: 40px;
@@ -928,13 +928,13 @@ h4, h5 {
 }
 #search {
   position: fixed;
-  top: 55px;
+  top: 50px;
   left: 0;
   border-bottom: 1px solid #ddd;
   z-index: 10;
 }
 #search.search-top {
-  top: 104px;
+  top: 103px;
 }
 #main-box {
   padding: 0;
@@ -942,7 +942,7 @@ h4, h5 {
 #main-box .item-page {
   padding: 0 1em 1em 1em;
 }
-#main-box .item-page .page-header {
+#main-box .item-page .page-header.iocnewsarticle {
   border-bottom: 0;
 }
 #main-box .item-page .page-header.iocnewsarticle h1 {
@@ -950,6 +950,7 @@ h4, h5 {
 }
 #main-box .item-page .page-header.iocnewsarticle h1:before {
   content: '|';
+  color: #035f8c;
 }
 #main-box .item-page .page-header h2 {
   margin-bottom: 0;
@@ -1144,9 +1145,17 @@ body #wrap section {
   min-height: -moz-calc(100vh - 102px);
   min-height: calc(100vh - 102px);
 }
+#container .container .page-header > h1:before {
+  content: '|';
+  color: #009cda;
+}
 #container .container.item-pageges .page-header > h1:before {
   content: '|';
   color: #febf00;
+}
+#container .container.item-pagebtx .page-header > h1:before {
+  content: '|';
+  color: #5bc8d5;
 }
 #container .container.item-pagefp .page-header > h1:before {
   content: '|';
@@ -1159,6 +1168,34 @@ body #wrap section {
 #container .container.item-pagefpsup .page-header > h1:before {
   content: '|';
   color: #c93d00;
+}
+#container .container.item-pageeoi .page-header > h1:before {
+  content: '|';
+  color: #71a137;
+}
+#container .container.item-pagefpd .page-header > h1:before {
+  content: '|';
+  color: #4a00d0;
+}
+#container .container.item-pageppags .page-header > h1:before {
+  content: '|';
+  color: #ff8000;
+}
+#container .container.item-pageminiops .page-header > h1:before {
+  content: '|';
+  color: #888;
+}
+#container .container.item-pageentcol .page-header > h1:before {
+  content: '|';
+  color: #00b259;
+}
+#container .container.item-pagemeb .page-header > h1:before {
+  content: '|';
+  color: #4d7aff;
+}
+#container .container.item-pagefnr .page-header > h1:before {
+  content: '|';
+  color: #d900d0;
 }
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
   background-color: #3351ad;
@@ -1177,8 +1214,8 @@ body #wrap section {
 .navbar-default .navbar-collapse .navbar-nav.search, .navbar-default .navbar-collapse .navbar-nav.login-campus {
   margin-top: 23px;
 }
-.navbar-default .navbar-collapse .navbar-nav.search li, .navbar-default .navbar-collapse .navbar-nav.login-campus li {
-  padding-bottom: 14px;
+.navbar-default .navbar-collapse .navbar-nav.search li:hover, .navbar-default .navbar-collapse .navbar-nav.login-campus li:hover {
+  border-bottom: none;
 }
 .navbar-default .navbar-collapse .navbar-nav.search button, .navbar-default .navbar-collapse .navbar-nav.login-campus button {
   font-size: 1.1em;
@@ -1186,23 +1223,25 @@ body #wrap section {
   border: none;
   color: #fff;
   text-transform: uppercase;
-  padding: 0 5px 0 5px;
+  padding: 0 5px 14px 5px;
 }
 .navbar-default .navbar-collapse .navbar-nav.search button:hover, .navbar-default .navbar-collapse .navbar-nav.login-campus button:hover {
   background-color: transparent;
+  border-bottom: 4px solid #009cda;
 }
 .navbar-default .navbar-collapse .navbar-nav.search button[aria-expanded="true"], .navbar-default .navbar-collapse .navbar-nav.login-campus button[aria-expanded="true"], .navbar-default .navbar-collapse .navbar-nav.search button:hover[aria-expanded="true"], .navbar-default .navbar-collapse .navbar-nav.login-campus button:hover[aria-expanded="true"] {
+  border-bottom: 4px solid #009cda;
   color: #fff;
   font-weight: 600;
-  padding-bottom: 15px;
-  border-bottom: 4px solid #009cda;
 }
 .navbar-default .navbar-collapse .navbar-nav.search button[aria-expanded="true"] .glyphicon, .navbar-default .navbar-collapse .navbar-nav.login-campus button[aria-expanded="true"] .glyphicon, .navbar-default .navbar-collapse .navbar-nav.search button:hover[aria-expanded="true"] .glyphicon, .navbar-default .navbar-collapse .navbar-nav.login-campus button:hover[aria-expanded="true"] .glyphicon {
   font-weight: 600;
 }
 .navbar-default .navbar-collapse .navbar-nav li {
-  transition: all 0.15s ease-in-out;
-  padding-bottom: 17px;
+  -webkit-transition: border 0.15s ease-in-out, padding 0.35s ease-in-out;
+  -moz-transition: border 0.15s ease-in-out, padding 0.35s ease-in-out;
+  -o-transition: border 0.15s ease-in-out, padding 0.35s ease-in-out;
+  transition: border 0.15s ease-in-out, padding 0.35s ease-in-out;
   border-bottom: 0 solid;
 }
 .navbar-default .navbar-collapse .navbar-nav li:hover {
@@ -1218,7 +1257,7 @@ body #wrap section {
 .navbar-default .navbar-collapse .navbar-nav li a {
   text-transform: uppercase;
   color: #fff;
-  padding: 0 10px;
+  padding: 0 9px 17px;
   font-size: 1.1em;
 }
 .navbar-default .navbar-collapse .navbar-nav li a:hover {
@@ -1281,8 +1320,15 @@ body #wrap section {
   padding-top: 1em;
 }
 .container.all-studies .navbar-nav {
+  width: 100%;
   margin-left: -15px;
   margin-right: -15px;
+}
+.container.all-studies .block {
+  clear: both;
+}
+.container.all-studies .studies, .container.all-studies .substudies {
+  padding-top: 1em;
 }
 .container.all-studies .studies .studies-content .list-group-item, .container.all-studies .substudies .studies-content .list-group-item {
   background-color: transparent;
@@ -1290,8 +1336,17 @@ body #wrap section {
   padding: 10px 10px;
 }
 .container.all-studies .studies .studies-content .list-group-item .study-img, .container.all-studies .substudies .studies-content .list-group-item .study-img {
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
+  overflow: hidden;
+  background-position: center center;
+  -webkit-transition: background-size 0.5s ease-in-out;
+  -moz-transition: background-size 0.5s ease-in-out;
+  -o-transition: background-size 0.5s ease-in-out;
+  transition: background-size 0.5s ease-in-out;
+}
+.container.all-studies .studies .studies-content .list-group-item .study-img:hover, .container.all-studies .substudies .studies-content .list-group-item .study-img:hover {
+  background-size: 105% 105%;
 }
 .container.all-studies .studies .studies-content a, .container.all-studies .substudies .studies-content a {
   font-size: 1.3em;
@@ -1308,87 +1363,171 @@ body #wrap section {
 .container.all-studies .studies .studies-content .study-item, .container.all-studies .substudies .studies-content .study-item {
   display: table-cell;
   vertical-align: bottom;
-  padding: 2em 3vw 0.8em 0.8em;
+  padding: 2em 3em 0.8em 0.8em;
   font-weight: 600;
   font-size: 1.1em;
 }
-.container.all-studies .studies .studies-content .list-group-item a {
-  -webkit-transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  -moz-transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  -o-transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  box-shadow: 0 0 0 0 #009cda;
+.container.all-studies .studies .studies-content .list-group-item a, .container.all-studies .substudies .studies-content .list-group-item a {
+  -webkit-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -moz-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -o-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  box-shadow: inset 0 0 0 0 #009cda;
   background-color: rgba(0, 156, 218, 0.8);
 }
-.container.all-studies .studies .studies-content .list-group-item a:hover {
-  box-shadow: 0 0 0 3px #009cda;
+.container.all-studies .studies .studies-content .list-group-item a:hover, .container.all-studies .substudies .studies-content .list-group-item a:hover {
+  box-shadow: inset 0 0 0 3px #009cda;
   background-color: rgba(0, 156, 218, 0.2);
 }
-.container.all-studies .studies .studies-content .list-group-item a.ges {
-  -webkit-transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  -moz-transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  -o-transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  box-shadow: 0 0 0 0 #febf00;
+.container.all-studies .studies .studies-content .list-group-item a.ges, .container.all-studies .substudies .studies-content .list-group-item a.ges {
+  -webkit-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -moz-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -o-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  box-shadow: inset 0 0 0 0 #febf00;
   background-color: rgba(254, 191, 0, 0.8);
 }
-.container.all-studies .studies .studies-content .list-group-item a.ges:hover {
-  box-shadow: 0 0 0 3px #febf00;
+.container.all-studies .studies .studies-content .list-group-item a.ges:hover, .container.all-studies .substudies .studies-content .list-group-item a.ges:hover {
+  box-shadow: inset 0 0 0 3px #febf00;
   background-color: rgba(254, 191, 0, 0.2);
 }
-.container.all-studies .studies .studies-content .list-group-item a.batx {
-  -webkit-transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  -moz-transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  -o-transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  box-shadow: 0 0 0 0 #5bc8d5;
+.container.all-studies .studies .studies-content .list-group-item a.btx, .container.all-studies .substudies .studies-content .list-group-item a.btx {
+  -webkit-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -moz-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -o-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  box-shadow: inset 0 0 0 0 #5bc8d5;
   background-color: rgba(91, 200, 213, 0.8);
 }
-.container.all-studies .studies .studies-content .list-group-item a.batx:hover {
-  box-shadow: 0 0 0 3px #5bc8d5;
+.container.all-studies .studies .studies-content .list-group-item a.btx:hover, .container.all-studies .substudies .studies-content .list-group-item a.btx:hover {
+  box-shadow: inset 0 0 0 3px #5bc8d5;
   background-color: rgba(91, 200, 213, 0.2);
 }
-.container.all-studies .studies .studies-content .list-group-item a.fp {
-  -webkit-transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  -moz-transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  -o-transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  box-shadow: 0 0 0 0 #fc4c00;
+.container.all-studies .studies .studies-content .list-group-item a.fp, .container.all-studies .substudies .studies-content .list-group-item a.fp {
+  -webkit-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -moz-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -o-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  box-shadow: inset 0 0 0 0 #fc4c00;
   background-color: rgba(252, 76, 0, 0.8);
 }
-.container.all-studies .studies .studies-content .list-group-item a.fp:hover {
-  box-shadow: 0 0 0 3px #fc4c00;
+.container.all-studies .studies .studies-content .list-group-item a.fp:hover, .container.all-studies .substudies .studies-content .list-group-item a.fp:hover {
+  box-shadow: inset 0 0 0 3px #fc4c00;
   background-color: rgba(252, 76, 0, 0.2);
 }
-.container.all-studies .studies .studies-content .list-group-item a.idi {
-  -webkit-transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  -moz-transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  -o-transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  box-shadow: 0 0 0 0 #71a137;
+.container.all-studies .studies .studies-content .list-group-item a.fpmig, .container.all-studies .substudies .studies-content .list-group-item a.fpmig {
+  -webkit-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -moz-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -o-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  box-shadow: inset 0 0 0 0 #ff6e30;
+  background-color: rgba(255, 110, 48, 0.8);
+}
+.container.all-studies .studies .studies-content .list-group-item a.fpmig:hover, .container.all-studies .substudies .studies-content .list-group-item a.fpmig:hover {
+  box-shadow: inset 0 0 0 3px #ff6e30;
+  background-color: rgba(255, 110, 48, 0.2);
+}
+.container.all-studies .studies .studies-content .list-group-item a.fpsup, .container.all-studies .substudies .studies-content .list-group-item a.fpsup {
+  -webkit-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -moz-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -o-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  box-shadow: inset 0 0 0 0 #c93d00;
+  background-color: rgba(201, 61, 0, 0.8);
+}
+.container.all-studies .studies .studies-content .list-group-item a.fpsup:hover, .container.all-studies .substudies .studies-content .list-group-item a.fpsup:hover {
+  box-shadow: inset 0 0 0 3px #c93d00;
+  background-color: rgba(201, 61, 0, 0.2);
+}
+.container.all-studies .studies .studies-content .list-group-item a.eoi, .container.all-studies .substudies .studies-content .list-group-item a.eoi {
+  -webkit-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -moz-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -o-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  box-shadow: inset 0 0 0 0 #71a137;
   background-color: rgba(113, 161, 55, 0.8);
 }
-.container.all-studies .studies .studies-content .list-group-item a.idi:hover {
-  box-shadow: 0 0 0 3px #71a137;
+.container.all-studies .studies .studies-content .list-group-item a.eoi:hover, .container.all-studies .substudies .studies-content .list-group-item a.eoi:hover {
+  box-shadow: inset 0 0 0 3px #71a137;
   background-color: rgba(113, 161, 55, 0.2);
 }
-.container.all-studies .studies .studies-content .list-group-item .study-img {
+.container.all-studies .studies .studies-content .list-group-item a.fpd, .container.all-studies .substudies .studies-content .list-group-item a.fpd {
+  -webkit-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -moz-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -o-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  box-shadow: inset 0 0 0 0 #4a00d0;
+  background-color: rgba(74, 0, 208, 0.8);
+}
+.container.all-studies .studies .studies-content .list-group-item a.fpd:hover, .container.all-studies .substudies .studies-content .list-group-item a.fpd:hover {
+  box-shadow: inset 0 0 0 3px #4a00d0;
+  background-color: rgba(74, 0, 208, 0.2);
+}
+.container.all-studies .studies .studies-content .list-group-item a.ppags, .container.all-studies .substudies .studies-content .list-group-item a.ppags {
+  -webkit-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -moz-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -o-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  box-shadow: inset 0 0 0 0 #ff8000;
+  background-color: rgba(255, 128, 0, 0.8);
+}
+.container.all-studies .studies .studies-content .list-group-item a.ppags:hover, .container.all-studies .substudies .studies-content .list-group-item a.ppags:hover {
+  box-shadow: inset 0 0 0 3px #ff8000;
+  background-color: rgba(255, 128, 0, 0.2);
+}
+.container.all-studies .studies .studies-content .list-group-item a.miniops, .container.all-studies .substudies .studies-content .list-group-item a.miniops {
+  -webkit-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -moz-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -o-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  box-shadow: inset 0 0 0 0 #888;
+  background-color: rgba(136, 136, 136, 0.8);
+}
+.container.all-studies .studies .studies-content .list-group-item a.miniops:hover, .container.all-studies .substudies .studies-content .list-group-item a.miniops:hover {
+  box-shadow: inset 0 0 0 3px #888;
+  background-color: rgba(136, 136, 136, 0.2);
+}
+.container.all-studies .studies .studies-content .list-group-item a.entcol, .container.all-studies .substudies .studies-content .list-group-item a.entcol {
+  -webkit-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -moz-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -o-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  box-shadow: inset 0 0 0 0 #00b259;
+  background-color: rgba(0, 178, 89, 0.8);
+}
+.container.all-studies .studies .studies-content .list-group-item a.entcol:hover, .container.all-studies .substudies .studies-content .list-group-item a.entcol:hover {
+  box-shadow: inset 0 0 0 3px #00b259;
+  background-color: rgba(0, 178, 89, 0.2);
+}
+.container.all-studies .studies .studies-content .list-group-item a.meb, .container.all-studies .substudies .studies-content .list-group-item a.meb {
+  -webkit-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -moz-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -o-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  box-shadow: inset 0 0 0 0 #4d7aff;
+  background-color: rgba(77, 122, 255, 0.8);
+}
+.container.all-studies .studies .studies-content .list-group-item a.meb:hover, .container.all-studies .substudies .studies-content .list-group-item a.meb:hover {
+  box-shadow: inset 0 0 0 3px #4d7aff;
+  background-color: rgba(77, 122, 255, 0.2);
+}
+.container.all-studies .studies .studies-content .list-group-item a.fnr, .container.all-studies .substudies .studies-content .list-group-item a.fnr {
+  -webkit-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -moz-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  -o-transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  transition: background-color 1.5s ease-out, box-shadow 0.5s ease-out;
+  box-shadow: inset 0 0 0 0 #d900d0;
+  background-color: rgba(217, 0, 208, 0.8);
+}
+.container.all-studies .studies .studies-content .list-group-item a.fnr:hover, .container.all-studies .substudies .studies-content .list-group-item a.fnr:hover {
+  box-shadow: inset 0 0 0 3px #d900d0;
+  background-color: rgba(217, 0, 208, 0.2);
+}
+.container.all-studies .studies .studies-content .list-group-item .study-img, .container.all-studies .substudies .studies-content .list-group-item .study-img {
   background-image: url('../images/study-bg-default.jpg');
 }
-.container.all-studies .substudies .studies-content .list-group-item .study-img {
-  background-image: url('../images/study-bg-default.jpg');
-}
-.container.all-studies .substudies .studies-content .list-group-item a {
-  -webkit-transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  -moz-transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  -o-transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  box-shadow: 0 0 0 0 #009cda;
-  background-color: rgba(0, 156, 218, 0.8);
-}
-.container.all-studies .substudies .studies-content .list-group-item a:hover {
-  box-shadow: 0 0 0 3px #009cda;
-  background-color: rgba(0, 156, 218, 0.2);
+.container.all-studies .studies, .container.all-studies .substudies {
+  margin-top: 1em;
 }
 .container.all-studies .studies .newmatricula, .container.all-studies .substudies .newmatricula {
   position: absolute;
@@ -1409,29 +1548,11 @@ body #wrap section {
   border-bottom: none;
   border-top: 10px solid #8f0808;
 }
-.container.all-studies .fp-mig .substudies .studies-content .list-group-item a {
-  -webkit-transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  -moz-transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  -o-transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  box-shadow: 0 0 0 0 #ff6e30;
-  background-color: rgba(255, 110, 48, 0.8);
-}
-.container.all-studies .fp-mig .substudies .studies-content .list-group-item a:hover {
-  box-shadow: 0 0 0 3px #ff6e30;
-  background-color: rgba(255, 110, 48, 0.2);
-}
-.container.all-studies .fp-sup .substudies .studies-content .list-group-item a {
-  -webkit-transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  -moz-transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  -o-transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  transition: background-color 1.5s ease, box-shadow 1.5s ease;
-  box-shadow: 0 0 0 0 #c93d00;
-  background-color: rgba(201, 61, 0, 0.8);
-}
-.container.all-studies .fp-sup .substudies .studies-content .list-group-item a:hover {
-  box-shadow: 0 0 0 3px #c93d00;
-  background-color: rgba(201, 61, 0, 0.2);
+.container.all-studies .studies a[target="_blank"] .study-item:after, .container.all-studies .substudies a[target="_blank"] .study-item:after {
+  display: inline-block;
+  content: '\e164';
+  font-family: "Glyphicons Halflings";
+  margin-left: 3px;
 }
 .container.item-page {
   font-size: 15px;
@@ -1440,24 +1561,6 @@ body #wrap section {
 .study-data {
   padding: 8px;
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.4);
-  /*        .date:before {
-   content: '\e109';
-   font-family: "Glyphicons Halflings";
-   font-size: 1em;
-   margin-right: 0.5em;
-   }
-   .centre:before {
-   content: '\e021';
-   font-family: "Glyphicons Halflings";
-   font-size: 1em;
-   margin-right: 0.5em;
-   }
-   .requirements:before {
-   content: '\e013';
-   font-family: "Glyphicons Halflings";
-   font-size: 1em;
-   margin-right: 0.5em;
-   }*/
 }
 .study-data .study-definition {
   padding-left: 1em;
@@ -1497,11 +1600,54 @@ body #wrap section {
 .study-data.study-ges {
   background-color: #febf00;
 }
+.study-data.study-btx {
+  background-color: #5bc8d5;
+}
 .study-data.study-fp {
   background-color: rgba(252, 76, 0, 0.7);
 }
 .study-data.study-fpmig {
   background-color: rgba(255, 110, 48, 0.7);
+}
+.study-data.study-fpsup {
+  background-color: rgba(201, 61, 0, 0.7);
+}
+.study-data.study-eoi {
+  background-color: #71a137;
+}
+.study-data.study-fpd {
+  background-color: #4a00d0;
+  color: #fff;
+}
+.study-data.study-fpd a {
+  color: #fffb00;
+}
+.study-data.study-ppags {
+  background-color: #ff8000;
+}
+.study-data.study-miniops {
+  background-color: #888;
+}
+.study-data.study-entcol {
+  background-color: #00b259;
+  color: #111;
+}
+.study-data.study-entcol a {
+  color: #333;
+}
+.study-data.study-meb {
+  background-color: #4d7aff;
+  color: #fff;
+}
+.study-data.study-meb a {
+  color: #fffb00;
+}
+.study-data.study-fnr {
+  background-color: #d900d0;
+  color: #fff;
+}
+.study-data.study-fnr a {
+  color: #fffb00;
 }
 .study-data .study-frame {
   border: 2px dashed #fff;
@@ -1522,6 +1668,26 @@ body #wrap section {
 .study-tabs.study-ges .nav-tabs .panel-heading.active {
   background-color: #febf00;
 }
+.study-tabs.study-btx .nav-tabs li a:hover {
+  background-color: #d5f1f4;
+}
+.study-tabs.study-btx .nav-tabs li.active a {
+  background-color: #5bc8d5;
+  color: #000;
+}
+.study-tabs.study-btx .nav-tabs .panel-heading.active {
+  background-color: #5bc8d5;
+}
+.study-tabs.study-fp .nav-tabs li a:hover {
+  background-color: #ffb696;
+}
+.study-tabs.study-fp .nav-tabs li.active a {
+  background-color: #fc4c00;
+  color: #000;
+}
+.study-tabs.study-fp .nav-tabs .panel-heading.active {
+  background-color: #fc4c00;
+}
 .study-tabs.study-fpmig .nav-tabs li a:hover {
   background-color: #ffd9c9;
 }
@@ -1532,6 +1698,89 @@ body #wrap section {
 .study-tabs.study-fpmig .nav-tabs .panel-heading.active {
   background-color: #ff6e30;
 }
+.study-tabs.study-fpsup .nav-tabs li a:hover {
+  background-color: #ff9263;
+}
+.study-tabs.study-fpsup .nav-tabs li.active a {
+  background-color: #c93d00;
+  color: #000;
+}
+.study-tabs.study-fpsup .nav-tabs .panel-heading.active {
+  background-color: #c93d00;
+}
+.study-tabs.study-eoi .nav-tabs li a:hover {
+  background-color: #bcdb96;
+}
+.study-tabs.study-eoi .nav-tabs li.active a {
+  background-color: #71a137;
+  color: #000;
+}
+.study-tabs.study-eoi .nav-tabs .panel-heading.active {
+  background-color: #71a137;
+}
+.study-tabs.study-fpd .nav-tabs li a:hover {
+  background-color: #9f6aff;
+}
+.study-tabs.study-fpd .nav-tabs li.active a {
+  background-color: #4a00d0;
+  color: #fff;
+}
+.study-tabs.study-fpd .nav-tabs .panel-heading.active {
+  background-color: #4a00d0;
+}
+.study-tabs.study-ppags .nav-tabs li a:hover {
+  background-color: #fc9;
+}
+.study-tabs.study-ppags .nav-tabs li.active a {
+  background-color: #ff8000;
+  color: #000;
+}
+.study-tabs.study-ppags .nav-tabs .panel-heading.active {
+  background-color: #ff8000;
+}
+.study-tabs.study-miniops .nav-tabs li a:hover {
+  background-color: #d5d5d5;
+}
+.study-tabs.study-miniops .nav-tabs li.active a {
+  background-color: #888;
+  color: #000;
+}
+.study-tabs.study-miniops .nav-tabs .panel-heading.active {
+  background-color: #888;
+}
+.study-tabs.study-entcol .nav-tabs li a:hover {
+  background-color: #4cffa6;
+}
+.study-tabs.study-entcol .nav-tabs li.active a {
+  background-color: #00b259;
+  color: #000;
+}
+.study-tabs.study-entcol .nav-tabs .panel-heading.active {
+  background-color: #00b259;
+}
+.study-tabs.study-meb .nav-tabs li a:hover {
+  background-color: #e6ecff;
+}
+.study-tabs.study-meb .nav-tabs li.active a {
+  background-color: #4d7aff;
+  color: #000;
+}
+.study-tabs.study-meb .nav-tabs .panel-heading.active {
+  background-color: #4d7aff;
+}
+.study-tabs.study-fnr .nav-tabs li a:hover {
+  background-color: #ff73f9;
+}
+.study-tabs.study-fnr .nav-tabs li.active a {
+  background-color: #d900d0;
+  color: #fff;
+}
+.study-tabs.study-fnr .nav-tabs .panel-heading.active {
+  background-color: #d900d0;
+}
+.study-tabs .nav-tabs > li.active {
+  padding-bottom: 1px;
+}
 .study-tabs .nav-tabs > li.active > a {
   color: #000;
   font-weight: bold;
@@ -1541,12 +1790,14 @@ body #wrap section {
 .study-tabs .nav-tabs > li > a {
   border: 1px solid #ddd;
   background-color: #f5f5f5;
+  font-weight: 600;
 }
 .study-more-info {
   margin-top: 3em;
 }
 .study-more-info .panel-heading .panel-title a {
   text-decoration: none;
+  outline: none;
 }
 .study-more-info .panel-heading .panel-title a:before {
   content: '\002b';
@@ -1579,8 +1830,8 @@ body #wrap section {
   width: 100%;
   text-align: center;
   background-color: #eee;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 0;
+  padding-bottom: 10px;
 }
 .form-search .btn-search {
   margin-bottom: 3px;
@@ -1683,9 +1934,9 @@ body #wrap section {
 }
 .map-responsive .ioclegend {
   position: fixed;
-  bottom: 10%;
-  right: 1em;
-  background-color: #fff;
+  bottom: 5vh;
+  right: 5vw;
+  background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid;
   padding: 1em;
   font-family: Roboto, Arial, sans-serif;
@@ -1703,7 +1954,7 @@ body #wrap section {
   margin-right: 1em;
 }
 .ioc-news .imatge-noticia img {
-  height: 100%;
+  height: auto;
   max-width: 100%;
   float: left;
   margin: 0 15px 0 0;
@@ -1719,8 +1970,23 @@ body #wrap section {
   max-width: 60%;
   height: auto;
 }
+.ioc-news ul {
+  display: inline-block;
+}
 .back-to-top {
+  outline: none;
   font-size: 16px;
+  color: #fff;
+  background-color: #009cda;
+  border-radius: 5px;
+  margin-right: 0.8em;
+}
+.back-to-top:hover {
+  color: #fff;
+  background-color: #3351ad;
+}
+.back-to-top:focus {
+  color: #fff;
 }
 .footer {
   background-color: #efefef;
@@ -1753,6 +2019,83 @@ body #wrap section {
 }
 .footer .footer2 {
   clear: both;
+}
+.ioc-keyword-selected button {
+  background-color: rgba(176, 53, 0, 0.7) !important;
+}
+.ioc-fp-family {
+  clear: both;
+  padding-top: 2em;
+}
+.ioc-fp-family ul {
+  background-color: #eee;
+  text-align: center;
+}
+.ioc-fp-family ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 1em 2em 1em 0;
+}
+.ioc-fp-family ul li button {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(252, 76, 0, 0.7);
+  padding: 0;
+}
+.ioc-fp-family ul li button:hover {
+  background-color: rgba(176, 53, 0, 0.7);
+}
+.error {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  background-color: #efefef;
+  height: 100vh;
+}
+.error .element-invisible {
+  display: none;
+}
+.error .container {
+  padding: 20px 0;
+}
+.error .error-bg {
+  background-image: url('../images/carousel-default.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 370px;
+  box-shadow: 0 1px 5px #333;
+}
+.error .error-text {
+  color: #fff;
+  text-align: center;
+  background-color: rgba(24, 40, 37, 0.7);
+  height: 100%;
+  margin: 0 auto;
+  padding: 6em 1em;
+}
+.error .error-text h1 {
+  font-size: 90px;
+}
+.error .error-text h3 {
+  margin-top: 0;
+  padding-top: 1em;
+}
+.error .error-search {
+  padding: 50px 0 !important;
+}
+.error .error-search .search-query {
+  width: 50%;
+  border-radius: 5px;
+  margin-right: 3px;
+  padding: 15px;
+  font-size: 1.5em;
+}
+.error .error-search button {
+  padding: 16px;
+  margin-top: -6px;
+}
+.error .footer.container {
+  padding-top: 100px;
+  width: auto;
 }
 @media (max-width: 480px) {
   .headroom--not-top #navigation #brand {
@@ -1861,10 +2204,7 @@ body #wrap section {
     top: 71px;
   }
   #search.search-top {
-    top: 111px;
-  }
-  #main-box .item-page .page-header.iocnewsarticle {
-    margin-top: 3.5em;
+    top: 110px;
   }
   .ioc-news .imatge-noticia {
     width: 100%;
@@ -1873,7 +2213,7 @@ body #wrap section {
     margin-bottom: 15px;
   }
   .ioc-news img {
-    max-width: 100%;
+    width: 100%;
   }
 }
 /* Small Devices, Tablets */
@@ -1992,13 +2332,10 @@ body #wrap section {
     top: 71px;
   }
   #search.search-top {
-    top: 111px;
+    top: 110px;
   }
   .pagination .pagenumber {
     display: none;
-  }
-  #main-box .item-page .page-header.iocnewsarticle {
-    margin-top: 3.5em;
   }
   .ioc-news .imatge-noticia {
     width: 100%;
@@ -2007,7 +2344,7 @@ body #wrap section {
     margin-bottom: 15px;
   }
   .ioc-news img {
-    max-width: 100%;
+    width: 100%;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {

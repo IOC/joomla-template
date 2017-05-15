@@ -20,7 +20,7 @@ var parser      = new xml2js.Parser();
 
 var extPath      = '.';
 var assetsPath = '.';
-var templateName = 'masterbootstrap';
+var templateName = 'ioc';
 
 var wwwPath = config.wwwDir + '/templates/' + templateName;
 
@@ -167,7 +167,8 @@ gulp.task('watch:sass',
 gulp.task('watch:scripts',
 	function() {
 		gulp.watch([
-			extPath + '/js/template.js'
+			extPath + '/js/template.js',
+			extPath + '/js/ioc.js'
 			],
 			['scripts']
 		);

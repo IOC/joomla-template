@@ -73,14 +73,14 @@
 
 @mixin study-bg-color($color, $time) {
     &:hover {
-        box-shadow: 0 0 0 3px $color;
+        box-shadow: inset 0 0 0 3px $color;
         background-color: rgba($color, 0.2);
     }
-    -webkit-transition: background-color $time ease, box-shadow $time ease;
-    -moz-transition: background-color $time ease, box-shadow $time ease;
-    -o-transition: background-color $time ease, box-shadow $time ease;
-    transition: background-color $time ease, box-shadow $time ease;
-    box-shadow: 0 0 0 0 $color;
+    -webkit-transition: background-color $time ease-out, box-shadow 0.5s ease-out;
+    -moz-transition: background-color $time ease-out, box-shadow 0.5s ease-out;
+    -o-transition: background-color $time ease-out, box-shadow 0.5s ease-out;
+    transition: background-color $time ease-out, box-shadow 0.5s ease-out;
+    box-shadow: inset 0 0 0 0 $color;
     background-color: rgba($color, 0.8);
 }
 
@@ -125,6 +125,10 @@ h4, h5 {
     font-size: 14px;
 }
 
+button:focus {
+    outline: 0 !important;
+}
+
 .fluid-container {
   overflow: hidden;
 }
@@ -143,20 +147,17 @@ h4, h5 {
         }
         .navbar-collapse {
             .navbar-nav {
-                margin-top: 15px;
-                li,
+                margin-top: 18px;
+                a,
                 button {
-                    padding: 4px 0 10px 0;
+                    padding: 0 9px 11px;
                 }
                 &.login-campus,
                 &.search {
                     margin-top: 13px;
                     padding: 0;
-                    li {
-                        padding-bottom: 7px;
-                    }
                     button {
-                        padding-bottom: 0;
+                        padding-bottom: 11px;
                     }
                 }
             }
@@ -199,10 +200,10 @@ h4, h5 {
 
 #search {
     &.search-top {
-        top: 104px;
+        top: 103px;
     }
     position: fixed;
-    top: 55px;
+    top: 50px;
     left: 0;
     border-bottom: 1px solid #ddd;
     z-index: 10;
@@ -213,12 +214,13 @@ h4, h5 {
     .item-page {
         padding: 0 1em 1em 1em;
         .page-header {
-            border-bottom: 0;
             &.iocnewsarticle {
+                border-bottom: 0;
                 h1 {
                     color: $ioc-blue-heading;
                     &:before{
                         content: '|';
+                        color: $ioc-blue-heading;
                     }
                 }
             }
@@ -451,17 +453,42 @@ body #wrap {
     min-height:         calc(100vh - 102px);
 
     .container {
+        @include headercolor($ioc-blue-standard);
         &.item-pageges {
             @include headercolor($ioc-bg-ges);
+        }
+        &.item-pagebtx {
+            @include headercolor($ioc-bg-btx);
         }
         &.item-pagefp {
             @include headercolor($ioc-bg-fp);
         }
         &.item-pagefpmig {
-            @include headercolor($ioc-bg-fp-mig);
+            @include headercolor($ioc-bg-fpmig);
         }
         &.item-pagefpsup {
-            @include headercolor($ioc-bg-fp-sup);
+            @include headercolor($ioc-bg-fpsup);
+        }
+        &.item-pageeoi {
+            @include headercolor($ioc-bg-eoi);
+        }
+        &.item-pagefpd {
+            @include headercolor($ioc-bg-fpd);
+        }
+        &.item-pageppags {
+            @include headercolor($ioc-bg-ppags);
+        }
+        &.item-pageminiops {
+            @include headercolor($ioc-bg-miniops);
+        }
+        &.item-pageentcol {
+            @include headercolor($ioc-bg-entcol);
+        }
+        &.item-pagemeb {
+            @include headercolor($ioc-bg-meb);
+        }
+        &.item-pagefnr {
+            @include headercolor($ioc-bg-fnr);
         }
     }
 }
@@ -488,7 +515,9 @@ body #wrap {
             &.login-campus {
                 margin-top: 23px;
                 li {
-                    padding-bottom: 14px;
+                    &:hover {
+                        border-bottom: none;
+                    }
                 }
                 button {
                     font-size: 1.1em;
@@ -496,36 +525,29 @@ body #wrap {
                     border: none;
                     color: $ioc-white;
                     text-transform: uppercase;
-                    padding: 0 5px 0 5px;
-                    //margin: 3px 0;
-                    //border-radius: 5px;
+                    padding: 0 5px 14px 5px;
                     &:hover {
                         background-color: transparent;
-                        //text-decoration: underline;
+                        border-bottom: 4px solid $ioc-blue-standard;
                     }
                     &[aria-expanded="true"],
                     &:hover[aria-expanded="true"] {
+                        border-bottom: 4px solid $ioc-blue-standard;
                         .glyphicon {
                             font-weight: 600;
                         }
-                        //border: 1px solid #2e6da4;
-                        //background-color: $ioc-bg-button;
                         color: $ioc-white;
                         font-weight: 600;
-                        padding-bottom: 15px;
-                        border-bottom: 4px solid $ioc-blue-standard;
                     }
                 }
             }
 
             li {
-                transition: all .15s ease-in-out;
-                padding-bottom: 17px;
+                -webkit-transition:  border .15s ease-in-out, padding .35s ease-in-out;
+                -moz-transition:  border .15s ease-in-out, padding .35s ease-in-out;
+                -o-transition:  border .15s ease-in-out, padding .35s ease-in-out;
+                transition: border .15s ease-in-out, padding .35s ease-in-out;
                 border-bottom: 0 solid;
-                //border-left: 1px solid $ioc-bd-header;
-                &:last-child {
-                    //border-right: 1px solid $ioc-bd-header;
-                }
                 &:hover {
                     border-bottom: 4px solid $ioc-blue-standard;
                 }
@@ -539,11 +561,10 @@ body #wrap {
                 a {
                     &:hover {
                         background-color: transparent;
-                        //text-decoration: underline;
                     }
                     text-transform: uppercase;
                     color: $ioc-white;
-                    padding: 0 10px;
+                    padding: 0 9px 17px;
                     font-size: 1.1em;
                 }
             }
@@ -611,20 +632,33 @@ body #wrap {
         }
     }
     &.all-studies {
-        //background-color: $ioc-bg-gray;
         padding-top: 1em;
         .navbar-nav {
+            width: 100%;
             margin-left: -15px;
             margin-right: -15px;
         }
+        .block {
+            clear: both;
+        }
         .studies,
         .substudies {
+            padding-top: 1em;
             .studies-content {
                 .list-group-item {
                     background-color: transparent;
                     .study-img {
-                        background-size: cover;
+                        &:hover {
+                            background-size: 105% 105%;
+                        }
+                        background-size: 100% 100%;
                         background-repeat: no-repeat;
+                        overflow: hidden;
+                        background-position: center center;
+                        -webkit-transition: background-size .5s ease-in-out;
+                        -moz-transition: background-size .5s ease-in-out;
+                        -o-transition: background-size .5s ease-in-out;
+                        transition: background-size .5s ease-in-out;
                     }
                     border: none;
                     padding: 10px 10px;
@@ -644,13 +678,14 @@ body #wrap {
                 .study-item {
                     display: table-cell;
                     vertical-align: bottom;
-                    padding: 2em 3vw 0.8em 0.8em;
+                    padding: 2em 3em 0.8em 0.8em;
                     font-weight: 600;
                     font-size: 1.1em;
                 }
             }
         }
-        .studies {
+        .studies,
+        .substudies {
             .studies-content {
                 .list-group-item {
                     a {
@@ -658,36 +693,49 @@ body #wrap {
                         &.ges {
                             @include study-bg-color($ioc-bg-ges, 1.5s);
                         }
-                        &.batx {
-                            @include study-bg-color($ioc-bg-batx, 1.5s);
+                        &.btx {
+                            @include study-bg-color($ioc-bg-btx, 1.5s);
                         }
                         &.fp {
                             @include study-bg-color($ioc-bg-fp, 1.5s);
                         }
-                        &.idi {
-                            @include study-bg-color($ioc-bg-idi, 1.5s);
+                        &.fpmig {
+                            @include study-bg-color($ioc-bg-fpmig, 1.5s);
+                        }
+                        &.fpsup {
+                            @include study-bg-color($ioc-bg-fpsup, 1.5s);
+                        }
+                        &.eoi {
+                            @include study-bg-color($ioc-bg-eoi, 1.5s);
+                        }
+                        &.fpd {
+                            @include study-bg-color($ioc-bg-fpd, 1.5s);
+                        }
+                        &.ppags {
+                            @include study-bg-color($ioc-bg-ppags, 1.5s);
+                        }
+                        &.miniops {
+                            @include study-bg-color($ioc-bg-miniops, 1.5s);
+                        }
+                        &.entcol {
+                            @include study-bg-color($ioc-bg-entcol, 1.5s);
+                        }
+                        &.meb {
+                            @include study-bg-color($ioc-bg-meb, 1.5s);
+                        }
+                        &.fnr {
+                            @include study-bg-color($ioc-bg-fnr, 1.5s);
                         }
                     }
                     .study-img {
                         background-image: url('../images/study-bg-default.jpg');
-                    }
-                }
-            }
-        }
-        .substudies {
-            .studies-content {
-                .list-group-item {
-                    .study-img {
-                        background-image: url('../images/study-bg-default.jpg');
-                    }
-                    a {
-                        @include study-bg-color($ioc-blue-standard, 1.5s);
                     }
                 }
             }
         }
         .studies,
         .substudies {
+            margin-top: 1em;
             .newmatricula {
                 &:before {
                     content: "";
@@ -708,21 +756,13 @@ body #wrap {
                 color: $ioc-white;
                 text-align: center;
             }
-        }
-        .fp-mig .substudies {
-            .studies-content {
-                .list-group-item {
-                    a {
-                        @include study-bg-color($ioc-bg-fp-mig, 1.5s);
-                    }
-                }
-            }
-        }
-        .fp-sup .substudies {
-            .studies-content {
-                .list-group-item {
-                    a {
-                        @include study-bg-color($ioc-bg-fp-sup, 1.5s);
+            a[target="_blank"] {
+                .study-item {
+                    &:after{
+                        display: inline-block;
+                        content: '\e164';
+                        font-family: "Glyphicons Halflings";
+                        margin-left: 3px;
                     }
                 }
             }
@@ -762,24 +802,6 @@ body #wrap {
             width: 100%;
         }
     }
-/*        .date:before {
-        content: '\e109';
-        font-family: "Glyphicons Halflings";
-        font-size: 1em;
-        margin-right: 0.5em;
-    }
-    .centre:before {
-        content: '\e021';
-        font-family: "Glyphicons Halflings";
-        font-size: 1em;
-        margin-right: 0.5em;
-    }
-    .requirements:before {
-        content: '\e013';
-        font-family: "Glyphicons Halflings";
-        font-size: 1em;
-        margin-right: 0.5em;
-    }*/
     h3 {
         margin-top: 0px;
         &:after {
@@ -796,11 +818,54 @@ body #wrap {
     &.study-ges {
         background-color: $ioc-bg-ges;
     }
+    &.study-btx {
+        background-color: $ioc-bg-btx;
+    }
     &.study-fp {
         background-color: rgba($ioc-bg-fp, 0.7);
     }
     &.study-fpmig {
-        background-color: rgba($ioc-bg-fp-mig, 0.7);
+        background-color: rgba($ioc-bg-fpmig, 0.7);
+    }
+    &.study-fpsup {
+        background-color: rgba($ioc-bg-fpsup, 0.7);
+    }
+    &.study-eoi {
+        background-color: $ioc-bg-eoi;
+    }
+    &.study-fpd {
+        background-color: $ioc-bg-fpd;
+        color: $ioc-white;
+        a {
+            color: $ioc-yellow;
+        }
+    }
+    &.study-ppags {
+        background-color: $ioc-bg-ppags;
+    }
+    &.study-miniops {
+        background-color: $ioc-bg-miniops;
+    }
+    &.study-entcol {
+        background-color: $ioc-bg-entcol;
+        color: #111;
+        a {
+            color: #333;
+        }
+    }
+    &.study-meb {
+        background-color: $ioc-bg-meb;
+        color: $ioc-white;
+        a {
+            color: $ioc-yellow;
+        }
+    }
+    &.study-fnr {
+        background-color: $ioc-bg-fnr;
+        color: $ioc-white;
+        a {
+            color: $ioc-yellow;
+        }
     }
     .study-frame {
         border: 2px dashed $ioc-white;
@@ -814,19 +879,53 @@ body #wrap {
     &.study-ges {
         @include tabcolor($ioc-bg-ges, #000);
     }
+    &.study-btx {
+        @include tabcolor($ioc-bg-btx, #000);
+    }
+    &.study-fp {
+        @include tabcolor($ioc-bg-fp, #000);
+    }
     &.study-fpmig {
-        @include tabcolor($ioc-bg-fp-mig, #000);
+        @include tabcolor($ioc-bg-fpmig, #000);
+    }
+    &.study-fpsup {
+        @include tabcolor($ioc-bg-fpsup, #000);
+    }
+    &.study-eoi {
+        @include tabcolor($ioc-bg-eoi, #000);
+    }
+    &.study-fpd {
+        @include tabcolor($ioc-bg-fpd, $ioc-white);
+    }
+    &.study-ppags {
+        @include tabcolor($ioc-bg-ppags, #000);
+    }
+    &.study-miniops {
+        @include tabcolor($ioc-bg-miniops, #000);
+    }
+    &.study-entcol {
+        @include tabcolor($ioc-bg-entcol, #000);
+    }
+    &.study-meb {
+        @include tabcolor($ioc-bg-meb, #000);
+    }
+    &.study-fnr {
+        @include tabcolor($ioc-bg-fnr, $ioc-white);
     }
     .nav-tabs > li {
-        &.active > a {
-            color :#000;
-            font-weight: bold;
-            border: none;
-            border-bottom: 1px solid #ddd;
+        &.active {
+            padding-bottom: 1px;
+            > a {
+                color :#000;
+                font-weight: bold;
+                border: none;
+                border-bottom: 1px solid #ddd;
+            }
         }
         > a {
             border: 1px solid #ddd;
             background-color: #f5f5f5;
+            font-weight: 600;
         }
     }
 }
@@ -837,6 +936,7 @@ body #wrap {
         .panel-title {
             a {
                 text-decoration: none;
+                outline: none;
                 &:before {
                     content: '\002b';
                     font-family: "Glyphicons Halflings";
@@ -878,8 +978,8 @@ body #wrap {
     width: 100%;
     text-align: center;
     background-color: $ioc-bg-gray;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 0;
+    padding-bottom: 10px;
     .btn-search {
         margin-bottom: 3px;
     }
@@ -990,9 +1090,9 @@ body #wrap {
     }
     .ioclegend {
         position: fixed;
-        bottom: 10%;
-        right: 1em;
-        background-color: $ioc-white;
+        bottom: 5vh;
+        right: 5vw;
+        background-color: rgba($ioc-white, 0.7);
         border: 1px solid;
         padding: 1em;
         font-family: Roboto, Arial, sans-serif;
@@ -1012,7 +1112,7 @@ body #wrap {
         width: 30%;
         margin-right: 1em;
         img {
-            height: 100%;
+            height: auto;
             max-width: 100%;
             float: left;
             margin: 0 15px 0 0;
@@ -1029,6 +1129,9 @@ body #wrap {
         max-width: 60%;
         height: auto;
     }
+    ul {
+        display: inline-block;
+    }
 }
 
 #system-message-container {
@@ -1036,7 +1139,19 @@ body #wrap {
 }
 
 .back-to-top {
+    outline: none;
     font-size: 16px;
+    color: $ioc-white;
+    background-color: $ioc-blue-standard;
+    border-radius: 5px;
+    margin-right: 0.8em;
+    &:hover {
+        color: $ioc-white;
+        background-color: $ioc-blue-dark;
+    }
+    &:focus {
+        color: $ioc-white;
+    }
 }
 
 .footer {
@@ -1070,6 +1185,88 @@ body #wrap {
     }
     .footer2 {
         clear: both;
+    }
+}
+
+.ioc-keyword-selected {
+    button {
+        background-color: rgba(darken($ioc-bg-fp, 15%), 0.7) !important;
+    }
+}
+
+.ioc-fp-family {
+    clear: both;
+    padding-top: 2em;
+    ul {
+        background-color: $ioc-bg-gray;
+        text-align: center;
+        li {
+            list-style-type: none;
+            display: inline-block;
+            margin: 1em 2em 1em 0;
+            button {
+                &:hover {
+                    background-color: rgba(darken($ioc-bg-fp, 15%), 0.7);
+                }
+                width: 50px;
+                height: 50px;
+                background-color: rgba($ioc-bg-fp, 0.7);
+                padding: 0;
+            }
+        }
+    }
+}
+
+.error {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    background-color: #efefef;
+    height: 100vh;
+    .element-invisible {
+        display: none;
+    }
+    .container {
+        padding: 20px 0;
+    }
+    .error-bg {
+        background-image: url('../images/carousel-default.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 370px;
+        box-shadow: 0 1px 5px #333;
+    }
+    .error-text {
+        color: $ioc-white;
+        text-align: center;
+        background-color: rgba($ioc-black, 0.7);
+        height: 100%;
+        margin: 0 auto;
+        padding: 6em 1em;
+        h1 {
+            font-size: 90px;
+        }
+        h3 {
+            margin-top: 0;
+            padding-top: 1em;
+        }
+    }
+    .error-search {
+        padding: 50px 0 !important;
+        .search-query {
+            width: 50%;
+            border-radius: 5px;
+            margin-right: 3px;
+            padding: 15px;
+            font-size: 1.5em;
+        }
+        button {
+            padding: 16px;
+            margin-top: -6px;
+        }
+    }
+    .footer.container {
+        padding-top: 100px;
+        width: auto;
     }
 }
 
@@ -1201,14 +1398,14 @@ body #wrap {
     #search {
         top: 71px;
         &.search-top {
-            top: 111px;
+            top: 110px;
         }
     }
     #main-box {
         .item-page {
             .page-header {
                 &.iocnewsarticle {
-                    margin-top: 3.5em;
+                    //margin-top: 3.5em;
                 }
             }
         }
@@ -1221,7 +1418,7 @@ body #wrap {
             }
         }
         img {
-            max-width: 100%;
+            width: 100%;
         }
     }
 }
@@ -1365,7 +1562,7 @@ body #wrap {
     #search {
         top: 71px;
         &.search-top {
-            top: 111px;
+            top: 110px;
         }
     }
 
@@ -1377,7 +1574,7 @@ body #wrap {
         .item-page {
             .page-header {
                 &.iocnewsarticle {
-                    margin-top: 3.5em;
+                    //margin-top: 3.5em;
                 }
             }
         }
@@ -1391,7 +1588,7 @@ body #wrap {
             }
         }
         img {
-            max-width: 100%;
+            width: 100%;
         }
     }
 }

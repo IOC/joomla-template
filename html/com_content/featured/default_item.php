@@ -33,11 +33,12 @@ if (preg_match('~<figure class="imatge-noticia">(.*?)</figure>~s', $this->item->
     preg_match('/<img.+?src="(?!data:image)(([^"])+)"[^>]+>/', $tagimg, $matches);
     if (isset($matches[1])) {
         $src = $matches[1];
-        $this->item->introtext = preg_replace('~\s*<figure[^>]*>.*?</figure>~s', '', $this->item->introtext);
-        $this->item->introtext = preg_replace('/\s*<img[^>]*>\s*/', '', $this->item->introtext);
-        $this->item->introtext = preg_replace('~\s*<video[^>]*>.*?</video>\s*~', '', $this->item->introtext);
     }
 }
+
+$this->item->introtext = preg_replace('~\s*<figure[^>]*>.*?</figure>~s', '', $this->item->introtext);
+$this->item->introtext = preg_replace('~\s*<img[^>]*>\s*~', '', $this->item->introtext);
+$this->item->introtext = preg_replace('~\s*<video[^>]*>.*?</video>\s*~s', '', $this->item->introtext);
 
 $articlelength = mb_strlen(strip_tags($this->item->introtext));
 

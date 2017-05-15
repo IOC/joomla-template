@@ -50,6 +50,12 @@ if ($params->get('style') == 'Ioc-studies' || $params->get('style') == 'Ioc-sub_
 
 foreach ($list as $i => &$item)
 {
+	$dataattr = '';
+
+	if ($item->params->get('menu-meta_keywords')) {
+		$dataattr = 'data-meta-keyword="' . $item->params->get('menu-meta_keywords') . '"';
+	}
+
 	$class = $menunavclass . $studiesclass . 'item-' . $item->id;
 
 	if (($item->id == $active_id) OR ($item->type == 'alias' AND $item->params->get('aliasoptions') == $active_id))
@@ -95,7 +101,7 @@ foreach ($list as $i => &$item)
 		$class = ' class="' . trim($class) . '"';
 	}
 
-	echo '<li' . $class . '>';
+	echo '<li' . $class . ' ' . $dataattr . '>';
 
 	if (!empty($studiesclass)) {
 		$style = '';

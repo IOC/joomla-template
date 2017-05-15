@@ -1,4 +1,5 @@
 $custom_red:    rgb(217, 83, 79);
+$ioc-link:      #23527c;
 
 @font-face {
   font-family: 'Glyphicons Halflings';
@@ -12,15 +13,37 @@ $custom_red:    rgb(217, 83, 79);
     @mixin borderioc($width, $color) {
         box-sizing: border-box;
         border: $width dashed $color;
-        padding: 1em;
+        padding: 1.1em;
         background-color: #fafafa;
     }
 
     @mixin numbertab($number) {
         content: $number;
         color: $custom_red;
-        margin: -1em 0 0 -0.5em;
+        margin: -18px 0 0 -12px;
         float: left;
+    }
+
+    @mixin addelement($color) {
+        content: '\002b';
+        background-color: $color;
+        color: #fff;
+        font-family: 'Glyphicons Halflings';
+        margin-left: 1em;
+        cursor: pointer;
+        padding: 1px 2px 1px 3px;
+        pointer-events: auto;
+    }
+
+    @mixin removeelement($color) {
+        content: '\2212';
+        font-family: "Glyphicons Halflings";
+        background-color: $color;
+        color: #fff;
+        float: right;
+        cursor: pointer;
+        padding: 0 2px;
+        pointer-events: auto;
     }
 
     .study-main {
@@ -30,16 +53,45 @@ $custom_red:    rgb(217, 83, 79);
             @include borderioc(1px, $custom_red);
             height: 100%;
         }
-        .study-frame {
-            @include borderioc(1px, $custom_red);
-            .study-term, .study-definition {
-                h4 {
-                    @include borderioc(1px, $custom_red);
+        .study-data {
+            pointer-events: none;
+            .study-frame {
+                &:after {
+                    @include addelement($custom_red);
+                    float: right;
+                    margin: -4px -16px 0 0;
                 }
                 @include borderioc(1px, $custom_red);
-            }
-            h3:after {
-                color: #942A25;
+                color: #000;
+                .study-term,
+                .study-definition {
+                    h4 {
+                        @include borderioc(1px, $custom_red);
+                    }
+                    @include borderioc(1px, $custom_red);
+                    .study-registration,
+                    .study-date,
+                    .semiheader {
+                        @include borderioc(1px, $custom_red);
+                    }
+                    .btn {
+                        background-color: transparent;
+                    }
+                }
+                .study-term {
+                    &:before {
+                        @include removeelement($custom_red);
+                        margin: -15px -15px 0 0;
+                    }
+                }
+                h3:after {
+                    color: #942A25;
+                }
+                a {
+                    pointer-events: auto;
+                    cursor: pointer;
+                    color: $ioc-link;
+                }
             }
         }
     }
@@ -64,21 +116,40 @@ $custom_red:    rgb(217, 83, 79);
             counter-reset: numtab;
             clear: both;
             @include borderioc(2px, $custom_red);
+            pointer-events: none;
             li {
                 display: inline-block;
-                margin-left: 2em;
+                margin-left: 1em;
+                margin-bottom: 1em;
+                pointer-events: none;
                 @include borderioc(1px, $custom_red);
+                &:first-child{
+                    &:after {
+                        content: '';
+                    }
+                }
                 &:before {
                     counter-increment: numtab;
                     @include numbertab(counter(numtab));
                 }
+                &:after {
+                    @include removeelement($custom_red);
+                    margin: -37px -17px 0 0;
+                }
+                &.active a {
+                    background-color: transparent;
+                }
+                a {
+                    &:hover {
+                        background-color: transparent;
+                    }
+                    cursor: pointer;
+                    pointer-events: auto;
+                    color: $ioc-link;
+                }
             }
             &:after {
-                content: '\002b';
-                color: $custom_red;
-                font-family: 'Glyphicons Halflings';
-                margin-left: 1em;
-                cursor: pointer;
+                @include addelement($custom_red);
             }
         }
         .tab-content {
@@ -102,6 +173,32 @@ $custom_red:    rgb(217, 83, 79);
         .more-section-content,
         h3 {
             @include borderioc(1px, $custom_red);
+        }
+    }
+    #panel-sections {
+        pointer-events: none;
+        &:after {
+            @include addelement($custom_red);
+            float: right;
+            margin-right: -18px;
+            margin-top: -4px;
+        }
+        .panel-heading {
+            a {
+                cursor: pointer;
+                pointer-events: auto;
+            }
+        }
+        .panel.panel-default {
+            pointer-events: none;
+            &:first-child{
+                &:before {
+                    content: '';
+                }
+            }
+            &:before {
+                @include removeelement($custom_red);
+            }
         }
     }
     .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {

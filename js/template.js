@@ -34,7 +34,17 @@ headroom.init();
 		});
 		$('.back-to-top').click(function(event) {
 			event.preventDefault();
-			$('html, body').animate({scrollTop: 0}, duration);
+			var position = 0;
+			// Link inside tabs, return to active tab
+			if ($(this).attr('href') != '#') {
+				var node = $('#tabs li.active');
+				if (node.length) {
+					position = node.offset().top - $('#navigation').outerHeight(true);
+				}
+				$(this).attr('href', '#');
+				$(this).find('span').removeClass('glyphicon-link').addClass('glyphicon-chevron-up');
+			}
+			$('html, body').animate({scrollTop: position}, duration);
 			return false;
 		});
 

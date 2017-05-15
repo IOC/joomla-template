@@ -3,6 +3,13 @@
         var $indicators = $('ol.carousel-indicators');
         var $moreinfo = $('#collapse-more-info');
         var linkhash = '';
+        var $filtering = $('#ioc-filter-data');
+
+        $('[data-toggle="tooltip"]').tooltip();
+
+        if ($filtering) {
+            $filtering.removeClass('hidden');
+        }
 
         if ($indicators) {
             $indicators.removeClass('hidden');
@@ -55,20 +62,17 @@
         $(document).on('show.bs.collapse', '.panel-collapse', function (e) {
             $(e.currentTarget).closest('.panel').siblings().find('.panel-collapse').collapse('hide');
         });
-
+        $(document).on('click', 'a', function(e) {
+            $('.back-to-top').attr('href', '#');
+            $('.back-to-top span').removeClass('glyphicon-link').addClass('glyphicon-chevron-up');
+        });
         $(document).on('click', '.study-term a[href*=#], .study-tabs .tab-content a[href*=#]', function(e) {
             e.preventDefault();
             linkhash = $(this).prop('hash');
-            if (!$('#collapse-more-info').hasClass('in') || !$(linkhash).hasClass('in')) {
-                if (!$('#collapse-more-info').hasClass('in')) {
-                    $('#collapse-other-info > .panel > .panel-heading a').trigger('click');
-                }
-                if (!$(linkhash).hasClass('in')) {
-                    $('#panel-sections a[href="' + linkhash +'"]').trigger('click');
-                }
-            } else {
-                var position = $(linkhash).position();
-                $("html, body").animate({ scrollTop: position.top }, 800);
+            gotopanel(linkhash);
+            if ($(this).closest('.study-tabs').length) {
+                $('.back-to-top').attr('href', $('#tabs > li.active a').attr('href'));
+                $('.back-to-top span').removeClass('glyphicon-chevron-up').addClass('glyphicon-link');
             }
         });
         $(document).on('click', '#panel-sections .panel-title a[href*=#]', function(e) {
@@ -82,5 +86,37 @@
             }
             linkhash = '';
         });
+        $(document).on('click', '#ioc-filter-data li', function(e) {
+            e.preventDefault();
+            var keyword = $(this).data("meta-keyword");
+            $(this).siblings().removeClass('ioc-keyword-selected');
+            $(this).toggleClass('ioc-keyword-selected');
+            if ($(this).hasClass('ioc-keyword-selected') && keyword) {
+                var $nodes = $('.substudies .nav.navbar-nav');
+                var $selected = $nodes.find("li[data-meta-keyword='" + keyword + "']");
+                $nodes.find('li').not($selected).hide(800, function(){
+                    $selected.show(800);
+                });
+            } else {
+                $('.substudies .nav.navbar-nav li').show(800);
+            }
+        });
+        var gotopanel = function (linkhash) {
+            window.location.hash = linkhash;
+            if (!$('#collapse-more-info').hasClass('in') || !$(linkhash).hasClass('in')) {
+                if (!$('#collapse-more-info').hasClass('in')) {
+                    $('#collapse-other-info > .panel > .panel-heading a').trigger('click');
+                }
+                if (!$(linkhash).hasClass('in')) {
+                    $('#panel-sections a[href="' + linkhash +'"]').trigger('click');
+                }
+            } else {
+                var position = $(linkhash).position();
+                $("html, body").animate({ scrollTop: position.top }, 800);
+            }
+        };
+        if ( $(document.location.hash).length ) {
+            gotopanel(document.location.hash);
+        }
     });
 })(jQuery);
