@@ -13,14 +13,14 @@ $ioc-link:      #23527c;
     @mixin borderioc($width, $color) {
         box-sizing: border-box;
         border: $width dashed $color;
-        padding: 1.1em;
+        padding: 10px;
         background-color: #fafafa;
     }
 
     @mixin numbertab($number) {
         content: $number;
         color: $custom_red;
-        margin: -18px 0 0 -12px;
+        margin: -11px 0 0 -8px;
         float: left;
     }
 
@@ -47,6 +47,9 @@ $ioc-link:      #23527c;
     }
 
     .study-main {
+        .col-md-6 {
+            width: 49% !important;
+        }
         @include borderioc(2px, $custom_red);
         height: 100%;
         .study-overview {
@@ -54,44 +57,62 @@ $ioc-link:      #23527c;
             height: 100%;
         }
         .study-data {
-            pointer-events: none;
-            .study-frame {
+            .study-header-img {
+                top: -28px;
+                left: 47.5%;
+                width: 50%;
+            }
+            @include borderioc(1px, $custom_red);
+            color: #000;
+            .study-col {
+                pointer-events: none;
+                @include borderioc(1px, $custom_red);
+                padding: 0 10px;
                 &:after {
                     @include addelement($custom_red);
                     float: right;
-                    margin: -4px -16px 0 0;
+                    margin: -4px -10px 0 0;
                 }
-                @include borderioc(1px, $custom_red);
-                color: #000;
-                .study-term,
+
+                h4,
                 .study-definition {
-                    h4 {
-                        @include borderioc(1px, $custom_red);
-                    }
                     @include borderioc(1px, $custom_red);
-                    .study-registration,
-                    .study-date,
-                    .semiheader {
-                        @include borderioc(1px, $custom_red);
+                    pointer-events: none;
+                    &:first-child,
+                    &:nth-child(2) {
+                        &:before {
+                            content: '';
+                        }
                     }
-                    .btn {
-                        background-color: transparent;
-                    }
-                }
-                .study-term {
                     &:before {
                         @include removeelement($custom_red);
-                        margin: -15px -15px 0 0;
+                        margin: -10px -10px 0 0;
                     }
                 }
-                h3:after {
-                    color: #942A25;
+                .study-date,
+                .study-days,
+                .study-month,
+                .semiheader {
+                    @include borderioc(1px, $custom_red);
+                    color: #000;
                 }
-                a {
-                    pointer-events: auto;
-                    cursor: pointer;
-                    color: $ioc-link;
+                .btn {
+                    background-color: transparent;
                 }
+            }
+            h3:after {
+                color: #942A25;
+            }
+            a {
+                pointer-events: auto;
+                cursor: pointer;
+                color: $ioc-link;
+            }
+        }
+        .study-buttons {
+            margin-top: 0;
+            > div {
+                @include borderioc(1px, $custom_red);
             }
         }
     }
@@ -134,7 +155,7 @@ $ioc-link:      #23527c;
                 }
                 &:after {
                     @include removeelement($custom_red);
-                    margin: -37px -17px 0 0;
+                    margin: -36px -18px 0 0;
                 }
                 &.active a {
                     background-color: transparent;
@@ -171,8 +192,24 @@ $ioc-link:      #23527c;
         .panel-body,
         .more-section,
         .more-section-content,
-        h3 {
+        h4 {
             @include borderioc(1px, $custom_red);
+        }
+        .title-more-information {
+            margin-top: 0;
+        }
+        .panel-heading {
+            .custom-icon {
+                &.plus {
+                    display: none;
+                }
+            }
+        }
+
+        .panel-title {
+            a {
+                padding: 5px;
+            }
         }
     }
     #panel-sections {
@@ -180,8 +217,8 @@ $ioc-link:      #23527c;
         &:after {
             @include addelement($custom_red);
             float: right;
-            margin-right: -18px;
-            margin-top: -4px;
+            margin-right: -11px;
+            margin-top: -9px;
         }
         .panel-heading {
             a {

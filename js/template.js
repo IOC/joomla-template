@@ -8,10 +8,13 @@
 			$('.parent > a').append('<b class="caret"></b>');
 			$('.parent > ul').addClass('dropdown-menu');
 		}
+var offset = 120;
 // grab an element
 var myElement = document.querySelector("header");
 // construct an instance of Headroom, passing the element
-var headroom  = new Headroom(myElement);
+var headroom  = new Headroom(myElement, {
+	"offset": offset
+ });
 // initialise
 headroom.init();
 		// Fix hide dropdown
@@ -23,7 +26,6 @@ headroom.init();
 			html: true
 		});
 		// To top
-		var offset = 220;
 		var duration = 500;
 		$(window).scroll(function() {
 			if ($(this).scrollTop() > offset) {

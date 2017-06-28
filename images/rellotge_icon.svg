@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Main-page" transform="translate(-53.000000, -3347.000000)" fill-rule="nonzero" fill="#FFFFFF">
+            <g id="footer" transform="translate(0.000000, 2921.000000)">
+                <g id="footer_horari" transform="translate(53.000000, 398.000000)">
+                    <g id="rellotge_icon" transform="translate(0.000000, 28.000000)">
+                        <path d="M10.92,11.76 L10.92,4.2 L11.76,4.2 L11.76,12.6 L11.34,12.6 L5.88,12.6 L5.88,11.76 L10.92,11.76 Z M10.5,21 C4.70101013,21 0,16.2989899 0,10.5 C0,4.70101013 4.70101013,0 10.5,0 C16.2989899,0 21,4.70101013 21,10.5 C21,16.2989899 16.2989899,21 10.5,21 Z M10.5,20.16 C15.8350707,20.16 20.16,15.8350707 20.16,10.5 C20.16,5.16492932 15.8350707,0.84 10.5,0.84 C5.16492932,0.84 0.84,5.16492932 0.84,10.5 C0.84,15.8350707 5.16492932,20.16 10.5,20.16 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -13,15 +13,19 @@ defined('_JEXEC') or die;
 $class = $item->anchor_css ? 'class="' . $item->anchor_css . '" ' : '';
 $title = $item->anchor_title ? 'title="' . $item->anchor_title . '" ' : '';
 $rel   = $item->anchor_rel ? 'rel="' . $item->anchor_rel . '" ' : '';
-$study_start = '';
-$study_end = '';
+$ownstyles = array (
+    'Ioc-studies',
+    'Ioc-sub_studies',
+);
 
-if ($params->get('style') == 'Ioc-studies' || $params->get('style') == 'Ioc-sub_studies') {
-    $study_start = '<div class="study-item">';
-    $study_end = '</div>';
+if (in_array($params->get('style'), $ownstyles)) {
+    echo '<p>' . $item->title . '</p>';
+    return;
 }
 
-if ($item->menu_image)
+array_push($ownstyles, 'Ioc-menu_footer');
+
+if ($item->menu_image && !in_array($params->get('style'), $ownstyles))
 {
     $item->params->get('menu_text', 1) ?
     $linktype = '<img src="' . $item->menu_image . '" alt="' . $item->title . '" /><span class="image-title">' . $item->title . '</span> ' :
@@ -38,11 +42,11 @@ $flink = JFilterOutput::ampReplace(htmlspecialchars($flink));
 switch ($item->browserNav) :
     default:
     case 0:
-?><a <?php echo $class; ?>href="<?php echo $flink; ?>" <?php echo $title . $rel; ?>><?php echo $study_start; echo $linktype; echo $study_end; ?></a><?php
+ ?><a <?php echo $class; ?>href="<?php echo $flink; ?>" <?php echo $title . $rel; ?>><?php echo $linktype; ?></a><?php
         break;
     case 1:
         // _blank
-?><a <?php echo $class; ?>href="<?php echo $flink; ?>" target="_blank" <?php echo $title . $rel; ?>><?php echo $study_start; echo $linktype; echo $study_end; ?></a><?php
+ ?><a <?php echo $class; ?>href="<?php echo $flink; ?>" target="_blank" <?php echo $title . $rel; ?>><?php echo $linktype; ?></a><?php
         break;
     case 2:
         // Use JavaScript "window.open"

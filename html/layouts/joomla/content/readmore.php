@@ -13,7 +13,7 @@ $params = $displayData['params'];
 $item = $displayData['item'];
 ?>
 
-<p class="readmore">
+<p class="readmore hidden-xs">
     <a class="btn" href="<?php echo $displayData['link']; ?>" itemprop="url">
         <?php if (!$params->get('access-view')) :
             echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE');
@@ -28,6 +28,7 @@ $item = $displayData['item'];
             echo JText::_('COM_CONTENT_READ_MORE_TITLE');
             //echo JHtml::_('string.truncate', ($item->title), $params->get('readmore_limit'));
         endif; ?>
-        <span class="glyphicon glyphicon-triangle-right"></span>
+        <!-- <span class="glyphicon glyphicon-triangle-right"></span> -->
+        <span class="custom-icon triangle"></span>
     </a>
 </p>

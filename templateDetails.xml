@@ -26,7 +26,7 @@
 		<filename>error.php</filename>
 		<filename>index.php</filename>
 		<filename>offline.php</filename>
-		<filename>favicon.ico</filename>
+		<filename>favicon.png</filename>
 		<filename>templateDetails.xml</filename>
 	</files>
     <positions>
@@ -48,9 +48,18 @@
 		<position>login-campus</position>
 		<position>studies</position>
 		<position>sub_studies</position>
+		<position>employment</position>
 		<position>search</position>
-		<position>footer-info</position>
-		<position>footer-web</position>
+        <position>footer</position>
+        <position>footer-top-col1</position>
+        <position>footer-top-col2</position>
+        <position>footer-top-col3</position>
+        <position>footer-top-col4</position>
+		<position>footer-opening</position>
+        <position>footer-bottom-col1</position>
+        <position>footer-bottom-col2</position>
+        <position>footer-bottom-col3</position>
+        <position>footer-bottom-col4</position>
 		<position>footer-banners</position>
 	</positions>
 	<config>

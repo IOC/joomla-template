@@ -37,15 +37,21 @@ if ($params->get('menutype') == 'topmenu') {
 ?>>
 <?php
 
-$studiesclass = '';
-if ($params->get('style') == 'Ioc-studies' || $params->get('style') == 'Ioc-sub_studies') {
+$specialstyles = array (
+	'Ioc-studies',
+	'Ioc-sub_studies',
+	'Ioc-employment',
+);
+
+$specialclass = '';
+if (in_array($params->get('style'), $specialstyles)) {
 	$numelements = count($list);
 	$col = 3;
 	$colsmall = 6;
 	if ($numelements < 4) {
 		$col = 12 / $numelements;
 	}
-	$studiesclass = "list-group-item col-lg-$col col-md-$col col-sm-$colsmall col-xs-$colsmall ";
+	$specialclass = "list-group-item col-lg-$col col-md-$col col-sm-$col col-xs-$colsmall ";
 }
 
 foreach ($list as $i => &$item)
@@ -56,7 +62,7 @@ foreach ($list as $i => &$item)
 		$dataattr = 'data-meta-keyword="' . $item->params->get('menu-meta_keywords') . '"';
 	}
 
-	$class = $menunavclass . $studiesclass . 'item-' . $item->id;
+	$class = $menunavclass . $specialclass . 'item-' . $item->id;
 
 	if (($item->id == $active_id) OR ($item->type == 'alias' AND $item->params->get('aliasoptions') == $active_id))
 	{
@@ -103,12 +109,12 @@ foreach ($list as $i => &$item)
 
 	echo '<li' . $class . ' ' . $dataattr . '>';
 
-	if (!empty($studiesclass)) {
+	if (!empty($specialclass)) {
 		$style = '';
 		if ($item->menu_image) {
 			$style = 'style="background-image: url('. $item->menu_image .')"';
 		}
-		echo '<div class="study-img" '. $style . '>';
+		echo '<a href="'. $item->flink .'"><div class="study-img" '. $style . '></div>';
 	}
 
 	// Render the menu item.
@@ -125,10 +131,9 @@ foreach ($list as $i => &$item)
 			break;
 	endswitch;
 
-	if (!empty($studiesclass)) {
-		echo '</div>';
+	if (!empty($specialclass)) {
+		echo '</a>';
 	}
-
 	// The next item is deeper.
 	if ($item->deeper)
 	{

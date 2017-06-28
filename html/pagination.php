@@ -109,6 +109,12 @@ function pagination_list_render($list)
 		}
 	}
 
+	$list['start']['data'] = preg_replace('#<li>#', '<li class="start">', $list['start']['data']);
+	$list['previous']['data'] = preg_replace('#<li>#', '<li class="previous">', $list['previous']['data']);
+	$list['next']['data'] = preg_replace('#<li>#', '<li class="next">', $list['next']['data']);
+	$list['end']['data'] = preg_replace('#<li>#', '<li class="end">', $list['end']['data']);
+
+
 	$html = '<ul class="pagination">';
 	$html .= $list['start']['data'];
 	$html .= $list['previous']['data'];
@@ -153,6 +159,18 @@ function pagination_item_active(&$item)
 		$anchor = '#news';
 	}
 
+	// Check for "Prev" item
+	if ($item->text == JText::_('JPREV'))
+	{
+		$item->text = '';
+	}
+
+	// Check for "Next" item
+	if ($item->text == JText::_('JNEXT'))
+	{
+		$item->text = '';
+	}
+
 	return "<li><a title=\"" . $item->text . "\" href=\"" . $item->link . $anchor . "\" class=\"pagenav\">" . $item->text . "</a><li>";
 }
 
@@ -176,13 +194,13 @@ function pagination_item_inactive(&$item)
 	// Check for "Prev" item
 	if ($item->text == JText::_('JPREV'))
 	{
-		return '<li class="disabled"><a>'.JText::_('JPREV').'</a></li>';
+		return '<li class="disabled previous"><a></a></li>';
 	}
 
 	// Check for "Next" item
 	if ($item->text == JText::_('JNEXT'))
 	{
-		return '<li class="disabled"><a>'.JText::_('JNEXT').'</a></li>';
+		return '<li class="disabled next"><a></a></li>';
 	}
 
 	// Check for "End" item

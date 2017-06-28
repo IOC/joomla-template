@@ -18,22 +18,33 @@ $urls    = json_decode($this->item->urls);
 $canEdit = $params->get('access-edit');
 $user    = JFactory::getUser();
 $info    = $params->get('info_block_position', 0);
+$imgpath = JURI::base() . 'templates/' . $template . '/images/';
+$newsclass = ($params->get('show_title') ? 'iocnewsarticle' : '');
 JHtml::_('behavior.caption');
 ?>
-<div class="container item-page<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="https://schema.org/Article">
-    <meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? JFactory::getConfig()->get('language') : $this->item->language; ?>" />
-    <?php if ($this->params->get('show_page_heading')) : ?>
-    <?php $newsclass = ($params->get('show_title') ? 'iocnewsarticle' : ''); ?>
-    <div class="page-header <?php echo $newsclass;?>">
-        <h1> <?php echo $this->escape($this->params->get('page_heading')); ?> </h1>
+<?php if ($this->params->get('show_page_heading') && empty($newsclass)) : ?>
+    <div class="fluid-container page-header <?php echo $this->pageclass_sfx; ?>">
+        <div class="container">
+            <div class="logo_estudi">
+                <img src="<?php echo $imgpath . $this->pageclass_sfx;?>_hexagon_img.png" alt="Estudi <?php echo $this->pageclass_sfx; ?>"/>
+            </div>
+            <h1> <?php echo $this->escape($this->params->get('page_heading')); ?> </h1>
+        </div>
     </div>
-    <?php endif;
+<?php endif;
     if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->paginationposition && $this->item->paginationrelative)
     {
         echo $this->item->pagination;
     }
     ?>
 
+<div class="container item-page<?php echo '-' . $this->pageclass_sfx; ?>" itemscope itemtype="https://schema.org/Article">
+    <meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? JFactory::getConfig()->get('language') : $this->item->language; ?>" />
+    <?php if (!empty($newsclass)) : ?>
+        <div class="page-header <?php echo $newsclass;?>">
+            <h1> <?php echo $this->escape($this->params->get('page_heading')); ?> </h1>
+        </div>
+    <?php endif; ?>
     <?php // Todo Not that elegant would be nice to group the params ?>
     <?php $useDefList = ($params->get('show_modify_date') || $params->get('show_publish_date') || $params->get('show_create_date')
     || $params->get('show_hits') || $params->get('show_category') || $params->get('show_parent_category') || $params->get('show_author') ); ?>
