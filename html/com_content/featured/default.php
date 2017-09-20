@@ -43,7 +43,8 @@ $menuitems = array();
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <?php foreach ($this->important as $key => $article) :
-            array_push($menuitems, $article->title);
+            $link = JRoute::_(ContentHelperRoute::getArticleRoute($article->id, $article->catid, $article->language));
+            array_push($menuitems, array($article->title, $link));
             $welcome = $article->alias == 'ioc-welcome';
             $src = $imgpath . '/carousel-default.jpg';
             if ($welcome) {
@@ -72,7 +73,7 @@ $menuitems = array();
               <div class="item <?php if (!$key) { ?> active <?php } ?>" style="background-image: url('<?php echo $src;?>')">
             <?php endif; ?>
             <div class="logo-ioc-large">
-              <img src="<?php echo $imgpath; ?>/logo_ioc_gran.svg" alt="Institut Obert de Catalunya">
+              <img src="<?php echo $imgpath; ?>/logo-ioc-gran.svg" alt="Institut Obert de Catalunya">
             </div>
               <div class="important-background"></div>
               <div class="carousel-caption">
@@ -84,15 +85,6 @@ $menuitems = array();
                 <?php else : ?>
                   <h2><a href="<?php echo $link;?>"><?php echo $article->title;?></a></h2>
                 <?php endif; ?>
-                <?php
-                    /*$tinyclass = 'tiny-important';
-                    if (mb_strlen(strip_tags($article->introtext)) > 222) {
-                      $tinyclass = '';
-                    }*/
-                ?>
-                <!--<p class="carousel-introtext <?php //echo $tinyclass;?>">-->
-                  <?php //echo trim($article->introtext);?>
-                <!--</p>-->
         	    </div>
             </div>
     <?php endforeach; ?>
@@ -105,20 +97,26 @@ $menuitems = array();
       <?php foreach ($menuitems as $k => $item) :?>
         <?php
           if ($k == 0) {
-            $item = JText::_('JLIB_HTML_START');
+            $item = array(JText::_('JLIB_HTML_START'), '');
           }
         ?>
-        <div><?php echo $item; ?></div>
+        <div><?php echo $item[0]; ?></div>
       <?php endforeach; ?>
       <span class="control-next" aria-hidden="true"></span>
     </a>
   </div>
-  <!--
-  <div class="carousel-caption">
-            <h1><span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span>Aturada</h1>
-            <p>El proper dia 16 d'abril des de les 08:00h fins a les 12:00h, per treballs de manteniment en els servidors de l'IOC, els nostres serveis poden estar en certs moments no disponibles. Disculpeu les molèsties.</p>
-          </div>
-    -->
+  <div class="avisos-mobile visible-sm visible-xs">
+    <h2>Novetats</h2>
+    <!-- <a class="next" href="#myCarousel" role="button" data-slide="next"> -->
+      <?php foreach ($menuitems as $k => $item) :?>
+        <?php
+          if ($k == 0) {
+            continue;
+          }
+        ?>
+        <div><a href="<?php echo $item[1];?>"><?php echo $item[0]; ?></a></div>
+      <?php endforeach; ?>
+  </div>
 
   <!-- Left and right controls -->
   <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">

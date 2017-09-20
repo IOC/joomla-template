@@ -3,15 +3,35 @@
   src: url('../fonts/glyphicons-halflings-regular.eot');
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
+#tinymce h1, #tinymce h2, #tinymce h3, #tinymce h4 {
+  margin: 0;
+}
+#tinymce .ioc-accent {
+  color: #01c1b9;
+}
+#tinymce .container {
+  max-width: 100%;
+}
+#tinymce .ioc-parent-breadcrumb .ioc-breadcrumb {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+  color: #354959;
+}
+#tinymce .ioc-parent-breadcrumb .ioc-breadcrumb a, #tinymce .ioc-parent-breadcrumb .ioc-breadcrumb span {
+  color: #354959;
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
 #tinymce .study-main {
   box-sizing: border-box;
   border: 2px dashed #d9534f;
   padding: 10px;
   background-color: #fafafa;
-  height: 100%;
-}
-#tinymce .study-main .col-md-6 {
-  width: 49% !important;
+  display: flex;
 }
 #tinymce .study-main .study-overview {
   box-sizing: border-box;
@@ -20,85 +40,174 @@
   background-color: #fafafa;
   height: 100%;
 }
-#tinymce .study-main .study-data {
+#tinymce .study-main .study-overview .study-overview-headline, #tinymce .study-main .study-overview .study-overview-text {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
+#tinymce .study-main .study-overview .study-overview-headline:after {
+  bottom: -25px;
+}
+#tinymce .study-main .study-panel {
+  margin-top: 0;
+}
+#tinymce .study-main .study-panel .study-data {
+  height: 100%;
   box-sizing: border-box;
   border: 1px dashed #d9534f;
   padding: 10px;
   background-color: #fafafa;
   color: #000;
 }
-#tinymce .study-main .study-data .study-header-img {
-  top: -28px;
-  left: 47.5%;
-  width: 50%;
+#tinymce .study-main .study-panel .study-data .study-header-img {
+  display: none;
 }
-#tinymce .study-main .study-data .study-col {
+#tinymce .study-main .study-panel .study-data .study-col {
   pointer-events: none;
   box-sizing: border-box;
   border: 1px dashed #d9534f;
   padding: 10px;
   background-color: #fafafa;
   padding: 0 10px;
+  height: 100%;
+  /*&:after {
+   @include addelement($custom_red);
+   }*/
 }
-#tinymce .study-main .study-data .study-col:after {
-  content: '\002b';
-  background-color: #d9534f;
-  color: #fff;
-  font-family: 'Glyphicons Halflings';
-  margin-left: 1em;
-  cursor: pointer;
-  padding: 1px 2px 1px 3px;
-  pointer-events: auto;
-  float: right;
-  margin: -4px -10px 0 0;
-}
-#tinymce .study-main .study-data .study-col h4, #tinymce .study-main .study-data .study-col .study-definition {
+#tinymce .study-main .study-panel .study-data .study-col h4, #tinymce .study-main .study-panel .study-data .study-col .study-definition {
   box-sizing: border-box;
   border: 1px dashed #d9534f;
   padding: 10px;
   background-color: #fafafa;
+  color: #354959;
   pointer-events: none;
+  /*&:before {
+   @include removeelement($custom_red);
+   margin: -10px -10px 0 0;
+   }*/
 }
-#tinymce .study-main .study-data .study-col h4:first-child:before, #tinymce .study-main .study-data .study-col .study-definition:first-child:before, #tinymce .study-main .study-data .study-col h4:nth-child(2):before, #tinymce .study-main .study-data .study-col .study-definition:nth-child(2):before {
+#tinymce .study-main .study-panel .study-data .study-col h4:first-child:before, #tinymce .study-main .study-panel .study-data .study-col .study-definition:first-child:before, #tinymce .study-main .study-panel .study-data .study-col h4:nth-child(2):before, #tinymce .study-main .study-panel .study-data .study-col .study-definition:nth-child(2):before {
   content: '';
 }
-#tinymce .study-main .study-data .study-col h4:before, #tinymce .study-main .study-data .study-col .study-definition:before {
-  content: '\2212';
-  font-family: "Glyphicons Halflings";
-  background-color: #d9534f;
-  color: #fff;
-  float: right;
-  cursor: pointer;
-  padding: 0 2px;
-  pointer-events: auto;
-  margin: -10px -10px 0 0;
+#tinymce .study-main .study-panel .study-data .study-col .study-date {
+  height: 100%;
 }
-#tinymce .study-main .study-data .study-col .study-date, #tinymce .study-main .study-data .study-col .study-days, #tinymce .study-main .study-data .study-col .study-month, #tinymce .study-main .study-data .study-col .semiheader {
+#tinymce .study-main .study-panel .study-data .study-col .study-date.multiple {
+  max-height: 100%;
+}
+#tinymce .study-main .study-panel .study-data .study-col .study-date .semiheader:before {
+  bottom: -10px;
+}
+#tinymce .study-main .study-panel .study-data .study-col .study-date, #tinymce .study-main .study-panel .study-data .study-col .study-days, #tinymce .study-main .study-panel .study-data .study-col .study-month, #tinymce .study-main .study-panel .study-data .study-col .study-year, #tinymce .study-main .study-panel .study-data .study-col .semiheader {
   box-sizing: border-box;
   border: 1px dashed #d9534f;
   padding: 10px;
   background-color: #fafafa;
   color: #000;
 }
-#tinymce .study-main .study-data .study-col .btn {
+#tinymce .study-main .study-panel .study-data .study-col .btn {
   background-color: transparent;
 }
-#tinymce .study-main .study-data h3:after {
+#tinymce .study-main .study-panel .study-data h3:after {
   color: #942a25;
 }
-#tinymce .study-main .study-data a {
+#tinymce .study-main .study-panel .study-data a {
   pointer-events: auto;
   cursor: pointer;
   color: #23527c;
 }
-#tinymce .study-main .study-buttons {
-  margin-top: 0;
+#tinymce .study-buttons {
+  margin-top: 25px;
 }
-#tinymce .study-main .study-buttons > div {
+#tinymce .study-buttons > div {
   box-sizing: border-box;
   border: 1px dashed #d9534f;
   padding: 10px;
   background-color: #fafafa;
+}
+#tinymce .study-buttons a {
+  pointer-events: auto;
+  cursor: pointer;
+}
+#tinymce .study-buttons .custom-icon {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+  pointer-events: none;
+}
+#tinymce .study-buttons .icon-text {
+  padding: 0;
+}
+#tinymce .subpage-text-buttons .subpage-text, #tinymce .subpage-text-buttons-banner .subpage-text {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+  width: 100%;
+  text-align: center;
+  margin-top: 25px;
+  font-size: 18px;
+}
+#tinymce .subpage-text-buttons .subpage-button, #tinymce .subpage-text-buttons-banner .subpage-button {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
+#tinymce .subpage-text-buttons .subpage-button:hover, #tinymce .subpage-text-buttons-banner .subpage-button:hover {
+  background-color: #fff;
+}
+#tinymce .subpage-text-buttons .subpage-button a, #tinymce .subpage-text-buttons-banner .subpage-button a, #tinymce .subpage-text-buttons .subpage-button .custom-icon, #tinymce .subpage-text-buttons-banner .subpage-button .custom-icon {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
+#tinymce .subpage-text-buttons .subpage-button .icon-text, #tinymce .subpage-text-buttons-banner .subpage-button .icon-text {
+  padding: 0;
+  left: 0;
+}
+#tinymce .modal-modules {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
+#tinymce .modal-modules .title h1 {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+  color: #354959;
+}
+#tinymce .modal-modules .title h1:before, #tinymce .modal-modules .title h1:after {
+  border: 0;
+}
+#tinymce .modal-modules .content-modal-modules .modal-module, #tinymce .modal-modules .body-modal-modules .modal-module, #tinymce .modal-modules .content-modal-modules .modal-dialog, #tinymce .modal-modules .body-modal-modules .modal-dialog {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+  cursor: default;
+  height: auto;
+}
+#tinymce .modal-modules .content-modal-modules .modal-module img, #tinymce .modal-modules .body-modal-modules .modal-module img, #tinymce .modal-modules .content-modal-modules .modal-dialog img, #tinymce .modal-modules .body-modal-modules .modal-dialog img, #tinymce .modal-modules .content-modal-modules .modal-module .body-modal-module, #tinymce .modal-modules .body-modal-modules .modal-module .body-modal-module, #tinymce .modal-modules .content-modal-modules .modal-dialog .body-modal-module, #tinymce .modal-modules .body-modal-modules .modal-dialog .body-modal-module, #tinymce .modal-modules .content-modal-modules .modal-module .shortname-modal-module, #tinymce .modal-modules .body-modal-modules .modal-module .shortname-modal-module, #tinymce .modal-modules .content-modal-modules .modal-dialog .shortname-modal-module, #tinymce .modal-modules .body-modal-modules .modal-dialog .shortname-modal-module, #tinymce .modal-modules .content-modal-modules .modal-module .text-modal-module, #tinymce .modal-modules .body-modal-modules .modal-module .text-modal-module, #tinymce .modal-modules .content-modal-modules .modal-dialog .text-modal-module, #tinymce .modal-modules .body-modal-modules .modal-dialog .text-modal-module, #tinymce .modal-modules .content-modal-modules .modal-module p, #tinymce .modal-modules .body-modal-modules .modal-module p, #tinymce .modal-modules .content-modal-modules .modal-dialog p, #tinymce .modal-modules .body-modal-modules .modal-dialog p, #tinymce .modal-modules .content-modal-modules .modal-module .bottom-modal-module, #tinymce .modal-modules .body-modal-modules .modal-module .bottom-modal-module, #tinymce .modal-modules .content-modal-modules .modal-dialog .bottom-modal-module, #tinymce .modal-modules .body-modal-modules .modal-dialog .bottom-modal-module {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+  color: #354959;
+}
+#tinymce .modal-modules .content-modal-modules .modal-module .file-modal-module:hover, #tinymce .modal-modules .body-modal-modules .modal-module .file-modal-module:hover, #tinymce .modal-modules .content-modal-modules .modal-dialog .file-modal-module:hover, #tinymce .modal-modules .body-modal-modules .modal-dialog .file-modal-module:hover {
+  background-color: #fff;
+}
+#tinymce .modal-modules .content-modal-modules .modal-module:hover, #tinymce .modal-modules .body-modal-modules .modal-module:hover, #tinymce .modal-modules .content-modal-modules .modal-dialog:hover, #tinymce .modal-modules .body-modal-modules .modal-dialog:hover {
+  filter: none;
+}
+#tinymce .modal-modules .content-modal-modules .icon-text, #tinymce .modal-modules .body-modal-modules .icon-text {
+  width: auto;
 }
 #tinymce .ioc-news .imatge-noticia {
   margin-left: 0;
@@ -120,19 +229,40 @@
   padding: 10px;
   background-color: #fafafa;
 }
+#tinymce .study-parallax {
+  box-sizing: border-box;
+  border: 2px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
+#tinymce .study-tabs {
+  box-sizing: border-box;
+  border: 2px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+  background-image: none;
+}
+#tinymce .study-tabs h2 {
+  box-sizing: border-box;
+  border: 2px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+  color: #354959;
+}
 #tinymce .study-tabs .nav-tabs {
   counter-reset: numtab;
   clear: both;
+  position: relative;
   box-sizing: border-box;
   border: 2px dashed #d9534f;
   padding: 10px;
   background-color: #fafafa;
   pointer-events: none;
+  margin-bottom: 0;
 }
 #tinymce .study-tabs .nav-tabs li {
+  position: relative;
   display: inline-block;
-  margin-left: 1em;
-  margin-bottom: 1em;
   pointer-events: none;
   box-sizing: border-box;
   border: 1px dashed #d9534f;
@@ -146,30 +276,38 @@
   counter-increment: numtab;
   content: counter(numtab);
   color: #d9534f;
-  margin: -11px 0 0 -8px;
-  float: left;
+  position: absolute;
+  top: 0;
+  left: 5px;
 }
 #tinymce .study-tabs .nav-tabs li:after {
   content: '\2212';
   font-family: "Glyphicons Halflings";
   background-color: #d9534f;
   color: #fff;
-  float: right;
   cursor: pointer;
   padding: 0 2px;
   pointer-events: auto;
-  margin: -36px -18px 0 0;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 #tinymce .study-tabs .nav-tabs li.active a {
   background-color: transparent;
+  border: 0;
 }
 #tinymce .study-tabs .nav-tabs li a {
+  background-color: transparent;
+  border-bottom: 0;
   cursor: pointer;
   pointer-events: auto;
   color: #23527c;
 }
 #tinymce .study-tabs .nav-tabs li a:hover {
   background-color: transparent;
+}
+#tinymce .study-tabs .nav-tabs li a .tab-title {
+  display: inline;
 }
 #tinymce .study-tabs .nav-tabs:after {
   content: '\002b';
@@ -180,6 +318,9 @@
   cursor: pointer;
   padding: 1px 2px 1px 3px;
   pointer-events: auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 #tinymce .study-tabs .tab-content {
   counter-reset: numtabcontent;
@@ -198,8 +339,6 @@
   counter-increment: numtabcontent;
   content: counter(numtabcontent);
   color: #d9534f;
-  margin: -11px 0 0 -8px;
-  float: left;
 }
 #tinymce .study-more-info {
   box-sizing: border-box;
@@ -212,6 +351,10 @@
   border: 1px dashed #d9534f;
   padding: 10px;
   background-color: #fafafa;
+  color: #354959;
+}
+#tinymce .study-more-info .panel-heading:before, #tinymce .study-more-info .panel-title:before, #tinymce .study-more-info .panel-body:before, #tinymce .study-more-info .more-section:before, #tinymce .study-more-info .more-section-content:before, #tinymce .study-more-info h4:before, #tinymce .study-more-info .panel-heading:after, #tinymce .study-more-info .panel-title:after, #tinymce .study-more-info .panel-body:after, #tinymce .study-more-info .more-section:after, #tinymce .study-more-info .more-section-content:after, #tinymce .study-more-info h4:after {
+  border: 0;
 }
 #tinymce .study-more-info .title-more-information {
   margin-top: 0;
@@ -224,6 +367,7 @@
 }
 #tinymce #panel-sections {
   pointer-events: none;
+  position: relative;
 }
 #tinymce #panel-sections:after {
   content: '\002b';
@@ -234,9 +378,9 @@
   cursor: pointer;
   padding: 1px 2px 1px 3px;
   pointer-events: auto;
-  float: right;
-  margin-right: -11px;
-  margin-top: -9px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 #tinymce #panel-sections .panel-heading a {
   cursor: pointer;
@@ -244,6 +388,7 @@
 }
 #tinymce #panel-sections .panel.panel-default {
   pointer-events: none;
+  position: relative;
 }
 #tinymce #panel-sections .panel.panel-default:first-child:before {
   content: '';
@@ -253,10 +398,12 @@
   font-family: "Glyphicons Halflings";
   background-color: #d9534f;
   color: #fff;
-  float: right;
   cursor: pointer;
   padding: 0 2px;
   pointer-events: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 #tinymce .col-md-1, #tinymce .col-md-2, #tinymce .col-md-3, #tinymce .col-md-4, #tinymce .col-md-5, #tinymce .col-md-6, #tinymce .col-md-7, #tinymce .col-md-8, #tinymce .col-md-9, #tinymce .col-md-10, #tinymce .col-md-11, #tinymce .col-md-12 {
   float: left;

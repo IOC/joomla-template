@@ -29,17 +29,23 @@ $baseurl = JUri::base();
                 $base_dir = JPATH_SITE;
                 $language_tag = $lang->getTag(); // loads the current language-tag
                 $lang->load($extension, $base_dir, $language_tag, true);
+                $extension = 'com_users';
+                $lang->load($extension, $base_dir, $language_tag, true);
                 $in = array (
                     '{USERNAME}',
                     '{PASSWORD}',
                     '{LOGIN}',
-                    '{FORGOT_PASSWORD}'
+                    '{FORGOT_PASSWORD}',
+                    '{WELCOME}',
+                    '{LOGIN_CAMPUS}',
                 );
                 $out = array (
                     JText::_('JGLOBAL_USERNAME'),
                     JText::_('JGLOBAL_PASSWORD'),
                     JText::_('JLOGIN'),
-                    JText::_('MOD_LOGIN_FORGOT_YOUR_PASSWORD')
+                    JText::_('MOD_LOGIN_FORGOT_YOUR_PASSWORD'),
+                    JText::_('COM_USERS_PROFILE_WELCOME_IOC'),
+                    JText::_('JLOGIN_CAMPUS'),
                 );
                 echo str_replace($in, $out, $output);
             ?>

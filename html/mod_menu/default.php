@@ -39,7 +39,6 @@ if ($params->get('menutype') == 'topmenu') {
 
 $specialstyles = array (
 	'Ioc-studies',
-	'Ioc-sub_studies',
 	'Ioc-employment',
 );
 
@@ -53,6 +52,11 @@ if (in_array($params->get('style'), $specialstyles)) {
 	}
 	$specialclass = "list-group-item col-lg-$col col-md-$col col-sm-$col col-xs-$colsmall ";
 }
+
+array_push($specialstyles, 'Ioc-sub_studies');
+array_push($specialstyles, 'Ioc-sub_menu');
+
+$specialstyle = in_array($params->get('style'), $specialstyles);
 
 foreach ($list as $i => &$item)
 {
@@ -109,12 +113,16 @@ foreach ($list as $i => &$item)
 
 	echo '<li' . $class . ' ' . $dataattr . '>';
 
-	if (!empty($specialclass)) {
+	if ($specialstyle) {
+		$anchorcss = !empty($item->anchor_css) ? $item->anchor_css : '';
 		$style = '';
+		$stylemobile = '';
 		if ($item->menu_image) {
-			$style = 'style="background-image: url('. $item->menu_image .')"';
+			$path_parts = pathinfo($item->menu_image);
+			$stylemobile = 'style="background-image: url(\''. join(DIRECTORY_SEPARATOR, array($path_parts['dirname'], $path_parts['filename'] . '-mobile.' . $path_parts['extension'])) . '\')"';
+			$style = 'style="background-image: url(\''. $item->menu_image .'\')"';
 		}
-		echo '<a href="'. $item->flink .'"><div class="study-img" '. $style . '></div>';
+		echo '<a href="'. $item->flink .'" class="'. $anchorcss .'"><div class="visible-xs element-img" '. $stylemobile . '></div><div class="hidden-xs element-img" '. $style . '></div>';
 	}
 
 	// Render the menu item.
@@ -131,8 +139,11 @@ foreach ($list as $i => &$item)
 			break;
 	endswitch;
 
-	if (!empty($specialclass)) {
+	if ($specialstyle) {
 		echo '</a>';
+		if (!empty($item->params->get('menu-meta_description'))) {
+			echo '<div class="meta-separator hidden-sm hidden-xs"></div><div class="meta-description hidden-sm hidden-xs">'. $item->params->get('menu-meta_description') .'</div>';
+		}
 	}
 	// The next item is deeper.
 	if ($item->deeper)

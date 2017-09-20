@@ -39,7 +39,7 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
     <div class="container">
         <a class="btn btn-primary btn-lg" href="<?php echo $this->baseurl; ?>/" title="<?php echo JText::_('HOME'); ?>"><?php echo JText::_('JERROR_LAYOUT_GO_TO_THE_HOME_PAGE'); ?></a>
     </div>
-    <div id="footer" class="footer container">
+    <div id="footer" class="footer">
         <?php // Render module footer.
           $module = JModuleHelper::getModule('footer');
           echo JModuleHelper::renderModule($module);

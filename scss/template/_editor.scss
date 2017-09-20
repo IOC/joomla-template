@@ -1,5 +1,7 @@
 $custom_red:    rgb(217, 83, 79);
 $ioc-link:      #23527c;
+$ioc-text:      #354959;
+$ioc-accent:    #01c1b9;
 
 @font-face {
   font-family: 'Glyphicons Halflings';
@@ -20,8 +22,6 @@ $ioc-link:      #23527c;
     @mixin numbertab($number) {
         content: $number;
         color: $custom_red;
-        margin: -11px 0 0 -8px;
-        float: left;
     }
 
     @mixin addelement($color) {
@@ -33,6 +33,9 @@ $ioc-link:      #23527c;
         cursor: pointer;
         padding: 1px 2px 1px 3px;
         pointer-events: auto;
+        position: absolute;
+        bottom: 0;
+        right: 0;
     }
 
     @mixin removeelement($color) {
@@ -40,82 +43,209 @@ $ioc-link:      #23527c;
         font-family: "Glyphicons Halflings";
         background-color: $color;
         color: #fff;
-        float: right;
         cursor: pointer;
         padding: 0 2px;
         pointer-events: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    h1, h2, h3, h4 {
+        margin: 0;
+    }
+
+    .ioc-accent {
+        color: $ioc-accent;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .ioc-parent-breadcrumb {
+        .ioc-breadcrumb {
+            @include borderioc(1px, $custom_red);
+            color: $ioc-text;
+            a,
+            span {
+                color: $ioc-text;
+                @include borderioc(1px, $custom_red);
+            }
+        }
     }
 
     .study-main {
-        .col-md-6 {
-            width: 49% !important;
-        }
         @include borderioc(2px, $custom_red);
-        height: 100%;
+        display: flex;
         .study-overview {
             @include borderioc(1px, $custom_red);
             height: 100%;
-        }
-        .study-data {
-            .study-header-img {
-                top: -28px;
-                left: 47.5%;
-                width: 50%;
-            }
-            @include borderioc(1px, $custom_red);
-            color: #000;
-            .study-col {
-                pointer-events: none;
+            .study-overview-headline,
+            .study-overview-text {
                 @include borderioc(1px, $custom_red);
-                padding: 0 10px;
+            }
+            .study-overview-headline {
                 &:after {
-                    @include addelement($custom_red);
-                    float: right;
-                    margin: -4px -10px 0 0;
+                    bottom: -25px;
                 }
-
-                h4,
-                .study-definition {
-                    @include borderioc(1px, $custom_red);
+            }
+        }
+        .study-panel {
+            margin-top: 0;
+            .study-data {
+                height: 100%;
+                .study-header-img {
+                    display: none;
+                }
+                @include borderioc(1px, $custom_red);
+                color: #000;
+                .study-col {
                     pointer-events: none;
-                    &:first-child,
-                    &:nth-child(2) {
-                        &:before {
-                            content: '';
+                    @include borderioc(1px, $custom_red);
+                    padding: 0 10px;
+                    height: 100%;
+                    /*&:after {
+                        @include addelement($custom_red);
+                    }*/
+
+                    h4,
+                    .study-definition {
+                        @include borderioc(1px, $custom_red);
+                        color: $ioc-text;
+                        pointer-events: none;
+                        &:first-child,
+                        &:nth-child(2) {
+                            &:before {
+                                content: '';
+                            }
+                        }
+                        /*&:before {
+                            @include removeelement($custom_red);
+                            margin: -10px -10px 0 0;
+                        }*/
+                    }
+                    .study-date {
+                        height: 100%;
+                        &.multiple {
+                            max-height: 100%;
+                        }
+                        .semiheader {
+                            &:before {
+                                bottom: -10px;
+                            }
                         }
                     }
-                    &:before {
-                        @include removeelement($custom_red);
-                        margin: -10px -10px 0 0;
+                    .study-date,
+                    .study-days,
+                    .study-month,
+                    .study-year,
+                    .semiheader {
+                        @include borderioc(1px, $custom_red);
+                        color: #000;
+                    }
+                    .btn {
+                        background-color: transparent;
                     }
                 }
-                .study-date,
-                .study-days,
-                .study-month,
-                .semiheader {
-                    @include borderioc(1px, $custom_red);
-                    color: #000;
+                h3:after {
+                    color: #942A25;
                 }
-                .btn {
-                    background-color: transparent;
+                a {
+                    pointer-events: auto;
+                    cursor: pointer;
+                    color: $ioc-link;
                 }
-            }
-            h3:after {
-                color: #942A25;
-            }
-            a {
-                pointer-events: auto;
-                cursor: pointer;
-                color: $ioc-link;
-            }
-        }
-        .study-buttons {
-            margin-top: 0;
-            > div {
-                @include borderioc(1px, $custom_red);
             }
         }
     }
+
+    .study-buttons {
+        margin-top: 25px;
+        > div {
+            @include borderioc(1px, $custom_red);
+        }
+        a {
+            pointer-events: auto;
+            cursor: pointer;
+        }
+        .custom-icon {
+            @include borderioc(1px, $custom_red);
+            pointer-events: none;
+        }
+        .icon-text {
+            padding: 0;
+        }
+    }
+
+    .subpage-text-buttons,
+    .subpage-text-buttons-banner {
+        .subpage-text {
+            @include borderioc(1px, $custom_red);
+            width: 100%;
+            text-align: center;
+            margin-top: 25px;
+            font-size: 18px;
+        }
+        .subpage-button {
+            @include borderioc(1px, $custom_red);
+            &:hover {
+                background-color: #fff;
+            }
+            a,
+            .custom-icon {
+                @include borderioc(1px, $custom_red);
+            }
+            .icon-text {
+                padding: 0;
+                left: 0;
+            }
+        }
+    }
+
+    .modal-modules {
+        @include borderioc(1px, $custom_red);
+        .title {
+            h1 {
+                @include borderioc(1px, $custom_red);
+                color: $ioc-text;
+                &:before,
+                &:after {
+                    border: 0;
+                }
+            }
+        }
+        .content-modal-modules,
+        .body-modal-modules {
+            .modal-module,
+            .modal-dialog {
+                @include borderioc(1px, $custom_red);
+                cursor: default;
+                height: auto;
+                img,
+                .body-modal-module,
+                .shortname-modal-module,
+                .text-modal-module,
+                p,
+                .bottom-modal-module {
+                    @include borderioc(1px, $custom_red);
+                    color: $ioc-text;
+                }
+                .file-modal-module {
+                    &:hover {
+                        background-color: #fff;
+                    }
+                }
+                &:hover {
+                    filter: none;
+                }
+            }
+            .icon-text {
+                width: auto;
+            }
+        }
+    }
+
     .ioc-news {
         .imatge-noticia {
             margin-left: 0;
@@ -132,16 +262,28 @@ $ioc-link:      #23527c;
             @include borderioc(2px, $custom_red);
         }
     }
+
+    .study-parallax {
+        @include borderioc(2px, $custom_red);
+    }
+
     .study-tabs {
+        @include borderioc(2px, $custom_red);
+        background-image: none;
+        h2 {
+            @include borderioc(2px, $custom_red);
+            color: $ioc-text;
+        }
         .nav-tabs{
             counter-reset: numtab;
             clear: both;
+            position: relative;
             @include borderioc(2px, $custom_red);
             pointer-events: none;
+            margin-bottom: 0;
             li {
+                position: relative;
                 display: inline-block;
-                margin-left: 1em;
-                margin-bottom: 1em;
                 pointer-events: none;
                 @include borderioc(1px, $custom_red);
                 &:first-child{
@@ -152,21 +294,29 @@ $ioc-link:      #23527c;
                 &:before {
                     counter-increment: numtab;
                     @include numbertab(counter(numtab));
+                    position: absolute;
+                    top: 0;
+                    left: 5px;
                 }
                 &:after {
                     @include removeelement($custom_red);
-                    margin: -36px -18px 0 0;
                 }
                 &.active a {
                     background-color: transparent;
+                    border: 0;
                 }
                 a {
+                    background-color: transparent;
+                    border-bottom: 0;
                     &:hover {
                         background-color: transparent;
                     }
                     cursor: pointer;
                     pointer-events: auto;
                     color: $ioc-link;
+                    .tab-title {
+                        display: inline;
+                    }
                 }
             }
             &:after {
@@ -194,6 +344,11 @@ $ioc-link:      #23527c;
         .more-section-content,
         h4 {
             @include borderioc(1px, $custom_red);
+            color: $ioc-text;
+            &:before,
+            &:after {
+                border: 0;
+            }
         }
         .title-more-information {
             margin-top: 0;
@@ -214,11 +369,9 @@ $ioc-link:      #23527c;
     }
     #panel-sections {
         pointer-events: none;
+        position: relative;
         &:after {
             @include addelement($custom_red);
-            float: right;
-            margin-right: -11px;
-            margin-top: -9px;
         }
         .panel-heading {
             a {
@@ -228,6 +381,7 @@ $ioc-link:      #23527c;
         }
         .panel.panel-default {
             pointer-events: none;
+            position: relative;
             &:first-child{
                 &:before {
                     content: '';

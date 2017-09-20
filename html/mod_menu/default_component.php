@@ -15,10 +15,12 @@ $title = $item->anchor_title ? 'title="' . $item->anchor_title . '" ' : '';
 $ownstyles = array (
     'Ioc-studies',
     'Ioc-sub_studies',
+    'Ioc-employment',
+    'Ioc-sub_menu',
 );
 
 if (in_array($params->get('style'), $ownstyles)) {
-    echo '<p>' . $item->title . '</p>';
+    echo '<div class="element-title"><p>' . $item->title . '</p></div>';
     return;
 }
 

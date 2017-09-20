@@ -16,6 +16,8 @@ $rel   = $item->anchor_rel ? 'rel="' . $item->anchor_rel . '" ' : '';
 $ownstyles = array (
     'Ioc-studies',
     'Ioc-sub_studies',
+    'Ioc-employment',
+    'Ioc-sub_menu',
 );
 
 if (in_array($params->get('style'), $ownstyles)) {

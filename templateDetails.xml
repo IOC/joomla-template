@@ -49,6 +49,7 @@
 		<position>studies</position>
 		<position>sub_studies</position>
 		<position>employment</position>
+        <position>sub_menu</position>
 		<position>search</position>
         <position>footer</position>
         <position>footer-top-col1</position>

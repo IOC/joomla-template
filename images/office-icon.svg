@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="63" height="43" viewBox="0 0 63 43">
+    <defs>
+        <rect id="a" width="12" height="31" x="44" y="12" rx="1"/>
+        <rect id="b" width="12" height="31" x="6" y="12" rx="1"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#050607" fill-rule="nonzero" d="M45 42V.5a.5.5 0 0 0-.5-.5h-27a.5.5 0 0 0-.5.5V42h1V1h26v41h1z"/>
+        <path fill="#FFF" d="M18 1h26v41H18z"/>
+        <path fill="#050607" fill-rule="nonzero" d="M55.5 12h-9a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zM15.5 12h-9a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zM62 42H.5a.5.5 0 0 0 0 1H62a.5.5 0 0 0 0-1z"/>
+        <path stroke="#050607" stroke-linecap="round" d="M55.5 12.5v30M6.5 12.5v30"/>
+        <path fill="#050607" fill-rule="nonzero" d="M25 5.987h-4V8h-1V5.498A.5.5 0 0 1 20.5 5h5a.5.5 0 0 1 .5.498v2.49h-1v-2zm-4 4.026h4V8h1v2.502a.5.5 0 0 1-.5.498h-5a.5.5 0 0 1-.5-.498v-2.49h1v2z"/>
+        <path fill="#AEC8CF" d="M37 6h4v4h-4z"/>
+        <path fill="#050607" fill-rule="nonzero" d="M33 5.987h-4V8h-1V5.498A.5.5 0 0 1 28.5 5h5a.5.5 0 0 1 .5.498v2.49h-1v-2zm-4 4.026h4V8h1v2.502a.5.5 0 0 1-.5.498h-5a.5.5 0 0 1-.5-.498v-2.49h1v2z"/>
+        <path fill="#AEC8CF" d="M21 6h4v4h-4z"/>
+        <path fill="#050607" fill-rule="nonzero" d="M41 5.987h-4V8h-1V5.498A.5.5 0 0 1 36.5 5h5a.5.5 0 0 1 .5.498v2.49h-1v-2zm-4 4.026h4V8h1v2.502a.5.5 0 0 1-.5.498h-5a.5.5 0 0 1-.5-.498v-2.49h1v2z"/>
+        <path fill="#AEC8CF" d="M29 6h4v4h-4z"/>
+        <g>
+            <path fill="#050607" fill-rule="nonzero" d="M25 13.987h-4V16h-1v-2.502a.5.5 0 0 1 .5-.498h5a.5.5 0 0 1 .5.498v2.49h-1v-2zm-4 4.026h4V16h1v2.502a.5.5 0 0 1-.5.498h-5a.5.5 0 0 1-.5-.498v-2.49h1v2zM33 13.987h-4V16h-1v-2.502a.5.5 0 0 1 .5-.498h5a.5.5 0 0 1 .5.498v2.49h-1v-2zm-4 4.026h4V16h1v2.502a.5.5 0 0 1-.5.498h-5a.5.5 0 0 1-.5-.498v-2.49h1v2zM41 13.987h-4V16h-1v-2.502a.5.5 0 0 1 .5-.498h5a.5.5 0 0 1 .5.498v2.49h-1v-2zm-4 4.026h4V16h1v2.502a.5.5 0 0 1-.5.498h-5a.5.5 0 0 1-.5-.498v-2.49h1v2z"/>
+            <path fill="#AEC8CF" d="M37 14h4v4h-4zM29 14h4v4h-4zM21 14h4v4h-4z"/>
+        </g>
+        <g>
+            <g fill="#050607" fill-rule="nonzero">
+                <path d="M25 21.987h-4V24h-1v-2.502a.5.5 0 0 1 .5-.498h5a.5.5 0 0 1 .5.498v2.49h-1v-2zm-4 4.026h4V24h1v2.502a.5.5 0 0 1-.5.498h-5a.5.5 0 0 1-.5-.498v-2.49h1v2zM33 21.987h-4V24h-1v-2.502a.5.5 0 0 1 .5-.498h5a.5.5 0 0 1 .5.498v2.49h-1v-2zm-4 4.026h4V24h1v2.502a.5.5 0 0 1-.5.498h-5a.5.5 0 0 1-.5-.498v-2.49h1v2zM41 21.987h-4V24h-1v-2.502a.5.5 0 0 1 .5-.498h5a.5.5 0 0 1 .5.498v2.49h-1v-2zm-4 4.026h4V24h1v2.502a.5.5 0 0 1-.5.498h-5a.5.5 0 0 1-.5-.498v-2.49h1v2z"/>
+            </g>
+            <path fill="#AEC8CF" d="M37 22h4v4h-4zM29 22h4v4h-4zM21 22h4v4h-4z"/>
+            <path fill="#050607" fill-rule="nonzero" d="M25 29.987h-4V32h-1v-2.502a.5.5 0 0 1 .5-.498h5a.5.5 0 0 1 .5.498v2.49h-1v-2zm-4 4.026h4V32h1v2.502a.5.5 0 0 1-.5.498h-5a.5.5 0 0 1-.5-.498v-2.49h1v2zM33 29.987h-4V32h-1v-2.502a.5.5 0 0 1 .5-.498h5a.5.5 0 0 1 .5.498v2.49h-1v-2zm-4 4.026h4V32h1v2.502a.5.5 0 0 1-.5.498h-5a.5.5 0 0 1-.5-.498v-2.49h1v2zM41 29.987h-4V32h-1v-2.502a.5.5 0 0 1 .5-.498h5a.5.5 0 0 1 .5.498v2.49h-1v-2zm-4 4.026h4V32h1v2.502a.5.5 0 0 1-.5.498h-5a.5.5 0 0 1-.5-.498v-2.49h1v2z"/>
+            <path fill="#AEC8CF" d="M37 30h4v4h-4zM29 30h4v4h-4zM21 30h4v4h-4z"/>
+        </g>
+        <g>
+            <use fill="#FFF" xlink:href="#a"/>
+            <rect width="11" height="30" x="44.5" y="12.5" stroke="#050607" rx="1"/>
+        </g>
+        <g>
+            <use fill="#FFF" xlink:href="#b"/>
+            <rect width="11" height="30" x="6.5" y="12.5" stroke="#050607" rx="1"/>
+        </g>
+    </g>
+</svg>

@@ -55,7 +55,7 @@ function modChrome_block($module, &$params, &$attribs)
 	                	</div>
               </div>
            </div>
-	<?php 
+	<?php
 		endif;
 	}
 
@@ -82,16 +82,14 @@ function modChrome_studies($module, &$params, &$attribs)
 function modChrome_sub_studies($module, &$params, &$attribs)
 {
     if (!empty ($module->content)) : ?>
-        <div class="block <?php if ($params->get('moduleclass_sfx')!='') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
-            <div class="substudies row">
+        <div class="fluid-container substudies <?php if ($params->get('moduleclass_sfx')!='') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
+            <div class="substudies-content">
                 <?php if ($module->showtitle != 0) : ?>
                     <div class="title">
-                        <div class="col-xs-12">
-                            <h1><span class="<?php echo $params->get('header_class'); ?>" ></span><?php echo $module->title ; ?></h1>
-                        </div>
+                        <h1><span class="<?php echo $params->get('header_class'); ?>" ></span><?php echo $module->title ; ?></h1>
                     </div>
                 <?php endif; ?>
-                <div class="studies-content">
+                <div class="container substudies-elements">
                     <?php echo $module->content; ?>
                 </div>
             </div>
@@ -135,7 +133,7 @@ function modChrome_banner_footer($module, &$params, &$attribs)
 {
     if (!empty ($module->content)) : ?>
         <?php if ($attribs['name'] == 'footer-opening') : ?>
-            <div class="col-sm-12 mid-col">
+            <div class="container">
         <?php else : ?>
             <div class="col-sm-3 top-col">
         <?php endif; ?>
@@ -152,7 +150,7 @@ function modChrome_banner_footer($module, &$params, &$attribs)
                 </div>
             </div>
         </div>
-        <div class="panel-group visible-xs visible-sm">
+        <div class="panel-group panel-mobile visible-xs visible-sm">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">
@@ -174,12 +172,28 @@ function modChrome_employment($module, &$params, &$attribs)
             <div class="row">
                 <?php if ($module->showtitle != 0) : ?>
                     <div class="title">
-                        <div class="col-xs-12">
-                            <h1><span class="<?php echo $params->get('header_class'); ?>" ></span><?php echo $module->title ; ?></h1>
-                        </div>
+                        <h1><span class="<?php echo $params->get('header_class'); ?>" ></span><?php echo $module->title ; ?></h1>
                     </div>
                 <?php endif; ?>
                 <div class="employment-content">
+                    <?php echo $module->content; ?>
+                </div>
+            </div>
+        </div>
+    <?php endif;
+}
+
+function modChrome_sub_menu($module, &$params, &$attribs)
+{
+    if (!empty ($module->content)) : ?>
+        <div class="fluid-container submenu <?php if ($params->get('moduleclass_sfx')!='') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
+            <div class="submenu-content">
+                <?php if ($module->showtitle != 0) : ?>
+                    <div class="title">
+                        <h1><span class="<?php echo $params->get('header_class'); ?>" ></span><?php echo $module->title ; ?></h1>
+                    </div>
+                <?php endif; ?>
+                <div>
                     <?php echo $module->content; ?>
                 </div>
             </div>

@@ -48,10 +48,10 @@ $imgpath = 'templates/' . $app->getTemplate() . '/images/';
 </button>
     <div id="brand">
         <a href="http://ensenyament.gencat.cat" class="ioc-departament hidden-xs">
-            <img class=" logo" src="<?php echo $imgpath; ?>logo_dep_ens_.svg" alt="Departament d'Ensenyament" />
+            <img class=" logo" src="<?php echo $imgpath; ?>logo-dep-ens.svg" alt="Departament d'Ensenyament" />
         </a>
         <a href="<?php  echo $this->params->get('logo_link')   ?>" class="ioc-logo">
-            <img class="logo" src="<?php echo $imgpath; ?>logo_ioc_petit.svg" alt="Institut Obert de Catalunya" />
+            <img class="logo" src="<?php echo $imgpath; ?>logo-ioc-petit.svg" alt="Institut Obert de Catalunya" />
         </a>
     </div>
     <!-- Campus -->
@@ -70,7 +70,7 @@ $imgpath = 'templates/' . $app->getTemplate() . '/images/';
         </button>
     </div>
 </div>
-<div class="navbar-collapse collapse ioc-menu col-sm-6 col-md-8 col-lg-9">
+<div class="navbar-collapse collapse ioc-menu col-sm-6 col-md-8 col-lg-9" aria-expanded="false">
 <?php  if ($this->countModules('navigation')) : ?>
                         <jdoc:include type="modules" name="navigation" style="none" />
                         <?php  endif; ?>
@@ -274,23 +274,23 @@ $imgpath = 'templates/' . $app->getTemplate() . '/images/';
 <!-- footer -->
 <?php  if($this->countModules('footer')) : ?>
 <div id="footer" class="fluid-container footer">
-    <div class="logo-mobile col-sm-12 visible-xs visible-sm">
-        <img src="<?php echo $imgpath?>logo_ioc_negatiu.svg" alt="Institut Obert de Catalunya" />
+    <div class="logo-mobile container visible-xs visible-sm">
+        <img src="<?php echo $imgpath?>logo-ioc-negatiu.svg" alt="Institut Obert de Catalunya" />
     </div>
-    <div id="footer-collapse" class="top col-sm-12">
-        <div class="top col-sm-12">
+    <div id="footer-collapse" class="top container">
+        <div class="top">
             <jdoc:include type="modules" name="footer-top-col1" style="xhtml" />
             <jdoc:include type="modules" name="footer-top-col2" style="xhtml" />
             <jdoc:include type="modules" name="footer-top-col3" style="xhtml" />
             <jdoc:include type="modules" name="footer-top-col4" style="xhtml" />
         </div>
-        <div class="middle col-sm-12">
+        <div class="middle">
             <div class="mid-col">
                 <jdoc:include type="modules" name="footer-opening" style="xhtml" />
             </div>
         </div>
     </div>
-    <div class="visible-xs visible-sm  col-sm-12">
+    <div class="visible-xs visible-sm container">
         <div class="mobile social">
             <a href="https://es.linkedin.com/in/ioc-institut-obert-de-catalunya-bb4805b1">
                 <span class="custom-icon linkedin"></span>
@@ -300,7 +300,7 @@ $imgpath = 'templates/' . $app->getTemplate() . '/images/';
             <a href="http://ioc-edu.blogspot.com.es/"><span class="custom-icon blogger"></span></a>
         </div>
     </div>
-    <div class="bottom col-sm-12">
+    <div class="bottom container">
         <div class="ioc-banners">
             <div class="col-xs-3 col-sm-3 col-1">
                 <jdoc:include type="modules" name="footer-bottom-col1" style="xhtml" />

@@ -66,7 +66,9 @@ var fakewaffle = ( function ( $, fakewaffle ) {
 									'data-parent' : '#collapse-' + $tabGroup.attr( 'id' ),
 									'href'        : '#' + newHash,
 									'html'        : $this.html()
-								} )
+								} ).append(
+									$( '<span>' ).attr( 'class', 'custom-icon plus' )
+								)
 							)
 						)
 					).append(
