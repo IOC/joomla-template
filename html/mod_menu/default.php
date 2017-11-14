@@ -18,11 +18,16 @@ if ($params->get('menutype') == 'topmenu') {
 	$class = "nav navbar-nav";
 	$menunavclass = "";
 } else {
-		$class = "nav navbar-nav";
+	$class = "nav navbar-nav";
 	$menunavclass = "";
 
 /*	$class = "panel-group";
 	$menunavclass = "panel panel-default";*/
+}
+
+$numelements = count($list);
+if ($numelements < 4) {
+	$class .= ' fewelements';
 }
 
 ?>
@@ -44,7 +49,6 @@ $specialstyles = array (
 
 $specialclass = '';
 if (in_array($params->get('style'), $specialstyles)) {
-	$numelements = count($list);
 	$col = 3;
 	$colsmall = 6;
 	if ($numelements < 4) {

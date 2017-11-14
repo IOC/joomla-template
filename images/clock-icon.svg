@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17">
     <defs>
         <filter id="a" width="108%" height="105.8%" x="-4%" y="-2.1%" filterUnits="objectBoundingBox">
             <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>

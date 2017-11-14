@@ -1,34 +1,3 @@
-@mixin headerstudy($study) {
-    background-image: url('../images/' + $study + '-banner-bck.png');
-    background-size: cover;
-    background-position: center;
-    &.ges {
-        h1 {
-            color: #ffe7e9;
-        }
-    }
-    &.btx {
-        h1 {
-            color: #fff6e8;
-        }
-    }
-    &.fp {
-        h1 {
-            color: #e1fff6;
-        }
-    }
-    &.fp-gad {
-        h1 {
-            color: #fff6e8;
-        }
-    }
-    &.eoi {
-        h1 {
-            color: #fff6e8;
-        }
-    }
-}
-
 @mixin tabcolor($background, $color) {
     .nav-tabs {
         li a:hover {
@@ -58,14 +27,16 @@
 }
 
 @mixin flexbox() {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 0 auto;
 }
 
-@mixin module-title ($fontsize, $fontcolor, $color, $linewidth, $margintop, $marginbottom) {
+@mixin module-title($fontsize, $fontcolor, $color, $linewidth, $margintop, $marginbottom) {
     .title {
             width: 100%;
             text-align: center;
@@ -101,10 +72,15 @@
         }
 }
 
-@mixin hover-module () {
+@mixin hover-module() {
     cursor: pointer;
     transition: filter .3s;
     filter: contrast(.84) grayscale(5%) hue-rotate(-20deg);
+}
+
+@mixin no-hover-module() {
+    cursor: default;
+    filter: none;
 }
 
 @mixin filter-background-icon ($cicle) {
@@ -124,7 +100,7 @@
     }
 }
 
-@mixin modal-module-color($study, $color) {
+@mixin modal-module-color($study, $color, $colortitle) {
     div[class*="item-page-#{$study}"] {
         .modal-modules {
             h1 {
@@ -137,6 +113,12 @@
             .body-modal-modules {
                 .modal-module {
                     border-color: $color;
+                    .text-modal-module,
+                    .bottom-modal-title,
+                    .modal-color,
+                    .bck-modal-module ~ p {
+                        color: $colortitle;
+                    }
                 }
             }
         }
@@ -805,17 +787,36 @@ button:focus {
     }
 }
 
-@include modal-module-color('eoi-', $ioc-eoi-study);
-@include modal-module-color('fp-', $ioc-fp-study);
+@include modal-module-color('eoi-', $ioc-eoi-study, $ioc-text);
+@include modal-module-color('fp-', $ioc-fp-study, $ioc-fp-study);
 
 .modal-modules {
     @include module-title(22, $ioc-text, transparent, 81, 86, 30);
+    .content-modal-modules {
+        max-width: 840px;
+        margin: 0 auto;
+        &:after {
+            content: '';
+            flex: auto;
+        }
+        &.fewelements {
+            &:after {
+                display: none;
+            }
+        }
+
+        .modal-module {
+            width: 200px;
+            img {
+                height: 114px;
+                width: 100%;
+            }
+        }
+    }
     .content-modal-modules,
     .body-modal-modules {
         @include flexbox();
         justify-content: center;
-        flex-flow: row wrap;
-        align-items: center;
         align-content: center;
         color: $ioc-text;
         .modal-module {
@@ -827,12 +828,6 @@ button:focus {
             cursor: pointer;
             margin-top: 34px;
             margin-right: 10px;
-            max-width: 200px;
-            height: 240px;
-            img {
-                height: 114px;
-                width: 100%;
-            }
             &:hover {
                 @include hover-module();
             }
@@ -842,6 +837,10 @@ button:focus {
                 cursor: default;
                 max-width: 480px;
                 height: auto;
+                @include no-hover-module();
+                background-image: url('../images/modal-bck.svg');
+                background-repeat: no-repeat;
+                background-position: bottom left;
                 &:before {
                     content: '';
                     position: absolute;
@@ -852,14 +851,47 @@ button:focus {
                     background-size: cover;
                     top: -35px;
                     right: -35px;
+                    pointer-events: none;
+                }
+                &.extended-bottom {
+                    background-image: url('../images/modal-big-bck.svg');
+                    .bottom-modal-module {
+                        p {
+                            display: block;
+                            margin: 0;
+                            line-height: 16px;
+                            color: $ioc-text;
+                        }
+                        p + p:before {
+                            display: none;
+                        }
+                        > div {
+                            margin: 0 15px;
+                        }
+                        .bottom-modal-last {
+                            padding-top: 8px;
+                            margin-bottom: 24px;
+                            color: $ioc-text;
+                            &:before {
+                                content: '\00B7';
+                                display: block;
+                                line-height: 1px;
+                                font-size: 20px;
+                                font-weight: 500;
+                                margin-bottom: 5px;
+                            }
+                        }
+                    }
                 }
                 .bck-modal-module {
                     height: 123px;
                     background-position: center;
                     background-size: cover;
                 }
-                .shortname-modal-module + p {
-                    padding: 15px 0;
+                .bck-modal-module ~ p {
+                    padding: 15px 10px;
+                    margin: 0;
+                    font-size: 16px;
                 }
                 .shortname-modal-module {
                     margin-top: 14px;
@@ -867,12 +899,25 @@ button:focus {
                 .body-modal-module {
                     flex-direction: column;
                     border-top: 1px solid rgba(135, 147, 156, 0.21);
-                    p {
-                        width: 75%;
-                        font-size: 13px;
-                        line-height: 1.38;
-                        text-align: center;
+                    .body-modal-content {
                         margin: 19px auto 31px auto;
+                        text-align: center;
+                        p {
+                            width: 75%;
+                            font-size: 13px;
+                            line-height: 1.38;
+                            margin: 0 auto 15px;
+                        }
+                        p + p {
+                            &:before {
+                                content: '\00B7';
+                                display: block;
+                                line-height: 1px;
+                                font-size: 20px;
+                                font-weight: 500;
+                                margin-bottom: 15px;
+                            }
+                        }
                     }
                     .file-modal-module {
                         margin: 0 auto;
@@ -883,16 +928,51 @@ button:focus {
                             bottom: 30px;
                         }
                     }
+
                 }
                 .bottom-modal-module {
-                    padding: 12px 0;
+                    margin-top: 37px;
                     font-size: 12px;
                     color: $ioc-text;
-                    margin-top: 42px;
+                    min-height: 59px;
                     &:before {
+                        display: none;
+                    }
+                    .bottom-modal-title {
+                        font-size: 13px;
+                        font-weight: 500;
+                        margin: 16px 0 15px 0;
+                        text-transform: uppercase;
+                    }
+                    .custom-icon {
+                        align-self: center;
+                        margin-right: 5px;
+                        &.clock {
+                            width: 31px;
+                            height: 59px;
+                            background-image: url('../images/clock-icon.svg');
+                            background-position: center;
+                        }
+                    }
+                    p {
+                        display: inline-block;
+                        align-self: center;
+                        margin: 0;
+                    }
+                    p + p:before {
+                        content: '\00B7';
+                        line-height: 1px;
+                        font-size: 20px;
+                        font-weight: 500;
+                        margin-left: 10px;
+                        padding-right: 10px;
+                    }
+
+//                    margin-top: 42px;
+/*                    &:before {
                         width: 37px;
                         height: 30px;
-                    }
+                    }*/
                 }
             }
 
@@ -906,7 +986,7 @@ button:focus {
                 margin-top: 8px;
                 &:before,
                 &:after {
-                    content: '·';
+                    content: '\00B7';
                     padding: 0 5px;
                 }
             }
@@ -916,18 +996,24 @@ button:focus {
                 width: 100%;
                 text-align: center;
                 margin: 8px 0;
+                max-height: 54px;
+                overflow: hidden;
                 p {
                     display: inline-block;
                     vertical-align: middle;
-                    width: 80%;
+                    width: 89%;
                     line-height: 1.2;
                     margin: 0;
                     font-size: 15px;
+                    &.text-small {
+                        font-size: 13px;
+                    }
                 }
             }
             .bottom-modal-module {
+                @include flexbox();
+                justify-content: center;
                 width: 100%;
-                text-align: center;
                 color: $ioc-module-bottom;
                 line-height: 28px;
                 opacity: 0.7;
@@ -937,13 +1023,13 @@ button:focus {
                     content: '';
                     margin-right: 4px;
                     display: inline-block;
+                    align-self: center;
                     width: 21px;
-                    height: 21px;
+                    height: 17px;
                     background-image: url('../images/clock-icon.svg');
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;
-                    vertical-align: middle;
                 }
             }
         }
@@ -954,7 +1040,7 @@ button:focus {
 .substudies {
     background-image: url('../images/cicles-bck.svg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     .submenu-content,
     .substudies-content {
         padding-top: 200px;
@@ -962,12 +1048,22 @@ button:focus {
             width: 100%;
             @include flexbox();
             justify-content: center;
-            flex-flow: row wrap;
             align-items: center;
             align-content: center;
-            &:before,
-            &:after {
+            float: none;
+            margin: 0 auto;
+            &:before {
                 display: none;
+            }
+            &:after {
+                display: block;
+                content: '';
+                flex: auto;
+            }
+            &.fewelements {
+                &:after {
+                    display: none;
+                }
             }
             li {
                 height: 260px;
@@ -1026,13 +1122,13 @@ button:focus {
         padding-top: 0;
         .title {
             margin-top: 0;
+            margin-bottom: 51px;
         }
     }
 }
 
 .ioctags {
     position: relative;
-    margin-top: 10px;
     &.tag-news {
         .tag-icon,
         .tag {
@@ -1060,7 +1156,7 @@ button:focus {
     .tag {
         line-height: 21px;
         font-size: 13px;
-        margin-top: -9px;
+        margin-bottom: 0;
     }
 }
 
@@ -1073,8 +1169,9 @@ button:focus {
             padding-left: 0;
             padding-right: 0;
             font-size: 1em;
-            .article-info {
-                font-size: 0.8em;
+            .modified {
+                font-size: 13px;
+                color: $ioc-article-date;
             }
             h2 {
                 font-size: 1.6em;
@@ -1225,22 +1322,21 @@ button:focus {
                 font-weight: 600;
                 margin: 20px 0 10px 0;
             }
-            .article-info {
-                margin-bottom: 0;
-                .modified {
-                    color: #728696;
-                    line-height: 21px;
-                    font-size: 13px;
-                    bottom: 54px;
-                    left: 30px;
-                }
+
+            .modified {
+                color: $ioc-article-date;
+                line-height: 21px;
+                font-size: 13px;
+                bottom: 54px;
+                left: 30px;
             }
+
             // styles for '...'
             .intro-featured-article {
                 color: $ioc-featured-text;
                 line-height: 21px;
                 font-size: 15px;
-                padding-top: 6px;
+                padding-top: 20px;
                 overflow: hidden;
                 p {
                     display: inline-block;
@@ -1638,7 +1734,7 @@ body {
                 }
             }
             &.iocnewsarticle {
-                background-image: url('../images/bck-banner-noticies.png');
+                background-image: url('../images/bck-header-noticies.png');
                 h1 {
                     font-size: 26px;
                     font-weight: 600;
@@ -1648,7 +1744,7 @@ body {
                 }
                 & + .container {
                     padding: 0;
-                    .article-info {
+                    .modified {
                         float: left;
                         font-size: 10.5px;
                         text-transform: uppercase;
@@ -1707,54 +1803,88 @@ body {
                     max-width: 90%;
                 }
             }
-            @include headerstudy('default');
-            &.page-header.ges {
-                @include headerstudy('ges');
-            }
-            &.page-header.btx {
-                @include headerstudy('btx');
-            }
-            &.page-header.fp {
-                @include headerstudy('fp');
-            }
-            &.page-header.fp-gad {
-                @include headerstudy('fp-gad');
-            }
-            &.item-pagefpmig {
-                @include headerstudy('fpmig');
-            }
-            &.item-pagefpsup {
-                @include headerstudy('fpsup');
-            }
-            &.page-header.eoi {
-                @include headerstudy('eoi');
-            }
-            &.page-header.eoi-basic {
-                @include headerstudy('eoi-basic');
-            }
-            &.page-header.eoi-medium {
-                @include headerstudy('eoi-medium');
-            }
-            &.page-header.eoi-advanced {
-                @include headerstudy('eoi-advanced');
-            }
-            &.item-pagefpd {
-                @include headerstudy('fpd');
-            }
-            &.item-pageppags {
-                @include headerstudy('ppags');
-            }
-            &.item-pageminiops {
-                @include headerstudy('miniops');
-            }
-            &.item-pageentcol {
-                @include headerstudy('entcol');
-            }
-            &.item-pagemeb {
-                @include headerstudy('meb');
-            }
-            &.item-pagefnr {
-                @include headerstudy('fnr');
+            background-image: url('../images/default-header-bck.png');
+            background-size: cover;
+            background-position: center;
+            &.page-header {
+                &.ges{
+                    background-image: url('../images/ges-header-bck.png');
+                    h1 {
+                        color: $ioc-title-study1;
+                    }
+                }
+                &.btx {
+                    background-image: url('../images/btx-header-bck.png');
+                    h1 {
+                        color: $ioc-title-study2;
+                    }
+                }
+                &.fp {
+                    background-image: url('../images/fp-header-bck.png');
+                    h1 {
+                        color: $ioc-title-study3;
+                    }
+                }
+                &.fp-gad {
+                    background-image: url('../images/fp-gad-header-bck.png');
+                    h1 {
+                        color: $ioc-title-study3;
+                    }
+                }
+                &.fp-iea {
+                    background-image: url('../images/fp-iea-header-bck.png');
+                    h1 {
+                        color: $ioc-title-study3;
+                    }
+                }
+                &.fp-cai {
+                    background-image: url('../images/fp-cai-header-bck.png');
+                    h1 {
+                        color: $ioc-title-study2;
+                    }
+                }
+                &.fp-apd {
+                    background-image: url('../images/fp-apd-header-bck.png');
+                    h1 {
+                        color: $ioc-title-study2;
+                    }
+                }
+                &.fp-smx {
+                    background-image: url('../images/fp-smx-header-bck.png');
+                    h1 {
+                        color: $ioc-title-study2;
+                    }
+                }
+                &.fp-ems {
+                    background-image: url('../images/fp-ems-header-bck.png');
+                    h1 {
+                        color: $ioc-title-study2;
+                    }
+                }
+                &.eoi {
+                    background-image: url('../images/eoi-header-bck.png');
+                    h1 {
+                        color: $ioc-title-study2;
+                    }
+                }
+                &.eoi-basic {
+                    background-image: url('../images/eoi-basic-header-bck.png');
+                    h1 {
+                        color: $ioc-title-study2;
+                    }
+                }
+                &.eoi-medium {
+                    background-image: url('../images/eoi-basic-header-bck.png');
+                    h1 {
+                        color: $ioc-title-study2;
+                    }
+                }
+                &.eoi-advanced {
+                    background-image: url('../images/eoi-basic-header-bck.png');
+                    h1 {
+                        color: $ioc-title-study2;
+                    }
+                }
             }
         }
     }
@@ -1766,9 +1896,6 @@ body {
         &.study-main {
             @include flexbox();
             justify-content: space-between;
-            /*.col-md-6:first-child {
-                padding-left: 0;
-            }*/
         }
         .study-main {
             margin-top: 130px;
@@ -1814,7 +1941,6 @@ body {
             }
             background-image: url('../images/vimeo.svg');
         }
-
         height: 24px;
         width: 24px;
     }
@@ -1953,11 +2079,10 @@ body {
 .study-panel {
     color: $ioc-title;
     flex: 1 1 auto;
-    //max-width: 50%;
     margin-left: 20px;
     .study-data {
         @include flexbox();
-        // flex-flow: row wrap;
+        flex-flow: row nowrap;
         justify-content: space-between;
         align-items: baseline;
         .study-header-img {
@@ -1969,7 +2094,9 @@ body {
         }
         .study-col {
             @include flexbox();
+            flex: 0 1 auto;
             flex-direction: column;
+            flex-wrap: wrap;
             justify-content: space-between;
             vertical-align: top;
             width: 100%;
@@ -2100,7 +2227,7 @@ body {
     }
 }
 
-#container {
+//#container {
     .subpage-text-buttons {
         background-image: url('../images/seccio-botons-bck.svg');
         margin-top: -173px;
@@ -2278,10 +2405,66 @@ body {
         padding-bottom: 137px;
     }
 
+    .subpage-bigbanner {
+            background-image: url('../images/btx-assign-banner.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center top;
+
+        .title {
+            background-color: $ioc-btx-assign;
+            background-image: linear-gradient(161deg, $ioc-btx-assign, rgba(81, 92, 162, 0.86));
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.27);
+            line-height: 50px;
+            text-align: right;
+            padding-right: 25px;
+            width: 60%;
+            h2 {
+                font-size: 15px;
+                font-weight: 500;
+                letter-spacing: 0.6px;
+                color: #fff;
+                margin: 0;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+        .study-overview {
+            margin-top: 70px;
+            padding-left: 95px;
+            padding-bottom: 264px;
+            .study-overview-headline,
+            .study-overview-text {
+                width: 50%;
+                text-align: left;
+                &:after {
+                    display: none;
+                }
+            }
+            .study-overview-text {
+                width: 30%;
+            }
+            button {
+                font-size: 11px;
+                font-weight: 500;
+                color: #fff;
+                text-transform: uppercase;
+                margin-top: 62px;
+                width: 180px;
+                height: 32px;
+                opacity: 0.79;
+                border-radius: 100px;
+                border: none;
+                background-image: linear-gradient(168deg, #01c1b9, #003a78);
+                box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.11);
+            }
+        }
+    }
+
     .subpage-text-buttons,
     .subpage-text-buttons-banner,
     .subpage-buttons-filter {
-        background-size: cover;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
         background-position: center top;
         .subpage-text {
@@ -2296,8 +2479,6 @@ body {
             margin: 263px auto 0 auto;
             .subpage-group-buttons {
                 @include flexbox();
-                flex-flow: row wrap;
-                flex: 1 0 auto;
                 justify-content: flex-end;
                 .subpage-button {
                     flex-grow: 1;
@@ -2315,14 +2496,13 @@ body {
             margin-top: 0;
         }
     }
-}
+//}
 
 .study-buttons,
 .body-modal-modules,
 .subpage-buttons {
     @include flexbox();
     justify-content: center;
-    flex-wrap: wrap;
     margin-top: 146px;
     text-align: center;
     .study-button,
@@ -2339,10 +2519,7 @@ body {
         }
         .custom-icon {
             display: inline-block;
-            // background-color: $ioc-study-button;
             text-align: center;
-            // box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
-            // transition: all .1s linear;
             &.suport,
             &.access,
             &.matricula,
@@ -2351,7 +2528,8 @@ body {
             &.competencies,
             &.metodologia,
             &.ambit,
-            &.itinerari {
+            &.itinerari,
+            &.materials {
                 position: absolute;
                 left: 0;
                 right: 0;
@@ -2414,6 +2592,12 @@ body {
                 height: 49px;
                 background-image: url('../images/itinerari-icon.svg');
             }
+            &.materials {
+                top: 26px;
+                width: 43px;
+                height: 28px;
+                background-image: url('../images/material-icon.svg');
+            }
         }
     }
     .study-button + .study-button {
@@ -2453,6 +2637,7 @@ body {
     min-height:         calc(100vh - #{$ioc-header-mini});
 }
 
+/* Parallax */
 .item-page-study {
     &.ges {
         .study-parallax {
@@ -2464,10 +2649,14 @@ body {
     }
     &.btx {
         .study-parallax {
-            background-image: url('../images/btx-parallax-img.png');
+            background-image: url('../images/btx-parallax-img.jpg');
         }
         .subpage-banner {
             background-image: url('../images/btx-banner.png');
+        }
+        .subpage-text-buttons-banner {
+            margin-bottom: 0;
+            padding-bottom: 119px;
         }
     }
     &.eoi {
@@ -2937,48 +3126,51 @@ body {
     }
 }
 
-.ioc-news {
-    .imatge-noticia {
-        width: 100%;
-        img {
-            height: auto;
-            max-width: 100%;
-        }
-        figcaption {
-            clear: left;
-            float: left;
-            font-size: 0.8em;
+.ioc-news-container {
+    margin-top: 38px;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.65;
+    color: $ioc-title;
+    margin-bottom: 98px;
+    .ioc-news {
+        .imatge-noticia {
             width: 100%;
-            margin: 0 15px 0 0;
+            img {
+                height: auto;
+                max-width: 100%;
+            }
+            figcaption {
+                clear: left;
+                float: left;
+                font-size: 0.8em;
+                width: 100%;
+                margin: 0 15px 0 0;
+            }
         }
-    }
-    .ioc-news-content {
-        width: 60%;
-        margin-top: 54px;
-        margin-left: 10%;
-        margin-bottom: 98px;
-        font-size: 17px;
-        font-weight: 300;
-        line-height: 1.65;
-        color: $ioc-title;
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        ul {
-            display: inline-block;
-        }
-        p:last-child,
-        div:last-child {
-            display: inline-block !important;
-            &:after {
-                content: '';
+        .ioc-news-content {
+            width: 60%;
+            margin-top: 54px;
+            margin-left: 10%;
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            ul {
                 display: inline-block;
-                width: 12px;
-                height: 12px;
-                background-image: url('../images/final-noticia.svg');
-                background-repeat: no-repeat;
-                margin-left: 5px;
+            }
+            p:last-child,
+            div:last-child {
+                display: inline-block !important;
+                &:after {
+                    content: '';
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    background-image: url('../images/final-noticia.svg');
+                    background-repeat: no-repeat;
+                    margin-left: 5px;
+                }
             }
         }
     }

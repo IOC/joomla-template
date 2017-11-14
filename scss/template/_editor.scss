@@ -126,7 +126,7 @@ $ioc-accent:    #01c1b9;
                         }*/
                     }
                     .study-date {
-                        height: 100%;
+                        height: auto;
                         &.multiple {
                             max-height: 100%;
                         }
@@ -227,9 +227,27 @@ $ioc-accent:    #01c1b9;
                 .shortname-modal-module,
                 .text-modal-module,
                 p,
-                .bottom-modal-module {
+                .bottom-modal-module,
+                .bottom-modal-title,
+                .bottom-modal-last,
+                .clock,
+                .file-modal-module {
                     @include borderioc(1px, $custom_red);
                     color: $ioc-text;
+                }
+                .text-modal-module {
+                    max-height: 100%;
+                }
+                .bottom-modal-last {
+                    &:before {
+                        display: none;
+                    }
+                    span {
+                        @include borderioc(1px, $custom_red);
+                    }
+                }
+                .clock {
+                    margin: 0;
                 }
                 .file-modal-module {
                     &:hover {

@@ -11,6 +11,7 @@
         var slidingright = false;
         var $menu = $('.ioc-menu');
         var $filter = $('.filter-dropdown');
+        var currenthash = '#' + window.location.hash.replace(/[^a-zA-Z0-9_-]*/g, '');
 
         $('[data-toggle="tooltip"]').tooltip();
 
@@ -111,9 +112,9 @@
         $(document).on('click', 'a', function(e) {
             $('.back-to-top').attr('href', '#');
         });
-        $(document).on('click', '.study-buttons a[href*=#], .study-tabs .tab-content a[href*=#]', function(e) {
+        $(document).on('click', '.study-buttons a[href*=#], .study-tabs .tab-content a[href*=#], .subpage-group-buttons a[href*=#]', function(e) {
             e.preventDefault();
-            linkhash = $(this).prop('hash');
+            linkhash = '#' + $(this).prop('hash').replace(/[^a-zA-Z0-9_-]*/g, '');
             gotopanel(linkhash);
             if ($(this).closest('.study-tabs').length) {
                 $('.back-to-top').attr('href', $('#tabs > li.active a').attr('href'));
@@ -147,25 +148,23 @@
             }
         });
         var gotopanel = function (linkhash) {
+            if (!$(linkhash).length) {
+                return;
+            }
             window.location.hash = linkhash;
             if (linkhash == '#matricula') {
                 var position = $(linkhash).position();
                 $("html, body").animate({ scrollTop: position.top}, 800);
             }
-            if (!$('#collapse-more-info').hasClass('in') || !$(linkhash).hasClass('in')) {
-                if (!$('#collapse-more-info').hasClass('in')) {
-                    $('#collapse-other-info > .panel > .panel-heading a').trigger('click');
-                }
-                if (!$(linkhash).hasClass('in')) {
-                    $('#panel-sections a[href="' + linkhash +'"]').trigger('click');
-                }
+            if (!$(linkhash).hasClass('in')) {
+                $('#panel-sections a[href="' + linkhash +'"]').trigger('click');
             } else {
                 var position = $(linkhash).position();
                 $("html, body").animate({ scrollTop: position.top - 105}, 800);
             }
         };
-        if ( $(document.location.hash).length ) {
-            gotopanel(document.location.hash);
+        if ( $(currenthash).length ) {
+            gotopanel(currenthash);
         }
         if ($('.avisos')) {
             $('.avisos').addClass('display');

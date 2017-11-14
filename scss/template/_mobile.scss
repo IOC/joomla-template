@@ -50,7 +50,7 @@
                     }
                     & + .item-page-default {
                         .page-header,
-                        .article-info,
+                        .modified,
                         .ioctags {
                             padding: 0 15px;
                             h2 {
@@ -62,7 +62,7 @@
                         .page-header {
                             margin-bottom: 9px;
                         }
-                        .article-info {
+                        .modified {
                             float: none;
                             font-size: 9px;
                             margin-bottom: 0;
@@ -187,7 +187,7 @@
                     margin-left: 0;
                     margin-right: 0;
                     .item {
-                        padding-bottom: 4px;
+                        padding-bottom: 15px;
                         .news-text {
                             z-index: 1;
                             h3 {
@@ -217,7 +217,7 @@
                                 font-size: 14px;
                                 line-height: 17px;
                             }
-                            .article-info {
+                            .modified {
                                 position: absolute;
                                 bottom: 24px;
                                 left: 30px;
@@ -390,6 +390,16 @@
                 margin-top: 37px;
                 font-size: 13px;
             }
+        }
+    }
+
+    .ioc-parent-breadcrumb {
+        display: none;
+    }
+
+    .modal-modules {
+        .content-modal-modules {
+            max-width: 630px;
         }
     }
 
@@ -780,6 +790,21 @@
             width: 100%;
         }
     }
+
+    .modal-modules {
+        .content-modal-modules {
+            max-width: 210px;
+        }
+    }
+    .submenu,
+    .substudies {
+        .submenu-content,
+        .substudies-content {
+            .navbar-nav {
+                max-width: 260px;
+            }
+        }
+    }
 }
 
 /* Small Devices, Tablets */
@@ -953,6 +978,21 @@
             width: 100%;
         }
     }
+
+        .modal-modules {
+        .content-modal-modules {
+            max-width: 420px;
+        }
+    }
+    .submenu,
+    .substudies {
+        .submenu-content,
+        .substudies-content {
+            .navbar-nav {
+                max-width: 568px;
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1050,7 +1090,7 @@
                     .item {
                         .news-text {
                             .item-title,
-                            .article-info {
+                            .modified {
                                 position: static;
                             }
                             .news-layer {
@@ -1127,6 +1167,15 @@
             }
         }
     }
+    .submenu,
+    .substudies {
+        .submenu-content,
+        .substudies-content {
+            .navbar-nav {
+                max-width: 852px;
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 1199px) {
@@ -1134,6 +1183,15 @@
         .container.blog-featured {
             .pagination {
                 margin-top: 20px;
+            }
+        }
+    }
+    .submenu,
+    .substudies {
+        .submenu-content,
+        .substudies-content {
+            .navbar-nav {
+                max-width: 100%;
             }
         }
     }
