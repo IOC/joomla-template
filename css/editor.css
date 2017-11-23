@@ -140,7 +140,7 @@
 #tinymce .study-buttons .icon-text {
   padding: 0;
 }
-#tinymce .subpage-text-buttons .subpage-text, #tinymce .subpage-text-buttons-banner .subpage-text {
+#tinymce .subpage-text-buttons .subpage-text, #tinymce .subpage-text-buttons-banner .subpage-text, #tinymce .subpage-bigbanner .subpage-text {
   box-sizing: border-box;
   border: 1px dashed #d9534f;
   padding: 10px;
@@ -150,24 +150,36 @@
   margin-top: 25px;
   font-size: 18px;
 }
-#tinymce .subpage-text-buttons .subpage-button, #tinymce .subpage-text-buttons-banner .subpage-button {
+#tinymce .subpage-text-buttons .subpage-button, #tinymce .subpage-text-buttons-banner .subpage-button, #tinymce .subpage-bigbanner .subpage-button {
   box-sizing: border-box;
   border: 1px dashed #d9534f;
   padding: 10px;
   background-color: #fafafa;
 }
-#tinymce .subpage-text-buttons .subpage-button:hover, #tinymce .subpage-text-buttons-banner .subpage-button:hover {
+#tinymce .subpage-text-buttons .subpage-button:hover, #tinymce .subpage-text-buttons-banner .subpage-button:hover, #tinymce .subpage-bigbanner .subpage-button:hover {
   background-color: #fff;
 }
-#tinymce .subpage-text-buttons .subpage-button a, #tinymce .subpage-text-buttons-banner .subpage-button a, #tinymce .subpage-text-buttons .subpage-button .custom-icon, #tinymce .subpage-text-buttons-banner .subpage-button .custom-icon {
+#tinymce .subpage-text-buttons .subpage-button a, #tinymce .subpage-text-buttons-banner .subpage-button a, #tinymce .subpage-bigbanner .subpage-button a, #tinymce .subpage-text-buttons .subpage-button .custom-icon, #tinymce .subpage-text-buttons-banner .subpage-button .custom-icon, #tinymce .subpage-bigbanner .subpage-button .custom-icon {
   box-sizing: border-box;
   border: 1px dashed #d9534f;
   padding: 10px;
   background-color: #fafafa;
 }
-#tinymce .subpage-text-buttons .subpage-button .icon-text, #tinymce .subpage-text-buttons-banner .subpage-button .icon-text {
+#tinymce .subpage-text-buttons .subpage-button .icon-text, #tinymce .subpage-text-buttons-banner .subpage-button .icon-text, #tinymce .subpage-bigbanner .subpage-button .icon-text {
   padding: 0;
   left: 0;
+}
+#tinymce .subpage-text-buttons .title, #tinymce .subpage-text-buttons-banner .title, #tinymce .subpage-bigbanner .title, #tinymce .subpage-text-buttons .study-overview-headline, #tinymce .subpage-text-buttons-banner .study-overview-headline, #tinymce .subpage-bigbanner .study-overview-headline, #tinymce .subpage-text-buttons .study-overview-text, #tinymce .subpage-text-buttons-banner .study-overview-text, #tinymce .subpage-bigbanner .study-overview-text, #tinymce .subpage-text-buttons h2, #tinymce .subpage-text-buttons-banner h2, #tinymce .subpage-bigbanner h2, #tinymce .subpage-text-buttons .subpage-button, #tinymce .subpage-text-buttons-banner .subpage-button, #tinymce .subpage-bigbanner .subpage-button {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+  pointer-events: none;
+  background-image: none;
+  color: #354959;
+}
+#tinymce .subpage-text-buttons .subpage-button, #tinymce .subpage-text-buttons-banner .subpage-button, #tinymce .subpage-bigbanner .subpage-button {
+  padding: 0;
 }
 #tinymce .modal-modules {
   box-sizing: border-box;

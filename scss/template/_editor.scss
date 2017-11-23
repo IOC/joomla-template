@@ -179,7 +179,8 @@ $ioc-accent:    #01c1b9;
     }
 
     .subpage-text-buttons,
-    .subpage-text-buttons-banner {
+    .subpage-text-buttons-banner,
+    .subpage-bigbanner {
         .subpage-text {
             @include borderioc(1px, $custom_red);
             width: 100%;
@@ -200,6 +201,19 @@ $ioc-accent:    #01c1b9;
                 padding: 0;
                 left: 0;
             }
+        }
+        .title,
+        .study-overview-headline,
+        .study-overview-text,
+        h2,
+        .subpage-button {
+            @include borderioc(1px, $custom_red);
+            pointer-events: none;
+            background-image: none;
+            color: $ioc-text;
+        }
+        .subpage-button {
+            padding: 0;
         }
     }
 

@@ -131,6 +131,9 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     min-width: 320px;
+    &.modal-open {
+        overflow: visible;
+    }
 }
 
 label, input, button, select, textarea, a {
@@ -1040,7 +1043,7 @@ button:focus {
 .substudies {
     background-image: url('../images/cicles-bck.svg');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100vw;
     .submenu-content,
     .substudies-content {
         padding-top: 200px;
@@ -1819,10 +1822,34 @@ body {
                         color: $ioc-title-study2;
                     }
                 }
+                &.btx-mat {
+                    background-image: url('../images/btx-mat-header-bck.png');
+                    h1 {
+                        color: $ioc-title-study2;
+                    }
+                }
                 &.fp {
                     background-image: url('../images/fp-header-bck.png');
                     h1 {
                         color: $ioc-title-study3;
+                    }
+                }
+                &.fp-adi {
+                    background-image: url('../images/fp-adi-header-bck.png');
+                    h1 {
+                        color: $ioc-title-study2;
+                    }
+                }
+                &.fp-afi {
+                    background-image: url('../images/fp-afi-header-bck.png');
+                    h1 {
+                        color: $ioc-title-study2;
+                    }
+                }
+                &.fp-edi {
+                    background-image: url('../images/fp-edi-header-bck.png');
+                    h1 {
+                        color: $ioc-title-study2;
                     }
                 }
                 &.fp-gad {
@@ -2272,7 +2299,7 @@ body {
         .subpage-filter {
             margin-top: 206px;
             background-image: url('../images/fp-banner-filter-bck.png');
-            background-size: 100% 100%;
+            background-size: 100vw;
             background-repeat: no-repeat;
             background-position: center top;
             clear: both;
@@ -2407,18 +2434,27 @@ body {
 
     .subpage-bigbanner {
             background-image: url('../images/btx-assign-banner.png');
-            background-size: 100% 100%;
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: center top;
-
         .title {
             background-color: $ioc-btx-assign;
             background-image: linear-gradient(161deg, $ioc-btx-assign, rgba(81, 92, 162, 0.86));
-            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.27);
+            box-shadow: -4px 2px 4px 0 rgba(0, 0, 0, 0.27);
             line-height: 50px;
-            text-align: right;
-            padding-right: 25px;
-            width: 60%;
+            max-width: 600px;
+            position: relative;
+            &:before {
+                content: ' ';
+                position: absolute;
+                white-space: pre;
+                top: 0;
+                right: 100%;
+                width: 100%;
+                line-height: 50px;
+                background-color: $ioc-btx-assign;
+                box-shadow: -4px 2px 4px 0 rgba(0, 0, 0, 0.27);
+            }
             h2 {
                 font-size: 15px;
                 font-weight: 500;
@@ -2431,22 +2467,22 @@ body {
         }
         .study-overview {
             margin-top: 70px;
-            padding-left: 95px;
             padding-bottom: 264px;
             .study-overview-headline,
             .study-overview-text {
-                width: 50%;
+                max-width: 530px;
                 text-align: left;
                 &:after {
                     display: none;
                 }
             }
             .study-overview-text {
-                width: 30%;
+                max-width: 369px;
             }
-            button {
+            .subpage-button {
                 font-size: 11px;
                 font-weight: 500;
+                letter-spacing: 1.8px;
                 color: #fff;
                 text-transform: uppercase;
                 margin-top: 62px;
@@ -2464,7 +2500,7 @@ body {
     .subpage-text-buttons,
     .subpage-text-buttons-banner,
     .subpage-buttons-filter {
-        background-size: 100% 100%;
+        background-size: 100vw;
         background-repeat: no-repeat;
         background-position: center top;
         .subpage-text {
@@ -2653,6 +2689,18 @@ body {
         }
         .subpage-banner {
             background-image: url('../images/btx-banner.png');
+        }
+        .subpage-text-buttons-banner {
+            margin-bottom: 0;
+            padding-bottom: 119px;
+        }
+    }
+    &.btx-mat {
+        .study-parallax {
+            background-image: url('../images/btx-mat-parallax-img.jpg');
+        }
+        .subpage-banner {
+            background-image: url('../images/btx-mat-banner.png');
         }
         .subpage-text-buttons-banner {
             margin-bottom: 0;
