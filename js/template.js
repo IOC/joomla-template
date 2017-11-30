@@ -8,7 +8,7 @@
 			$('.parent > a').append('<b class="caret"></b>');
 			$('.parent > ul').addClass('dropdown-menu');
 		}
-var offset = 120;
+var offset = 100;
 // grab an element
 var myElement = document.querySelector("header");
 // construct an instance of Headroom, passing the element

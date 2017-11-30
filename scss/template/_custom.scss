@@ -694,7 +694,7 @@ button:focus {
 }
 
 .layout-employment {
-    background-image: url('../images/laboral-bck.png');
+    background-image: url('../images/laboral-bck.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -1806,175 +1806,188 @@ body {
                     max-width: 90%;
                 }
             }
-            background-image: url('../images/default-header-bck.png');
+            background-image: url('../images/default-header-bck.jpg');
             background-size: cover;
             background-position: center;
             &.page-header {
-                &.acfgs{
-                    background-image: url('../images/acfgs-header-bck.png');
+                &.acfgs,
+                &.cas,
+                &.pacfgs {
+                    background-image: url('../images/pacfgs-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.ges{
-                    background-image: url('../images/ges-header-bck.png');
+                    background-image: url('../images/ges-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study1;
                     }
                 }
                 &.btx {
-                    background-image: url('../images/btx-header-bck.png');
+                    background-image: url('../images/btx-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.btx-mat {
-                    background-image: url('../images/btx-mat-header-bck.png');
+                    background-image: url('../images/btx-mat-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
+                &.competic {
+                    background-image: url('../images/competic-header-bck.jpg');
+                    h1 {
+                        color: $ioc-title-study6;
+                    }
+                }
+                &.fesp{
+                    background-image: url('../images/fesp-header-bck.jpg');
+                    h1 {
+                        color: $ioc-title-study5;
+                    }
+                }
                 &.fp {
-                    background-image: url('../images/fp-header-bck.png');
+                    background-image: url('../images/fp-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study3;
                     }
                 }
                 &.fp-adi {
-                    background-image: url('../images/fp-adi-header-bck.png');
+                    background-image: url('../images/fp-adi-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-afi {
-                    background-image: url('../images/fp-afi-header-bck.png');
+                    background-image: url('../images/fp-afi-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-apd {
-                    background-image: url('../images/fp-apd-header-bck.png');
+                    background-image: url('../images/fp-apd-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-asx {
-                    background-image: url('../images/fp-asx-header-bck.png');
+                    background-image: url('../images/fp-asx-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-avi {
-                    background-image: url('../images/fp-avi-header-bck.png');
+                    background-image: url('../images/fp-avi-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-cai {
-                    background-image: url('../images/fp-cai-header-bck.png');
+                    background-image: url('../images/fp-cai-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-cin {
-                    background-image: url('../images/fp-cin-header-bck.png');
+                    background-image: url('../images/fp-cin-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-dam {
-                    background-image: url('../images/fp-dam-header-bck.png');
+                    background-image: url('../images/fp-dam-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-daw {
-                    background-image: url('../images/fp-daw-header-bck.png');
+                    background-image: url('../images/fp-daw-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-edi {
-                    background-image: url('../images/fp-edi-header-bck.png');
+                    background-image: url('../images/fp-edi-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-ems {
-                    background-image: url('../images/fp-ems-header-bck.png');
+                    background-image: url('../images/fp-ems-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-gad {
-                    background-image: url('../images/fp-gad-header-bck.png');
+                    background-image: url('../images/fp-gad-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study3;
                     }
                 }
                 &.fp-iea {
-                    background-image: url('../images/fp-iea-header-bck.png');
+                    background-image: url('../images/fp-iea-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-iso {
-                    background-image: url('../images/fp-iso-header-bck.png');
+                    background-image: url('../images/fp-iso-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-prp {
-                    background-image: url('../images/fp-prp-header-bck.png');
+                    background-image: url('../images/fp-prp-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-smx {
-                    background-image: url('../images/fp-smx-header-bck.png');
+                    background-image: url('../images/fp-smx-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-vec {
-                    background-image: url('../images/fp-vec-header-bck.png');
+                    background-image: url('../images/fp-vec-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
+                &.fpd{
+                    background-image: url('../images/fpd-header-bck.jpg');
+                    h1 {
+                        color: $ioc-title-study4;
+                    }
+                }
                 &.eoi {
-                    background-image: url('../images/eoi-header-bck.png');
+                    background-image: url('../images/eoi-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.eoi-basic {
-                    background-image: url('../images/eoi-basic-header-bck.png');
+                    background-image: url('../images/eoi-basic-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.eoi-medium {
-                    background-image: url('../images/eoi-basic-header-bck.png');
+                    background-image: url('../images/eoi-medium-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.eoi-advanced {
-                    background-image: url('../images/eoi-basic-header-bck.png');
-                    h1 {
-                        color: $ioc-title-study2;
-                    }
-                }
-                &.cas,
-                &.pacfgs {
-                    background-image: url('../images/pacfgs-header-bck.png');
+                    background-image: url('../images/eoi-advanced-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.pau {
-                    background-image: url('../images/pau-header-bck.png');
+                    background-image: url('../images/pau-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
@@ -2140,6 +2153,9 @@ body {
 .study-overview {
     color: $ioc-text;
     flex: 1 1 20%;
+    strong {
+        font-weight: 500;
+    }
     .study-overview-headline {
         position: relative;
         font-size: 20px;
@@ -2373,7 +2389,7 @@ body {
         }
         .subpage-filter {
             margin-top: 206px;
-            background-image: url('../images/fp-banner-filter-bck.png');
+            background-image: url('../images/fp-banner-filter-bck.jpg');
             background-size: 100vw;
             background-repeat: no-repeat;
             background-position: center top;
@@ -2511,7 +2527,7 @@ body {
     }
 
     .subpage-bigbanner {
-            background-image: url('../images/btx-assign-banner.png');
+            background-image: url('../images/btx-assign-banner.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center top;
@@ -2797,18 +2813,26 @@ body {
     }
     &.cas {
         .study-parallax {
-            background-image: url('../images/cas-parallax-img.png');
+            background-image: url('../images/cas-parallax-img.jpg');
         }
         .subpage-banner {
-            background-image: url('../images/cas-banner.png');
+            background-image: url('../images/cas-banner.jpg');
+        }
+    }
+    &.competic {
+        .study-parallax {
+            background-image: url('../images/competic-parallax-img.jpg');
+        }
+        .subpage-banner {
+            background-image: url('../images/competic-banner.jpg');
         }
     }
     &.ges {
         .study-parallax {
-            background-image: url('../images/ges-parallax-img.png');
+            background-image: url('../images/ges-parallax-img.jpg');
         }
         .subpage-banner {
-            background-image: url('../images/ges-banner.png');
+            background-image: url('../images/ges-banner.jpg');
         }
     }
     &.btx {
@@ -2816,7 +2840,7 @@ body {
             background-image: url('../images/btx-parallax-img.jpg');
         }
         .subpage-banner {
-            background-image: url('../images/btx-banner.png');
+            background-image: url('../images/btx-banner.jpg');
         }
         .subpage-text-buttons-banner {
             margin-bottom: 0;
@@ -2828,7 +2852,7 @@ body {
             background-image: url('../images/btx-mat-parallax-img.jpg');
         }
         .subpage-banner {
-            background-image: url('../images/btx-mat-banner.png');
+            background-image: url('../images/btx-mat-banner.jpg');
         }
         .subpage-text-buttons-banner {
             margin-bottom: 0;
@@ -2837,25 +2861,44 @@ body {
     }
     &.eoi {
         .study-parallax {
-            background-image: url('../images/eoi-parallax-img.png');
+            background-image: url('../images/eoi-parallax-img.jpg');
+        }
+    }
+    &.fesp {
+        .study-parallax {
+            background-image: url('../images/fesp-parallax-img.jpg');
+        }
+        .subpage-banner {
+            background-image: url('../images/fesp-banner.jpg');
         }
     }
     &.fp {
         .study-parallax {
-            background-image: url('../images/fp-parallax-img.png');
+            background-image: url('../images/fp-parallax-img.jpg');
+        }
+    }
+    &.fpd {
+        .study-parallax {
+            background-image: url('../images/fpd-parallax-img.jpg');
+        }
+        .subpage-banner {
+            background-image: url('../images/fpd-banner.jpg');
         }
     }
     &.pacfgs {
         .study-parallax {
-            background-image: url('../images/pacfgs-parallax-img.png');
+            background-image: url('../images/pacfgs-parallax-img.jpg');
         }
         .subpage-banner {
-            background-image: url('../images/pacfgs-banner.png');
+            background-image: url('../images/pacfgs-banner.jpg');
         }
     }
     &.pau {
         .study-parallax {
-            background-image: url('../images/pau-parallax-img.png');
+            background-image: url('../images/pau-parallax-img.jpg');
+        }
+        .subpage-banner {
+            background-image: url('../images/pau-banner.jpg');
         }
     }
 }
@@ -2870,7 +2913,7 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
     margin-top: 105px;
-    background-image: url('../images/default-parallax-img.png');
+    background-image: url('../images/default-parallax-img.jpg');
 }
 
 .study-tabs {
@@ -3373,34 +3416,19 @@ body {
 
 .back-to-top {
     outline: none;
-    font-size: 16px;
-    color: $ioc-featured-text;
-    background-color: $ioc-link-carousel;
-    border-radius: 50%;
-    margin-right: 0.8em;
-    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.5);
+    height: 60px;
+    width: 60px;
+    right: 10px;
+    background-image: url('../images/scroll-button.svg');
+    background-position: center;
+    background-color: transparent;
     &:hover {
-        color: $ioc-white;
-        background-color: $ioc-bg-footer-t;
-        .custom-icon{
-            &.arrow-up {
-                background-image: url('../images/arrow-left.svg');
-            }
-        }
+        background-color: transparent;
+        background-image: url('../images/scroll-button-hover.svg');
     }
-    &:focus {
-        color: $ioc-white;
-    }
-    .custom-icon {
-        &:before {
-            content: '';
-        }
-        &.arrow-up {
-            transform: rotate(90deg);
-            vertical-align: top;
-            background-image: url('../images/arrow-mini-left.png');
-            background-position: center;
-        }
+    &:active {
+        background-color: transparent;
+        background-image: url('../images/scroll-button-active.svg');
     }
 }
 

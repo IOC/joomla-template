@@ -339,7 +339,7 @@ $imgpath = 'templates/' . $app->getTemplate() . '/images/';
 </div><!-- end panelnav -->
 <?php  endif;// end panelnav  ?>
 <!-- menu slide -->
-<a href="#" class="back-to-top hidden-xs"><span class="custom-icon arrow-up"></span></a>
+<a href="#" class="back-to-top hidden-xs">&nbsp;</a>
 <jdoc:include type="modules" name="debug" />
 </section></div>
 <?php
