@@ -70,10 +70,33 @@ $imgpath = 'templates/' . $app->getTemplate() . '/images/';
         </button>
     </div>
 </div>
-<div class="navbar-collapse collapse ioc-menu col-sm-6 col-md-8 col-lg-9" aria-expanded="false">
-<?php  if ($this->countModules('navigation')) : ?>
-                        <jdoc:include type="modules" name="navigation" style="none" />
-                        <?php  endif; ?>
+<!-- Campus -->
+<?php  if ($this->countModules('login-campus')) : ?>
+    <div class="visible-sm tiny-clone-campus">
+        <button type="button" class="btn-md" data-toggle="modal" data-target="#login-campus">
+            <span class="custom-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+<?php endif; ?>
+<?php  if ($this->countModules('login-campus')) : ?>
+    <div class="hidden-xs hidden-sm login-clone-campus" data-toggle="modal" data-target="#login-campus">
+        <span class="custom-icon"></span>
+        <p class="login-text"><?php echo JText::_('JLOGIN_CAMPUS') . ' ';?></p>
+    </div>
+<?php  endif; ?>
+<div class="social hidden-sm hidden-xs text-left">
+        <a href="https://es.linkedin.com/in/ioc-institut-obert-de-catalunya-bb4805b1" target="_blank">
+            <span class="linkedin custom-icon"></span>
+        </a>
+        <a href="http://twitter.com/ioc" target="_blank">
+            <span class="twitter custom-icon"></span>
+        </a>
+        <a href="https://vimeo.com/institutobert" target="_blank">
+            <span class="vimeo custom-icon"></span>
+        </a>
+</div>
+<div class="col-md-1 col-sm-1 hidden-sm hidden-xs ioc-languages">
+    <jdoc:include type="modules" name="lang-menu" style="none" />
 </div>
 <div class="navbar-collapse collapse col-md-1 col-lg-1 col-sm-1 hidden-xs ioc-search">
     <ul class="nav navbar-nav search">
@@ -88,45 +111,14 @@ $imgpath = 'templates/' . $app->getTemplate() . '/images/';
         </li>
     </ul>
 </div>
-<!-- Campus -->
-<?php  if ($this->countModules('login-campus')) : ?>
-    <div class="visible-sm tiny-clone-campus">
-        <button type="button" class="btn-md" data-toggle="modal" data-target="#login-campus">
-            <span class="custom-icon" aria-hidden="true"></span>
-        </button>
-    </div>
-<?php endif; ?>
-<div class="col-md-1 col-sm-1 hidden-sm hidden-xs ioc-languages">
-    <jdoc:include type="modules" name="lang-menu" style="none" />
+<div class="navbar-collapse collapse ioc-menu col-sm-6 col-md-8 col-lg-9" aria-expanded="false">
+<?php  if ($this->countModules('navigation')) : ?>
+                        <jdoc:include type="modules" name="navigation" style="none" />
+                        <?php  endif; ?>
 </div>
-<div class="social hidden-sm hidden-xs text-left">
-        <a href="https://es.linkedin.com/in/ioc-institut-obert-de-catalunya-bb4805b1" target="_blank">
-            <span class="linkedin custom-icon"></span>
-        </a>
-        <a href="http://twitter.com/ioc" target="_blank">
-            <span class="twitter custom-icon"></span>
-        </a>
-        <a href="https://vimeo.com/institutobert" target="_blank">
-            <span class="vimeo custom-icon"></span>
-        </a>
-</div>
-<?php  if ($this->countModules('login-campus')) : ?>
-    <div class="hidden-xs hidden-sm login-clone-campus" data-toggle="modal" data-target="#login-campus">
-        <span class="custom-icon"></span>
-        <p class="login-text"><?php echo JText::_('JLOGIN_CAMPUS') . ' ';?></p>
-    </div>
-<?php  endif; ?>
 </div></div>
 </div>
 </header>
-<?php if(!empty($frontpage)) : ?>
-<?php  if ($this->countModules('login-campus')) : ?>
-    <div class="login-campus first hidden-xs" data-toggle="modal" data-target="#login-campus">
-        <span class="custom-icon"></span>
-        <p class="login-text"><?php echo JText::_('JLOGIN_CAMPUS') . ' ';?></p>
-    </div>
-<?php  endif; ?>
-<?php  endif; ?>
 <div class="clearfix"></div>
 <!--Navigation-->
 <section>

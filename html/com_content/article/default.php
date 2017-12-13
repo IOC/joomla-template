@@ -140,7 +140,15 @@ JHtml::_('behavior.caption');
     <?php if (isset ($this->item->toc)) :
         echo $this->item->toc;
     endif; ?>
-    <div itemprop="articleBody" <?php if (!empty($newsclass)) { echo 'class="container ioc-news-container"';} ?>>
+    <?php
+        $customclass = '';
+        if (!empty($newsclass)) {
+            $customclass = 'container ioc-news-container';
+        } else if (!empty($subpage)) {
+            $customclass = 'subpagebody';
+        }
+    ?>
+    <div itemprop="articleBody" class="<?php echo $customclass;?>">
         <?php echo $this->item->text; ?>
     </div>
 

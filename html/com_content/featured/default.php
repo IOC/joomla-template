@@ -42,6 +42,14 @@ $menuitems = array();
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
+    <?php  if (count(JModuleHelper::getModules('login-campus')) > 0) : ?>
+      <div class="container login-campus">
+        <div class="login-campus-body first hidden-xs" data-toggle="modal" data-target="#login-campus">
+            <span class="custom-icon"></span>
+            <p class="login-text"><?php echo JText::_('JLOGIN_CAMPUS') . ' ';?></p>
+        </div>
+      </div>
+    <?php  endif; ?>
     <?php foreach ($this->important as $key => $article) :
             $link = JRoute::_(ContentHelperRoute::getArticleRoute($article->id, $article->catid, $article->language));
             array_push($menuitems, array($article->title, $link));
@@ -64,19 +72,19 @@ $menuitems = array();
             }
     ?>
             <?php if ($welcome) : ?>
-              <div class="item <?php if (!$key) { ?> active <?php } ?>">
+              <div class="item welcome <?php if (!$key) { ?> active <?php } ?>">
                 <div class="carousel-transparency">
-                  <img class="top-layer" src="<?php echo $imgpath; ?>/transparency.png" alt="">
+                  <img class="top-layer" src="<?php echo $imgpath; ?>/transparency.svg" alt="">
                 </div>
                 <?php echo $article->introtext; ?>
             <?php else : ?>
               <div class="item <?php if (!$key) { ?> active <?php } ?>" style="background-image: url('<?php echo $src;?>')">
             <?php endif; ?>
-            <div class="logo-ioc-large">
+            <div class="container logo-ioc-large">
               <img src="<?php echo $imgpath; ?>/logo-ioc-gran.svg" alt="Institut Obert de Catalunya">
             </div>
               <div class="important-background"></div>
-              <div class="carousel-caption">
+              <div class="container carousel-caption">
                 <?php
                   $link = JRoute::_(ContentHelperRoute::getArticleRoute($article->id, $article->catid, $article->language));
                 ?>
@@ -132,6 +140,7 @@ $menuitems = array();
 
 <!-- Print studies -->
 <?php if ($modules = JModuleHelper::getModules('studies')) : ?>
+  <div id="estudis"></div>
   <?php foreach ($modules as $module) : ?>
     <div class="container all-studies">
     <?php echo JModuleHelper::renderModule($module, array('style' => 'container studies')); ?>

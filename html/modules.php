@@ -66,7 +66,7 @@ function modChrome_studies($module, &$params, &$attribs)
             <div class="studies">
                 <?php if ($module->showtitle != 0) : ?>
                     <div class="title">
-                        <div class="col-xs-12">
+                        <div>
                             <h1><span class="<?php echo $params->get('header_class'); ?>" ></span><?php echo $module->title ; ?></h1>
                         </div>
                     </div>
@@ -100,7 +100,7 @@ function modChrome_sub_studies($module, &$params, &$attribs)
 function modChrome_menu_footer($module, &$params, &$attribs)
 {
     if (!empty ($module->content)) : ?>
-        <div class="col-sm-3 top-col">
+        <div class="top-col">
             <div class="hidden-xs hidden-sm block <?php if ($params->get('moduleclass_sfx')!='') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
                 <div class="studies">
                     <?php if ($module->showtitle != 0) : ?>
@@ -135,7 +135,7 @@ function modChrome_banner_footer($module, &$params, &$attribs)
         <?php if ($attribs['name'] == 'footer-opening') : ?>
             <div class="container">
         <?php else : ?>
-            <div class="col-sm-3 top-col">
+            <div class="top-col">
         <?php endif; ?>
             <div class="hidden-xs hidden-sm block <?php if ($params->get('moduleclass_sfx')!='') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
                 <div class="moduletable">

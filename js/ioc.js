@@ -175,10 +175,10 @@
 
             if (current == 0) {
                 $avisos.find('.prev').hide();
-                $('.login-campus').addClass('first');
+                $('.login-campus-body').addClass('first');
             } else {
                 $avisos.find('.prev').show();
-                $('.login-campus').removeClass('first');
+                $('.login-campus-body').removeClass('first');
             }
             $avisos.find('.prev div').remove();
             $avisos.find('.next div').remove();

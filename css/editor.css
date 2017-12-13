@@ -91,10 +91,39 @@
   content: '';
 }
 #tinymce .study-main .study-panel .study-data .study-col .study-date {
+  pointer-events: none;
+  position: relative;
   height: auto;
+}
+#tinymce .study-main .study-panel .study-data .study-col .study-date:before {
+  content: '\e105';
+  background-color: #d9534f;
+  color: #fff;
+  font-family: 'Glyphicons Halflings';
+  cursor: pointer;
+  padding: 1px 2px 1px 3px;
+  pointer-events: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#tinymce .study-main .study-panel .study-data .study-col .study-date:after {
+  content: '';
+  flex: auto;
+}
+#tinymce .study-main .study-panel .study-data .study-col .study-date.ocult {
+  visibility: visible;
+  background-color: #ddd;
+}
+#tinymce .study-main .study-panel .study-data .study-col .study-date.ocult:before {
+  content: '\e106';
+}
+#tinymce .study-main .study-panel .study-data .study-col .study-date.ocult .semiheader, #tinymce .study-main .study-panel .study-data .study-col .study-date.ocult .study-days, #tinymce .study-main .study-panel .study-data .study-col .study-date.ocult .study-month, #tinymce .study-main .study-panel .study-data .study-col .study-date.ocult .study-year {
+  background-color: #ddd;
 }
 #tinymce .study-main .study-panel .study-data .study-col .study-date.multiple {
   max-height: 100%;
+  min-height: 205px;
 }
 #tinymce .study-main .study-panel .study-data .study-col .study-date .semiheader:before {
   bottom: -10px;
@@ -204,6 +233,7 @@
   background-color: #fafafa;
   cursor: default;
   height: auto;
+  margin: 0 auto;
 }
 #tinymce .modal-modules .content-modal-modules .modal-module img, #tinymce .modal-modules .body-modal-modules .modal-module img, #tinymce .modal-modules .content-modal-modules .modal-dialog img, #tinymce .modal-modules .body-modal-modules .modal-dialog img, #tinymce .modal-modules .content-modal-modules .modal-module .body-modal-module, #tinymce .modal-modules .body-modal-modules .modal-module .body-modal-module, #tinymce .modal-modules .content-modal-modules .modal-dialog .body-modal-module, #tinymce .modal-modules .body-modal-modules .modal-dialog .body-modal-module, #tinymce .modal-modules .content-modal-modules .modal-module .shortname-modal-module, #tinymce .modal-modules .body-modal-modules .modal-module .shortname-modal-module, #tinymce .modal-modules .content-modal-modules .modal-dialog .shortname-modal-module, #tinymce .modal-modules .body-modal-modules .modal-dialog .shortname-modal-module, #tinymce .modal-modules .content-modal-modules .modal-module .text-modal-module, #tinymce .modal-modules .body-modal-modules .modal-module .text-modal-module, #tinymce .modal-modules .content-modal-modules .modal-dialog .text-modal-module, #tinymce .modal-modules .body-modal-modules .modal-dialog .text-modal-module, #tinymce .modal-modules .content-modal-modules .modal-module p, #tinymce .modal-modules .body-modal-modules .modal-module p, #tinymce .modal-modules .content-modal-modules .modal-dialog p, #tinymce .modal-modules .body-modal-modules .modal-dialog p, #tinymce .modal-modules .content-modal-modules .modal-module .bottom-modal-module, #tinymce .modal-modules .body-modal-modules .modal-module .bottom-modal-module, #tinymce .modal-modules .content-modal-modules .modal-dialog .bottom-modal-module, #tinymce .modal-modules .body-modal-modules .modal-dialog .bottom-modal-module, #tinymce .modal-modules .content-modal-modules .modal-module .bottom-modal-title, #tinymce .modal-modules .body-modal-modules .modal-module .bottom-modal-title, #tinymce .modal-modules .content-modal-modules .modal-dialog .bottom-modal-title, #tinymce .modal-modules .body-modal-modules .modal-dialog .bottom-modal-title, #tinymce .modal-modules .content-modal-modules .modal-module .bottom-modal-last, #tinymce .modal-modules .body-modal-modules .modal-module .bottom-modal-last, #tinymce .modal-modules .content-modal-modules .modal-dialog .bottom-modal-last, #tinymce .modal-modules .body-modal-modules .modal-dialog .bottom-modal-last, #tinymce .modal-modules .content-modal-modules .modal-module .clock, #tinymce .modal-modules .body-modal-modules .modal-module .clock, #tinymce .modal-modules .content-modal-modules .modal-dialog .clock, #tinymce .modal-modules .body-modal-modules .modal-dialog .clock, #tinymce .modal-modules .content-modal-modules .modal-module .file-modal-module, #tinymce .modal-modules .body-modal-modules .modal-module .file-modal-module, #tinymce .modal-modules .content-modal-modules .modal-dialog .file-modal-module, #tinymce .modal-modules .body-modal-modules .modal-dialog .file-modal-module {
   box-sizing: border-box;
@@ -212,8 +242,17 @@
   background-color: #fafafa;
   color: #354959;
 }
+#tinymce .modal-modules .content-modal-modules .modal-module .bottom-modal-module, #tinymce .modal-modules .body-modal-modules .modal-module .bottom-modal-module, #tinymce .modal-modules .content-modal-modules .modal-dialog .bottom-modal-module, #tinymce .modal-modules .body-modal-modules .modal-dialog .bottom-modal-module {
+  flex-wrap: nowrap;
+}
+#tinymce .modal-modules .content-modal-modules .modal-module .custom-icon.clock, #tinymce .modal-modules .body-modal-modules .modal-module .custom-icon.clock, #tinymce .modal-modules .content-modal-modules .modal-dialog .custom-icon.clock, #tinymce .modal-modules .body-modal-modules .modal-dialog .custom-icon.clock {
+  height: auto;
+}
 #tinymce .modal-modules .content-modal-modules .modal-module .text-modal-module, #tinymce .modal-modules .body-modal-modules .modal-module .text-modal-module, #tinymce .modal-modules .content-modal-modules .modal-dialog .text-modal-module, #tinymce .modal-modules .body-modal-modules .modal-dialog .text-modal-module {
   max-height: 100%;
+}
+#tinymce .modal-modules .content-modal-modules .modal-module .bottom-modal-last, #tinymce .modal-modules .body-modal-modules .modal-module .bottom-modal-last, #tinymce .modal-modules .content-modal-modules .modal-dialog .bottom-modal-last, #tinymce .modal-modules .body-modal-modules .modal-dialog .bottom-modal-last {
+  display: flex;
 }
 #tinymce .modal-modules .content-modal-modules .modal-module .bottom-modal-last:before, #tinymce .modal-modules .body-modal-modules .modal-module .bottom-modal-last:before, #tinymce .modal-modules .content-modal-modules .modal-dialog .bottom-modal-last:before, #tinymce .modal-modules .body-modal-modules .modal-dialog .bottom-modal-last:before {
   display: none;
@@ -235,6 +274,12 @@
 }
 #tinymce .modal-modules .content-modal-modules .icon-text, #tinymce .modal-modules .body-modal-modules .icon-text {
   width: auto;
+}
+#tinymce .ioc-news {
+  box-sizing: border-box;
+  border: 2px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
 }
 #tinymce .ioc-news .imatge-noticia {
   margin-left: 0;

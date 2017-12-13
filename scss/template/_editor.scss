@@ -51,6 +51,19 @@ $ioc-accent:    #01c1b9;
         right: 0;
     }
 
+    @mixin hideelement($color) {
+        content: '\e105';
+        background-color: $color;
+        color: #fff;
+        font-family: 'Glyphicons Halflings';
+        cursor: pointer;
+        padding: 1px 2px 1px 3px;
+        pointer-events: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
     h1, h2, h3, h4 {
         margin: 0;
     }
@@ -126,9 +139,32 @@ $ioc-accent:    #01c1b9;
                         }*/
                     }
                     .study-date {
+                        &:before {
+                            @include hideelement($custom_red);
+                        }
+                        &:after {
+                            content: '';
+                            flex: auto;
+                        }
+                        pointer-events: none;
+                        position: relative;
                         height: auto;
+                        &.ocult {
+                            &:before {
+                                content: '\e106';
+                            }
+                            visibility: visible;
+                            background-color: #ddd;
+                            .semiheader,
+                            .study-days,
+                            .study-month,
+                            .study-year {
+                                background-color: #ddd;
+                            }
+                        }
                         &.multiple {
                             max-height: 100%;
+                            min-height: 205px;
                         }
                         .semiheader {
                             &:before {
@@ -236,6 +272,7 @@ $ioc-accent:    #01c1b9;
                 @include borderioc(1px, $custom_red);
                 cursor: default;
                 height: auto;
+                margin: 0 auto;
                 img,
                 .body-modal-module,
                 .shortname-modal-module,
@@ -249,6 +286,14 @@ $ioc-accent:    #01c1b9;
                     @include borderioc(1px, $custom_red);
                     color: $ioc-text;
                 }
+                .bottom-modal-module {
+                    flex-wrap: nowrap;
+                }
+                .custom-icon {
+                    &.clock {
+                        height: auto;
+                    }
+                }
                 .text-modal-module {
                     max-height: 100%;
                 }
@@ -256,6 +301,7 @@ $ioc-accent:    #01c1b9;
                     &:before {
                         display: none;
                     }
+                    display: flex;
                     span {
                         @include borderioc(1px, $custom_red);
                     }
@@ -279,6 +325,7 @@ $ioc-accent:    #01c1b9;
     }
 
     .ioc-news {
+        @include borderioc(2px, $custom_red);
         .imatge-noticia {
             margin-left: 0;
             img, figcaption {

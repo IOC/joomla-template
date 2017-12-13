@@ -29,7 +29,7 @@ var fakewaffle = ( function ( $, fakewaffle ) {
 			}
 
 			collapseDiv = $( '<div></div>', {
-				'class' : 'panel-group responsive' + visible,
+				'class' : 'panel-group responsive panel-section-info' + visible,
 				'id'    : 'collapse-' + $tabGroup.attr( 'id' )
 			} );
 
