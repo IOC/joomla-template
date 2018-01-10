@@ -44,7 +44,7 @@ $menuitems = array();
   <div class="carousel-inner" role="listbox">
     <?php  if (count(JModuleHelper::getModules('login-campus')) > 0) : ?>
       <div class="container login-campus">
-        <div class="login-campus-body first hidden-xs" data-toggle="modal" data-target="#login-campus">
+        <div class="login-campus-body first hidden-xs hidden-sm" data-toggle="modal" data-target="#login-campus">
             <span class="custom-icon"></span>
             <p class="login-text"><?php echo JText::_('JLOGIN_CAMPUS') . ' ';?></p>
         </div>

@@ -12,6 +12,7 @@
         var $menu = $('.ioc-menu');
         var $filter = $('.filter-dropdown');
         var currenthash = '#' + window.location.hash.replace(/[^a-zA-Z0-9_-]*/g, '');
+        var $faqs = $('.panel-faqs');
 
         $('[data-toggle="tooltip"]').tooltip();
 
@@ -42,6 +43,10 @@
             });
         }
 
+        if ($faqs) {
+            $faqs.find('.panel-heading').addClass('non-collapsable');
+        }
+
         $(document).on('shown.bs.modal', '.modal', function(e) {
             $(this).find('[autofocus]').focus();
         });
@@ -66,21 +71,36 @@
             $('#mod-search-searchword').val('');
             $('#mod-search-searchword').focus();
         });
-        $(document).on('click', '.panel-heading a', function(e) {
+        $(document).on('click', '.non-collapsable a', function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+        });
+/*        $(document).on('click', '.container .panel-heading a', function(e) {
             $('.panel-heading').removeClass('active');
             var $parent = $(this).parent().parent();
             if ($parent.siblings('.panel-collapse').attr('aria-expanded') == 'true') {
                 $parent.addClass('active');
             }
-        });
+        });*/
+
         $( window ).resize(function() {
             var $header = $('header');
-            //var $menu = $('.ioc-menu');
-            if ($(this).width() > 767 && $header.hasClass('bck-displayed')) {
+            if ($faqs) {
+                if ($(this).width() > 990) {
+                    $faqs.find('.panel-heading').addClass('non-collapsable');
+                    $faqs.find('.panel-collapse').addClass('in').css('height', 'auto');
+                    $faqs.find('.panel-heading a').removeClass('collapsed');
+                } else {
+                    $faqs.find('.panel-heading').removeClass('non-collapsable');
+                    $faqs.find('.panel-collapse').removeClass('in').css('height', '0px');
+                    $faqs.find('.panel-heading a').addClass('collapsed');
+                }
+            }
+            if ($(this).width() > 990 && $header.hasClass('bck-displayed')) {
                 $header.removeClass('bck-displayed');
                 $('.social, .ioc-languages').removeClass('bck-displayed');
             } else {
-                if ($menu.hasClass('in') && $(this).width() < 768 && !$header.hasClass('bck-displayed')) {
+                if ($menu.hasClass('in') && $(this).width() < 991 && !$header.hasClass('bck-displayed')) {
                     $header.addClass('bck-displayed');
                     $('.social, .ioc-languages').addClass('bck-displayed');
                 }
@@ -96,7 +116,6 @@
                     $(".login-text").text(responseText);
                     $(".login-campus").attr('data-target', '').on('click', function() {window.location ='/campus/my';});
                     $(".login-clone-campus").attr('data-target', '').on('click', function() {window.location ='/campus/my';});
-                    $(".tiny-clone-campus button").attr('data-target', '').on('click', function() {window.location ='/campus/my';});
                     $(".login-campus-mobile button").attr('title', responseText).attr('data-target', '').on('click', function() {window.location ='/campus/my';});
                 }
             }
@@ -112,7 +131,7 @@
         $(document).on('click', 'a', function(e) {
             $('.back-to-top').attr('href', '#');
         });
-        $(document).on('click', '.study-buttons a[href*=#], .study-tabs .tab-content a[href*=#], .subpage-group-buttons a[href*=#]', function(e) {
+        $(document).on('click', '.study-buttons a[href*=#], .study-tabs .tab-content a[href*=#], .subpage-group-buttons a[href*=#], .faqsindex a[href*=#]' , function(e) {
             e.preventDefault();
             linkhash = '#' + $(this).prop('hash').replace(/[^a-zA-Z0-9_-]*/g, '');
             gotopanel(linkhash);

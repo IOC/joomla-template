@@ -56,28 +56,20 @@ $imgpath = 'templates/' . $app->getTemplate() . '/images/';
     </div>
     <!-- Campus -->
     <?php  if ($this->countModules('login-campus')) : ?>
-        <div class="login-campus-mobile col-md-1 col-lg-1 col-sm-1 visible-xs tiny-campus">
+        <div class="login-campus-mobile col-md-1 col-lg-1 col-sm-1 visible-xs visible-sm tiny-campus">
             <button type="button" class="btn-lg" data-toggle="modal" data-target="#login-campus">
                 <span class="custom-icon"></span>
             </button>
         </div>
     <?php endif; ?>
     <!-- Search -->
-    <div class="col-md-1 col-lg-1 col-sm-1 visible-xs tiny-search">
+    <div class="col-md-1 col-lg-1 col-sm-1 visible-xs visible-sm tiny-search">
         <button type="button" class="btn-lg" data-toggle="collapse" data-target="#search">
             <!-- <span class="glyphicon glyphicon-search" aria-hidden="true"></span> -->
             <span class="custom-icon"></span>
         </button>
     </div>
 </div>
-<!-- Campus -->
-<?php  if ($this->countModules('login-campus')) : ?>
-    <div class="visible-sm tiny-clone-campus">
-        <button type="button" class="btn-md" data-toggle="modal" data-target="#login-campus">
-            <span class="custom-icon" aria-hidden="true"></span>
-        </button>
-    </div>
-<?php endif; ?>
 <?php  if ($this->countModules('login-campus')) : ?>
     <div class="hidden-xs hidden-sm login-clone-campus" data-toggle="modal" data-target="#login-campus">
         <span class="custom-icon"></span>
@@ -95,9 +87,11 @@ $imgpath = 'templates/' . $app->getTemplate() . '/images/';
             <span class="vimeo custom-icon"></span>
         </a>
 </div>
+<?php  if ($this->countModules('lang-menu')) : ?>
 <div class="col-md-1 col-sm-1 hidden-sm hidden-xs ioc-languages">
     <jdoc:include type="modules" name="lang-menu" style="none" />
 </div>
+<?php endif; ?>
 <div class="navbar-collapse collapse col-md-1 col-lg-1 col-sm-1 hidden-xs ioc-search">
     <ul class="nav navbar-nav search">
         <li>

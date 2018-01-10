@@ -128,6 +128,38 @@
     }
 }
 
+@mixin study-color($color) {
+    .study-overview .study-overview-headline::after,
+    .study-overview-menu .study-overview-headline::after {
+        color: $color;
+    }
+    .study-panel .study-data .study-col .study-date .semiheader {
+        color: $color;
+    }
+    .study-tabs {
+        .nav-tabs {
+            li {
+                &.active {
+                    a {
+                        color: $color;
+                        border-bottom-color: $color;
+                    }
+                }
+                a:hover {
+                    color: $color;
+                }
+            }
+        }
+    }
+    .study-more-info {
+        .title {
+            h4 {
+                color: $color;
+            }
+        }
+    }
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
@@ -390,7 +422,7 @@ button:focus {
     }
     .navbar-toggle {
         position: relative;
-        margin: 12px 10px 0 10px !important;
+        margin: 12px 15px 0 10px !important;
         width: 29px;
         overflow: hidden;
         border-radius: 0;
@@ -503,6 +535,7 @@ button:focus {
         margin-top: 7px;
         color: #fff;
         cursor: pointer;
+        min-width: 181px;
         &:hover {
             color: $ioc-link-navbar;
             text-decoration: none;
@@ -634,6 +667,9 @@ button:focus {
     margin-bottom: 0;
     div.item-page-study {
         margin: 194px auto 0 auto;
+        &.ges {
+            @include study-color($ioc-title-ges);
+        }
     }
     div.item-page-default {
         margin: 50px auto 0 auto;
@@ -852,7 +888,6 @@ button:focus {
             cursor: pointer;
             margin-top: 34px;
             margin-right: 10px;
-            overflow: hidden;
             &:hover {
                 @include hover-module();
             }
@@ -1741,6 +1776,7 @@ body {
             margin: 0;
             height: 214px;
             padding-bottom: 0;
+            border-bottom: 0;
             &.default {
                 height: 170px;
                 h1 {
@@ -1880,6 +1916,18 @@ body {
                     background-image: url('../images/competic-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study6;
+                    }
+                }
+                &.faqs {
+                    background-color: $ioc-faqs;
+                    background-image: url('../images/faqs-header-bck.jpg');
+                    height: 282px;
+                    h1 {
+                        color: $ioc-title-study2;
+                        width: 100%;
+                        max-width: 100%;
+                        text-align: center;
+                        bottom: 59px;
                     }
                 }
                 &.fesp {
@@ -2237,7 +2285,7 @@ body {
         }
         &:after {
             position: absolute;
-            content: '___';
+            content: '_____';
             color: $ioc-accent;
             bottom: 0;
             left: 0;
@@ -2458,11 +2506,11 @@ body {
         }
         .subpage-banner {
             clear: both;
-            height: 284px;
+            height: 30vw;
             width: 100%;
-            background-position: center;
+            background-position: top center;
             background-repeat: no-repeat;
-            background-size: 100%;
+            background-size: 94%;
         }
         .subpage-filter {
             margin-top: 206px;
@@ -2671,7 +2719,7 @@ body {
     .subpage-text-buttons,
     .subpage-text-buttons-banner,
     .subpage-buttons-filter {
-        background-size: 100vw;
+        background-size: 100vw 83%;
         background-repeat: no-repeat;
         background-position: center top;
         .subpage-text {
@@ -2922,7 +2970,7 @@ body {
             background-image: url('../images/ges-parallax-img.jpg');
         }
         .subpage-banner {
-            background-image: url('../images/ges-banner.jpg');
+            background-image: url('../images/ges-banner.png');
         }
     }
     &.btx {
@@ -2996,6 +3044,85 @@ body {
     }
 }
 
+.item-page-faqs {
+    .title {
+        h2 {
+            font-size: 32px;
+            text-align: center;
+            margin-top: 99px;
+            color: $ioc-text;
+        }
+    }
+    .faqsindex {
+        margin-top: 77px;
+        ul {
+            @include flexbox();
+            justify-content: space-between;
+            padding: 0;
+            li {
+                width: 45%;
+                list-style: none;
+                text-align: center;
+                height: 71px;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+                border: 1px solid $ioc-moreinfo-tab;
+                margin-top: 19px;
+                margin-right: 15px;
+                &:hover {
+                    background-color: $ioc-submenu;
+                }
+                a {
+                    display: block;
+                    line-height: 71px;
+                    font-size: 16px;
+                    color: $ioc-title;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    .panel-faqs {
+        margin-top: 178px;
+        .panel-section-info {
+            margin-top: 85px;
+            .panel {
+                &.panel-default {
+                    border: 0;
+                    border-radius: 0;
+                    box-shadow: none;
+                    .panel-collapse {
+                        .panel-body {
+                            border: 0;
+                            padding: 39px 103px 68px 85px;
+                        }
+                    }
+                    .panel-heading {
+                        padding: 0;
+                        background-color: $ioc-moreinfo-tab;
+                        border-radius: 0;
+                        .panel-title {
+                            height: 51px;
+                            a {
+                                display: block;
+                                font-size: 17px;
+                                font-weight: 400;
+                                line-height: 51px;
+                                padding-left: 21px;
+                                color: $ioc-text;
+                                &:hover {
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 .study-parallax {
     position: relative;
     clear: both;
@@ -3015,9 +3142,9 @@ body {
     h2 {
         text-align: center;
         width: 100%;
-        font-size: 26px;
-        font-weight: 300;
-        color: $ioc-accent;
+        font-size: 23px;
+        font-weight: 500;
+        color: $ioc-text;
         margin: 0;
     }
     .nav-tabs {
@@ -3079,11 +3206,14 @@ body {
     .tab-content {
         font-size: 15px;
         line-height: 22px;
-        padding: 53px 40px;
+        padding: 53px 77px;
         h1, h2, h3 {
             color: $ioc-text;
             margin-top: 20px;
             margin-bottom: 10px;
+        }
+        p{
+            margin: 0 0 20px;
         }
     }
     .panel-group {
@@ -3123,8 +3253,8 @@ body {
                 left: 100%;
             }*/
             margin: 0;
-            font-size: 23px;
-            font-weight: 500;
+            font-size: 31px;
+            font-weight: 600;
             color: $ioc-accent;
         }
     }
@@ -3136,6 +3266,7 @@ body {
 
 .study-more-info,
 .study-tabs {
+    max-width: 870px !important;
     > h4 {
         font-size: 23px;
         font-weight: 600;
@@ -3152,6 +3283,9 @@ body {
                 .panel-collapse {
                     .panel-body {
                         border: 0;
+                        max-width: 85%;
+                        margin: 0 auto;
+                        padding: 15px 0;
                     }
                 }
                 .panel-heading {
@@ -3171,7 +3305,7 @@ body {
                             color: $ioc-title;
                             text-decoration: none;
                             outline: none;
-                            padding: 14px 33px;
+                            padding: 14px 23px;
                             display: inline-block;
                             width: 100%;
                             text-transform: uppercase;
@@ -3186,7 +3320,7 @@ body {
                                 &.plus {
                                     position: absolute;
                                     top: 14px;
-                                    right: 33px;
+                                    right: 23px;
                                     height: 14px;
                                     width: 14px;
                                     background-image: url('../images/plus_invertit.png');
@@ -3220,6 +3354,9 @@ body {
                     //padding: 24px 48px;
                     font-size: 15px;
                     line-height: 22px;
+                    p {
+                        margin: 0 0 20px;
+                    }
                 }
                 // .panel-section-info {
                 //     padding: 0;
@@ -3230,13 +3367,8 @@ body {
     }
 }
 
-.tiny-clone-campus {
-    float: right;
-}
-
 .tiny-search,
-.tiny-campus,
-.tiny-clone-campus {
+.tiny-campus {
     padding: 0;
     button {
         background-color: transparent;
@@ -3276,7 +3408,6 @@ body {
     }
 }
 .login-clone-campus,
-.tiny-clone-campus,
 .tiny-campus {
     &:hover {
         .custom-icon {
