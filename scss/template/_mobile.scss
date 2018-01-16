@@ -508,7 +508,7 @@
         .container {
             &.study-main {
                 flex-direction: column;
-                margin-top: 92px;
+                margin-top: 42px;
                 font-size: 13px;
             }
         }
@@ -526,43 +526,6 @@
 
     .study-panel {
         margin: 50px 0 0 0;
-        .study-data {
-            .study-col {
-                width: 90%;
-                h4 {
-                    font-size: 12px;
-                }
-                .study-definition {
-                    padding: 2px 0;
-                    .semiheader {
-                        background-color: $ioc-bg-study-date;
-                        color: $ioc-semiheader-mb;
-                        font-size: 9px;
-                        font-weight: 500;
-                        line-height: 11px;
-                        padding-top: 13px;
-                    }
-                    .study-date {
-                        padding: 0 0 10px 0;
-                        text-align: center;
-                        .study-days,
-                        .study-month {
-                            font-size: 12px;
-                            font-weight: 400;
-                            padding: 0;
-                            width: auto;
-                        }
-                    }
-                }
-            }
-            .study-matricula {
-                //padding-top: 0;
-                //margin-top: 50px;
-            }
-            .study-date-course {
-                //padding-top: 24px;
-            }
-        }
         .study-buttons {
             .custom-icon {
                 height: 56px;
@@ -766,8 +729,11 @@
                     margin-top: 0;
                     padding: 14px 10px 0;
                     .custom-icon {
+                        &:before {
+                            font-size: 16px;
+                        }
                         width: 17px;
-                        height: 17px;
+                        height: 16px;
                     }
                 }
             }
@@ -886,9 +852,10 @@
     /* Customization for studies, Parallax, Banners, layouts */
     #main-box div.item-page-study {
         padding-top: 38px;
+        margin-top: -$ioc-header-margin;
         &.ges {
             background-image: url('../images/ges-top-bck.jpg');
-            background-position: top center;
+            background-position: top left;
             background-repeat: no-repeat;
             background-size: 100vw 165px;
             .study-parallax {
@@ -924,27 +891,12 @@
                 margin: 0 auto;
                 border: none;
                 width: 100%;
+                max-width: 100%;
                 .header-icon {
                     display: none;
                 }
-                &.study-date-course,
-                &.study-matricula {
-                    h4 {
-                        border: none;
-                        background-color: $ioc-study-button;
-                        color: #fff;
-                        margin-bottom: 0;
-                    }
-                }
-                .study-date {
-                    &.multiple {
-                        div:nth-of-type(5) {
-                            border-top-width: 2px;
-                        }
-                    }
-                }
-                .study-date + .study-date {
-                    margin-top: 6px;
+                &:after {
+                    height: 5px;
                 }
             }
             .study-col + .study-col {
@@ -1136,6 +1088,48 @@
             bottom: 400px;
         }
     }
+    .item-page-faqs {
+        .title {
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+        .faqsindex {
+            ul {
+                li {
+                    margin-right: 0;
+                    width: 100%;
+                    a {
+                        font-size: 14px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        .panel-faqs {
+            .panel-section-info {
+                .panel.panel-default {
+                    .panel-heading {
+                        .panel-title {
+                            a {
+                                font-size: 11px;
+                                font-weight: 600;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                    .panel-collapse {
+                        .panel-body {
+                            margin: 0 auto;
+                            padding: 15px 0;
+                            max-width: 85%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 648px) {
@@ -1171,14 +1165,14 @@
                 }
                 .container {
                     h1 {
+                        font-size: 16px;
+                        font-weight: 400;
                         &.study {
                             left: 0;
                             right: 0;
                             margin: auto;
                             bottom: 35px;
                             padding: 0;
-                            font-size: 16px;
-                            font-weight: 400;
                             max-width: 54%;
                         }
                     }
@@ -1311,6 +1305,17 @@
                         font-size: 9px;
                         font-weight: 500;
                         letter-spacing: 1.2px;
+                    }
+                }
+            }
+        }
+    }
+    .item-page-faqs {
+        .faqsindex {
+            ul {
+                li {
+                    a {
+                        font-size: 14px;
                     }
                 }
             }
@@ -1598,13 +1603,13 @@
                 .container {
                     padding: 0;
                     h1 {
+                        font-size: 19px;
+                        font-weight: 400;
                         &.study {
                             left: 130px;
                             margin: 0;
                             bottom: 19px;
                             padding: 0;
-                            font-size: 19px;
-                            font-weight: 400;
                             max-width: 100%;
                             text-align: left;
                         }
@@ -1690,6 +1695,13 @@
                     width: 190px;
                     height: 190px;
                 }
+            }
+        }
+    }
+    .study-panel {
+        .study-data {
+            .study-col + .study-col {
+                margin-left: 28px;
             }
         }
     }
@@ -1834,6 +1846,9 @@
             }
         }
     }
+    .study-overview {
+        flex: 3 1 20%;
+    }
 }
 
 @media only screen and (min-width: 1199px) {
@@ -1885,6 +1900,16 @@
                         margin-right: 0;
                     }
                 }
+            }
+        }
+    }
+    .study-overview {
+        flex: 1 1 20%;
+    }
+    .study-panel {
+        .study-data {
+            .study-col + .study-col {
+                margin-left: 31px;
             }
         }
     }

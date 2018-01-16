@@ -43,38 +43,56 @@
             });
         }
 
+        var faqsblockpanels = function (width = false) {
+            if (!width) {
+                width = $(window).width();
+            }
+            if (width > 990) {
+                $faqs.find('.panel-collapse').addClass('in').css('height', 'auto');
+                $faqs.find('.panel-heading a').removeClass('collapsed');
+                $faqs.find('.panel-heading a').attr('data-toggle','');
+            } else {
+                $faqs.find('.panel-collapse').removeClass('in').css('height', '0px');
+                $faqs.find('.panel-heading a').addClass('collapsed');
+                $faqs.find('.panel-heading a').attr('data-toggle','collapse');
+            }
+        };
+
         if ($faqs) {
-            $faqs.find('.panel-heading').addClass('non-collapsable');
+            faqsblockpanels();
         }
 
         $(document).on('shown.bs.modal', '.modal', function(e) {
             $(this).find('[autofocus]').focus();
         });
+
         $(document).on('shown.bs.collapse', '.form-search', function(e) {
             if (e.currentTarget.id == 'search') {
                 $(this).find('[type="search"]').focus();
             }
         });
+
         $(document).on('show.bs.collapse', '.ioc-menu', function(e) {
             $('header').addClass('bck-displayed');
         });
+
         $(document).on('hidden.bs.collapse', '.ioc-menu', function(e) {
             $('header').removeClass('bck-displayed');
         });
+
         $(document).on('shown.bs.collapse', '.ioc-menu', function(e) {
             $('.social, .ioc-languages').addClass('bck-displayed');
         });
+
         $(document).on('hide.bs.collapse', '.ioc-menu', function(e) {
             $('.social, .ioc-languages').removeClass('bck-displayed');
         });
+
         $(document).on('click', '.btn-reset-search', function(e) {
             $('#mod-search-searchword').val('');
             $('#mod-search-searchword').focus();
         });
-        $(document).on('click', '.non-collapsable a', function (e) {
-            e.stopPropagation();
-            e.preventDefault();
-        });
+
 /*        $(document).on('click', '.container .panel-heading a', function(e) {
             $('.panel-heading').removeClass('active');
             var $parent = $(this).parent().parent();
@@ -86,15 +104,7 @@
         $( window ).resize(function() {
             var $header = $('header');
             if ($faqs) {
-                if ($(this).width() > 990) {
-                    $faqs.find('.panel-heading').addClass('non-collapsable');
-                    $faqs.find('.panel-collapse').addClass('in').css('height', 'auto');
-                    $faqs.find('.panel-heading a').removeClass('collapsed');
-                } else {
-                    $faqs.find('.panel-heading').removeClass('non-collapsable');
-                    $faqs.find('.panel-collapse').removeClass('in').css('height', '0px');
-                    $faqs.find('.panel-heading a').addClass('collapsed');
-                }
+                faqsblockpanels($(this).width());
             }
             if ($(this).width() > 990 && $header.hasClass('bck-displayed')) {
                 $header.removeClass('bck-displayed');
@@ -106,6 +116,7 @@
                 }
             }
         });
+
         $.ajax({
             url: '/campus/local/loggedinas.php',
             success: function(responseText){
@@ -120,17 +131,21 @@
                 }
             }
         });
+
         $(document).on('show.bs.collapse', '#collapse-tabs .panel-collapse', function (e) {
             $(e.currentTarget).closest('.panel').siblings().find('.panel-collapse').collapse('hide');
 
         });
+
         $(document).on('show.bs.collapse', '#footer-collapse .panel-collapse', function (e) {
             $('#footer-collapse').find('.panel-collapse').not(e.currentTarget).collapse('hide');
 
         });
+
         $(document).on('click', 'a', function(e) {
             $('.back-to-top').attr('href', '#');
         });
+
         $(document).on('click', '.study-buttons a[href*=#], .study-tabs .tab-content a[href*=#], .subpage-group-buttons a[href*=#], .faqsindex a[href*=#]' , function(e) {
             e.preventDefault();
             linkhash = '#' + $(this).prop('hash').replace(/[^a-zA-Z0-9_-]*/g, '');
@@ -140,10 +155,12 @@
                 //$('.back-to-top span').removeClass('glyphicon-chevron-up').addClass('glyphicon-link');
             }
         });
+
         $(document).on('click', '#collapse-tabs .panel-title a[href*=#], #panel-sections .panel-title a[href*=#]', function(e) {
             e.preventDefault();
             linkhash = $(this).prop('hash');
         });
+
         $(document).on('shown.bs.collapse', '#collapse-other-info, #collapse-tabs, #panel-sections', function(e) {
             var position = $(linkhash).position();
             if (position) {
@@ -151,6 +168,7 @@
             }
             linkhash = '';
         });
+
         $(document).on('click', '#ioc-filter-data li', function(e) {
             e.preventDefault();
             var keyword = $(this).data("meta-keyword");
@@ -166,6 +184,7 @@
                 $('.substudies .nav.navbar-nav li').show(800);
             }
         });
+
         var gotopanel = function (linkhash) {
             if (!$(linkhash).length) {
                 return;
@@ -182,12 +201,15 @@
                 $("html, body").animate({ scrollTop: position.top - 105}, 800);
             }
         };
+
         if ( $(currenthash).length ) {
             gotopanel(currenthash);
         }
+
         if ($('.avisos')) {
             $('.avisos').addClass('display');
         }
+
         var showavisos = function () {
             var next = ((current + 1) > numavisos - 1) ? 0 : current + 1;
             var prev = ((current - 1) < 0) ? numavisos - 1 : current - 1;
@@ -204,11 +226,13 @@
             $(nodesavisos[prev]).appendTo($avisos.find('.prev'));
             $(nodesavisos[next]).appendTo($avisos.find('.next'));
         };
+
         if ($avisos) {
             nodesavisos = $avisos.find('.next div').detach();
             numavisos = nodesavisos.length;
             showavisos();
         }
+
         $('#myCarousel').on('slid.bs.carousel', function () {
             if (slidingleft) {
                 current = ((current - 1) < 0) ? numavisos - 1 : current - 1;
@@ -219,12 +243,15 @@
             }
             showavisos();
         });
+
         $(document).on('click', '.carousel-control.left, .avisos .prev', function(e) {
             slidingleft = true;
         });
+
         $(document).on('click', '.carousel-control.right, .avisos .next', function(e) {
             slidingright = true;
         });
+
         $(document).on('click', '.carousel-indicators li', function(e) {
             current = parseInt($(this).data('slide-to'), 10);
         });

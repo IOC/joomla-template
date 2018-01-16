@@ -11,6 +11,7 @@
 }
 #tinymce .container {
   max-width: 100%;
+  width: 100% !important;
 }
 #tinymce .ioc-parent-breadcrumb .ioc-breadcrumb {
   box-sizing: border-box;
@@ -60,9 +61,6 @@
   background-color: #fafafa;
   color: #000;
 }
-#tinymce .study-main .study-panel .study-data .study-header-img {
-  display: none;
-}
 #tinymce .study-main .study-panel .study-data .study-col {
   pointer-events: none;
   box-sizing: border-box;
@@ -71,69 +69,84 @@
   background-color: #fafafa;
   padding: 0 10px;
   height: 100%;
-  /*&:after {
-   @include addelement($custom_red);
-   }*/
 }
-#tinymce .study-main .study-panel .study-data .study-col h4, #tinymce .study-main .study-panel .study-data .study-col .study-definition {
+#tinymce .study-main .study-panel .study-data .study-col:after {
+  display: none;
+}
+#tinymce .study-main .study-panel .study-data .study-col h4 {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+  width: 100%;
+  height: auto;
+}
+#tinymce .study-main .study-panel .study-data .study-col .study-dates {
   box-sizing: border-box;
   border: 1px dashed #d9534f;
   padding: 10px;
   background-color: #fafafa;
   color: #354959;
-  pointer-events: none;
-  /*&:before {
-   @include removeelement($custom_red);
-   margin: -10px -10px 0 0;
-   }*/
-}
-#tinymce .study-main .study-panel .study-data .study-col h4:first-child:before, #tinymce .study-main .study-panel .study-data .study-col .study-definition:first-child:before, #tinymce .study-main .study-panel .study-data .study-col h4:nth-child(2):before, #tinymce .study-main .study-panel .study-data .study-col .study-definition:nth-child(2):before {
-  content: '';
-}
-#tinymce .study-main .study-panel .study-data .study-col .study-date {
+  height: auto;
   pointer-events: none;
   position: relative;
-  height: auto;
 }
-#tinymce .study-main .study-panel .study-data .study-col .study-date:before {
-  content: '\e105';
+#tinymce .study-main .study-panel .study-data .study-col .study-dates h3 {
+  color: #354959;
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
+#tinymce .study-main .study-panel .study-data .study-col .study-dates:after {
+  content: '\002b';
   background-color: #d9534f;
   color: #fff;
   font-family: 'Glyphicons Halflings';
+  margin-left: 1em;
   cursor: pointer;
   padding: 1px 2px 1px 3px;
   pointer-events: auto;
   position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+}
+#tinymce .study-main .study-panel .study-data .study-col .study-dates .study-block:before {
+  content: '\2212';
+  font-family: "Glyphicons Halflings";
+  background-color: #d9534f;
+  color: #fff;
+  cursor: pointer;
+  padding: 0 2px;
+  pointer-events: auto;
+  position: absolute;
   top: 0;
   right: 0;
+  z-index: 100;
 }
-#tinymce .study-main .study-panel .study-data .study-col .study-date:after {
+#tinymce .study-main .study-panel .study-data .study-col .study-dates .study-block:nth-child(2):before {
+  content: '';
+}
+#tinymce .study-main .study-panel .study-data .study-col .study-dates .study-block, #tinymce .study-main .study-panel .study-data .study-col .study-dates .study-date {
+  pointer-events: none;
+  position: relative;
+  height: auto;
+}
+#tinymce .study-main .study-panel .study-data .study-col .study-dates .study-block:after, #tinymce .study-main .study-panel .study-data .study-col .study-dates .study-date:after {
   content: '';
   flex: auto;
 }
-#tinymce .study-main .study-panel .study-data .study-col .study-date.ocult {
-  visibility: visible;
-  background-color: #ddd;
-}
-#tinymce .study-main .study-panel .study-data .study-col .study-date.ocult:before {
-  content: '\e106';
-}
-#tinymce .study-main .study-panel .study-data .study-col .study-date.ocult .semiheader, #tinymce .study-main .study-panel .study-data .study-col .study-date.ocult .study-days, #tinymce .study-main .study-panel .study-data .study-col .study-date.ocult .study-month, #tinymce .study-main .study-panel .study-data .study-col .study-date.ocult .study-year {
-  background-color: #ddd;
-}
-#tinymce .study-main .study-panel .study-data .study-col .study-date.multiple {
-  max-height: 100%;
-  min-height: 205px;
-}
-#tinymce .study-main .study-panel .study-data .study-col .study-date .semiheader:before {
+#tinymce .study-main .study-panel .study-data .study-col .study-dates .study-block .semiheader:before, #tinymce .study-main .study-panel .study-data .study-col .study-dates .study-date .semiheader:before {
   bottom: -10px;
 }
-#tinymce .study-main .study-panel .study-data .study-col .study-date, #tinymce .study-main .study-panel .study-data .study-col .study-days, #tinymce .study-main .study-panel .study-data .study-col .study-month, #tinymce .study-main .study-panel .study-data .study-col .study-year, #tinymce .study-main .study-panel .study-data .study-col .semiheader {
+#tinymce .study-main .study-panel .study-data .study-col .study-dates .study-date, #tinymce .study-main .study-panel .study-data .study-col .study-dates .semiheader {
   box-sizing: border-box;
   border: 1px dashed #d9534f;
   padding: 10px;
   background-color: #fafafa;
   color: #000;
+  display: block;
 }
 #tinymce .study-main .study-panel .study-data .study-col .btn {
   background-color: transparent;
@@ -363,6 +376,7 @@
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 100;
 }
 #tinymce .study-tabs .nav-tabs li.active a {
   background-color: transparent;
@@ -393,6 +407,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: 100;
 }
 #tinymce .study-tabs .tab-content {
   counter-reset: numtabcontent;
@@ -453,6 +468,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: 100;
 }
 #tinymce #panel-sections .panel-heading a {
   cursor: pointer;
@@ -476,6 +492,7 @@
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 100;
 }
 #tinymce .col-md-1, #tinymce .col-md-2, #tinymce .col-md-3, #tinymce .col-md-4, #tinymce .col-md-5, #tinymce .col-md-6, #tinymce .col-md-7, #tinymce .col-md-8, #tinymce .col-md-9, #tinymce .col-md-10, #tinymce .col-md-11, #tinymce .col-md-12 {
   float: left;

@@ -36,6 +36,7 @@ $ioc-accent:    #01c1b9;
         position: absolute;
         bottom: 0;
         right: 0;
+        z-index: 100;
     }
 
     @mixin removeelement($color) {
@@ -49,6 +50,7 @@ $ioc-accent:    #01c1b9;
         position: absolute;
         top: 0;
         right: 0;
+        z-index: 100;
     }
 
     @mixin hideelement($color) {
@@ -74,6 +76,7 @@ $ioc-accent:    #01c1b9;
 
     .container {
         max-width: 100%;
+        width: 100% !important;
     }
 
     .ioc-parent-breadcrumb {
@@ -108,9 +111,6 @@ $ioc-accent:    #01c1b9;
             margin-top: 0;
             .study-data {
                 height: 100%;
-                .study-header-img {
-                    display: none;
-                }
                 @include borderioc(1px, $custom_red);
                 color: #000;
                 .study-col {
@@ -118,67 +118,59 @@ $ioc-accent:    #01c1b9;
                     @include borderioc(1px, $custom_red);
                     padding: 0 10px;
                     height: 100%;
-                    /*&:after {
-                        @include addelement($custom_red);
-                    }*/
+                    &:after {
+                        display: none;
+                    }
 
-                    h4,
-                    .study-definition {
+                    h4 {
+                        @include borderioc(1px, $custom_red);
+                        width: 100%;
+                        height: auto;
+                    }
+                    .study-dates {
                         @include borderioc(1px, $custom_red);
                         color: $ioc-text;
-                        pointer-events: none;
-                        &:first-child,
-                        &:nth-child(2) {
-                            &:before {
-                                content: '';
-                            }
-                        }
-                        /*&:before {
-                            @include removeelement($custom_red);
-                            margin: -10px -10px 0 0;
-                        }*/
-                    }
-                    .study-date {
-                        &:before {
-                            @include hideelement($custom_red);
-                        }
-                        &:after {
-                            content: '';
-                            flex: auto;
-                        }
+                        height: auto;
                         pointer-events: none;
                         position: relative;
-                        height: auto;
-                        &.ocult {
+                        h3 {
+                            color: $ioc-text;
+                            @include borderioc(1px, $custom_red);
+                        }
+                        &:after {
+                            @include addelement($custom_red);
+                        }
+                        .study-block {
                             &:before {
-                                content: '\e106';
+                                @include removeelement($custom_red);
                             }
-                            visibility: visible;
-                            background-color: #ddd;
-                            .semiheader,
-                            .study-days,
-                            .study-month,
-                            .study-year {
-                                background-color: #ddd;
+                            &:nth-child(2) {
+                                &:before {
+                                    content: '';
+                                }
                             }
                         }
-                        &.multiple {
-                            max-height: 100%;
-                            min-height: 205px;
+                        .study-block,
+                        .study-date {
+                            &:after {
+                                content: '';
+                                flex: auto;
+                            }
+                            pointer-events: none;
+                            position: relative;
+                            height: auto;
+                            .semiheader {
+                                &:before {
+                                    bottom: -10px;
+                                }
+                            }
                         }
+                        .study-date,
                         .semiheader {
-                            &:before {
-                                bottom: -10px;
-                            }
+                            @include borderioc(1px, $custom_red);
+                            color: #000;
+                            display: block;
                         }
-                    }
-                    .study-date,
-                    .study-days,
-                    .study-month,
-                    .study-year,
-                    .semiheader {
-                        @include borderioc(1px, $custom_red);
-                        color: #000;
                     }
                     .btn {
                         background-color: transparent;

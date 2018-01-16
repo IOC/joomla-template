@@ -123,3 +123,12 @@
     font-weight: bold;
     font-style: italic;
 }
+
+/* IOC icons */
+
+@font-face {
+    font-family: 'IOC';
+    src: url("../fonts/IOC/ioc.eot") format("embedded-opentype"), url("../fonts/IOC/ioc.woff") format("woff"), url("../fonts/IOC/ioc.ttf") format("truetype"), url("../fonts/IOC/ioc.svg#ioc") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}

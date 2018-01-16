@@ -26,14 +26,15 @@
     background-color: rgba($color, 0.8);
 }
 
-@mixin flexbox() {
+@mixin flexbox($flex-direction: row, $flex-wrap: wrap, $justify-content: flex-start) {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: $flex-direction $flex-wrap;
     flex: 1 0 auto;
+    justify-content: $justify-content;
 }
 
 @mixin module-title($fontsize, $fontcolor, $color, $linewidth, $margintop, $marginbottom) {
@@ -88,7 +89,7 @@
 }
 
 @mixin breadcrumb($study, $color) {
-    div[class*="item-page-#{$study}-"] {
+    div[class*="item-page-#{$study}"] {
         .container {
             &:before {
                 background-color: $color;
@@ -133,7 +134,7 @@
     .study-overview-menu .study-overview-headline::after {
         color: $color;
     }
-    .study-panel .study-data .study-col .study-date .semiheader {
+    .study-panel .study-data .study-col .study-dates .study-block .semiheader {
         color: $color;
     }
     .study-tabs {
@@ -532,28 +533,30 @@ button:focus {
     .login-clone-campus {
         display: none;
         overflow: hidden;
-        margin-top: 7px;
+        margin-top: 15px;
         color: #fff;
         cursor: pointer;
-        min-width: 181px;
+        min-width: 198px;
+        padding: 7.5px 15px;
+        height: 31px;
+        background-color: rgba(32, 43, 71, 0.4);
         &:hover {
-            color: $ioc-link-navbar;
+            color: $ioc-accent;
             text-decoration: none;
         }
         .custom-icon {
             float: left;
-            margin-top: 15px;
-            margin-left: 10px;
             margin-right: 10px;
             width: 17px;
-            height: 17px;
+            height: 18px;
         }
         p {
-            font-size: 14px;
-            font-weight: 500;
+            font-size: 13px;
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: .65px;
-            padding-top: 16px;
+            letter-spacing: .8px;
+            margin: 0;
+            line-height: 18px;
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
@@ -594,10 +597,11 @@ button:focus {
                         padding-top: 1px;
                     }
                 }
-                margin-top: 21px;
+                margin-top: 22px;
                 button {
-                    font-size: 14px;
-                    font-weight: 500;
+                    font-size: 13px;
+                    font-weight: 600;
+                    letter-spacing: 0.8px;
                     background-color: transparent;
                     border: none;
                     color: $ioc-white;
@@ -626,7 +630,7 @@ button:focus {
                 letter-spacing: 0.65px;
                 font-weight: 400;
                 a:hover {
-                    color: $ioc-link-navbar;
+                    color: $ioc-accent;
                 }
                 &.active {
                     font-weight: 600;
@@ -635,8 +639,9 @@ button:focus {
                     text-transform: uppercase;
                     color: $ioc-white;
                     padding: 0 11px;
-                    font-size: 14px;
-                    font-weight: 500;
+                    font-size: 13px;
+                    letter-spacing: 0.8px;
+                    font-weight: 600;
                 }
             }
         }
@@ -703,8 +708,10 @@ button:focus {
     padding-top: 0;
 }
 
-@include breadcrumb('fp', #0e7554);
-@include breadcrumb('eoi', #c47200);
+@include breadcrumb('', #3f3f3f);
+@include breadcrumb('btx', $ioc-study-btx);
+@include breadcrumb('eoi-', $ioc-breadcrumb-eoi);
+@include breadcrumb('fp-', $ioc-breadcrumb-fp);
 
 .ioc-parent-breadcrumb {
     position: absolute;
@@ -772,10 +779,9 @@ button:focus {
         bottom: 81px;
         width: 100%;
         .navbar-nav {
-            @include flexbox();
+            @include flexbox($justify-content: center);
             float: none;
             margin: 0 auto;
-            justify-content: center;
             width: 100%;
             li {
                 height: 350px;
@@ -875,8 +881,7 @@ button:focus {
     }
     .content-modal-modules,
     .body-modal-modules {
-        @include flexbox();
-        justify-content: center;
+        @include flexbox($justify-content: center);
         align-content: center;
         color: $ioc-text;
         .modal-module {
@@ -1072,8 +1077,7 @@ button:focus {
                 }
             }
             .bottom-modal-module {
-                @include flexbox();
-                justify-content: center;
+                @include flexbox($justify-content: center);
                 width: 100%;
                 color: $ioc-module-bottom;
                 line-height: 28px;
@@ -1107,8 +1111,7 @@ button:focus {
         padding-top: 200px;
         .navbar-nav {
             width: 100%;
-            @include flexbox();
-            justify-content: center;
+            @include flexbox($justify-content: center);
             align-items: center;
             align-content: center;
             float: none;
@@ -1226,7 +1229,6 @@ button:focus {
     padding-top: 10px;
     .container {
         &.blog-featured {
-            //font-size: 14px;
             padding-left: 0;
             padding-right: 0;
             font-size: 1em;
@@ -1747,13 +1749,6 @@ body {
     }
 }
 
-#breadcrumbs {
-    background-color: #efefef;
-    .breadcrumb {
-        background-color: #efefef;
-    }
-}
-
 #content-top {
     .menu-nav {
         border: 1px solid #efefef;
@@ -1777,6 +1772,7 @@ body {
             height: 214px;
             padding-bottom: 0;
             border-bottom: 0;
+            margin-bottom: $ioc-header-margin;
             &.default {
                 height: 170px;
                 h1 {
@@ -1801,6 +1797,9 @@ body {
                         left: 0;
                         bottom: 61px;
                     }
+                }
+                & + div[class*="item-page-"] {
+                    margin-top: -$ioc-header-margin;
                 }
             }
             &.iocnewsarticle {
@@ -2114,8 +2113,7 @@ body {
             display: none;
         }
         &.study-main {
-            @include flexbox();
-            justify-content: space-between;
+            @include flexbox($justify-content: space-between);
         }
         .study-main {
             margin-top: 130px;
@@ -2127,7 +2125,7 @@ body {
 
 .social {
     float: right;
-    margin-top: 19px;
+    margin-top: 12px;
     padding: 0;
     a {
         color: #fff;
@@ -2138,29 +2136,32 @@ body {
         text-decoration: none;
     }
     .custom-icon {
+        &:before {
+            font-family: 'ioc';
+            font-size: 22px;
+        }
+
+        &:hover {
+            color: $ioc-link-navbar;
+        }
+
         &.blogger {
-            &:hover {
-                background-image: url('../images/blogger_hover.svg');
-            }
             background-image: url('../images/blogger.svg');
         }
         &.linkedin {
-            &:hover {
-                background-image: url('../images/linkedin_hover.svg');
+            &:before {
+                content: '\e900';
             }
-            background-image: url('../images/linkedin.svg');
         }
         &.twitter {
-            &:hover {
-                background-image: url('../images/twitter_hover.svg');
+            &:before {
+                content: '\e902';
             }
-            background-image: url('../images/twitter.svg');
         }
         &.vimeo {
-            &:hover {
-                background-image: url('../images/vimeo_hover.svg');
+            &:before {
+                content: '\e904';
             }
-            background-image: url('../images/vimeo.svg');
         }
         height: 24px;
         width: 24px;
@@ -2307,151 +2308,70 @@ body {
     flex: 1 1 auto;
     margin-left: 20px;
     .study-data {
-        @include flexbox();
-        flex-flow: row nowrap;
-        justify-content: space-between;
+        @include flexbox(row, nowrap, center);
         align-items: baseline;
-        .study-header-img {
-            position: absolute;
-            top: -36px;
-            left: 0;
-            width: 100%;
-            text-align: center;
-        }
         .study-col {
-            @include flexbox();
+            @include flexbox(column, wrap, space-between);
             flex: 0 1 auto;
-            flex-direction: column;
-            flex-wrap: wrap;
-            justify-content: space-between;
             vertical-align: top;
             width: 100%;
-            padding-bottom: 4.5px;
-            border-bottom: 1px solid $ioc-accent;
-            &.study-date-course,
-            &.study-matricula {
-                position: relative;
-                .header-icon {
-                    position: absolute;
-                    top: -14px;
-                    left: 0;
+            max-width: 255px;
+            &:after {
+                content: '';
+                display: block;
+                width: 95%;
+                height: 9px;
+                background-color: $ioc-bg-study-date;
+                margin: 0 auto;
+            }
+            h3, h4 {
+                font-size: 10.5px;
+                letter-spacing: 0.9px;
+                font-weight: 500;
+            }
+            h4 {
+                color: $ioc-text;
+                background-color: $ioc-bg-study-date;
+                width: 95%;
+                text-align: center;
+                margin: 0 auto;
+                text-transform: uppercase;
+                line-height: 30px;
+                height: 30px;
+            }
+            .study-dates {
+                border: 1px solid $ioc-moreinfo-tab;
+                height: 161px;
+                padding: 0 24px;
+                @include flexbox(column, nowrap, center);
+                overflow: hidden;
+                h3 {
+                    color: rgba(53, 73, 89, 0.52);
                     text-align: center;
-                    width: 100%;
-                    .custom-icon {
-                        background-repeat: no-repeat;
-                        background-position: center top;
-                        background-color: #fff;
-                        width: 47px;
-                    }
-                }
-                h4 {
-                    color: $ioc-accent;
-                    font-size: 11.5px;
-                    letter-spacing: 0.8px;
-                    font-weight: 500;
-                    width: 100%;
-                    text-align: center;
-                    margin-top: 0;
+                    margin: 0 0 5px 0;
                     text-transform: uppercase;
-                    margin-bottom: 5.5px;
-                    padding: 15.5px 0 14.5px 0;
-                    border-top: 1px solid $ioc-accent;
-                    border-bottom: 1px solid $ioc-accent;
                 }
-            }
-            &.study-date-course {
-                .header-icon {
-                    .custom-icon {
-                        background-image: url('../images/calendari-icon-mobile.svg');
-                    }
-                }
-            }
-            &.study-matricula {
-                .header-icon {
-                    .custom-icon {
-                        background-image: url('../images/periode-matricula-icon.svg');
-                    }
-                }
-            }
-            .study-date {
-                background-color: $ioc-moreinfo-tab;
-                height: 125px;
-                &.ocult {
-                    visibility: hidden;
-                }
-                &.multiple {
-                    background-color: $ioc-moreinfo-tab;
+                .study-block {
                     max-height: 125px;
                     text-align: center;
                     .semiheader {
-                        &:before {
-                            content: '';
-                        }
+                        position: relative;
+                        font-size: 9px;
+                        font-weight: 500;
+                        color: $ioc-semiheader-mb;
+                        letter-spacing: 0.8px;
+                        text-align: center;
+                        text-transform: uppercase;
                     }
-                    div:nth-of-type(5),
-                    .semiheader + .semiheader {
-                        border-top: 5px solid #ffffff;
-                        padding-top: 8px;
-                    }
-                    .study-days,
-                    .study-month,
-                    .study-year {
+                    .study-date {
                         display: inline;
                         font-size: 13px;
                     }
                 }
-                .semiheader {
-                    &:before {
-                        content: '___';
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        text-align: center;
-                        letter-spacing: 0;
-                        width: 100%;
-                    }
-                    position: relative;
-                    font-size: 9px;
-                    font-weight: 500;
-                    color: $ioc-semiheader-mb;
-                    letter-spacing: 0.8px;
-                    text-align: center;
-                    text-transform: uppercase;
-                    line-height: 20px;
-                    padding-bottom: 4px;
-                    margin-top: 8px;
-                }
-            }
-            .study-date + .study-date {
-                margin-top: 12px;
             }
         }
-
         .study-col + .study-col {
-            margin-left: 13px;
-        }
-        .study-days,
-        .study-month,
-        .study-year {
-            color: $ioc-text;
-            text-align: center;
-            //display: inline-block;
-            //width: 48%;
-            //vertical-align: middle;
-        }
-        .study-days {
-            font-size: 26px;
-            font-weight: 300;
-            // padding: 0 9px;
-            margin-top: 7px;
-        }
-        .study-month {
-            font-size: 13px;
-            font-weight: 300;
-            // padding: 0 9px;
-        }
-        .study-year {
-            font-size: 11px;
+            margin-left: 14px;
         }
     }
 }
@@ -2733,8 +2653,7 @@ body {
             padding-bottom: 138px;
             margin: 263px auto 0 auto;
             .subpage-group-buttons {
-                @include flexbox();
-                justify-content: flex-end;
+                @include flexbox($justify-content: flex-end);
                 .subpage-button {
                     flex-grow: 1;
                     height: 190px;
@@ -2756,8 +2675,7 @@ body {
 .study-buttons,
 .body-modal-modules,
 .subpage-buttons {
-    @include flexbox();
-    justify-content: center;
+    @include flexbox($justify-content: center);
     margin-top: 146px;
     text-align: center;
     .study-button,
@@ -2890,6 +2808,7 @@ body {
     min-height: -webkit-calc(100vh - #{$ioc-header-mini});
     min-height:    -moz-calc(100vh - #{$ioc-header-mini});
     min-height:         calc(100vh - #{$ioc-header-mini});
+    margin-top: -$ioc-header-margin;
 }
 
 /* Customization for studies, Parallax, Banners, layouts */
@@ -3056,8 +2975,7 @@ body {
     .faqsindex {
         margin-top: 77px;
         ul {
-            @include flexbox();
-            justify-content: space-between;
+            @include flexbox($justify-content: space-between);
             padding: 0;
             li {
                 width: 45%;
@@ -3068,6 +2986,7 @@ body {
                 border: 1px solid $ioc-moreinfo-tab;
                 margin-top: 19px;
                 margin-right: 15px;
+                overflow: hidden;
                 &:hover {
                     background-color: $ioc-submenu;
                 }
@@ -3253,8 +3172,8 @@ body {
                 left: 100%;
             }*/
             margin: 0;
-            font-size: 31px;
-            font-weight: 600;
+            font-size: 29px;
+            font-weight: 500;
             color: $ioc-accent;
         }
     }
@@ -3328,24 +3247,6 @@ body {
                                     transform: rotate(-45deg);
                                     transition: all .35s linear;
                                 }
-                                // &.requisits {
-                                //     width: 21px;
-                                //     height: 26px;
-                                //     background-image: url('../images/requisits_small_icon.svg');
-                                //     margin-right: 17px;
-                                // }
-                                // &.preus {
-                                //     width: 22px;
-                                //     height: 22px;
-                                //     background-image: url('../images/preus_icon.svg');
-                                //     margin-right: 17px;
-                                // }
-                                // &.bonificacions {
-                                //     width: 23px;
-                                //     height: 25px;
-                                //     background-image: url('../images/bonificacions_icon.svg');
-                                //     margin-right: 17px;
-                                // }
                             }
                         }
                     }
@@ -3375,10 +3276,10 @@ body {
         border: none;
         &[aria-expanded="true"],
         &:hover {
-            color: $ioc-link-navbar;
+            color: $ioc-accent;
         }
         color: $ioc-white;
-        margin-top: 13px;
+        margin-top: 10px;
     }
 }
 
@@ -3394,28 +3295,44 @@ body {
 .tiny-search {
     &:hover {
         .custom-icon {
-            background-image: url('../images/search_hover.svg');
+            color: $ioc-accent;
         }
     }
     .custom-icon {
-        background-image: url('../images/search.svg');
+        &:before {
+            content: '\1f50d';
+            font-family: 'ioc';
+            font-size: 16px;
+            font-weight: 600;
+        }
     }
 }
 
 .login-campus {
     .custom-icon {
-        background-image: url('../images/user_profile.svg');
+        &:before {
+            content: '\1f464';
+            font-family: 'ioc';
+            font-size: 18px;
+            font-weight: 600;
+        }
     }
 }
 .login-clone-campus,
 .tiny-campus {
     &:hover {
         .custom-icon {
-            background-image: url('../images/user_profile_hover.svg');
+            color: $ioc-accent;
         }
     }
     .custom-icon {
-        background-image: url('../images/user_profile.svg');
+        &:before {
+            content: '\1f464';
+            font-family: 'ioc';
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 18px;
+        }
     }
 }
 
@@ -3502,7 +3419,13 @@ body {
                                 .custom-icon {
                                     width: 13px;
                                     height: 15px;
-                                    background-image: url('../images/user_profile.svg');
+                                    color: #fff;
+                                    font-style: normal;
+                                    font-size: 15px;
+                                    &:before {
+                                        font-family: 'ioc';
+                                        content: '\1f464';
+                                    }
                                 }
                             }
                             &.password {
@@ -3668,9 +3591,8 @@ body {
         margin: 20px auto 0;
     }
     .top {
-        @include flexbox();
+        @include flexbox($justify-content: space-between);
         margin: 0 auto;
-        justify-content: space-between;
         .top-col {
             padding: 0;
         }
@@ -4028,8 +3950,7 @@ body {
     }
 }
 
-.item-page-study,
-.item-page-default {
+div[class*="item-page-"] {
     table {
         border: 0;
         width: 100%;

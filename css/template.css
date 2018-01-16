@@ -125,6 +125,13 @@
   font-weight: bold;
   font-style: italic;
 }
+/* IOC icons */
+@font-face {
+  font-family: 'IOC';
+  src: url("../fonts/IOC/ioc.eot") format("embedded-opentype"), url("../fonts/IOC/ioc.woff") format("woff"), url("../fonts/IOC/ioc.ttf") format("truetype"), url("../fonts/IOC/ioc.svg#ioc") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 /*CONTACT FORM*/
 .accordion {
   margin-bottom: 20px;
@@ -1218,29 +1225,31 @@ button:focus {
 .navbar-default .login-clone-campus {
   display: none;
   overflow: hidden;
-  margin-top: 7px;
+  margin-top: 15px;
   color: #fff;
   cursor: pointer;
-  min-width: 181px;
+  min-width: 198px;
+  padding: 7.5px 15px;
+  height: 31px;
+  background-color: rgba(32, 43, 71, 0.4);
 }
 .navbar-default .login-clone-campus:hover {
-  color: #4bcdaf;
+  color: #01c1b9;
   text-decoration: none;
 }
 .navbar-default .login-clone-campus .custom-icon {
   float: left;
-  margin-top: 15px;
-  margin-left: 10px;
   margin-right: 10px;
   width: 17px;
-  height: 17px;
+  height: 18px;
 }
 .navbar-default .login-clone-campus p {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.65px;
-  padding-top: 16px;
+  letter-spacing: 0.8px;
+  margin: 0;
+  line-height: 18px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -1267,7 +1276,7 @@ button:focus {
   margin-top: 25px;
 }
 .navbar-default .navbar-collapse .navbar-nav.search {
-  margin-top: 21px;
+  margin-top: 22px;
 }
 .navbar-default .navbar-collapse .navbar-nav.search li > span {
   color: rgba(255, 255, 255, .3);
@@ -1281,8 +1290,9 @@ button:focus {
   padding-top: 1px;
 }
 .navbar-default .navbar-collapse .navbar-nav.search button {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
   background-color: transparent;
   border: none;
   color: #fff;
@@ -1304,7 +1314,7 @@ button:focus {
   font-weight: 400;
 }
 .navbar-default .navbar-collapse .navbar-nav li a:hover {
-  color: #4bcdaf;
+  color: #01c1b9;
 }
 .navbar-default .navbar-collapse .navbar-nav li.active {
   font-weight: 600;
@@ -1313,8 +1323,9 @@ button:focus {
   text-transform: uppercase;
   color: #fff;
   padding: 0 11px;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.8px;
+  font-weight: 600;
 }
 #top {
   height: 40px;
@@ -1343,7 +1354,7 @@ button:focus {
 #main-box div.item-page-study.ges .study-overview .study-overview-headline::after, #main-box div.item-page-study.ges .study-overview-menu .study-overview-headline::after {
   color: #eb5066;
 }
-#main-box div.item-page-study.ges .study-panel .study-data .study-col .study-date .semiheader {
+#main-box div.item-page-study.ges .study-panel .study-data .study-col .study-dates .study-block .semiheader {
   color: #eb5066;
 }
 #main-box div.item-page-study.ges .study-tabs .nav-tabs li.active a {
@@ -1381,17 +1392,29 @@ button:focus {
 #main {
   padding-top: 0;
 }
-div[class*="item-page-fp-"] .container:before {
-  background-color: #0e7554;
+div[class*="item-page-"] .container:before {
+  background-color: #3f3f3f;
 }
-div[class*="item-page-fp-"] .ioc-breadcrumb {
-  background-color: #0e7554;
+div[class*="item-page-"] .ioc-breadcrumb {
+  background-color: #3f3f3f;
+}
+div[class*="item-page-btx"] .container:before {
+  background-color: #6e6ca2;
+}
+div[class*="item-page-btx"] .ioc-breadcrumb {
+  background-color: #6e6ca2;
 }
 div[class*="item-page-eoi-"] .container:before {
   background-color: #c47200;
 }
 div[class*="item-page-eoi-"] .ioc-breadcrumb {
   background-color: #c47200;
+}
+div[class*="item-page-fp-"] .container:before {
+  background-color: #0e7554;
+}
+div[class*="item-page-fp-"] .ioc-breadcrumb {
+  background-color: #0e7554;
 }
 .ioc-parent-breadcrumb {
   position: absolute;
@@ -1467,9 +1490,9 @@ div[class*="item-page-eoi-"] .ioc-breadcrumb {
   display: flex;
   flex-flow: row wrap;
   flex: 1 0 auto;
+  justify-content: center;
   float: none;
   margin: 0 auto;
-  justify-content: center;
   width: 100%;
 }
 .layout-employment .employment-content .navbar-nav li {
@@ -2482,12 +2505,6 @@ body #wrap section {
   background-color: transparent;
   border: 0;
 }
-#breadcrumbs {
-  background-color: #efefef;
-}
-#breadcrumbs .breadcrumb {
-  background-color: #efefef;
-}
 #content-top .menu-nav {
   border: 1px solid #efefef;
   width: 17em;
@@ -2506,6 +2523,7 @@ body #wrap section {
   height: 214px;
   padding-bottom: 0;
   border-bottom: 0;
+  margin-bottom: 50px;
   background-image: url('../images/default-header-bck.jpg');
   background-size: cover;
   background-position: center;
@@ -2531,6 +2549,9 @@ body #wrap section {
   text-align: center;
   left: 0;
   bottom: 61px;
+}
+#container .fluid-container.page-header.subpage + div[class*="item-page-"] {
+  margin-top: -50px;
 }
 #container .fluid-container.page-header.iocnewsarticle {
   background-image: url('../images/bck-header-noticies.jpg');
@@ -2847,7 +2868,7 @@ body #wrap section {
 }
 .social {
   float: right;
-  margin-top: 19px;
+  margin-top: 12px;
   padding: 0;
 }
 .social a {
@@ -2862,29 +2883,24 @@ body #wrap section {
   height: 24px;
   width: 24px;
 }
+.social .custom-icon:before {
+  font-family: 'ioc';
+  font-size: 22px;
+}
+.social .custom-icon:hover {
+  color: #4bcdaf;
+}
 .social .custom-icon.blogger {
   background-image: url('../images/blogger.svg');
 }
-.social .custom-icon.blogger:hover {
-  background-image: url('../images/blogger_hover.svg');
+.social .custom-icon.linkedin:before {
+  content: '\e900';
 }
-.social .custom-icon.linkedin {
-  background-image: url('../images/linkedin.svg');
+.social .custom-icon.twitter:before {
+  content: '\e902';
 }
-.social .custom-icon.linkedin:hover {
-  background-image: url('../images/linkedin_hover.svg');
-}
-.social .custom-icon.twitter {
-  background-image: url('../images/twitter.svg');
-}
-.social .custom-icon.twitter:hover {
-  background-image: url('../images/twitter_hover.svg');
-}
-.social .custom-icon.vimeo {
-  background-image: url('../images/vimeo.svg');
-}
-.social .custom-icon.vimeo:hover {
-  background-image: url('../images/vimeo_hover.svg');
+.social .custom-icon.vimeo:before {
+  content: '\e904';
 }
 .social a + a {
   margin-left: 10px;
@@ -3018,18 +3034,10 @@ body #wrap section {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  flex-flow: row wrap;
-  flex: 1 0 auto;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  flex: 1 0 auto;
+  justify-content: center;
   align-items: baseline;
-}
-.study-panel .study-data .study-header-img {
-  position: absolute;
-  top: -36px;
-  left: 0;
-  width: 100%;
-  text-align: center;
 }
 .study-panel .study-data .study-col {
   display: -webkit-box;
@@ -3037,77 +3045,62 @@ body #wrap section {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   flex: 1 0 auto;
-  flex: 0 1 auto;
-  flex-direction: column;
-  flex-wrap: wrap;
   justify-content: space-between;
+  flex: 0 1 auto;
   vertical-align: top;
   width: 100%;
-  padding-bottom: 4.5px;
-  border-bottom: 1px solid #01c1b9;
+  max-width: 255px;
 }
-.study-panel .study-data .study-col.study-date-course, .study-panel .study-data .study-col.study-matricula {
-  position: relative;
+.study-panel .study-data .study-col:after {
+  content: '';
+  display: block;
+  width: 95%;
+  height: 9px;
+  background-color: #d2e1e5;
+  margin: 0 auto;
 }
-.study-panel .study-data .study-col.study-date-course .header-icon, .study-panel .study-data .study-col.study-matricula .header-icon {
-  position: absolute;
-  top: -14px;
-  left: 0;
-  text-align: center;
-  width: 100%;
-}
-.study-panel .study-data .study-col.study-date-course .header-icon .custom-icon, .study-panel .study-data .study-col.study-matricula .header-icon .custom-icon {
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-color: #fff;
-  width: 47px;
-}
-.study-panel .study-data .study-col.study-date-course h4, .study-panel .study-data .study-col.study-matricula h4 {
-  color: #01c1b9;
-  font-size: 11.5px;
-  letter-spacing: 0.8px;
+.study-panel .study-data .study-col h3, .study-panel .study-data .study-col h4 {
+  font-size: 10.5px;
+  letter-spacing: 0.9px;
   font-weight: 500;
-  width: 100%;
+}
+.study-panel .study-data .study-col h4 {
+  color: #354959;
+  background-color: #d2e1e5;
+  width: 95%;
   text-align: center;
-  margin-top: 0;
+  margin: 0 auto;
   text-transform: uppercase;
-  margin-bottom: 5.5px;
-  padding: 15.5px 0 14.5px 0;
-  border-top: 1px solid #01c1b9;
-  border-bottom: 1px solid #01c1b9;
+  line-height: 30px;
+  height: 30px;
 }
-.study-panel .study-data .study-col.study-date-course .header-icon .custom-icon {
-  background-image: url('../images/calendari-icon-mobile.svg');
+.study-panel .study-data .study-col .study-dates {
+  border: 1px solid #edf4f7;
+  height: 161px;
+  padding: 0 24px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 0 auto;
+  justify-content: center;
+  overflow: hidden;
 }
-.study-panel .study-data .study-col.study-matricula .header-icon .custom-icon {
-  background-image: url('../images/periode-matricula-icon.svg');
+.study-panel .study-data .study-col .study-dates h3 {
+  color: rgba(53, 73, 89, 0.52);
+  text-align: center;
+  margin: 0 0 5px 0;
+  text-transform: uppercase;
 }
-.study-panel .study-data .study-col .study-date {
-  background-color: #edf4f7;
-  height: 125px;
-}
-.study-panel .study-data .study-col .study-date.ocult {
-  visibility: hidden;
-}
-.study-panel .study-data .study-col .study-date.multiple {
-  background-color: #edf4f7;
+.study-panel .study-data .study-col .study-dates .study-block {
   max-height: 125px;
   text-align: center;
 }
-.study-panel .study-data .study-col .study-date.multiple .semiheader:before {
-  content: '';
-}
-.study-panel .study-data .study-col .study-date.multiple div:nth-of-type(5), .study-panel .study-data .study-col .study-date.multiple .semiheader + .semiheader {
-  border-top: 5px solid #fff;
-  padding-top: 8px;
-}
-.study-panel .study-data .study-col .study-date.multiple .study-days, .study-panel .study-data .study-col .study-date.multiple .study-month, .study-panel .study-data .study-col .study-date.multiple .study-year {
-  display: inline;
-  font-size: 13px;
-}
-.study-panel .study-data .study-col .study-date .semiheader {
+.study-panel .study-data .study-col .study-dates .study-block .semiheader {
   position: relative;
   font-size: 9px;
   font-weight: 500;
@@ -3115,40 +3108,13 @@ body #wrap section {
   letter-spacing: 0.8px;
   text-align: center;
   text-transform: uppercase;
-  line-height: 20px;
-  padding-bottom: 4px;
-  margin-top: 8px;
 }
-.study-panel .study-data .study-col .study-date .semiheader:before {
-  content: '___';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  text-align: center;
-  letter-spacing: 0;
-  width: 100%;
-}
-.study-panel .study-data .study-col .study-date + .study-date {
-  margin-top: 12px;
+.study-panel .study-data .study-col .study-dates .study-block .study-date {
+  display: inline;
+  font-size: 13px;
 }
 .study-panel .study-data .study-col + .study-col {
-  margin-left: 13px;
-}
-.study-panel .study-data .study-days, .study-panel .study-data .study-month, .study-panel .study-data .study-year {
-  color: #354959;
-  text-align: center;
-}
-.study-panel .study-data .study-days {
-  font-size: 26px;
-  font-weight: 300;
-  margin-top: 7px;
-}
-.study-panel .study-data .study-month {
-  font-size: 13px;
-  font-weight: 300;
-}
-.study-panel .study-data .study-year {
-  font-size: 11px;
+  margin-left: 14px;
 }
 .subpagebody {
   background-image: url('../images/cicles-top-bck.svg');
@@ -3571,6 +3537,7 @@ body #wrap section {
   min-height: -webkit-calc(100vh - 55px);
   min-height: -moz-calc(100vh - 55px);
   min-height: calc(100vh - 55px);
+  margin-top: -50px;
 }
 /* Customization for studies, Parallax, Banners, layouts */
 .item-page-study.acfgs .container.study-main, .item-page-study.btx .container.study-main {
@@ -3719,6 +3686,7 @@ body #wrap section {
   border: 1px solid #edf4f7;
   margin-top: 19px;
   margin-right: 15px;
+  overflow: hidden;
 }
 .item-page-faqs .faqsindex ul li:hover {
   background-color: #ecf3f7;
@@ -3797,6 +3765,7 @@ body #wrap section {
   display: flex;
   flex-flow: row wrap;
   flex: 1 0 auto;
+  justify-content: flex-start;
   border: none;
   margin-top: 66px;
   margin-bottom: 0;
@@ -3897,8 +3866,8 @@ body #wrap section {
    left: 100%;
    }*/
   margin: 0;
-  font-size: 31px;
-  font-weight: 600;
+  font-size: 29px;
+  font-weight: 500;
   color: #01c1b9;
 }
 .study-tabs {
@@ -3976,10 +3945,10 @@ body #wrap section {
   background-color: transparent;
   border: none;
   color: #fff;
-  margin-top: 13px;
+  margin-top: 10px;
 }
 .tiny-search button[aria-expanded="true"], .tiny-campus button[aria-expanded="true"], .tiny-search button:hover, .tiny-campus button:hover {
-  color: #4bcdaf;
+  color: #01c1b9;
 }
 .custom-icon {
   display: inline-block;
@@ -3989,19 +3958,29 @@ body #wrap section {
   background-size: contain;
 }
 .ioc-search:hover .custom-icon, .tiny-search:hover .custom-icon {
-  background-image: url('../images/search_hover.svg');
+  color: #01c1b9;
 }
-.ioc-search .custom-icon, .tiny-search .custom-icon {
-  background-image: url('../images/search.svg');
+.ioc-search .custom-icon:before, .tiny-search .custom-icon:before {
+  content: '\1f50d';
+  font-family: 'ioc';
+  font-size: 16px;
+  font-weight: 600;
 }
-.login-campus .custom-icon {
-  background-image: url('../images/user_profile.svg');
+.login-campus .custom-icon:before {
+  content: '\1f464';
+  font-family: 'ioc';
+  font-size: 18px;
+  font-weight: 600;
 }
 .login-clone-campus:hover .custom-icon, .tiny-campus:hover .custom-icon {
-  background-image: url('../images/user_profile_hover.svg');
+  color: #01c1b9;
 }
-.login-clone-campus .custom-icon, .tiny-campus .custom-icon {
-  background-image: url('../images/user_profile.svg');
+.login-clone-campus .custom-icon:before, .tiny-campus .custom-icon:before {
+  content: '\1f464';
+  font-family: 'ioc';
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
 }
 .form-search {
   width: 100%;
@@ -4083,7 +4062,13 @@ body #wrap section {
 #login-campus.login-form-campus .modal-dialog .modal-content form .input-group .input-group-addon.user .custom-icon {
   width: 13px;
   height: 15px;
-  background-image: url('../images/user_profile.svg');
+  color: #fff;
+  font-style: normal;
+  font-size: 15px;
+}
+#login-campus.login-form-campus .modal-dialog .modal-content form .input-group .input-group-addon.user .custom-icon:before {
+  font-family: 'ioc';
+  content: '\1f464';
 }
 #login-campus.login-form-campus .modal-dialog .modal-content form .input-group .input-group-addon.password .custom-icon {
   width: 13px;
@@ -4238,8 +4223,8 @@ body #wrap section {
   display: flex;
   flex-flow: row wrap;
   flex: 1 0 auto;
-  margin: 0 auto;
   justify-content: space-between;
+  margin: 0 auto;
 }
 .footer .top .top-col {
   padding: 0;
@@ -4574,27 +4559,27 @@ body #wrap section {
   left: 0;
   width: 100%;
 }
-.item-page-study table, .item-page-default table {
+div[class*="item-page-"] table {
   border: 0;
   width: 100%;
   color: #354959;
 }
-.item-page-study table th, .item-page-default table th, .item-page-study table td, .item-page-default table td {
+div[class*="item-page-"] table th, div[class*="item-page-"] table td {
   border: 2px solid #fff;
   vertical-align: middle;
   padding: 12px;
 }
-.item-page-study table th, .item-page-default table th {
+div[class*="item-page-"] table th {
   background-color: #d9e8f4;
   text-align: center;
   font-size: 14px;
   font-weight: 600;
 }
-.item-page-study table td, .item-page-default table td {
+div[class*="item-page-"] table td {
   background-color: rgba(185, 213, 234, 0.16);
   text-align: left;
 }
-.item-page-study table p, .item-page-default table p {
+div[class*="item-page-"] table p {
   margin: 0;
 }
 @media only screen and (max-width: 991px) {
@@ -4991,7 +4976,7 @@ body #wrap section {
   }
   #container .container.study-main {
     flex-direction: column;
-    margin-top: 92px;
+    margin-top: 42px;
     font-size: 13px;
   }
   .ioc-parent-breadcrumb {
@@ -5002,33 +4987,6 @@ body #wrap section {
   }
   .study-panel {
     margin: 50px 0 0 0;
-  }
-  .study-panel .study-data .study-col {
-    width: 90%;
-  }
-  .study-panel .study-data .study-col h4 {
-    font-size: 12px;
-  }
-  .study-panel .study-data .study-col .study-definition {
-    padding: 2px 0;
-  }
-  .study-panel .study-data .study-col .study-definition .semiheader {
-    background-color: #fafeff;
-    color: #83a1b9;
-    font-size: 9px;
-    font-weight: 500;
-    line-height: 11px;
-    padding-top: 13px;
-  }
-  .study-panel .study-data .study-col .study-definition .study-date {
-    padding: 0 0 10px 0;
-    text-align: center;
-  }
-  .study-panel .study-data .study-col .study-definition .study-date .study-days, .study-panel .study-data .study-col .study-definition .study-date .study-month {
-    font-size: 12px;
-    font-weight: 400;
-    padding: 0;
-    width: auto;
   }
   .study-panel .study-buttons .custom-icon {
     height: 56px;
@@ -5186,7 +5144,10 @@ body #wrap section {
   }
   .header .navbar-header .tiny-search button .custom-icon, .header .navbar-header .tiny-campus button .custom-icon {
     width: 17px;
-    height: 17px;
+    height: 16px;
+  }
+  .header .navbar-header .tiny-search button .custom-icon:before, .header .navbar-header .tiny-campus button .custom-icon:before {
+    font-size: 16px;
   }
   .header .navbar-header .navbar-toggle {
     margin-top: 4px !important;
@@ -5280,10 +5241,11 @@ body #wrap section {
   }
   #main-box div.item-page-study {
     padding-top: 38px;
+    margin-top: -50px;
   }
   #main-box div.item-page-study.ges {
     background-image: url('../images/ges-top-bck.jpg');
-    background-position: top center;
+    background-position: top left;
     background-repeat: no-repeat;
     background-size: 100vw 165px;
   }
@@ -5311,21 +5273,13 @@ body #wrap section {
     margin: 0 auto;
     border: none;
     width: 100%;
+    max-width: 100%;
   }
   .study-panel .study-data .study-col .header-icon {
     display: none;
   }
-  .study-panel .study-data .study-col.study-date-course h4, .study-panel .study-data .study-col.study-matricula h4 {
-    border: none;
-    background-color: #005578;
-    color: #fff;
-    margin-bottom: 0;
-  }
-  .study-panel .study-data .study-col .study-date.multiple div:nth-of-type(5) {
-    border-top-width: 2px;
-  }
-  .study-panel .study-data .study-col .study-date + .study-date {
-    margin-top: 6px;
+  .study-panel .study-data .study-col:after {
+    height: 5px;
   }
   .study-panel .study-data .study-col + .study-col {
     margin-left: auto;
@@ -5484,6 +5438,28 @@ body #wrap section {
   .layout-employment .title {
     bottom: 400px;
   }
+  .item-page-faqs .title h2 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .item-page-faqs .faqsindex ul li {
+    margin-right: 0;
+    width: 100%;
+  }
+  .item-page-faqs .faqsindex ul li a {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .item-page-faqs .panel-faqs .panel-section-info .panel.panel-default .panel-heading .panel-title a {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .item-page-faqs .panel-faqs .panel-section-info .panel.panel-default .panel-collapse .panel-body {
+    margin: 0 auto;
+    padding: 15px 0;
+    max-width: 85%;
+  }
 }
 @media only screen and (min-width: 648px) {
   .container {
@@ -5510,14 +5486,16 @@ body #wrap section {
   #container .fluid-container.page-header .logo_estudi {
     display: none;
   }
+  #container .fluid-container.page-header .container h1 {
+    font-size: 16px;
+    font-weight: 400;
+  }
   #container .fluid-container.page-header .container h1.study {
     left: 0;
     right: 0;
     margin: auto;
     bottom: 35px;
     padding: 0;
-    font-size: 16px;
-    font-weight: 400;
     max-width: 54%;
   }
   #container .fluid-container.page-header.subpage {
@@ -5623,6 +5601,9 @@ body #wrap section {
     font-size: 9px;
     font-weight: 500;
     letter-spacing: 1.2px;
+  }
+  .item-page-faqs .faqsindex ul li a {
+    font-size: 14px;
   }
 }
 /* Small Devices, Tablets */
@@ -5824,13 +5805,15 @@ body #wrap section {
   #container .fluid-container.page-header .container {
     padding: 0;
   }
+  #container .fluid-container.page-header .container h1 {
+    font-size: 19px;
+    font-weight: 400;
+  }
   #container .fluid-container.page-header .container h1.study {
     left: 130px;
     margin: 0;
     bottom: 19px;
     padding: 0;
-    font-size: 19px;
-    font-weight: 400;
     max-width: 100%;
     text-align: left;
   }
@@ -5880,6 +5863,9 @@ body #wrap section {
   .layout-employment .employment-content .navbar-nav li {
     width: 190px;
     height: 190px;
+  }
+  .study-panel .study-data .study-col + .study-col {
+    margin-left: 28px;
   }
 }
 /* Medium Devices, Desktops */
@@ -5967,6 +5953,9 @@ body #wrap section {
     max-width: 654px;
     width: 100%;
   }
+  .study-overview {
+    flex: 3 1 20%;
+  }
 }
 @media only screen and (min-width: 1199px) {
   .container {
@@ -5994,6 +5983,12 @@ body #wrap section {
   }
   .layout-employment .employment-content .navbar-nav li:last-child {
     margin-right: 0;
+  }
+  .study-overview {
+    flex: 1 1 20%;
+  }
+  .study-panel .study-data .study-col + .study-col {
+    margin-left: 31px;
   }
   .study-buttons .study-button {
     width: 190px;
