@@ -163,10 +163,11 @@
 
 body {
     font-family: "Montserrat", sans-serif;
-    font-size: 14px;
+    font-size: 17px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     min-width: 320px;
+    color: $ioc-text2;
     &.modal-open {
         overflow: visible;
     }
@@ -187,26 +188,61 @@ a {
 
 h1, h2, h3, h4, h5 {
     font-family: "Montserrat", sans-serif;
-}
-
-h3, h4 {
-    font-weight: 600;
+    color: $ioc-title;
 }
 
 h1 {
-    font-size: 35px;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 51px;
 }
 
 h2 {
-    font-size: 28px;
+    font-size: 26px;
+    font-weight: 500;
+    margin-top: 54px;
+    margin-bottom: 28px;
 }
 
 h3 {
-    font-size: 24px;
+    font-size: 23px;
+    font-weight: 500;
+    margin-top: 40px;
+    margin-bottom: 26px;
 }
 
 h4, h5 {
     font-size: 14px;
+    font-weight: 600;
+}
+
+ul {
+    padding-left: 15px;
+    margin: 21px 0;
+    li {
+        margin-bottom: 16px;
+        list-style: initial;
+    }
+}
+
+ol {
+    padding: 0;
+    margin: 21px 0;
+    list-style: none;
+    counter-reset: li;
+    li {
+        counter-increment: li;
+        margin-bottom: 16px;
+        &:before {
+            content: counter(li) ".";
+            margin-right: 8px;
+            font-weight: 600;
+        }
+    }
+}
+
+p {
+    margin-bottom: 21px;
 }
 
 button:focus {
@@ -270,6 +306,7 @@ button:focus {
         .login-clone-campus {
             display: inline-block;
             float: right;
+            border: 2px solid $ioc-bd-campus;
         }
     }
 }
@@ -423,7 +460,7 @@ button:focus {
     }
     .navbar-toggle {
         position: relative;
-        margin: 12px 15px 0 10px !important;
+        margin: 10px 15px 0 15px !important;
         width: 29px;
         overflow: hidden;
         border-radius: 0;
@@ -539,7 +576,8 @@ button:focus {
         min-width: 198px;
         padding: 7.5px 15px;
         height: 31px;
-        background-color: rgba(32, 43, 71, 0.4);
+        border: 2px solid $ioc-bg-header;
+        background-color: $ioc-bg-header;
         &:hover {
             color: $ioc-accent;
             text-decoration: none;
@@ -556,7 +594,7 @@ button:focus {
             text-transform: uppercase;
             letter-spacing: .8px;
             margin: 0;
-            line-height: 18px;
+            line-height: 13px;
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
@@ -607,9 +645,6 @@ button:focus {
                     color: $ioc-white;
                     text-transform: uppercase;
                     padding: 0 10px;
-                    &:hover {
-                        color: $ioc-link-navbar;
-                    }
                     &[aria-expanded="true"],
                     &:hover[aria-expanded="true"] {
                         .glyphicon {
@@ -708,7 +743,7 @@ button:focus {
     padding-top: 0;
 }
 
-@include breadcrumb('', #3f3f3f);
+@include breadcrumb('', $ioc-bg-header);
 @include breadcrumb('btx', $ioc-study-btx);
 @include breadcrumb('eoi-', $ioc-breadcrumb-eoi);
 @include breadcrumb('fp-', $ioc-breadcrumb-fp);
@@ -839,14 +874,14 @@ button:focus {
                 }
                 .meta-separator {
                     width: 24px;
-                    border: solid 1px $ioc-title;
+                    border: solid 1px $ioc-text2;
                     margin: 19px auto;
                 }
                 .meta-description {
                     font-size: 13px;
                     letter-spacing: 0.8px;
                     text-align: center;
-                    color: $ioc-title;
+                    color: $ioc-text2;
                 }
             }
         }
@@ -1369,7 +1404,7 @@ button:focus {
             font-weight: 600;
             text-align: left;
             padding-bottom: 2px;
-            border-bottom: 1px solid $ioc-title;
+            border-bottom: 1px solid $ioc-text2;
         }
     }
     .items-row {
@@ -1378,7 +1413,7 @@ button:focus {
         .news-text {
             position: relative;
             h3 {
-                color: $ioc-title;
+                color: $ioc-text2;
                 line-height: 25px;
                 letter-spacing: 0px;
                 font-size: 20px;
@@ -1430,7 +1465,7 @@ button:focus {
     }
     .link_items {
         h3 {
-            color: $ioc-title;
+            color: $ioc-text2;
             line-height: 25px;
             letter-spacing: 0px;
             font-size: 20px;
@@ -1470,7 +1505,7 @@ button:focus {
 //     font-size: 26px;
 //     text-align: center;
 //     margin-top: 30px;
-//     color: $ioc-title;
+//     color: $ioc-text2;
 //     padding-bottom: 40px;
 // }
 
@@ -1609,7 +1644,7 @@ body {
             margin-left: 20px;
             margin-right: 1px;
             a {
-                color: $ioc-title;
+                color: $ioc-text2;
             }
         }
         div + div {
@@ -1769,12 +1804,12 @@ body {
         &.page-header {
             overflow: visible;
             margin: 0;
-            height: 214px;
+            height: 212px;
             padding-bottom: 0;
             border-bottom: 0;
             margin-bottom: $ioc-header-margin;
             &.default {
-                height: 170px;
+                height: 282px;
                 h1 {
                     width: 100%;
                 }
@@ -1863,22 +1898,23 @@ body {
                 h1 {
                     &.study {
                         left: 215px;
+                        bottom: 18px;
                     }
                     position: absolute;
-                    bottom: 19px;
-                    left: 15px;
+                    bottom: 60px;
+                    left: 0;
                     display: inline-block;
                     margin: 0;
-                    color: #fff;
-                    font-size: 28px;
+                    color: $ioc-title-default;
+                    font-size: 35px;
                     font-weight: 300;
-                    letter-spacing: 0;
-                    max-width: 90%;
+                    letter-spacing: 0.1px;
+                    text-align: center;
                 }
             }
             background-image: url('../images/default-header-bck.jpg');
             background-size: cover;
-            background-position: center;
+            background-position: top;
             &.page-header {
                 &.acfgs,
                 &.cas,
@@ -2304,7 +2340,7 @@ body {
     }
 }
 .study-panel {
-    color: $ioc-title;
+    color: $ioc-text2;
     flex: 1 1 auto;
     margin-left: 20px;
     .study-data {
@@ -2785,7 +2821,7 @@ body {
         &:hover {
             text-decoration: none;
         }
-        color: $ioc-title;
+        color: $ioc-text2;
     }
     .icon-text {
         position: absolute;
@@ -2994,7 +3030,7 @@ body {
                     display: block;
                     line-height: 71px;
                     font-size: 16px;
-                    color: $ioc-title;
+                    color: $ioc-text2;
                     &:hover {
                         text-decoration: none;
                     }
@@ -3087,7 +3123,7 @@ body {
                 font-weight: 500;
                 background-color: $ioc-study-tab;
                 border: none;
-                color: $ioc-title;
+                color: $ioc-text2;
                 border-radius: 0;
                 margin: 0;
                 padding: 0;
@@ -3221,7 +3257,7 @@ body {
                             font-size: 11px;
                             font-weight: 600;
                             letter-spacing: 1.5px;
-                            color: $ioc-title;
+                            color: $ioc-text2;
                             text-decoration: none;
                             outline: none;
                             padding: 14px 23px;
@@ -3243,7 +3279,7 @@ body {
                                     height: 14px;
                                     width: 14px;
                                     background-image: url('../images/plus_invertit.png');
-                                    color: $ioc-title;
+                                    color: $ioc-text2;
                                     transform: rotate(-45deg);
                                     transition: all .35s linear;
                                 }
@@ -3293,17 +3329,20 @@ body {
 
 .ioc-search,
 .tiny-search {
-    &:hover {
-        .custom-icon {
-            color: $ioc-accent;
+    button {
+        &:hover {
+            span,
+            .custom-icon {
+                color: $ioc-accent;
+            }
         }
     }
     .custom-icon {
         &:before {
             content: '\1f50d';
             font-family: 'ioc';
-            font-size: 16px;
-            font-weight: 600;
+            font-size: 17px;
+            font-weight: 300;
         }
     }
 }
@@ -3330,8 +3369,18 @@ body {
             content: '\1f464';
             font-family: 'ioc';
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 300;
             line-height: 18px;
+        }
+    }
+}
+
+.login-clone-campus {
+    position: relative;
+    .custom-icon {
+        &:before {
+            position: absolute;
+            top: 3px;
         }
     }
 }
@@ -3382,7 +3431,8 @@ body {
                     position: absolute;
                     top: 0;
                     left: 0;
-                    background-color: $ioc-bg-header;
+                    background-image: linear-gradient(168deg, rgba(0, 85, 120, 0.89), $ioc-study-button);
+                    background-color: $ioc-study-button;
                     width: 100%;
                     border: 0;
                     padding: 10px 0;
@@ -3514,7 +3564,7 @@ body {
     font-size: 17px;
     font-weight: 300;
     line-height: 1.65;
-    color: $ioc-title;
+    color: $ioc-text2;
     margin-bottom: 98px;
     .ioc-news {
         .imatge-noticia {
@@ -3637,6 +3687,7 @@ body {
             li {
                 line-height: 26px;
                 float: none;
+                margin: 0;
                 a {
                     font-size: 13px;
                     color: $ioc-footer-text;

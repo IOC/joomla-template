@@ -922,10 +922,11 @@ div#jform_catid_chzn.chzn-container, div#jform_catid_chzn.chzn-container div.chz
 }
 body {
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: 17px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-width: 320px;
+  color: #364958;
 }
 body.modal-open {
   overflow: visible;
@@ -943,21 +944,54 @@ a:hover {
 }
 h1, h2, h3, h4, h5 {
   font-family: "Montserrat", sans-serif;
-}
-h3, h4 {
-  font-weight: 600;
+  color: #354959;
 }
 h1 {
-  font-size: 35px;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 51px;
 }
 h2 {
-  font-size: 28px;
+  font-size: 26px;
+  font-weight: 500;
+  margin-top: 54px;
+  margin-bottom: 28px;
 }
 h3 {
-  font-size: 24px;
+  font-size: 23px;
+  font-weight: 500;
+  margin-top: 40px;
+  margin-bottom: 26px;
 }
 h4, h5 {
   font-size: 14px;
+  font-weight: 600;
+}
+ul {
+  padding-left: 15px;
+  margin: 21px 0;
+}
+ul li {
+  margin-bottom: 16px;
+  list-style: initial;
+}
+ol {
+  padding: 0;
+  margin: 21px 0;
+  list-style: none;
+  counter-reset: li;
+}
+ol li {
+  counter-increment: li;
+  margin-bottom: 16px;
+}
+ol li:before {
+  content: counter(li) ".";
+  margin-right: 8px;
+  font-weight: 600;
+}
+p {
+  margin-bottom: 21px;
 }
 button:focus {
   outline: 0 !important;
@@ -984,7 +1018,7 @@ button:focus {
 }
 .headroom--not-top .fake-menu-bg {
   display: block;
-  background-color: #005677;
+  background-color: #202b47;
   transform: translateY(0px);
   transition: transform 0.3s cubic-bezier(0.5, 0.04, 0.84, 0.77);
   box-shadow: 0px 1px 5px rgba(0, 0, 0, .4);
@@ -1007,6 +1041,7 @@ button:focus {
 .headroom--not-top .navbar-default .login-clone-campus {
   display: inline-block;
   float: right;
+  border: 2px solid #2f3b5c;
 }
 .modal {
   top: 60px;
@@ -1093,7 +1128,7 @@ button:focus {
   transition: transform 0s;
 }
 .headroom--top .fake-menu-bg {
-  background-color: #005677;
+  background-color: #202b47;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, .4);
 }
 .headroom--top .social {
@@ -1127,7 +1162,7 @@ button:focus {
 }
 .navbar-default .navbar-toggle {
   position: relative;
-  margin: 12px 15px 0 10px !important;
+  margin: 10px 15px 0 15px !important;
   width: 29px;
   overflow: hidden;
   border-radius: 0;
@@ -1231,7 +1266,8 @@ button:focus {
   min-width: 198px;
   padding: 7.5px 15px;
   height: 31px;
-  background-color: rgba(32, 43, 71, 0.4);
+  border: 2px solid #202b47;
+  background-color: #202b47;
 }
 .navbar-default .login-clone-campus:hover {
   color: #01c1b9;
@@ -1249,7 +1285,7 @@ button:focus {
   text-transform: uppercase;
   letter-spacing: 0.8px;
   margin: 0;
-  line-height: 18px;
+  line-height: 13px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -1298,9 +1334,6 @@ button:focus {
   color: #fff;
   text-transform: uppercase;
   padding: 0 10px;
-}
-.navbar-default .navbar-collapse .navbar-nav.search button:hover {
-  color: #4bcdaf;
 }
 .navbar-default .navbar-collapse .navbar-nav.search button[aria-expanded="true"], .navbar-default .navbar-collapse .navbar-nav.search button:hover[aria-expanded="true"] {
   color: #4bcdaf;
@@ -1393,10 +1426,10 @@ button:focus {
   padding-top: 0;
 }
 div[class*="item-page-"] .container:before {
-  background-color: #3f3f3f;
+  background-color: #202b47;
 }
 div[class*="item-page-"] .ioc-breadcrumb {
-  background-color: #3f3f3f;
+  background-color: #202b47;
 }
 div[class*="item-page-btx"] .container:before {
   background-color: #6e6ca2;
@@ -2520,16 +2553,16 @@ body #wrap section {
 #container .fluid-container.page-header {
   overflow: visible;
   margin: 0;
-  height: 214px;
+  height: 212px;
   padding-bottom: 0;
   border-bottom: 0;
   margin-bottom: 50px;
   background-image: url('../images/default-header-bck.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: top;
 }
 #container .fluid-container.page-header.default {
-  height: 170px;
+  height: 282px;
 }
 #container .fluid-container.page-header.default h1 {
   width: 100%;
@@ -2610,18 +2643,19 @@ body #wrap section {
 }
 #container .fluid-container.page-header .container h1 {
   position: absolute;
-  bottom: 19px;
-  left: 15px;
+  bottom: 60px;
+  left: 0;
   display: inline-block;
   margin: 0;
-  color: #fff;
-  font-size: 28px;
+  color: #e7edfb;
+  font-size: 35px;
   font-weight: 300;
-  letter-spacing: 0;
-  max-width: 90%;
+  letter-spacing: 0.1px;
+  text-align: center;
 }
 #container .fluid-container.page-header .container h1.study {
   left: 215px;
+  bottom: 18px;
 }
 #container .fluid-container.page-header.page-header.acfgs, #container .fluid-container.page-header.page-header.cas, #container .fluid-container.page-header.page-header.pacfgs {
   background-color: #476f7c;
@@ -3957,14 +3991,14 @@ body #wrap section {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.ioc-search:hover .custom-icon, .tiny-search:hover .custom-icon {
+.ioc-search button:hover span, .tiny-search button:hover span, .ioc-search button:hover .custom-icon, .tiny-search button:hover .custom-icon {
   color: #01c1b9;
 }
 .ioc-search .custom-icon:before, .tiny-search .custom-icon:before {
   content: '\1f50d';
   font-family: 'ioc';
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 17px;
+  font-weight: 300;
 }
 .login-campus .custom-icon:before {
   content: '\1f464';
@@ -3979,8 +4013,15 @@ body #wrap section {
   content: '\1f464';
   font-family: 'ioc';
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 300;
   line-height: 18px;
+}
+.login-clone-campus {
+  position: relative;
+}
+.login-clone-campus .custom-icon:before {
+  position: absolute;
+  top: 3px;
 }
 .form-search {
   width: 100%;
@@ -4023,7 +4064,8 @@ body #wrap section {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #005677;
+  background-image: linear-gradient(168deg, rgba(0, 85, 120, 0.89), #005578);
+  background-color: #005578;
   width: 100%;
   border: 0;
   padding: 10px 0;
@@ -4266,6 +4308,7 @@ body #wrap section {
 .footer .top-col ul li, .footer .mid-col ul li {
   line-height: 26px;
   float: none;
+  margin: 0;
 }
 .footer .top-col ul li a, .footer .mid-col ul li a {
   font-size: 13px;
@@ -4570,7 +4613,7 @@ div[class*="item-page-"] table th, div[class*="item-page-"] table td {
   padding: 12px;
 }
 div[class*="item-page-"] table th {
-  background-color: #d9e8f4;
+  background-color: #e7ecf1;
   text-align: center;
   font-size: 14px;
   font-weight: 600;
@@ -4613,12 +4656,19 @@ div[class*="item-page-"] table p {
   #navigation .collapse.in {
     display: block !important;
   }
+  .item-page-default h1, .item-page-default h2, .item-page-default h3, .item-page-default p, .item-page-default ul, .item-page-default ol, .item-page-default table, .item-page-default div, .item-page-default span {
+    max-width: 676px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
   body {
     font-weight: 300;
-    font-size: 13px;
+    font-size: 16px;
   }
   .tiny-search, .tiny-campus {
     float: right;
+    max-width: 40px;
   }
   #navigation .container {
     padding: 0;
@@ -4637,11 +4687,11 @@ div[class*="item-page-"] table p {
   #navigation .navbar-default .navbar-collapse.collapse.in {
     height: 100vh !important;
     width: 100vw;
-    background-color: #005677;
+    background-color: #202b47;
   }
   #navigation .navbar-default .navbar-collapse.collapsing {
     height: 100vh;
-    background-color: #005677;
+    background-color: #202b47;
   }
   #navigation .navbar-default .navbar-collapse .navbar-nav {
     margin-top: 0;
@@ -4650,6 +4700,7 @@ div[class*="item-page-"] table p {
   #navigation .navbar-default .navbar-collapse .navbar-nav li {
     padding-top: 7px;
     padding-bottom: 7px;
+    margin: 0;
   }
   #navigation .navbar-default .navbar-collapse .navbar-nav li:last-child {
     border-bottom: none;
@@ -5127,20 +5178,50 @@ div[class*="item-page-"] table p {
 }
 @media only screen and (max-width: 480px) {
   /* Customization for studies, Parallax, Banners, layouts */
+  .item-page-default h1, .item-page-default h2, .item-page-default h3, .item-page-default p, .item-page-default ul, .item-page-default ol, .item-page-default table, .item-page-default div, .item-page-default span {
+    max-width: 290px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 17px;
+  }
+  h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-bottom: 19px;
+  }
+  h3 {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 27px;
+    margin-bottom: 18px;
+  }
+  body {
+    font-weight: 300;
+    font-size: 13.5px;
+  }
+  p {
+    margin-bottom: 17px;
+  }
   .header .navbar-default .navbar-header #brand {
     margin-top: 0;
     margin-left: 15px;
   }
   .header .navbar-default .navbar-header #brand .logo {
-    padding-top: 14px;
+    padding-top: 19px;
     width: 100px;
   }
   .header .fake-menu-bg {
-    height: 50px;
+    height: 60px;
   }
   .header .navbar-header .tiny-search button, .header .navbar-header .tiny-campus button {
     margin-top: 0;
-    padding: 14px 10px 0;
+    padding: 19px 10px 0;
   }
   .header .navbar-header .tiny-search button .custom-icon, .header .navbar-header .tiny-campus button .custom-icon {
     width: 17px;
@@ -5150,10 +5231,10 @@ div[class*="item-page-"] table p {
     font-size: 16px;
   }
   .header .navbar-header .navbar-toggle {
-    margin-top: 4px !important;
+    margin: 9px 15px 0 10px !important;
   }
   #navigation .navbar-default .navbar-collapse {
-    top: 50px;
+    top: 60px;
   }
   .container {
     padding: 0 15px;
@@ -5254,6 +5335,12 @@ div[class*="item-page-"] table p {
   }
   #main-box div.item-page-study.ges .subpage-banner {
     background-image: url('../images/ges-banner-mobile.png');
+  }
+  #container .fluid-container.page-header.default {
+    height: 147px;
+  }
+  #container .fluid-container.page-header.default h1 {
+    bottom: 33px;
   }
   #container .container.study-main {
     margin-top: 0;
@@ -5472,7 +5559,13 @@ div[class*="item-page-"] table p {
     padding-right: 15px;
   }
   #container .fluid-container.page-header {
-    height: 147px;
+    height: 146px;
+  }
+  #container .fluid-container.page-header.default {
+    height: 191px;
+  }
+  #container .fluid-container.page-header.default h1 {
+    bottom: 33px;
   }
   #container .fluid-container.page-header h1 {
     left: 15px;
@@ -5608,6 +5701,30 @@ div[class*="item-page-"] table p {
 }
 /* Small Devices, Tablets */
 @media only screen and (min-width: 481px) and (max-width: 767px) {
+  h1 {
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 32px;
+  }
+  h2 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 52px;
+    margin-bottom: 26px;
+  }
+  h3 {
+    font-size: 19px;
+    font-weight: 500;
+    margin-top: 44px;
+    margin-bottom: 26px;
+  }
+  body {
+    font-weight: 300;
+    font-size: 16px;
+  }
+  p {
+    margin-bottom: 23px;
+  }
   #navigation .navbar-default .navbar-header {
     padding-left: 15px;
     margin-left: 0;
@@ -5621,11 +5738,11 @@ div[class*="item-page-"] table p {
   .navbar-default .navbar-collapse.collapse.in {
     height: 100vh;
     width: 100vw;
-    background-color: #005677;
+    background-color: #202b47;
   }
   .navbar-default .navbar-collapse.collapsing {
     height: 100vh;
-    background-color: #005677;
+    background-color: #202b47;
   }
   .navbar-default .navbar-collapse .navbar-nav {
     margin-top: 0;
@@ -5765,6 +5882,36 @@ div[class*="item-page-"] table p {
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .item-page-default h1, .item-page-default h2, .item-page-default h3, .item-page-default p, .item-page-default ul, .item-page-default ol, .item-page-default table, .item-page-default div, .item-page-default span {
+    max-width: 626px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1 {
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 32px;
+  }
+  h2 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 52px;
+    margin-bottom: 26px;
+  }
+  h3 {
+    font-size: 19px;
+    font-weight: 500;
+    margin-top: 44px;
+    margin-bottom: 26px;
+  }
+  body {
+    font-weight: 300;
+    font-size: 16px;
+  }
+  p {
+    margin-bottom: 23px;
+  }
   .container {
     width: 629px;
   }
@@ -5786,7 +5933,7 @@ div[class*="item-page-"] table p {
     line-height: inherit !important;
   }
   #container .fluid-container.page-header {
-    height: 147px;
+    height: 146px;
   }
   #container .fluid-container.page-header h1 {
     left: 15px;
@@ -5794,22 +5941,26 @@ div[class*="item-page-"] table p {
     font-weight: 600;
     line-height: 1.29;
     text-align: center;
-    padding: 11px 0;
     margin: 0;
+    bottom: 56px;
   }
   #container .fluid-container.page-header .logo_estudi {
     display: block;
     max-width: 109px;
     margin-top: 58px;
   }
-  #container .fluid-container.page-header .container {
+  #container .fluid-container.page-header.default {
+    height: 191px;
+  }
+  #container .fluid-container.page-header.default .container {
     padding: 0;
   }
-  #container .fluid-container.page-header .container h1 {
-    font-size: 19px;
-    font-weight: 400;
+  #container .fluid-container.page-header.default .container h1 {
+    bottom: 56px;
+    font-size: 23px;
+    letter-spacing: 0;
   }
-  #container .fluid-container.page-header .container h1.study {
+  #container .fluid-container.page-header.default .container h1.study {
     left: 130px;
     margin: 0;
     bottom: 19px;
@@ -5870,6 +6021,12 @@ div[class*="item-page-"] table p {
 }
 /* Medium Devices, Desktops */
 @media only screen and (min-width: 992px) {
+  .item-page-default h1, .item-page-default h2, .item-page-default h3, .item-page-default p, .item-page-default ul, .item-page-default ol, .item-page-default table, .item-page-default div, .item-page-default span {
+    max-width: 676px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .container {
     width: 830px;
   }
@@ -5958,6 +6115,12 @@ div[class*="item-page-"] table p {
   }
 }
 @media only screen and (min-width: 1199px) {
+  .item-page-default h1, .item-page-default h2, .item-page-default h3, .item-page-default p, .item-page-default ul, .item-page-default ol, .item-page-default table, .item-page-default div, .item-page-default span {
+    max-width: 676px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .container {
     width: 1180px;
   }

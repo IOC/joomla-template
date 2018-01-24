@@ -101,7 +101,6 @@ $imgpath = 'templates/' . $app->getTemplate() . '/images/';
                 <span class="custom-icon" aria-hidden="true"></span>
                 <span class="string-search hidden-md hidden-sm hidden-xs"><?php echo JText::_('JSEARCH_FILTER_SUBMIT');?></span>
             </button>
-            <span class="hidden-md hidden-sm hidden-xs">|</span>
         </li>
     </ul>
 </div>

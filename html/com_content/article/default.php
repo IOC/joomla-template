@@ -146,6 +146,8 @@ JHtml::_('behavior.caption');
             $customclass = 'container ioc-news-container';
         } else if (!empty($subpage)) {
             $customclass = 'subpagebody';
+        } else if ($pageclass == 'default') {
+            $customclass = 'article-default';
         }
     ?>
     <div itemprop="articleBody" class="<?php echo $customclass;?>">

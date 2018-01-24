@@ -32,15 +32,30 @@
         }
     }
 }
+
+@mixin max-width-default-article($maxwidth) {
+    .item-page-default {
+        h1, h2, h3, p, ul, ol, table,
+        div, span {
+            max-width: $maxwidth;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
 @media only screen and (max-width: 991px){
     @include custom-navbar-nav();
+    @include max-width-default-article(676px);
     body {
         font-weight: 300;
-        font-size: 13px;
+        font-size: 16px;
     }
     .tiny-search,
     .tiny-campus {
         float: right;
+        max-width: 40px;
     }
     #navigation {
         .container {
@@ -74,6 +89,7 @@
                     li {
                         padding-top: 7px;
                         padding-bottom: 7px;
+                        margin: 0;
                         &:last-child {
                             border-bottom: none;
                         }
@@ -706,6 +722,31 @@
 }
 
 @media only screen and (max-width: 480px) {
+    @include max-width-default-article(290px);
+    h1 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 17px;
+    }
+    h2 {
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 30px;
+        margin-bottom: 19px;
+    }
+    h3 {
+        font-size: 15px;
+        font-weight: 500;
+        margin-top: 27px;
+        margin-bottom: 18px;
+    }
+    body {
+        font-weight: 300;
+        font-size: 13.5px;
+    }
+    p {
+        margin-bottom: 17px;
+    }
     .header {
         .navbar-default {
             .navbar-header {
@@ -713,21 +754,21 @@
                     margin-top: 0;
                     margin-left: 15px;
                     .logo {
-                        padding-top: 14px;
+                        padding-top: 19px;
                         width: 100px;
                     }
                 }
             }
         }
         .fake-menu-bg {
-            height: 50px;
+            height: 60px;
         }
         .navbar-header {
             .tiny-search,
             .tiny-campus {
                 button {
                     margin-top: 0;
-                    padding: 14px 10px 0;
+                    padding: 19px 10px 0;
                     .custom-icon {
                         &:before {
                             font-size: 16px;
@@ -738,14 +779,14 @@
                 }
             }
             .navbar-toggle {
-                margin-top: 4px !important;
+                margin: 9px 15px 0 10px !important;
             }
         }
     }
     #navigation {
         .navbar-default {
             .navbar-collapse {
-                top: 50px;
+                top: 60px;
             }
         }
     }
@@ -867,6 +908,16 @@
         }
     }
     #container {
+        .fluid-container {
+            &.page-header {
+                &.default {
+                    height: 147px;
+                    h1 {
+                        bottom: 33px;
+                    }
+                }
+            }
+        }
         .container {
             &.study-main {
                 margin-top: 0;
@@ -1150,7 +1201,13 @@
     #container {
         .fluid-container {
             &.page-header {
-                height: 147px;
+                height: 146px;
+                &.default {
+                    height: 191px;
+                    h1 {
+                        bottom: 33px;
+                    }
+                }
                 h1 {
                     left: 15px;
                     font-size: 14px;
@@ -1325,6 +1382,30 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width: 481px) and (max-width: 767px) {
+    h1 {
+        font-size: 23px;
+        font-weight: 500;
+        margin-bottom: 32px;
+    }
+    h2 {
+        font-size: 22px;
+        font-weight: 500;
+        margin-top: 52px;
+        margin-bottom: 26px;
+    }
+    h3 {
+        font-size: 19px;
+        font-weight: 500;
+        margin-top: 44px;
+        margin-bottom: 26px;
+    }
+    body {
+        font-weight: 300;
+        font-size: 16px;
+    }
+    p {
+        margin-bottom: 23px;
+    }
     #navigation {
         .navbar-default {
             .navbar-header {
@@ -1542,6 +1623,31 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+    @include max-width-default-article(626px);
+    h1 {
+        font-size: 23px;
+        font-weight: 500;
+        margin-bottom: 32px;
+    }
+    h2 {
+        font-size: 22px;
+        font-weight: 500;
+        margin-top: 52px;
+        margin-bottom: 26px;
+    }
+    h3 {
+        font-size: 19px;
+        font-weight: 500;
+        margin-top: 44px;
+        margin-bottom: 26px;
+    }
+    body {
+        font-weight: 300;
+        font-size: 16px;
+    }
+    p {
+        margin-bottom: 23px;
+    }
     .container {
         width: 629px;
     }
@@ -1585,33 +1691,37 @@
     #container {
         .fluid-container {
             &.page-header {
-                height: 147px;
+                height: 146px;
                 h1 {
                     left: 15px;
                     font-size: 14px;
                     font-weight: 600;
                     line-height: 1.29;
                     text-align: center;
-                    padding: 11px 0;
                     margin: 0;
+                    bottom: 56px;
                 }
                 .logo_estudi {
                     display: block;
                     max-width: 109px;
                     margin-top: 58px;
                 }
-                .container {
-                    padding: 0;
-                    h1 {
-                        font-size: 19px;
-                        font-weight: 400;
-                        &.study {
-                            left: 130px;
-                            margin: 0;
-                            bottom: 19px;
-                            padding: 0;
-                            max-width: 100%;
-                            text-align: left;
+                &.default {
+                    height: 191px;
+                    .container {
+                        padding: 0;
+                        h1 {
+                            bottom: 56px;
+                            font-size: 23px;
+                            letter-spacing: 0;
+                            &.study {
+                                left: 130px;
+                                margin: 0;
+                                bottom: 19px;
+                                padding: 0;
+                                max-width: 100%;
+                                text-align: left;
+                            }
                         }
                     }
                 }
@@ -1709,6 +1819,7 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width: 992px) {
+    @include max-width-default-article(676px);
     .container {
         width: 830px;
     }
@@ -1852,6 +1963,7 @@
 }
 
 @media only screen and (min-width: 1199px) {
+    @include max-width-default-article(676px);
     .container {
         width: 1180px;
     }
