@@ -29,9 +29,11 @@ headroom.init();
 		var duration = 500;
 		$(window).scroll(function() {
 			if ($(this).scrollTop() > offset) {
-				$('.back-to-top').fadeIn(duration);
+				//$('.back-to-top').fadeIn(duration);
+				$('.back-to-top').addClass('slidein');
 			} else {
-				$('.back-to-top').fadeOut(duration);
+				//$('.back-to-top').fadeOut(duration);
+				$('.back-to-top').removeClass('slidein');
 			}
 		});
 		$('.back-to-top').click(function(event) {

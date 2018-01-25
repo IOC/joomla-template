@@ -31,13 +31,13 @@ else
             $output = '<label for="mod-search-searchword" class="element-invisible">' . $label . '</label> ';
             $output .= '<input name="searchword" id="mod-search-searchword" maxlength="' . $maxlength . '"  class="inputbox search-query" type="search"' . $width;
             $output .= ' placeholder="' . $text . '" />';
-            $output .= '<button type="reset" title="Esborra" class="btn btn-default btn-reset-search"><span class="glyphicon glyphicon-remove"></span></button>';
-
+            //$output .= '<button type="reset" title="Esborra" class="btn btn-default btn-reset-search"><span class="glyphicon glyphicon-remove"></span></button>';
+            $output .= '<span class="custom-icon delete visible-xs visible-sm"></span>';
             if ($button) :
                 if ($imagebutton) :
                     $btn_output = ' <input type="image" alt="' . $button_text . '" class="button" src="' . $img . '" onclick="this.form.searchword.focus();"/>';
                 else :
-                    $btn_output = ' <button class="button btn btn-primary hidden-sm hidden-xs btn-search" onclick="this.form.searchword.focus();">' . $button_text . '</button>';
+                    $btn_output = ' <button class="btn-search" onclick="this.form.searchword.focus();">&nbsp;</button>';
                 endif;
 
                 switch ($button_pos) :

@@ -269,20 +269,21 @@ $imgpath = 'templates/' . $app->getTemplate() . '/images/';
             <jdoc:include type="modules" name="footer-top-col3" style="xhtml" />
             <jdoc:include type="modules" name="footer-top-col4" style="xhtml" />
         </div>
-        <div class="middle">
-            <div class="mid-col">
-                <jdoc:include type="modules" name="footer-opening" style="xhtml" />
-            </div>
-        </div>
     </div>
-    <div class="visible-xs visible-sm container">
-        <div class="mobile social">
+    <div class="visible-xs visible-sm container mobile">
+        <div class="social">
+            <span class="text">Segueix-nos:</span>
             <a href="https://es.linkedin.com/in/ioc-institut-obert-de-catalunya-bb4805b1">
                 <span class="custom-icon linkedin"></span>
             </a>
             <a href="https://twitter.com/ioc"><span class="custom-icon twitter"></span></a>
             <a href="https://vimeo.com/institutobert"><span class="custom-icon vimeo"></span></a>
-            <a href="http://ioc-edu.blogspot.com.es/"><span class="custom-icon blogger"></span></a>
+        </div>
+        <div class="contacte">
+            <span class="text">Contacta'ns:</span>
+            <a href="#">
+                <span class="custom-icon correu"></span>
+            </a>
         </div>
     </div>
     <div class="bottom container">
@@ -324,7 +325,7 @@ $imgpath = 'templates/' . $app->getTemplate() . '/images/';
 </div><!-- end panelnav -->
 <?php  endif;// end panelnav  ?>
 <!-- menu slide -->
-<a href="#" class="back-to-top hidden-xs">&nbsp;</a>
+<a href="#" class="back-to-top"><span class="custom-icon"></span><span class="hidden-xs hidden-sm text"><?php echo JText::_('TPL_IOC_BACKTOTOP'); ?></span></a>
 <jdoc:include type="modules" name="debug" />
 </section></div>
 <?php

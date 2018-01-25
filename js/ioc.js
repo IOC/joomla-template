@@ -88,9 +88,23 @@
             $('.social, .ioc-languages').removeClass('bck-displayed');
         });
 
-        $(document).on('click', '.btn-reset-search', function(e) {
-            $('#mod-search-searchword').val('');
-            $('#mod-search-searchword').focus();
+        $(document).on('click', '.custom-icon.delete', function(e) {
+            var $node = $(this).siblings('input');
+            $node.val('');
+            $node.focus();
+        });
+
+        $(document).on('show.bs.collapse', '.form-search', function(e) {
+            $('header').addClass('big');
+            $('.form-search .btn-search').addClass('big');
+        });
+
+        $(document).on('hide.bs.collapse', '.form-search', function(e) {
+            $('header').removeClass('big');
+        });
+
+        $(document).on('hidden.bs.collapse', '.form-search', function(e) {
+            $('.form-search .btn-search').removeClass('big');
         });
 
 /*        $(document).on('click', '.container .panel-heading a', function(e) {

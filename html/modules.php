@@ -132,11 +132,7 @@ function modChrome_menu_footer($module, &$params, &$attribs)
 function modChrome_banner_footer($module, &$params, &$attribs)
 {
     if (!empty ($module->content)) : ?>
-        <?php if ($attribs['name'] == 'footer-opening') : ?>
-            <div class="container">
-        <?php else : ?>
-            <div class="top-col">
-        <?php endif; ?>
+        <div class="top-col">
             <div class="hidden-xs hidden-sm block <?php if ($params->get('moduleclass_sfx')!='') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
                 <div class="moduletable">
                     <?php if ($module->showtitle != 0) : ?>
