@@ -26,6 +26,15 @@ if ($menu->getActive() == $menu->getDefault($lang->getTag())
     $frontpage = '';
 }
 $imgpath = 'templates/' . $app->getTemplate() . '/images/';
+$itemid = JRequest::getVar('Itemid');
+$active = $menu->getItem($itemid);
+$params = $menu->getParams( $active->id );
+$pageclass = $params->get( 'pageclass_sfx' );
+$suffixes = array(
+    'logo_',
+    'subpage_'
+);
+$pageclass = str_replace($suffixes, '', $pageclass);
 ?>
 <body class="<?php echo $frontpage;?>">
 <?php
@@ -34,7 +43,7 @@ $imgpath = 'templates/' . $app->getTemplate() . '/images/';
   <?php  } ?>
 <div id="wrap">
 <!--Navigation-->
-<header id="header" class="header header--fixed hide-from-print" >
+<header id="header" class="header header--fixed hide-from-print <?php echo $pageclass;?>">
 <div id="navigation">
 <div class="fake-menu-bg"></div>
 <div class="navbar navbar-default">
@@ -56,14 +65,14 @@ $imgpath = 'templates/' . $app->getTemplate() . '/images/';
     </div>
     <!-- Campus -->
     <?php  if ($this->countModules('login-campus')) : ?>
-        <div class="login-campus-mobile col-md-1 col-lg-1 col-sm-1 visible-xs visible-sm tiny-campus">
+        <div class="login-campus-mobile visible-xs visible-sm tiny-campus">
             <button type="button" class="btn-lg" data-toggle="modal" data-target="#login-campus">
                 <span class="custom-icon"></span>
             </button>
         </div>
     <?php endif; ?>
     <!-- Search -->
-    <div class="col-md-1 col-lg-1 col-sm-1 visible-xs visible-sm tiny-search">
+    <div class="visible-xs visible-sm tiny-search">
         <button type="button" class="btn-lg" data-toggle="collapse" data-target="#search">
             <!-- <span class="glyphicon glyphicon-search" aria-hidden="true"></span> -->
             <span class="custom-icon"></span>

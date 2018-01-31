@@ -39,6 +39,7 @@
   border: 1px dashed #d9534f;
   padding: 10px;
   background-color: #fafafa;
+  flex-basis: 50%;
   height: 100%;
 }
 #tinymce .study-main .study-overview .study-overview-headline, #tinymce .study-main .study-overview .study-overview-text {

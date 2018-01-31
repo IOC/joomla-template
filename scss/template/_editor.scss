@@ -96,6 +96,7 @@ $ioc-accent:    #01c1b9;
         display: flex;
         .study-overview {
             @include borderioc(1px, $custom_red);
+            flex-basis: 50%;
             height: 100%;
             .study-overview-headline,
             .study-overview-text {

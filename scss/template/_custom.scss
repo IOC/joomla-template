@@ -88,15 +88,78 @@
     background-image: url('../images/familia-' + $cicle + '-icon.png');
 }
 
-@mixin breadcrumb($study, $color) {
+@mixin custom-color-study($study: null, $color1: $ioc-bd-campus, $color2: $ioc-bg-header, $color3: $ioc-semiheader-mb, $color4: $ioc-accent) {
+    @if ($study) {
+        .#{$study} {
+            .navbar-default {
+                .login-clone-campus {
+                    background-color: $color2;
+                    border-color: $color1;
+                }
+            }
+        }
+        .item-page-study {
+            &.#{$study} {
+                .study-overview .study-overview-headline::after,
+                .study-overview-menu .study-overview-headline::after {
+                    border-color: $color3;
+                }
+                .study-panel .study-data .study-col .study-dates .study-block .semiheader {
+                    color: $color3;
+                }
+                .study-panel {
+                    .study-data {
+                        .study-col {
+                            .study-dates {
+                                .study-block {
+                                    .semiheader {
+                                        color: $color3;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .study-tabs {
+                    .nav-tabs {
+                        li {
+                            &.active {
+                                a {
+                                    color: $color4;
+                                    border-bottom-color: $color4;
+                                }
+                            }
+                            a:hover {
+                                color: $color4;
+                            }
+                        }
+                    }
+                }
+                .study-more-info {
+                    .title {
+                        h4 {
+                            color: $color4;
+                        }
+                    }
+                }
+            }
+        }
+    } @else {
+        .navbar-default {
+            .login-clone-campus {
+                background-color: $color2;
+                border-color: $color1;
+            }
+        }
+    }
     div[class*="item-page-#{$study}"] {
         .container {
             &:before {
-                background-color: $color;
+                background-color: $color1;
             }
         }
         .ioc-breadcrumb {
-            background-color: $color;
+            background-color: $color1;
         }
     }
 }
@@ -132,7 +195,7 @@
 @mixin study-color($color) {
     .study-overview .study-overview-headline::after,
     .study-overview-menu .study-overview-headline::after {
-        color: $color;
+        border-color: $color;
     }
     .study-panel .study-data .study-col .study-dates .study-block .semiheader {
         color: $color;
@@ -216,7 +279,7 @@ a {
 
 h1, h2, h3, h4, h5 {
     font-family: "Montserrat", sans-serif;
-    color: $ioc-title;
+    color: $ioc-text;
 }
 
 h1 {
@@ -303,7 +366,7 @@ button:focus {
     }
 }
 
-.headroom--not-top {
+header.headroom--not-top {
     height: $ioc-header-mini;
     &.big {
         .fake-menu-bg {
@@ -363,7 +426,8 @@ button:focus {
         .login-clone-campus {
             display: inline-block;
             float: right;
-            border: 3px solid $ioc-bd-campus;
+            border-color: $ioc-bd-campus;
+            background-color: $ioc-bg-header;
         }
     }
 }
@@ -517,8 +581,8 @@ button:focus {
     }
     .navbar-toggle {
         position: relative;
-        margin: 10px 15px 0 15px !important;
-        width: 29px;
+        margin: 10px 15px 0 19px !important;
+        width: 23px;
         overflow: hidden;
         border-radius: 0;
         &:hover {
@@ -535,8 +599,10 @@ button:focus {
         }
         .icon-bar {
             position: absolute;
-            right: 0px;
-            width: 29px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 23px;
             height: 2px;
             background-color: $ioc-white;
             border-radius: 0;
@@ -551,7 +617,7 @@ button:focus {
             transition: .35s ease-in-out;
             margin: 0;
             &:nth-child(2) {
-                top: 13px;
+                top: 14px;
             }
 
             &:nth-child(3) {
@@ -560,7 +626,7 @@ button:focus {
             }
 
             &:nth-child(4) {
-                top: 27px;
+                top: 26px;
             }
         }
 
@@ -633,9 +699,9 @@ button:focus {
         min-width: 198px;
         padding: 7.5px 15px;
         height: 36px;
-        border: 3px solid $ioc-bg-header;
-        background-color: $ioc-bg-header;
         padding: 9px 14px;
+        border-width: 3px;
+        border-style: solid;
         &:hover {
             color: $ioc-accent;
             text-decoration: none;
@@ -794,10 +860,11 @@ button:focus {
     padding-top: 0;
 }
 
-@include breadcrumb('', $ioc-bg-header);
-@include breadcrumb('btx', $ioc-study-btx);
-@include breadcrumb('eoi-', $ioc-breadcrumb-eoi);
-@include breadcrumb('fp-', $ioc-breadcrumb-fp);
+@include custom-color-study();
+@include custom-color-study('btx', $ioc-study-btx);
+@include custom-color-study('eoi-', $ioc-breadcrumb-eoi);
+@include custom-color-study('fp-', $ioc-breadcrumb-fp);
+@include custom-color-study('pau', $ioc-pau-1, $ioc-pau-2, $ioc-pau-3, $ioc-pau-4);
 
 .ioc-parent-breadcrumb {
     position: absolute;
@@ -2177,7 +2244,7 @@ body {
                     background-color: $ioc-study-pau;
                     background-image: url('../images/pau-header-bck.jpg');
                     h1 {
-                        color: $ioc-title-study2;
+                        color: $ioc-title-study7;
                     }
                 }
             }
@@ -2351,9 +2418,9 @@ body {
     }
     .study-overview-headline {
         position: relative;
-        font-size: 20px;
+        font-size: 21px;
         font-weight: 300;
-        line-height: 1.4;
+        line-height: 1.33;
         text-align: center;
         padding-bottom: 40px;
         margin-bottom: 40px;
@@ -2362,17 +2429,18 @@ body {
         }
         &:after {
             position: absolute;
-            content: '_____';
-            color: $ioc-accent;
+            content: '';
+            border-bottom: 1px solid $ioc-accent;
             bottom: 0;
             left: 0;
-            width: 100%;
-            text-align: center;
+            right: 0;
+            margin: 0 auto;
+            width: 53px;
         }
     }
     .study-overview-text {
-        font-size: 14px;
-        line-height: 1.79;
+        font-size: 15px;
+        line-height: 1.67;
         text-align: center;
         p {
             margin: 0;
@@ -2384,7 +2452,7 @@ body {
     flex: 1 1 auto;
     margin-left: 20px;
     .study-data {
-        @include flexbox(row, nowrap, center);
+        @include flexbox(row, nowrap, right);
         align-items: baseline;
         .study-col {
             @include flexbox(column, wrap, space-between);
@@ -2401,9 +2469,9 @@ body {
                 margin: 0 auto;
             }
             h3, h4 {
-                font-size: 10.5px;
+                font-size: 11.5px;
                 letter-spacing: 0.9px;
-                font-weight: 500;
+                font-weight: 400;
             }
             h4 {
                 color: $ioc-text;
@@ -2414,15 +2482,16 @@ body {
                 text-transform: uppercase;
                 line-height: 30px;
                 height: 30px;
+                font-weight: 600;
             }
             .study-dates {
-                border: 1px solid $ioc-moreinfo-tab;
+                border: 1px solid $ioc-bg-study-date;
                 height: 161px;
                 padding: 0 24px;
                 @include flexbox(column, nowrap, center);
                 overflow: hidden;
                 h3 {
-                    color: rgba(53, 73, 89, 0.52);
+                    color: $ioc-text;
                     text-align: center;
                     margin: 0 0 5px 0;
                     text-transform: uppercase;
@@ -2444,6 +2513,9 @@ body {
                         font-size: 13px;
                     }
                 }
+            }
+            .study-dates + .study-dates {
+                border-top-width: 0;
             }
         }
         .study-col + .study-col {
@@ -2495,9 +2567,10 @@ body {
             margin-bottom: 89px;
             p {
                 width: 100%;
+                max-width: 659px;
                 font-size: 20px;
                 font-weight: 300;
-                line-height: 28px;
+                line-height: 1.4;
             }
         }
         .subpage-banner {
@@ -2506,7 +2579,7 @@ body {
             width: 100%;
             background-position: top center;
             background-repeat: no-repeat;
-            background-size: 94%;
+            background-size: 100%;
         }
         .subpage-filter {
             margin-top: 206px;
@@ -2720,7 +2793,7 @@ body {
         background-position: center top;
         .subpage-text {
             p {
-                margin: 0;
+                margin: 0 auto;
             }
             margin-bottom: 80px;
         }
@@ -2785,25 +2858,26 @@ body {
                 margin: auto;
                 background-repeat: no-repeat;
                 background-position: center center;
+                background-size: cover;
                 display: inline-block;
             }
             &.suport {
-                top: 48px;
+                top: 42px;
                 width: 41px;
-                height: 47px;
-                background-image: url('../images/centres-suport-icon.svg');
+                height: 54px;
+                background-image: url('../images/centres-suport-44x54px.svg');
             }
             &.access {
                 top: 42px;
                 width: 36px;
-                height: 52px;
-                background-image: url('../images/requisits-icon.svg');
+                height: 54px;
+                background-image: url('../images/requisits-44x54px.svg');
             }
             &.matricula {
-                top: 47px;
+                top: 42px;
                 width: 36px;
-                height: 49px;
-                background-image: url('../images/matricula-icon.svg');
+                height: 54px;
+                background-image: url('../images/matriculam-44x54px.svg');
             }
             &.objectius {
                 top: 27px;
@@ -2862,19 +2936,22 @@ body {
             text-decoration: none;
         }
         color: $ioc-text2;
+        overflow: hidden;
     }
     .icon-text {
         position: absolute;
         display: block;
         bottom: 40px;
-        padding: 0 19px;
-        margin: 0;
+        margin: 0 auto;
         font-size: 11px;
         font-weight: 500;
         line-height: 1.45;
         letter-spacing: 1.5px;
         text-align: center;
         width: 100%;
+        max-width: 70%;
+        left: 0;
+        right: 0;
         text-transform: uppercase;
         color: $ioc-text;
     }
@@ -3034,7 +3111,7 @@ body {
             background-image: url('../images/pau-parallax-img.jpg');
         }
         .subpage-banner {
-            background-image: url('../images/pau-banner.jpg');
+            background-image: url('../images/pau-banner.png');
         }
     }
 }
@@ -3122,12 +3199,12 @@ body {
     position: relative;
     clear: both;
     width: 100%;
-    height: 284px;
+    height: 249px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
-    margin-top: 105px;
+    margin-top: 132px;
     background-image: url('../images/default-parallax-img.jpg');
 }
 
@@ -3170,15 +3247,16 @@ body {
                 border: none;
                 border-bottom: 4px solid $ioc-study-tab;
                 text-transform: uppercase;
-                letter-spacing: 0.9px;
+                letter-spacing: 0.8px;
                 width: 100%;
                 text-align: center;
                 line-height: 58px;
+                max-height: 100%;
                 .tab-title {
                     display: inline-block;
                     vertical-align: middle;
-                    line-height: 1.4;
-                    width: 60%;
+                    line-height: 1.3;
+                    width: 61%;
                 }
             }
             &.active {
@@ -3199,9 +3277,13 @@ body {
         }
     }
     .tab-content {
-        font-size: 15px;
-        line-height: 22px;
-        padding: 53px 77px;
+        font-size: 16px;
+        line-height: 1.63;
+        max-width: 676px;
+        width: 100%;
+        padding: 53px 0;
+        margin: 0 auto;
+        color: $ioc-text2;
         h1, h2, h3 {
             color: $ioc-text;
             margin-top: 20px;
@@ -3296,11 +3378,11 @@ body {
                             position: relative;
                             font-size: 11px;
                             font-weight: 600;
-                            letter-spacing: 1.5px;
+                            letter-spacing: 1px;
                             color: $ioc-text2;
                             text-decoration: none;
                             outline: none;
-                            padding: 14px 23px;
+                            padding: 14px 33px;
                             display: inline-block;
                             width: 100%;
                             text-transform: uppercase;
@@ -3314,14 +3396,19 @@ body {
                             .custom-icon {
                                 &.plus {
                                     position: absolute;
-                                    top: 14px;
-                                    right: 23px;
+                                    top: 12px;
+                                    right: 33px;
                                     height: 14px;
                                     width: 14px;
-                                    background-image: url('../images/plus_invertit.png');
                                     color: $ioc-text2;
-                                    transform: rotate(-45deg);
+                                    transform: rotate(-45deg) translate(6px, -2px);
                                     transition: all .35s linear;
+                                    transform-origin: bottom right;
+                                    &:before {
+                                        content: '\e913';
+                                        font-family: 'ioc-icons';
+                                        font-size: 18px;
+                                    }
                                 }
                             }
                         }
@@ -3348,8 +3435,11 @@ body {
 .tiny-campus {
     padding: 0;
     button {
+        line-height: 1;
+        font-size: 17px;
         background-color: transparent;
         border: none;
+        height: auto;
         &[aria-expanded="true"],
         &:hover {
             color: $ioc-accent;
@@ -3392,7 +3482,7 @@ body {
         &:before {
             content: '\e910';
             font-family: 'ioc-icons';
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 600;
         }
     }
@@ -3410,9 +3500,20 @@ body {
             font-family: 'ioc-icons';
             font-size: 16px;
             font-weight: 300;
-            line-height: 23px;
+            line-height: 1.4;
         }
     }
+    /*button {
+        .custom-icon {
+            &:before {
+                content: '\e910';
+                font-family: 'ioc-icons';
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 23px;
+            }
+        }
+    }*/
 }
 
 .login-clone-campus {
@@ -3433,6 +3534,9 @@ body {
     width: 100%;
     text-align: right;
     padding-top: 0;
+    &.collapsing {
+        transition: all 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
+    }
     .container {
         padding: 0;
         .form-inline {
@@ -3906,7 +4010,7 @@ body {
             }
         }
         .transport {
-            @include flexbox();
+            @include flexbox(row, nowrap);
             height: 30px;
             span + span {
                 margin-left: 10px;
@@ -4043,23 +4147,35 @@ body {
                             &:hover {
                                 text-decoration: none;
                             }
+                            position: relative;
                             display: inline-block;
                             width: 100%;
-                            padding: 13px 18px;
+                            padding: 13px 33px;
                             color: $ioc-footer-title;
                             &.collapsed {
                                 .custom-icon {
-                                    transform: rotate(0deg);
+                                    &.plus {
+                                        transform: rotate(0deg);
+                                    }
                                 }
                             }
                             .custom-icon {
-                                float: right;
-                                width: 14px;
-                                height: 14px;
-                                transform: rotate(-45deg);
-                                transition: all .35s linear;
                                 &.plus {
-                                    background-image: url('../images/plus.png');
+                                    position: absolute;
+                                    top: 12px;
+                                    right: 33px;
+                                    height: 14px;
+                                    width: 14px;
+                                    color: $ioc-text2;
+                                    transform: rotate(-45deg) translate(6px, -2px);
+                                    transition: all .35s linear;
+                                    transform-origin: bottom right;
+                                    &:before {
+                                        content: '\e913';
+                                        font-family: 'ioc-icons';
+                                        font-size: 18px;
+                                        color: #fff;
+                                    }
                                 }
                             }
                         }
