@@ -2511,6 +2511,10 @@ body {
                     .study-date {
                         display: inline;
                         font-size: 13px;
+                        br {
+                            margin-top: -.5em;
+                            display: block;
+                        }
                     }
                 }
             }
@@ -2575,7 +2579,7 @@ body {
         }
         .subpage-banner {
             clear: both;
-            height: 30vw;
+            height: 28vw;
             width: 100%;
             background-position: top center;
             background-repeat: no-repeat;
@@ -2795,7 +2799,7 @@ body {
             p {
                 margin: 0 auto;
             }
-            margin-bottom: 80px;
+            margin-bottom: 86px;
         }
         .subpage-buttons {
             max-width: 720px;
@@ -3201,11 +3205,11 @@ body {
     width: 100%;
     height: 249px;
     background-attachment: fixed;
-    background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     margin-top: 132px;
     background-image: url('../images/default-parallax-img.jpg');
+    background-position: center;
 }
 
 .study-tabs {
@@ -3930,6 +3934,9 @@ body {
                     color: $ioc-footer-text;
                     letter-spacing: 1px;
                     padding: 0;
+                    &:hover {
+                        font-weight: 600;
+                    }
                 }
             }
         }
@@ -3937,7 +3944,7 @@ body {
     .contacte {
         margin-top: 64px;
         border-top: 1px solid $ioc-footer-bottom;
-        padding-top: 45px;
+        padding-top: 34px;
         .custom-icon {
             &.correu {
                 &:hover {
@@ -3968,14 +3975,13 @@ body {
             }
             .text {
                 font-weight: 600;
-                line-height: 26px;
+                line-height: 30px;
+                height: 30px;
             }
             .icons {
                 padding-left: 10px;
+                line-height: 30px;
             }
-        }
-        div + div {
-            margin-top: 11px;
         }
         .social {
             float: none;
@@ -4095,7 +4101,7 @@ body {
             border: none;
             .custom-icon {
                 &:before {
-                    font-size: 16px;
+                    font-size: 17px;
                 }
 
             }

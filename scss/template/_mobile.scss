@@ -682,7 +682,7 @@
             line-height: 1.25;
         }
         .panel-section-info {
-            margin-top: 27px;
+            margin-top: 45px;
             .panel {
                 &.panel-default {
                     .panel-heading {
@@ -777,19 +777,20 @@
             }
         }
         .bottom {
-            margin-bottom: 36px;
             margin-top: 32px;
+            padding-bottom: 36px;
             .ioc-banners {
-                padding-top: 0;
+                padding-top: 15px;
+                @include flexbox(row, wrap, center);
                 .moduletable {
                     width: 90%;
                 }
                 > div {
                     &:before {
-                        height: 50px;
+                        height: 40px;
                     }
                     img {
-                        max-height: 42px;
+                        max-height: 40px;
                     }
                 }
             }
@@ -1249,6 +1250,12 @@
                             }
                         }
                     }
+                    .panel-collapse {
+                        .panel-body {
+                            padding-top: 31px;
+                            max-width: 256px;
+                        }
+                    }
                 }
             }
         }
@@ -1333,9 +1340,16 @@
     .footer {
         .mobile {
             text-align: center;
+            padding: 0 10px;
             .contacte,
             .social {
                 float: none;
+                .text {
+                    margin-right: 10px;
+                }
+            }
+            .social {
+                padding: 0;
             }
         }
         #footer-collapse {
@@ -1629,21 +1643,6 @@
     }
 
     #myCarousel {
-        .carousel-indicators {
-            // li {
-            //     border-color: $ioc-link-navbar;
-            //     &.active {
-            //         background-color: $ioc-link-navbar;
-            //         border-color: $ioc-link-navbar;
-            //     }
-            //     &:first-child {
-            //         border-color: $ioc-link-navbar;
-            //     }
-            // }
-            // position: absolute;
-            // top: 360px;
-            // height: 15px;
-        }
         .item {
             height: 360px;
             .logo-ioc-large {
@@ -1742,7 +1741,17 @@
             width: 100%;
         }
     }
-
+    .study-tabs {
+        .panel-section-info {
+            .panel.panel-default {
+                .panel-collapse {
+                    .panel-body {
+                        max-width: 85%;
+                    }
+                }
+            }
+        }
+    }
     .modal-modules {
         .title {
             margin-top: 51px;
@@ -2092,7 +2101,12 @@
                 .top-col {
                     width: 189px;
                     .contacte {
-                        margin-top: 13px;
+                        margin-top: 11px;
+                    }
+                    .horari {
+                        div + div{
+                            margin-top: 47px;
+                        }
                     }
                 }
             }
@@ -2215,6 +2229,14 @@
     }
 }
 
+@media only screen and (max-width: 1198px) {
+    .footer {
+        .contacte {
+            border-top: none;
+        }
+    }
+}
+
 @media only screen and (min-width: 1199px) {
     @include max-width-default-article(676px);
     .container {
@@ -2331,7 +2353,12 @@
                 .top-col {
                     width: 267px;
                     .contacte {
-                        margin-top: 64px;
+                        margin-top: 75px;
+                    }
+                    .horari {
+                        div + div{
+                            margin-top: 0;
+                        }
                     }
                 }
             }

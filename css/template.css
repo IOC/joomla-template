@@ -3268,6 +3268,10 @@ body #wrap section {
   display: inline;
   font-size: 13px;
 }
+.study-panel .study-data .study-col .study-dates .study-block .study-date br {
+  margin-top: -0.5em;
+  display: block;
+}
 .study-panel .study-data .study-col .study-dates + .study-dates {
   border-top-width: 0;
 }
@@ -3323,7 +3327,7 @@ body #wrap section {
 }
 .subpage-text-buttons-banner .subpage-banner, .subpage-buttons-filter .subpage-banner {
   clear: both;
-  height: 30vw;
+  height: 28vw;
   width: 100%;
   background-position: top center;
   background-repeat: no-repeat;
@@ -3534,7 +3538,7 @@ body #wrap section {
   background-position: center top;
 }
 .subpage-only-buttons .subpage-text, .subpage-text-buttons .subpage-text, .subpage-text-buttons-banner .subpage-text, .subpage-buttons-filter .subpage-text {
-  margin-bottom: 80px;
+  margin-bottom: 86px;
 }
 .subpage-only-buttons .subpage-text p, .subpage-text-buttons .subpage-text p, .subpage-text-buttons-banner .subpage-text p, .subpage-buttons-filter .subpage-text p {
   margin: 0 auto;
@@ -3903,11 +3907,11 @@ body #wrap section {
   width: 100%;
   height: 249px;
   background-attachment: fixed;
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   margin-top: 132px;
   background-image: url('../images/default-parallax-img.jpg');
+  background-position: center;
 }
 .study-tabs {
   clear: both;
@@ -4596,10 +4600,13 @@ body #wrap section {
   letter-spacing: 1px;
   padding: 0;
 }
+.footer .top-col ul li a:hover {
+  font-weight: 600;
+}
 .footer .contacte {
   margin-top: 64px;
   border-top: 1px solid #7b8f94;
-  padding-top: 45px;
+  padding-top: 34px;
 }
 .footer .contacte .custom-icon.correu:hover {
   color: #4bcdaf;
@@ -4631,13 +4638,12 @@ body #wrap section {
 }
 .footer .contacte div .text, .footer .horari div .text {
   font-weight: 600;
-  line-height: 26px;
+  line-height: 30px;
+  height: 30px;
 }
 .footer .contacte div .icons, .footer .horari div .icons {
   padding-left: 10px;
-}
-.footer .contacte div + div, .footer .horari div + div {
-  margin-top: 11px;
+  line-height: 30px;
 }
 .footer .contacte .social, .footer .horari .social {
   float: none;
@@ -4756,7 +4762,7 @@ body #wrap section {
   border: none;
 }
 .footer .mobile .contacte .custom-icon:before, .footer .mobile .social .custom-icon:before {
-  font-size: 16px;
+  font-size: 17px;
 }
 .footer .mobile .text {
   font-size: 11px;
@@ -5433,7 +5439,7 @@ div[class*="item-page-"] table p {
     line-height: 1.25;
   }
   .study-tabs .panel-section-info {
-    margin-top: 27px;
+    margin-top: 45px;
   }
   .study-tabs .panel-section-info .panel.panel-default .panel-heading {
     background-color: #f4f8ff;
@@ -5491,20 +5497,28 @@ div[class*="item-page-"] table p {
     display: none;
   }
   .footer .bottom {
-    margin-bottom: 36px;
     margin-top: 32px;
+    padding-bottom: 36px;
   }
   .footer .bottom .ioc-banners {
-    padding-top: 0;
+    padding-top: 15px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 0 auto;
+    justify-content: center;
   }
   .footer .bottom .ioc-banners .moduletable {
     width: 90%;
   }
   .footer .bottom .ioc-banners > div:before {
-    height: 50px;
+    height: 40px;
   }
   .footer .bottom .ioc-banners > div img {
-    max-height: 42px;
+    max-height: 40px;
   }
   .footer .footer2 {
     font-size: 11px;
@@ -5876,6 +5890,10 @@ div[class*="item-page-"] table p {
   .study-more-info .panel-section-info .panel.panel-default .panel-heading .panel-title a .custom-icon.plus, .study-tabs .panel-section-info .panel.panel-default .panel-heading .panel-title a .custom-icon.plus {
     right: 18px;
   }
+  .study-more-info .panel-section-info .panel.panel-default .panel-collapse .panel-body, .study-tabs .panel-section-info .panel.panel-default .panel-collapse .panel-body {
+    padding-top: 31px;
+    max-width: 256px;
+  }
   .study-more-info {
     margin-top: 54px;
   }
@@ -5924,9 +5942,16 @@ div[class*="item-page-"] table p {
   }
   .footer .mobile {
     text-align: center;
+    padding: 0 10px;
   }
   .footer .mobile .contacte, .footer .mobile .social {
     float: none;
+  }
+  .footer .mobile .contacte .text, .footer .mobile .social .text {
+    margin-right: 10px;
+  }
+  .footer .mobile .social {
+    padding: 0;
   }
   .footer #footer-collapse .panel-group .panel-default .panel-heading h3 a {
     padding: 14px 18px;
@@ -6229,6 +6254,9 @@ div[class*="item-page-"] table p {
   .ioc-news img {
     width: 100%;
   }
+  .study-tabs .panel-section-info .panel.panel-default .panel-collapse .panel-body {
+    max-width: 85%;
+  }
   .modal-modules .title {
     margin-top: 51px;
   }
@@ -6480,7 +6508,10 @@ div[class*="item-page-"] table p {
     width: 189px;
   }
   .footer .container .top .top-col .contacte {
-    margin-top: 13px;
+    margin-top: 11px;
+  }
+  .footer .container .top .top-col .horari div + div {
+    margin-top: 47px;
   }
   .footer .location .map {
     width: 100%;
@@ -6552,6 +6583,11 @@ div[class*="item-page-"] table p {
   }
   .social a + a {
     margin-left: 5px;
+  }
+}
+@media only screen and (max-width: 1198px) {
+  .footer .contacte {
+    border-top: none;
   }
 }
 @media only screen and (min-width: 1199px) {
@@ -6626,7 +6662,10 @@ div[class*="item-page-"] table p {
     width: 267px;
   }
   .footer .container .top .top-col .contacte {
-    margin-top: 64px;
+    margin-top: 75px;
+  }
+  .footer .container .top .top-col .horari div + div {
+    margin-top: 0;
   }
   .footer .location .map {
     width: 243px;
