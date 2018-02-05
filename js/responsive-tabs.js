@@ -125,7 +125,7 @@ var fakewaffle = ( function ( $, fakewaffle ) {
 				$( tabContent )
 					.removeClass( 'tab-pane' )
 					.addClass( 'panel-body fw-previous-tab-pane' )
-					.appendTo( $( destinationId ) );
+					.prependTo( $( destinationId ) );
 
 				// Set active class to current active panel
 				if ($( tabContent ).hasClass('active')) {
@@ -153,7 +153,7 @@ var fakewaffle = ( function ( $, fakewaffle ) {
 			panelContents
 				.removeClass( 'panel-body fw-previous-tab-pane' )
 				.addClass( 'tab-pane' )
-				.appendTo( $( destination ) );
+				.prependTo( $( destination ) );
 
 		} );
 

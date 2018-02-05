@@ -43,6 +43,8 @@
 	$pattern = $this->params->get('pattern');
 	// Generator tag
 	$this->setGenerator(null);
+	// Set viewport
+	$doc->setMetadata('viewport', 'width=device-width, initial-scale=1.0, shrink-to-fit=no');
 	// Force latest IE & chrome frame
 	$doc->setMetadata('x-ua-compatible', 'IE=edge,chrome=1');
 	// Add javascripts

@@ -2,6 +2,7 @@
     $(document).ready(function($) {
         var $indicators = $('ol.carousel-indicators');
         var linkhash = '';
+        var isapanel = false;
         var $filtering = $('#ioc-filter-data');
         var $avisos = $('.ioc-front-page .avisos');
         var numavisos = 0;
@@ -13,6 +14,26 @@
         var $filter = $('.filter-dropdown');
         var currenthash = '#' + window.location.hash.replace(/[^a-zA-Z0-9_-]*/g, '');
         var $faqs = $('.panel-faqs');
+        var PLUGINVARS = {
+            HTML: {
+                PREVIOUS:       '<div class="button-tab-nav prev">Pas anterior</div>',
+                NEXT:           '<div class="button-tab-nav next">Pas següent</div>',
+                BUTTONDIV:      '<div class="button-div panel-body"></div>'
+            },
+            SELECTORS: {
+                BUTTONDIV:      '.button-div',
+                PANELGROUP:     '.study-tabs .panel-group.responsive',
+                PANELCOLLAPSE:  '.study-tabs .panel-collapse',
+                PANELNAVBUTTON: '.study-tabs .panel-group .button-tab-nav',
+                PANELTITLE:     '.panel-title a',
+                PANELS:         '.study-tabs .panel-group .panel-default',
+                PANELACT:       '.study-tabs .panel-group .panel-title a[aria-expanded="true"]',
+                TABCONTENT:     '.study-tabs .tab-content',
+                TABNAVBUTTON:   '.tab-content .button-tab-nav',
+                STUDYTABS:      '.study-tabs .nav-tabs li',
+                STUDYTABACT:    '.study-tabs .nav-tabs li.active'
+            }
+        };
 
         $('[data-toggle="tooltip"]').tooltip();
 
@@ -61,6 +82,104 @@
         if ($faqs) {
             faqsblockpanels();
         }
+
+        /**
+         * Function to navigate inside study-tabs
+         * @param  mov 'click, true, false'
+         * @param  tab which element is in use
+         */
+        var tabnavigation = function (mov = 'click', tab = true) {
+            var total = $(PLUGINVARS.SELECTORS.STUDYTABS).length;
+            var pos = $(PLUGINVARS.SELECTORS.STUDYTABACT).index();
+            // Toggle buttons depends on tab position
+            if (mov == 'click' && tab) {
+                $(PLUGINVARS.SELECTORS.TABNAVBUTTON + '.next').show();
+                $(PLUGINVARS.SELECTORS.TABNAVBUTTON + '.prev').show();
+                if (pos == total - 1) {
+                    $(PLUGINVARS.SELECTORS.TABNAVBUTTON + '.next').hide();
+                } else {
+                    if (pos == 0) {
+                        $(PLUGINVARS.SELECTORS.TABNAVBUTTON + '.prev').hide();
+                    }
+                }
+            } else {
+                if (tab) {
+                    // Move to next tab
+                    if (mov) {
+                        if (pos + 1 < total) {
+                            var $anchor = $(PLUGINVARS.SELECTORS.STUDYTABS).eq( pos + 1 ).find('a');
+                            $anchor.click();
+                        }
+                    } else {
+                        // Move to previous tab
+                        if (pos - 1 >= 0) {
+                            var $anchor = $(PLUGINVARS.SELECTORS.STUDYTABS).eq( pos - 1 ).find('a');
+                            $anchor.click();
+                        }
+                    }
+                } else {
+                    total = $(PLUGINVARS.SELECTORS.PANELS).length;
+                    pos = $(PLUGINVARS.SELECTORS.PANELACT).closest(PLUGINVARS.SELECTORS.PANELS).index();
+                    // Move to next panel
+                    if (mov) {
+                        if (pos + 1 < total) {
+                            var $anchor = $(PLUGINVARS.SELECTORS.PANELS).eq( pos + 1 ).find(PLUGINVARS.SELECTORS.PANELTITLE);
+                            $anchor.click();
+                        }
+                    } else {
+                        // Move to previous panel
+                        if (pos - 1 >= 0) {
+                            var $anchor = $(PLUGINVARS.SELECTORS.PANELS).eq( pos - 1 ).find(PLUGINVARS.SELECTORS.PANELTITLE);
+                            $anchor.click();
+                        }
+                    }
+                }
+            }
+        };
+
+        var createtabnavigationbuttons = function() {
+            if ($(PLUGINVARS.SELECTORS.TABCONTENT) && $(PLUGINVARS.SELECTORS.TABNAVBUTTON).length == 0) {
+                $(PLUGINVARS.SELECTORS.TABCONTENT).append( PLUGINVARS.HTML.PREVIOUS, PLUGINVARS.HTML.NEXT );
+                var pos = $(PLUGINVARS.SELECTORS.STUDYTABACT).index();
+                if (pos == 0) {
+                    $(PLUGINVARS.SELECTORS.TABNAVBUTTON + '.prev').hide();
+                }
+                if (pos == $(PLUGINVARS.SELECTORS.STUDYTABS).length - 1) {
+                    $(PLUGINVARS.SELECTORS.TABNAVBUTTON + '.next').hide();
+                }
+            }
+        };
+
+        createtabnavigationbuttons();
+
+        $(PLUGINVARS.SELECTORS.PANELGROUP).ready(function(e) {
+            var panelGroups = $( PLUGINVARS.SELECTORS.PANELCOLLAPSE );
+            var total = panelGroups.length;
+            $.each( panelGroups, function ( index, panelGroup ) {
+                $( panelGroup ).append( PLUGINVARS.HTML.BUTTONDIV );
+                if ( index > 0 && index < total - 1 ) {
+                    $( panelGroup ).find(PLUGINVARS.SELECTORS.BUTTONDIV).append( PLUGINVARS.HTML.PREVIOUS, PLUGINVARS.HTML.NEXT );
+                } else {
+                    if (index == 0) {
+                        $( panelGroup ).find(PLUGINVARS.SELECTORS.BUTTONDIV).append( PLUGINVARS.HTML.NEXT );
+                    } else {
+                        $( panelGroup ).find(PLUGINVARS.SELECTORS.BUTTONDIV).append( PLUGINVARS.HTML.PREVIOUS );
+                    }
+                }
+            } );
+        });
+
+        $(document).on('click', PLUGINVARS.SELECTORS.TABNAVBUTTON, function(e) {
+            tabnavigation($(this).hasClass('next'));
+        });
+
+        $(document).on('click', PLUGINVARS.SELECTORS.PANELNAVBUTTON, function(e) {
+            tabnavigation($(this).hasClass('next'), false);
+        });
+
+        $(document).on('shown.bs.tab', PLUGINVARS.SELECTORS.STUDYTABS + ' a', function(e) {
+            tabnavigation('click');
+        });
 
         $(document).on('shown.bs.modal', '.modal', function(e) {
             $(this).find('[autofocus]').focus();
@@ -170,17 +289,21 @@
             }
         });
 
-        $(document).on('click', '#collapse-tabs .panel-title a[href*=#], #panel-sections .panel-title a[href*=#]', function(e) {
+        $(document).on('click', '#collapse-tabs .panel-title a[href*=#], #panel-sections .panel-title a[href*=#], .study-tabs .nav-tabs li a[href*=#]', function(e) {
             e.preventDefault();
+            isapanel = $(this).closest('.panel-group, .study-tabs').hasClass('panel-group');
             linkhash = $(this).prop('hash');
         });
 
         $(document).on('shown.bs.collapse', '#collapse-other-info, #collapse-tabs, #panel-sections', function(e) {
             var position = $(linkhash).position();
+            var adjust = 0;
             if (position) {
-                $("html, body").animate({ scrollTop: position.top - 105}, 800);
+                adjust = (isapanel ? 105 : 170);
+                $("html, body").animate({ scrollTop: position.top - adjust}, 800);
             }
             linkhash = '';
+            isapanel = false;
         });
 
         $(document).on('click', '#ioc-filter-data li', function(e) {
@@ -212,7 +335,8 @@
                 $('#panel-sections a[href="' + linkhash +'"]').trigger('click');
             } else {
                 var position = $(linkhash).position();
-                $("html, body").animate({ scrollTop: position.top - 105}, 800);
+                var adjust = (isapanel ? 105 : 170);
+                $("html, body").animate({ scrollTop: position.top - adjust}, 800);
             }
         };
 

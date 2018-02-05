@@ -88,13 +88,34 @@
     background-image: url('../images/familia-' + $cicle + '-icon.png');
 }
 
-@mixin custom-color-study($study: null, $color1: $ioc-bd-campus, $color2: $ioc-bg-header, $color3: $ioc-semiheader-mb, $color4: $ioc-accent) {
+/**
+ * Funció per adaptar els colors de cada pàgina d'estudi
+ * @param  $study:  null               Nom de l'estudi
+ * @param  $colors: 1 Fons capçalera, 2 Títol capçalera, 3 Vora botó entrada al campus,
+ *                  4 Fons botó entrada al campus, 5 Títol dates, 6 Títol pestanyes,
+ *                  7 Vora pestanyes, 8 Botó, 9 Títols
+ */
+@mixin custom-color-study($study: null, $colors: null) {
     @if ($study) {
         .#{$study} {
             .navbar-default {
                 .login-clone-campus {
-                    background-color: $color2;
-                    border-color: $color1;
+                    background-color: nth($colors, 4);
+                    border-color: nth($colors, 3);
+                }
+            }
+        }
+        #container {
+            .fluid-container {
+                &.page-header {
+                    &.#{$study} {
+                        background-color: nth($colors, 1);
+                        .container {
+                            h1 {
+                                color: nth($colors, 2);
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -102,10 +123,7 @@
             &.#{$study} {
                 .study-overview .study-overview-headline::after,
                 .study-overview-menu .study-overview-headline::after {
-                    border-color: $color3;
-                }
-                .study-panel .study-data .study-col .study-dates .study-block .semiheader {
-                    color: $color3;
+                    border-color: nth($colors, 5);
                 }
                 .study-panel {
                     .study-data {
@@ -113,7 +131,7 @@
                             .study-dates {
                                 .study-block {
                                     .semiheader {
-                                        color: $color3;
+                                        color: nth($colors, 5);
                                     }
                                 }
                             }
@@ -125,12 +143,20 @@
                         li {
                             &.active {
                                 a {
-                                    color: $color4;
-                                    border-bottom-color: $color4;
+                                    color: nth($colors, 6);
+                                    border-bottom-color: nth($colors, 7);
                                 }
                             }
                             a:hover {
-                                color: $color4;
+                                color: nth($colors, 6);
+                            }
+                        }
+                    }
+                    .tab-content,
+                    .panel-body {
+                        .button-tab-nav {
+                            &:hover {
+                                color: nth($colors, 6);
                             }
                         }
                     }
@@ -138,7 +164,7 @@
                 .study-more-info {
                     .title {
                         h4 {
-                            color: $color4;
+                            color: nth($colors, 9);
                         }
                     }
                 }
@@ -147,19 +173,19 @@
     } @else {
         .navbar-default {
             .login-clone-campus {
-                background-color: $color2;
-                border-color: $color1;
+                background-color: $ioc-bg-header;
+                border-color: $ioc-bd-campus;
             }
         }
     }
     div[class*="item-page-#{$study}"] {
         .container {
             &:before {
-                background-color: $color1;
+                background-color: $ioc-bd-campus;
             }
         }
         .ioc-breadcrumb {
-            background-color: $color1;
+            background-color: $ioc-bd-campus;
         }
     }
 }
@@ -187,38 +213,6 @@
                         color: $colortitle;
                     }
                 }
-            }
-        }
-    }
-}
-
-@mixin study-color($color) {
-    .study-overview .study-overview-headline::after,
-    .study-overview-menu .study-overview-headline::after {
-        border-color: $color;
-    }
-    .study-panel .study-data .study-col .study-dates .study-block .semiheader {
-        color: $color;
-    }
-    .study-tabs {
-        .nav-tabs {
-            li {
-                &.active {
-                    a {
-                        color: $color;
-                        border-bottom-color: $color;
-                    }
-                }
-                a:hover {
-                    color: $color;
-                }
-            }
-        }
-    }
-    .study-more-info {
-        .title {
-            h4 {
-                color: $color;
             }
         }
     }
@@ -824,9 +818,6 @@ header.headroom--not-top {
     margin-bottom: 0;
     div.item-page-study {
         margin: 194px auto 0 auto;
-        &.ges {
-            @include study-color($ioc-title-ges);
-        }
     }
     div.item-page-default {
         margin: 50px auto 0 auto;
@@ -861,10 +852,13 @@ header.headroom--not-top {
 }
 
 @include custom-color-study();
-@include custom-color-study('btx', $ioc-study-btx);
-@include custom-color-study('eoi-', $ioc-breadcrumb-eoi);
-@include custom-color-study('fp-', $ioc-breadcrumb-fp);
-@include custom-color-study('pau', $ioc-pau-1, $ioc-pau-2, $ioc-pau-3, $ioc-pau-4);
+//@include custom-color-study('btx', $ioc-study-btx);
+//@include custom-color-study('eoi-', $ioc-breadcrumb-eoi);
+//@include custom-color-study('fp-', $ioc-breadcrumb-fp);
+//@include custom-color-study('ges', $ioc-study-ges);
+@include custom-color-study('pau', $ioc-pau-colors);
+@include custom-color-study('fpd', $ioc-fpd-colors);
+@include custom-color-study('competic', $ioc-competic-colors);
 
 .ioc-parent-breadcrumb {
     position: absolute;
@@ -2026,42 +2020,39 @@ body {
                 &.acfgs,
                 &.cas,
                 &.pacfgs {
-                    background-color: $ioc-study-acfgs;
+                    // background-color: $ioc-study-acfgs;
                     background-image: url('../images/pacfgs-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.ges{
-                    background-color: $ioc-study-ges;
+                    // background-color: $ioc-study-ges;
                     background-image: url('../images/ges-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study1;
                     }
                 }
                 &.btx {
-                    background-color: $ioc-study-btx;
+                    // background-color: $ioc-study-btx;
                     background-image: url('../images/btx-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.btx-mat {
-                    background-color: $ioc-study-btx-mat;
+                    // background-color: $ioc-study-btx-mat;
                     background-image: url('../images/btx-mat-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.competic {
-                    background-color: $ioc-study-competic;
+                    // background-color: $ioc-study-competic;
                     background-image: url('../images/competic-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study6;
-                    }
                 }
                 &.faqs {
-                    background-color: $ioc-faqs;
+                    // background-color: $ioc-faqs;
                     background-image: url('../images/faqs-header-bck.jpg');
                     height: 282px;
                     h1 {
@@ -2073,70 +2064,70 @@ body {
                     }
                 }
                 &.fesp {
-                    background-color: $ioc-study-fesp;
+                    // background-color: $ioc-study-fesp;
                     background-image: url('../images/fesp-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study5;
                     }
                 }
                 &.fp {
-                    background-color: $ioc-study-fp;
+                    // background-color: $ioc-study-fp;
                     background-image: url('../images/fp-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study3;
                     }
                 }
                 &.fp-adi {
-                    background-color: $ioc-study-fp;
+                    // background-color: $ioc-study-fp;
                     background-image: url('../images/fp-adi-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-afi {
-                    background-color: $ioc-study-fp;
+                    // background-color: $ioc-study-fp;
                     background-image: url('../images/fp-afi-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-apd {
-                    background-color: $ioc-study-fp;
+                    // background-color: $ioc-study-fp;
                     background-image: url('../images/fp-apd-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-asx {
-                    background-color: $ioc-study-fp;
+                    // background-color: $ioc-study-fp;
                     background-image: url('../images/fp-asx-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-avi {
-                    background-color: $ioc-study-fp;
+                    // background-color: $ioc-study-fp;
                     background-image: url('../images/fp-avi-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-cai {
-                    background-color: $ioc-study-fp;
+                    // background-color: $ioc-study-fp;
                     background-image: url('../images/fp-cai-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-cin {
-                    background-color: $ioc-study-fp;
+                    // background-color: $ioc-study-fp;
                     background-image: url('../images/fp-cin-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-dam {
-                    background-color: $ioc-study-fp;
+                    // background-color: $ioc-study-fp;
                     background-image: url('../images/fp-dam-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
@@ -2150,102 +2141,96 @@ body {
                     }
                 }
                 &.fp-edi {
-                    background-color: $ioc-study-fp;
+                    // background-color: $ioc-study-fp;
                     background-image: url('../images/fp-edi-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-ems {
-                    background-color: $ioc-study-fp;
+                    // background-color: $ioc-study-fp;
                     background-image: url('../images/fp-ems-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-gad {
-                    background-color: $ioc-study-fp;
+                    // background-color: $ioc-study-fp;
                     background-image: url('../images/fp-gad-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study3;
                     }
                 }
                 &.fp-iea {
-                    background-color: $ioc-study-fp;
+                    // background-color: $ioc-study-fp;
                     background-image: url('../images/fp-iea-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-iso {
-                    background-color: $ioc-study-fp;
+                    // background-color: $ioc-study-fp;
                     background-image: url('../images/fp-iso-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-prp {
-                    background-color: $ioc-study-fp;
+                    // background-color: $ioc-study-fp;
                     background-image: url('../images/fp-prp-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-smx {
-                    background-color: $ioc-study-fp;
+                    // background-color: $ioc-study-fp;
                     background-image: url('../images/fp-smx-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fp-vec {
-                    background-color: $ioc-study-fp;
+                    // background-color: $ioc-study-fp;
                     background-image: url('../images/fp-vec-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.fpd {
-                    background-color: $ioc-study-fpd;
+                    // background-color: $ioc-study-fpd;
                     background-image: url('../images/fpd-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study4;
-                    }
                 }
                 &.eoi {
-                    background-color: $ioc-study-eoi;
+                    // background-color: $ioc-study-eoi;
                     background-image: url('../images/eoi-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.eoi-basic {
-                    background-color: $ioc-study-eoi;
+                    // background-color: $ioc-study-eoi;
                     background-image: url('../images/eoi-basic-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.eoi-medium {
-                    background-color: $ioc-study-eoi;
+                    // background-color: $ioc-study-eoi;
                     background-image: url('../images/eoi-medium-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.eoi-advanced {
-                    background-color: $ioc-study-eoi;
+                    // background-color: $ioc-study-eoi;
                     background-image: url('../images/eoi-advanced-header-bck.jpg');
                     h1 {
                         color: $ioc-title-study2;
                     }
                 }
                 &.pau {
-                    background-color: $ioc-study-pau;
+                    // background-color: $ioc-study-pau;
                     background-image: url('../images/pau-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study7;
-                    }
                 }
             }
         }
@@ -2452,7 +2437,7 @@ body {
     flex: 1 1 auto;
     margin-left: 20px;
     .study-data {
-        @include flexbox(row, nowrap, right);
+        @include flexbox(row, nowrap, flex-end);
         align-items: baseline;
         .study-col {
             @include flexbox(column, wrap, space-between);
@@ -2537,6 +2522,7 @@ body {
     }
     .subpage-only-buttons {
         background-image: url('../images/seccio-botons-bck.svg');
+        background-size: 100vw 100%;
         padding-bottom: 250px;
         margin-top: 157px;
         & + .study-tabs {
@@ -2545,6 +2531,7 @@ body {
     }
     .subpage-text-buttons {
         background-image: url('../images/seccio-text-botons-bck.svg');
+        background-size: 100vw 100%;
         margin-top: -173px;
         .subpage-text {
             // max-width: 686px;
@@ -2558,6 +2545,12 @@ body {
                 float: right;
             }
         }
+    }
+    .subpage-buttons-filter {
+        background-size: 100vw 100%;
+    }
+    .subpage-text-buttons-banner {
+        background-size: 100vw 83%;
     }
     .subpage-text-buttons-banner,
     .subpage-buttons-filter {
@@ -2792,7 +2785,6 @@ body {
     .subpage-text-buttons,
     .subpage-text-buttons-banner,
     .subpage-buttons-filter {
-        background-size: 100vw 83%;
         background-repeat: no-repeat;
         background-position: center top;
         .subpage-text {
@@ -3038,7 +3030,7 @@ body {
             background-image: url('../images/competic-parallax-img.jpg');
         }
         .subpage-banner {
-            background-image: url('../images/competic-banner.jpg');
+            background-image: url('../images/competic-banner.png');
         }
     }
     &.ges {
@@ -3099,7 +3091,7 @@ body {
             background-image: url('../images/fpd-parallax-img.jpg');
         }
         .subpage-banner {
-            background-image: url('../images/fpd-banner.jpg');
+            background-image: url('../images/fpd-banner.png');
         }
     }
     &.pacfgs {
@@ -3231,25 +3223,25 @@ body {
         li {
             flex: 1 0 auto;
             text-align: center;
-            background-color: $ioc-study-tab;
+            background-color: $ioc-bg-panel;
             height: 58px;
             a {
                 &:hover {
                     border: none;
-                    border-bottom: 4px solid $ioc-study-tab;
+                    border-bottom: 4px solid $ioc-bg-panel;
                     color: $ioc-accent;
                 }
                 display: block;
                 font-size: 11px;
                 font-weight: 500;
-                background-color: $ioc-study-tab;
+                background-color: $ioc-bg-panel;
                 border: none;
                 color: $ioc-text2;
                 border-radius: 0;
                 margin: 0;
                 padding: 0;
                 border: none;
-                border-bottom: 4px solid $ioc-study-tab;
+                border-bottom: 4px solid $ioc-bg-panel;
                 text-transform: uppercase;
                 letter-spacing: 0.8px;
                 width: 100%;
@@ -3260,7 +3252,7 @@ body {
                     display: inline-block;
                     vertical-align: middle;
                     line-height: 1.3;
-                    width: 61%;
+                    width: 62%;
                 }
             }
             &.active {
@@ -3270,7 +3262,7 @@ body {
                         border-bottom: 4px solid $ioc-accent;
                     }
                     color: $ioc-accent;
-                    background-color: $ioc-study-tab;
+                    background-color: $ioc-bg-panel;
                     border: none;
                     border-bottom: 4px solid $ioc-accent;
                 }
@@ -3301,7 +3293,7 @@ body {
         .panel {
             border-radius: 0;
             .panel-heading {
-                background-color: $ioc-study-tab;
+                background-color: $ioc-bg-panel;
             }
         }
     }
@@ -3343,6 +3335,69 @@ body {
 
 .study-tabs {
     margin: 95px auto;
+    .panel-body,
+    .tab-content {
+        .button-tab-nav {
+            padding: 0 9px;
+            width: 118px;
+            background-color: $ioc-bg-panel;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+            font-size: 13px;
+            color: #354959;
+            height: 36px;
+            line-height: 36px;
+            cursor: pointer;
+            position: relative;
+            margin-top: 41px;
+            &.prev {
+                float: left;
+                text-align: right;
+                &:before {
+                    content: '\e914';
+                    left: 7px;
+                }
+            }
+            &.next {
+                float: right;
+                &:after {
+                    content: '\e915';
+                    right: 7px;
+                }
+            }
+            &.prev,
+            &.next {
+                &:before,
+                &:after {
+                    font-family: 'ioc-icons';
+                    font-size: 22px;
+                    top: 8px;
+                    position: absolute;
+                    line-height: 1em;
+                }
+            }
+        }
+    }
+    .panel-body {
+        &.button-div {
+            height: 32px;
+            padding: 0;
+            .button-tab-nav {
+                line-height: 32px;
+                background-color: transparent;
+                box-shadow: none;
+                border: 1px solid $ioc-bd-button;
+                font-size: 11.5px;
+                &.next,
+                &.prev {
+                    text-align: center;
+                }
+                &:before,
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
 }
 
 .study-more-info,
@@ -3362,16 +3417,17 @@ body {
                 border-radius: 0;
                 box-shadow: none;
                 .panel-collapse {
+                    padding: 37px 0;
                     .panel-body {
                         border: 0;
                         max-width: 85%;
                         margin: 0 auto;
-                        padding: 15px 0;
+                        padding: 0;
                     }
                 }
                 .panel-heading {
                     padding: 0;
-                    background-color: $ioc-moreinfo-tab;
+                    background-color: $ioc-bg-panel;
                     border-radius: 0;
                     &.active {
                         //background-color: $ioc-study-a-tab;
@@ -3932,7 +3988,7 @@ body {
                 a {
                     font-size: 13px;
                     color: $ioc-footer-text;
-                    letter-spacing: 1px;
+                    letter-spacing: 0.3px;
                     padding: 0;
                     &:hover {
                         font-weight: 600;
@@ -3962,14 +4018,12 @@ body {
     .horari {
         a {
             font-weight: 600;
-            margin-right: 0.5em;
         }
     }
     .contacte,
     .horari {
         color: $ioc-footer-text;
         div {
-            @include flexbox();
             span {
                 display: inline-block;
             }
