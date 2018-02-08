@@ -33,21 +33,32 @@
     }
 }
 
-@mixin max-width-default-article($maxwidth) {
+@mixin max-width-article($maxdefault, $maxcustom: null) {
     .item-page-default,
     .page-default {
         h1, h2, h3, p, ul, ol, table,
         div, span {
-            max-width: $maxwidth;
+            max-width: $maxdefault;
             width: 100%;
             margin-left: auto;
             margin-right: auto;
+        }
+    }
+    @if ($maxcustom) {
+        .item-page-default {
+            &.resource {
+                h1, h2, h3, p, ul, ol, table,
+                div, span {
+                    max-width: $maxcustom;
+                }
+            }
         }
     }
 }
 
 @mixin closemodalmobileicon() {
     &:before {
+        cursor: pointer;
         right: 20px;
         top: -40px;
     }
@@ -55,7 +66,7 @@
 
 @media all and (max-width: 991px){
     @include custom-navbar-nav();
-    @include max-width-default-article(676px);
+    @include max-width-article(676px, 100%);
     body {
         font-size: 16px;
     }
@@ -96,6 +107,9 @@
         button {
             margin-top: 2px;
         }
+    }
+    .modal {
+        top: 0;
     }
     #navigation {
         .container {
@@ -282,7 +296,7 @@
                         font-size: 15px;
                         line-height: 1.4;
                         margin-bottom: 25px;
-                        padding-bottom: 25px;
+                        padding-bottom: 6px;
                     }
                     .study-overview-text {
                         font-size: 12px;
@@ -644,8 +658,8 @@
                 &.suport,
                 &.access,
                 &.matricula {
-                    top: 27px;
-                    height: 52px;
+                    top: 24px;
+                    height: 54px;
                 }
             }
         }
@@ -680,6 +694,13 @@
             font-size: 16px;
             font-weight: 600;
             line-height: 1.25;
+        }
+        .panel-body {
+            &.button-div {
+                .button-tab-nav {
+                    height: 34px;
+                }
+            }
         }
         .panel-section-info {
             margin-top: 45px;
@@ -718,6 +739,10 @@
                 margin-top: 1px;
             }
         }
+    }
+
+    .button-registration {
+        margin: 34px auto;
     }
 
     .study-more-info {
@@ -816,6 +841,11 @@
                 }
             }
         }
+        .mobile {
+            .text {
+                margin-right: 10px;
+            }
+        }
         .footer2 {
             font-size: 11px;
             padding-left: 0;
@@ -837,7 +867,7 @@
 }
 
 @media all and (max-width: 480px) {
-    @include max-width-default-article(290px);
+    @include max-width-article(290px, 100%);
     h1 {
         font-size: 18px;
         font-weight: 600;
@@ -1165,9 +1195,6 @@
             }
         }
     }
-    .modal {
-        top: 0;
-    }
     .modal-modules {
         .title {
             margin-top: 25px;
@@ -1177,6 +1204,42 @@
             img {
                 left: -40px!important;
                 max-width: 140px;
+            }
+        }
+    }
+    .modal-resources {
+        .body-modal-resources {
+            .modal-resource {
+                &.modal-dialog {
+                    .body-modal-resource {
+                        padding: 23px 0 31px;
+                        .title-modal-resource,
+                        .text-modal-resource {
+                            width: 90%;
+                        }
+                        .files-modal-resource {
+                            a {
+                                min-width: 82px;
+                                max-width: 30%;
+                                height: 116px;
+                            }
+                            a + a {
+                                margin-left: 2px;
+                            }
+                            .custom-icon {
+                                margin: 16px auto;
+                                width: 43px;
+                                height: 43px;
+                            }
+                            .icon-text {
+                                font-size: 8px;
+                                font-weight: 500;
+                                letter-spacing: 1.1px;
+                                width: 91px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -1292,6 +1355,9 @@
         margin-top: 42px;
         height: 162px;
     }
+    .study-tabs {
+        margin-top: 25px;
+    }
     .study-more-info,
     .study-tabs {
         .panel-section-info {
@@ -1406,9 +1472,6 @@
             .contacte,
             .social {
                 float: none;
-                .text {
-                    margin-right: 10px;
-                }
             }
             .social {
                 padding: 0;
@@ -1436,6 +1499,7 @@
 }
 
 @media all and (min-width: 648px) {
+    @include max-width-article(632px, 632px);
     .container {
         width: 632px;
     }
@@ -1460,9 +1524,9 @@
     #container {
         .fluid-container {
             &.page-header {
-                height: 146px;
+                height: 147px;
                 &.default {
-                    height: 191px;
+                    height: 147px;
                     h1 {
                         bottom: 33px;
                     }
@@ -1481,9 +1545,12 @@
                 }
                 .container {
                     h1 {
-                        font-size: 16px;
+                        font-size: 20px;
                         font-weight: 400;
+                        letter-spacing: 0;
                         &.study {
+                            font-size: 16px;
+                            font-weight: 400;
                             left: 0;
                             right: 0;
                             margin: auto;
@@ -1507,7 +1574,8 @@
             }
         }
     }
-    .modal-modules {
+    .modal-modules,
+    .modal-resources {
         .title {
             margin-bottom: 0;
             h1 {
@@ -1577,8 +1645,10 @@
                 }
             }
         }
-        .body-modal-modules {
-            .modal-module {
+        .body-modal-modules,
+        .body-modal-resources {
+            .modal-module,
+            .modal-resource {
                 &.modal-dialog {
                     max-width: 90%;
                     .bottom-modal-module {
@@ -1891,7 +1961,10 @@
 }
 
 @media all and (min-width: 768px) and (max-width: 991px) {
-    @include max-width-default-article(626px);
+    @include max-width-article(626px, 629px);
+    .container {
+        width: 629px;
+    }
     h1 {
         font-size: 23px;
         font-weight: 500;
@@ -1914,9 +1987,6 @@
     }
     p {
         margin-bottom: 23px;
-    }
-    .container {
-        width: 629px;
     }
     .ioc-front-page {
         .headroom--top {
@@ -1976,10 +2046,13 @@
                 .container {
                     padding: 0;
                     h1 {
-                        font-size: 18px;
+                        font-size: 23px;
                         font-weight: 400;
+                        letter-spacing: 0;
                         &.study {
                             left: 125px;
+                            font-size: 18px;
+                            font-weight: 400;
                         }
                     }
                 }
@@ -1991,14 +2064,6 @@
                             bottom: 56px;
                             font-size: 23px;
                             letter-spacing: 0;
-                            &.study {
-                                left: 130px;
-                                margin: 0;
-                                bottom: 19px;
-                                padding: 0;
-                                max-width: 100%;
-                                text-align: left;
-                            }
                         }
                     }
                 }
@@ -2116,7 +2181,7 @@
 
 /* Medium Devices, Desktops */
 @media all and (min-width: 992px) {
-    @include max-width-default-article(676px);
+    @include max-width-article(676px, 830px);
     .container {
         width: 830px;
     }
@@ -2233,12 +2298,15 @@
         .fluid-container.page-header {
             .container {
                 h1 {
-                    font-size: 23px;
+                    font-size: 35px;
                     font-weight: 300;
-                    letter-spacing: 0;
+                    letter-spacing: 0.1px;
                     left: 0;
                     &.study {
                         left: 200px;
+                        font-size: 23px;
+                        font-weight: 300;
+                        letter-spacing: 0;
                     }
                 }
             }
@@ -2301,6 +2369,9 @@
         .study-overview-headline {
             font-size: 19px;
             line-height: 1.47;
+            &:after {
+                width: 20px;
+            }
         }
         .study-overview-text {
             font-size: 14px;
@@ -2356,7 +2427,7 @@
 }
 
 @media all and (min-width: 1199px) {
-    @include max-width-default-article(676px);
+    @include max-width-article(676px, 1180px);
     .container {
         width: 1180px;
     }
@@ -2388,12 +2459,14 @@
         .fluid-container.page-header {
             .container {
                 h1 {
-                    font-size: 26px;
+                    font-size: 35px;
                     font-weight: 300;
                     letter-spacing: 0.1px;
                     left: 0;
                     &.study {
                         left: 200px;
+                        font-size: 26px;
+                        font-weight: 300px;
                     }
                 }
             }
@@ -2434,6 +2507,11 @@
     }
     .study-overview {
         flex: 1 1 260px;
+        .study-overview-headline {
+            &:after {
+                width: 38px;
+            }
+        }
     }
     .study-panel {
         .study-data {
@@ -2494,5 +2572,13 @@
                 margin-left: 10px;
             }
         }
+    }
+}
+
+@media all and (min-width: 1445px) {
+    .subpage-text-buttons-banner .subpage-banner,
+    .subpage-buttons-filter .subpage-banner {
+        height: 406px;
+        background-position: center bottom -2vw;
     }
 }

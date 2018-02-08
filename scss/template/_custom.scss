@@ -92,8 +92,8 @@
  * Funció per adaptar els colors de cada pàgina d'estudi
  * @param  $study:  null               Nom de l'estudi
  * @param  $colors: 1 Fons capçalera, 2 Títol capçalera, 3 Vora botó entrada al campus,
- *                  4 Fons botó entrada al campus, 5 Títol dates, 6 Títol pestanyes,
- *                  7 Vora pestanyes, 8 Botó, 9 Títols
+ *                  4 Fons botó entrada al campus, 5 Fons i vora dates, 6 Títol dates, 7 Títol pestanyes,
+ *                  8 Separador overview i vora pestanyes, 9 Botó, 10 Títols
  */
 @mixin custom-color-study($study: null, $colors: null) {
     @if ($study) {
@@ -123,15 +123,22 @@
             &.#{$study} {
                 .study-overview .study-overview-headline::after,
                 .study-overview-menu .study-overview-headline::after {
-                    border-color: nth($colors, 5);
+                    border-color: nth($colors, 8);
                 }
                 .study-panel {
                     .study-data {
                         .study-col {
+                            h4 {
+                                background-color: nth($colors, 5);
+                            }
+                            &:after {
+                                background-color: nth($colors, 5);
+                            }
                             .study-dates {
+                                border-color: nth($colors, 5);
                                 .study-block {
                                     .semiheader {
-                                        color: nth($colors, 5);
+                                        color: nth($colors, 6);
                                     }
                                 }
                             }
@@ -143,12 +150,12 @@
                         li {
                             &.active {
                                 a {
-                                    color: nth($colors, 6);
-                                    border-bottom-color: nth($colors, 7);
+                                    color: nth($colors, 7);
+                                    border-bottom-color: nth($colors, 8);
                                 }
                             }
                             a:hover {
-                                color: nth($colors, 6);
+                                color: nth($colors, 7);
                             }
                         }
                     }
@@ -156,15 +163,18 @@
                     .panel-body {
                         .button-tab-nav {
                             &:hover {
-                                color: nth($colors, 6);
+                                color: nth($colors, 7);
                             }
                         }
                     }
                 }
+                .button-registration {
+                    background-color: nth($colors, 9);
+                }
                 .study-more-info {
                     .title {
                         h4 {
-                            color: nth($colors, 9);
+                            color: nth($colors, 10);
                         }
                     }
                 }
@@ -242,7 +252,35 @@
         height: 16px;
         top: -35px;
         right: -35px;
-        pointer-events: none;
+        cursor: pointer;
+    }
+}
+
+@mixin rotate-icon-plus-panel($color) {
+    &.collapsed {
+        .custom-icon {
+            &.plus {
+                transform: rotate(0deg);
+            }
+        }
+    }
+    .custom-icon {
+        &.plus {
+            position: absolute;
+            top: 12px;
+            right: 33px;
+            height: 14px;
+            width: 14px;
+            color: $color;
+            transform: rotate(-45deg) translate(6px, -2px);
+            transition: all .35s linear;
+            transform-origin: bottom right;
+            &:before {
+                content: '\e913';
+                font-family: 'ioc-icons';
+                font-size: 18px;
+            }
+        }
     }
 }
 
@@ -251,7 +289,7 @@ body {
     font-size: 17px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    min-width: 320px;
+    //min-width: 320px;
     color: $ioc-text2;
     &.modal-open {
         overflow: visible;
@@ -427,7 +465,7 @@ header.headroom--not-top {
 }
 
 .modal {
-    top: 60px
+    top: 10vh;
 }
 
 .list-group-item {
@@ -855,10 +893,10 @@ header.headroom--not-top {
 //@include custom-color-study('btx', $ioc-study-btx);
 //@include custom-color-study('eoi-', $ioc-breadcrumb-eoi);
 //@include custom-color-study('fp-', $ioc-breadcrumb-fp);
-//@include custom-color-study('ges', $ioc-study-ges);
-@include custom-color-study('pau', $ioc-pau-colors);
-@include custom-color-study('fpd', $ioc-fpd-colors);
 @include custom-color-study('competic', $ioc-competic-colors);
+@include custom-color-study('fpd', $ioc-fpd-colors);
+@include custom-color-study('ges', $ioc-ges-colors);
+@include custom-color-study('pau', $ioc-pau-colors);
 
 .ioc-parent-breadcrumb {
     position: absolute;
@@ -1003,7 +1041,8 @@ header.headroom--not-top {
 @include modal-module-color('eoi-', $ioc-eoi-study, $ioc-text);
 @include modal-module-color('fp-', $ioc-fp-study, $ioc-fp-study);
 
-.modal-modules {
+.modal-modules,
+.modal-resources {
     @include module-title(21, $ioc-title-module, transparent, 81, 86, 30);
     .content-modal-modules {
         max-width: 840px;
@@ -1027,11 +1066,13 @@ header.headroom--not-top {
         }
     }
     .content-modal-modules,
-    .body-modal-modules {
+    .body-modal-modules,
+    .body-modal-resources {
         @include flexbox($justify-content: center);
         align-content: center;
         color: $ioc-text;
-        .modal-module {
+        .modal-module,
+        .modal-resource {
             background-color: #ffffff;
             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
             border-style: solid;
@@ -1098,7 +1139,33 @@ header.headroom--not-top {
                 .shortname-modal-module {
                     margin-top: 14px;
                 }
-                .body-modal-module {
+                .title-modal-resource {
+                    margin-top: 13px;
+                    font-size: 16px;
+                    text-align: center;
+                    width: 49%;
+                }
+                .frontpage-modal-resource {
+                    margin-top: 34px;
+                    text-align: center;
+                    img {
+                        height: 144px;
+                        width: auto;
+                        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+                    }
+                }
+                .text-modal-resource {
+                    margin-top: 36px;
+                    width: 49%;
+                    font-size: 13px;
+                    line-height: 1.38;
+                    text-align: center;
+                }
+                .body-modal-resource {
+                    padding: 43px 0 51px;
+                }
+                .body-modal-module,
+                .body-modal-resource {
                     flex-direction: column;
                     border-top: 1px solid rgba(135, 147, 156, 0.21);
                     .body-modal-content {
@@ -1128,6 +1195,51 @@ header.headroom--not-top {
                         .icon-text {
                             font-size: 9px;
                             bottom: 30px;
+                        }
+                    }
+                    .files-modal-resource {
+                        @include flexbox($justify-content: center);
+                        margin-top: 41px;
+                        a {
+                            height: 140px;
+                            width: 120px;
+                            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+                            border: solid 1px $ioc-submenu;
+                            background-color: $ioc-white;
+                            &:hover {
+                                background-color: $ioc-submenu;
+                                text-decoration: none;
+                            }
+                        }
+                        a + a{
+                            margin-left: 15px;
+                        }
+                        .custom-icon {
+                            height: 45px;
+                            width: 45px;
+                            display: block;
+                            margin: 27px auto 21px;
+                            background-position: center;
+                            &.pdf {
+                                background-image: url('../images/pdf-icon.svg');
+                            }
+                            &.web {
+                                background-image: url('../images/pdf-icon.svg');
+                            }
+                            &.zip {
+                                background-image: url('../images/pdf-icon.svg');
+                            }
+                        }
+                        .icon-text {
+                            display: block;
+                            font-size: 9px;
+                            font-weight: 500;
+                            letter-spacing: 1.1px;
+                            text-align: center;
+                            bottom: 30px;
+                            margin: 0 auto;
+                            width: 65%;
+                            color: $ioc-text;
                         }
                     }
 
@@ -1177,8 +1289,11 @@ header.headroom--not-top {
                     }*/
                 }
             }
-
-            .shortname-modal-module {
+            .shortname-modal-resource {
+                margin: 0;
+            }
+            .shortname-modal-module,
+            .shortname-modal-resource {
                 width: 100%;
                 text-align: center;
                 color: rgba(53, 73, 89, 0.6);
@@ -1231,6 +1346,93 @@ header.headroom--not-top {
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;
+                }
+            }
+        }
+        .modal-resource {
+            border-top: none;
+        }
+    }
+}
+
+.modal-resources {
+    padding: 0;
+    margin-top: 95px;
+    margin-bottom: 153px;
+    .pretitle {
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        color: rgba(72, 90, 134, 0.5);
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .title {
+        h1 {
+            font-size: 26px;
+            font-weight: 500;
+            letter-spacing: -0.2px;
+            text-align: center;
+            margin-bottom: 71px;
+        }
+    }
+    .panel-modal-resources {
+        .panel {
+            border: none;
+            box-shadow: none;
+            .panel-heading {
+                height: 40px;
+                color: $ioc-text;
+                background-color: $ioc-bg-panel-res;
+                padding: 0;
+                border-radius: 0;
+                a {
+                    &:hover {
+                        text-decoration: none;
+                    }
+                    @include rotate-icon-plus-panel($ioc-text2);
+                    position: relative;
+                    font-size: 11px;
+                    font-weight: 500;
+                    letter-spacing: 1.5px;
+                    text-transform: uppercase;
+                    padding: 14px 33px;
+                    display: inline-block;
+                    width: 100%;
+                }
+            }
+            .panel-body {
+                @include flexbox();
+                padding: 43px 0 50px 0;
+                max-width: 93%;
+                border: none;
+                &:before {
+                    display: none;
+                }
+                &:after {
+                    content: '';
+                    display: block;
+                    flex: auto;
+                }
+                .modal-resource {
+                    max-width: 158px;
+                    cursor: pointer;
+                    img {
+                        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+                    }
+                    .text-modal-resource {
+                        font-size: 12px;
+                        line-height: 1.42;
+                        color: $ioc-text2;
+                        margin-top: 18px;
+                    }
+                    .bottom-modal-resource {
+                        font-size: 10px;
+                        font-weight: 500;
+                        letter-spacing: 1.4px;
+                        color: $ioc-bottom-res;
+                        margin-top: 9px;
+                    }
                 }
             }
         }
@@ -2001,6 +2203,7 @@ body {
                         left: 215px;
                         bottom: 18px;
                     }
+                    padding: 0;
                     position: absolute;
                     bottom: 60px;
                     left: 0;
@@ -2056,7 +2259,7 @@ body {
                     background-image: url('../images/faqs-header-bck.jpg');
                     height: 282px;
                     h1 {
-                        color: $ioc-title-study2;
+                        color: $ioc-title-default;
                         width: 100%;
                         max-width: 100%;
                         text-align: center;
@@ -2415,12 +2618,12 @@ body {
         &:after {
             position: absolute;
             content: '';
-            border-bottom: 1px solid $ioc-accent;
+            border-bottom: 3px solid $ioc-accent;
             bottom: 0;
             left: 0;
             right: 0;
             margin: 0 auto;
-            width: 53px;
+            width: 38px;
         }
     }
     .study-overview-text {
@@ -2478,7 +2681,7 @@ body {
                 h3 {
                     color: $ioc-text;
                     text-align: center;
-                    margin: 0 0 5px 0;
+                    margin: 0 0 8px 0;
                     text-transform: uppercase;
                 }
                 .study-block {
@@ -3205,6 +3408,7 @@ body {
 }
 
 .study-tabs {
+    margin: 95px auto;
     clear: both;
     //border-bottom: 2px solid $ioc-bg-pagination;
     h2 {
@@ -3297,44 +3501,6 @@ body {
             }
         }
     }
-}
-
-.study-more-info {
-    margin: 120px auto;
-    .title {
-        width: 100%;
-        text-align: center;
-        margin-top: 0;
-        h4 {
-            display: inline-block;
-            position: relative;
-            /*&:before,
-            &:after {
-                content: "";
-                position: absolute;
-                height: 2px;
-                border-top: 1px solid $ioc-accent;
-                top: 14px;
-                width: 52px;
-            }
-            &:before {
-                margin-right: 14px;
-                right: 100%;
-            }
-            &:after {
-                margin-left: 14px;
-                left: 100%;
-            }*/
-            margin: 0;
-            font-size: 29px;
-            font-weight: 500;
-            color: $ioc-accent;
-        }
-    }
-}
-
-.study-tabs {
-    margin: 95px auto;
     .panel-body,
     .tab-content {
         .button-tab-nav {
@@ -3400,6 +3566,61 @@ body {
     }
 }
 
+.button-registration {
+    display: block;
+    width: 172px;
+    height: 32px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 3px;
+    background-color: $ioc-bg-header;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.17);
+    margin: 46px auto;
+    &:hover {
+        text-decoration: none;
+        color: $ioc-accent;
+    }
+}
+
+.study-more-info {
+    margin: 120px auto;
+    .title {
+        width: 100%;
+        text-align: center;
+        margin-top: 0;
+        h4 {
+            display: inline-block;
+            position: relative;
+            /*&:before,
+            &:after {
+                content: "";
+                position: absolute;
+                height: 2px;
+                border-top: 1px solid $ioc-accent;
+                top: 14px;
+                width: 52px;
+            }
+            &:before {
+                margin-right: 14px;
+                right: 100%;
+            }
+            &:after {
+                margin-left: 14px;
+                left: 100%;
+            }*/
+            margin: 0;
+            font-size: 29px;
+            font-weight: 500;
+            color: $ioc-accent;
+        }
+    }
+}
+
 .study-more-info,
 .study-tabs {
     max-width: 870px !important;
@@ -3446,31 +3667,7 @@ body {
                             display: inline-block;
                             width: 100%;
                             text-transform: uppercase;
-                            &.collapsed {
-                                .custom-icon {
-                                    &.plus {
-                                        transform: rotate(0deg);
-                                    }
-                                }
-                            }
-                            .custom-icon {
-                                &.plus {
-                                    position: absolute;
-                                    top: 12px;
-                                    right: 33px;
-                                    height: 14px;
-                                    width: 14px;
-                                    color: $ioc-text2;
-                                    transform: rotate(-45deg) translate(6px, -2px);
-                                    transition: all .35s linear;
-                                    transform-origin: bottom right;
-                                    &:before {
-                                        content: '\e913';
-                                        font-family: 'ioc-icons';
-                                        font-size: 18px;
-                                    }
-                                }
-                            }
+                            @include rotate-icon-plus-panel($ioc-text2);
                         }
                     }
                 }
@@ -3577,6 +3774,7 @@ body {
 }
 
 .login-clone-campus {
+    transition: border 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77), background-color 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
     position: relative;
     .custom-icon {
         &:before {
@@ -3631,6 +3829,7 @@ body {
                         font-family: 'ioc-icons';
                         font-size: 20px;
                         color: $ioc-delete-icon;
+                        cursor: pointer;
                     }
                 }
             }
@@ -3762,6 +3961,7 @@ body {
                             bottom: 13px;
                             &.delete {
                                 z-index: 3;
+                                cursor: pointer;
                                 &:before {
                                     content: '\e900';
                                     font-family: 'ioc-icons';
@@ -3774,6 +3974,7 @@ body {
                     button {
                         font-size: 12px;
                         font-weight: 500;
+                        letter-spacing: 1px;
                         border-radius: 25px;
                         background-color: $ioc-study-button;
                         width: 140px;
@@ -4212,32 +4413,7 @@ body {
                             width: 100%;
                             padding: 13px 33px;
                             color: $ioc-footer-title;
-                            &.collapsed {
-                                .custom-icon {
-                                    &.plus {
-                                        transform: rotate(0deg);
-                                    }
-                                }
-                            }
-                            .custom-icon {
-                                &.plus {
-                                    position: absolute;
-                                    top: 12px;
-                                    right: 33px;
-                                    height: 14px;
-                                    width: 14px;
-                                    color: $ioc-text2;
-                                    transform: rotate(-45deg) translate(6px, -2px);
-                                    transition: all .35s linear;
-                                    transform-origin: bottom right;
-                                    &:before {
-                                        content: '\e913';
-                                        font-family: 'ioc-icons';
-                                        font-size: 18px;
-                                        color: #fff;
-                                    }
-                                }
-                            }
+                            @include rotate-icon-plus-panel(#ffffff);
                         }
                     }
                 }

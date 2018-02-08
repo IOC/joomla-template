@@ -91,6 +91,7 @@
         var tabnavigation = function (mov = 'click', tab = true) {
             var total = $(PLUGINVARS.SELECTORS.STUDYTABS).length;
             var pos = $(PLUGINVARS.SELECTORS.STUDYTABACT).index();
+            var anchor;
             // Toggle buttons depends on tab position
             if (mov == 'click' && tab) {
                 $(PLUGINVARS.SELECTORS.TABNAVBUTTON + '.next').show();
@@ -107,13 +108,13 @@
                     // Move to next tab
                     if (mov) {
                         if (pos + 1 < total) {
-                            var $anchor = $(PLUGINVARS.SELECTORS.STUDYTABS).eq( pos + 1 ).find('a');
+                            $anchor = $(PLUGINVARS.SELECTORS.STUDYTABS).eq( pos + 1 ).find('a');
                             $anchor.click();
                         }
                     } else {
                         // Move to previous tab
                         if (pos - 1 >= 0) {
-                            var $anchor = $(PLUGINVARS.SELECTORS.STUDYTABS).eq( pos - 1 ).find('a');
+                            $anchor = $(PLUGINVARS.SELECTORS.STUDYTABS).eq( pos - 1 ).find('a');
                             $anchor.click();
                         }
                     }
@@ -123,14 +124,18 @@
                     // Move to next panel
                     if (mov) {
                         if (pos + 1 < total) {
-                            var $anchor = $(PLUGINVARS.SELECTORS.PANELS).eq( pos + 1 ).find(PLUGINVARS.SELECTORS.PANELTITLE);
-                            $anchor.click();
+                            $anchor = $(PLUGINVARS.SELECTORS.PANELS).eq( pos ).find(PLUGINVARS.SELECTORS.PANELTITLE);
+                            gotopanel($anchor.attr('href'));
+                            $anchor = $(PLUGINVARS.SELECTORS.PANELS).eq( pos + 1 ).find(PLUGINVARS.SELECTORS.PANELTITLE);
+                            gotopanel($anchor.attr('href'));
                         }
                     } else {
                         // Move to previous panel
                         if (pos - 1 >= 0) {
-                            var $anchor = $(PLUGINVARS.SELECTORS.PANELS).eq( pos - 1 ).find(PLUGINVARS.SELECTORS.PANELTITLE);
-                            $anchor.click();
+                            $anchor = $(PLUGINVARS.SELECTORS.PANELS).eq( pos ).find(PLUGINVARS.SELECTORS.PANELTITLE);
+                            gotopanel($anchor.attr('href'));
+                            $anchor = $(PLUGINVARS.SELECTORS.PANELS).eq( pos - 1 ).find(PLUGINVARS.SELECTORS.PANELTITLE);
+                            gotopanel($anchor.attr('href'));
                         }
                     }
                 }
@@ -332,7 +337,7 @@
                 $("html, body").animate({ scrollTop: position.top}, 800);
             }
             if (!$(linkhash).hasClass('in')) {
-                $('#panel-sections a[href="' + linkhash +'"]').trigger('click');
+                $('.panel-group a[href="' + linkhash +'"]').trigger('click');
             } else {
                 var position = $(linkhash).position();
                 var adjust = (isapanel ? 105 : 170);
@@ -396,6 +401,12 @@
 
         $(document).on('click', '#header .navbar-toggle', function(e) {
             $(this).toggleClass('open');
+        });
+        $(document).on('click', '.modal-dialog', function(e) {
+            var offset = $(this).offset();
+            if (e.offsetY < 0) {
+                $(this).closest('.modal').modal('hide');
+            }
         });
     });
 })(jQuery);
