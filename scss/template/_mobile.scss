@@ -327,6 +327,60 @@
             }
         }
     }
+    .item-page-study {
+        &.acfgs,
+        &.btx {
+            .container {
+                &.study-main {
+                    .study-overview-menu {
+                        max-width: 298px;
+                        margin: 0;
+                        .study-overview-headline {
+                            font-size: 15px;
+                            font-weight: 300;
+                            line-height: 1.4;
+                        }
+                        .study-overview-text {
+                            font-size: 12px;
+                            line-height: 1.67;
+                            max-width: 283px;
+                        }
+                    }
+                }
+            }
+            & + .all-studies {
+                .substudies {
+                    background-size: 100vw 35vw;
+                    padding-bottom: 126px;
+                    .substudies-content {
+                        .substudies-elements {
+                            padding-left: 0;
+                            padding-right: 0;
+                            .navbar-nav {
+                                max-width: 100vw;
+                                li {
+                                    width: 276px;
+                                    .element-img {
+                                        min-height: 132px;
+                                    }
+                                    .element-title {
+                                        margin: 18px 0 14px;
+                                        p {
+                                            font-size: 11px;
+                                            line-height: 1.55;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .container {
+            padding: 0;
+        }
+    }
     .ioc-news-container {
         .ioc-news {
             .imatge-noticia {
@@ -1574,6 +1628,70 @@
             }
         }
     }
+    .header {
+        &.acfgs ~ section {
+            #container {
+                min-height: auto;
+            }
+        }
+    }
+    .item-page-study {
+        &.acfgs,
+        &.btx {
+            .container {
+                &.study-main {
+                    .study-overview-menu {
+                        display: none;
+                    }
+                }
+            }
+            & + .all-studies {
+                .substudies {
+                    background-image: none;
+                    padding-bottom: 73px;
+                    .substudies-content {
+                        .substudies-elements {
+                            padding-left: 0;
+                            padding-right: 0;
+                            .navbar-nav {
+                                max-width: 100vw;
+                                flex-direction: column;
+                                li {
+                                    width: 90%;
+                                    a {
+                                        position: relative;
+                                        .element-img {
+                                            min-height: 138px;
+                                            background-size: 100vw;
+                                            background-position: top;
+                                        }
+                                        .element-title {
+                                            position: absolute;
+                                            bottom: 0;
+                                            background-color: rgba(53, 92, 103, 0.81);
+                                            width: 100%;
+                                            margin: 0;
+                                            height: 72px;
+                                            p {
+                                                position: absolute;
+                                                bottom: 15px;
+                                                color: $ioc-menu-mbl-txt;
+                                                font-weight: 500;
+                                                line-height: 1.55;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .container {
+            padding: 0;
+        }
+    }
     .modal-modules,
     .modal-resources {
         .title {
@@ -2323,12 +2441,52 @@
         }
     }
     .item-page-study {
-        &.acfgs {
+        &.acfgs,
+        &.btx {
+            .container {
+                &.study-main {
+                    .study-overview-menu {
+                        max-width: 388px;
+                        margin: 0;
+                        .study-overview-headline {
+                            font-size: 20px;
+                            font-weight: 300;
+                            line-height: 1.4;
+                        }
+                        .study-overview-text {
+                            font-size: 14px;
+                            line-height: 1.79;
+                            max-width: 369px;
+                        }
+                    }
+                }
+            }
             & + .all-studies {
                 .substudies {
+                    background-size: 100vw 37vw;
+                    padding-bottom: 185px;
                     .substudies-content {
-                        .navbar-nav {
-                            max-width: 100vw;
+                        .title {
+                            display: none;
+                        }
+                        .substudies-elements {
+                            padding-left: 0;
+                            padding-right: 0;
+                            .navbar-nav {
+                                max-width: 100vw;
+                                li {
+                                    width: 360px;
+                                    .element-img {
+                                        min-height: 172px;
+                                    }
+                                    .element-title {
+                                        margin: 27px 0 26px;
+                                        p {
+                                            line-height: 1.2;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -2503,6 +2661,59 @@
                     }
                 }
             }
+        }
+    }
+    .item-page-study {
+        &.acfgs,
+        &.btx {
+            .container {
+                &.study-main {
+                    .study-overview-menu {
+                        max-width: 570px;
+                        margin: 0;
+                        .study-overview-headline {
+                            font-size: 21px;
+                            font-weight: 300;
+                            line-height: 1.33;
+                        }
+                        .study-overview-text {
+                            font-size: 15px;
+                            line-height: 1.67;
+                            max-width: 500px;
+                        }
+                    }
+                }
+            }
+            & + .all-studies {
+                .substudies {
+                    background-size: 100vw 500;
+                    padding-bottom: 237px;
+                    .substudies-content {
+                        .title {
+                            display: none;
+                        }
+                        .substudies-elements {
+                            padding-left: 0;
+                            padding-right: 0;
+                            .navbar-nav {
+                                max-width: 100vw;
+                                li {
+                                    width: 500px;
+                                    .element-img {
+                                        min-height: 239px;
+                                    }
+                                    .element-title {
+                                        margin: 45px 0 43px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .container {
+            padding: 0;
         }
     }
     .study-overview {

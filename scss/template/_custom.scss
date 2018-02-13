@@ -893,9 +893,12 @@ header.headroom--not-top {
 //@include custom-color-study('btx', $ioc-study-btx);
 //@include custom-color-study('eoi-', $ioc-breadcrumb-eoi);
 //@include custom-color-study('fp-', $ioc-breadcrumb-fp);
+@include custom-color-study('acfgs', $ioc-acfgs-colors);
+@include custom-color-study('cas', $ioc-acfgs-colors);
 @include custom-color-study('competic', $ioc-competic-colors);
 @include custom-color-study('fpd', $ioc-fpd-colors);
 @include custom-color-study('ges', $ioc-ges-colors);
+@include custom-color-study('pacfgs', $ioc-acfgs-colors);
 @include custom-color-study('pau', $ioc-pau-colors);
 
 .ioc-parent-breadcrumb {
@@ -2225,9 +2228,6 @@ body {
                 &.pacfgs {
                     // background-color: $ioc-study-acfgs;
                     background-image: url('../images/pacfgs-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study2;
-                    }
                 }
                 &.ges{
                     // background-color: $ioc-study-ges;
@@ -3169,19 +3169,31 @@ body {
     &.btx {
         .container {
             &.study-main {
-                justify-content: space-around!important;
+                flex-direction: row !important;
+                justify-content: space-around !important;
                 &:before,
                 &:after {
                     display: none;
                 }
                 .study-overview-menu {
-                    max-width: 360px;
+                    max-width: 570px;
                     margin: 0;
                     .study-overview-headline {
-                        font-weight: 600;
+                        font-size: 21px;
+                        font-weight: 300;
+                        line-height: 1.33;
+                        .ioc-accent {
+                            font-weight: 500;
+                        }
                         &:after {
                             display: none;
                         }
+                    }
+                    .study-overview-text {
+                        font-size: 15px;
+                        line-height: 1.67;
+                        max-width: 500px;
+                        margin: 0 auto;
                     }
                 }
             }
@@ -3194,7 +3206,8 @@ body {
                 background-image: url('../images/acfgs-bck.svg');
                 background-color: transparent;
                 background-position: bottom;
-                background-size: 100vw 30vh;
+                background-size: 100vw 500px;
+                padding-bottom: 237px;
                 .substudies-content {
                     .title {
                         display: none;
@@ -3210,8 +3223,17 @@ body {
                                 display: none;
                             }
                             li {
-                                width: 360px;
+                                width: 500px;
+                                height: auto;
                                 margin-right: 0;
+                                .element-img {
+                                    min-height: 239px;
+                                }
+                                .element-title {
+                                    margin: 45px 0 43px;
+                                    line-height: 1.2;
+                                    opacity: 0.77;
+                                }
                             }
                         }
                     }
