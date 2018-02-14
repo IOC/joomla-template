@@ -292,7 +292,7 @@ body {
     //min-width: 320px;
     color: $ioc-text2;
     &.modal-open {
-        overflow: visible;
+        overflow: hidden;
     }
 }
 
@@ -476,6 +476,9 @@ header.headroom--not-top {
     .headroom--top {
         &.bck-displayed {
             .navbar-default {
+                .ioc-departament {
+                    display: none;
+                }
                 .ioc-logo {
                     display: block;
                 }
@@ -623,8 +626,10 @@ header.headroom--not-top {
                 background-color: $ioc-link-navbar;
             }
         }
-        &:focus {
+        &:focus,
+        &:active {
             background-color: transparent;
+            outline: none;
             .icon-bar {
                 background-color: $ioc-white;
             }
@@ -1446,7 +1451,8 @@ header.headroom--not-top {
 .substudies {
     background-image: url('../images/cicles-bck.svg');
     background-repeat: no-repeat;
-    background-size: 100vw;
+    background-size: 100vw 100%;
+    background-position: center bottom;
     .submenu-content,
     .substudies-content {
         padding-top: 200px;
@@ -1478,6 +1484,9 @@ header.headroom--not-top {
                 margin-right: 24px;
                 background-color: #ffffff;
                 box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+                &:last-child {
+                    margin-right: auto;
+                }
                 &:hover {
                     @include hover-module();
                 }
@@ -2102,9 +2111,9 @@ body {
 }
 
 #container {
-    min-height: -webkit-calc(80vh);
-    min-height:    -moz-calc(80vh);
-    min-height:         calc(80vh);
+    // min-height: -webkit-calc(80vh);
+    // min-height:    -moz-calc(80vh);
+    // min-height:         calc(80vh);
 
     .fluid-container {
         &.page-header {
@@ -2861,6 +2870,7 @@ body {
                                 display: block;
                                 background-repeat: no-repeat;
                                 background-size: contain;
+                                color: transparent;
                                 &:hover {
                                     filter: contrast(.84) grayscale(20%);
                                     text-decoration: none;
@@ -3182,6 +3192,9 @@ body {
                         font-size: 21px;
                         font-weight: 300;
                         line-height: 1.33;
+                        height: 5em;
+                        padding-bottom: 0;
+                        overflow: hidden;
                         .ioc-accent {
                             font-weight: 500;
                         }
@@ -3247,7 +3260,7 @@ body {
             background-image: url('../images/cas-parallax-img.jpg');
         }
         .subpage-banner {
-            background-image: url('../images/cas-banner.jpg');
+            background-image: url('../images/cas-banner.png');
         }
     }
     &.competic {
@@ -3324,7 +3337,7 @@ body {
             background-image: url('../images/pacfgs-parallax-img.jpg');
         }
         .subpage-banner {
-            background-image: url('../images/pacfgs-banner.jpg');
+            background-image: url('../images/pacfgs-banner.png');
         }
     }
     &.pau {
@@ -3861,6 +3874,7 @@ body {
                 right: 40px;
                 top: 0;
                 border: 1px solid $ioc-bg-header;
+                border-radius: 0;
                 font-size: 14px;
                 padding: 11px 12px;
                 height: 40px;

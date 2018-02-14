@@ -82,7 +82,7 @@ $pageclass = str_replace($suffixes, '', $pageclass);
 <?php  if ($this->countModules('login-campus')) : ?>
     <div class="hidden-xs hidden-sm login-clone-campus" data-toggle="modal" data-target="#login-campus">
         <span class="custom-icon"></span>
-        <p class="login-text"><?php echo JText::_('JLOGIN_CAMPUS') . ' ';?></p>
+        <p class="login-text"><?php echo JText::_('TPL_IOC_LOGIN_CAMPUS') . ' ';?></p>
     </div>
 <?php  endif; ?>
 <div class="social hidden-sm hidden-xs text-left">

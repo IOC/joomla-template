@@ -29,8 +29,8 @@ $baseurl = JUri::base();
                 $base_dir = JPATH_SITE;
                 $language_tag = $lang->getTag(); // loads the current language-tag
                 $lang->load($extension, $base_dir, $language_tag, true);
-                $extension = 'com_users';
-                $lang->load($extension, $base_dir, $language_tag, true);
+                //$extension = 'com_users';
+                //$lang->load($extension, $base_dir, $language_tag, true);
                 $in = array (
                     '{USERNAME}',
                     '{PASSWORD}',
@@ -44,8 +44,8 @@ $baseurl = JUri::base();
                     JText::_('JGLOBAL_PASSWORD'),
                     JText::_('JLOGIN'),
                     JText::_('MOD_LOGIN_FORGOT_YOUR_PASSWORD'),
-                    JText::_('COM_USERS_PROFILE_WELCOME_IOC'),
-                    JText::_('JLOGIN_CAMPUS'),
+                    JText::_('TPL_IOC_PROFILE_WELCOME_IOC'),
+                    JText::_('TPL_IOC_LOGIN_CAMPUS'),
                 );
                 echo str_replace($in, $out, $output);
             ?>

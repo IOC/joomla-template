@@ -46,7 +46,7 @@ $menuitems = array();
       <div class="container login-campus">
         <div class="login-campus-body first hidden-xs hidden-sm" data-toggle="modal" data-target="#login-campus">
             <span class="custom-icon"></span>
-            <p class="login-text"><?php echo JText::_('JLOGIN_CAMPUS') . ' ';?></p>
+            <p class="login-text"><?php echo JText::_('TPL_IOC_LOGIN_CAMPUS') . ' ';?></p>
         </div>
       </div>
     <?php  endif; ?>
@@ -216,7 +216,7 @@ $menuitems = array();
 			<?php if (($rowcount == $this->columns) or ($counter == $introcount)) : ?>
         <?php if (!empty($this->link_items)) : ?>
           <div class="link_items items-more col-lg-<?php echo $collg;?> col-md-3 col-sm-12 item column-<?php echo $rowcount+1;?>">
-          <h3><?php echo JText::_('COM_CONTENT_READ_MORE_NEWS_TITLE'); ?></h3>
+          <h3><?php echo JText::_('TPL_IOC_READ_MORE_NEWS_TITLE'); ?></h3>
           <?php echo $this->loadTemplate('links'); ?>
           </div>
         <?php endif; ?>

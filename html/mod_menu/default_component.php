@@ -27,7 +27,7 @@ if (in_array($params->get('style'), $ownstyles)) {
 $customclasses = explode(' ', $item->anchor_css);
 
 if (in_array('iocmatricula', $customclasses)) {
-    //$study_start = '<div class="newmatricula">' . JText::_('MOD_MENU_REGISTRATION_OPEN'). '</div>';
+    //$study_start = '<div class="newmatricula">' . JText::_('TPL_IOC_REGISTRATION_OPEN'). '</div>';
 }
 
 if ($item->menu_image)
