@@ -1407,6 +1407,41 @@ header.headroom--not-top {
                     padding: 14px 33px;
                     display: inline-block;
                     width: 100%;
+                    .custom-icon {
+                        &.pdf,
+                        &.web,
+                        &.zip {
+                            position: absolute;
+                            top: 8px;
+                            height: 24px;
+                            width: 24px;
+                            background-color: #31525a;
+                        }
+                        &.pdf {
+                            right: 134px;
+                        }
+                        &.web {
+                            right: 104px;
+                        }
+                        &.zip {
+                            right: 74px;
+                        }
+                    }
+                    .tooltip {
+                        max-width: 100px;
+                    }
+                    .tooltip > .tooltip-inner {
+                        background-color: #fff;
+                        color: $ioc-text;
+                        border: solid 1px #e3eef7;
+                        font-family: "Montserrat", sans-serif;
+                        font-size: 11px;
+                    }
+                    .tooltip-arrow {
+                        border-bottom-width: 6px;
+                        border-bottom-color: #fff;
+                        width: 11px;
+                    }
                 }
             }
             .panel-body {
@@ -2679,7 +2714,7 @@ body {
                 text-transform: uppercase;
                 line-height: 30px;
                 height: 30px;
-                font-weight: 600;
+                font-weight: 500;
             }
             .study-dates {
                 border: 1px solid $ioc-bg-study-date;
@@ -3656,9 +3691,14 @@ body {
     }
 }
 
+#container {
+    .study-more-info,
+    .study-tabs {
+        max-width: 870px;
+    }
+}
 .study-more-info,
 .study-tabs {
-    max-width: 870px !important;
     > h4 {
         font-size: 23px;
         font-weight: 600;

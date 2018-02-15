@@ -297,16 +297,16 @@ $pageclass = str_replace($suffixes, '', $pageclass);
     </div>
     <div class="bottom container">
         <div class="ioc-banners">
-            <div class="col-xs-2 col-sm-2 col-md-3 col-1">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-1">
                 <jdoc:include type="modules" name="footer-bottom-col1" style="xhtml" />
             </div>
-            <div class="col-xs-2 col-sm-2 col-md-3">
+            <div class="col-xs-3 col-sm-3 col-md-3">
                 <jdoc:include type="modules" name="footer-bottom-col2" style="xhtml" />
             </div>
-            <div class="col-xs-2 col-sm-2 col-md-3">
+            <div class="col-xs-3 col-sm-3 col-md-3">
                 <jdoc:include type="modules" name="footer-bottom-col3" style="xhtml" />
             </div>
-            <div class="col-xs-2 col-sm-2 col-md-3 col-4">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-4">
                 <jdoc:include type="modules" name="footer-bottom-col4" style="xhtml" />
             </div>
         </div>

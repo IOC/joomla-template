@@ -125,7 +125,7 @@
                     if (mov) {
                         if (pos + 1 < total) {
                             $anchor = $(PLUGINVARS.SELECTORS.PANELS).eq( pos ).find(PLUGINVARS.SELECTORS.PANELTITLE);
-                            gotopanel($anchor.attr('href'));
+                            //gotopanel($anchor.attr('href'));
                             $anchor = $(PLUGINVARS.SELECTORS.PANELS).eq( pos + 1 ).find(PLUGINVARS.SELECTORS.PANELTITLE);
                             gotopanel($anchor.attr('href'));
                         }
@@ -133,7 +133,7 @@
                         // Move to previous panel
                         if (pos - 1 >= 0) {
                             $anchor = $(PLUGINVARS.SELECTORS.PANELS).eq( pos ).find(PLUGINVARS.SELECTORS.PANELTITLE);
-                            gotopanel($anchor.attr('href'));
+                            //gotopanel($anchor.attr('href'));
                             $anchor = $(PLUGINVARS.SELECTORS.PANELS).eq( pos - 1 ).find(PLUGINVARS.SELECTORS.PANELTITLE);
                             gotopanel($anchor.attr('href'));
                         }
@@ -272,21 +272,20 @@
 
         $(document).on('show.bs.collapse', '#collapse-tabs .panel-collapse', function (e) {
             $(e.currentTarget).closest('.panel').siblings().find('.panel-collapse').collapse('hide');
-
         });
 
         $(document).on('show.bs.collapse', '#footer-collapse .panel-collapse', function (e) {
             $('#footer-collapse').find('.panel-collapse').not(e.currentTarget).collapse('hide');
-
         });
 
         $(document).on('click', 'a', function(e) {
             $('.back-to-top').attr('href', '#');
         });
 
-        $(document).on('click', '.study-buttons a[href*=#], .study-tabs .tab-content a[href*=#], .subpage-group-buttons a[href*=#], .faqsindex a[href*=#]' , function(e) {
+        $(document).on('click', '.study-buttons a[href*=#], .study-tabs .tab-content a[href*=#], .subpage-group-buttons a[href*=#]' , function(e) {
             e.preventDefault();
             linkhash = '#' + $(this).prop('hash').replace(/[^a-zA-Z0-9_-]*/g, '');
+            isapanel = $(this).closest('.panel-group, .study-tabs').hasClass('panel-group');
             gotopanel(linkhash);
             if ($(this).closest('.study-tabs').length) {
                 $('.back-to-top').attr('href', $('#tabs > li.active a').attr('href'));
@@ -294,13 +293,13 @@
             }
         });
 
-        $(document).on('click', '#collapse-tabs .panel-title a[href*=#], #panel-sections .panel-title a[href*=#], .study-tabs .nav-tabs li a[href*=#]', function(e) {
+        $(document).on('click', '#collapse-tabs .panel-title a[href*=#], #panel-sections .panel-title a[href*=#], .study-tabs .nav-tabs li a[href*=#], .panel-modal-resources a[href*=#], .faqsindex a[href*=#]', function(e) {
             e.preventDefault();
             isapanel = $(this).closest('.panel-group, .study-tabs').hasClass('panel-group');
             linkhash = $(this).prop('hash');
         });
 
-        $(document).on('shown.bs.collapse', '#collapse-other-info, #collapse-tabs, #panel-sections', function(e) {
+        $(document).on('shown.bs.collapse', '#collapse-other-info, #collapse-tabs, #panel-sections, .panel-modal-resources, .faqsindex', function(e) {
             var position = $(linkhash).position();
             var adjust = 0;
             if (position) {
@@ -338,11 +337,11 @@
             }
             if (!$(linkhash).hasClass('in')) {
                 $('.panel-group a[href="' + linkhash +'"]').trigger('click');
-            } else {
-                var position = $(linkhash).position();
-                var adjust = (isapanel ? 105 : 170);
-                $("html, body").animate({ scrollTop: position.top - adjust}, 800);
             }
+            var position = $(linkhash).position();
+            console.log(position);
+            var adjust = (isapanel ? 105 : 170);
+            $("html, body").animate({ scrollTop: position.top - adjust}, 800);
         };
 
         if ( $(currenthash).length ) {
