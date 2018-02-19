@@ -160,18 +160,20 @@
         $(PLUGINVARS.SELECTORS.PANELGROUP).ready(function(e) {
             var panelGroups = $( PLUGINVARS.SELECTORS.PANELCOLLAPSE );
             var total = panelGroups.length;
-            $.each( panelGroups, function ( index, panelGroup ) {
-                $( panelGroup ).append( PLUGINVARS.HTML.BUTTONDIV );
-                if ( index > 0 && index < total - 1 ) {
-                    $( panelGroup ).find(PLUGINVARS.SELECTORS.BUTTONDIV).append( PLUGINVARS.HTML.PREVIOUS, PLUGINVARS.HTML.NEXT );
-                } else {
-                    if (index == 0) {
-                        $( panelGroup ).find(PLUGINVARS.SELECTORS.BUTTONDIV).append( PLUGINVARS.HTML.NEXT );
+            if (total > 1) {
+                $.each( panelGroups, function ( index, panelGroup ) {
+                    $( panelGroup ).append( PLUGINVARS.HTML.BUTTONDIV );
+                    if ( index > 0 && index < total - 1 ) {
+                        $( panelGroup ).find(PLUGINVARS.SELECTORS.BUTTONDIV).append( PLUGINVARS.HTML.PREVIOUS, PLUGINVARS.HTML.NEXT );
                     } else {
-                        $( panelGroup ).find(PLUGINVARS.SELECTORS.BUTTONDIV).append( PLUGINVARS.HTML.PREVIOUS );
+                        if (index == 0) {
+                            $( panelGroup ).find(PLUGINVARS.SELECTORS.BUTTONDIV).append( PLUGINVARS.HTML.NEXT );
+                        } else {
+                            $( panelGroup ).find(PLUGINVARS.SELECTORS.BUTTONDIV).append( PLUGINVARS.HTML.PREVIOUS );
+                        }
                     }
-                }
-            } );
+                } );
+            }
         });
 
         $(document).on('click', PLUGINVARS.SELECTORS.TABNAVBUTTON, function(e) {

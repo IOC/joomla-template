@@ -58,6 +58,7 @@ $ioc-title-study7:    #ddebec;
 
 $ioc-article-date:    #728696;
 $ioc-btx-assign:      #5651a2;
+$ioc-btx-assign-btn:  #5754a2;
 $ioc-table-th:        #e7ecf1;
 $ioc-table-td:        rgba(185, 213, 234, 0.16);
 $ioc-study-acfgs:     #476f7c;
@@ -79,11 +80,146 @@ $ioc-cross:           #f4f8fb;
 $ioc-delete-icon:     #dee3e7;
 $ioc-btn-search-2nd:  #d7d9de;
 
-$ioc-acfgs-colors:    #476f7c, #e5f7fe, #2c4a54, rgba(69, 110, 124, 0.9), #b9d2d5, #19636e, #19636e, #26727d, #26727d, #26727d;
-$ioc-competic-colors: #5874f6, #e9edff, #112fb9, rgba(47, 73, 202, 0.81), #e3eafb, #95b0f1, #2f49ca, #5468cd, #2f49ca, #2f49ca;
-$ioc-fpd-colors:      #f6bb2f, #ffffff, #fff5e2, #ecb023, #eaedef, #de9c02, #de9c02, #ecb023, #f6ad03, #f6ad03;
-$ioc-ges-colors:      #d14c5e, #ffe7e8, #9a1b2d, #ba2f43, #d2e1e5, #d14c5e, #d14c5e, #e15064, #e15064, #d14c5e;
-$ioc-pau-colors:      #508d90, #ddebec, #2d5958, #386d6c, #b9d4d5, #196a6e, #508d90, #508d90, #508d90, #508f92;
+$ioc-acfgs-colors: (
+    header-bg: #476f7c,
+    header-title: #e5f7fe,
+    navbar-hover: #5eabc5,
+    campus-border: #2c4a54,
+    campus-bg: rgba(69, 110, 124, 0.9),
+    date-bg: #b9d2d5,
+    date-title: #354959,
+    date-semiheader: #19636e,
+    tab-title: #19636e,
+    tab-border: #26727d,
+    button: #26727d,
+    moreinfo-title: #26727d
+);
+$ioc-btx-colors: (
+    header-bg: #6e6ca2,
+    header-title: #f0effd,
+    navbar-hover: #9696ea,
+    campus-border: #302f58,
+    campus-bg: rgba(73, 72, 132, 0.8),
+    date-bg: #dcdbe9,
+    date-title: #354959,
+    date-semiheader: #b0aceb,
+    tab-title: #6462a9,
+    tab-border: #6462a9,
+    button: #6462a9,
+    moreinfo-title: #6462a9
+);
+$ioc-btxioc-colors: (
+    header-bg: #6e6ca2,
+    header-title: #f0effd,
+    navbar-hover: #9696ea,
+    campus-border: #302f58,
+    campus-bg: rgba(73, 72, 132, 0.8),
+    date-bg: #dcdbe9,
+    date-title: #354959,
+    date-semiheader: #b0aceb,
+    tab-title: #6462a9,
+    tab-border: #6462a9,
+    button: #6462a9,
+    moreinfo-title: #6462a9
+);
+$ioc-btxmat-colors: (
+    header-bg: #41b0c8,
+    header-title: #e5f7fe,
+    navbar-hover: #70e6ff,
+    campus-border: #146c7d,
+    campus-bg: rgba(39, 158, 184, 0.6),
+    date-bg: #e2eaf1,
+    date-title: #354959,
+    date-semiheader: #3eaec6,
+    tab-title: #3ba3ba,
+    tab-border: #41b0c8,
+    button: #41b0c8,
+    moreinfo-title: #479eb0
+);
+$ioc-competic-colors: (
+    header-bg: #5874f6,
+    header-title: #e9edff,
+    navbar-hover: #01c1b9,
+    campus-border: #112fb9,
+    campus-bg: rgba(47, 73, 202, 0.81),
+    date-bg: #e3eafb,
+    date-title: #354959,
+    date-semiheader: #95b0f1,
+    tab-title: #2f49ca,
+    tab-border: #5468cd,
+    button: #2f49ca,
+    moreinfo-title: #2f49ca
+);
+$ioc-eoi-colors: (
+    header-bg: #f3a22d,
+    header-title: #ffffff,
+    navbar-hover: #b97100,
+    campus-border: #fcebc9,
+    campus-bg: #e89619,
+    date-bg: #eaedef,
+    date-title: #354959,
+    date-semiheader: #eb9626,
+    tab-title: #de9c02,
+    tab-border: #ecb023,
+    button: #f6ad03,
+    moreinfo-title: #f6ad03
+);
+$ioc-fesp-colors: (
+    header-bg: #ab3f5f,
+    header-title: #ffffff,
+    navbar-hover: #c86885,
+    campus-border: #650020,
+    campus-bg: #90314f,
+    date-bg: #eaedef,
+    date-title: #354959,
+    date-semiheader: #a03a59,
+    tab-title: #a03a59,
+    tab-border: #a03a59,
+    button: #a03a59,
+    moreinfo-title: #a03a59
+);
+$ioc-fpd-colors: (
+    header-bg: #f6bb2f,
+    header-title: #ffffff,
+    navbar-hover: #01c1b9,
+    campus-border: #fff5e2,
+    campus-bg: #ecb023,
+    date-bg: #eaedef,
+    date-title: #354959,
+    date-semiheader: #de9c02,
+    tab-title: #de9c02,
+    tab-border: #ecb023,
+    button: #f6ad03,
+    moreinfo-title: #f6ad03
+);
+$ioc-ges-colors: (
+    header-bg: #d14c5e,
+    header-title: #ffe7e8,
+    navbar-hover: #01c1b9,
+    campus-border: #9a1b2d,
+    campus-bg: #ba2f43,
+    date-bg: #d2e1e5,
+    date-title: #354959,
+    date-semiheader: #d14c5e,
+    tab-title: #d14c5e,
+    tab-border: #e15064,
+    button: #e15064,
+    moreinfo-title: #d14c5e
+);
+$ioc-pau-colors: (
+    header-bg: #508d90,
+    header-title: #ddebec,
+    navbar-hover: #01c1b9,
+    campus-border: #2d5958,
+    campus-bg: #386d6c,
+    date-bg: #b9d4d5,
+    date-title: #354959,
+    date-semiheader: #196a6e,
+    tab-title: #508d90,
+    tab-border: #508d90,
+    button: #508d90,
+    moreinfo-title: #508f92
+);
 
 $ioc-bg-panel:       #f2f6f9;
 $ioc-bd-button:      #e7ecf0;

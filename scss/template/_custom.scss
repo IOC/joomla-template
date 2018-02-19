@@ -88,20 +88,160 @@
     background-image: url('../images/familia-' + $cicle + '-icon.png');
 }
 
+@function get-color($colors, $key) {
+    @if map-has-key($colors, $key) {
+        @return map-get($colors, $key);
+    }
+
+    @warn "Unknown `#{$key}` in $colors.";
+    @return inherit;
+}
+
+@mixin header-study-colors($colors) {
+    .navbar-default {
+        .login-clone-campus,
+        .tiny-campus,
+        .tiny-search,
+        .navbar-toggle {
+            &:hover {
+                color: get-color($colors, navbar-hover);
+                .custom-icon {
+                    color: get-color($colors, navbar-hover);
+                }
+                .icon-bar {
+                        background-color: get-color($colors, navbar-hover);
+                }
+            }
+        }
+        .navbar-collapse {
+            .navbar-nav {
+                button {
+                    &:hover {
+                        .custom-icon,
+                        span {
+                            color: get-color($colors, navbar-hover);
+                        }
+                    }
+                }
+                li {
+                    a {
+                        &:hover {
+                            color: get-color($colors, navbar-hover);
+                        }
+                    }
+                }
+            }
+        }
+        .login-clone-campus {
+            background-color: get-color($colors, campus-bg);
+            border-color: get-color($colors, campus-border);
+        }
+        .social  {
+            .custom-icon:hover {
+                color: get-color($colors, navbar-hover);
+            }
+        }
+    }
+}
+
+@mixin page-study-colors($colors) {
+    .study-overview .study-overview-headline::after,
+    .study-overview-menu .study-overview-headline::after {
+        border-color: get-color($colors, tab-border);
+    }
+    .study-panel {
+        .study-data {
+            .study-col {
+                h4 {
+                    color: get-color($colors, date-title);
+                    background-color: get-color($colors, date-bg);
+                }
+                &:after {
+                    background-color: get-color($colors, date-bg);
+                }
+                .study-dates {
+                    border-color: get-color($colors, date-bg);
+                    .study-block {
+                        .semiheader {
+                            color: get-color($colors, date-semiheader);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .study-tabs {
+        .nav-tabs {
+            li {
+                &.active {
+                    a {
+                        color: get-color($colors, tab-title);
+                        border-bottom-color: get-color($colors, tab-border);
+                    }
+                }
+                a:hover {
+                    color: get-color($colors, tab-title);
+                }
+            }
+        }
+        .tab-content,
+        .panel-body {
+            .button-tab-nav {
+                &:hover {
+                    color: get-color($colors, tab-title);
+                }
+            }
+        }
+    }
+    .button-registration {
+        background-color: get-color($colors, button);
+    }
+    .study-more-info {
+        .title {
+            h4 {
+                color: get-color($colors, moreinfo-title);
+            }
+        }
+    }
+}
+
 /**
  * Funció per adaptar els colors de cada pàgina d'estudi
  * @param  $study:  null               Nom de l'estudi
- * @param  $colors: 1 Fons capçalera, 2 Títol capçalera, 3 Vora botó entrada al campus,
- *                  4 Fons botó entrada al campus, 5 Fons i vora dates, 6 Títol dates, 7 Títol pestanyes,
- *                  8 Separador overview i vora pestanyes, 9 Botó, 10 Títols
+ * @param  $colors: null               Colors de cada element de l'estudi
  */
-@mixin custom-color-study($study: null, $colors: null) {
+@mixin custom-color-study($study: null, $colors: null, $extends: null) {
     @if ($study) {
-        .#{$study} {
-            .navbar-default {
-                .login-clone-campus {
-                    background-color: nth($colors, 4);
-                    border-color: nth($colors, 3);
+        @if ($extends) {
+            header {
+                &.headroom--top {
+                    &[class*="#{$study}-"] {
+                        @include header-study-colors($colors);
+                    }
+                }
+            }
+            #container {
+                .fluid-container {
+                    &.page-header {
+                        &[class*="#{$study}-"] {
+                            background-color: get-color($colors, header-bg);
+                            .container {
+                                h1 {
+                                    color: get-color($colors, header-title);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            div[class*="item-page-#{$study}-"] {
+                @include page-study-colors($colors);
+            }
+        }
+        header {
+            &.headroom--top {
+                &.#{$study} {
+                    @include header-study-colors($colors);
                 }
             }
         }
@@ -109,10 +249,10 @@
             .fluid-container {
                 &.page-header {
                     &.#{$study} {
-                        background-color: nth($colors, 1);
+                        background-color: get-color($colors, header-bg);
                         .container {
                             h1 {
-                                color: nth($colors, 2);
+                                color: get-color($colors, header-title);
                             }
                         }
                     }
@@ -121,63 +261,7 @@
         }
         .item-page-study {
             &.#{$study} {
-                .study-overview .study-overview-headline::after,
-                .study-overview-menu .study-overview-headline::after {
-                    border-color: nth($colors, 8);
-                }
-                .study-panel {
-                    .study-data {
-                        .study-col {
-                            h4 {
-                                background-color: nth($colors, 5);
-                            }
-                            &:after {
-                                background-color: nth($colors, 5);
-                            }
-                            .study-dates {
-                                border-color: nth($colors, 5);
-                                .study-block {
-                                    .semiheader {
-                                        color: nth($colors, 6);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                .study-tabs {
-                    .nav-tabs {
-                        li {
-                            &.active {
-                                a {
-                                    color: nth($colors, 7);
-                                    border-bottom-color: nth($colors, 8);
-                                }
-                            }
-                            a:hover {
-                                color: nth($colors, 7);
-                            }
-                        }
-                    }
-                    .tab-content,
-                    .panel-body {
-                        .button-tab-nav {
-                            &:hover {
-                                color: nth($colors, 7);
-                            }
-                        }
-                    }
-                }
-                .button-registration {
-                    background-color: nth($colors, 9);
-                }
-                .study-more-info {
-                    .title {
-                        h4 {
-                            color: nth($colors, 10);
-                        }
-                    }
-                }
+                @include page-study-colors($colors);
             }
         }
     } @else {
@@ -895,16 +979,23 @@ header.headroom--not-top {
 }
 
 @include custom-color-study();
+
 //@include custom-color-study('btx', $ioc-study-btx);
 //@include custom-color-study('eoi-', $ioc-breadcrumb-eoi);
 //@include custom-color-study('fp-', $ioc-breadcrumb-fp);
-@include custom-color-study('acfgs', $ioc-acfgs-colors);
-@include custom-color-study('cas', $ioc-acfgs-colors);
+
+@include custom-color-study('acfgs',    $ioc-acfgs-colors);
+@include custom-color-study('btx',      $ioc-btx-colors);
+@include custom-color-study('btx-ioc',  $ioc-btxioc-colors);
+@include custom-color-study('btx-mat',  $ioc-btxmat-colors);
+@include custom-color-study('cas',      $ioc-acfgs-colors);
 @include custom-color-study('competic', $ioc-competic-colors);
-@include custom-color-study('fpd', $ioc-fpd-colors);
-@include custom-color-study('ges', $ioc-ges-colors);
-@include custom-color-study('pacfgs', $ioc-acfgs-colors);
-@include custom-color-study('pau', $ioc-pau-colors);
+@include custom-color-study('eoi',      $ioc-eoi-colors, true);
+@include custom-color-study('fesp',     $ioc-fesp-colors);
+@include custom-color-study('fpd',      $ioc-fpd-colors);
+@include custom-color-study('ges',      $ioc-ges-colors);
+@include custom-color-study('pacfgs',   $ioc-acfgs-colors);
+@include custom-color-study('pau',      $ioc-pau-colors);
 
 .ioc-parent-breadcrumb {
     position: absolute;
@@ -1557,7 +1648,7 @@ header.headroom--not-top {
     padding-bottom: 125px;
     margin-top: -200px;
     .submenu-content {
-        @include module-title(26, $ioc-accent, $ioc-accent, 52, 142, 96);
+        @include module-title(23, $ioc-text, transparent, 52, 111, 48);
     }
 }
 
@@ -2266,219 +2357,111 @@ body {
             background-image: url('../images/default-header-bck.jpg');
             background-size: cover;
             background-position: top;
-            &.page-header {
-                &.acfgs,
-                &.cas,
-                &.pacfgs {
-                    // background-color: $ioc-study-acfgs;
-                    background-image: url('../images/pacfgs-header-bck.jpg');
+            &.acfgs,
+            &.cas,
+            &.pacfgs {
+                background-image: url('../images/pacfgs-header-bck.jpg');
+            }
+            &.ges{
+                background-image: url('../images/ges-header-bck.jpg');
+            }
+            &.btx {
+                background-image: url('../images/btx-header-bck.jpg');
+            }
+            &.btx-ioc {
+                background-image: url('../images/btx-ioc-header-bck.jpg');
+            }
+            &.btx-mat {
+                background-image: url('../images/btx-mat-header-bck.jpg');
+            }
+            &.competic {
+                background-image: url('../images/competic-header-bck.jpg');
+            }
+            &.faqs {
+                background-image: url('../images/faqs-header-bck.jpg');
+                height: 282px;
+                h1 {
+                    color: $ioc-title-default;
+                    width: 100%;
+                    max-width: 100%;
+                    text-align: center;
+                    bottom: 59px;
                 }
-                &.ges{
-                    // background-color: $ioc-study-ges;
-                    background-image: url('../images/ges-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study1;
-                    }
-                }
-                &.btx {
-                    // background-color: $ioc-study-btx;
-                    background-image: url('../images/btx-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study2;
-                    }
-                }
-                &.btx-mat {
-                    // background-color: $ioc-study-btx-mat;
-                    background-image: url('../images/btx-mat-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study2;
-                    }
-                }
-                &.competic {
-                    // background-color: $ioc-study-competic;
-                    background-image: url('../images/competic-header-bck.jpg');
-                }
-                &.faqs {
-                    // background-color: $ioc-faqs;
-                    background-image: url('../images/faqs-header-bck.jpg');
-                    height: 282px;
-                    h1 {
-                        color: $ioc-title-default;
-                        width: 100%;
-                        max-width: 100%;
-                        text-align: center;
-                        bottom: 59px;
-                    }
-                }
-                &.fesp {
-                    // background-color: $ioc-study-fesp;
-                    background-image: url('../images/fesp-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study5;
-                    }
-                }
-                &.fp {
-                    // background-color: $ioc-study-fp;
-                    background-image: url('../images/fp-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study3;
-                    }
-                }
-                &.fp-adi {
-                    // background-color: $ioc-study-fp;
-                    background-image: url('../images/fp-adi-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study2;
-                    }
-                }
-                &.fp-afi {
-                    // background-color: $ioc-study-fp;
-                    background-image: url('../images/fp-afi-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study2;
-                    }
-                }
-                &.fp-apd {
-                    // background-color: $ioc-study-fp;
-                    background-image: url('../images/fp-apd-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study2;
-                    }
-                }
-                &.fp-asx {
-                    // background-color: $ioc-study-fp;
-                    background-image: url('../images/fp-asx-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study2;
-                    }
-                }
-                &.fp-avi {
-                    // background-color: $ioc-study-fp;
-                    background-image: url('../images/fp-avi-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study2;
-                    }
-                }
-                &.fp-cai {
-                    // background-color: $ioc-study-fp;
-                    background-image: url('../images/fp-cai-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study2;
-                    }
-                }
-                &.fp-cin {
-                    // background-color: $ioc-study-fp;
-                    background-image: url('../images/fp-cin-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study2;
-                    }
-                }
-                &.fp-dam {
-                    // background-color: $ioc-study-fp;
-                    background-image: url('../images/fp-dam-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study2;
-                    }
-                }
-                &.fp-daw {
-                    background-color: $ioc-study-fp;
-                    background-image: url('../images/fp-daw-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study2;
-                    }
-                }
-                &.fp-edi {
-                    // background-color: $ioc-study-fp;
-                    background-image: url('../images/fp-edi-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study2;
-                    }
-                }
-                &.fp-ems {
-                    // background-color: $ioc-study-fp;
-                    background-image: url('../images/fp-ems-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study2;
-                    }
-                }
-                &.fp-gad {
-                    // background-color: $ioc-study-fp;
-                    background-image: url('../images/fp-gad-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study3;
-                    }
-                }
-                &.fp-iea {
-                    // background-color: $ioc-study-fp;
-                    background-image: url('../images/fp-iea-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study2;
-                    }
-                }
-                &.fp-iso {
-                    // background-color: $ioc-study-fp;
-                    background-image: url('../images/fp-iso-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study2;
-                    }
-                }
-                &.fp-prp {
-                    // background-color: $ioc-study-fp;
-                    background-image: url('../images/fp-prp-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study2;
-                    }
-                }
-                &.fp-smx {
-                    // background-color: $ioc-study-fp;
-                    background-image: url('../images/fp-smx-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study2;
-                    }
-                }
-                &.fp-vec {
-                    // background-color: $ioc-study-fp;
-                    background-image: url('../images/fp-vec-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study2;
-                    }
-                }
-                &.fpd {
-                    // background-color: $ioc-study-fpd;
-                    background-image: url('../images/fpd-header-bck.jpg');
-                }
-                &.eoi {
-                    // background-color: $ioc-study-eoi;
-                    background-image: url('../images/eoi-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study2;
-                    }
-                }
-                &.eoi-basic {
-                    // background-color: $ioc-study-eoi;
-                    background-image: url('../images/eoi-basic-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study2;
-                    }
-                }
-                &.eoi-medium {
-                    // background-color: $ioc-study-eoi;
-                    background-image: url('../images/eoi-medium-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study2;
-                    }
-                }
-                &.eoi-advanced {
-                    // background-color: $ioc-study-eoi;
-                    background-image: url('../images/eoi-advanced-header-bck.jpg');
-                    h1 {
-                        color: $ioc-title-study2;
-                    }
-                }
-                &.pau {
-                    // background-color: $ioc-study-pau;
-                    background-image: url('../images/pau-header-bck.jpg');
-                }
+            }
+            &.fesp {
+                background-image: url('../images/fesp-header-bck.jpg');
+            }
+            &.fp {
+                background-image: url('../images/fp-header-bck.jpg');
+            }
+            &.fp-adi {
+                background-image: url('../images/fp-adi-header-bck.jpg');
+            }
+            &.fp-afi {
+                background-image: url('../images/fp-afi-header-bck.jpg');
+            }
+            &.fp-apd {
+                background-image: url('../images/fp-apd-header-bck.jpg');
+            }
+            &.fp-asx {
+                background-image: url('../images/fp-asx-header-bck.jpg');
+            }
+            &.fp-avi {
+                background-image: url('../images/fp-avi-header-bck.jpg');
+            }
+            &.fp-cai {
+                background-image: url('../images/fp-cai-header-bck.jpg');
+            }
+            &.fp-cin {
+                background-image: url('../images/fp-cin-header-bck.jpg');
+            }
+            &.fp-dam {
+                background-image: url('../images/fp-dam-header-bck.jpg');
+            }
+            &.fp-daw {
+                background-image: url('../images/fp-daw-header-bck.jpg');
+            }
+            &.fp-edi {
+                background-image: url('../images/fp-edi-header-bck.jpg');
+            }
+            &.fp-ems {
+                background-image: url('../images/fp-ems-header-bck.jpg');
+            }
+            &.fp-gad {
+                background-image: url('../images/fp-gad-header-bck.jpg');
+            }
+            &.fp-iea {
+                background-image: url('../images/fp-iea-header-bck.jpg');
+            }
+            &.fp-iso {
+                background-image: url('../images/fp-iso-header-bck.jpg');
+            }
+            &.fp-prp {
+                background-image: url('../images/fp-prp-header-bck.jpg');
+            }
+            &.fp-smx {
+                background-image: url('../images/fp-smx-header-bck.jpg');
+            }
+            &.fp-vec {
+                background-image: url('../images/fp-vec-header-bck.jpg');
+            }
+            &.fpd {
+                background-image: url('../images/fpd-header-bck.jpg');
+            }
+            &.eoi {
+                background-image: url('../images/eoi-header-bck.jpg');
+            }
+            &.eoi-basic {
+                background-image: url('../images/eoi-basic-header-bck.jpg');
+            }
+            &.eoi-medium {
+                background-image: url('../images/eoi-medium-header-bck.jpg');
+            }
+            &.eoi-advanced {
+                background-image: url('../images/eoi-advanced-header-bck.jpg');
+            }
+            &.pau {
+                background-image: url('../images/pau-header-bck.jpg');
             }
         }
     }
@@ -2966,15 +2949,18 @@ body {
     }
 
     .subpage-bigbanner {
-            background-size: cover;
+            background-size: 100vw 100%;
             background-repeat: no-repeat;
             background-position: center top;
+            margin-top: -106px;
+            height: 670px;
         .title {
             display: inline-block;
             background-color: $ioc-btx-assign;
             background-image: linear-gradient(161deg, $ioc-btx-assign, rgba(81, 92, 162, 0.86));
             line-height: 50px;
             max-width: 600px;
+            margin-top: 70px;
             position: relative;
             &:before {
                 content: ' ';
@@ -2998,33 +2984,38 @@ body {
             }
         }
         .study-overview {
-            margin-top: 70px;
-            padding-bottom: 264px;
-            .study-overview-headline,
-            .study-overview-text {
-                max-width: 530px;
+            margin-top: 139px;
+            padding-bottom: 64px;
+            .study-overview-headline {
+                max-width: 380px;
                 text-align: left;
+                margin-bottom: 64px;
+                padding-bottom: 0;
                 &:after {
                     display: none;
                 }
             }
-            .study-overview-text {
-                max-width: 369px;
-            }
             .subpage-button {
+                display: block;
+                line-height: 32px;
+                vertical-align: middle;
+                text-align: center;
                 font-size: 11px;
                 font-weight: 500;
-                letter-spacing: 1.8px;
-                color: #fff;
+                letter-spacing: 1px;
+                color: $ioc-btx-assign-btn;
                 text-transform: uppercase;
-                margin-top: 62px;
-                width: 180px;
+                width: 181px;
                 height: 32px;
                 opacity: 0.79;
                 border-radius: 100px;
-                border: none;
-                background-image: linear-gradient(168deg, #01c1b9, #003a78);
+                border: 2px solid $ioc-btx-assign-btn;
+                background-color: transparent;
                 box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.11);
+                &:hover {
+                    color: #fff;
+                    text-decoration: none;
+                }
             }
         }
     }
@@ -3314,19 +3305,18 @@ body {
             background-image: url('../images/ges-banner.png');
         }
     }
-    &.btx {
+    &.btx-ioc {
         .study-parallax {
-            background-image: url('../images/btx-parallax-img.jpg');
+            background-image: url('../images/btx-ioc-parallax-img.jpg');
         }
         .subpage-banner {
-            background-image: url('../images/btx-banner.jpg');
-        }
-        .subpage-text-buttons-banner {
-            margin-bottom: 0;
-            padding-bottom: 119px;
+            background-image: url('../images/btx-ioc-banner.png');
         }
         .subpage-bigbanner {
-            background-image: url('../images/btx-assign-banner.jpg');
+            background-image: url('../images/btx-ioc-assign-banner.jpg');
+        }
+        .subpage-text-buttons-banner {
+            background-size: 100vw 100%;
         }
     }
     &.btx-mat {
@@ -3334,11 +3324,7 @@ body {
             background-image: url('../images/btx-mat-parallax-img.jpg');
         }
         .subpage-banner {
-            background-image: url('../images/btx-mat-banner.jpg');
-        }
-        .subpage-text-buttons-banner {
-            margin-bottom: 0;
-            padding-bottom: 119px;
+            background-image: url('../images/btx-mat-banner.png');
         }
     }
     &.eoi {
@@ -3351,7 +3337,7 @@ body {
             background-image: url('../images/fesp-parallax-img.jpg');
         }
         .subpage-banner {
-            background-image: url('../images/fesp-banner.jpg');
+            background-image: url('../images/fesp-banner.png');
         }
     }
     &.fp {

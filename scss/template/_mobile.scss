@@ -67,7 +67,7 @@
     }
 }
 
-@mixin navbar-nav-menu-color($study, $background, $color) {
+@mixin navbar-nav-menu-choice-color($study, $background, $color) {
     &.#{$study} {
         & + .all-studies {
             .substudies {
@@ -87,6 +87,26 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+@mixin study-mobile-images($study) {
+    .fluid-container {
+        &.page-header {
+            &.#{$study} {
+                background-image: url('../images/' + $study + '-header-bck-mobile.jpg');
+            }
+        }
+    }
+    .item-page-study {
+        &.#{$study} {
+            .study-parallax {
+                background-image: url('../images/' + $study + '-parallax-img-mobile.jpg');
+            }
+            .subpage-banner {
+                background-image: url('../images/' + $study + '-banner-mobile.png');
             }
         }
     }
@@ -1107,57 +1127,25 @@
         }
     }
     /* Customization for studies, Parallax, Banners, layouts */
-    #main-box div.item-page-study {
-        padding-top: 30px;
-        margin-top: -$ioc-header-margin;
-        &.cas {
-            .study-parallax {
-                background-image: url('../images/cas-parallax-img-mobile.jpg');
-            }
-            .subpage-banner {
-                background-image: url('../images/cas-banner-mobile.png');
-            }
+    #main-box {
+        div.item-page-study {
+            padding-top: 30px;
+            margin-top: -$ioc-header-margin;
         }
-        &.competic {
-            .study-parallax {
-                background-image: url('../images/competic-parallax-img-mobile.jpg');
-            }
-            .subpage-banner {
-                background-image: url('../images/competic-banner-mobile.png');
-            }
-        }
-        &.fpd {
-            .study-parallax {
-                background-image: url('../images/fpd-parallax-img-mobile.jpg');
-            }
-            .subpage-banner {
-                background-image: url('../images/fpd-banner-mobile.png');
-            }
-        }
-        &.ges {
-            .study-parallax {
-                background-image: url('../images/ges-parallax-img-mobile.jpg');
-            }
-            .subpage-banner {
-                background-image: url('../images/ges-banner-mobile.png');
-            }
-        }
-        &.pacfgs {
-            .study-parallax {
-                background-image: url('../images/pacfgs-parallax-img-mobile.jpg');
-            }
-            .subpage-banner {
-                background-image: url('../images/pacfgs-banner-mobile.png');
-            }
-        }
-        &.pau {
-            .study-parallax {
-                background-image: url('../images/pau-parallax-img-mobile.jpg');
-            }
-            .subpage-banner {
-                background-image: url('../images/pau-banner-mobile.png');
-            }
-        }
+
+        @include study-mobile-images(acfgs);
+        @include study-mobile-images(btx);
+        @include study-mobile-images(btx-ioc);
+        @include study-mobile-images(btx-mat);
+        @include study-mobile-images(cas);
+        @include study-mobile-images(competic);
+        @include study-mobile-images(default);
+        @include study-mobile-images(eoi);
+        @include study-mobile-images(fesp);
+        @include study-mobile-images(fpd);
+        @include study-mobile-images(ges);
+        @include study-mobile-images(pacfgs);
+        @include study-mobile-images(pau);
     }
     .item-page-study {
         &.acfgs,
@@ -1432,6 +1420,9 @@
             height: 70vw;
             background-size: 100%;
         }
+    }
+    .subpage-bigbanner {
+        margin-top: -16px;
     }
     .study-parallax {
         background-attachment: scroll;
@@ -1766,8 +1757,8 @@
                 }
             }
         }
-        @include navbar-nav-menu-color('acfgs', rgba(53, 92, 103, 0.81), $ioc-acfgs-menu-mbl);
-        @include navbar-nav-menu-color('btx', rgba(100, 98, 169, 0.91), $ioc-btx-menu-mbl);
+        @include navbar-nav-menu-choice-color('acfgs', rgba(53, 92, 103, 0.81), $ioc-acfgs-menu-mbl);
+        @include navbar-nav-menu-choice-color('btx', rgba(100, 98, 169, 0.91), $ioc-btx-menu-mbl);
         // .container {
         //     padding: 0;
         // }
@@ -1889,6 +1880,42 @@
                         letter-spacing: 1.2px;
                     }
                 }
+            }
+        }
+    }
+    .subpage-bigbanner {
+        height: 227px;
+        margin-bottom: 61px;
+        .title {
+            line-height: 39px;
+            margin-top: 30px;
+            text-align: center;
+            &:before {
+                height: 39px;
+            }
+            h2 {
+                font-size: 9.5px;
+                line-height: 1.47;
+                letter-spacing: 0.5px
+            }
+        }
+        .study-overview {
+            margin-top: 29px;
+            .study-overview-headline {
+                margin: 0 auto 23px;
+                font-size: 9.5px;
+                font-weight: 400;
+                line-height: 1.58;
+                max-width: 233px;
+                text-align: center;
+            }
+            .subpage-button {
+                font-size: 8px;
+                letter-spacing: 0.8px;
+                width: 134px;
+                height: 27px;
+                line-height: 27px;
+                margin: 0 auto;
             }
         }
     }
@@ -2159,6 +2186,9 @@
             }
         }
     }
+    .subpage-bigbanner {
+        margin-top: 0;
+    }
 }
 
 @media all and (min-width: 768px) and (max-width: 991px) {
@@ -2394,6 +2424,33 @@
             }
             .study-col + .study-col {
                 margin-left: 28px;
+            }
+        }
+    }
+    .subpage-bigbanner {
+        height: 393px;
+        margin-top: 0;
+        .title {
+            line-height: 41px;
+            margin-top: 30px;
+            &:before {
+                height: 41px;
+            }
+            h2 {
+                font-size: 12px;
+            }
+        }
+        .study-overview {
+            margin-top: 65px;
+            .study-overview-headline {
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 1.47;
+                max-width: 290px;
+            }
+            .subpage-button {
+                font-size: 10px;
+                letter-spacing: 0.9px;
             }
         }
     }
@@ -2657,6 +2714,26 @@
             line-height: 1.79;
         }
     }
+    .subpage-bigbanner {
+        .title {
+            line-height: 43px;
+            margin-top: 78px;
+            &:before {
+                height: 43px;
+            }
+            h2 {
+                font-size: 14px;
+            }
+        }
+        .study-overview {
+            margin-top: 80px;
+            .study-overview-headline {
+                font-size: 19px;
+                font-weight: 300;
+                line-height: 1.37;
+            }
+        }
+    }
     .back-to-top {
         width: 221px;
     }
@@ -2682,7 +2759,7 @@
         }
     }
     .subpage-text-buttons-banner {
-        margin-bottom: 101px;
+        margin-bottom: 106px;
         .subpage-text {
             margin-top: 89px;
             p {
@@ -2708,7 +2785,7 @@
         .submenu-content,
         .substudies-content {
             .navbar-nav {
-                max-width: 568px;
+                //max-width: 568px;
             }
         }
     }
@@ -2859,6 +2936,21 @@
             }
         }
     }
+    .subpage-bigbanner {
+        .title {
+            h2 {
+                font-size: 15px;
+            }
+        }
+        .study-overview {
+            margin-top: 139px;
+            .study-overview-headline {
+                font-size: 21px;
+                font-weight: 300;
+                line-height: 1.33;
+            }
+        }
+    }
     .study-panel {
         .study-data {
             .study-col + .study-col {
@@ -2925,7 +3017,7 @@
     .subpage-text-buttons-banner .subpage-banner,
     .subpage-buttons-filter .subpage-banner {
         height: 406px;
-        background-position: center bottom -2vw;
+        background-position: center;
     }
     .item-page-study {
         &.acfgs,
