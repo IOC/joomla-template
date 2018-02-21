@@ -71,7 +71,7 @@ $ioc-study-ges:       #d14c5e;
 $ioc-title-module:    #5b6b78;
 $ioc-title-ges:       #eb5066;
 $ioc-faqs:            #293658;
-$ioc-breadcrumb-eoi:  #c47200;
+//$ioc-breadcrumb-eoi:  #c47200;
 $ioc-breadcrumb-fp:   #0e7554;
 $ioc-bg-back-to-top:  #08191d;
 $ioc-back-to-top:     #eafff9;
@@ -162,7 +162,10 @@ $ioc-eoi-colors: (
     tab-title: #de9c02,
     tab-border: #ecb023,
     button: #f6ad03,
-    moreinfo-title: #f6ad03
+    moreinfo-title: #f6ad03,
+    menu-title-bg: rgba(223, 140, 32, 0.94),
+    menu-title: #f0effd,
+    breadcrumb: #c47200
 );
 $ioc-fesp-colors: (
     header-bg: #ab3f5f,

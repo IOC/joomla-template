@@ -89,7 +89,7 @@ function modChrome_sub_studies($module, &$params, &$attribs)
                         <h1><span class="<?php echo $params->get('header_class'); ?>" ></span><?php echo $module->title ; ?></h1>
                     </div>
                 <?php endif; ?>
-                <div class="container substudies-elements">
+                <div class="substudies-elements">
                     <?php echo $module->content; ?>
                 </div>
             </div>

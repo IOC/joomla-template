@@ -1,3 +1,12 @@
+@function get-color($colors, $key) {
+    @if map-has-key($colors, $key) {
+        @return map-get($colors, $key);
+    }
+
+    @warn "Unknown `#{$key}` in $colors.";
+    @return inherit;
+}
+
 @mixin custom-navbar-nav {
     #navigation {
         .navbar-header {
@@ -107,6 +116,31 @@
             }
             .subpage-banner {
                 background-image: url('../images/' + $study + '-banner-mobile.png');
+            }
+        }
+    }
+}
+
+@mixin study-mobile-custom-color($study, $colors) {
+    .item-page-study {
+        &.#{$study} {
+            .substudies,
+            .submenu {
+                .substudies-elements,
+                div {
+                    .navbar-nav {
+                        li {
+                            a {
+                                .element-title {
+                                    background-color: get-color($colors, menu-title-bg);
+                                    p {
+                                        color: get-color($colors, menu-title);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -321,6 +355,17 @@
                         .container + .container {
                             margin-top: 16px;
                             padding: 0 15px;
+                        }
+                    }
+                }
+                &.subpage {
+                    height: 146px;
+                    .container {
+                        h1 {
+                            font-size: 20px;
+                            font-weight: 300;
+                            bottom: 37px;
+                            padding: 0;
                         }
                     }
                 }
@@ -736,6 +781,33 @@
             }
         }
     }
+    .subpage-only-buttons,
+    .subpage-text-buttons,
+    .subpage-text-buttons-banner,
+    .subpage-buttons-filter {
+        .subpage-text {
+            p {
+                font-size: 13px;
+                font-weight: 300;
+                line-height: 1.54;
+            }
+            margin-bottom: 54px;
+        }
+        .subpage-buttons {
+            margin-top: 173px;
+            padding-bottom: 31px;
+            .subpage-group-buttons {
+                .subpage-button {
+                    height: 174px;
+                    width: 174px;
+                    max-width: 174px;
+                }
+            }
+        }
+    }
+    .subpage-text-buttons {
+        margin-top: -190px;
+    }
     .study-tabs {
         background-position: center;
         background-repeat: no-repeat;
@@ -797,7 +869,99 @@
     .button-registration {
         margin: 34px auto;
     }
-
+    .modal-modules,
+    .modal-resources {
+        .title {
+            margin-bottom: 29px;
+            margin-top: 51px;
+            h1 {
+                font-size: 16px;
+                font-weight: 500;
+                letter-spacing: 0;
+                &:before,
+                &:after {
+                    display: none;
+                }
+            }
+        }
+        .content-modal-modules {
+            .modal-module {
+                position: relative;
+                width: 100%;
+                height: 86px;
+                border-top-width: 0;
+                border-right-width: 3px;
+                margin-top: 23px;
+                margin-right: 0;
+                overflow: hidden;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 214px;
+                    height: 100%;
+                }
+                .shortname-modal-module {
+                    top: 5px;
+                    font-size: 8px;
+                    font-weight: 500;
+                    border-bottom: 2px solid;
+                    padding-bottom: 2px;
+                    &:before,
+                    &:after {
+                        display: none;
+                    }
+                }
+                .text-modal-module {
+                    bottom: 20px;
+                    line-height: 1.17;
+                    text-align: left;
+                    p {
+                        width: 100%;
+                        font-size: 12px;
+                    }
+                }
+                .bottom-modal-module {
+                    bottom: 5px;
+                    line-height: 1;
+                    border-top: 0;
+                    &:before {
+                        display: none;
+                    }
+                }
+                .shortname-modal-module,
+                .text-modal-module,
+                .bottom-modal-module {
+                    position: absolute;
+                    left: 223px;
+                    width: auto;
+                    margin: 0;
+                }
+            }
+        }
+        .body-modal-modules,
+        .body-modal-resources {
+            .modal-module,
+            .modal-resource {
+                &.modal-dialog {
+                    max-width: 90%;
+                    .bottom-modal-module {
+                        flex-flow: column wrap;
+                        align-content: center;
+                        .custom-icon {
+                            &.clock {
+                                height: 20px;
+                            }
+                        }
+                    }
+                    @include closemodalmobileicon();
+                    &.extended-bottom {
+                        background-size: 100vw 60%;
+                    }
+                }
+            }
+        }
+    }
     .study-more-info {
         padding: 0 15px;
         margin-bottom: 60px;
@@ -836,7 +1000,6 @@
             }
         }
     }
-
     .study-parallax {
         height: 211px;
         margin-top: 91px;
@@ -1275,6 +1438,13 @@
                 left: -40px!important;
                 max-width: 140px;
             }
+            .modal-module {
+                .text-modal-module,
+                .bottom-modal-module,
+                .shortname-modal-module {
+                    left: 109px;
+                }
+            }
         }
     }
     .modal-resources {
@@ -1316,7 +1486,10 @@
     .subpagebody {
         background-size: 80vw 82px;
     }
-    .subpage-text-buttons {
+    .subpage-only-buttons,
+    .subpage-text-buttons,
+    .subpage-text-buttons-banner,
+    .subpage-buttons-filter {
         background-position: center bottom;
         background-size: 100vw 100%;
         .subpage-buttons {
@@ -1324,8 +1497,6 @@
             padding-bottom: 0;
             .subpage-text,
             .subpage-group-buttons {
-                max-width: 290px;
-                margin-bottom: 30px;
                 justify-content: space-between;
                 p {
                     width: 100%;
@@ -1340,33 +1511,48 @@
                     }
                 }
                 .subpage-button {
-                    max-width: 140px;
-                    min-width: 140px;
-                    height: 140px;
+                    max-width: 93px !important;
+                    min-width: 93px !important;
+                    height: 116px !important;
                     margin: 0 0 7px 0;
                     .custom-icon {
+                        height: 43px;
+                        width: 28px;
                         &.certificats,
                         &.competencies,
                         &.ambit,
-                        &.itinerari {
-                            top: 32px;
+                        &.itinerari,
+                        &.metodologia {
+                            top: 25px !important;
                         }
                     }
                     .icon-text {
-                        bottom: 24px;
-                        font-size: 9px;
-                        font-weight: 500;
-                        letter-spacing: 1.2px;
+                        bottom: 21px !important;
+                        font-size: 8px !important;
+                        letter-spacing: 1.1px !important;
+                        max-width: 100%;
                     }
                 }
             }
+            .subpage-text {
+                margin-bottom: 30px;
+                margin-top: 45px;
+                max-width: 288px;
+            }
+            .subpage-group-buttons {
+                max-width: 290px;
+                margin-bottom: 30px;
+                margin-top: 15px;
+            }
         }
+    }
+    .subpage-text-buttons {
+        background-image: url('../images/seccio-text-botons-bck-mobile.svg');
     }
     .study-buttons {
         margin-top: 73px;
         .study-button {
-            min-width: 94px;
-            max-width: 30%;
+            width: 94px;
             height: 116px;
             .custom-icon {
                 height: 42px;
@@ -1445,7 +1631,6 @@
                     .panel-heading {
                         .panel-title {
                             a {
-                                padding: 14px 18px;
                                 .custom-icon {
                                     &.plus {
                                         right: 18px;
@@ -1568,7 +1753,8 @@
                     .panel-heading {
                         h3 {
                             a {
-                                padding: 14px 18px;
+                                padding-left: 18px;
+                                padding-right: 33px;
                                 .custom-icon {
                                     &.plus {
                                         right: 18px;
@@ -1645,17 +1831,6 @@
                         }
                     }
                 }
-                &.subpage {
-                    height: 146px;
-                    .container {
-                        h1 {
-                            font-size: 20px;
-                            font-weight: 300;
-                            bottom: 37px;
-                            padding: 0;
-                        }
-                    }
-                }
             }
         }
         .container {
@@ -1670,12 +1845,30 @@
             }
         }
     }
+
+    @include study-mobile-custom-color('eoi', $ioc-eoi-colors);
+
+    .submenu {
+        margin-top: -100px;
+        margin-bottom: 54px;
+        .submenu-content {
+            padding-top: 100px;
+        }
+    }
     .substudies,
     .submenu {
-        background-image: none;
-        padding-bottom: 73px;
+        background-image: url('../images/cicles-bck-mobile.svg');
+        padding-bottom: 42px;
         .substudies-content,
         .submenu-content {
+            .title {
+                margin-top: 56px;
+                margin-bottom: 44px;
+                h1 {
+                    font-size: 16px;
+                    line-height: 1.25;
+                }
+            }
             .substudies-elements,
             div {
                 padding-left: 15px;
@@ -1686,14 +1879,16 @@
                     //padding: 0 15px;
                     li {
                         width: 100%;
-                        height: 132px;
+                        height: 139px;
                         margin-right: 0;
+                        margin-top: 0;
                         a {
                             position: relative;
                             .element-img {
-                                min-height: 138px;
-                                background-size: 100vw;
-                                background-position: top;
+                                min-height: 139px;
+                                background-size: cover;
+                                //background-size: 100vw;
+                                //background-position: top;
                             }
                             .element-title {
                                 position: absolute;
@@ -1710,6 +1905,7 @@
                                     font-weight: 500;
                                     line-height: 1.55;
                                     font-size: 11px;
+                                    opacity: 1;
                                 }
                             }
                         }
@@ -1762,99 +1958,6 @@
         // .container {
         //     padding: 0;
         // }
-    }
-    .modal-modules,
-    .modal-resources {
-        .title {
-            margin-bottom: 0;
-            h1 {
-                font-size: 16px;
-                font-weight: 500;
-                letter-spacing: 0;
-                &:before,
-                &:after {
-                    display: none;
-                }
-            }
-        }
-        .content-modal-modules {
-            max-width: 80%;
-            overflow: hidden;
-            .modal-module {
-                position: relative;
-                width: 100%;
-                height: 86px;
-                border-top-width: 0;
-                border-right-width: 3px;
-                margin-top: 23px;
-                margin-right: 0;
-                overflow: hidden;
-                img {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: auto;
-                    height: 100%;
-                }
-                .shortname-modal-module {
-                    top: 5px;
-                    font-size: 8px;
-                    font-weight: 500;
-                    border-bottom: 2px solid;
-                    padding-bottom: 2px;
-                    &:before,
-                    &:after {
-                        display: none;
-                    }
-                }
-                .text-modal-module {
-                    bottom: 20px;
-                    line-height: 1.17;
-                    text-align: left;
-                    p {
-                        font-size: 12px;
-                    }
-                }
-                .bottom-modal-module {
-                    bottom: 5px;
-                    line-height: 1;
-                    border-top: 0;
-                    &:before {
-                        display: none;
-                    }
-                }
-                .shortname-modal-module,
-                .text-modal-module,
-                .bottom-modal-module {
-                    position: absolute;
-                    left: 108px;
-                    width: auto;
-                    margin: 0;
-                }
-            }
-        }
-        .body-modal-modules,
-        .body-modal-resources {
-            .modal-module,
-            .modal-resource {
-                &.modal-dialog {
-                    max-width: 90%;
-                    .bottom-modal-module {
-                        flex-flow: column wrap;
-                        align-content: center;
-                        .custom-icon {
-                            &.clock {
-                                height: 20px;
-                            }
-                        }
-                    }
-                    @include closemodalmobileicon();
-                    &.extended-bottom {
-                        background-size: 100vw 60%;
-                    }
-                }
-            }
-        }
     }
     .subpage-text-buttons {
         .subpage-buttons {
@@ -1944,6 +2047,27 @@
         .study-tabs,
         .study-more-info {
             max-width: 95%;
+        }
+    }
+    .study-more-info,
+    .study-tabs {
+        .panel-section-info {
+            .panel {
+                &.panel-default {
+                    .panel-heading {
+                        .panel-title {
+                            a {
+                                padding-left: 18px;
+                                .custom-icon {
+                                    &.plus {
+                                        right: 18px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -2137,18 +2261,7 @@
         }
         .content-modal-modules {
             margin-top: 28px;
-            max-width: 85%;
-            .modal-module {
-                img {
-                    width: 214px;
-                    height: auto;
-                }
-                .shortname-modal-module,
-                .text-modal-module,
-                .bottom-modal-module {
-                    left: 223px;
-                }
-            }
+            //max-width: 85%;
         }
     }
     .layout-employment {
@@ -2427,6 +2540,47 @@
             }
         }
     }
+    .submenu {
+        padding-bottom: 62px;
+        margin-top: -140px;
+        .submenu-content {
+            padding-top: 140px;
+            .title {
+                margin-top: 84px;
+                margin-bottom: 20px;
+                h1 {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .submenu,
+    .substudies {
+        .submenu-content,
+        .substudies-content {
+            .navbar-nav {
+                max-width: 630px;
+                li {
+                    height: 196px;
+                    width: 196px;
+                    margin-right: 21px;
+                    .element-img {
+                        min-height: 139px;
+                    }
+                    .element-title {
+                        line-height: 57px;
+                        p {
+                            font-size: 12px;
+                            line-height: 1.3;
+                        }
+                    }
+                    &:nth-child(3n) {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
     .subpage-bigbanner {
         height: 393px;
         margin-top: 0;
@@ -2469,9 +2623,7 @@
         }
     }
     .modal-modules {
-        .content-modal-modules {
-            max-width: 420px !important;
-        }
+        padding: 0;
     }
 }
 
@@ -2480,6 +2632,21 @@
     @include max-width-article(676px, 830px);
     .container {
         width: 830px;
+    }
+    #container {
+        .fluid-container {
+            &.page-header {
+                &.subpage {
+                    .container {
+                        h1 {
+                            font-size: 23px;
+                            font-weight: normal;
+                            bottom: 67px;
+                        }
+                    }
+                }
+            }
+        }
     }
     #navigation {
         .container {
@@ -2586,7 +2753,10 @@
         .submenu-content,
         .substudies-content {
             .navbar-nav {
-                max-width: 852px;
+                max-width: 828px;
+                li:nth-child(3n) {
+                    margin-right: 0;
+                }
             }
         }
     }
@@ -2605,6 +2775,18 @@
                         letter-spacing: 0;
                     }
                 }
+            }
+        }
+        .modal-modules {
+            max-width: 830px;
+            padding: 0;
+            .content-modal-modules {
+                .modal-module {
+                    &:nth-child(4n) {
+                        margin-right: 0;
+                    }
+                }
+
             }
         }
     }
@@ -2789,11 +2971,11 @@
             }
         }
     }
-    .modal-modules {
-        .content-modal-modules {
-            max-width: 630px;
-        }
-    }
+    // .modal-modules {
+    //     .content-modal-modules {
+    //         max-width: 630px;
+    //     }
+    // }
 }
 
 @media all and (min-width: 1199px) {
@@ -2972,6 +3154,59 @@
     }
     .study-parallax {
         height: 249px;
+    }
+    .submenu,
+    .substudies {
+        .submenu-content,
+        .substudies-content {
+            .navbar-nav {
+                max-width: 1180px;
+                li {
+                    height: 368px;
+                    width: 368px;
+                    margin-right: 38px;
+                    .element-img {
+                        min-height: 244px;
+                    }
+                    .element-title {
+                        line-height: 124px;
+                    }
+                }
+            }
+        }
+    }
+    #container {
+        .modal-modules {
+            max-width: 1180px;
+            .title {
+                margin-top: 113px;
+                margin-bottom: 82px;
+                h1 {
+                    font-size: 26px;
+                }
+
+            }
+            .content-modal-modules {
+                max-width: 100%;
+                .modal-module {
+                    height: 339px;
+                    width: 280px;
+                    margin-right: 20px;
+                    img {
+                        height: 162px;
+                    }
+                    .text-modal-module {
+                        margin: 0;
+                        line-height: 128px;
+                        max-height: 128px;
+                    }
+                    .bottom-modal-module {
+                        height: 39px;
+                        line-height: 39px;
+                    }
+                }
+            }
+        }
     }
     .study-more-info {
         .title {

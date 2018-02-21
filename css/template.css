@@ -1472,6 +1472,12 @@ header.headroom--top.acfgs .navbar-default .social .custom-icon:hover {
 #container .fluid-container.page-header.acfgs .container h1 {
   color: #e5f7fe;
 }
+.item-page-study.acfgs .ioc-parent-breadcrumb .container:before {
+  background-color: inherit;
+}
+.item-page-study.acfgs .ioc-parent-breadcrumb .container .ioc-breadcrumb {
+  background-color: inherit;
+}
 .item-page-study.acfgs .study-overview .study-overview-headline::after, .item-page-study.acfgs .study-overview-menu .study-overview-headline::after {
   border-color: #26727d;
 }
@@ -1537,6 +1543,12 @@ header.headroom--top.btx .navbar-default .social .custom-icon:hover {
 }
 #container .fluid-container.page-header.btx .container h1 {
   color: #f0effd;
+}
+.item-page-study.btx .ioc-parent-breadcrumb .container:before {
+  background-color: inherit;
+}
+.item-page-study.btx .ioc-parent-breadcrumb .container .ioc-breadcrumb {
+  background-color: inherit;
 }
 .item-page-study.btx .study-overview .study-overview-headline::after, .item-page-study.btx .study-overview-menu .study-overview-headline::after {
   border-color: #6462a9;
@@ -1604,6 +1616,12 @@ header.headroom--top.btx-ioc .navbar-default .social .custom-icon:hover {
 #container .fluid-container.page-header.btx-ioc .container h1 {
   color: #f0effd;
 }
+.item-page-study.btx-ioc .ioc-parent-breadcrumb .container:before {
+  background-color: inherit;
+}
+.item-page-study.btx-ioc .ioc-parent-breadcrumb .container .ioc-breadcrumb {
+  background-color: inherit;
+}
 .item-page-study.btx-ioc .study-overview .study-overview-headline::after, .item-page-study.btx-ioc .study-overview-menu .study-overview-headline::after {
   border-color: #6462a9;
 }
@@ -1669,6 +1687,12 @@ header.headroom--top.btx-mat .navbar-default .social .custom-icon:hover {
 }
 #container .fluid-container.page-header.btx-mat .container h1 {
   color: #e5f7fe;
+}
+.item-page-study.btx-mat .ioc-parent-breadcrumb .container:before {
+  background-color: inherit;
+}
+.item-page-study.btx-mat .ioc-parent-breadcrumb .container .ioc-breadcrumb {
+  background-color: inherit;
 }
 .item-page-study.btx-mat .study-overview .study-overview-headline::after, .item-page-study.btx-mat .study-overview-menu .study-overview-headline::after {
   border-color: #41b0c8;
@@ -1736,6 +1760,12 @@ header.headroom--top.cas .navbar-default .social .custom-icon:hover {
 #container .fluid-container.page-header.cas .container h1 {
   color: #e5f7fe;
 }
+.item-page-study.cas .ioc-parent-breadcrumb .container:before {
+  background-color: inherit;
+}
+.item-page-study.cas .ioc-parent-breadcrumb .container .ioc-breadcrumb {
+  background-color: inherit;
+}
 .item-page-study.cas .study-overview .study-overview-headline::after, .item-page-study.cas .study-overview-menu .study-overview-headline::after {
   border-color: #26727d;
 }
@@ -1801,6 +1831,12 @@ header.headroom--top.competic .navbar-default .social .custom-icon:hover {
 }
 #container .fluid-container.page-header.competic .container h1 {
   color: #e9edff;
+}
+.item-page-study.competic .ioc-parent-breadcrumb .container:before {
+  background-color: inherit;
+}
+.item-page-study.competic .ioc-parent-breadcrumb .container .ioc-breadcrumb {
+  background-color: inherit;
 }
 .item-page-study.competic .study-overview .study-overview-headline::after, .item-page-study.competic .study-overview-menu .study-overview-headline::after {
   border-color: #5468cd;
@@ -1868,6 +1904,12 @@ header.headroom--top[class*="eoi-"] .navbar-default .social .custom-icon:hover {
 #container .fluid-container.page-header[class*="eoi-"] .container h1 {
   color: #fff;
 }
+div[class*="item-page-eoi-"] .ioc-parent-breadcrumb .container:before {
+  background-color: #c47200;
+}
+div[class*="item-page-eoi-"] .ioc-parent-breadcrumb .container .ioc-breadcrumb {
+  background-color: #c47200;
+}
 div[class*="item-page-eoi-"] .study-overview .study-overview-headline::after, div[class*="item-page-eoi-"] .study-overview-menu .study-overview-headline::after {
   border-color: #ecb023;
 }
@@ -1927,6 +1969,12 @@ header.headroom--top.eoi .navbar-default .social .custom-icon:hover {
 }
 #container .fluid-container.page-header.eoi .container h1 {
   color: #fff;
+}
+.item-page-study.eoi .ioc-parent-breadcrumb .container:before {
+  background-color: #c47200;
+}
+.item-page-study.eoi .ioc-parent-breadcrumb .container .ioc-breadcrumb {
+  background-color: #c47200;
 }
 .item-page-study.eoi .study-overview .study-overview-headline::after, .item-page-study.eoi .study-overview-menu .study-overview-headline::after {
   border-color: #ecb023;
@@ -1994,6 +2042,12 @@ header.headroom--top.fesp .navbar-default .social .custom-icon:hover {
 #container .fluid-container.page-header.fesp .container h1 {
   color: #fff;
 }
+.item-page-study.fesp .ioc-parent-breadcrumb .container:before {
+  background-color: inherit;
+}
+.item-page-study.fesp .ioc-parent-breadcrumb .container .ioc-breadcrumb {
+  background-color: inherit;
+}
 .item-page-study.fesp .study-overview .study-overview-headline::after, .item-page-study.fesp .study-overview-menu .study-overview-headline::after {
   border-color: #a03a59;
 }
@@ -2059,6 +2113,12 @@ header.headroom--top.fpd .navbar-default .social .custom-icon:hover {
 }
 #container .fluid-container.page-header.fpd .container h1 {
   color: #fff;
+}
+.item-page-study.fpd .ioc-parent-breadcrumb .container:before {
+  background-color: inherit;
+}
+.item-page-study.fpd .ioc-parent-breadcrumb .container .ioc-breadcrumb {
+  background-color: inherit;
 }
 .item-page-study.fpd .study-overview .study-overview-headline::after, .item-page-study.fpd .study-overview-menu .study-overview-headline::after {
   border-color: #ecb023;
@@ -2126,6 +2186,12 @@ header.headroom--top.ges .navbar-default .social .custom-icon:hover {
 #container .fluid-container.page-header.ges .container h1 {
   color: #ffe7e8;
 }
+.item-page-study.ges .ioc-parent-breadcrumb .container:before {
+  background-color: inherit;
+}
+.item-page-study.ges .ioc-parent-breadcrumb .container .ioc-breadcrumb {
+  background-color: inherit;
+}
 .item-page-study.ges .study-overview .study-overview-headline::after, .item-page-study.ges .study-overview-menu .study-overview-headline::after {
   border-color: #e15064;
 }
@@ -2192,6 +2258,12 @@ header.headroom--top.pacfgs .navbar-default .social .custom-icon:hover {
 #container .fluid-container.page-header.pacfgs .container h1 {
   color: #e5f7fe;
 }
+.item-page-study.pacfgs .ioc-parent-breadcrumb .container:before {
+  background-color: inherit;
+}
+.item-page-study.pacfgs .ioc-parent-breadcrumb .container .ioc-breadcrumb {
+  background-color: inherit;
+}
 .item-page-study.pacfgs .study-overview .study-overview-headline::after, .item-page-study.pacfgs .study-overview-menu .study-overview-headline::after {
   border-color: #26727d;
 }
@@ -2257,6 +2329,12 @@ header.headroom--top.pau .navbar-default .social .custom-icon:hover {
 }
 #container .fluid-container.page-header.pau .container h1 {
   color: #ddebec;
+}
+.item-page-study.pau .ioc-parent-breadcrumb .container:before {
+  background-color: inherit;
+}
+.item-page-study.pau .ioc-parent-breadcrumb .container .ioc-breadcrumb {
+  background-color: inherit;
 }
 .item-page-study.pau .study-overview .study-overview-headline::after, .item-page-study.pau .study-overview-menu .study-overview-headline::after {
   border-color: #508d90;
@@ -2511,6 +2589,7 @@ div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module 
 }
 .modal-modules .content-modal-modules .modal-module, .modal-resources .content-modal-modules .modal-module {
   width: 200px;
+  height: 243px;
 }
 .modal-modules .content-modal-modules .modal-module img, .modal-resources .content-modal-modules .modal-module img {
   height: 114px;
@@ -2530,7 +2609,7 @@ div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module 
 }
 .modal-modules .content-modal-modules .modal-module, .modal-resources .content-modal-modules .modal-module, .modal-modules .body-modal-modules .modal-module, .modal-resources .body-modal-modules .modal-module, .modal-modules .body-modal-resources .modal-module, .modal-resources .body-modal-resources .modal-module, .modal-modules .content-modal-modules .modal-resource, .modal-resources .content-modal-modules .modal-resource, .modal-modules .body-modal-modules .modal-resource, .modal-resources .body-modal-modules .modal-resource, .modal-modules .body-modal-resources .modal-resource, .modal-resources .body-modal-resources .modal-resource {
   background-color: #fff;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 4px 0 rgba(61, 74, 73, 0.25);
   border-style: solid;
   border-width: 0;
   border-top-width: 6px;
@@ -2777,11 +2856,11 @@ div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module 
 }
 .modal-modules .content-modal-modules .modal-module .text-modal-module, .modal-resources .content-modal-modules .modal-module .text-modal-module, .modal-modules .body-modal-modules .modal-module .text-modal-module, .modal-resources .body-modal-modules .modal-module .text-modal-module, .modal-modules .body-modal-resources .modal-module .text-modal-module, .modal-resources .body-modal-resources .modal-module .text-modal-module, .modal-modules .content-modal-modules .modal-resource .text-modal-module, .modal-resources .content-modal-modules .modal-resource .text-modal-module, .modal-modules .body-modal-modules .modal-resource .text-modal-module, .modal-resources .body-modal-modules .modal-resource .text-modal-module, .modal-modules .body-modal-resources .modal-resource .text-modal-module, .modal-resources .body-modal-resources .modal-resource .text-modal-module {
   display: block;
-  line-height: 54px;
+  line-height: 94px;
   width: 100%;
   text-align: center;
-  margin: 8px 0;
-  max-height: 54px;
+  margin: 0;
+  max-height: 94px;
   overflow: hidden;
 }
 .modal-modules .content-modal-modules .modal-module .text-modal-module p, .modal-resources .content-modal-modules .modal-module .text-modal-module p, .modal-modules .body-modal-modules .modal-module .text-modal-module p, .modal-resources .body-modal-modules .modal-module .text-modal-module p, .modal-modules .body-modal-resources .modal-module .text-modal-module p, .modal-resources .body-modal-resources .modal-module .text-modal-module p, .modal-modules .content-modal-modules .modal-resource .text-modal-module p, .modal-resources .content-modal-modules .modal-resource .text-modal-module p, .modal-modules .body-modal-modules .modal-resource .text-modal-module p, .modal-resources .body-modal-modules .modal-resource .text-modal-module p, .modal-modules .body-modal-resources .modal-resource .text-modal-module p, .modal-resources .body-modal-resources .modal-resource .text-modal-module p {
@@ -2790,7 +2869,7 @@ div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module 
   width: 89%;
   line-height: 1.2;
   margin: 0;
-  font-size: 15px;
+  font-size: 14px;
 }
 .modal-modules .content-modal-modules .modal-module .text-modal-module p.text-small, .modal-resources .content-modal-modules .modal-module .text-modal-module p.text-small, .modal-modules .body-modal-modules .modal-module .text-modal-module p.text-small, .modal-resources .body-modal-modules .modal-module .text-modal-module p.text-small, .modal-modules .body-modal-resources .modal-module .text-modal-module p.text-small, .modal-resources .body-modal-resources .modal-module .text-modal-module p.text-small, .modal-modules .content-modal-modules .modal-resource .text-modal-module p.text-small, .modal-resources .content-modal-modules .modal-resource .text-modal-module p.text-small, .modal-modules .body-modal-modules .modal-resource .text-modal-module p.text-small, .modal-resources .body-modal-modules .modal-resource .text-modal-module p.text-small, .modal-modules .body-modal-resources .modal-resource .text-modal-module p.text-small, .modal-resources .body-modal-resources .modal-resource .text-modal-module p.text-small {
   font-size: 13px;
@@ -2968,7 +3047,7 @@ div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module 
   background-position: center bottom;
 }
 .submenu .submenu-content, .substudies .submenu-content, .submenu .substudies-content, .substudies .substudies-content {
-  padding-top: 200px;
+  padding-top: 190px;
 }
 .submenu .submenu-content .navbar-nav, .substudies .submenu-content .navbar-nav, .submenu .substudies-content .navbar-nav, .substudies .substudies-content .navbar-nav {
   width: 100%;
@@ -3029,6 +3108,7 @@ div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module 
   line-height: 1.4;
   vertical-align: middle;
   width: 100%;
+  opacity: 0.77;
 }
 .submenu .submenu-content .navbar-nav .element-img, .substudies .submenu-content .navbar-nav .element-img, .submenu .substudies-content .navbar-nav .element-img, .substudies .substudies-content .navbar-nav .element-img {
   background-image: url('../images/menu/menu-default.png');
@@ -3037,8 +3117,8 @@ div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module 
   background-size: 100% 100%;
 }
 .submenu {
-  padding-bottom: 125px;
-  margin-top: -200px;
+  padding-bottom: 105px;
+  margin-top: -190px;
 }
 .submenu .submenu-content .title {
   width: 100%;
@@ -4106,12 +4186,6 @@ body #wrap section {
 .study-panel .study-data .study-col + .study-col {
   margin-left: 14px;
 }
-.subpagebody {
-  background-image: url('../images/cicles-top-bck.svg');
-  background-position: top left;
-  background-size: 100vw 190px;
-  background-repeat: no-repeat;
-}
 .subpage-only-buttons {
   background-image: url('../images/seccio-botons-bck.svg');
   background-size: 100vw 100%;
@@ -4407,7 +4481,7 @@ body #wrap section {
   flex-grow: 1;
   height: 190px;
   min-width: 156px;
-  max-width: 170px;
+  max-width: 190px;
   margin: auto;
 }
 .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button:last-child, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button:last-child, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button:last-child, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button:last-child {
@@ -4415,6 +4489,9 @@ body #wrap section {
 }
 .subpage-only-buttons .study-buttons, .subpage-text-buttons .study-buttons, .subpage-text-buttons-banner .study-buttons, .subpage-buttons-filter .study-buttons {
   margin-top: 0;
+}
+.study-buttons + p {
+  margin: 0;
 }
 .study-buttons, .body-modal-modules, .subpage-buttons {
   display: -webkit-box;
@@ -4450,7 +4527,7 @@ body #wrap section {
   margin: auto;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
   display: inline-block;
 }
 .study-buttons .study-button .custom-icon.suport, .body-modal-modules .study-button .custom-icon.suport, .subpage-buttons .study-button .custom-icon.suport, .study-buttons .file-modal-module .custom-icon.suport, .body-modal-modules .file-modal-module .custom-icon.suport, .subpage-buttons .file-modal-module .custom-icon.suport, .study-buttons .subpage-button .custom-icon.suport, .body-modal-modules .subpage-button .custom-icon.suport, .subpage-buttons .subpage-button .custom-icon.suport {
@@ -5013,6 +5090,15 @@ body #wrap section {
 }
 .study-more-info .panel-section-info .panel.panel-default .panel-heading .panel-title, .study-tabs .panel-section-info .panel.panel-default .panel-heading .panel-title {
   height: 40px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  flex: 1 0 auto;
+  justify-content: flex-start;
+  align-items: center;
 }
 .study-more-info .panel-section-info .panel.panel-default .panel-heading .panel-title a, .study-tabs .panel-section-info .panel.panel-default .panel-heading .panel-title a {
   position: relative;
@@ -5022,7 +5108,7 @@ body #wrap section {
   color: #364958;
   text-decoration: none;
   outline: none;
-  padding: 14px 33px;
+  padding: 14px 43px 14px 30px;
   display: inline-block;
   width: 100%;
   text-transform: uppercase;
@@ -5497,6 +5583,7 @@ body #wrap section {
   flex: 1 0 auto;
   justify-content: space-between;
   margin: 0 auto;
+  max-width: 100%;
 }
 .footer .top .top-col {
   padding: 0;
@@ -5595,11 +5682,13 @@ body #wrap section {
 }
 .footer .location .map {
   width: 243px;
+  max-width: 100%;
 }
 .footer .location .map .map-image {
   display: block;
   height: 172px;
   width: 243px;
+  max-width: 100%;
   background-image: url('../images/mapa.jpg');
   background-position: center;
 }
@@ -5742,12 +5831,22 @@ body #wrap section {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 1.48px;
+  height: 40px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  flex: 1 0 auto;
+  justify-content: flex-start;
+  align-items: center;
 }
 .footer #footer-collapse .panel-group .panel-default .panel-heading h3 a {
   position: relative;
   display: inline-block;
   width: 100%;
-  padding: 13px 33px;
+  padding: 14px 33px;
   color: #f5f5f5;
 }
 .footer #footer-collapse .panel-group .panel-default .panel-heading h3 a:hover {
@@ -6069,6 +6168,15 @@ div[class*="item-page-"] table p {
     margin-top: 16px;
     padding: 0 15px;
   }
+  #container .fluid-container.page-header.subpage {
+    height: 146px;
+  }
+  #container .fluid-container.page-header.subpage .container h1 {
+    font-size: 20px;
+    font-weight: 300;
+    bottom: 37px;
+    padding: 0;
+  }
   #container .container.study-main .study-overview .study-overview-headline:after, #container .container.study-main .study-overview .study-overview-text:after {
     display: none;
   }
@@ -6377,6 +6485,26 @@ div[class*="item-page-"] table p {
     font-size: 14px;
     line-height: 1.43;
   }
+  .subpage-only-buttons .subpage-text, .subpage-text-buttons .subpage-text, .subpage-text-buttons-banner .subpage-text, .subpage-buttons-filter .subpage-text {
+    margin-bottom: 54px;
+  }
+  .subpage-only-buttons .subpage-text p, .subpage-text-buttons .subpage-text p, .subpage-text-buttons-banner .subpage-text p, .subpage-buttons-filter .subpage-text p {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.54;
+  }
+  .subpage-only-buttons .subpage-buttons, .subpage-text-buttons .subpage-buttons, .subpage-text-buttons-banner .subpage-buttons, .subpage-buttons-filter .subpage-buttons {
+    margin-top: 173px;
+    padding-bottom: 31px;
+  }
+  .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button {
+    height: 174px;
+    width: 174px;
+    max-width: 174px;
+  }
+  .subpage-text-buttons {
+    margin-top: -190px;
+  }
   .study-tabs {
     background-position: center;
     background-repeat: no-repeat;
@@ -6418,6 +6546,86 @@ div[class*="item-page-"] table p {
   }
   .button-registration {
     margin: 34px auto;
+  }
+  .modal-modules .title, .modal-resources .title {
+    margin-bottom: 29px;
+    margin-top: 51px;
+  }
+  .modal-modules .title h1, .modal-resources .title h1 {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+  .modal-modules .title h1:before, .modal-resources .title h1:before, .modal-modules .title h1:after, .modal-resources .title h1:after {
+    display: none;
+  }
+  .modal-modules .content-modal-modules .modal-module, .modal-resources .content-modal-modules .modal-module {
+    position: relative;
+    width: 100%;
+    height: 86px;
+    border-top-width: 0;
+    border-right-width: 3px;
+    margin-top: 23px;
+    margin-right: 0;
+    overflow: hidden;
+  }
+  .modal-modules .content-modal-modules .modal-module img, .modal-resources .content-modal-modules .modal-module img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 214px;
+    height: 100%;
+  }
+  .modal-modules .content-modal-modules .modal-module .shortname-modal-module, .modal-resources .content-modal-modules .modal-module .shortname-modal-module {
+    top: 5px;
+    font-size: 8px;
+    font-weight: 500;
+    border-bottom: 2px solid;
+    padding-bottom: 2px;
+  }
+  .modal-modules .content-modal-modules .modal-module .shortname-modal-module:before, .modal-resources .content-modal-modules .modal-module .shortname-modal-module:before, .modal-modules .content-modal-modules .modal-module .shortname-modal-module:after, .modal-resources .content-modal-modules .modal-module .shortname-modal-module:after {
+    display: none;
+  }
+  .modal-modules .content-modal-modules .modal-module .text-modal-module, .modal-resources .content-modal-modules .modal-module .text-modal-module {
+    bottom: 20px;
+    line-height: 1.17;
+    text-align: left;
+  }
+  .modal-modules .content-modal-modules .modal-module .text-modal-module p, .modal-resources .content-modal-modules .modal-module .text-modal-module p {
+    width: 100%;
+    font-size: 12px;
+  }
+  .modal-modules .content-modal-modules .modal-module .bottom-modal-module, .modal-resources .content-modal-modules .modal-module .bottom-modal-module {
+    bottom: 5px;
+    line-height: 1;
+    border-top: 0;
+  }
+  .modal-modules .content-modal-modules .modal-module .bottom-modal-module:before, .modal-resources .content-modal-modules .modal-module .bottom-modal-module:before {
+    display: none;
+  }
+  .modal-modules .content-modal-modules .modal-module .shortname-modal-module, .modal-resources .content-modal-modules .modal-module .shortname-modal-module, .modal-modules .content-modal-modules .modal-module .text-modal-module, .modal-resources .content-modal-modules .modal-module .text-modal-module, .modal-modules .content-modal-modules .modal-module .bottom-modal-module, .modal-resources .content-modal-modules .modal-module .bottom-modal-module {
+    position: absolute;
+    left: 223px;
+    width: auto;
+    margin: 0;
+  }
+  .modal-modules .body-modal-modules .modal-module.modal-dialog, .modal-resources .body-modal-modules .modal-module.modal-dialog, .modal-modules .body-modal-resources .modal-module.modal-dialog, .modal-resources .body-modal-resources .modal-module.modal-dialog, .modal-modules .body-modal-modules .modal-resource.modal-dialog, .modal-resources .body-modal-modules .modal-resource.modal-dialog, .modal-modules .body-modal-resources .modal-resource.modal-dialog, .modal-resources .body-modal-resources .modal-resource.modal-dialog {
+    max-width: 90%;
+  }
+  .modal-modules .body-modal-modules .modal-module.modal-dialog .bottom-modal-module, .modal-resources .body-modal-modules .modal-module.modal-dialog .bottom-modal-module, .modal-modules .body-modal-resources .modal-module.modal-dialog .bottom-modal-module, .modal-resources .body-modal-resources .modal-module.modal-dialog .bottom-modal-module, .modal-modules .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module, .modal-resources .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module, .modal-modules .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module, .modal-resources .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module {
+    flex-flow: column wrap;
+    align-content: center;
+  }
+  .modal-modules .body-modal-modules .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-resources .body-modal-modules .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-modules .body-modal-resources .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-resources .body-modal-resources .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-modules .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-resources .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-modules .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-resources .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock {
+    height: 20px;
+  }
+  .modal-modules .body-modal-modules .modal-module.modal-dialog:before, .modal-resources .body-modal-modules .modal-module.modal-dialog:before, .modal-modules .body-modal-resources .modal-module.modal-dialog:before, .modal-resources .body-modal-resources .modal-module.modal-dialog:before, .modal-modules .body-modal-modules .modal-resource.modal-dialog:before, .modal-resources .body-modal-modules .modal-resource.modal-dialog:before, .modal-modules .body-modal-resources .modal-resource.modal-dialog:before, .modal-resources .body-modal-resources .modal-resource.modal-dialog:before {
+    cursor: pointer;
+    right: 20px;
+    top: -40px;
+  }
+  .modal-modules .body-modal-modules .modal-module.modal-dialog.extended-bottom, .modal-resources .body-modal-modules .modal-module.modal-dialog.extended-bottom, .modal-modules .body-modal-resources .modal-module.modal-dialog.extended-bottom, .modal-resources .body-modal-resources .modal-module.modal-dialog.extended-bottom, .modal-modules .body-modal-modules .modal-resource.modal-dialog.extended-bottom, .modal-resources .body-modal-modules .modal-resource.modal-dialog.extended-bottom, .modal-modules .body-modal-resources .modal-resource.modal-dialog.extended-bottom, .modal-resources .body-modal-resources .modal-resource.modal-dialog.extended-bottom {
+    background-size: 100vw 60%;
   }
   .study-more-info {
     padding: 0 15px;
@@ -6908,6 +7116,9 @@ div[class*="item-page-"] table p {
     left: -40px !important;
     max-width: 140px;
   }
+  .modal-modules .content-modal-modules .modal-module .text-modal-module, .modal-modules .content-modal-modules .modal-module .bottom-modal-module, .modal-modules .content-modal-modules .modal-module .shortname-modal-module {
+    left: 109px;
+  }
   .modal-resources .body-modal-resources .modal-resource.modal-dialog .body-modal-resource {
     padding: 23px 0 31px;
   }
@@ -6936,20 +7147,18 @@ div[class*="item-page-"] table p {
   .subpagebody {
     background-size: 80vw 82px;
   }
-  .subpage-text-buttons {
+  .subpage-only-buttons, .subpage-text-buttons, .subpage-text-buttons-banner, .subpage-buttons-filter {
     background-position: center bottom;
     background-size: 100vw 100%;
   }
-  .subpage-text-buttons .subpage-buttons {
+  .subpage-only-buttons .subpage-buttons, .subpage-text-buttons .subpage-buttons, .subpage-text-buttons-banner .subpage-buttons, .subpage-buttons-filter .subpage-buttons {
     margin-top: 55px;
     padding-bottom: 0;
   }
-  .subpage-text-buttons .subpage-buttons .subpage-text, .subpage-text-buttons .subpage-buttons .subpage-group-buttons {
-    max-width: 290px;
-    margin-bottom: 30px;
+  .subpage-only-buttons .subpage-buttons .subpage-text, .subpage-text-buttons .subpage-buttons .subpage-text, .subpage-text-buttons-banner .subpage-buttons .subpage-text, .subpage-buttons-filter .subpage-buttons .subpage-text, .subpage-only-buttons .subpage-buttons .subpage-group-buttons, .subpage-text-buttons .subpage-buttons .subpage-group-buttons, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons {
     justify-content: space-between;
   }
-  .subpage-text-buttons .subpage-buttons .subpage-text p, .subpage-text-buttons .subpage-buttons .subpage-group-buttons p {
+  .subpage-only-buttons .subpage-buttons .subpage-text p, .subpage-text-buttons .subpage-buttons .subpage-text p, .subpage-text-buttons-banner .subpage-buttons .subpage-text p, .subpage-buttons-filter .subpage-buttons .subpage-text p, .subpage-only-buttons .subpage-buttons .subpage-group-buttons p, .subpage-text-buttons .subpage-buttons .subpage-group-buttons p, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons p, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons p {
     width: 100%;
     text-align: center;
     float: none;
@@ -6957,31 +7166,47 @@ div[class*="item-page-"] table p {
     font-weight: 300;
     line-height: 1.54;
   }
-  .subpage-text-buttons .subpage-buttons .subpage-text p .ioc-accent, .subpage-text-buttons .subpage-buttons .subpage-group-buttons p .ioc-accent {
+  .subpage-only-buttons .subpage-buttons .subpage-text p .ioc-accent, .subpage-text-buttons .subpage-buttons .subpage-text p .ioc-accent, .subpage-text-buttons-banner .subpage-buttons .subpage-text p .ioc-accent, .subpage-buttons-filter .subpage-buttons .subpage-text p .ioc-accent, .subpage-only-buttons .subpage-buttons .subpage-group-buttons p .ioc-accent, .subpage-text-buttons .subpage-buttons .subpage-group-buttons p .ioc-accent, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons p .ioc-accent, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons p .ioc-accent {
     color: #354959;
     font-weight: 500;
   }
-  .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button {
-    max-width: 140px;
-    min-width: 140px;
-    height: 140px;
+  .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button {
+    max-width: 93px !important;
+    min-width: 93px !important;
+    height: 116px !important;
     margin: 0 0 7px 0;
   }
-  .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.certificats, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.certificats, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.competencies, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.competencies, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.ambit, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.ambit, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.itinerari, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.itinerari {
-    top: 32px;
+  .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .custom-icon, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .custom-icon, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon {
+    height: 43px;
+    width: 28px;
   }
-  .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .icon-text, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .icon-text {
-    bottom: 24px;
-    font-size: 9px;
-    font-weight: 500;
-    letter-spacing: 1.2px;
+  .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.certificats, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.certificats, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .custom-icon.certificats, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .custom-icon.certificats, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.certificats, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.certificats, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.certificats, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.certificats, .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.competencies, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.competencies, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .custom-icon.competencies, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .custom-icon.competencies, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.competencies, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.competencies, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.competencies, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.competencies, .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.ambit, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.ambit, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .custom-icon.ambit, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .custom-icon.ambit, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.ambit, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.ambit, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.ambit, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.ambit, .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.itinerari, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.itinerari, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .custom-icon.itinerari, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .custom-icon.itinerari, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.itinerari, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.itinerari, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.itinerari, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.itinerari, .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.metodologia, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.metodologia, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .custom-icon.metodologia, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .custom-icon.metodologia, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.metodologia, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.metodologia, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.metodologia, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.metodologia {
+    top: 25px !important;
+  }
+  .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .icon-text, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .icon-text, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .icon-text, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .icon-text, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .icon-text, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .icon-text, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .icon-text, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .icon-text {
+    bottom: 21px !important;
+    font-size: 8px !important;
+    letter-spacing: 1.1px !important;
+    max-width: 100%;
+  }
+  .subpage-only-buttons .subpage-buttons .subpage-text, .subpage-text-buttons .subpage-buttons .subpage-text, .subpage-text-buttons-banner .subpage-buttons .subpage-text, .subpage-buttons-filter .subpage-buttons .subpage-text {
+    margin-bottom: 30px;
+    margin-top: 45px;
+    max-width: 288px;
+  }
+  .subpage-only-buttons .subpage-buttons .subpage-group-buttons, .subpage-text-buttons .subpage-buttons .subpage-group-buttons, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons {
+    max-width: 290px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+  }
+  .subpage-text-buttons {
+    background-image: url('../images/seccio-text-botons-bck-mobile.svg');
   }
   .study-buttons {
     margin-top: 73px;
   }
   .study-buttons .study-button {
-    min-width: 94px;
-    max-width: 30%;
+    width: 94px;
     height: 116px;
   }
   .study-buttons .study-button .custom-icon {
@@ -7048,9 +7273,6 @@ div[class*="item-page-"] table p {
     height: 28px;
     line-height: 28px;
     font-size: 10.5px;
-  }
-  .study-more-info .panel-section-info .panel.panel-default .panel-heading .panel-title a, .study-tabs .panel-section-info .panel.panel-default .panel-heading .panel-title a {
-    padding: 14px 18px;
   }
   .study-more-info .panel-section-info .panel.panel-default .panel-heading .panel-title a .custom-icon.plus, .study-tabs .panel-section-info .panel.panel-default .panel-heading .panel-title a .custom-icon.plus {
     right: 18px;
@@ -7131,7 +7353,8 @@ div[class*="item-page-"] table p {
     padding-bottom: 19px;
   }
   .footer #footer-collapse .panel-group .panel-default .panel-heading h3 a {
-    padding: 14px 18px;
+    padding-left: 18px;
+    padding-right: 33px;
   }
   .footer #footer-collapse .panel-group .panel-default .panel-heading h3 a .custom-icon.plus {
     right: 18px;
@@ -7200,24 +7423,36 @@ div[class*="item-page-"] table p {
     padding: 0;
     max-width: 70%;
   }
-  #container .fluid-container.page-header.subpage {
-    height: 146px;
-  }
-  #container .fluid-container.page-header.subpage .container h1 {
-    font-size: 20px;
-    font-weight: 300;
-    bottom: 37px;
-    padding: 0;
-  }
   #container .container {
     padding: 0 15px;
   }
   .header.acfgs ~ section #container, .header.btx ~ section #container {
     min-height: auto;
   }
+  .item-page-study.eoi .substudies .substudies-elements .navbar-nav li a .element-title, .item-page-study.eoi .submenu .substudies-elements .navbar-nav li a .element-title, .item-page-study.eoi .substudies div .navbar-nav li a .element-title, .item-page-study.eoi .submenu div .navbar-nav li a .element-title {
+    background-color: rgba(223, 140, 32, 0.94);
+  }
+  .item-page-study.eoi .substudies .substudies-elements .navbar-nav li a .element-title p, .item-page-study.eoi .submenu .substudies-elements .navbar-nav li a .element-title p, .item-page-study.eoi .substudies div .navbar-nav li a .element-title p, .item-page-study.eoi .submenu div .navbar-nav li a .element-title p {
+    color: #f0effd;
+  }
+  .submenu {
+    margin-top: -100px;
+    margin-bottom: 54px;
+  }
+  .submenu .submenu-content {
+    padding-top: 100px;
+  }
   .substudies, .submenu {
-    background-image: none;
-    padding-bottom: 73px;
+    background-image: url('../images/cicles-bck-mobile.svg');
+    padding-bottom: 42px;
+  }
+  .substudies .substudies-content .title, .submenu .substudies-content .title, .substudies .submenu-content .title, .submenu .submenu-content .title {
+    margin-top: 56px;
+    margin-bottom: 44px;
+  }
+  .substudies .substudies-content .title h1, .submenu .substudies-content .title h1, .substudies .submenu-content .title h1, .submenu .submenu-content .title h1 {
+    font-size: 16px;
+    line-height: 1.25;
   }
   .substudies .substudies-content .substudies-elements, .submenu .substudies-content .substudies-elements, .substudies .submenu-content .substudies-elements, .submenu .submenu-content .substudies-elements, .substudies .substudies-content div, .submenu .substudies-content div, .substudies .submenu-content div, .submenu .submenu-content div {
     padding-left: 15px;
@@ -7229,16 +7464,16 @@ div[class*="item-page-"] table p {
   }
   .substudies .substudies-content .substudies-elements .navbar-nav li, .submenu .substudies-content .substudies-elements .navbar-nav li, .substudies .submenu-content .substudies-elements .navbar-nav li, .submenu .submenu-content .substudies-elements .navbar-nav li, .substudies .substudies-content div .navbar-nav li, .submenu .substudies-content div .navbar-nav li, .substudies .submenu-content div .navbar-nav li, .submenu .submenu-content div .navbar-nav li {
     width: 100%;
-    height: 132px;
+    height: 139px;
     margin-right: 0;
+    margin-top: 0;
   }
   .substudies .substudies-content .substudies-elements .navbar-nav li a, .submenu .substudies-content .substudies-elements .navbar-nav li a, .substudies .submenu-content .substudies-elements .navbar-nav li a, .submenu .submenu-content .substudies-elements .navbar-nav li a, .substudies .substudies-content div .navbar-nav li a, .submenu .substudies-content div .navbar-nav li a, .substudies .submenu-content div .navbar-nav li a, .submenu .submenu-content div .navbar-nav li a {
     position: relative;
   }
   .substudies .substudies-content .substudies-elements .navbar-nav li a .element-img, .submenu .substudies-content .substudies-elements .navbar-nav li a .element-img, .substudies .submenu-content .substudies-elements .navbar-nav li a .element-img, .submenu .submenu-content .substudies-elements .navbar-nav li a .element-img, .substudies .substudies-content div .navbar-nav li a .element-img, .submenu .substudies-content div .navbar-nav li a .element-img, .substudies .submenu-content div .navbar-nav li a .element-img, .submenu .submenu-content div .navbar-nav li a .element-img {
-    min-height: 138px;
-    background-size: 100vw;
-    background-position: top;
+    min-height: 139px;
+    background-size: cover;
   }
   .substudies .substudies-content .substudies-elements .navbar-nav li a .element-title, .submenu .substudies-content .substudies-elements .navbar-nav li a .element-title, .substudies .submenu-content .substudies-elements .navbar-nav li a .element-title, .submenu .submenu-content .substudies-elements .navbar-nav li a .element-title, .substudies .substudies-content div .navbar-nav li a .element-title, .submenu .substudies-content div .navbar-nav li a .element-title, .substudies .submenu-content div .navbar-nav li a .element-title, .submenu .submenu-content div .navbar-nav li a .element-title {
     position: absolute;
@@ -7256,6 +7491,7 @@ div[class*="item-page-"] table p {
     font-weight: 500;
     line-height: 1.55;
     font-size: 11px;
+    opacity: 1;
   }
   .item-page-study.acfgs + .all-studies .substudies, .item-page-study.btx + .all-studies .substudies {
     background-image: none;
@@ -7295,88 +7531,6 @@ div[class*="item-page-"] table p {
   }
   .item-page-study.btx + .all-studies .substudies .substudies-content .substudies-elements .navbar-nav li a .element-title p {
     color: #f0effd;
-  }
-  .modal-modules .title, .modal-resources .title {
-    margin-bottom: 0;
-  }
-  .modal-modules .title h1, .modal-resources .title h1 {
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 0;
-  }
-  .modal-modules .title h1:before, .modal-resources .title h1:before, .modal-modules .title h1:after, .modal-resources .title h1:after {
-    display: none;
-  }
-  .modal-modules .content-modal-modules, .modal-resources .content-modal-modules {
-    max-width: 80%;
-    overflow: hidden;
-  }
-  .modal-modules .content-modal-modules .modal-module, .modal-resources .content-modal-modules .modal-module {
-    position: relative;
-    width: 100%;
-    height: 86px;
-    border-top-width: 0;
-    border-right-width: 3px;
-    margin-top: 23px;
-    margin-right: 0;
-    overflow: hidden;
-  }
-  .modal-modules .content-modal-modules .modal-module img, .modal-resources .content-modal-modules .modal-module img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: auto;
-    height: 100%;
-  }
-  .modal-modules .content-modal-modules .modal-module .shortname-modal-module, .modal-resources .content-modal-modules .modal-module .shortname-modal-module {
-    top: 5px;
-    font-size: 8px;
-    font-weight: 500;
-    border-bottom: 2px solid;
-    padding-bottom: 2px;
-  }
-  .modal-modules .content-modal-modules .modal-module .shortname-modal-module:before, .modal-resources .content-modal-modules .modal-module .shortname-modal-module:before, .modal-modules .content-modal-modules .modal-module .shortname-modal-module:after, .modal-resources .content-modal-modules .modal-module .shortname-modal-module:after {
-    display: none;
-  }
-  .modal-modules .content-modal-modules .modal-module .text-modal-module, .modal-resources .content-modal-modules .modal-module .text-modal-module {
-    bottom: 20px;
-    line-height: 1.17;
-    text-align: left;
-  }
-  .modal-modules .content-modal-modules .modal-module .text-modal-module p, .modal-resources .content-modal-modules .modal-module .text-modal-module p {
-    font-size: 12px;
-  }
-  .modal-modules .content-modal-modules .modal-module .bottom-modal-module, .modal-resources .content-modal-modules .modal-module .bottom-modal-module {
-    bottom: 5px;
-    line-height: 1;
-    border-top: 0;
-  }
-  .modal-modules .content-modal-modules .modal-module .bottom-modal-module:before, .modal-resources .content-modal-modules .modal-module .bottom-modal-module:before {
-    display: none;
-  }
-  .modal-modules .content-modal-modules .modal-module .shortname-modal-module, .modal-resources .content-modal-modules .modal-module .shortname-modal-module, .modal-modules .content-modal-modules .modal-module .text-modal-module, .modal-resources .content-modal-modules .modal-module .text-modal-module, .modal-modules .content-modal-modules .modal-module .bottom-modal-module, .modal-resources .content-modal-modules .modal-module .bottom-modal-module {
-    position: absolute;
-    left: 108px;
-    width: auto;
-    margin: 0;
-  }
-  .modal-modules .body-modal-modules .modal-module.modal-dialog, .modal-resources .body-modal-modules .modal-module.modal-dialog, .modal-modules .body-modal-resources .modal-module.modal-dialog, .modal-resources .body-modal-resources .modal-module.modal-dialog, .modal-modules .body-modal-modules .modal-resource.modal-dialog, .modal-resources .body-modal-modules .modal-resource.modal-dialog, .modal-modules .body-modal-resources .modal-resource.modal-dialog, .modal-resources .body-modal-resources .modal-resource.modal-dialog {
-    max-width: 90%;
-  }
-  .modal-modules .body-modal-modules .modal-module.modal-dialog .bottom-modal-module, .modal-resources .body-modal-modules .modal-module.modal-dialog .bottom-modal-module, .modal-modules .body-modal-resources .modal-module.modal-dialog .bottom-modal-module, .modal-resources .body-modal-resources .modal-module.modal-dialog .bottom-modal-module, .modal-modules .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module, .modal-resources .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module, .modal-modules .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module, .modal-resources .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module {
-    flex-flow: column wrap;
-    align-content: center;
-  }
-  .modal-modules .body-modal-modules .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-resources .body-modal-modules .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-modules .body-modal-resources .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-resources .body-modal-resources .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-modules .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-resources .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-modules .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-resources .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock {
-    height: 20px;
-  }
-  .modal-modules .body-modal-modules .modal-module.modal-dialog:before, .modal-resources .body-modal-modules .modal-module.modal-dialog:before, .modal-modules .body-modal-resources .modal-module.modal-dialog:before, .modal-resources .body-modal-resources .modal-module.modal-dialog:before, .modal-modules .body-modal-modules .modal-resource.modal-dialog:before, .modal-resources .body-modal-modules .modal-resource.modal-dialog:before, .modal-modules .body-modal-resources .modal-resource.modal-dialog:before, .modal-resources .body-modal-resources .modal-resource.modal-dialog:before {
-    cursor: pointer;
-    right: 20px;
-    top: -40px;
-  }
-  .modal-modules .body-modal-modules .modal-module.modal-dialog.extended-bottom, .modal-resources .body-modal-modules .modal-module.modal-dialog.extended-bottom, .modal-modules .body-modal-resources .modal-module.modal-dialog.extended-bottom, .modal-resources .body-modal-resources .modal-module.modal-dialog.extended-bottom, .modal-modules .body-modal-modules .modal-resource.modal-dialog.extended-bottom, .modal-resources .body-modal-modules .modal-resource.modal-dialog.extended-bottom, .modal-modules .body-modal-resources .modal-resource.modal-dialog.extended-bottom, .modal-resources .body-modal-resources .modal-resource.modal-dialog.extended-bottom {
-    background-size: 100vw 60%;
   }
   .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button {
     max-width: 140px;
@@ -7438,6 +7592,12 @@ div[class*="item-page-"] table p {
   }
   #container .study-tabs, #container .study-more-info {
     max-width: 95%;
+  }
+  .study-more-info .panel-section-info .panel.panel-default .panel-heading .panel-title a, .study-tabs .panel-section-info .panel.panel-default .panel-heading .panel-title a {
+    padding-left: 18px;
+  }
+  .study-more-info .panel-section-info .panel.panel-default .panel-heading .panel-title a .custom-icon.plus, .study-tabs .panel-section-info .panel.panel-default .panel-heading .panel-title a .custom-icon.plus {
+    right: 18px;
   }
 }
 /* Small Devices, Tablets */
@@ -7589,14 +7749,6 @@ div[class*="item-page-"] table p {
   }
   .modal-modules .content-modal-modules {
     margin-top: 28px;
-    max-width: 85%;
-  }
-  .modal-modules .content-modal-modules .modal-module img {
-    width: 214px;
-    height: auto;
-  }
-  .modal-modules .content-modal-modules .modal-module .shortname-modal-module, .modal-modules .content-modal-modules .modal-module .text-modal-module, .modal-modules .content-modal-modules .modal-module .bottom-modal-module {
-    left: 223px;
   }
   .layout-employment {
     height: 1000px;
@@ -7805,6 +7957,41 @@ div[class*="item-page-"] table p {
   .study-panel .study-data .study-col + .study-col {
     margin-left: 28px;
   }
+  .submenu {
+    padding-bottom: 62px;
+    margin-top: -140px;
+  }
+  .submenu .submenu-content {
+    padding-top: 140px;
+  }
+  .submenu .submenu-content .title {
+    margin-top: 84px;
+    margin-bottom: 20px;
+  }
+  .submenu .submenu-content .title h1 {
+    font-size: 16px;
+  }
+  .submenu .submenu-content .navbar-nav, .substudies .submenu-content .navbar-nav, .submenu .substudies-content .navbar-nav, .substudies .substudies-content .navbar-nav {
+    max-width: 630px;
+  }
+  .submenu .submenu-content .navbar-nav li, .substudies .submenu-content .navbar-nav li, .submenu .substudies-content .navbar-nav li, .substudies .substudies-content .navbar-nav li {
+    height: 196px;
+    width: 196px;
+    margin-right: 21px;
+  }
+  .submenu .submenu-content .navbar-nav li .element-img, .substudies .submenu-content .navbar-nav li .element-img, .submenu .substudies-content .navbar-nav li .element-img, .substudies .substudies-content .navbar-nav li .element-img {
+    min-height: 139px;
+  }
+  .submenu .submenu-content .navbar-nav li .element-title, .substudies .submenu-content .navbar-nav li .element-title, .submenu .substudies-content .navbar-nav li .element-title, .substudies .substudies-content .navbar-nav li .element-title {
+    line-height: 57px;
+  }
+  .submenu .submenu-content .navbar-nav li .element-title p, .substudies .submenu-content .navbar-nav li .element-title p, .submenu .substudies-content .navbar-nav li .element-title p, .substudies .substudies-content .navbar-nav li .element-title p {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+  .submenu .submenu-content .navbar-nav li:nth-child(3n), .substudies .submenu-content .navbar-nav li:nth-child(3n), .submenu .substudies-content .navbar-nav li:nth-child(3n), .substudies .substudies-content .navbar-nav li:nth-child(3n) {
+    margin-right: 0;
+  }
   .subpage-bigbanner {
     height: 393px;
     margin-top: 0;
@@ -7842,8 +8029,8 @@ div[class*="item-page-"] table p {
     font-size: 19px;
     font-weight: 500;
   }
-  .modal-modules .content-modal-modules {
-    max-width: 420px !important;
+  .modal-modules {
+    padding: 0;
   }
 }
 /* Medium Devices, Desktops */
@@ -7862,6 +8049,11 @@ div[class*="item-page-"] table p {
   }
   .container {
     width: 830px;
+  }
+  #container .fluid-container.page-header.subpage .container h1 {
+    font-size: 23px;
+    font-weight: normal;
+    bottom: 67px;
   }
   #navigation .container {
     padding: 0;
@@ -7928,7 +8120,10 @@ div[class*="item-page-"] table p {
     margin: 0;
   }
   .submenu .submenu-content .navbar-nav, .substudies .submenu-content .navbar-nav, .submenu .substudies-content .navbar-nav, .substudies .substudies-content .navbar-nav {
-    max-width: 852px;
+    max-width: 828px;
+  }
+  .submenu .submenu-content .navbar-nav li:nth-child(3n), .substudies .submenu-content .navbar-nav li:nth-child(3n), .submenu .substudies-content .navbar-nav li:nth-child(3n), .substudies .substudies-content .navbar-nav li:nth-child(3n) {
+    margin-right: 0;
   }
   #container .fluid-container.page-header .container h1 {
     font-size: 35px;
@@ -7941,6 +8136,13 @@ div[class*="item-page-"] table p {
     font-size: 23px;
     font-weight: 300;
     letter-spacing: 0;
+  }
+  #container .modal-modules {
+    max-width: 830px;
+    padding: 0;
+  }
+  #container .modal-modules .content-modal-modules .modal-module:nth-child(4n) {
+    margin-right: 0;
   }
   .page-header .container {
     padding: 0;
@@ -8075,9 +8277,6 @@ div[class*="item-page-"] table p {
   .footer .contacte {
     border-top: none;
   }
-  .modal-modules .content-modal-modules {
-    max-width: 630px;
-  }
 }
 @media all and (min-width: 1199px) {
   .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span {
@@ -8204,6 +8403,50 @@ div[class*="item-page-"] table p {
   }
   .study-parallax {
     height: 249px;
+  }
+  .submenu .submenu-content .navbar-nav, .substudies .submenu-content .navbar-nav, .submenu .substudies-content .navbar-nav, .substudies .substudies-content .navbar-nav {
+    max-width: 1180px;
+  }
+  .submenu .submenu-content .navbar-nav li, .substudies .submenu-content .navbar-nav li, .submenu .substudies-content .navbar-nav li, .substudies .substudies-content .navbar-nav li {
+    height: 368px;
+    width: 368px;
+    margin-right: 38px;
+  }
+  .submenu .submenu-content .navbar-nav li .element-img, .substudies .submenu-content .navbar-nav li .element-img, .submenu .substudies-content .navbar-nav li .element-img, .substudies .substudies-content .navbar-nav li .element-img {
+    min-height: 244px;
+  }
+  .submenu .submenu-content .navbar-nav li .element-title, .substudies .submenu-content .navbar-nav li .element-title, .submenu .substudies-content .navbar-nav li .element-title, .substudies .substudies-content .navbar-nav li .element-title {
+    line-height: 124px;
+  }
+  #container .modal-modules {
+    max-width: 1180px;
+  }
+  #container .modal-modules .title {
+    margin-top: 113px;
+    margin-bottom: 82px;
+  }
+  #container .modal-modules .title h1 {
+    font-size: 26px;
+  }
+  #container .modal-modules .content-modal-modules {
+    max-width: 100%;
+  }
+  #container .modal-modules .content-modal-modules .modal-module {
+    height: 339px;
+    width: 280px;
+    margin-right: 20px;
+  }
+  #container .modal-modules .content-modal-modules .modal-module img {
+    height: 162px;
+  }
+  #container .modal-modules .content-modal-modules .modal-module .text-modal-module {
+    margin: 0;
+    line-height: 128px;
+    max-height: 128px;
+  }
+  #container .modal-modules .content-modal-modules .modal-module .bottom-modal-module {
+    height: 39px;
+    line-height: 39px;
   }
   .study-more-info .title h4 {
     font-size: 29px;
