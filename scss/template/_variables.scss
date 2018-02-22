@@ -39,7 +39,6 @@ $ioc-semiheader-mb:   #83a1b9;
 $ioc-bg-form-login:   #f8faff;
 $ioc-accent:          #01c1b9;
 $ioc-submenu:         #ecf3f7;
-$ioc-eoi-study:       #fc9601;
 $ioc-fp-study:        #0f9e73;
 $ioc-module-bottom:   #829cb0;
 $ioc-backdrop:        #1e303e;
@@ -165,7 +164,9 @@ $ioc-eoi-colors: (
     moreinfo-title: #f6ad03,
     menu-title-bg: rgba(223, 140, 32, 0.94),
     menu-title: #f0effd,
-    breadcrumb: #c47200
+    breadcrumb: #c47200,
+    modal-border: #fc9601,
+    modal-title: #cf8218
 );
 $ioc-fesp-colors: (
     header-bg: #ab3f5f,

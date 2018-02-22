@@ -1019,6 +1019,7 @@ button:focus {
 }
 .header #brand .logo {
   padding-top: 25px;
+  color: rgba(255, 255, 255, 0);
 }
 header.headroom--not-top {
   height: 60px;
@@ -1066,9 +1067,6 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   float: right;
   border-color: #2f3b5c;
   background-color: #202b47;
-}
-.modal {
-  top: 10vh;
 }
 .list-group-item {
   border: none;
@@ -1507,6 +1505,12 @@ header.headroom--top.acfgs .navbar-default .social .custom-icon:hover {
 .item-page-study.acfgs .button-registration {
   background-color: #26727d;
 }
+.item-page-study.acfgs .modal-modules .content-modal-modules .modal-module, .item-page-study.acfgs .modal-modules .body-modal-modules .modal-module {
+  border-color: inherit;
+}
+.item-page-study.acfgs .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.acfgs .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.acfgs .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.acfgs .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.acfgs .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.acfgs .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.acfgs .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.acfgs .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
+  color: inherit;
+}
 .item-page-study.acfgs .study-more-info .title h4 {
   color: #26727d;
 }
@@ -1578,6 +1582,12 @@ header.headroom--top.btx .navbar-default .social .custom-icon:hover {
 }
 .item-page-study.btx .button-registration {
   background-color: #6462a9;
+}
+.item-page-study.btx .modal-modules .content-modal-modules .modal-module, .item-page-study.btx .modal-modules .body-modal-modules .modal-module {
+  border-color: inherit;
+}
+.item-page-study.btx .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.btx .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.btx .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.btx .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.btx .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.btx .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.btx .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.btx .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
+  color: inherit;
 }
 .item-page-study.btx .study-more-info .title h4 {
   color: #6462a9;
@@ -1651,6 +1661,12 @@ header.headroom--top.btx-ioc .navbar-default .social .custom-icon:hover {
 .item-page-study.btx-ioc .button-registration {
   background-color: #6462a9;
 }
+.item-page-study.btx-ioc .modal-modules .content-modal-modules .modal-module, .item-page-study.btx-ioc .modal-modules .body-modal-modules .modal-module {
+  border-color: inherit;
+}
+.item-page-study.btx-ioc .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.btx-ioc .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.btx-ioc .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.btx-ioc .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.btx-ioc .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.btx-ioc .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.btx-ioc .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.btx-ioc .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
+  color: inherit;
+}
 .item-page-study.btx-ioc .study-more-info .title h4 {
   color: #6462a9;
 }
@@ -1722,6 +1738,12 @@ header.headroom--top.btx-mat .navbar-default .social .custom-icon:hover {
 }
 .item-page-study.btx-mat .button-registration {
   background-color: #41b0c8;
+}
+.item-page-study.btx-mat .modal-modules .content-modal-modules .modal-module, .item-page-study.btx-mat .modal-modules .body-modal-modules .modal-module {
+  border-color: inherit;
+}
+.item-page-study.btx-mat .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.btx-mat .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.btx-mat .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.btx-mat .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.btx-mat .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.btx-mat .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.btx-mat .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.btx-mat .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
+  color: inherit;
 }
 .item-page-study.btx-mat .study-more-info .title h4 {
   color: #479eb0;
@@ -1795,6 +1817,12 @@ header.headroom--top.cas .navbar-default .social .custom-icon:hover {
 .item-page-study.cas .button-registration {
   background-color: #26727d;
 }
+.item-page-study.cas .modal-modules .content-modal-modules .modal-module, .item-page-study.cas .modal-modules .body-modal-modules .modal-module {
+  border-color: inherit;
+}
+.item-page-study.cas .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.cas .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.cas .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.cas .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.cas .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.cas .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.cas .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.cas .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
+  color: inherit;
+}
 .item-page-study.cas .study-more-info .title h4 {
   color: #26727d;
 }
@@ -1866,6 +1894,12 @@ header.headroom--top.competic .navbar-default .social .custom-icon:hover {
 }
 .item-page-study.competic .button-registration {
   background-color: #2f49ca;
+}
+.item-page-study.competic .modal-modules .content-modal-modules .modal-module, .item-page-study.competic .modal-modules .body-modal-modules .modal-module {
+  border-color: inherit;
+}
+.item-page-study.competic .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.competic .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.competic .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.competic .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.competic .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.competic .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.competic .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.competic .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
+  color: inherit;
 }
 .item-page-study.competic .study-more-info .title h4 {
   color: #2f49ca;
@@ -1939,6 +1973,12 @@ div[class*="item-page-eoi-"] .study-tabs .tab-content .button-tab-nav:hover, div
 div[class*="item-page-eoi-"] .button-registration {
   background-color: #f6ad03;
 }
+div[class*="item-page-eoi-"] .modal-modules .content-modal-modules .modal-module, div[class*="item-page-eoi-"] .modal-modules .body-modal-modules .modal-module {
+  border-color: #fc9601;
+}
+div[class*="item-page-eoi-"] .modal-modules .content-modal-modules .modal-module .text-modal-module, div[class*="item-page-eoi-"] .modal-modules .body-modal-modules .modal-module .text-modal-module, div[class*="item-page-eoi-"] .modal-modules .content-modal-modules .modal-module .bottom-modal-title, div[class*="item-page-eoi-"] .modal-modules .body-modal-modules .modal-module .bottom-modal-title, div[class*="item-page-eoi-"] .modal-modules .content-modal-modules .modal-module .modal-color, div[class*="item-page-eoi-"] .modal-modules .body-modal-modules .modal-module .modal-color, div[class*="item-page-eoi-"] .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, div[class*="item-page-eoi-"] .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
+  color: #cf8218;
+}
 div[class*="item-page-eoi-"] .study-more-info .title h4 {
   color: #f6ad03;
 }
@@ -2004,6 +2044,12 @@ header.headroom--top.eoi .navbar-default .social .custom-icon:hover {
 }
 .item-page-study.eoi .button-registration {
   background-color: #f6ad03;
+}
+.item-page-study.eoi .modal-modules .content-modal-modules .modal-module, .item-page-study.eoi .modal-modules .body-modal-modules .modal-module {
+  border-color: #fc9601;
+}
+.item-page-study.eoi .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.eoi .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.eoi .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.eoi .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.eoi .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.eoi .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.eoi .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.eoi .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
+  color: #cf8218;
 }
 .item-page-study.eoi .study-more-info .title h4 {
   color: #f6ad03;
@@ -2077,6 +2123,12 @@ header.headroom--top.fesp .navbar-default .social .custom-icon:hover {
 .item-page-study.fesp .button-registration {
   background-color: #a03a59;
 }
+.item-page-study.fesp .modal-modules .content-modal-modules .modal-module, .item-page-study.fesp .modal-modules .body-modal-modules .modal-module {
+  border-color: inherit;
+}
+.item-page-study.fesp .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.fesp .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.fesp .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.fesp .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.fesp .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.fesp .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.fesp .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.fesp .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
+  color: inherit;
+}
 .item-page-study.fesp .study-more-info .title h4 {
   color: #a03a59;
 }
@@ -2148,6 +2200,12 @@ header.headroom--top.fpd .navbar-default .social .custom-icon:hover {
 }
 .item-page-study.fpd .button-registration {
   background-color: #f6ad03;
+}
+.item-page-study.fpd .modal-modules .content-modal-modules .modal-module, .item-page-study.fpd .modal-modules .body-modal-modules .modal-module {
+  border-color: inherit;
+}
+.item-page-study.fpd .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.fpd .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.fpd .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.fpd .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.fpd .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.fpd .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.fpd .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.fpd .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
+  color: inherit;
 }
 .item-page-study.fpd .study-more-info .title h4 {
   color: #f6ad03;
@@ -2221,6 +2279,12 @@ header.headroom--top.ges .navbar-default .social .custom-icon:hover {
 .item-page-study.ges .button-registration {
   background-color: #e15064;
 }
+.item-page-study.ges .modal-modules .content-modal-modules .modal-module, .item-page-study.ges .modal-modules .body-modal-modules .modal-module {
+  border-color: inherit;
+}
+.item-page-study.ges .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.ges .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.ges .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.ges .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.ges .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.ges .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.ges .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.ges .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
+  color: inherit;
+}
 .item-page-study.ges .study-more-info .title h4 {
   color: #d14c5e;
 }
@@ -2293,6 +2357,12 @@ header.headroom--top.pacfgs .navbar-default .social .custom-icon:hover {
 .item-page-study.pacfgs .button-registration {
   background-color: #26727d;
 }
+.item-page-study.pacfgs .modal-modules .content-modal-modules .modal-module, .item-page-study.pacfgs .modal-modules .body-modal-modules .modal-module {
+  border-color: inherit;
+}
+.item-page-study.pacfgs .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.pacfgs .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.pacfgs .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.pacfgs .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.pacfgs .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.pacfgs .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.pacfgs .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.pacfgs .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
+  color: inherit;
+}
 .item-page-study.pacfgs .study-more-info .title h4 {
   color: #26727d;
 }
@@ -2364,6 +2434,12 @@ header.headroom--top.pau .navbar-default .social .custom-icon:hover {
 }
 .item-page-study.pau .button-registration {
   background-color: #508d90;
+}
+.item-page-study.pau .modal-modules .content-modal-modules .modal-module, .item-page-study.pau .modal-modules .body-modal-modules .modal-module {
+  border-color: inherit;
+}
+.item-page-study.pau .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.pau .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.pau .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.pau .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.pau .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.pau .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.pau .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.pau .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
+  color: inherit;
 }
 .item-page-study.pau .study-more-info .title h4 {
   color: #508f92;
@@ -2510,40 +2586,6 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
   text-align: center;
   color: #364958;
 }
-div[class*="item-page-eoi-"] {
-  /*h1 {
-   &:before,
-   &:after {
-   border-color:$color;
-   }
-   }*/
-}
-div[class*="item-page-eoi-"] .modal-modules .content-modal-modules .modal-module, div[class*="item-page-eoi-"] .modal-modules .body-modal-modules .modal-module {
-  border-color: #fc9601;
-}
-div[class*="item-page-eoi-"] .modal-modules .content-modal-modules .modal-module .shortname-modal-module, div[class*="item-page-eoi-"] .modal-modules .body-modal-modules .modal-module .shortname-modal-module {
-  border-color: #fc9601;
-}
-div[class*="item-page-eoi-"] .modal-modules .content-modal-modules .modal-module .text-modal-module, div[class*="item-page-eoi-"] .modal-modules .body-modal-modules .modal-module .text-modal-module, div[class*="item-page-eoi-"] .modal-modules .content-modal-modules .modal-module .bottom-modal-title, div[class*="item-page-eoi-"] .modal-modules .body-modal-modules .modal-module .bottom-modal-title, div[class*="item-page-eoi-"] .modal-modules .content-modal-modules .modal-module .modal-color, div[class*="item-page-eoi-"] .modal-modules .body-modal-modules .modal-module .modal-color, div[class*="item-page-eoi-"] .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, div[class*="item-page-eoi-"] .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
-  color: #354959;
-}
-div[class*="item-page-fp-"] {
-  /*h1 {
-   &:before,
-   &:after {
-   border-color:$color;
-   }
-   }*/
-}
-div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module, div[class*="item-page-fp-"] .modal-modules .body-modal-modules .modal-module {
-  border-color: #0f9e73;
-}
-div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module .shortname-modal-module, div[class*="item-page-fp-"] .modal-modules .body-modal-modules .modal-module .shortname-modal-module {
-  border-color: #0f9e73;
-}
-div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module .text-modal-module, div[class*="item-page-fp-"] .modal-modules .body-modal-modules .modal-module .text-modal-module, div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module .bottom-modal-title, div[class*="item-page-fp-"] .modal-modules .body-modal-modules .modal-module .bottom-modal-title, div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module .modal-color, div[class*="item-page-fp-"] .modal-modules .body-modal-modules .modal-module .modal-color, div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, div[class*="item-page-fp-"] .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
-  color: #0f9e73;
-}
 .modal-modules .title, .modal-resources .title {
   width: 100%;
   text-align: center;
@@ -2589,7 +2631,6 @@ div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module 
 }
 .modal-modules .content-modal-modules .modal-module, .modal-resources .content-modal-modules .modal-module {
   width: 200px;
-  height: 243px;
 }
 .modal-modules .content-modal-modules .modal-module img, .modal-resources .content-modal-modules .modal-module img {
   height: 114px;
@@ -2727,6 +2768,9 @@ div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module 
   line-height: 1.38;
   margin: 0 auto 15px;
 }
+.modal-modules .content-modal-modules .modal-module.modal-dialog .body-modal-module .body-modal-content p + p.ocult:before, .modal-resources .content-modal-modules .modal-module.modal-dialog .body-modal-module .body-modal-content p + p.ocult:before, .modal-modules .body-modal-modules .modal-module.modal-dialog .body-modal-module .body-modal-content p + p.ocult:before, .modal-resources .body-modal-modules .modal-module.modal-dialog .body-modal-module .body-modal-content p + p.ocult:before, .modal-modules .body-modal-resources .modal-module.modal-dialog .body-modal-module .body-modal-content p + p.ocult:before, .modal-resources .body-modal-resources .modal-module.modal-dialog .body-modal-module .body-modal-content p + p.ocult:before, .modal-modules .content-modal-modules .modal-resource.modal-dialog .body-modal-module .body-modal-content p + p.ocult:before, .modal-resources .content-modal-modules .modal-resource.modal-dialog .body-modal-module .body-modal-content p + p.ocult:before, .modal-modules .body-modal-modules .modal-resource.modal-dialog .body-modal-module .body-modal-content p + p.ocult:before, .modal-resources .body-modal-modules .modal-resource.modal-dialog .body-modal-module .body-modal-content p + p.ocult:before, .modal-modules .body-modal-resources .modal-resource.modal-dialog .body-modal-module .body-modal-content p + p.ocult:before, .modal-resources .body-modal-resources .modal-resource.modal-dialog .body-modal-module .body-modal-content p + p.ocult:before, .modal-modules .content-modal-modules .modal-module.modal-dialog .body-modal-resource .body-modal-content p + p.ocult:before, .modal-resources .content-modal-modules .modal-module.modal-dialog .body-modal-resource .body-modal-content p + p.ocult:before, .modal-modules .body-modal-modules .modal-module.modal-dialog .body-modal-resource .body-modal-content p + p.ocult:before, .modal-resources .body-modal-modules .modal-module.modal-dialog .body-modal-resource .body-modal-content p + p.ocult:before, .modal-modules .body-modal-resources .modal-module.modal-dialog .body-modal-resource .body-modal-content p + p.ocult:before, .modal-resources .body-modal-resources .modal-module.modal-dialog .body-modal-resource .body-modal-content p + p.ocult:before, .modal-modules .content-modal-modules .modal-resource.modal-dialog .body-modal-resource .body-modal-content p + p.ocult:before, .modal-resources .content-modal-modules .modal-resource.modal-dialog .body-modal-resource .body-modal-content p + p.ocult:before, .modal-modules .body-modal-modules .modal-resource.modal-dialog .body-modal-resource .body-modal-content p + p.ocult:before, .modal-resources .body-modal-modules .modal-resource.modal-dialog .body-modal-resource .body-modal-content p + p.ocult:before, .modal-modules .body-modal-resources .modal-resource.modal-dialog .body-modal-resource .body-modal-content p + p.ocult:before, .modal-resources .body-modal-resources .modal-resource.modal-dialog .body-modal-resource .body-modal-content p + p.ocult:before {
+  content: '';
+}
 .modal-modules .content-modal-modules .modal-module.modal-dialog .body-modal-module .body-modal-content p + p:before, .modal-resources .content-modal-modules .modal-module.modal-dialog .body-modal-module .body-modal-content p + p:before, .modal-modules .body-modal-modules .modal-module.modal-dialog .body-modal-module .body-modal-content p + p:before, .modal-resources .body-modal-modules .modal-module.modal-dialog .body-modal-module .body-modal-content p + p:before, .modal-modules .body-modal-resources .modal-module.modal-dialog .body-modal-module .body-modal-content p + p:before, .modal-resources .body-modal-resources .modal-module.modal-dialog .body-modal-module .body-modal-content p + p:before, .modal-modules .content-modal-modules .modal-resource.modal-dialog .body-modal-module .body-modal-content p + p:before, .modal-resources .content-modal-modules .modal-resource.modal-dialog .body-modal-module .body-modal-content p + p:before, .modal-modules .body-modal-modules .modal-resource.modal-dialog .body-modal-module .body-modal-content p + p:before, .modal-resources .body-modal-modules .modal-resource.modal-dialog .body-modal-module .body-modal-content p + p:before, .modal-modules .body-modal-resources .modal-resource.modal-dialog .body-modal-module .body-modal-content p + p:before, .modal-resources .body-modal-resources .modal-resource.modal-dialog .body-modal-module .body-modal-content p + p:before, .modal-modules .content-modal-modules .modal-module.modal-dialog .body-modal-resource .body-modal-content p + p:before, .modal-resources .content-modal-modules .modal-module.modal-dialog .body-modal-resource .body-modal-content p + p:before, .modal-modules .body-modal-modules .modal-module.modal-dialog .body-modal-resource .body-modal-content p + p:before, .modal-resources .body-modal-modules .modal-module.modal-dialog .body-modal-resource .body-modal-content p + p:before, .modal-modules .body-modal-resources .modal-module.modal-dialog .body-modal-resource .body-modal-content p + p:before, .modal-resources .body-modal-resources .modal-module.modal-dialog .body-modal-resource .body-modal-content p + p:before, .modal-modules .content-modal-modules .modal-resource.modal-dialog .body-modal-resource .body-modal-content p + p:before, .modal-resources .content-modal-modules .modal-resource.modal-dialog .body-modal-resource .body-modal-content p + p:before, .modal-modules .body-modal-modules .modal-resource.modal-dialog .body-modal-resource .body-modal-content p + p:before, .modal-resources .body-modal-modules .modal-resource.modal-dialog .body-modal-resource .body-modal-content p + p:before, .modal-modules .body-modal-resources .modal-resource.modal-dialog .body-modal-resource .body-modal-content p + p:before, .modal-resources .body-modal-resources .modal-resource.modal-dialog .body-modal-resource .body-modal-content p + p:before {
   content: '\00B7';
   display: block;
@@ -2817,13 +2861,17 @@ div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module 
 }
 .modal-modules .content-modal-modules .modal-module.modal-dialog .bottom-modal-module .custom-icon, .modal-resources .content-modal-modules .modal-module.modal-dialog .bottom-modal-module .custom-icon, .modal-modules .body-modal-modules .modal-module.modal-dialog .bottom-modal-module .custom-icon, .modal-resources .body-modal-modules .modal-module.modal-dialog .bottom-modal-module .custom-icon, .modal-modules .body-modal-resources .modal-module.modal-dialog .bottom-modal-module .custom-icon, .modal-resources .body-modal-resources .modal-module.modal-dialog .bottom-modal-module .custom-icon, .modal-modules .content-modal-modules .modal-resource.modal-dialog .bottom-modal-module .custom-icon, .modal-resources .content-modal-modules .modal-resource.modal-dialog .bottom-modal-module .custom-icon, .modal-modules .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module .custom-icon, .modal-resources .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module .custom-icon, .modal-modules .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module .custom-icon, .modal-resources .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module .custom-icon {
   align-self: center;
-  margin-right: 5px;
+  margin-right: 10px;
+  margin-top: 5px;
 }
 .modal-modules .content-modal-modules .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-resources .content-modal-modules .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-modules .body-modal-modules .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-resources .body-modal-modules .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-modules .body-modal-resources .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-resources .body-modal-resources .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-modules .content-modal-modules .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-resources .content-modal-modules .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-modules .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-resources .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-modules .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-resources .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock {
-  width: 31px;
-  height: 59px;
-  background-image: url('../images/clock-icon.svg');
-  background-position: center;
+  height: 100%;
+}
+.modal-modules .content-modal-modules .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock:before, .modal-resources .content-modal-modules .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock:before, .modal-modules .body-modal-modules .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock:before, .modal-resources .body-modal-modules .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock:before, .modal-modules .body-modal-resources .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock:before, .modal-resources .body-modal-resources .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock:before, .modal-modules .content-modal-modules .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock:before, .modal-resources .content-modal-modules .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock:before, .modal-modules .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock:before, .modal-resources .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock:before, .modal-modules .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock:before, .modal-resources .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock:before {
+  content: '\e90a';
+  font-family: 'ioc-icons';
+  font-size: 22px;
+  color: #354959;
 }
 .modal-modules .content-modal-modules .modal-module.modal-dialog .bottom-modal-module p, .modal-resources .content-modal-modules .modal-module.modal-dialog .bottom-modal-module p, .modal-modules .body-modal-modules .modal-module.modal-dialog .bottom-modal-module p, .modal-resources .body-modal-modules .modal-module.modal-dialog .bottom-modal-module p, .modal-modules .body-modal-resources .modal-module.modal-dialog .bottom-modal-module p, .modal-resources .body-modal-resources .modal-module.modal-dialog .bottom-modal-module p, .modal-modules .content-modal-modules .modal-resource.modal-dialog .bottom-modal-module p, .modal-resources .content-modal-modules .modal-resource.modal-dialog .bottom-modal-module p, .modal-modules .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module p, .modal-resources .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module p, .modal-modules .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module p, .modal-resources .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module p {
   display: inline-block;
@@ -2891,16 +2939,13 @@ div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module 
   border-top: 1px solid rgba(135, 147, 156, 0.13);
 }
 .modal-modules .content-modal-modules .modal-module .bottom-modal-module:before, .modal-resources .content-modal-modules .modal-module .bottom-modal-module:before, .modal-modules .body-modal-modules .modal-module .bottom-modal-module:before, .modal-resources .body-modal-modules .modal-module .bottom-modal-module:before, .modal-modules .body-modal-resources .modal-module .bottom-modal-module:before, .modal-resources .body-modal-resources .modal-module .bottom-modal-module:before, .modal-modules .content-modal-modules .modal-resource .bottom-modal-module:before, .modal-resources .content-modal-modules .modal-resource .bottom-modal-module:before, .modal-modules .body-modal-modules .modal-resource .bottom-modal-module:before, .modal-resources .body-modal-modules .modal-resource .bottom-modal-module:before, .modal-modules .body-modal-resources .modal-resource .bottom-modal-module:before, .modal-resources .body-modal-resources .modal-resource .bottom-modal-module:before {
-  content: '';
+  content: '\e90a';
+  font-family: 'ioc-icons';
+  font-size: 13px;
   margin-right: 4px;
   display: inline-block;
   align-self: center;
-  width: 21px;
-  height: 17px;
-  background-image: url('../images/clock-icon.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 100%;
 }
 .modal-modules .content-modal-modules .modal-resource, .modal-resources .content-modal-modules .modal-resource, .modal-modules .body-modal-modules .modal-resource, .modal-resources .body-modal-modules .modal-resource, .modal-modules .body-modal-resources .modal-resource, .modal-resources .body-modal-resources .modal-resource {
   border-top: none;
@@ -3111,7 +3156,7 @@ div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module 
   opacity: 0.77;
 }
 .submenu .submenu-content .navbar-nav .element-img, .substudies .submenu-content .navbar-nav .element-img, .submenu .substudies-content .navbar-nav .element-img, .substudies .substudies-content .navbar-nav .element-img {
-  background-image: url('../images/menu/menu-default.png');
+  background-image: url('../images/menu/menu-default.jpg');
   min-height: 172px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -3731,7 +3776,7 @@ body #wrap section {
   margin-top: -50px;
 }
 #container .fluid-container.page-header.iocnewsarticle {
-  background-image: url('../images/bck-header-noticies.jpg');
+  background-image: url('../images/iocnewsarticle-header-bck.jpg');
 }
 #container .fluid-container.page-header.iocnewsarticle .container h1 {
   font-size: 26px;
@@ -3745,7 +3790,6 @@ body #wrap section {
   padding: 0;
 }
 #container .fluid-container.page-header.iocnewsarticle + .container .modified {
-  float: left;
   font-size: 10.5px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -3780,6 +3824,7 @@ body #wrap section {
   max-width: 174px;
   margin-top: 78px;
   display: inline-block;
+  color: rgba(255, 255, 255, 0);
 }
 #container .fluid-container.page-header .container {
   position: relative;
@@ -4519,6 +4564,9 @@ body #wrap section {
 .study-buttons .study-button .custom-icon, .body-modal-modules .study-button .custom-icon, .subpage-buttons .study-button .custom-icon, .study-buttons .file-modal-module .custom-icon, .body-modal-modules .file-modal-module .custom-icon, .subpage-buttons .file-modal-module .custom-icon, .study-buttons .subpage-button .custom-icon, .body-modal-modules .subpage-button .custom-icon, .subpage-buttons .subpage-button .custom-icon {
   display: inline-block;
   text-align: center;
+  height: 54px;
+  width: 44px;
+  top: 42px;
 }
 .study-buttons .study-button .custom-icon.suport, .body-modal-modules .study-button .custom-icon.suport, .subpage-buttons .study-button .custom-icon.suport, .study-buttons .file-modal-module .custom-icon.suport, .body-modal-modules .file-modal-module .custom-icon.suport, .subpage-buttons .file-modal-module .custom-icon.suport, .study-buttons .subpage-button .custom-icon.suport, .body-modal-modules .subpage-button .custom-icon.suport, .subpage-buttons .subpage-button .custom-icon.suport, .study-buttons .study-button .custom-icon.access, .body-modal-modules .study-button .custom-icon.access, .subpage-buttons .study-button .custom-icon.access, .study-buttons .file-modal-module .custom-icon.access, .body-modal-modules .file-modal-module .custom-icon.access, .subpage-buttons .file-modal-module .custom-icon.access, .study-buttons .subpage-button .custom-icon.access, .body-modal-modules .subpage-button .custom-icon.access, .subpage-buttons .subpage-button .custom-icon.access, .study-buttons .study-button .custom-icon.matricula, .body-modal-modules .study-button .custom-icon.matricula, .subpage-buttons .study-button .custom-icon.matricula, .study-buttons .file-modal-module .custom-icon.matricula, .body-modal-modules .file-modal-module .custom-icon.matricula, .subpage-buttons .file-modal-module .custom-icon.matricula, .study-buttons .subpage-button .custom-icon.matricula, .body-modal-modules .subpage-button .custom-icon.matricula, .subpage-buttons .subpage-button .custom-icon.matricula, .study-buttons .study-button .custom-icon.objectius, .body-modal-modules .study-button .custom-icon.objectius, .subpage-buttons .study-button .custom-icon.objectius, .study-buttons .file-modal-module .custom-icon.objectius, .body-modal-modules .file-modal-module .custom-icon.objectius, .subpage-buttons .file-modal-module .custom-icon.objectius, .study-buttons .subpage-button .custom-icon.objectius, .body-modal-modules .subpage-button .custom-icon.objectius, .subpage-buttons .subpage-button .custom-icon.objectius, .study-buttons .study-button .custom-icon.certificats, .body-modal-modules .study-button .custom-icon.certificats, .subpage-buttons .study-button .custom-icon.certificats, .study-buttons .file-modal-module .custom-icon.certificats, .body-modal-modules .file-modal-module .custom-icon.certificats, .subpage-buttons .file-modal-module .custom-icon.certificats, .study-buttons .subpage-button .custom-icon.certificats, .body-modal-modules .subpage-button .custom-icon.certificats, .subpage-buttons .subpage-button .custom-icon.certificats, .study-buttons .study-button .custom-icon.competencies, .body-modal-modules .study-button .custom-icon.competencies, .subpage-buttons .study-button .custom-icon.competencies, .study-buttons .file-modal-module .custom-icon.competencies, .body-modal-modules .file-modal-module .custom-icon.competencies, .subpage-buttons .file-modal-module .custom-icon.competencies, .study-buttons .subpage-button .custom-icon.competencies, .body-modal-modules .subpage-button .custom-icon.competencies, .subpage-buttons .subpage-button .custom-icon.competencies, .study-buttons .study-button .custom-icon.metodologia, .body-modal-modules .study-button .custom-icon.metodologia, .subpage-buttons .study-button .custom-icon.metodologia, .study-buttons .file-modal-module .custom-icon.metodologia, .body-modal-modules .file-modal-module .custom-icon.metodologia, .subpage-buttons .file-modal-module .custom-icon.metodologia, .study-buttons .subpage-button .custom-icon.metodologia, .body-modal-modules .subpage-button .custom-icon.metodologia, .subpage-buttons .subpage-button .custom-icon.metodologia, .study-buttons .study-button .custom-icon.ambit, .body-modal-modules .study-button .custom-icon.ambit, .subpage-buttons .study-button .custom-icon.ambit, .study-buttons .file-modal-module .custom-icon.ambit, .body-modal-modules .file-modal-module .custom-icon.ambit, .subpage-buttons .file-modal-module .custom-icon.ambit, .study-buttons .subpage-button .custom-icon.ambit, .body-modal-modules .subpage-button .custom-icon.ambit, .subpage-buttons .subpage-button .custom-icon.ambit, .study-buttons .study-button .custom-icon.itinerari, .body-modal-modules .study-button .custom-icon.itinerari, .subpage-buttons .study-button .custom-icon.itinerari, .study-buttons .file-modal-module .custom-icon.itinerari, .body-modal-modules .file-modal-module .custom-icon.itinerari, .subpage-buttons .file-modal-module .custom-icon.itinerari, .study-buttons .subpage-button .custom-icon.itinerari, .body-modal-modules .subpage-button .custom-icon.itinerari, .subpage-buttons .subpage-button .custom-icon.itinerari, .study-buttons .study-button .custom-icon.materials, .body-modal-modules .study-button .custom-icon.materials, .subpage-buttons .study-button .custom-icon.materials, .study-buttons .file-modal-module .custom-icon.materials, .body-modal-modules .file-modal-module .custom-icon.materials, .subpage-buttons .file-modal-module .custom-icon.materials, .study-buttons .subpage-button .custom-icon.materials, .body-modal-modules .subpage-button .custom-icon.materials, .subpage-buttons .subpage-button .custom-icon.materials {
   position: absolute;
@@ -4531,21 +4579,12 @@ body #wrap section {
   display: inline-block;
 }
 .study-buttons .study-button .custom-icon.suport, .body-modal-modules .study-button .custom-icon.suport, .subpage-buttons .study-button .custom-icon.suport, .study-buttons .file-modal-module .custom-icon.suport, .body-modal-modules .file-modal-module .custom-icon.suport, .subpage-buttons .file-modal-module .custom-icon.suport, .study-buttons .subpage-button .custom-icon.suport, .body-modal-modules .subpage-button .custom-icon.suport, .subpage-buttons .subpage-button .custom-icon.suport {
-  top: 42px;
-  width: 41px;
-  height: 54px;
   background-image: url('../images/centres-suport-44x54px.svg');
 }
 .study-buttons .study-button .custom-icon.access, .body-modal-modules .study-button .custom-icon.access, .subpage-buttons .study-button .custom-icon.access, .study-buttons .file-modal-module .custom-icon.access, .body-modal-modules .file-modal-module .custom-icon.access, .subpage-buttons .file-modal-module .custom-icon.access, .study-buttons .subpage-button .custom-icon.access, .body-modal-modules .subpage-button .custom-icon.access, .subpage-buttons .subpage-button .custom-icon.access {
-  top: 42px;
-  width: 36px;
-  height: 54px;
   background-image: url('../images/requisits-44x54px.svg');
 }
 .study-buttons .study-button .custom-icon.matricula, .body-modal-modules .study-button .custom-icon.matricula, .subpage-buttons .study-button .custom-icon.matricula, .study-buttons .file-modal-module .custom-icon.matricula, .body-modal-modules .file-modal-module .custom-icon.matricula, .subpage-buttons .file-modal-module .custom-icon.matricula, .study-buttons .subpage-button .custom-icon.matricula, .body-modal-modules .subpage-button .custom-icon.matricula, .subpage-buttons .subpage-button .custom-icon.matricula {
-  top: 42px;
-  width: 36px;
-  height: 54px;
   background-image: url('../images/matriculam-44x54px.svg');
 }
 .study-buttons .study-button .custom-icon.objectius, .body-modal-modules .study-button .custom-icon.objectius, .subpage-buttons .study-button .custom-icon.objectius, .study-buttons .file-modal-module .custom-icon.objectius, .body-modal-modules .file-modal-module .custom-icon.objectius, .subpage-buttons .file-modal-module .custom-icon.objectius, .study-buttons .subpage-button .custom-icon.objectius, .body-modal-modules .subpage-button .custom-icon.objectius, .subpage-buttons .subpage-button .custom-icon.objectius {
@@ -4555,34 +4594,19 @@ body #wrap section {
   background-image: url('../images/objectius-icon.svg');
 }
 .study-buttons .study-button .custom-icon.certificats, .body-modal-modules .study-button .custom-icon.certificats, .subpage-buttons .study-button .custom-icon.certificats, .study-buttons .file-modal-module .custom-icon.certificats, .body-modal-modules .file-modal-module .custom-icon.certificats, .subpage-buttons .file-modal-module .custom-icon.certificats, .study-buttons .subpage-button .custom-icon.certificats, .body-modal-modules .subpage-button .custom-icon.certificats, .subpage-buttons .subpage-button .custom-icon.certificats {
-  top: 44px;
-  width: 36px;
-  height: 55px;
-  background-image: url('../images/certificats-icon.svg');
+  background-image: url('../images/certificats-44x54px.svg');
 }
 .study-buttons .study-button .custom-icon.competencies, .body-modal-modules .study-button .custom-icon.competencies, .subpage-buttons .study-button .custom-icon.competencies, .study-buttons .file-modal-module .custom-icon.competencies, .body-modal-modules .file-modal-module .custom-icon.competencies, .subpage-buttons .file-modal-module .custom-icon.competencies, .study-buttons .subpage-button .custom-icon.competencies, .body-modal-modules .subpage-button .custom-icon.competencies, .subpage-buttons .subpage-button .custom-icon.competencies {
-  top: 44px;
-  width: 49px;
-  height: 57px;
-  background-image: url('../images/competencies-icon.svg');
+  background-image: url('../images/competencies-44x54px.svg');
 }
 .study-buttons .study-button .custom-icon.metodologia, .body-modal-modules .study-button .custom-icon.metodologia, .subpage-buttons .study-button .custom-icon.metodologia, .study-buttons .file-modal-module .custom-icon.metodologia, .body-modal-modules .file-modal-module .custom-icon.metodologia, .subpage-buttons .file-modal-module .custom-icon.metodologia, .study-buttons .subpage-button .custom-icon.metodologia, .body-modal-modules .subpage-button .custom-icon.metodologia, .subpage-buttons .subpage-button .custom-icon.metodologia {
-  top: 44px;
-  width: 45px;
-  height: 45px;
-  background-image: url('../images/metodologia-icon.svg');
+  background-image: url('../images/metodologia-44x54px.svg');
 }
 .study-buttons .study-button .custom-icon.ambit, .body-modal-modules .study-button .custom-icon.ambit, .subpage-buttons .study-button .custom-icon.ambit, .study-buttons .file-modal-module .custom-icon.ambit, .body-modal-modules .file-modal-module .custom-icon.ambit, .subpage-buttons .file-modal-module .custom-icon.ambit, .study-buttons .subpage-button .custom-icon.ambit, .body-modal-modules .subpage-button .custom-icon.ambit, .subpage-buttons .subpage-button .custom-icon.ambit {
-  top: 44px;
-  width: 52px;
-  height: 48px;
-  background-image: url('../images/ambit-professional-icon.svg');
+  background-image: url('../images/ambit-professional-44x54px.svg');
 }
 .study-buttons .study-button .custom-icon.itinerari, .body-modal-modules .study-button .custom-icon.itinerari, .subpage-buttons .study-button .custom-icon.itinerari, .study-buttons .file-modal-module .custom-icon.itinerari, .body-modal-modules .file-modal-module .custom-icon.itinerari, .subpage-buttons .file-modal-module .custom-icon.itinerari, .study-buttons .subpage-button .custom-icon.itinerari, .body-modal-modules .subpage-button .custom-icon.itinerari, .subpage-buttons .subpage-button .custom-icon.itinerari {
-  top: 44px;
-  width: 51px;
-  height: 49px;
-  background-image: url('../images/itinerari-icon.svg');
+  background-image: url('../images/itinerari-44x54px.svg');
 }
 .study-buttons .study-button .custom-icon.materials, .body-modal-modules .study-button .custom-icon.materials, .subpage-buttons .study-button .custom-icon.materials, .study-buttons .file-modal-module .custom-icon.materials, .body-modal-modules .file-modal-module .custom-icon.materials, .subpage-buttons .file-modal-module .custom-icon.materials, .study-buttons .subpage-button .custom-icon.materials, .body-modal-modules .subpage-button .custom-icon.materials, .subpage-buttons .subpage-button .custom-icon.materials {
   top: 26px;
@@ -4671,6 +4695,10 @@ body #wrap section {
   background-position: bottom;
   background-size: 100vw 500px;
   padding-bottom: 237px;
+}
+.item-page-study.acfgs + .all-studies .substudies .substudies-content, .item-page-study.btx + .all-studies .substudies .substudies-content {
+  max-width: 1170px;
+  margin: 0 auto;
 }
 .item-page-study.acfgs + .all-studies .substudies .substudies-content .title, .item-page-study.btx + .all-studies .substudies .substudies-content .title {
   display: none;
@@ -5994,13 +6022,13 @@ div[class*="item-page-"] table p {
   #navigation .collapse.in {
     display: block !important;
   }
-  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span {
+  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span, .item-page-default dd, .page-default dd {
     max-width: 676px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
-  .item-page-default.resource h1, .item-page-default.resource h2, .item-page-default.resource h3, .item-page-default.resource p, .item-page-default.resource ul, .item-page-default.resource ol, .item-page-default.resource table, .item-page-default.resource div, .item-page-default.resource span {
+  .item-page-default.resource h1, .item-page-default.resource h2, .item-page-default.resource h3, .item-page-default.resource p, .item-page-default.resource ul, .item-page-default.resource ol, .item-page-default.resource table, .item-page-default.resource div, .item-page-default.resource span, .item-page-default.resource dd {
     max-width: 100%;
   }
   .item-page-default.resource .modal {
@@ -6170,12 +6198,6 @@ div[class*="item-page-"] table p {
   }
   #container .fluid-container.page-header.subpage {
     height: 146px;
-  }
-  #container .fluid-container.page-header.subpage .container h1 {
-    font-size: 20px;
-    font-weight: 300;
-    bottom: 37px;
-    padding: 0;
   }
   #container .container.study-main .study-overview .study-overview-headline:after, #container .container.study-main .study-overview .study-overview-text:after {
     display: none;
@@ -6465,8 +6487,9 @@ div[class*="item-page-"] table p {
     width: 140px;
     height: 140px;
   }
-  .study-buttons .study-button .custom-icon.suport, .study-buttons .study-button .custom-icon.access, .study-buttons .study-button .custom-icon.matricula {
+  .study-buttons .study-button .custom-icon {
     top: 24px;
+    width: 44px;
     height: 54px;
   }
   .study-buttons .icon-text {
@@ -6548,12 +6571,12 @@ div[class*="item-page-"] table p {
     margin: 34px auto;
   }
   .modal-modules .title, .modal-resources .title {
-    margin-bottom: 29px;
+    margin-bottom: 39px;
     margin-top: 51px;
   }
   .modal-modules .title h1, .modal-resources .title h1 {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0;
   }
   .modal-modules .title h1:before, .modal-resources .title h1:before, .modal-modules .title h1:after, .modal-resources .title h1:after {
@@ -6565,16 +6588,16 @@ div[class*="item-page-"] table p {
     height: 86px;
     border-top-width: 0;
     border-right-width: 3px;
-    margin-top: 23px;
+    margin-top: 13px;
     margin-right: 0;
     overflow: hidden;
   }
   .modal-modules .content-modal-modules .modal-module img, .modal-resources .content-modal-modules .modal-module img {
     position: absolute;
-    top: 0;
+    top: -25%;
     left: 0;
     width: 214px;
-    height: 100%;
+    height: auto;
   }
   .modal-modules .content-modal-modules .modal-module .shortname-modal-module, .modal-resources .content-modal-modules .modal-module .shortname-modal-module {
     top: 5px;
@@ -6743,13 +6766,13 @@ div[class*="item-page-"] table p {
 }
 @media all and (max-width: 480px) {
   /* Customization for studies, Parallax, Banners, layouts */
-  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span {
+  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span, .item-page-default dd, .page-default dd {
     max-width: 290px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
-  .item-page-default.resource h1, .item-page-default.resource h2, .item-page-default.resource h3, .item-page-default.resource p, .item-page-default.resource ul, .item-page-default.resource ol, .item-page-default.resource table, .item-page-default.resource div, .item-page-default.resource span {
+  .item-page-default.resource h1, .item-page-default.resource h2, .item-page-default.resource h3, .item-page-default.resource p, .item-page-default.resource ul, .item-page-default.resource ol, .item-page-default.resource table, .item-page-default.resource div, .item-page-default.resource span, .item-page-default.resource dd {
     max-width: 100%;
   }
   .item-page-default.resource .modal {
@@ -6974,6 +6997,33 @@ div[class*="item-page-"] table p {
   #main-box .item-page-study.eoi .subpage-banner {
     background-image: url('../images/eoi-banner-mobile.png');
   }
+  #main-box .fluid-container.page-header.eoi-basic {
+    background-image: url('../images/eoi-basic-header-bck-mobile.jpg');
+  }
+  #main-box .item-page-study.eoi-basic .study-parallax {
+    background-image: url('../images/eoi-basic-parallax-img-mobile.jpg');
+  }
+  #main-box .item-page-study.eoi-basic .subpage-banner {
+    background-image: url('../images/eoi-basic-banner-mobile.png');
+  }
+  #main-box .fluid-container.page-header.eoi-medium {
+    background-image: url('../images/eoi-medium-header-bck-mobile.jpg');
+  }
+  #main-box .item-page-study.eoi-medium .study-parallax {
+    background-image: url('../images/eoi-medium-parallax-img-mobile.jpg');
+  }
+  #main-box .item-page-study.eoi-medium .subpage-banner {
+    background-image: url('../images/eoi-medium-banner-mobile.png');
+  }
+  #main-box .fluid-container.page-header.eoi-advanced {
+    background-image: url('../images/eoi-advanced-header-bck-mobile.jpg');
+  }
+  #main-box .item-page-study.eoi-advanced .study-parallax {
+    background-image: url('../images/eoi-advanced-parallax-img-mobile.jpg');
+  }
+  #main-box .item-page-study.eoi-advanced .subpage-banner {
+    background-image: url('../images/eoi-advanced-banner-mobile.png');
+  }
   #main-box .fluid-container.page-header.fesp {
     background-image: url('../images/fesp-header-bck-mobile.jpg');
   }
@@ -7000,6 +7050,15 @@ div[class*="item-page-"] table p {
   }
   #main-box .item-page-study.ges .subpage-banner {
     background-image: url('../images/ges-banner-mobile.png');
+  }
+  #main-box .fluid-container.page-header.iocnewsarticle {
+    background-image: url('../images/iocnewsarticle-header-bck-mobile.jpg');
+  }
+  #main-box .item-page-study.iocnewsarticle .study-parallax {
+    background-image: url('../images/iocnewsarticle-parallax-img-mobile.jpg');
+  }
+  #main-box .item-page-study.iocnewsarticle .subpage-banner {
+    background-image: url('../images/iocnewsarticle-banner-mobile.png');
   }
   #main-box .fluid-container.page-header.pacfgs {
     background-image: url('../images/pacfgs-header-bck-mobile.jpg');
@@ -7030,6 +7089,12 @@ div[class*="item-page-"] table p {
   }
   #container .fluid-container.page-header.default h1 {
     bottom: 33px;
+  }
+  #container .fluid-container.page-header.iocnewsarticle + .item-page-default .container {
+    padding: 0 15px;
+  }
+  #container .fluid-container.page-header.iocnewsarticle + .item-page-default .container .page-header, #container .fluid-container.page-header.iocnewsarticle + .item-page-default .container dd {
+    padding: 0;
   }
   #container .container.study-main {
     margin-top: 0;
@@ -7092,10 +7157,6 @@ div[class*="item-page-"] table p {
   #container .container.study-main .study-panel .study-data .study-col + .study-col {
     margin-left: auto;
   }
-  .ioc-news-container .ioc-news .imatge-noticia {
-    margin-left: -15px;
-    width: 100vw;
-  }
   .ioc-news-container .ioc-news .imatge-noticia figcaption {
     margin-bottom: 15px;
     font-size: 11px;
@@ -7108,13 +7169,16 @@ div[class*="item-page-"] table p {
   }
   .modal-modules .title {
     margin-top: 25px;
+    margin-bottom: 11px;
   }
   .modal-modules .content-modal-modules {
     margin-top: 0;
   }
   .modal-modules .content-modal-modules img {
+    top: 0 !important;
     left: -40px !important;
     max-width: 140px;
+    height: 100% !important;
   }
   .modal-modules .content-modal-modules .modal-module .text-modal-module, .modal-modules .content-modal-modules .modal-module .bottom-modal-module, .modal-modules .content-modal-modules .modal-module .shortname-modal-module {
     left: 109px;
@@ -7202,35 +7266,49 @@ div[class*="item-page-"] table p {
   .subpage-text-buttons {
     background-image: url('../images/seccio-text-botons-bck-mobile.svg');
   }
+  .subpage-text-buttons-banner, .subpage-buttons-filter {
+    background-image: url('../images/cicles-bck-mobile.svg');
+  }
   .study-buttons {
     margin-top: 73px;
   }
-  .study-buttons .study-button {
+  .study-buttons .study-button, .subpage-buttons .study-button, .study-buttons .subpage-button, .subpage-buttons .subpage-button {
     width: 94px;
     height: 116px;
   }
-  .study-buttons .study-button .custom-icon {
-    height: 42px;
-    width: 40px;
-  }
-  .study-buttons .study-button .custom-icon.access, .study-buttons .study-button .custom-icon.suport, .study-buttons .study-button .custom-icon.matricula {
+  .study-buttons .study-button .custom-icon, .subpage-buttons .study-button .custom-icon, .study-buttons .subpage-button .custom-icon, .subpage-buttons .subpage-button .custom-icon {
     top: 22px;
-    height: 43px;
-    width: 33px;
+    height: 44px;
+    width: 34px;
   }
-  .study-buttons .study-button .custom-icon.access {
+  .study-buttons .study-button .custom-icon.access, .subpage-buttons .study-button .custom-icon.access, .study-buttons .subpage-button .custom-icon.access, .subpage-buttons .subpage-button .custom-icon.access {
     background-image: url('../images/requisits-34x44px.svg');
   }
-  .study-buttons .study-button .custom-icon.suport {
-    background-image: url('../images/centres-suport-34x44px.svg');
+  .study-buttons .study-button .custom-icon.ambit, .subpage-buttons .study-button .custom-icon.ambit, .study-buttons .subpage-button .custom-icon.ambit, .subpage-buttons .subpage-button .custom-icon.ambit {
+    background-image: url('../images/ambit-professional-34x44px.svg');
   }
-  .study-buttons .study-button .custom-icon.matricula {
+  .study-buttons .study-button .custom-icon.certificats, .subpage-buttons .study-button .custom-icon.certificats, .study-buttons .subpage-button .custom-icon.certificats, .subpage-buttons .subpage-button .custom-icon.certificats {
+    background-image: url('../images/certificats-34x44px.svg');
+  }
+  .study-buttons .study-button .custom-icon.competencies, .subpage-buttons .study-button .custom-icon.competencies, .study-buttons .subpage-button .custom-icon.competencies, .subpage-buttons .subpage-button .custom-icon.competencies {
+    background-image: url('../images/competencies-34x44px.svg');
+  }
+  .study-buttons .study-button .custom-icon.itinerari, .subpage-buttons .study-button .custom-icon.itinerari, .study-buttons .subpage-button .custom-icon.itinerari, .subpage-buttons .subpage-button .custom-icon.itinerari {
+    background-image: url('../images/itinerari-34x44px.svg');
+  }
+  .study-buttons .study-button .custom-icon.matricula, .subpage-buttons .study-button .custom-icon.matricula, .study-buttons .subpage-button .custom-icon.matricula, .subpage-buttons .subpage-button .custom-icon.matricula {
     background-image: url('../images/matriculam-34x44px.svg');
   }
-  .study-buttons .study-button + .study-button {
+  .study-buttons .study-button .custom-icon.metodologia, .subpage-buttons .study-button .custom-icon.metodologia, .study-buttons .subpage-button .custom-icon.metodologia, .subpage-buttons .subpage-button .custom-icon.metodologia {
+    background-image: url('../images/metodologia-34x44px.svg');
+  }
+  .study-buttons .study-button .custom-icon.suport, .subpage-buttons .study-button .custom-icon.suport, .study-buttons .subpage-button .custom-icon.suport, .subpage-buttons .subpage-button .custom-icon.suport {
+    background-image: url('../images/centres-suport-34x44px.svg');
+  }
+  .study-buttons .study-button + .study-button, .subpage-buttons .study-button + .study-button {
     margin-left: 2px;
   }
-  .study-buttons .icon-text {
+  .study-buttons .icon-text, .subpage-buttons .icon-text {
     font-size: 8px;
     font-weight: 500;
     letter-spacing: 1.1px;
@@ -7361,13 +7439,13 @@ div[class*="item-page-"] table p {
   }
 }
 @media all and (min-width: 648px) {
-  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span {
+  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span, .item-page-default dd, .page-default dd {
     max-width: 632px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
-  .item-page-default.resource h1, .item-page-default.resource h2, .item-page-default.resource h3, .item-page-default.resource p, .item-page-default.resource ul, .item-page-default.resource ol, .item-page-default.resource table, .item-page-default.resource div, .item-page-default.resource span {
+  .item-page-default.resource h1, .item-page-default.resource h2, .item-page-default.resource h3, .item-page-default.resource p, .item-page-default.resource ul, .item-page-default.resource ol, .item-page-default.resource table, .item-page-default.resource div, .item-page-default.resource span, .item-page-default.resource dd {
     max-width: 632px;
   }
   .item-page-default.resource .modal {
@@ -7422,6 +7500,11 @@ div[class*="item-page-"] table p {
     bottom: 30px;
     padding: 0;
     max-width: 70%;
+  }
+  #container .fluid-container.page-header.subpage .container h1 {
+    font-size: 16px;
+    font-weight: normal;
+    bottom: 28px;
   }
   #container .container {
     padding: 0 15px;
@@ -7783,13 +7866,13 @@ div[class*="item-page-"] table p {
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
-  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span {
+  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span, .item-page-default dd, .page-default dd {
     max-width: 626px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
-  .item-page-default.resource h1, .item-page-default.resource h2, .item-page-default.resource h3, .item-page-default.resource p, .item-page-default.resource ul, .item-page-default.resource ol, .item-page-default.resource table, .item-page-default.resource div, .item-page-default.resource span {
+  .item-page-default.resource h1, .item-page-default.resource h2, .item-page-default.resource h3, .item-page-default.resource p, .item-page-default.resource ul, .item-page-default.resource ol, .item-page-default.resource table, .item-page-default.resource div, .item-page-default.resource span, .item-page-default.resource dd {
     max-width: 629px;
   }
   .item-page-default.resource .modal {
@@ -7879,9 +7962,17 @@ div[class*="item-page-"] table p {
     font-size: 23px;
     letter-spacing: 0;
   }
+  #container .fluid-container.page-header.subpage .container h1 {
+    font-size: 18px;
+    font-weight: normal;
+    bottom: 37px;
+  }
   .item-page-study.acfgs + .all-studies .substudies, .item-page-study.btx + .all-studies .substudies {
     background-size: 100vw 265px;
     padding-bottom: 126px;
+  }
+  .item-page-study.acfgs + .all-studies .substudies .substudies-content, .item-page-study.btx + .all-studies .substudies .substudies-content {
+    max-width: 629px;
   }
   .item-page-study.acfgs + .all-studies .substudies .substudies-content .substudies-elements, .item-page-study.btx + .all-studies .substudies .substudies-content .substudies-elements {
     padding-left: 0;
@@ -7892,6 +7983,7 @@ div[class*="item-page-"] table p {
   }
   .item-page-study.acfgs + .all-studies .substudies .substudies-content .substudies-elements .navbar-nav li, .item-page-study.btx + .all-studies .substudies .substudies-content .substudies-elements .navbar-nav li {
     width: 276px;
+    height: 198px;
   }
   .item-page-study.acfgs + .all-studies .substudies .substudies-content .substudies-elements .navbar-nav li .element-img, .item-page-study.btx + .all-studies .substudies .substudies-content .substudies-elements .navbar-nav li .element-img {
     min-height: 132px;
@@ -8035,13 +8127,13 @@ div[class*="item-page-"] table p {
 }
 /* Medium Devices, Desktops */
 @media all and (min-width: 992px) {
-  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span {
+  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span, .item-page-default dd, .page-default dd {
     max-width: 676px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
-  .item-page-default.resource h1, .item-page-default.resource h2, .item-page-default.resource h3, .item-page-default.resource p, .item-page-default.resource ul, .item-page-default.resource ol, .item-page-default.resource table, .item-page-default.resource div, .item-page-default.resource span {
+  .item-page-default.resource h1, .item-page-default.resource h2, .item-page-default.resource h3, .item-page-default.resource p, .item-page-default.resource ul, .item-page-default.resource ol, .item-page-default.resource table, .item-page-default.resource div, .item-page-default.resource span, .item-page-default.resource dd {
     max-width: 830px;
   }
   .item-page-default.resource .modal {
@@ -8168,6 +8260,9 @@ div[class*="item-page-"] table p {
     background-size: 100vw 356px;
     padding-bottom: 185px;
   }
+  .item-page-study.acfgs + .all-studies .substudies .substudies-content, .item-page-study.btx + .all-studies .substudies .substudies-content {
+    max-width: 830px;
+  }
   .item-page-study.acfgs + .all-studies .substudies .substudies-content .title, .item-page-study.btx + .all-studies .substudies .substudies-content .title {
     display: none;
   }
@@ -8180,6 +8275,7 @@ div[class*="item-page-"] table p {
   }
   .item-page-study.acfgs + .all-studies .substudies .substudies-content .substudies-elements .navbar-nav li, .item-page-study.btx + .all-studies .substudies .substudies-content .substudies-elements .navbar-nav li {
     width: 360px;
+    height: 261px;
   }
   .item-page-study.acfgs + .all-studies .substudies .substudies-content .substudies-elements .navbar-nav li .element-img, .item-page-study.btx + .all-studies .substudies .substudies-content .substudies-elements .navbar-nav li .element-img {
     min-height: 172px;
@@ -8279,13 +8375,13 @@ div[class*="item-page-"] table p {
   }
 }
 @media all and (min-width: 1199px) {
-  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span {
+  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span, .item-page-default dd, .page-default dd {
     max-width: 676px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
-  .item-page-default.resource h1, .item-page-default.resource h2, .item-page-default.resource h3, .item-page-default.resource p, .item-page-default.resource ul, .item-page-default.resource ol, .item-page-default.resource table, .item-page-default.resource div, .item-page-default.resource span {
+  .item-page-default.resource h1, .item-page-default.resource h2, .item-page-default.resource h3, .item-page-default.resource p, .item-page-default.resource ul, .item-page-default.resource ol, .item-page-default.resource table, .item-page-default.resource div, .item-page-default.resource span, .item-page-default.resource dd {
     max-width: 1180px;
   }
   .item-page-default.resource .modal {
@@ -8349,6 +8445,9 @@ div[class*="item-page-"] table p {
     background-size: 100vw 500px;
     padding-bottom: 237px;
   }
+  .item-page-study.acfgs + .all-studies .substudies .substudies-content, .item-page-study.btx + .all-studies .substudies .substudies-content {
+    max-width: 1170px;
+  }
   .item-page-study.acfgs + .all-studies .substudies .substudies-content .title, .item-page-study.btx + .all-studies .substudies .substudies-content .title {
     display: none;
   }
@@ -8361,6 +8460,7 @@ div[class*="item-page-"] table p {
   }
   .item-page-study.acfgs + .all-studies .substudies .substudies-content .substudies-elements .navbar-nav li, .item-page-study.btx + .all-studies .substudies .substudies-content .substudies-elements .navbar-nav li {
     width: 500px;
+    height: 361px;
   }
   .item-page-study.acfgs + .all-studies .substudies .substudies-content .substudies-elements .navbar-nav li .element-img, .item-page-study.btx + .all-studies .substudies .substudies-content .substudies-elements .navbar-nav li .element-img {
     min-height: 239px;
@@ -8432,12 +8532,11 @@ div[class*="item-page-"] table p {
     max-width: 100%;
   }
   #container .modal-modules .content-modal-modules .modal-module {
-    height: 339px;
     width: 280px;
     margin-right: 20px;
   }
   #container .modal-modules .content-modal-modules .modal-module img {
-    height: 162px;
+    height: 160px;
   }
   #container .modal-modules .content-modal-modules .modal-module .text-modal-module {
     margin: 0;

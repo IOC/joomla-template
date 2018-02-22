@@ -46,7 +46,7 @@
     .item-page-default,
     .page-default {
         h1, h2, h3, p, ul, ol, table,
-        div, span {
+        div, span, dd {
             max-width: $maxdefault;
             width: 100%;
             margin-left: auto;
@@ -57,7 +57,7 @@
         .item-page-default {
             &.resource {
                 h1, h2, h3, p, ul, ol, table,
-                div, span {
+                div, span, dd {
                     max-width: $maxcustom;
                 }
                 .modal {
@@ -360,14 +360,6 @@
                 }
                 &.subpage {
                     height: 146px;
-                    .container {
-                        h1 {
-                            font-size: 20px;
-                            font-weight: 300;
-                            bottom: 37px;
-                            padding: 0;
-                        }
-                    }
                 }
             }
         }
@@ -755,12 +747,9 @@
             width: 140px;
             height: 140px;
             .custom-icon {
-                &.suport,
-                &.access,
-                &.matricula {
-                    top: 24px;
-                    height: 54px;
-                }
+                top: 24px;
+                width: 44px;
+                height: 54px;
             }
         }
         .icon-text {
@@ -872,11 +861,11 @@
     .modal-modules,
     .modal-resources {
         .title {
-            margin-bottom: 29px;
+            margin-bottom: 39px;
             margin-top: 51px;
             h1 {
                 font-size: 16px;
-                font-weight: 500;
+                font-weight: 600;
                 letter-spacing: 0;
                 &:before,
                 &:after {
@@ -891,15 +880,15 @@
                 height: 86px;
                 border-top-width: 0;
                 border-right-width: 3px;
-                margin-top: 23px;
+                margin-top: 13px;
                 margin-right: 0;
                 overflow: hidden;
                 img {
                     position: absolute;
-                    top: 0;
+                    top: -25%;
                     left: 0;
                     width: 214px;
-                    height: 100%;
+                    height: auto;
                 }
                 .shortname-modal-module {
                     top: 5px;
@@ -1304,9 +1293,13 @@
         @include study-mobile-images(competic);
         @include study-mobile-images(default);
         @include study-mobile-images(eoi);
+        @include study-mobile-images(eoi-basic);
+        @include study-mobile-images(eoi-medium);
+        @include study-mobile-images(eoi-advanced);
         @include study-mobile-images(fesp);
         @include study-mobile-images(fpd);
         @include study-mobile-images(ges);
+        @include study-mobile-images(iocnewsarticle);
         @include study-mobile-images(pacfgs);
         @include study-mobile-images(pau);
     }
@@ -1334,6 +1327,17 @@
                     height: 147px;
                     h1 {
                         bottom: 33px;
+                    }
+                }
+                &.iocnewsarticle {
+                    & + .item-page-default {
+                        .container {
+                            padding: 0 15px;
+                            .page-header,
+                            dd {
+                                padding: 0;
+                            }
+                        }
                     }
                 }
             }
@@ -1413,8 +1417,8 @@
     .ioc-news-container {
         .ioc-news {
             .imatge-noticia {
-                margin-left: -15px;
-                width: 100vw;
+                //margin-left: -15px;
+                //width: 100vw;
                 figcaption {
                     margin-bottom: 15px;
                     font-size: 11px;
@@ -1431,12 +1435,15 @@
     .modal-modules {
         .title {
             margin-top: 25px;
+            margin-bottom: 11px;
         }
         .content-modal-modules {
             margin-top: 0;
             img {
-                left: -40px!important;
+                top: 0 !important;
+                left: -40px !important;
                 max-width: 140px;
+                height: 100% !important;
             }
             .modal-module {
                 .text-modal-module,
@@ -1549,29 +1556,46 @@
     .subpage-text-buttons {
         background-image: url('../images/seccio-text-botons-bck-mobile.svg');
     }
+    .subpage-text-buttons-banner,
+    .subpage-buttons-filter {
+        background-image: url('../images/cicles-bck-mobile.svg');
+    }
     .study-buttons {
         margin-top: 73px;
-        .study-button {
+    }
+    .study-buttons,
+    .subpage-buttons {
+        .study-button,
+        .subpage-button {
             width: 94px;
             height: 116px;
             .custom-icon {
-                height: 42px;
-                width: 40px;
-                &.access,
-                &.suport,
-                &.matricula {
-                    top: 22px;
-                    height: 43px;
-                    width: 33px;
-                }
+                top: 22px;
+                height: 44px;
+                width: 34px;
                 &.access {
                     background-image: url('../images/requisits-34x44px.svg');
                 }
-                &.suport {
-                    background-image: url('../images/centres-suport-34x44px.svg');
+                &.ambit {
+                    background-image: url('../images/ambit-professional-34x44px.svg');
+                }
+                &.certificats {
+                    background-image: url('../images/certificats-34x44px.svg');
+                }
+                &.competencies {
+                    background-image: url('../images/competencies-34x44px.svg');
+                }
+                &.itinerari {
+                    background-image: url('../images/itinerari-34x44px.svg');
                 }
                 &.matricula {
                     background-image: url('../images/matriculam-34x44px.svg');
+                }
+                &.metodologia {
+                    background-image: url('../images/metodologia-34x44px.svg');
+                }
+                &.suport {
+                    background-image: url('../images/centres-suport-34x44px.svg');
                 }
             }
         }
@@ -1828,6 +1852,15 @@
                             bottom: 30px;
                             padding: 0;
                             max-width: 70%;
+                        }
+                    }
+                }
+                &.subpage {
+                    .container {
+                        h1 {
+                            font-size: 16px;
+                            font-weight: normal;
+                            bottom: 28px;
                         }
                     }
                 }
@@ -2411,6 +2444,15 @@
                         }
                     }
                 }
+                &.subpage {
+                    .container {
+                        h1 {
+                            font-size: 18px;
+                            font-weight: normal;
+                            bottom: 37px;
+                        }
+                    }
+                }
             }
         }
     }
@@ -2422,6 +2464,7 @@
                     background-size: 100vw 265px;
                     padding-bottom: 126px;
                     .substudies-content {
+                        max-width: 629px;
                         .substudies-elements {
                             padding-left: 0;
                             padding-right: 0;
@@ -2429,6 +2472,7 @@
                                 max-width: 100vw;
                                 li {
                                     width: 276px;
+                                    height: 198px;
                                     .element-img {
                                         min-height: 132px;
                                     }
@@ -2826,6 +2870,7 @@
                     background-size: 100vw 356px;
                     padding-bottom: 185px;
                     .substudies-content {
+                        max-width: 830px;
                         .title {
                             display: none;
                         }
@@ -2836,6 +2881,7 @@
                                 max-width: 100vw;
                                 li {
                                     width: 360px;
+                                    height: 261px;
                                     .element-img {
                                         min-height: 172px;
                                     }
@@ -3083,6 +3129,7 @@
                     background-size: 100vw 500px;
                     padding-bottom: 237px;
                     .substudies-content {
+                        max-width: 1170px;
                         .title {
                             display: none;
                         }
@@ -3093,6 +3140,7 @@
                                 max-width: 100vw;
                                 li {
                                     width: 500px;
+                                    height: 361px;
                                     .element-img {
                                         min-height: 239px;
                                     }
@@ -3189,11 +3237,10 @@
             .content-modal-modules {
                 max-width: 100%;
                 .modal-module {
-                    height: 339px;
                     width: 280px;
                     margin-right: 20px;
                     img {
-                        height: 162px;
+                        height: 160px;
                     }
                     .text-modal-module {
                         margin: 0;

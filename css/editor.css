@@ -115,7 +115,7 @@
 }
 #tinymce .study-main .study-panel .study-data .study-col .study-dates .study-block:before {
   content: '\2212';
-  font-family: "Glyphicons Halflings";
+  font-family: 'Glyphicons Halflings';
   background-color: #d9534f;
   color: #fff;
   cursor: pointer;
@@ -240,6 +240,20 @@
 #tinymce .modal-modules .title h1:before, #tinymce .modal-modules .title h1:after {
   border: 0;
 }
+#tinymce .modal-modules .content-modal-modules .modal-module {
+  max-width: 200px;
+}
+#tinymce .modal-modules .body-modal-modules .modal-module {
+  max-width: 480px;
+}
+#tinymce .modal-modules .content-modal-modules .modal-module, #tinymce .modal-modules .body-modal-modules .modal-module {
+  overflow: visible;
+}
+#tinymce .modal-modules .content-modal-modules .modal-module img, #tinymce .modal-modules .body-modal-modules .modal-module img, #tinymce .modal-modules .content-modal-modules .modal-module .text-modal-module, #tinymce .modal-modules .body-modal-modules .modal-module .text-modal-module, #tinymce .modal-modules .content-modal-modules .modal-module .bottom-modal-module, #tinymce .modal-modules .body-modal-modules .modal-module .bottom-modal-module, #tinymce .modal-modules .content-modal-modules .modal-module .shortname-modal-module, #tinymce .modal-modules .body-modal-modules .modal-module .shortname-modal-module {
+  position: relative;
+  left: 0;
+  top: 0;
+}
 #tinymce .modal-modules .content-modal-modules .modal-module, #tinymce .modal-modules .body-modal-modules .modal-module, #tinymce .modal-modules .content-modal-modules .modal-dialog, #tinymce .modal-modules .body-modal-modules .modal-dialog {
   box-sizing: border-box;
   border: 1px dashed #d9534f;
@@ -249,15 +263,46 @@
   height: auto;
   margin: 0 auto;
 }
-#tinymce .modal-modules .content-modal-modules .modal-module img, #tinymce .modal-modules .body-modal-modules .modal-module img, #tinymce .modal-modules .content-modal-modules .modal-dialog img, #tinymce .modal-modules .body-modal-modules .modal-dialog img, #tinymce .modal-modules .content-modal-modules .modal-module .body-modal-module, #tinymce .modal-modules .body-modal-modules .modal-module .body-modal-module, #tinymce .modal-modules .content-modal-modules .modal-dialog .body-modal-module, #tinymce .modal-modules .body-modal-modules .modal-dialog .body-modal-module, #tinymce .modal-modules .content-modal-modules .modal-module .shortname-modal-module, #tinymce .modal-modules .body-modal-modules .modal-module .shortname-modal-module, #tinymce .modal-modules .content-modal-modules .modal-dialog .shortname-modal-module, #tinymce .modal-modules .body-modal-modules .modal-dialog .shortname-modal-module, #tinymce .modal-modules .content-modal-modules .modal-module .text-modal-module, #tinymce .modal-modules .body-modal-modules .modal-module .text-modal-module, #tinymce .modal-modules .content-modal-modules .modal-dialog .text-modal-module, #tinymce .modal-modules .body-modal-modules .modal-dialog .text-modal-module, #tinymce .modal-modules .content-modal-modules .modal-module p, #tinymce .modal-modules .body-modal-modules .modal-module p, #tinymce .modal-modules .content-modal-modules .modal-dialog p, #tinymce .modal-modules .body-modal-modules .modal-dialog p, #tinymce .modal-modules .content-modal-modules .modal-module .bottom-modal-module, #tinymce .modal-modules .body-modal-modules .modal-module .bottom-modal-module, #tinymce .modal-modules .content-modal-modules .modal-dialog .bottom-modal-module, #tinymce .modal-modules .body-modal-modules .modal-dialog .bottom-modal-module, #tinymce .modal-modules .content-modal-modules .modal-module .bottom-modal-title, #tinymce .modal-modules .body-modal-modules .modal-module .bottom-modal-title, #tinymce .modal-modules .content-modal-modules .modal-dialog .bottom-modal-title, #tinymce .modal-modules .body-modal-modules .modal-dialog .bottom-modal-title, #tinymce .modal-modules .content-modal-modules .modal-module .bottom-modal-last, #tinymce .modal-modules .body-modal-modules .modal-module .bottom-modal-last, #tinymce .modal-modules .content-modal-modules .modal-dialog .bottom-modal-last, #tinymce .modal-modules .body-modal-modules .modal-dialog .bottom-modal-last, #tinymce .modal-modules .content-modal-modules .modal-module .clock, #tinymce .modal-modules .body-modal-modules .modal-module .clock, #tinymce .modal-modules .content-modal-modules .modal-dialog .clock, #tinymce .modal-modules .body-modal-modules .modal-dialog .clock, #tinymce .modal-modules .content-modal-modules .modal-module .file-modal-module, #tinymce .modal-modules .body-modal-modules .modal-module .file-modal-module, #tinymce .modal-modules .content-modal-modules .modal-dialog .file-modal-module, #tinymce .modal-modules .body-modal-modules .modal-dialog .file-modal-module {
+#tinymce .modal-modules .content-modal-modules .modal-module img, #tinymce .modal-modules .body-modal-modules .modal-module img, #tinymce .modal-modules .content-modal-modules .modal-dialog img, #tinymce .modal-modules .body-modal-modules .modal-dialog img, #tinymce .modal-modules .content-modal-modules .modal-module .body-modal-module, #tinymce .modal-modules .body-modal-modules .modal-module .body-modal-module, #tinymce .modal-modules .content-modal-modules .modal-dialog .body-modal-module, #tinymce .modal-modules .body-modal-modules .modal-dialog .body-modal-module, #tinymce .modal-modules .content-modal-modules .modal-module .shortname-modal-module, #tinymce .modal-modules .body-modal-modules .modal-module .shortname-modal-module, #tinymce .modal-modules .content-modal-modules .modal-dialog .shortname-modal-module, #tinymce .modal-modules .body-modal-modules .modal-dialog .shortname-modal-module, #tinymce .modal-modules .content-modal-modules .modal-module .text-modal-module, #tinymce .modal-modules .body-modal-modules .modal-module .text-modal-module, #tinymce .modal-modules .content-modal-modules .modal-dialog .text-modal-module, #tinymce .modal-modules .body-modal-modules .modal-dialog .text-modal-module, #tinymce .modal-modules .content-modal-modules .modal-module p, #tinymce .modal-modules .body-modal-modules .modal-module p, #tinymce .modal-modules .content-modal-modules .modal-dialog p, #tinymce .modal-modules .body-modal-modules .modal-dialog p, #tinymce .modal-modules .content-modal-modules .modal-module .bottom-modal-module, #tinymce .modal-modules .body-modal-modules .modal-module .bottom-modal-module, #tinymce .modal-modules .content-modal-modules .modal-dialog .bottom-modal-module, #tinymce .modal-modules .body-modal-modules .modal-dialog .bottom-modal-module, #tinymce .modal-modules .content-modal-modules .modal-module .bottom-modal-title, #tinymce .modal-modules .body-modal-modules .modal-module .bottom-modal-title, #tinymce .modal-modules .content-modal-modules .modal-dialog .bottom-modal-title, #tinymce .modal-modules .body-modal-modules .modal-dialog .bottom-modal-title, #tinymce .modal-modules .content-modal-modules .modal-module .bottom-modal-last, #tinymce .modal-modules .body-modal-modules .modal-module .bottom-modal-last, #tinymce .modal-modules .content-modal-modules .modal-dialog .bottom-modal-last, #tinymce .modal-modules .body-modal-modules .modal-dialog .bottom-modal-last, #tinymce .modal-modules .content-modal-modules .modal-module .file-modal-module, #tinymce .modal-modules .body-modal-modules .modal-module .file-modal-module, #tinymce .modal-modules .content-modal-modules .modal-dialog .file-modal-module, #tinymce .modal-modules .body-modal-modules .modal-dialog .file-modal-module {
   box-sizing: border-box;
   border: 1px dashed #d9534f;
   padding: 10px;
   background-color: #fafafa;
   color: #354959;
 }
+#tinymce .modal-modules .content-modal-modules .modal-module img, #tinymce .modal-modules .body-modal-modules .modal-module img, #tinymce .modal-modules .content-modal-modules .modal-dialog img, #tinymce .modal-modules .body-modal-modules .modal-dialog img {
+  width: 100%;
+}
+#tinymce .modal-modules .content-modal-modules .modal-module .body-modal-module .body-modal-content p + p, #tinymce .modal-modules .body-modal-modules .modal-module .body-modal-module .body-modal-content p + p, #tinymce .modal-modules .content-modal-modules .modal-dialog .body-modal-module .body-modal-content p + p, #tinymce .modal-modules .body-modal-modules .modal-dialog .body-modal-module .body-modal-content p + p {
+  pointer-events: none;
+  position: relative;
+}
+#tinymce .modal-modules .content-modal-modules .modal-module .body-modal-module .body-modal-content p + p:before, #tinymce .modal-modules .body-modal-modules .modal-module .body-modal-module .body-modal-content p + p:before, #tinymce .modal-modules .content-modal-modules .modal-dialog .body-modal-module .body-modal-content p + p:before, #tinymce .modal-modules .body-modal-modules .modal-dialog .body-modal-module .body-modal-content p + p:before {
+  content: '\e105';
+  background-color: #d9534f;
+  color: #fff;
+  font-family: 'Glyphicons Halflings';
+  font-size: 16px;
+  line-height: 16px;
+  cursor: pointer;
+  padding: 1px 2px 1px 3px;
+  pointer-events: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#tinymce .modal-modules .content-modal-modules .modal-module .body-modal-module .body-modal-content p + p.ocult, #tinymce .modal-modules .body-modal-modules .modal-module .body-modal-module .body-modal-content p + p.ocult, #tinymce .modal-modules .content-modal-modules .modal-dialog .body-modal-module .body-modal-content p + p.ocult, #tinymce .modal-modules .body-modal-modules .modal-dialog .body-modal-module .body-modal-content p + p.ocult {
+  visibility: visible;
+}
+#tinymce .modal-modules .content-modal-modules .modal-module .body-modal-module .body-modal-content p + p.ocult:before, #tinymce .modal-modules .body-modal-modules .modal-module .body-modal-module .body-modal-content p + p.ocult:before, #tinymce .modal-modules .content-modal-modules .modal-dialog .body-modal-module .body-modal-content p + p.ocult:before, #tinymce .modal-modules .body-modal-modules .modal-dialog .body-modal-module .body-modal-content p + p.ocult:before {
+  content: '\e106';
+  font-family: 'Glyphicons Halflings';
+}
 #tinymce .modal-modules .content-modal-modules .modal-module .bottom-modal-module, #tinymce .modal-modules .body-modal-modules .modal-module .bottom-modal-module, #tinymce .modal-modules .content-modal-modules .modal-dialog .bottom-modal-module, #tinymce .modal-modules .body-modal-modules .modal-dialog .bottom-modal-module {
   flex-wrap: nowrap;
+}
+#tinymce .modal-modules .content-modal-modules .modal-module .custom-icon, #tinymce .modal-modules .body-modal-modules .modal-module .custom-icon, #tinymce .modal-modules .content-modal-modules .modal-dialog .custom-icon, #tinymce .modal-modules .body-modal-modules .modal-dialog .custom-icon {
+  padding: 0;
 }
 #tinymce .modal-modules .content-modal-modules .modal-module .custom-icon.clock, #tinymce .modal-modules .body-modal-modules .modal-module .custom-icon.clock, #tinymce .modal-modules .content-modal-modules .modal-dialog .custom-icon.clock, #tinymce .modal-modules .body-modal-modules .modal-dialog .custom-icon.clock {
   height: auto;
@@ -368,7 +413,7 @@
 }
 #tinymce .study-tabs .nav-tabs li:after {
   content: '\2212';
-  font-family: "Glyphicons Halflings";
+  font-family: 'Glyphicons Halflings';
   background-color: #d9534f;
   color: #fff;
   cursor: pointer;
@@ -484,7 +529,7 @@
 }
 #tinymce #panel-sections .panel.panel-default:before {
   content: '\2212';
-  font-family: "Glyphicons Halflings";
+  font-family: 'Glyphicons Halflings';
   background-color: #d9534f;
   color: #fff;
   cursor: pointer;

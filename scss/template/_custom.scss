@@ -206,6 +206,23 @@
     .button-registration {
         background-color: get-color($colors, button);
     }
+    .modal-modules {
+        .content-modal-modules,
+        .body-modal-modules {
+            .modal-module {
+                border-color: get-color($colors, modal-border);
+                .shortname-modal-module {
+                    //border-color: $color;
+                }
+                .text-modal-module,
+                .bottom-modal-title,
+                .modal-color,
+                .bck-modal-module ~ p {
+                    color: get-color($colors, modal-title);
+                }
+            }
+        }
+    }
     .study-more-info {
         .title {
             h4 {
@@ -487,6 +504,7 @@ button:focus {
     #brand {
         .logo {
             padding-top: 25px;
+            color: rgba($ioc-white, 0);
         }
 
     }
@@ -559,7 +577,7 @@ header.headroom--not-top {
 }
 
 .modal {
-    top: 10vh;
+    //top: 10vh;
 }
 
 .list-group-item {
@@ -1147,8 +1165,8 @@ header.headroom--not-top {
     }
 }
 
-@include modal-module-color('eoi-', $ioc-eoi-study, $ioc-text);
-@include modal-module-color('fp-', $ioc-fp-study, $ioc-fp-study);
+//@include modal-module-color('eoi-', $ioc-eoi-study, $ioc-text);
+//@include modal-module-color('fp-', $ioc-fp-study, $ioc-fp-study);
 
 .modal-modules,
 .modal-resources {
@@ -1168,7 +1186,6 @@ header.headroom--not-top {
 
         .modal-module {
             width: 200px;
-            height: 243px;
             img {
                 height: 114px;
                 width: 100%;
@@ -1288,6 +1305,11 @@ header.headroom--not-top {
                             margin: 0 auto 15px;
                         }
                         p + p {
+                            &.ocult {
+                                &:before {
+                                    content: '';
+                                }
+                            }
                             &:before {
                                 content: '\00B7';
                                 display: block;
@@ -1370,12 +1392,16 @@ header.headroom--not-top {
                     }
                     .custom-icon {
                         align-self: center;
-                        margin-right: 5px;
+                        margin-right: 10px;
+                        margin-top: 5px;
                         &.clock {
-                            width: 31px;
-                            height: 59px;
-                            background-image: url('../images/clock-icon.svg');
-                            background-position: center;
+                            &:before {
+                                content: '\e90a';
+                                font-family: 'ioc-icons';
+                                font-size: 22px;
+                                color: $ioc-text;
+                            }
+                            height: 100%;
                         }
                     }
                     p {
@@ -1446,16 +1472,13 @@ header.headroom--not-top {
                 font-size: 10px;
                 border-top: 1px solid rgba(135, 147, 156, 0.13);
                 &:before {
-                    content: '';
+                    content: '\e90a';
+                    font-family: 'ioc-icons';
+                    font-size: 13px;
                     margin-right: 4px;
                     display: inline-block;
                     align-self: center;
-                    width: 21px;
-                    height: 17px;
-                    background-image: url('../images/clock-icon.svg');
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
+                    height: 100%;
                 }
             }
         }
@@ -1647,7 +1670,7 @@ header.headroom--not-top {
                 }
             }
             .element-img {
-                background-image: url('../images/menu/menu-default.png');
+                background-image: url('../images/menu/menu-default.jpg');
                 min-height: 172px;
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
@@ -2291,7 +2314,7 @@ body {
                 }
             }
             &.iocnewsarticle {
-                background-image: url('../images/bck-header-noticies.jpg');
+                background-image: url('../images/iocnewsarticle-header-bck.jpg');
                 .container {
                     h1 {
                         font-size: 26px;
@@ -2305,7 +2328,7 @@ body {
                 & + .container {
                     padding: 0;
                     .modified {
-                        float: left;
+                        //float: left;
                         font-size: 10.5px;
                         text-transform: uppercase;
                         letter-spacing: 1px;
@@ -2344,6 +2367,7 @@ body {
                 max-width: 174px;
                 margin-top: 78px;
                 display: inline-block;
+                color: rgba($ioc-white, 0);
             }
             .container {
                 position: relative;
@@ -3093,6 +3117,9 @@ body {
         .custom-icon {
             display: inline-block;
             text-align: center;
+            height: 54px;
+            width: 44px;
+            top: 42px;
             &.suport,
             &.access,
             &.matricula,
@@ -3113,21 +3140,12 @@ body {
                 display: inline-block;
             }
             &.suport {
-                top: 42px;
-                width: 41px;
-                height: 54px;
                 background-image: url('../images/centres-suport-44x54px.svg');
             }
             &.access {
-                top: 42px;
-                width: 36px;
-                height: 54px;
                 background-image: url('../images/requisits-44x54px.svg');
             }
             &.matricula {
-                top: 42px;
-                width: 36px;
-                height: 54px;
                 background-image: url('../images/matriculam-44x54px.svg');
             }
             &.objectius {
@@ -3137,34 +3155,19 @@ body {
                 background-image: url('../images/objectius-icon.svg');
             }
             &.certificats {
-                top: 44px;
-                width: 36px;
-                height: 55px;
-                background-image: url('../images/certificats-icon.svg');
+                background-image: url('../images/certificats-44x54px.svg');
             }
             &.competencies {
-                top: 44px;
-                width: 49px;
-                height: 57px;
-                background-image: url('../images/competencies-icon.svg');
+                background-image: url('../images/competencies-44x54px.svg');
             }
             &.metodologia {
-                top: 44px;
-                width: 45px;
-                height: 45px;
-                background-image: url('../images/metodologia-icon.svg');
+                background-image: url('../images/metodologia-44x54px.svg');
             }
             &.ambit {
-                top: 44px;
-                width: 52px;
-                height: 48px;
-                background-image: url('../images/ambit-professional-icon.svg');
+                background-image: url('../images/ambit-professional-44x54px.svg');
             }
             &.itinerari {
-                top: 44px;
-                width: 51px;
-                height: 49px;
-                background-image: url('../images/itinerari-icon.svg');
+                background-image: url('../images/itinerari-44x54px.svg');
             }
             &.materials {
                 top: 26px;
@@ -3264,6 +3267,8 @@ body {
                 background-size: 100vw 500px;
                 padding-bottom: 237px;
                 .substudies-content {
+                    max-width: 1170px;
+                    margin: 0 auto;
                     .title {
                         display: none;
                     }
@@ -3295,7 +3300,6 @@ body {
                 }
             }
         }
-
     }
     &.cas {
         .study-parallax {

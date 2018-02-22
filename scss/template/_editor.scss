@@ -41,7 +41,7 @@ $ioc-accent:    #01c1b9;
 
     @mixin removeelement($color) {
         content: '\2212';
-        font-family: "Glyphicons Halflings";
+        font-family: 'Glyphicons Halflings';
         background-color: $color;
         color: #fff;
         cursor: pointer;
@@ -58,6 +58,8 @@ $ioc-accent:    #01c1b9;
         background-color: $color;
         color: #fff;
         font-family: 'Glyphicons Halflings';
+        font-size: 16px;
+        line-height: 16px;
         cursor: pointer;
         padding: 1px 2px 1px 3px;
         pointer-events: auto;
@@ -258,8 +260,29 @@ $ioc-accent:    #01c1b9;
                 }
             }
         }
+        .content-modal-modules {
+            .modal-module {
+                max-width: 200px;
+            }
+        }
+        .body-modal-modules {
+            .modal-module {
+                max-width: 480px;
+            }
+        }
         .content-modal-modules,
         .body-modal-modules {
+            .modal-module {
+                overflow: visible;
+                img,
+                .text-modal-module,
+                .bottom-modal-module,
+                .shortname-modal-module {
+                    position: relative;
+                    left: 0;
+                    top: 0;
+                }
+            }
             .modal-module,
             .modal-dialog {
                 @include borderioc(1px, $custom_red);
@@ -274,15 +297,36 @@ $ioc-accent:    #01c1b9;
                 .bottom-modal-module,
                 .bottom-modal-title,
                 .bottom-modal-last,
-                .clock,
                 .file-modal-module {
                     @include borderioc(1px, $custom_red);
                     color: $ioc-text;
+                }
+                img {
+                    width: 100%;
+                }
+                .body-modal-module {
+                    .body-modal-content {
+                        p + p {
+                            &:before {
+                                @include hideelement($custom_red);
+                            }
+                            pointer-events: none;
+                            position: relative;
+                            &.ocult {
+                                &:before {
+                                    content: '\e106';
+                                    font-family: 'Glyphicons Halflings';
+                                }
+                                visibility: visible;
+                            }
+                        }
+                    }
                 }
                 .bottom-modal-module {
                     flex-wrap: nowrap;
                 }
                 .custom-icon {
+                    padding: 0;
                     &.clock {
                         height: auto;
                     }
