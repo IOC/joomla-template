@@ -3812,14 +3812,6 @@ body #wrap section {
 #container .fluid-container.page-header.iocnewsarticle + .container .ioctags .tag-icon {
   height: 10px;
 }
-#container .fluid-container.page-header.iocnewsarticle + .item-page-default .page-header {
-  border-bottom: 0;
-}
-#container .fluid-container.page-header.iocnewsarticle + .item-page-default .page-header h2 {
-  font-size: 37px;
-  font-weight: 500;
-  color: #354959;
-}
 #container .fluid-container.page-header .logo_estudi {
   max-width: 174px;
   margin-top: 78px;
@@ -4651,6 +4643,14 @@ body #wrap section {
   min-height: -moz-calc(100vh - 60px);
   min-height: calc(100vh - 60px);
   margin-top: -50px;
+}
+.item-page-news .page-header {
+  border-bottom: 0;
+}
+.item-page-news .page-header h2 {
+  font-size: 37px;
+  font-weight: 500;
+  color: #354959;
 }
 /* Customization for studies, Parallax, Banners, layouts */
 .item-page-study.acfgs .container.study-main, .item-page-study.btx .container.study-main {
@@ -6165,37 +6165,6 @@ div[class*="item-page-"] table p {
   #container .fluid-container.page-header.iocnewsarticle > .container {
     padding: 0;
   }
-  #container .fluid-container.page-header.iocnewsarticle + .item-page-default .page-header, #container .fluid-container.page-header.iocnewsarticle + .item-page-default .modified, #container .fluid-container.page-header.iocnewsarticle + .item-page-default .ioctags {
-    padding: 0 15px;
-  }
-  #container .fluid-container.page-header.iocnewsarticle + .item-page-default .page-header h2, #container .fluid-container.page-header.iocnewsarticle + .item-page-default .modified h2, #container .fluid-container.page-header.iocnewsarticle + .item-page-default .ioctags h2 {
-    margin-top: 10px;
-    font-size: 19px;
-    font-weight: 600;
-  }
-  #container .fluid-container.page-header.iocnewsarticle + .item-page-default .page-header {
-    margin-bottom: 9px;
-  }
-  #container .fluid-container.page-header.iocnewsarticle + .item-page-default .modified {
-    float: none;
-    font-size: 9px;
-    margin-bottom: 0;
-  }
-  #container .fluid-container.page-header.iocnewsarticle + .item-page-default .ioctags {
-    float: none;
-    border-left: 0;
-    margin-left: 0;
-  }
-  #container .fluid-container.page-header.iocnewsarticle + .item-page-default .ioctags .tag {
-    font-size: 9px;
-  }
-  #container .fluid-container.page-header.iocnewsarticle + .item-page-default .container {
-    padding: 0;
-  }
-  #container .fluid-container.page-header.iocnewsarticle + .item-page-default .container + .container {
-    margin-top: 16px;
-    padding: 0 15px;
-  }
   #container .fluid-container.page-header.subpage {
     height: 146px;
   }
@@ -6217,6 +6186,37 @@ div[class*="item-page-"] table p {
   }
   #main-box div.item-page-study {
     margin-top: 0;
+  }
+  .item-page-news .page-header, .item-page-news .modified, .item-page-news .ioctags {
+    padding: 0 15px;
+  }
+  .item-page-news .page-header h2, .item-page-news .modified h2, .item-page-news .ioctags h2 {
+    margin-top: 10px;
+    font-size: 19px;
+    font-weight: 600;
+  }
+  .item-page-news .page-header {
+    margin-bottom: 9px;
+  }
+  .item-page-news .modified {
+    float: none;
+    font-size: 9px;
+    margin-bottom: 0;
+  }
+  .item-page-news .ioctags {
+    float: none;
+    border-left: 0;
+    margin-left: 0;
+  }
+  .item-page-news .ioctags .tag {
+    font-size: 9px;
+  }
+  .item-page-news .container {
+    padding: 0;
+  }
+  .item-page-news .container + .container {
+    margin-top: 16px;
+    padding: 0 15px;
   }
   .item-page-study.acfgs .container.study-main, .item-page-study.btx .container.study-main {
     padding: 0;
@@ -7090,12 +7090,6 @@ div[class*="item-page-"] table p {
   #container .fluid-container.page-header.default h1 {
     bottom: 33px;
   }
-  #container .fluid-container.page-header.iocnewsarticle + .item-page-default .container {
-    padding: 0 15px;
-  }
-  #container .fluid-container.page-header.iocnewsarticle + .item-page-default .container .page-header, #container .fluid-container.page-header.iocnewsarticle + .item-page-default .container dd {
-    padding: 0;
-  }
   #container .container.study-main {
     margin-top: 0;
   }
@@ -7156,6 +7150,12 @@ div[class*="item-page-"] table p {
   }
   #container .container.study-main .study-panel .study-data .study-col + .study-col {
     margin-left: auto;
+  }
+  .item-page-news .container {
+    padding: 0 15px;
+  }
+  .item-page-news .container .page-header, .item-page-news .container dd {
+    padding: 0;
   }
   .ioc-news-container .ioc-news .imatge-noticia figcaption {
     margin-bottom: 15px;

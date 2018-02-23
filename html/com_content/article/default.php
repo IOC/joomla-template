@@ -31,6 +31,9 @@ $suffixes = array(
     'subpage_'
 );
 $pageclass = str_replace($suffixes, '', $pageclass);
+if ($newsclass) {
+    $pageclass = 'news';
+}
 
 // Check if associations are implemented. If they are, define the parameter.
 $assocParam = (JLanguageAssociations::isEnabled() && $params->get('show_associations'));

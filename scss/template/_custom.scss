@@ -2352,16 +2352,6 @@ body {
                         }
                     }
                 }
-                & + .item-page-default {
-                    .page-header {
-                        border-bottom: 0;
-                        h2 {
-                            font-size: 37px;
-                            font-weight: 500;
-                            color: $ioc-text;
-                        }
-                    }
-                }
             }
             .logo_estudi {
                 max-width: 174px;
@@ -3216,6 +3206,17 @@ body {
     min-height:    -moz-calc(100vh - #{$ioc-header-mini});
     min-height:         calc(100vh - #{$ioc-header-mini});
     margin-top: -$ioc-header-margin;
+}
+
+.item-page-news {
+    .page-header {
+        border-bottom: 0;
+        h2 {
+            font-size: 37px;
+            font-weight: 500;
+            color: $ioc-text;
+        }
+    }
 }
 
 /* Customization for studies, Parallax, Banners, layouts */
