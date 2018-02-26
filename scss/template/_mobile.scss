@@ -1297,6 +1297,7 @@
         @include study-mobile-images(eoi-medium);
         @include study-mobile-images(eoi-advanced);
         @include study-mobile-images(fesp);
+        @include study-mobile-images(fp);
         @include study-mobile-images(fpd);
         @include study-mobile-images(ges);
         @include study-mobile-images(iocnewsarticle);
@@ -1879,6 +1880,7 @@
     }
 
     @include study-mobile-custom-color('eoi', $ioc-eoi-colors);
+    @include study-mobile-custom-color('fp', $ioc-fp-colors);
 
     .submenu {
         margin-top: -100px;

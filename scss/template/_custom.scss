@@ -163,7 +163,6 @@
         .study-data {
             .study-col {
                 h4 {
-                    color: get-color($colors, date-title);
                     background-color: get-color($colors, date-bg);
                 }
                 &:after {
@@ -1007,11 +1006,6 @@ header.headroom--not-top {
 }
 
 @include custom-color-study();
-
-//@include custom-color-study('btx', $ioc-study-btx);
-//@include custom-color-study('eoi-', $ioc-breadcrumb-eoi);
-//@include custom-color-study('fp-', $ioc-breadcrumb-fp);
-
 @include custom-color-study('acfgs',    $ioc-acfgs-colors);
 @include custom-color-study('btx',      $ioc-btx-colors);
 @include custom-color-study('btx-ioc',  $ioc-btxioc-colors);
@@ -1020,6 +1014,7 @@ header.headroom--not-top {
 @include custom-color-study('competic', $ioc-competic-colors);
 @include custom-color-study('eoi',      $ioc-eoi-colors, true);
 @include custom-color-study('fesp',     $ioc-fesp-colors);
+@include custom-color-study('fp',       $ioc-fp-colors, true);
 @include custom-color-study('fpd',      $ioc-fpd-colors);
 @include custom-color-study('ges',      $ioc-ges-colors);
 @include custom-color-study('pacfgs',   $ioc-acfgs-colors);

@@ -1480,7 +1480,6 @@ header.headroom--top.acfgs .navbar-default .social .custom-icon:hover {
   border-color: #26727d;
 }
 .item-page-study.acfgs .study-panel .study-data .study-col h4 {
-  color: #354959;
   background-color: #b9d2d5;
 }
 .item-page-study.acfgs .study-panel .study-data .study-col:after {
@@ -1558,7 +1557,6 @@ header.headroom--top.btx .navbar-default .social .custom-icon:hover {
   border-color: #6462a9;
 }
 .item-page-study.btx .study-panel .study-data .study-col h4 {
-  color: #354959;
   background-color: #dcdbe9;
 }
 .item-page-study.btx .study-panel .study-data .study-col:after {
@@ -1636,7 +1634,6 @@ header.headroom--top.btx-ioc .navbar-default .social .custom-icon:hover {
   border-color: #6462a9;
 }
 .item-page-study.btx-ioc .study-panel .study-data .study-col h4 {
-  color: #354959;
   background-color: #dcdbe9;
 }
 .item-page-study.btx-ioc .study-panel .study-data .study-col:after {
@@ -1714,7 +1711,6 @@ header.headroom--top.btx-mat .navbar-default .social .custom-icon:hover {
   border-color: #41b0c8;
 }
 .item-page-study.btx-mat .study-panel .study-data .study-col h4 {
-  color: #354959;
   background-color: #e2eaf1;
 }
 .item-page-study.btx-mat .study-panel .study-data .study-col:after {
@@ -1792,7 +1788,6 @@ header.headroom--top.cas .navbar-default .social .custom-icon:hover {
   border-color: #26727d;
 }
 .item-page-study.cas .study-panel .study-data .study-col h4 {
-  color: #354959;
   background-color: #b9d2d5;
 }
 .item-page-study.cas .study-panel .study-data .study-col:after {
@@ -1870,7 +1865,6 @@ header.headroom--top.competic .navbar-default .social .custom-icon:hover {
   border-color: #5468cd;
 }
 .item-page-study.competic .study-panel .study-data .study-col h4 {
-  color: #354959;
   background-color: #e3eafb;
 }
 .item-page-study.competic .study-panel .study-data .study-col:after {
@@ -1948,7 +1942,6 @@ div[class*="item-page-eoi-"] .study-overview .study-overview-headline::after, di
   border-color: #ecb023;
 }
 div[class*="item-page-eoi-"] .study-panel .study-data .study-col h4 {
-  color: #354959;
   background-color: #eaedef;
 }
 div[class*="item-page-eoi-"] .study-panel .study-data .study-col:after {
@@ -2020,7 +2013,6 @@ header.headroom--top.eoi .navbar-default .social .custom-icon:hover {
   border-color: #ecb023;
 }
 .item-page-study.eoi .study-panel .study-data .study-col h4 {
-  color: #354959;
   background-color: #eaedef;
 }
 .item-page-study.eoi .study-panel .study-data .study-col:after {
@@ -2098,7 +2090,6 @@ header.headroom--top.fesp .navbar-default .social .custom-icon:hover {
   border-color: #a03a59;
 }
 .item-page-study.fesp .study-panel .study-data .study-col h4 {
-  color: #354959;
   background-color: #eaedef;
 }
 .item-page-study.fesp .study-panel .study-data .study-col:after {
@@ -2136,6 +2127,154 @@ div[class*="item-page-fesp"] .container:before {
   background-color: #2f3b5c;
 }
 div[class*="item-page-fesp"] .ioc-breadcrumb {
+  background-color: #2f3b5c;
+}
+header.headroom--top[class*="fp-"] .navbar-default .login-clone-campus:hover, header.headroom--top[class*="fp-"] .navbar-default .tiny-campus:hover, header.headroom--top[class*="fp-"] .navbar-default .tiny-search:hover, header.headroom--top[class*="fp-"] .navbar-default .navbar-toggle:hover {
+  color: #128862;
+}
+header.headroom--top[class*="fp-"] .navbar-default .login-clone-campus:hover .custom-icon, header.headroom--top[class*="fp-"] .navbar-default .tiny-campus:hover .custom-icon, header.headroom--top[class*="fp-"] .navbar-default .tiny-search:hover .custom-icon, header.headroom--top[class*="fp-"] .navbar-default .navbar-toggle:hover .custom-icon {
+  color: #128862;
+}
+header.headroom--top[class*="fp-"] .navbar-default .login-clone-campus:hover .icon-bar, header.headroom--top[class*="fp-"] .navbar-default .tiny-campus:hover .icon-bar, header.headroom--top[class*="fp-"] .navbar-default .tiny-search:hover .icon-bar, header.headroom--top[class*="fp-"] .navbar-default .navbar-toggle:hover .icon-bar {
+  background-color: #128862;
+}
+header.headroom--top[class*="fp-"] .navbar-default .navbar-collapse .navbar-nav button:hover .custom-icon, header.headroom--top[class*="fp-"] .navbar-default .navbar-collapse .navbar-nav button:hover span {
+  color: #128862;
+}
+header.headroom--top[class*="fp-"] .navbar-default .navbar-collapse .navbar-nav li a:hover {
+  color: #128862;
+}
+header.headroom--top[class*="fp-"] .navbar-default .login-clone-campus {
+  background-color: rgba(27, 170, 127, 0.69);
+  border-color: #0e7554;
+}
+header.headroom--top[class*="fp-"] .navbar-default .social .custom-icon:hover {
+  color: #128862;
+}
+#container .fluid-container.page-header[class*="fp-"] {
+  background-color: #0fa175;
+}
+#container .fluid-container.page-header[class*="fp-"] .container h1 {
+  color: #ddebec;
+}
+div[class*="item-page-fp-"] .ioc-parent-breadcrumb .container:before {
+  background-color: #0e7554;
+}
+div[class*="item-page-fp-"] .ioc-parent-breadcrumb .container .ioc-breadcrumb {
+  background-color: #0e7554;
+}
+div[class*="item-page-fp-"] .study-overview .study-overview-headline::after, div[class*="item-page-fp-"] .study-overview-menu .study-overview-headline::after {
+  border-color: #27a680;
+}
+div[class*="item-page-fp-"] .study-panel .study-data .study-col h4 {
+  background-color: #eaedef;
+}
+div[class*="item-page-fp-"] .study-panel .study-data .study-col:after {
+  background-color: #eaedef;
+}
+div[class*="item-page-fp-"] .study-panel .study-data .study-col .study-dates {
+  border-color: #eaedef;
+}
+div[class*="item-page-fp-"] .study-panel .study-data .study-col .study-dates .study-block .semiheader {
+  color: #0f9e73;
+}
+div[class*="item-page-fp-"] .study-tabs .nav-tabs li.active a {
+  color: #0f9e73;
+  border-bottom-color: #27a680;
+}
+div[class*="item-page-fp-"] .study-tabs .nav-tabs li a:hover {
+  color: #0f9e73;
+}
+div[class*="item-page-fp-"] .study-tabs .tab-content .button-tab-nav:hover, div[class*="item-page-fp-"] .study-tabs .panel-body .button-tab-nav:hover {
+  color: #0f9e73;
+}
+div[class*="item-page-fp-"] .button-registration {
+  background-color: #27a680;
+}
+div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module, div[class*="item-page-fp-"] .modal-modules .body-modal-modules .modal-module {
+  border-color: #0f9e73;
+}
+div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module .text-modal-module, div[class*="item-page-fp-"] .modal-modules .body-modal-modules .modal-module .text-modal-module, div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module .bottom-modal-title, div[class*="item-page-fp-"] .modal-modules .body-modal-modules .modal-module .bottom-modal-title, div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module .modal-color, div[class*="item-page-fp-"] .modal-modules .body-modal-modules .modal-module .modal-color, div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, div[class*="item-page-fp-"] .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
+  color: #0f9e73;
+}
+div[class*="item-page-fp-"] .study-more-info .title h4 {
+  color: #0f9e73;
+}
+header.headroom--top.fp .navbar-default .login-clone-campus:hover, header.headroom--top.fp .navbar-default .tiny-campus:hover, header.headroom--top.fp .navbar-default .tiny-search:hover, header.headroom--top.fp .navbar-default .navbar-toggle:hover {
+  color: #128862;
+}
+header.headroom--top.fp .navbar-default .login-clone-campus:hover .custom-icon, header.headroom--top.fp .navbar-default .tiny-campus:hover .custom-icon, header.headroom--top.fp .navbar-default .tiny-search:hover .custom-icon, header.headroom--top.fp .navbar-default .navbar-toggle:hover .custom-icon {
+  color: #128862;
+}
+header.headroom--top.fp .navbar-default .login-clone-campus:hover .icon-bar, header.headroom--top.fp .navbar-default .tiny-campus:hover .icon-bar, header.headroom--top.fp .navbar-default .tiny-search:hover .icon-bar, header.headroom--top.fp .navbar-default .navbar-toggle:hover .icon-bar {
+  background-color: #128862;
+}
+header.headroom--top.fp .navbar-default .navbar-collapse .navbar-nav button:hover .custom-icon, header.headroom--top.fp .navbar-default .navbar-collapse .navbar-nav button:hover span {
+  color: #128862;
+}
+header.headroom--top.fp .navbar-default .navbar-collapse .navbar-nav li a:hover {
+  color: #128862;
+}
+header.headroom--top.fp .navbar-default .login-clone-campus {
+  background-color: rgba(27, 170, 127, 0.69);
+  border-color: #0e7554;
+}
+header.headroom--top.fp .navbar-default .social .custom-icon:hover {
+  color: #128862;
+}
+#container .fluid-container.page-header.fp {
+  background-color: #0fa175;
+}
+#container .fluid-container.page-header.fp .container h1 {
+  color: #ddebec;
+}
+.item-page-study.fp .ioc-parent-breadcrumb .container:before {
+  background-color: #0e7554;
+}
+.item-page-study.fp .ioc-parent-breadcrumb .container .ioc-breadcrumb {
+  background-color: #0e7554;
+}
+.item-page-study.fp .study-overview .study-overview-headline::after, .item-page-study.fp .study-overview-menu .study-overview-headline::after {
+  border-color: #27a680;
+}
+.item-page-study.fp .study-panel .study-data .study-col h4 {
+  background-color: #eaedef;
+}
+.item-page-study.fp .study-panel .study-data .study-col:after {
+  background-color: #eaedef;
+}
+.item-page-study.fp .study-panel .study-data .study-col .study-dates {
+  border-color: #eaedef;
+}
+.item-page-study.fp .study-panel .study-data .study-col .study-dates .study-block .semiheader {
+  color: #0f9e73;
+}
+.item-page-study.fp .study-tabs .nav-tabs li.active a {
+  color: #0f9e73;
+  border-bottom-color: #27a680;
+}
+.item-page-study.fp .study-tabs .nav-tabs li a:hover {
+  color: #0f9e73;
+}
+.item-page-study.fp .study-tabs .tab-content .button-tab-nav:hover, .item-page-study.fp .study-tabs .panel-body .button-tab-nav:hover {
+  color: #0f9e73;
+}
+.item-page-study.fp .button-registration {
+  background-color: #27a680;
+}
+.item-page-study.fp .modal-modules .content-modal-modules .modal-module, .item-page-study.fp .modal-modules .body-modal-modules .modal-module {
+  border-color: #0f9e73;
+}
+.item-page-study.fp .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.fp .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.fp .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.fp .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.fp .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.fp .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.fp .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.fp .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
+  color: #0f9e73;
+}
+.item-page-study.fp .study-more-info .title h4 {
+  color: #0f9e73;
+}
+div[class*="item-page-fp"] .container:before {
+  background-color: #2f3b5c;
+}
+div[class*="item-page-fp"] .ioc-breadcrumb {
   background-color: #2f3b5c;
 }
 header.headroom--top.fpd .navbar-default .login-clone-campus:hover, header.headroom--top.fpd .navbar-default .tiny-campus:hover, header.headroom--top.fpd .navbar-default .tiny-search:hover, header.headroom--top.fpd .navbar-default .navbar-toggle:hover {
@@ -2176,7 +2315,6 @@ header.headroom--top.fpd .navbar-default .social .custom-icon:hover {
   border-color: #ecb023;
 }
 .item-page-study.fpd .study-panel .study-data .study-col h4 {
-  color: #354959;
   background-color: #eaedef;
 }
 .item-page-study.fpd .study-panel .study-data .study-col:after {
@@ -2254,7 +2392,6 @@ header.headroom--top.ges .navbar-default .social .custom-icon:hover {
   border-color: #e15064;
 }
 .item-page-study.ges .study-panel .study-data .study-col h4 {
-  color: #354959;
   background-color: #d2e1e5;
 }
 .item-page-study.ges .study-panel .study-data .study-col:after {
@@ -2332,7 +2469,6 @@ header.headroom--top.pacfgs .navbar-default .social .custom-icon:hover {
   border-color: #26727d;
 }
 .item-page-study.pacfgs .study-panel .study-data .study-col h4 {
-  color: #354959;
   background-color: #b9d2d5;
 }
 .item-page-study.pacfgs .study-panel .study-data .study-col:after {
@@ -2410,7 +2546,6 @@ header.headroom--top.pau .navbar-default .social .custom-icon:hover {
   border-color: #508d90;
 }
 .item-page-study.pau .study-panel .study-data .study-col h4 {
-  color: #354959;
   background-color: #b9d4d5;
 }
 .item-page-study.pau .study-panel .study-data .study-col:after {
@@ -7033,6 +7168,15 @@ div[class*="item-page-"] table p {
   #main-box .item-page-study.fesp .subpage-banner {
     background-image: url('../images/fesp-banner-mobile.png');
   }
+  #main-box .fluid-container.page-header.fp {
+    background-image: url('../images/fp-header-bck-mobile.jpg');
+  }
+  #main-box .item-page-study.fp .study-parallax {
+    background-image: url('../images/fp-parallax-img-mobile.jpg');
+  }
+  #main-box .item-page-study.fp .subpage-banner {
+    background-image: url('../images/fp-banner-mobile.png');
+  }
   #main-box .fluid-container.page-header.fpd {
     background-image: url('../images/fpd-header-bck-mobile.jpg');
   }
@@ -7516,6 +7660,12 @@ div[class*="item-page-"] table p {
     background-color: rgba(223, 140, 32, 0.94);
   }
   .item-page-study.eoi .substudies .substudies-elements .navbar-nav li a .element-title p, .item-page-study.eoi .submenu .substudies-elements .navbar-nav li a .element-title p, .item-page-study.eoi .substudies div .navbar-nav li a .element-title p, .item-page-study.eoi .submenu div .navbar-nav li a .element-title p {
+    color: #f0effd;
+  }
+  .item-page-study.fp .substudies .substudies-elements .navbar-nav li a .element-title, .item-page-study.fp .submenu .substudies-elements .navbar-nav li a .element-title, .item-page-study.fp .substudies div .navbar-nav li a .element-title, .item-page-study.fp .submenu div .navbar-nav li a .element-title {
+    background-color: rgba(17, 176, 127, 0.94);
+  }
+  .item-page-study.fp .substudies .substudies-elements .navbar-nav li a .element-title p, .item-page-study.fp .submenu .substudies-elements .navbar-nav li a .element-title p, .item-page-study.fp .substudies div .navbar-nav li a .element-title p, .item-page-study.fp .submenu div .navbar-nav li a .element-title p {
     color: #f0effd;
   }
   .submenu {
