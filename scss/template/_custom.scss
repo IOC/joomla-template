@@ -98,6 +98,24 @@
 }
 
 @mixin header-study-colors($colors) {
+    & ~ section {
+        .form-search {
+            .container {
+                .form-inline {
+                    .btn-search {
+                        &:before {
+                            color: get-color($colors, header-title);
+                        }
+                        background-color: get-color($colors, campus-border);
+                    }
+                }
+                .search-query {
+                    border-color: get-color($colors, campus-border);
+                }
+            }
+        }
+    }
+
     .navbar-default {
         .login-clone-campus,
         .tiny-campus,
