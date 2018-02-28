@@ -176,6 +176,37 @@
             }
         });
 
+        var iconstoselect = function () {
+            var icons = $( '.filter-elements ul li' );
+            var node = $('<select class="filter-select">');
+            var aux;
+            if (icons && !$('.filter-select').length) {
+                $.each( icons, function ( index, icon ) {
+                    aux = $('<option>')
+                        .attr('value', $( icon ).data('meta-keyword') || 'all' )
+                        .text( $( icon ).find('a').data('original-title') );
+                    aux.appendTo( $( node ) );
+                } );
+                $(node).appendTo( icons.closest('.filter-dropdown') );
+            }
+        };
+
+        iconstoselect();
+
+        $(document).on('change', '.filter-select', function(e) {
+            var keyword = $(this).val();
+            if (keyword != 'all') {
+                var $nodes = $('.substudies .nav.navbar-nav');
+                var $selected = $nodes.find("li[data-meta-keyword='" + keyword + "']");
+                $nodes.find('li').not($selected).hide(800, function(){
+                    $selected.show(800);
+                });
+            } else {
+                $('.substudies .nav.navbar-nav li').show(800);
+            }
+        });
+
+
         $(document).on('click', PLUGINVARS.SELECTORS.TABNAVBUTTON, function(e) {
             tabnavigation($(this).hasClass('next'));
         });
@@ -318,13 +349,13 @@
             $(this).siblings().removeClass('ioc-keyword-selected');
             $(this).toggleClass('ioc-keyword-selected');
             if ($(this).hasClass('ioc-keyword-selected') && keyword) {
-                var $nodes = $('.substudies .nav.navbar-nav');
+                var $nodes = $('.substudies .nav.navbar-nav').addClass('filtering');
                 var $selected = $nodes.find("li[data-meta-keyword='" + keyword + "']");
                 $nodes.find('li').not($selected).hide(800, function(){
                     $selected.show(800);
                 });
             } else {
-                $('.substudies .nav.navbar-nav li').show(800);
+                $('.substudies .nav.navbar-nav').removeClass('filtering').find('li').show(800);
             }
         });
 

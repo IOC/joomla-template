@@ -1033,6 +1033,7 @@ header.headroom--not-top.big ~ section .form-search .container .form-inline .btn
   border-top: solid 1px #202b47;
   border-right: solid 1px #202b47;
   border-bottom: solid 1px #202b47;
+  transition: all 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
 }
 header.headroom--not-top.big ~ section .form-search .container .form-inline .btn-search:before {
   color: #202b47;
@@ -1519,6 +1520,20 @@ header.headroom--top.acfgs .navbar-default .social .custom-icon:hover {
 .item-page-study.acfgs .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.acfgs .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.acfgs .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.acfgs .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.acfgs .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.acfgs .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.acfgs .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.acfgs .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
   color: inherit;
 }
+.item-page-study.acfgs .subpage-bigbanner .title {
+  background-color: inherit;
+  background-image: inherit;
+}
+.item-page-study.acfgs .subpage-bigbanner .title:before {
+  background-color: inherit;
+}
+.item-page-study.acfgs .subpage-bigbanner .study-overview .study-overview-headline .ioc-accent {
+  color: inherit;
+}
+.item-page-study.acfgs .subpage-bigbanner .study-overview .subpage-button {
+  color: inherit;
+  border-color: inherit;
+}
 .item-page-study.acfgs .study-more-info .title h4 {
   color: #26727d;
 }
@@ -1604,6 +1619,20 @@ header.headroom--top.btx .navbar-default .social .custom-icon:hover {
 }
 .item-page-study.btx .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.btx .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.btx .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.btx .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.btx .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.btx .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.btx .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.btx .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
   color: inherit;
+}
+.item-page-study.btx .subpage-bigbanner .title {
+  background-color: inherit;
+  background-image: inherit;
+}
+.item-page-study.btx .subpage-bigbanner .title:before {
+  background-color: inherit;
+}
+.item-page-study.btx .subpage-bigbanner .study-overview .study-overview-headline .ioc-accent {
+  color: inherit;
+}
+.item-page-study.btx .subpage-bigbanner .study-overview .subpage-button {
+  color: inherit;
+  border-color: inherit;
 }
 .item-page-study.btx .study-more-info .title h4 {
   color: #6462a9;
@@ -1691,6 +1720,20 @@ header.headroom--top.btx-ioc .navbar-default .social .custom-icon:hover {
 .item-page-study.btx-ioc .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.btx-ioc .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.btx-ioc .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.btx-ioc .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.btx-ioc .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.btx-ioc .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.btx-ioc .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.btx-ioc .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
   color: inherit;
 }
+.item-page-study.btx-ioc .subpage-bigbanner .title {
+  background-color: #5651a2;
+  background-image: linear-gradient(161deg, #5651a2, rgba(81, 92, 162, 0.86));
+}
+.item-page-study.btx-ioc .subpage-bigbanner .title:before {
+  background-color: #5651a2;
+}
+.item-page-study.btx-ioc .subpage-bigbanner .study-overview .study-overview-headline .ioc-accent {
+  color: #5651a2;
+}
+.item-page-study.btx-ioc .subpage-bigbanner .study-overview .subpage-button {
+  color: #5754a2;
+  border-color: #5754a2;
+}
 .item-page-study.btx-ioc .study-more-info .title h4 {
   color: #6462a9;
 }
@@ -1776,6 +1819,20 @@ header.headroom--top.btx-mat .navbar-default .social .custom-icon:hover {
 }
 .item-page-study.btx-mat .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.btx-mat .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.btx-mat .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.btx-mat .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.btx-mat .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.btx-mat .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.btx-mat .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.btx-mat .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
   color: inherit;
+}
+.item-page-study.btx-mat .subpage-bigbanner .title {
+  background-color: inherit;
+  background-image: inherit;
+}
+.item-page-study.btx-mat .subpage-bigbanner .title:before {
+  background-color: inherit;
+}
+.item-page-study.btx-mat .subpage-bigbanner .study-overview .study-overview-headline .ioc-accent {
+  color: inherit;
+}
+.item-page-study.btx-mat .subpage-bigbanner .study-overview .subpage-button {
+  color: inherit;
+  border-color: inherit;
 }
 .item-page-study.btx-mat .study-more-info .title h4 {
   color: #479eb0;
@@ -1863,6 +1920,20 @@ header.headroom--top.cas .navbar-default .social .custom-icon:hover {
 .item-page-study.cas .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.cas .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.cas .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.cas .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.cas .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.cas .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.cas .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.cas .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
   color: inherit;
 }
+.item-page-study.cas .subpage-bigbanner .title {
+  background-color: inherit;
+  background-image: inherit;
+}
+.item-page-study.cas .subpage-bigbanner .title:before {
+  background-color: inherit;
+}
+.item-page-study.cas .subpage-bigbanner .study-overview .study-overview-headline .ioc-accent {
+  color: inherit;
+}
+.item-page-study.cas .subpage-bigbanner .study-overview .subpage-button {
+  color: inherit;
+  border-color: inherit;
+}
 .item-page-study.cas .study-more-info .title h4 {
   color: #26727d;
 }
@@ -1948,6 +2019,20 @@ header.headroom--top.competic .navbar-default .social .custom-icon:hover {
 }
 .item-page-study.competic .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.competic .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.competic .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.competic .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.competic .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.competic .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.competic .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.competic .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
   color: inherit;
+}
+.item-page-study.competic .subpage-bigbanner .title {
+  background-color: inherit;
+  background-image: inherit;
+}
+.item-page-study.competic .subpage-bigbanner .title:before {
+  background-color: inherit;
+}
+.item-page-study.competic .subpage-bigbanner .study-overview .study-overview-headline .ioc-accent {
+  color: inherit;
+}
+.item-page-study.competic .subpage-bigbanner .study-overview .subpage-button {
+  color: inherit;
+  border-color: inherit;
 }
 .item-page-study.competic .study-more-info .title h4 {
   color: #2f49ca;
@@ -2035,6 +2120,20 @@ div[class*="item-page-eoi-"] .modal-modules .content-modal-modules .modal-module
 div[class*="item-page-eoi-"] .modal-modules .content-modal-modules .modal-module .text-modal-module, div[class*="item-page-eoi-"] .modal-modules .body-modal-modules .modal-module .text-modal-module, div[class*="item-page-eoi-"] .modal-modules .content-modal-modules .modal-module .bottom-modal-title, div[class*="item-page-eoi-"] .modal-modules .body-modal-modules .modal-module .bottom-modal-title, div[class*="item-page-eoi-"] .modal-modules .content-modal-modules .modal-module .modal-color, div[class*="item-page-eoi-"] .modal-modules .body-modal-modules .modal-module .modal-color, div[class*="item-page-eoi-"] .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, div[class*="item-page-eoi-"] .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
   color: #cf8218;
 }
+div[class*="item-page-eoi-"] .subpage-bigbanner .title {
+  background-color: inherit;
+  background-image: inherit;
+}
+div[class*="item-page-eoi-"] .subpage-bigbanner .title:before {
+  background-color: inherit;
+}
+div[class*="item-page-eoi-"] .subpage-bigbanner .study-overview .study-overview-headline .ioc-accent {
+  color: inherit;
+}
+div[class*="item-page-eoi-"] .subpage-bigbanner .study-overview .subpage-button {
+  color: inherit;
+  border-color: inherit;
+}
 div[class*="item-page-eoi-"] .study-more-info .title h4 {
   color: #f6ad03;
 }
@@ -2114,6 +2213,20 @@ header.headroom--top.eoi .navbar-default .social .custom-icon:hover {
 }
 .item-page-study.eoi .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.eoi .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.eoi .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.eoi .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.eoi .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.eoi .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.eoi .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.eoi .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
   color: #cf8218;
+}
+.item-page-study.eoi .subpage-bigbanner .title {
+  background-color: inherit;
+  background-image: inherit;
+}
+.item-page-study.eoi .subpage-bigbanner .title:before {
+  background-color: inherit;
+}
+.item-page-study.eoi .subpage-bigbanner .study-overview .study-overview-headline .ioc-accent {
+  color: inherit;
+}
+.item-page-study.eoi .subpage-bigbanner .study-overview .subpage-button {
+  color: inherit;
+  border-color: inherit;
 }
 .item-page-study.eoi .study-more-info .title h4 {
   color: #f6ad03;
@@ -2201,6 +2314,20 @@ header.headroom--top.fesp .navbar-default .social .custom-icon:hover {
 .item-page-study.fesp .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.fesp .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.fesp .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.fesp .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.fesp .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.fesp .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.fesp .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.fesp .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
   color: inherit;
 }
+.item-page-study.fesp .subpage-bigbanner .title {
+  background-color: inherit;
+  background-image: inherit;
+}
+.item-page-study.fesp .subpage-bigbanner .title:before {
+  background-color: inherit;
+}
+.item-page-study.fesp .subpage-bigbanner .study-overview .study-overview-headline .ioc-accent {
+  color: inherit;
+}
+.item-page-study.fesp .subpage-bigbanner .study-overview .subpage-button {
+  color: inherit;
+  border-color: inherit;
+}
 .item-page-study.fesp .study-more-info .title h4 {
   color: #a03a59;
 }
@@ -2287,6 +2414,20 @@ div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module,
 div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module .text-modal-module, div[class*="item-page-fp-"] .modal-modules .body-modal-modules .modal-module .text-modal-module, div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module .bottom-modal-title, div[class*="item-page-fp-"] .modal-modules .body-modal-modules .modal-module .bottom-modal-title, div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module .modal-color, div[class*="item-page-fp-"] .modal-modules .body-modal-modules .modal-module .modal-color, div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, div[class*="item-page-fp-"] .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
   color: #0f9e73;
 }
+div[class*="item-page-fp-"] .subpage-bigbanner .title {
+  background-color: #0f9e73;
+  background-image: inherit;
+}
+div[class*="item-page-fp-"] .subpage-bigbanner .title:before {
+  background-color: #0f9e73;
+}
+div[class*="item-page-fp-"] .subpage-bigbanner .study-overview .study-overview-headline .ioc-accent {
+  color: #0f9e73;
+}
+div[class*="item-page-fp-"] .subpage-bigbanner .study-overview .subpage-button {
+  color: #088d65;
+  border-color: #088d65;
+}
 div[class*="item-page-fp-"] .study-more-info .title h4 {
   color: #0f9e73;
 }
@@ -2366,6 +2507,20 @@ header.headroom--top.fp .navbar-default .social .custom-icon:hover {
 }
 .item-page-study.fp .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.fp .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.fp .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.fp .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.fp .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.fp .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.fp .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.fp .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
   color: #0f9e73;
+}
+.item-page-study.fp .subpage-bigbanner .title {
+  background-color: #0f9e73;
+  background-image: inherit;
+}
+.item-page-study.fp .subpage-bigbanner .title:before {
+  background-color: #0f9e73;
+}
+.item-page-study.fp .subpage-bigbanner .study-overview .study-overview-headline .ioc-accent {
+  color: #0f9e73;
+}
+.item-page-study.fp .subpage-bigbanner .study-overview .subpage-button {
+  color: #088d65;
+  border-color: #088d65;
 }
 .item-page-study.fp .study-more-info .title h4 {
   color: #0f9e73;
@@ -2453,6 +2608,20 @@ header.headroom--top.fpd .navbar-default .social .custom-icon:hover {
 .item-page-study.fpd .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.fpd .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.fpd .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.fpd .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.fpd .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.fpd .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.fpd .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.fpd .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
   color: inherit;
 }
+.item-page-study.fpd .subpage-bigbanner .title {
+  background-color: inherit;
+  background-image: inherit;
+}
+.item-page-study.fpd .subpage-bigbanner .title:before {
+  background-color: inherit;
+}
+.item-page-study.fpd .subpage-bigbanner .study-overview .study-overview-headline .ioc-accent {
+  color: inherit;
+}
+.item-page-study.fpd .subpage-bigbanner .study-overview .subpage-button {
+  color: inherit;
+  border-color: inherit;
+}
 .item-page-study.fpd .study-more-info .title h4 {
   color: #f6ad03;
 }
@@ -2538,6 +2707,20 @@ header.headroom--top.ges .navbar-default .social .custom-icon:hover {
 }
 .item-page-study.ges .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.ges .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.ges .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.ges .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.ges .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.ges .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.ges .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.ges .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
   color: inherit;
+}
+.item-page-study.ges .subpage-bigbanner .title {
+  background-color: inherit;
+  background-image: inherit;
+}
+.item-page-study.ges .subpage-bigbanner .title:before {
+  background-color: inherit;
+}
+.item-page-study.ges .subpage-bigbanner .study-overview .study-overview-headline .ioc-accent {
+  color: inherit;
+}
+.item-page-study.ges .subpage-bigbanner .study-overview .subpage-button {
+  color: inherit;
+  border-color: inherit;
 }
 .item-page-study.ges .study-more-info .title h4 {
   color: #d14c5e;
@@ -2625,6 +2808,20 @@ header.headroom--top.pacfgs .navbar-default .social .custom-icon:hover {
 .item-page-study.pacfgs .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.pacfgs .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.pacfgs .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.pacfgs .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.pacfgs .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.pacfgs .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.pacfgs .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.pacfgs .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
   color: inherit;
 }
+.item-page-study.pacfgs .subpage-bigbanner .title {
+  background-color: inherit;
+  background-image: inherit;
+}
+.item-page-study.pacfgs .subpage-bigbanner .title:before {
+  background-color: inherit;
+}
+.item-page-study.pacfgs .subpage-bigbanner .study-overview .study-overview-headline .ioc-accent {
+  color: inherit;
+}
+.item-page-study.pacfgs .subpage-bigbanner .study-overview .subpage-button {
+  color: inherit;
+  border-color: inherit;
+}
 .item-page-study.pacfgs .study-more-info .title h4 {
   color: #26727d;
 }
@@ -2710,6 +2907,20 @@ header.headroom--top.pau .navbar-default .social .custom-icon:hover {
 }
 .item-page-study.pau .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.pau .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.pau .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.pau .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.pau .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.pau .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.pau .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.pau .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
   color: inherit;
+}
+.item-page-study.pau .subpage-bigbanner .title {
+  background-color: inherit;
+  background-image: inherit;
+}
+.item-page-study.pau .subpage-bigbanner .title:before {
+  background-color: inherit;
+}
+.item-page-study.pau .subpage-bigbanner .study-overview .study-overview-headline .ioc-accent {
+  color: inherit;
+}
+.item-page-study.pau .subpage-bigbanner .study-overview .subpage-button {
+  color: inherit;
+  border-color: inherit;
 }
 .item-page-study.pau .study-more-info .title h4 {
   color: #508f92;
@@ -2867,7 +3078,7 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
   position: relative;
   font-size: 21px;
   line-height: 21px;
-  font-weight: 600;
+  font-weight: 500;
   color: #5b6b78;
   letter-spacing: 0.1px;
   margin: 0;
@@ -3387,6 +3598,9 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
   content: '';
   flex: auto;
 }
+.submenu .submenu-content .navbar-nav.filtering, .substudies .submenu-content .navbar-nav.filtering, .submenu .substudies-content .navbar-nav.filtering, .substudies .substudies-content .navbar-nav.filtering {
+  justify-content: flex-start;
+}
 .submenu .submenu-content .navbar-nav.fewelements:after, .substudies .submenu-content .navbar-nav.fewelements:after, .submenu .substudies-content .navbar-nav.fewelements:after, .substudies .substudies-content .navbar-nav.fewelements:after {
   display: none;
 }
@@ -3446,7 +3660,7 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
   position: relative;
   font-size: 23px;
   line-height: 23px;
-  font-weight: 600;
+  font-weight: 500;
   color: #354959;
   letter-spacing: 0.1px;
   margin: 0;
@@ -3485,10 +3699,10 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
 .substudies .substudies-content .title h1 {
   display: inline-block;
   position: relative;
-  font-size: 26px;
-  line-height: 26px;
-  font-weight: 600;
-  color: #01c1b9;
+  font-size: 23px;
+  line-height: 23px;
+  font-weight: 500;
+  color: #354959;
   letter-spacing: 0.1px;
   margin: 0;
 }
@@ -3497,7 +3711,7 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
   position: absolute;
   height: 2px;
   border-top: 1px solid transparent;
-  top: 13px;
+  top: 11.5px;
   width: 52px;
 }
 .substudies .substudies-content .title h1:before {
@@ -3510,7 +3724,7 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
 }
 .substudies .substudies-content .title {
   margin-top: 0;
-  margin-bottom: 51px;
+  margin-bottom: 49px;
 }
 .ioctags {
   position: relative;
@@ -4192,6 +4406,9 @@ body #wrap section {
 #container .fluid-container.page-header.fp-smx {
   background-image: url('../images/fp-smx-header-bck.jpg');
 }
+#container .fluid-container.page-header.fp-trans {
+  background-image: url('../images/fp-trans-header-bck.jpg');
+}
 #container .fluid-container.page-header.fp-vec {
   background-image: url('../images/fp-vec-header-bck.jpg');
 }
@@ -4518,9 +4735,6 @@ body #wrap section {
   text-align: right;
   float: right;
 }
-.subpage-buttons-filter {
-  background-size: 100vw 100%;
-}
 .subpage-text-buttons-banner {
   background-size: 100vw 83%;
 }
@@ -4553,26 +4767,26 @@ body #wrap section {
 .subpage-text-buttons-banner .subpage-filter, .subpage-buttons-filter .subpage-filter {
   margin-top: 206px;
   background-image: url('../images/fp-banner-filter-bck.jpg');
-  background-size: 100vw;
+  background-size: 100vw 100%;
   background-repeat: no-repeat;
   background-position: center top;
   clear: both;
   height: 298px;
 }
 .subpage-text-buttons-banner .subpage-filter .title, .subpage-buttons-filter .subpage-filter .title {
-  padding-top: 53px;
+  padding-top: 64px;
 }
 .subpage-text-buttons-banner .subpage-filter .title h2, .subpage-buttons-filter .subpage-filter .title h2 {
   width: 100%;
-  font-size: 40px;
-  font-weight: 200;
+  font-size: 30px;
+  font-weight: 500;
   color: #fff;
   text-align: center;
   margin: 0;
 }
 .subpage-text-buttons-banner .subpage-filter .filter-dropdown, .subpage-buttons-filter .subpage-filter .filter-dropdown {
   position: relative;
-  margin-top: 72px;
+  margin-top: 67px;
   text-align: center;
   transition: all 0.5s ease-in-out;
 }
@@ -4590,6 +4804,21 @@ body #wrap section {
   transform: rotate(180deg);
   top: 7px;
 }
+.subpage-text-buttons-banner .subpage-filter .filter-dropdown .filter-select, .subpage-buttons-filter .subpage-filter .filter-dropdown .filter-select {
+  display: none;
+  border: none;
+  background-color: #57798d;
+  color: #fff;
+  width: 100%;
+  height: 38px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 500;
+  box-shadow: none;
+}
+.subpage-text-buttons-banner .subpage-filter .filter-dropdown .filter-select:focus, .subpage-buttons-filter .subpage-filter .filter-dropdown .filter-select:focus {
+  outline: none;
+}
 .subpage-text-buttons-banner .subpage-filter .filter-dropdown .filter-text, .subpage-buttons-filter .subpage-filter .filter-dropdown .filter-text {
   display: inline-block;
   position: relative;
@@ -4598,9 +4827,23 @@ body #wrap section {
   letter-spacing: 0.8px;
   color: #fff;
   text-transform: uppercase;
-  padding: 9px 38px 9px 16px;
+  padding: 8px 38px 8px 16px;
   border: 1px solid #fff;
   cursor: pointer;
+  height: 32px;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+   supported by Chrome and Opera */
 }
 .subpage-text-buttons-banner .subpage-filter .filter-dropdown .filter-text:after, .subpage-buttons-filter .subpage-filter .filter-dropdown .filter-text:after {
   content: '';
@@ -4608,6 +4851,7 @@ body #wrap section {
   display: inline-block;
   background-image: url('../images/dropdown.svg');
   background-repeat: no-repeat;
+  background-size: contain;
   height: 13px;
   width: 13px;
   right: 11px;
@@ -4674,9 +4918,17 @@ body #wrap section {
 .subpage-text-buttons-banner .subpage-filter .filter-dropdown .filter-elements ul li a.trn, .subpage-buttons-filter .subpage-filter .filter-dropdown .filter-elements ul li a.trn {
   background-image: url('../images/familia-trn-icon.png');
 }
+.subpage-text-buttons-banner .subpage-filter .filter-dropdown .filter-elements ul li .tooltip, .subpage-buttons-filter .subpage-filter .filter-dropdown .filter-elements ul li .tooltip {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.09);
+}
+.subpage-text-buttons-banner .subpage-filter .filter-dropdown .filter-elements ul li .tooltip.in, .subpage-buttons-filter .subpage-filter .filter-dropdown .filter-elements ul li .tooltip.in {
+  opacity: 1 !important;
+}
 .subpage-text-buttons-banner .subpage-filter .filter-dropdown .filter-elements ul li .tooltip > .tooltip-inner, .subpage-buttons-filter .subpage-filter .filter-dropdown .filter-elements ul li .tooltip > .tooltip-inner {
   background-color: #fff;
   color: #354959;
+  font-size: 11px;
+  padding: 5px 12px;
 }
 .subpage-text-buttons-banner .subpage-filter .filter-dropdown .filter-elements ul li .tooltip-arrow, .subpage-buttons-filter .subpage-filter .filter-dropdown .filter-elements ul li .tooltip-arrow {
   border-bottom-color: #fff;
@@ -4686,7 +4938,8 @@ body #wrap section {
 }
 .subpage-buttons-filter {
   margin-bottom: 0;
-  padding-bottom: 137px;
+  padding-bottom: 136px;
+  background-size: 100vw 100%;
 }
 .subpage-bigbanner {
   background-size: 100vw 100%;
@@ -4697,8 +4950,7 @@ body #wrap section {
 }
 .subpage-bigbanner .title {
   display: inline-block;
-  background-color: #5651a2;
-  background-image: linear-gradient(161deg, #5651a2, rgba(81, 92, 162, 0.86));
+  background-color: #202b47;
   line-height: 50px;
   max-width: 600px;
   margin-top: 70px;
@@ -4712,7 +4964,7 @@ body #wrap section {
   right: 100%;
   width: 100vw;
   line-height: 50px;
-  background-color: #5651a2;
+  background-color: #202b47;
 }
 .subpage-bigbanner .title h2 {
   font-size: 15px;
@@ -4737,21 +4989,35 @@ body #wrap section {
 .subpage-bigbanner .study-overview .study-overview-headline:after {
   display: none;
 }
+.subpage-bigbanner .study-overview .study-overview-headline ul {
+  padding-left: 0;
+}
+.subpage-bigbanner .study-overview .study-overview-headline ul li {
+  margin: 0;
+  list-style: none;
+}
+.subpage-bigbanner .study-overview .study-overview-headline ul li:before {
+  content: '\2022';
+  font-size: 40px;
+  line-height: 20px;
+  vertical-align: top;
+  margin-right: 10px;
+}
 .subpage-bigbanner .study-overview .subpage-button {
   display: block;
-  line-height: 32px;
+  line-height: 28px;
   vertical-align: middle;
   text-align: center;
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 1px;
-  color: #5754a2;
+  color: #202b47;
   text-transform: uppercase;
   width: 181px;
   height: 32px;
   opacity: 0.79;
   border-radius: 100px;
-  border: 2px solid #5754a2;
+  border: 2px solid #202b47;
   background-color: transparent;
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.11);
 }
@@ -4908,6 +5174,9 @@ body #wrap section {
   text-transform: uppercase;
   color: #354959;
 }
+.body-modal-modules {
+  margin-top: 0;
+}
 .item-page-fullmap {
   min-height: -webkit-calc(100vh - 60px);
   min-height: -moz-calc(100vh - 60px);
@@ -5045,6 +5314,12 @@ body #wrap section {
 }
 .item-page-study.fp .study-parallax {
   background-image: url('../images/fp-parallax-img.jpg');
+}
+.item-page-study.fp .subpage-bigbanner {
+  background-image: url('../images/fp-ioc-assign-banner.jpg');
+}
+.item-page-study.fp .subpage-bigbanner .study-overview .study-overview-headline {
+  max-width: 675px;
 }
 .item-page-study.fpd .study-parallax {
   background-image: url('../images/fpd-parallax-img.jpg');
@@ -6395,6 +6670,9 @@ div[class*="item-page-"] table p {
   .bck-displayed.social {
     top: 245px;
   }
+  .bck-displayed.social a + a {
+    margin-left: 20px;
+  }
   .form-search {
     top: 44px;
   }
@@ -7312,6 +7590,15 @@ div[class*="item-page-"] table p {
   #main-box .item-page-study.fp .subpage-banner {
     background-image: url('../images/fp-banner-mobile.png');
   }
+  #main-box .fluid-container.page-header.fp-trans {
+    background-image: url('../images/fp-trans-header-bck-mobile.jpg');
+  }
+  #main-box .item-page-study.fp-trans .study-parallax {
+    background-image: url('../images/fp-trans-parallax-img-mobile.jpg');
+  }
+  #main-box .item-page-study.fp-trans .subpage-banner {
+    background-image: url('../images/fp-trans-banner-mobile.png');
+  }
   #main-box .fluid-container.page-header.fpd {
     background-image: url('../images/fpd-header-bck-mobile.jpg');
   }
@@ -7492,7 +7779,7 @@ div[class*="item-page-"] table p {
   }
   .subpage-only-buttons, .subpage-text-buttons, .subpage-text-buttons-banner, .subpage-buttons-filter {
     background-position: center bottom;
-    background-size: 100vw 100%;
+    background-size: 100vw 95%;
   }
   .subpage-only-buttons .subpage-buttons, .subpage-text-buttons .subpage-buttons, .subpage-text-buttons-banner .subpage-buttons, .subpage-buttons-filter .subpage-buttons {
     margin-top: 55px;
@@ -7547,53 +7834,6 @@ div[class*="item-page-"] table p {
   }
   .subpage-text-buttons-banner, .subpage-buttons-filter {
     background-image: url('../images/cicles-bck-mobile.svg');
-  }
-  .study-buttons {
-    margin-top: 73px;
-  }
-  .study-buttons .study-button, .subpage-buttons .study-button, .study-buttons .subpage-button, .subpage-buttons .subpage-button {
-    width: 94px;
-    height: 116px;
-  }
-  .study-buttons .study-button .custom-icon, .subpage-buttons .study-button .custom-icon, .study-buttons .subpage-button .custom-icon, .subpage-buttons .subpage-button .custom-icon {
-    top: 22px;
-    height: 44px;
-    width: 34px;
-  }
-  .study-buttons .study-button .custom-icon.access, .subpage-buttons .study-button .custom-icon.access, .study-buttons .subpage-button .custom-icon.access, .subpage-buttons .subpage-button .custom-icon.access {
-    background-image: url('../images/requisits-34x44px.svg');
-  }
-  .study-buttons .study-button .custom-icon.ambit, .subpage-buttons .study-button .custom-icon.ambit, .study-buttons .subpage-button .custom-icon.ambit, .subpage-buttons .subpage-button .custom-icon.ambit {
-    background-image: url('../images/ambit-professional-34x44px.svg');
-  }
-  .study-buttons .study-button .custom-icon.certificats, .subpage-buttons .study-button .custom-icon.certificats, .study-buttons .subpage-button .custom-icon.certificats, .subpage-buttons .subpage-button .custom-icon.certificats {
-    background-image: url('../images/certificats-34x44px.svg');
-  }
-  .study-buttons .study-button .custom-icon.competencies, .subpage-buttons .study-button .custom-icon.competencies, .study-buttons .subpage-button .custom-icon.competencies, .subpage-buttons .subpage-button .custom-icon.competencies {
-    background-image: url('../images/competencies-34x44px.svg');
-  }
-  .study-buttons .study-button .custom-icon.itinerari, .subpage-buttons .study-button .custom-icon.itinerari, .study-buttons .subpage-button .custom-icon.itinerari, .subpage-buttons .subpage-button .custom-icon.itinerari {
-    background-image: url('../images/itinerari-34x44px.svg');
-  }
-  .study-buttons .study-button .custom-icon.matricula, .subpage-buttons .study-button .custom-icon.matricula, .study-buttons .subpage-button .custom-icon.matricula, .subpage-buttons .subpage-button .custom-icon.matricula {
-    background-image: url('../images/matriculam-34x44px.svg');
-  }
-  .study-buttons .study-button .custom-icon.metodologia, .subpage-buttons .study-button .custom-icon.metodologia, .study-buttons .subpage-button .custom-icon.metodologia, .subpage-buttons .subpage-button .custom-icon.metodologia {
-    background-image: url('../images/metodologia-34x44px.svg');
-  }
-  .study-buttons .study-button .custom-icon.suport, .subpage-buttons .study-button .custom-icon.suport, .study-buttons .subpage-button .custom-icon.suport, .subpage-buttons .subpage-button .custom-icon.suport {
-    background-image: url('../images/centres-suport-34x44px.svg');
-  }
-  .study-buttons .study-button + .study-button, .subpage-buttons .study-button + .study-button {
-    margin-left: 2px;
-  }
-  .study-buttons .icon-text, .subpage-buttons .icon-text {
-    font-size: 8px;
-    font-weight: 500;
-    letter-spacing: 1.1px;
-    top: 75px;
-    padding: 0;
-    max-width: 91%;
   }
   .subpage-text-buttons-banner {
     margin-top: 73px;
@@ -7900,6 +8140,53 @@ div[class*="item-page-"] table p {
   .item-page-study.btx + .all-studies .substudies .substudies-content .substudies-elements .navbar-nav li a .element-title p {
     color: #f0effd;
   }
+  .study-buttons {
+    margin-top: 73px;
+  }
+  .study-buttons .study-button, .subpage-buttons .study-button, .study-buttons .subpage-button, .subpage-buttons .subpage-button {
+    width: 94px;
+    height: 116px;
+  }
+  .study-buttons .study-button .custom-icon, .subpage-buttons .study-button .custom-icon, .study-buttons .subpage-button .custom-icon, .subpage-buttons .subpage-button .custom-icon {
+    top: 22px;
+    height: 44px;
+    width: 34px;
+  }
+  .study-buttons .study-button .custom-icon.access, .subpage-buttons .study-button .custom-icon.access, .study-buttons .subpage-button .custom-icon.access, .subpage-buttons .subpage-button .custom-icon.access {
+    background-image: url('../images/requisits-34x44px.svg');
+  }
+  .study-buttons .study-button .custom-icon.ambit, .subpage-buttons .study-button .custom-icon.ambit, .study-buttons .subpage-button .custom-icon.ambit, .subpage-buttons .subpage-button .custom-icon.ambit {
+    background-image: url('../images/ambit-professional-34x44px.svg');
+  }
+  .study-buttons .study-button .custom-icon.certificats, .subpage-buttons .study-button .custom-icon.certificats, .study-buttons .subpage-button .custom-icon.certificats, .subpage-buttons .subpage-button .custom-icon.certificats {
+    background-image: url('../images/certificats-34x44px.svg');
+  }
+  .study-buttons .study-button .custom-icon.competencies, .subpage-buttons .study-button .custom-icon.competencies, .study-buttons .subpage-button .custom-icon.competencies, .subpage-buttons .subpage-button .custom-icon.competencies {
+    background-image: url('../images/competencies-34x44px.svg');
+  }
+  .study-buttons .study-button .custom-icon.itinerari, .subpage-buttons .study-button .custom-icon.itinerari, .study-buttons .subpage-button .custom-icon.itinerari, .subpage-buttons .subpage-button .custom-icon.itinerari {
+    background-image: url('../images/itinerari-34x44px.svg');
+  }
+  .study-buttons .study-button .custom-icon.matricula, .subpage-buttons .study-button .custom-icon.matricula, .study-buttons .subpage-button .custom-icon.matricula, .subpage-buttons .subpage-button .custom-icon.matricula {
+    background-image: url('../images/matriculam-34x44px.svg');
+  }
+  .study-buttons .study-button .custom-icon.metodologia, .subpage-buttons .study-button .custom-icon.metodologia, .study-buttons .subpage-button .custom-icon.metodologia, .subpage-buttons .subpage-button .custom-icon.metodologia {
+    background-image: url('../images/metodologia-34x44px.svg');
+  }
+  .study-buttons .study-button .custom-icon.suport, .subpage-buttons .study-button .custom-icon.suport, .study-buttons .subpage-button .custom-icon.suport, .subpage-buttons .subpage-button .custom-icon.suport {
+    background-image: url('../images/centres-suport-34x44px.svg');
+  }
+  .study-buttons .study-button + .study-button, .subpage-buttons .study-button + .study-button {
+    margin-left: 2px;
+  }
+  .study-buttons .icon-text, .subpage-buttons .icon-text {
+    font-size: 8px;
+    font-weight: 500;
+    letter-spacing: 1.1px;
+    top: 75px;
+    padding: 0;
+    max-width: 91%;
+  }
   .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button {
     max-width: 140px;
     min-width: 140px;
@@ -7948,8 +8235,60 @@ div[class*="item-page-"] table p {
     letter-spacing: 0.8px;
     width: 134px;
     height: 27px;
-    line-height: 27px;
+    line-height: 23px;
     margin: 0 auto;
+  }
+  .item-page-study.fp .subpage-bigbanner {
+    height: 657px;
+    background-image: url('../images/fp-assign-banner-mobile.jpg');
+  }
+  .item-page-study.fp .subpage-bigbanner .study-overview .study-overview-headline {
+    width: 80%;
+  }
+  .item-page-study.fp .subpage-bigbanner .study-overview .study-overview-headline .ioc-accent {
+    color: #354959;
+    font-weight: normal;
+  }
+  .item-page-study.fp .subpage-bigbanner .study-overview .study-overview-headline ul li:before {
+    font-size: 15px;
+    line-height: 12px;
+    margin-right: 2px;
+  }
+  .subpage-buttons-filter {
+    margin-top: 73px;
+    padding-bottom: 17px;
+  }
+  .subpage-buttons-filter .subpage-filter {
+    height: 130px;
+    margin-top: 73px;
+  }
+  .subpage-buttons-filter .subpage-filter .title {
+    padding-top: 19px;
+  }
+  .subpage-buttons-filter .subpage-filter .title h2 {
+    font-size: 22px;
+  }
+  .subpage-buttons-filter .subpage-filter .filter-dropdown {
+    margin-top: 12px;
+  }
+  .subpage-buttons-filter .subpage-filter .filter-dropdown .filter-text {
+    font-size: 10px;
+    padding: 0 0 12px 0;
+    border: none;
+    height: 38px;
+    line-height: 38px;
+    width: 100%;
+    background-color: #3d657c;
+    pointer-events: none;
+  }
+  .subpage-buttons-filter .subpage-filter .filter-dropdown .filter-text:after {
+    display: none;
+  }
+  .subpage-buttons-filter .subpage-filter .filter-dropdown .filter-elements {
+    display: none;
+  }
+  .subpage-buttons-filter .subpage-filter .filter-dropdown .filter-select {
+    display: block;
   }
   .item-page-faqs .faqsindex ul li a {
     font-size: 14px;
@@ -8348,8 +8687,18 @@ div[class*="item-page-"] table p {
   .submenu .submenu-content .title h1 {
     font-size: 16px;
   }
+  .submenu .submenu-content .title, .substudies .submenu-content .title, .submenu .substudies-content .title, .substudies .substudies-content .title {
+    margin-bottom: 19px;
+  }
+  .submenu .submenu-content .title h1, .substudies .submenu-content .title h1, .submenu .substudies-content .title h1, .substudies .substudies-content .title h1 {
+    font-size: 16px;
+    letter-spacing: normal;
+  }
   .submenu .submenu-content .navbar-nav, .substudies .submenu-content .navbar-nav, .submenu .substudies-content .navbar-nav, .substudies .substudies-content .navbar-nav {
     max-width: 630px;
+  }
+  .submenu .submenu-content .navbar-nav.filtering li:nth-child(3n), .substudies .submenu-content .navbar-nav.filtering li:nth-child(3n), .submenu .substudies-content .navbar-nav.filtering li:nth-child(3n), .substudies .substudies-content .navbar-nav.filtering li:nth-child(3n) {
+    margin-right: 21px;
   }
   .submenu .submenu-content .navbar-nav li, .substudies .submenu-content .navbar-nav li, .submenu .substudies-content .navbar-nav li, .substudies .substudies-content .navbar-nav li {
     height: 196px;
@@ -8369,9 +8718,13 @@ div[class*="item-page-"] table p {
   .submenu .submenu-content .navbar-nav li:nth-child(3n), .substudies .submenu-content .navbar-nav li:nth-child(3n), .submenu .substudies-content .navbar-nav li:nth-child(3n), .substudies .substudies-content .navbar-nav li:nth-child(3n) {
     margin-right: 0;
   }
+  .substudies {
+    padding-bottom: 63px;
+  }
   .subpage-bigbanner {
-    height: 393px;
+    height: 423px;
     margin-top: 0;
+    padding-top: 30px;
   }
   .subpage-bigbanner .title {
     line-height: 41px;
@@ -8393,14 +8746,69 @@ div[class*="item-page-"] table p {
     max-width: 290px;
   }
   .subpage-bigbanner .study-overview .subpage-button {
+    width: 160px;
     font-size: 10px;
     letter-spacing: 0.9px;
   }
-  .subpage-text-buttons-banner {
+  .item-page-study.fp .subpage-bigbanner {
+    height: 387px;
+    margin-top: 0;
+  }
+  .item-page-study.fp .subpage-bigbanner .title {
+    margin-top: 0;
+  }
+  .item-page-study.fp .subpage-bigbanner .study-overview {
+    margin-top: 39px;
+    max-width: 395px;
+  }
+  .item-page-study.fp .subpage-bigbanner .study-overview .study-overview-headline {
+    font-size: 14px;
+    margin-bottom: 28px;
+  }
+  .item-page-study.fp .subpage-bigbanner .study-overview .study-overview-headline ul li:before {
+    font-size: 30px;
+    line-height: 15px;
+    margin-right: 9px;
+  }
+  .subpage-text-buttons-banner, .subpage-buttons-filter {
     margin-top: 84px;
   }
-  .subpage-text-buttons-banner .subpage-text p {
+  .subpage-text-buttons-banner .subpage-text p, .subpage-buttons-filter .subpage-text p {
     max-width: 513px;
+  }
+  .subpage-text-buttons-banner .subpage-filter, .subpage-buttons-filter .subpage-filter {
+    margin-top: 79px;
+    height: 226px;
+  }
+  .subpage-text-buttons-banner .subpage-filter .title h2, .subpage-buttons-filter .subpage-filter .title h2 {
+    font-size: 22px;
+  }
+  .subpage-text-buttons-banner .subpage-filter .filter-dropdown, .subpage-buttons-filter .subpage-filter .filter-dropdown {
+    margin-top: 46px;
+  }
+  .subpage-text-buttons-banner .subpage-filter .filter-dropdown.in, .subpage-buttons-filter .subpage-filter .filter-dropdown.in {
+    margin-top: 21px;
+  }
+  .subpage-text-buttons-banner .subpage-filter .filter-dropdown .filter-text, .subpage-buttons-filter .subpage-filter .filter-dropdown .filter-text {
+    height: 28px;
+    width: 198px;
+    font-size: 10px;
+    padding: 6px 16px 6px 6px;
+  }
+  .subpage-text-buttons-banner .subpage-filter .filter-dropdown .filter-text:after, .subpage-buttons-filter .subpage-filter .filter-dropdown .filter-text:after {
+    height: 8px;
+    width: 8px;
+    top: 11px;
+  }
+  .subpage-text-buttons-banner .subpage-filter .filter-dropdown .filter-elements, .subpage-buttons-filter .subpage-filter .filter-dropdown .filter-elements {
+    margin-top: 12px;
+  }
+  .subpage-text-buttons-banner .subpage-filter .filter-dropdown .filter-elements ul li a, .subpage-buttons-filter .subpage-filter .filter-dropdown .filter-elements ul li a {
+    height: 44px;
+    width: 44px;
+  }
+  .subpage-buttons-filter {
+    padding-bottom: 89px;
   }
   .study-tabs h2 {
     font-size: 19px;
@@ -8501,6 +8909,9 @@ div[class*="item-page-"] table p {
   }
   .submenu .submenu-content .navbar-nav li:nth-child(3n), .substudies .submenu-content .navbar-nav li:nth-child(3n), .submenu .substudies-content .navbar-nav li:nth-child(3n), .substudies .substudies-content .navbar-nav li:nth-child(3n) {
     margin-right: 0;
+  }
+  .submenu .submenu-content .navbar-nav.filtering li:nth-child(3n), .substudies .submenu-content .navbar-nav.filtering li:nth-child(3n), .submenu .substudies-content .navbar-nav.filtering li:nth-child(3n), .substudies .substudies-content .navbar-nav.filtering li:nth-child(3n) {
+    margin-right: 24px;
   }
   #container .fluid-container.page-header .container h1 {
     font-size: 35px;
@@ -8607,6 +9018,9 @@ div[class*="item-page-"] table p {
     font-size: 14px;
     line-height: 1.79;
   }
+  .subpage-bigbanner {
+    height: 500px;
+  }
   .subpage-bigbanner .title {
     line-height: 43px;
     margin-top: 78px;
@@ -8624,12 +9038,25 @@ div[class*="item-page-"] table p {
     font-size: 19px;
     font-weight: 300;
     line-height: 1.37;
+    margin-bottom: 60px;
+  }
+  .item-page-study.fp .subpage-bigbanner {
+    height: 569px;
+  }
+  .item-page-study.fp .subpage-bigbanner .study-overview {
+    max-width: 526px;
+  }
+  .item-page-study.fp .subpage-bigbanner .study-overview .study-overview-headline {
+    font-size: 18px;
   }
   .back-to-top {
     width: 221px;
   }
   .study-buttons .icon-text {
     max-width: 75%;
+  }
+  .substudies {
+    padding-bottom: 122px;
   }
   .study-more-info .title h4 {
     font-size: 25px;
@@ -8773,6 +9200,12 @@ div[class*="item-page-"] table p {
     font-weight: 300;
     line-height: 1.33;
   }
+  .item-page-study.fp .subpage-bigbanner {
+    height: 670px;
+  }
+  .item-page-study.fp .subpage-bigbanner .study-overview {
+    margin-top: 96px;
+  }
   .study-panel .study-data .study-col + .study-col {
     margin-left: 31px;
   }
@@ -8791,6 +9224,9 @@ div[class*="item-page-"] table p {
   }
   .submenu .submenu-content .navbar-nav, .substudies .submenu-content .navbar-nav, .submenu .substudies-content .navbar-nav, .substudies .substudies-content .navbar-nav {
     max-width: 1180px;
+  }
+  .submenu .submenu-content .navbar-nav.filtering li:nth-child(3n), .substudies .submenu-content .navbar-nav.filtering li:nth-child(3n), .submenu .substudies-content .navbar-nav.filtering li:nth-child(3n), .substudies .substudies-content .navbar-nav.filtering li:nth-child(3n) {
+    margin-right: 38px;
   }
   .submenu .submenu-content .navbar-nav li, .substudies .submenu-content .navbar-nav li, .submenu .substudies-content .navbar-nav li, .substudies .substudies-content .navbar-nav li {
     height: 368px;

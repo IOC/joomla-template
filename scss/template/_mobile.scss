@@ -264,6 +264,9 @@
         }
         &.social {
             top: 245px;
+            a + a {
+                margin-left: 20px;
+            }
         }
     }
     .form-search {
@@ -1298,6 +1301,7 @@
         @include study-mobile-images(eoi-advanced);
         @include study-mobile-images(fesp);
         @include study-mobile-images(fp);
+        @include study-mobile-images(fp-trans);
         @include study-mobile-images(fpd);
         @include study-mobile-images(ges);
         @include study-mobile-images(iocnewsarticle);
@@ -1498,7 +1502,7 @@
     .subpage-text-buttons-banner,
     .subpage-buttons-filter {
         background-position: center bottom;
-        background-size: 100vw 100%;
+        background-size: 100vw 95%;
         .subpage-buttons {
             margin-top: 55px;
             padding-bottom: 0;
@@ -1559,57 +1563,6 @@
     .subpage-text-buttons-banner,
     .subpage-buttons-filter {
         background-image: url('../images/cicles-bck-mobile.svg');
-    }
-    .study-buttons {
-        margin-top: 73px;
-    }
-    .study-buttons,
-    .subpage-buttons {
-        .study-button,
-        .subpage-button {
-            width: 94px;
-            height: 116px;
-            .custom-icon {
-                top: 22px;
-                height: 44px;
-                width: 34px;
-                &.access {
-                    background-image: url('../images/requisits-34x44px.svg');
-                }
-                &.ambit {
-                    background-image: url('../images/ambit-professional-34x44px.svg');
-                }
-                &.certificats {
-                    background-image: url('../images/certificats-34x44px.svg');
-                }
-                &.competencies {
-                    background-image: url('../images/competencies-34x44px.svg');
-                }
-                &.itinerari {
-                    background-image: url('../images/itinerari-34x44px.svg');
-                }
-                &.matricula {
-                    background-image: url('../images/matriculam-34x44px.svg');
-                }
-                &.metodologia {
-                    background-image: url('../images/metodologia-34x44px.svg');
-                }
-                &.suport {
-                    background-image: url('../images/centres-suport-34x44px.svg');
-                }
-            }
-        }
-        .study-button + .study-button {
-            margin-left: 2px;
-        }
-        .icon-text {
-            font-size: 8px;
-            font-weight: 500;
-            letter-spacing: 1.1px;
-            top: 75px;
-            padding: 0;
-            max-width: 91%;
-        }
     }
     .subpage-text-buttons-banner {
         margin-top: 73px;
@@ -1993,6 +1946,57 @@
         //     padding: 0;
         // }
     }
+    .study-buttons {
+        margin-top: 73px;
+    }
+    .study-buttons,
+    .subpage-buttons {
+        .study-button,
+        .subpage-button {
+            width: 94px;
+            height: 116px;
+            .custom-icon {
+                top: 22px;
+                height: 44px;
+                width: 34px;
+                &.access {
+                    background-image: url('../images/requisits-34x44px.svg');
+                }
+                &.ambit {
+                    background-image: url('../images/ambit-professional-34x44px.svg');
+                }
+                &.certificats {
+                    background-image: url('../images/certificats-34x44px.svg');
+                }
+                &.competencies {
+                    background-image: url('../images/competencies-34x44px.svg');
+                }
+                &.itinerari {
+                    background-image: url('../images/itinerari-34x44px.svg');
+                }
+                &.matricula {
+                    background-image: url('../images/matriculam-34x44px.svg');
+                }
+                &.metodologia {
+                    background-image: url('../images/metodologia-34x44px.svg');
+                }
+                &.suport {
+                    background-image: url('../images/centres-suport-34x44px.svg');
+                }
+            }
+        }
+        .study-button + .study-button {
+            margin-left: 2px;
+        }
+        .icon-text {
+            font-size: 8px;
+            font-weight: 500;
+            letter-spacing: 1.1px;
+            top: 75px;
+            padding: 0;
+            max-width: 91%;
+        }
+    }
     .subpage-text-buttons {
         .subpage-buttons {
             .subpage-text,
@@ -2051,8 +2055,68 @@
                 letter-spacing: 0.8px;
                 width: 134px;
                 height: 27px;
-                line-height: 27px;
+                line-height: 23px;
                 margin: 0 auto;
+            }
+        }
+    }
+    .item-page-study.fp {
+        .subpage-bigbanner {
+            height: 657px;
+            background-image: url('../images/fp-assign-banner-mobile.jpg');
+            .study-overview {
+                .study-overview-headline {
+                    width: 80%;
+                    .ioc-accent {
+                        color: $ioc-text;
+                        font-weight: normal;
+                    }
+                    ul {
+                        li {
+                            &:before {
+                                font-size: 15px;
+                                line-height: 12px;
+                                margin-right: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .subpage-buttons-filter {
+        margin-top: 73px;
+        padding-bottom: 17px;
+        .subpage-filter {
+            height: 130px;
+            margin-top: 73px;
+            .title {
+                padding-top: 19px;
+                h2 {
+                    font-size: 22px;
+                }
+            }
+            .filter-dropdown {
+                margin-top: 12px;
+                .filter-text {
+                    font-size: 10px;
+                    padding: 0 0 12px 0;
+                    border: none;
+                    height: 38px;
+                    line-height: 38px;
+                    width: 100%;
+                    background-color: $ioc-select;
+                    pointer-events: none;
+                    &:after {
+                        display: none;
+                    }
+                }
+                .filter-elements {
+                    display: none;
+                }
+                .filter-select {
+                    display: block;
+                }
             }
         }
     }
@@ -2603,8 +2667,20 @@
     .substudies {
         .submenu-content,
         .substudies-content {
+            .title {
+                margin-bottom: 19px;
+                h1 {
+                    font-size: 16px;
+                    letter-spacing: normal;
+                }
+            }
             .navbar-nav {
                 max-width: 630px;
+                &.filtering {
+                    li:nth-child(3n) {
+                        margin-right: 21px;
+                    }
+                }
                 li {
                     height: 196px;
                     width: 196px;
@@ -2626,9 +2702,13 @@
             }
         }
     }
+    .substudies {
+        padding-bottom: 63px;
+    }
     .subpage-bigbanner {
-        height: 393px;
+        height: 423px;
         margin-top: 0;
+        padding-top: 30px;
         .title {
             line-height: 41px;
             margin-top: 30px;
@@ -2648,18 +2728,85 @@
                 max-width: 290px;
             }
             .subpage-button {
+                width: 160px;
                 font-size: 10px;
                 letter-spacing: 0.9px;
             }
         }
     }
-    .subpage-text-buttons-banner {
+    .item-page-study.fp {
+        .subpage-bigbanner {
+            height: 387px;
+            margin-top: 0;
+            .title {
+                margin-top: 0;
+            }
+            .study-overview {
+                margin-top: 39px;
+                max-width: 395px;
+                .study-overview-headline {
+                    font-size: 14px;
+                    margin-bottom: 28px;
+                    ul {
+                        li:before {
+                            font-size: 30px;
+                            line-height: 15px;
+                            margin-right: 9px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .subpage-text-buttons-banner,
+    .subpage-buttons-filter {
         margin-top: 84px;
         .subpage-text {
             p {
                 max-width: 513px;
             }
         }
+        .subpage-filter {
+            margin-top: 79px;
+            height: 226px;
+            .title {
+                h2 {
+                    font-size: 22px;
+                }
+            }
+            .filter-dropdown {
+                margin-top: 46px;
+                &.in {
+                    margin-top: 21px;
+                }
+                .filter-text {
+                    height: 28px;
+                    width: 198px;
+                    font-size: 10px;
+                    padding: 6px 16px 6px 6px;
+                    &:after {
+                        height: 8px;
+                        width: 8px;
+                        top: 11px;
+                    }
+
+                }
+                .filter-elements {
+                    margin-top: 12px;
+                    ul {
+                        li {
+                            a {
+                                height: 44px;
+                                width: 44px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .subpage-buttons-filter {
+        padding-bottom: 89px;
     }
     .study-tabs {
         h2 {
@@ -2801,6 +2948,11 @@
                 max-width: 828px;
                 li:nth-child(3n) {
                     margin-right: 0;
+                }
+                &.filtering {
+                    li:nth-child(3n) {
+                        margin-right: 24px;
+                    }
                 }
             }
         }
@@ -2944,6 +3096,7 @@
         }
     }
     .subpage-bigbanner {
+        height: 500px;
         .title {
             line-height: 43px;
             margin-top: 78px;
@@ -2960,6 +3113,18 @@
                 font-size: 19px;
                 font-weight: 300;
                 line-height: 1.37;
+                margin-bottom: 60px;
+            }
+        }
+    }
+    .item-page-study.fp {
+        .subpage-bigbanner {
+            height: 569px;
+            .study-overview {
+                max-width: 526px;
+                .study-overview-headline {
+                    font-size: 18px;
+                }
             }
         }
     }
@@ -2970,6 +3135,9 @@
         .icon-text {
             max-width: 75%;
         }
+    }
+    .substudies {
+        padding-bottom: 122px;
     }
     .study-more-info {
         .title {
@@ -3182,6 +3350,14 @@
             }
         }
     }
+    .item-page-study.fp {
+        .subpage-bigbanner {
+            height: 670px;
+            .study-overview {
+                margin-top: 96px;
+            }
+        }
+    }
     .study-panel {
         .study-data {
             .study-col + .study-col {
@@ -3210,6 +3386,11 @@
         .substudies-content {
             .navbar-nav {
                 max-width: 1180px;
+                &.filtering {
+                    li:nth-child(3n) {
+                        margin-right: 38px;
+                    }
+                }
                 li {
                     height: 368px;
                     width: 368px;

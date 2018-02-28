@@ -48,7 +48,7 @@
                 position: relative;
                 font-size: $fontsize + px;
                 line-height: $fontsize + px;
-                font-weight: 600;
+                font-weight: 500;
                 color: $fontcolor;
                 letter-spacing: 0.1px;
                 margin: 0;
@@ -240,6 +240,26 @@
             }
         }
     }
+    .subpage-bigbanner {
+        .title {
+            background-color: get-color($colors, banner-assign);
+            background-image: get-color($colors, banner-assign-image);
+            &:before {
+                background-color: get-color($colors, banner-assign);
+            }
+        }
+        .study-overview {
+            .study-overview-headline {
+                .ioc-accent {
+                    color: get-color($colors, banner-assign);
+                }
+            }
+            .subpage-button {
+                color: get-color($colors, banner-assign-btn);
+                border-color: get-color($colors, banner-assign-btn);
+            }
+        }
+    }
     .study-more-info {
         .title {
             h4 {
@@ -412,6 +432,16 @@
     }
 }
 
+@mixin no-select() {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     font-size: 17px;
@@ -544,6 +574,7 @@ header.headroom--not-top {
                         border-top: solid 1px $ioc-bg-header;
                         border-right: solid 1px $ioc-bg-header;
                         border-bottom: solid 1px $ioc-bg-header;
+                        transition: all 0.3s cubic-bezier(.8,.04,.84,.77);
                         &:before {
                             color: $ioc-bg-header;
                         }
@@ -1644,6 +1675,9 @@ header.headroom--not-top {
                 content: '';
                 flex: auto;
             }
+            &.filtering {
+                justify-content: flex-start;
+            }
             &.fewelements {
                 &:after {
                     display: none;
@@ -1706,11 +1740,11 @@ header.headroom--not-top {
     background-image: none;
     margin-top: 0;
     .substudies-content {
-        @include module-title(26, $ioc-accent, transparent, 52, 142, 96);
+        @include module-title(23, $ioc-text, transparent, 52, 142, 96);
         padding-top: 0;
         .title {
             margin-top: 0;
-            margin-bottom: 51px;
+            margin-bottom: 49px;
         }
     }
 }
@@ -2481,6 +2515,9 @@ body {
             &.fp-smx {
                 background-image: url('../images/fp-smx-header-bck.jpg');
             }
+            &.fp-trans {
+                background-image: url('../images/fp-trans-header-bck.jpg');
+            }
             &.fp-vec {
                 background-image: url('../images/fp-vec-header-bck.jpg');
             }
@@ -2815,9 +2852,6 @@ body {
             }
         }
     }
-    .subpage-buttons-filter {
-        background-size: 100vw 100%;
-    }
     .subpage-text-buttons-banner {
         background-size: 100vw 83%;
     }
@@ -2850,17 +2884,17 @@ body {
         .subpage-filter {
             margin-top: 206px;
             background-image: url('../images/fp-banner-filter-bck.jpg');
-            background-size: 100vw;
+            background-size: 100vw 100%;
             background-repeat: no-repeat;
             background-position: center top;
             clear: both;
             height: 298px;
             .title {
-                padding-top: 53px;
+                padding-top: 64px;
                 h2 {
                     width: 100%;
-                    font-size: 40px;
-                    font-weight: 200;
+                    font-size: 30px;
+                    font-weight: 500;
                     color: #fff;
                     text-align: center;
                     margin: 0;
@@ -2868,7 +2902,7 @@ body {
             }
             .filter-dropdown {
                 position: relative;
-                margin-top: 72px;
+                margin-top: 67px;
                 text-align: center;
                 transition: all .5s ease-in-out;
                 &.in {
@@ -2885,6 +2919,21 @@ body {
                         }
                     }
                 }
+                .filter-select {
+                    display: none;
+                    border: none;
+                    background-color: $ioc-select-options;
+                    color: $ioc-white;
+                    width: 100%;
+                    height: 38px;
+                    text-align: center;
+                    font-size: 11px;
+                    font-weight: 500;
+                    box-shadow: none;
+                    &:focus {
+                        outline: none;
+                    }
+                }
                 .filter-text {
                     display: inline-block;
                     position: relative;
@@ -2893,15 +2942,18 @@ body {
                     letter-spacing: 0.8px;
                     color: #fff;
                     text-transform: uppercase;
-                    padding: 9px 38px 9px 16px;
+                    padding: 8px 38px 8px 16px;
                     border: 1px solid #fff;
                     cursor: pointer;
+                    height: 32px;
+                    @include no-select();
                     &:after {
                         content: '';
                         position: absolute;
                         display: inline-block;
                         background-image: url('../images/dropdown.svg');
                         background-repeat: no-repeat;
+                        background-size: contain;
                         height: 13px;
                         width: 13px;
                         right: 11px;
@@ -2966,9 +3018,17 @@ body {
                                 height: 54px;
                                 padding: 0;
                             }
+                            .tooltip {
+                                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.09);
+                                &.in {
+                                    opacity:1 !important;
+                                }
+                            }
                             .tooltip > .tooltip-inner {
                                 background-color: #fff;
                                 color: $ioc-text;
+                                font-size: 11px;
+                                padding: 5px 12px;
                             }
                             .tooltip-arrow {
                                 border-bottom-color: #fff;
@@ -2984,7 +3044,8 @@ body {
     }
     .subpage-buttons-filter {
         margin-bottom: 0;
-        padding-bottom: 137px;
+        padding-bottom: 136px;
+        background-size: 100vw 100%;
     }
 
     .subpage-bigbanner {
@@ -2995,8 +3056,7 @@ body {
             height: 670px;
         .title {
             display: inline-block;
-            background-color: $ioc-btx-assign;
-            background-image: linear-gradient(161deg, $ioc-btx-assign, rgba(81, 92, 162, 0.86));
+            background-color: $ioc-bg-header;
             line-height: 50px;
             max-width: 600px;
             margin-top: 70px;
@@ -3009,7 +3069,7 @@ body {
                 right: 100%;
                 width: 100vw;
                 line-height: 50px;
-                background-color: $ioc-btx-assign;
+                background-color: $ioc-bg-header;
             }
             h2 {
                 font-size: 15px;
@@ -3033,22 +3093,36 @@ body {
                 &:after {
                     display: none;
                 }
+                ul {
+                    padding-left: 0;
+                    li {
+                        margin: 0;
+                        list-style: none;
+                        &:before {
+                            content: '\2022';
+                            font-size: 40px;
+                            line-height: 20px;
+                            vertical-align: top;
+                            margin-right: 10px;
+                        }
+                    }
+                }
             }
             .subpage-button {
                 display: block;
-                line-height: 32px;
+                line-height: 28px;
                 vertical-align: middle;
                 text-align: center;
                 font-size: 11px;
                 font-weight: 500;
                 letter-spacing: 1px;
-                color: $ioc-btx-assign-btn;
+                color: $ioc-bg-header;
                 text-transform: uppercase;
                 width: 181px;
                 height: 32px;
                 opacity: 0.79;
                 border-radius: 100px;
-                border: 2px solid $ioc-btx-assign-btn;
+                border: 2px solid $ioc-bg-header;
                 background-color: transparent;
                 box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.11);
                 &:hover {
@@ -3214,6 +3288,10 @@ body {
     }
 }
 
+.body-modal-modules {
+    margin-top: 0;
+}
+
 .item-page-fullmap {
     min-height: -webkit-calc(100vh - #{$ioc-header-mini});
     min-height:    -moz-calc(100vh - #{$ioc-header-mini});
@@ -3377,6 +3455,14 @@ body {
     &.fp {
         .study-parallax {
             background-image: url('../images/fp-parallax-img.jpg');
+        }
+        .subpage-bigbanner {
+            background-image: url('../images/fp-ioc-assign-banner.jpg');
+            .study-overview {
+                .study-overview-headline {
+                    max-width: 675px;
+                }
+            }
         }
     }
     &.fpd {

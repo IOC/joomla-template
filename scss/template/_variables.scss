@@ -116,7 +116,10 @@ $ioc-btxioc-colors: (
     tab-title: #6462a9,
     tab-border: #6462a9,
     button: #6462a9,
-    moreinfo-title: #6462a9
+    moreinfo-title: #6462a9,
+    banner-assign: #5651a2,
+    banner-assign-image: linear-gradient(161deg, $ioc-btx-assign, rgba(81, 92, 162, 0.86)),
+    banner-assign-btn: #5754a2
 );
 $ioc-btxmat-colors: (
     header-bg: #41b0c8,
@@ -191,7 +194,10 @@ $ioc-fp-colors: (
     menu-title: #f0effd,
     breadcrumb: #0e7554,
     modal-border: #0f9e73,
-    modal-title: #0f9e73
+    modal-title: #0f9e73,
+    banner-assign: #0f9e73,
+    banner-assign-imgage: linear-gradient(164deg, #0f9e73, rgba(15, 158, 115, 0.86)),
+    banner-assign-btn: #088d65
 );
 $ioc-fpd-colors: (
     header-bg: #f6bb2f,
@@ -240,4 +246,6 @@ $ioc-bg-panel-res:   #e2e7f2;
 $ioc-bottom-res:     rgba(72, 90, 134, 0.5);
 $ioc-btx-menu-mbl:   #f0effd;
 $ioc-acfgs-menu-mbl: #ddebec;
+$ioc-select:         #3d657c;
+$ioc-select-options: #57798d;
 

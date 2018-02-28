@@ -224,6 +224,20 @@
 #tinymce .subpage-text-buttons .subpage-button, #tinymce .subpage-text-buttons-banner .subpage-button, #tinymce .subpage-bigbanner .subpage-button {
   padding: 0;
 }
+#tinymce .subpage-bigbanner {
+  margin-top: 0;
+  height: auto;
+  background-color: #aaa;
+}
+#tinymce .subpage-bigbanner .study-overview .study-overview-headline {
+  max-width: 100%;
+  max-height: 220px;
+  overflow: hidden;
+}
+#tinymce .subpage-text-buttons-banner .subpage-filter, #tinymce .subpage-buttons-filter .subpage-filter {
+  background-image: none;
+  background-color: #aaa;
+}
 #tinymce .modal-modules {
   box-sizing: border-box;
   border: 1px dashed #d9534f;
@@ -461,6 +475,7 @@
   border: 2px dashed #d9534f;
   padding: 10px;
   background-color: #fafafa;
+  max-width: 100%;
 }
 #tinymce .study-tabs .tab-content .tab-pane {
   box-sizing: border-box;
