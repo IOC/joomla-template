@@ -1209,9 +1209,6 @@ header.headroom--not-top {
     }
 }
 
-//@include modal-module-color('eoi-', $ioc-eoi-study, $ioc-text);
-//@include modal-module-color('fp-', $ioc-fp-study, $ioc-fp-study);
-
 .modal-modules,
 .modal-resources {
     @include module-title(21, $ioc-title-module, transparent, 81, 86, 30);
@@ -2579,9 +2576,6 @@ body {
             color: $ioc-link-navbar;
         }
 
-        &.blogger {
-            background-image: url('../images/blogger.svg');
-        }
         &.linkedin {
             &:before {
                 content: '\e901';
@@ -2629,16 +2623,71 @@ body {
                 .list-group-item {
                     background-color: transparent;
                     min-height: 224px;
-                    .element-img {
+                    a {
                         &:hover {
-                            background-size: 120% 120%;
+                            .element-img {
+                                &.competic {
+                                    img {
+                                        transform: translate(-138px, 0);
+                                    }
+                                }
+                                &.eoi {
+                                    img {
+                                        transform: translate(0, -98px);
+                                    }
+                                }
+                                &.fesp {
+                                    img {
+                                        transform: translate(-160px, -228px);
+                                    }
+                                }
+                                &.ges {
+                                    img {
+                                        transform: translate(0, -186px);
+                                    }
+                                }
+                                &.pau {
+                                    img {
+                                       transform: translate(-178px, -180px);
+                                    }
+                                }
+                            }
                         }
-                        transition: background-size .3s ease-out;
-                        background-size: 100% 100%;
-                        background-repeat: no-repeat;
-                        overflow: hidden;
-                        background-position: center center;
-                        min-height: 160px;
+                        .element-img {
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            overflow: hidden;
+                            background-position: center center;
+                            &.competic {
+                                img {
+                                    transform: translate(0, -294px);
+                                }
+                            }
+                            &.eoi {
+                                img {
+                                    transform: translate(0px, 149px);
+                                }
+                            }
+                            &.fesp {
+                                    img {
+                                        transform: translate(0, 0);
+                                    }
+                                }
+                            &.ges {
+                                img {
+                                    transform: translate(-186px, 0);
+                                }
+                            }
+                            &.pau {
+                                img {
+                                    transform: translate(0, 0);
+                                }
+                            }
+                            img {
+                                transition: transform .2s ease-out;
+                                max-width: inherit;
+                            }
+                        }
                     }
                     padding: 0;
                 }
@@ -3488,6 +3537,15 @@ body {
         .subpage-banner {
             background-image: url('../images/pau-banner.png');
         }
+    }
+}
+
+div[class*="item-page-fp-"] {
+    .subpagebody {
+        background-image: url('../images/cicles-top-bck.svg');
+        background-position: top left;
+        background-size: 88vw 275px;
+        background-repeat: no-repeat;
     }
 }
 

@@ -464,6 +464,28 @@
                     }
                 }
             }
+            .studies {
+                .studies-content {
+                    .list-group-item {
+                        background-color: transparent;
+                        min-height: 224px;
+                        a {
+                            &:hover {
+                                .element-img {
+                                    &.ges {
+                                        img {
+                                            transform: translate(0, -186px);
+                                        }
+                                    }
+                                }
+                            }
+                            .element-img {
+                                height: 160px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     .layout-employment {
@@ -798,7 +820,7 @@
         }
     }
     .subpage-text-buttons {
-        margin-top: -190px;
+        margin-top: -50px;
     }
     .study-tabs {
         background-position: center;
@@ -1323,6 +1345,11 @@
                     }
                 }
             }
+        }
+    }
+    div[class*="item-page-fp-"] {
+        .subpagebody {
+            background-size: 88vw 82px;
         }
     }
     #container {
@@ -2400,6 +2427,11 @@
     .subpage-bigbanner {
         margin-top: 0;
     }
+    div[class*="item-page-fp-"] {
+        .subpagebody {
+            background-size: 88vw 132px;
+        }
+    }
 }
 
 @media all and (min-width: 768px) and (max-width: 991px) {
@@ -2556,7 +2588,11 @@
             }
         }
     }
-
+    div[class*="item-page-fp-"] {
+        .subpagebody {
+            background-size: 88vw 132px;
+        }
+    }
     #myCarousel {
         .carousel-indicators {
             li {
@@ -2868,7 +2904,7 @@
     .container.all-studies .substudies .studies-content .list-group-item {
         min-height: 320px;
         .element-img {
-            min-height: 240px;
+            height: 240px;
         }
         p {
             font-size: 16px;
@@ -3053,6 +3089,11 @@
         }
         .container {
             padding: 0;
+        }
+    }
+    div[class*="item-page-fp-"] {
+        .subpagebody {
+            background-size: 88vw 189px;
         }
     }
     .layout-employment {
@@ -3325,6 +3366,11 @@
         }
         .container {
             padding: 0;
+        }
+    }
+    div[class*="item-page-fp-"] {
+        .subpagebody {
+            background-size: 88vw 275px;
         }
     }
     .study-overview {

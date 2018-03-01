@@ -121,12 +121,16 @@ foreach ($list as $i => &$item)
 		$anchorcss = !empty($item->anchor_css) ? $item->anchor_css : '';
 		$style = '';
 		$stylemobile = '';
+		$hexagon = '';
 		if ($item->menu_image) {
 			$path_parts = pathinfo($item->menu_image);
+			if ($params->get('style') == 'Ioc-studies') {
+				$hexagon = '<img src="' . join(DIRECTORY_SEPARATOR, array($path_parts['dirname'], $path_parts['filename'] . '-hexagon.svg')) . '" alt="" />';
+			}
 			$stylemobile = 'style="background-image: url(\''. join(DIRECTORY_SEPARATOR, array($path_parts['dirname'], $path_parts['filename'] . '-mobile.' . $path_parts['extension'])) . '\')"';
 			$style = 'style="background-image: url(\''. $item->menu_image .'\')"';
 		}
-		echo '<a href="'. $item->flink .'" class="'. $anchorcss .'"><div class="visible-xs element-img" '. $stylemobile . '></div><div class="hidden-xs element-img" '. $style . '></div>';
+		echo '<a href="'. $item->flink .'" class="'. $anchorcss .'"><div class="visible-xs element-img" '. $stylemobile . '></div><div class="hidden-xs element-img ' . $item->menu_image_css .'" '. $style . '>' . $hexagon . '</div>';
 	}
 
 	// Render the menu item.

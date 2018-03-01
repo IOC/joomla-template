@@ -4475,9 +4475,6 @@ body #wrap section {
 .social .custom-icon:hover {
   color: #4bcdaf;
 }
-.social .custom-icon.blogger {
-  background-image: url('../images/blogger.svg');
-}
 .social .custom-icon.linkedin:before {
   content: '\e901';
 }
@@ -4514,16 +4511,45 @@ body #wrap section {
   min-height: 224px;
   padding: 0;
 }
-.container.all-studies .studies .studies-content .list-group-item .element-img {
-  transition: background-size 0.3s ease-out;
-  background-size: 100% 100%;
+.container.all-studies .studies .studies-content .list-group-item a:hover .element-img.competic img {
+  transform: translate(-138px, 0);
+}
+.container.all-studies .studies .studies-content .list-group-item a:hover .element-img.eoi img {
+  transform: translate(0, -98px);
+}
+.container.all-studies .studies .studies-content .list-group-item a:hover .element-img.fesp img {
+  transform: translate(-160px, -228px);
+}
+.container.all-studies .studies .studies-content .list-group-item a:hover .element-img.ges img {
+  transform: translate(0, -186px);
+}
+.container.all-studies .studies .studies-content .list-group-item a:hover .element-img.pau img {
+  transform: translate(-178px, -180px);
+}
+.container.all-studies .studies .studies-content .list-group-item a .element-img {
+  background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
   background-position: center center;
-  min-height: 160px;
 }
-.container.all-studies .studies .studies-content .list-group-item .element-img:hover {
-  background-size: 120% 120%;
+.container.all-studies .studies .studies-content .list-group-item a .element-img.competic img {
+  transform: translate(0, -294px);
+}
+.container.all-studies .studies .studies-content .list-group-item a .element-img.eoi img {
+  transform: translate(0px, 149px);
+}
+.container.all-studies .studies .studies-content .list-group-item a .element-img.fesp img {
+  transform: translate(0, 0);
+}
+.container.all-studies .studies .studies-content .list-group-item a .element-img.ges img {
+  transform: translate(-186px, 0);
+}
+.container.all-studies .studies .studies-content .list-group-item a .element-img.pau img {
+  transform: translate(0, 0);
+}
+.container.all-studies .studies .studies-content .list-group-item a .element-img img {
+  transition: transform 0.2s ease-out;
+  max-width: inherit;
 }
 .container.all-studies .studies .studies-content a {
   padding: 0;
@@ -5338,6 +5364,12 @@ body #wrap section {
 }
 .item-page-study.pau .subpage-banner {
   background-image: url('../images/pau-banner.png');
+}
+div[class*="item-page-fp-"] .subpagebody {
+  background-image: url('../images/cicles-top-bck.svg');
+  background-position: top left;
+  background-size: 88vw 275px;
+  background-repeat: no-repeat;
 }
 .item-page-faqs .title h2 {
   font-size: 32px;
@@ -6808,6 +6840,16 @@ div[class*="item-page-"] table p {
   .container.all-studies .studies .studies-content .navbar-nav, .container.all-studies .substudies .studies-content .navbar-nav {
     margin-top: 33px;
   }
+  .container.all-studies .studies .studies-content .list-group-item {
+    background-color: transparent;
+    min-height: 224px;
+  }
+  .container.all-studies .studies .studies-content .list-group-item a:hover .element-img.ges img {
+    transform: translate(0, -186px);
+  }
+  .container.all-studies .studies .studies-content .list-group-item a .element-img {
+    height: 160px;
+  }
   .layout-employment {
     background-image: url('../images/laboral-bck-mobile.jpg');
     margin-top: 0;
@@ -7074,7 +7116,7 @@ div[class*="item-page-"] table p {
     max-width: 174px;
   }
   .subpage-text-buttons {
-    margin-top: -190px;
+    margin-top: -50px;
   }
   .study-tabs {
     background-position: center;
@@ -7649,6 +7691,9 @@ div[class*="item-page-"] table p {
   }
   .item-page-study.acfgs + .all-studies .substudies .substudies-content .substudies-elements .navbar-nav, .item-page-study.btx + .all-studies .substudies .substudies-content .substudies-elements .navbar-nav {
     padding: 0;
+  }
+  div[class*="item-page-fp-"] .subpagebody {
+    background-size: 88vw 82px;
   }
   #container .fluid-container.page-header.default {
     height: 147px;
@@ -8488,6 +8533,9 @@ div[class*="item-page-"] table p {
   .subpage-bigbanner {
     margin-top: 0;
   }
+  div[class*="item-page-fp-"] .subpagebody {
+    background-size: 88vw 132px;
+  }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span, .item-page-default dd, .page-default dd {
@@ -8618,6 +8666,9 @@ div[class*="item-page-"] table p {
   .item-page-study.acfgs + .all-studies .substudies .substudies-content .substudies-elements .navbar-nav li .element-title p, .item-page-study.btx + .all-studies .substudies .substudies-content .substudies-elements .navbar-nav li .element-title p {
     font-size: 11px;
     line-height: 1.55;
+  }
+  div[class*="item-page-fp-"] .subpagebody {
+    background-size: 88vw 132px;
   }
   #myCarousel .carousel-indicators {
     position: absolute;
@@ -8858,7 +8909,7 @@ div[class*="item-page-"] table p {
     min-height: 320px;
   }
   .container.all-studies .studies .studies-content .list-group-item .element-img, .container.all-studies .substudies .studies-content .list-group-item .element-img {
-    min-height: 240px;
+    height: 240px;
   }
   .container.all-studies .studies .studies-content .list-group-item p, .container.all-studies .substudies .studies-content .list-group-item p {
     font-size: 16px;
@@ -8984,6 +9035,9 @@ div[class*="item-page-"] table p {
   }
   .item-page-study .container {
     padding: 0;
+  }
+  div[class*="item-page-fp-"] .subpagebody {
+    background-size: 88vw 189px;
   }
   .layout-employment {
     height: 1368px;
@@ -9182,6 +9236,9 @@ div[class*="item-page-"] table p {
   }
   .item-page-study .container {
     padding: 0;
+  }
+  div[class*="item-page-fp-"] .subpagebody {
+    background-size: 88vw 275px;
   }
   .study-overview {
     flex: 1 1 260px;
