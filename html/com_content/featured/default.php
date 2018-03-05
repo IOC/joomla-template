@@ -150,7 +150,7 @@ $menuitems = array();
 
 <?php if ($modules = JModuleHelper::getModules('employment')) : ?>
   <?php foreach ($modules as $module) : ?>
-    <div class="container layout-employment">
+    <div class="layout-employment">
     <?php echo JModuleHelper::renderModule($module, array('style' => 'container employment')); ?>
     </div>
   <?php endforeach; ?>

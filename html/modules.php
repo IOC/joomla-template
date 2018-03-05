@@ -71,7 +71,7 @@ function modChrome_studies($module, &$params, &$attribs)
                         </div>
                     </div>
                 <?php endif; ?>
-                <div class="studies-content row">
+                <div class="studies-content">
                     <?php echo $module->content; ?>
                 </div>
             </div>

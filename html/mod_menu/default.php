@@ -48,14 +48,14 @@ $specialstyles = array (
 );
 
 $specialclass = '';
-if (in_array($params->get('style'), $specialstyles)) {
-	$col = 3;
-	$colsmall = 6;
-	if ($numelements < 4) {
-		$col = 12 / $numelements;
-	}
-	$specialclass = "list-group-item col-lg-$col col-md-$col col-sm-$col col-xs-$colsmall ";
-}
+// if (in_array($params->get('style'), $specialstyles)) {
+// 	$col = 3;
+// 	$colsmall = 6;
+// 	if ($numelements < 4) {
+// 		$col = 12 / $numelements;
+// 	}
+// 	$specialclass = "list-group-item col-lg-$col col-md-$col col-sm-$col col-xs-$colsmall ";
+// }
 
 array_push($specialstyles, 'Ioc-sub_studies');
 array_push($specialstyles, 'Ioc-sub_menu');

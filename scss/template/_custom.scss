@@ -1025,7 +1025,6 @@ header.headroom--not-top {
     div.item-page-default {
         margin: 50px auto 0 auto;
         max-width: 1170px;
-        padding: 0 1em 1em 1em;
         .page-header {
             h2 {
                 margin-bottom: 0;
@@ -1112,18 +1111,20 @@ header.headroom--not-top {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 1047px;
+    height: 790px;
     position: relative;
     margin-top: 60px;
     .title {
-        width: 550px;
-        margin: 50px 0 0 67px;
+        position: absolute;
+        top: 41.5px;
+        left: 94.4px;
+        width: 547px;
         h1 {
-            font-size: 31px;
-            font-weight: 400;
-            letter-spacing: 0.8px;
-            line-height: 42px;
-            color: $ioc-link-carousel;
+            font-size: 21px;
+            font-weight: normal;
+            letter-spacing: normal;
+            line-height: 1.43;
+            color: $ioc-bg-employment;
             text-align: left;
             margin: 0;
             padding: 0;
@@ -1132,75 +1133,111 @@ header.headroom--not-top {
     .employment-content {
         position: absolute;
         left: 0;
-        bottom: 81px;
+        bottom: 50px;
         width: 100%;
         .navbar-nav {
-            @include flexbox($justify-content: center);
+            @include flexbox();
             float: none;
             margin: 0 auto;
-            width: 100%;
+            max-width: 827px;
+            margin: 0 auto;
             li {
-                height: 350px;
+                width: 200px;
+                height: 240px;
                 background-color: $ioc-bg-employment;
-                margin-top: 30px;
-                margin-right: 30px;
-                padding: 0 23px;
-                width: 260px;
+                margin-right: 9px;
+                margin-bottom: 0;
+                padding: 0;
                 border-radius: 0;
                 border: solid 1px $ioc-bd-employment;
                 &:last-child {
                     margin-right: 0;
                 }
                 a {
-                    font-size: 16px;
+                    position: relative;
+                    font-size: 13px;
                     font-weight: 600;
-                    line-height: 18px !important;
-                    letter-spacing: 0.8px;
+                    line-height: 1.23;
                     color: $ioc-text;
                     text-align: center;
                     padding: 0;
+                    width: 100%;
+                    height: 100%;
                     &:focus,
                     &:hover {
                         text-decoration: underline;
                         background-color: transparent;
                     }
+                    .element-img,
+                    .element-title {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+
                     .element-img {
+                        top: 34px;
                         background-repeat: no-repeat;
                         background-position: center center;
                         display: inline-block;
-                        margin: 50px 0 32px;
-                        width: 63px;
-                        height: 55px;
+                        width: 43px;
+                        height: 48px;
                     }
                     &.office {
                         .element-img {
-                            background-image: url('../images/office-icon.svg');
+                            background-image: url('../images/fct_44x54px.svg');
                         }
                     }
                     &.checklist {
                         .element-img {
-                            background-image: url('../images/checklist-icon.svg');
+                            background-image: url('../images/assessorament_44x54px.svg');
                         }
                     }
                     &.diferencia {
                         .element-img {
-                            background-image: url('../images/diferencia-icon.svg');
+                            background-image: url('../images/collectius_singulars_44x54px.svg');
                         }
                     }
                     &.cv {
                         .element-img {
-                            background-image: url('../images/cv-icon.svg');
+                            background-image: url('../images/borsa_treball_44x54px.svg');
+                        }
+                    }
+                    .element-title {
+                        top: 93px;
+                        width: 170px;
+                        overflow: hidden;
+                        p {
+                            height: 38px;
+                            line-height: 1.15;
+                            margin: 0 auto;
+                            @include flexbox($justify-content: center);
+                            align-items: center;
                         }
                     }
                 }
+                .meta-separator,
+                .meta-description {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
                 .meta-separator {
-                    width: 24px;
+                    top: 139px;
+                    width: 17px;
                     border: solid 1px $ioc-text2;
-                    margin: 19px auto;
                 }
                 .meta-description {
-                    font-size: 13px;
-                    letter-spacing: 0.8px;
+                    top: 153px;
+                    font-size: 12px;
+                    width: 90%;
+                    height: 64px;
+                    overflow: hidden;
+                    line-height: normal;
                     text-align: center;
                     color: $ioc-text2;
                 }
@@ -1308,6 +1345,8 @@ header.headroom--not-top {
                     margin-top: 14px;
                 }
                 .title-modal-resource {
+                    margin-left: auto;
+                    margin-right: auto;
                     margin-top: 13px;
                     font-size: 16px;
                     text-align: center;
@@ -1324,6 +1363,8 @@ header.headroom--not-top {
                 }
                 .text-modal-resource {
                     margin-top: 36px;
+                    margin-left: auto;
+                    margin-right: auto;
                     width: 49%;
                     font-size: 13px;
                     line-height: 1.38;
@@ -1795,7 +1836,7 @@ header.headroom--not-top {
                 font-size: 1.6em;
             }
             h3 {
-                font-size: 1.4em;
+                font-size: 20px;
             }
             div.pagination {
                 width: 100%;
@@ -2050,14 +2091,14 @@ body {
             .carousel-caption {
                 max-height: 240px;
                 h2 {
-                    color: $ioc-link-carousel;
+                    color: $ioc-white;
                 }
             }
         }
         background-size: cover;
         background-repeat: no-repeat;
         background-position: bottom;
-        height: 560px;
+        height: 604px;
         min-height: 230px;
         .carousel-transparency {
             position: absolute;
@@ -2076,8 +2117,8 @@ body {
             position: relative;
             img {
                 position: absolute;
-                width: 550px;
-                top: 348px;
+                width: 499px;
+                top: 405px;
                 left: 0;
             }
         }
@@ -2093,7 +2134,7 @@ body {
     }
     .avisos {
         position: absolute;
-        top: 450px;
+        top: 504px;
         right: 0;
         display: none;
         &.display {
@@ -2108,7 +2149,7 @@ body {
             }
             display: inline-block;
             background-color: rgba(249,253,253,.8);
-            color: $ioc-link2-carousel;
+            color: $ioc-text;
             position: absolute;
             height: 70px;
             width: 323px;
@@ -2116,7 +2157,7 @@ body {
             top: 0;
             z-index: 2;
             transform: translateX(314px);
-            font-size: 15px;
+            font-size: 13px;
             letter-spacing: 0;
         }
         .prev {
@@ -2147,23 +2188,28 @@ body {
     }
     .avisos-mobile {
         margin-top: 37px;
-        margin-right: 25px;
+        margin-right: 0;
+        margin-bottom: 48px;
         h2 {
             font-size: 10px;
             font-weight: 600;
-            margin-right: 10px;
+            margin-right: 13px;
+            margin-bottom: 8px;
             text-align: right;
             color: $ioc-featured-news;
             border-bottom: 1px solid $ioc-featured-news;
             text-transform: uppercase;
         }
         div {
-            background-color: $ioc-bg-employment;
+            background-color: $ioc-bg-panel;
             width: 100%;
-            padding: 11px 46px 11px 23px;
+            padding: 6px 44px 6px 17px;
             margin-left: 20px;
             margin-right: 1px;
             a {
+                font-size: 11.5px;
+                font-weight: normal;
+                line-height: 1.39;
                 color: $ioc-text2;
             }
         }
@@ -2212,11 +2258,12 @@ body {
         //background: -webkit-linear-gradient(-180deg, rgba(#fff,1), rgba(#fff,1), rgba(#fff,0)); /* Chrome10-25,Safari5.1-6 */
         h2 {
             position: absolute;
-            width: 350px;
+            width: 376px;
             top: 120px;
             left: 0;
-            font-size: 31px;
-            font-weight: 400;
+            font-size: 27px;
+            line-height: 1.3;
+            font-weight: 300;
             margin: 0;
             a {
                 color: $ioc-link2-carousel;
@@ -2602,6 +2649,7 @@ body {
 .container {
     &.all-studies {
         margin-top: 70px;
+        padding: 0;
         .navbar-nav {
             width: 100%;
             margin-top: 70px;
@@ -2610,86 +2658,156 @@ body {
             clear: both;
         }
         .studies {
-            padding-top: 1em;
+            //padding-top: 1em;
             .title {
                 h1 {
                     font-size: 37px;
                     font-weight: 600;
                     letter-spacing: -0.7px;
                     text-align: center;
+                    margin-bottom: 41px;
                 }
             }
             .studies-content {
-                .list-group-item {
-                    background-color: transparent;
-                    min-height: 224px;
-                    a {
-                        &:hover {
+                .navbar-nav {
+                    @include flexbox();
+                    li {
+                        background-color: transparent;
+                        height: 287px;
+                        margin-bottom: 0;
+                        a {
+                            &:hover {
+                                .element-img {
+                                    &.acfgs {
+                                        img {
+                                            transform: scale(1.5) translate(12%, -8%);
+                                        }
+                                    }
+                                    &.btx {
+                                        img {
+                                            transform:scale(1.5) translate(10%, -8%);
+                                        }
+                                    }
+                                    &.competic {
+                                        img {
+                                            transform: translate(-50%, 0);
+                                        }
+                                    }
+                                    &.eoi {
+                                        img {
+                                            transform: translate(0, -26%);
+                                        }
+                                    }
+                                    &.fesp {
+                                        img {
+                                            transform: translate(-25%, -43.5%);
+                                        }
+                                    }
+                                    &.fp {
+                                        img {
+                                            transform: scale(1.5) translate(-22%, -8%);
+                                        }
+                                    }
+                                    &.fpd {
+                                        img {
+                                            transform: scale(1.5) translate(12%, -8%);
+                                        }
+                                    }
+                                    &.ges {
+                                        img {
+                                            transform: translate(0, -186px);
+                                        }
+                                    }
+                                    &.miniops {
+                                        img {
+                                            transform: scale(1.5) translate(12%, -8%);
+                                        }
+                                    }
+                                    &.pau {
+                                        img {
+                                           transform: translate(-38%, -38%);
+                                        }
+                                    }
+                                }
+                            }
                             .element-img {
+                                height: 207px;
+                                width: 207px;
+                                background-image: url('../images/study-bg-default.jpg');
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                overflow: hidden;
+                                background-position: center center;
+                                &.acfgs {
+                                    img {
+                                        transform: scale(1) translate(28%, 28%);
+                                    }
+                                }
+                                &.btx {
+                                    img {
+                                        transform: scale(1) translate(-41%, 32%);
+                                    }
+                                }
                                 &.competic {
-                                    img {
-                                        transform: translate(-138px, 0);
-                                    }
-                                }
-                                &.eoi {
-                                    img {
-                                        transform: translate(0, -98px);
-                                    }
-                                }
-                                &.fesp {
-                                    img {
-                                        transform: translate(-160px, -228px);
-                                    }
-                                }
-                                &.ges {
-                                    img {
-                                        transform: translate(0, -186px);
-                                    }
-                                }
-                                &.pau {
-                                    img {
-                                       transform: translate(-178px, -180px);
-                                    }
-                                }
-                            }
-                        }
-                        .element-img {
-                            background-size: cover;
-                            background-repeat: no-repeat;
-                            overflow: hidden;
-                            background-position: center center;
-                            &.competic {
-                                img {
-                                    transform: translate(0, -294px);
-                                }
-                            }
-                            &.eoi {
-                                img {
-                                    transform: translate(0px, 149px);
-                                }
-                            }
-                            &.fesp {
                                     img {
                                         transform: translate(0, 0);
                                     }
                                 }
-                            &.ges {
+                                &.eoi {
+                                    img {
+                                        transform: translate(0px, 39%);
+                                    }
+                                }
+                                &.fesp {
+                                        img {
+                                            transform: translate(0, 0);
+                                        }
+                                }
+
+                                &.fp {
+                                        img {
+                                            transform: scale(1) translate(30%, 33%);
+                                        }
+                                }
+                                &.fpd {
+                                        img {
+                                            transform: scale(1) translate(64%, 16%);
+                                        }
+                                }
+                                &.ges {
+                                    img {
+                                        transform: translate(-186px, 0);
+                                    }
+                                }
+                                &.miniops {
+                                    img {
+                                        transform: scale(1) translate(48%, -56%);
+                                    }
+                                }
+                                &.pau {
+                                    img {
+                                        transform: translate(0, 0);
+                                    }
+                                }
                                 img {
-                                    transform: translate(-186px, 0);
+                                    transition: transform .2s ease-out;
+                                    max-width: inherit;
                                 }
                             }
-                            &.pau {
-                                img {
-                                    transform: translate(0, 0);
-                                }
-                            }
-                            img {
-                                transition: transform .2s ease-out;
-                                max-width: inherit;
+                             p {
+                                font-size: 14px;
+                                font-weight: 500;
+                                max-width: 182px;
+                                line-height: 1.29;
+                                padding-top: 15px;
+                                color: $ioc-text;
+                                display: block;
+                                margin: 0 auto;
+                                text-align: center;
                             }
                         }
+                        padding: 0;
                     }
-                    padding: 0;
                 }
                 a {
                     &:hover {
@@ -2698,30 +2816,6 @@ body {
                     padding: 0;
                 }
             }
-        }
-        .studies {
-            .studies-content {
-                .list-group-item {
-                    .element-img {
-                        background-image: url('../images/study-bg-default.jpg');
-                    }
-                    p {
-                        font-size: 16px;
-                        font-weight: 500;
-                        max-width: 240px;
-                        line-height: 18px;
-                        padding-top: 10px;
-                        color: $ioc-text;
-                        letter-spacing: 1px;
-                        display: block;
-                        margin: 0 auto;
-                        text-align: center;
-                    }
-                }
-            }
-        }
-        .studies {
-            margin-top: 1em;
             .newmatricula {
                 &:before {
                     content: "";

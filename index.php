@@ -56,7 +56,7 @@ $pageclass = str_replace($suffixes, '', $pageclass);
 <span class="icon-bar"></span>
 </button>
     <div id="brand">
-        <a href="http://ensenyament.gencat.cat" class="ioc-departament hidden-xs">
+        <a href="http://ensenyament.gencat.cat" class="ioc-departament">
             <img class=" logo" src="<?php echo $imgpath; ?>logo-dep-ens.svg" alt="Departament d'Ensenyament" />
         </a>
         <a href="<?php  echo $this->params->get('logo_link')   ?>" class="ioc-logo">
