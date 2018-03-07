@@ -1113,7 +1113,7 @@ header.headroom--not-top {
     width: 100%;
     height: 790px;
     position: relative;
-    margin-top: 60px;
+    margin-top: 32px;
     .title {
         position: absolute;
         top: 41.5px;
@@ -1234,7 +1234,7 @@ header.headroom--not-top {
                 .meta-description {
                     top: 153px;
                     font-size: 12px;
-                    width: 90%;
+                    width: 80%;
                     height: 64px;
                     overflow: hidden;
                     line-height: normal;
@@ -1789,274 +1789,308 @@ header.headroom--not-top {
 
 .ioctags {
     position: relative;
+    margin-top: 4px;
     &.tag-news {
-        .tag-icon,
-        .tag {
-            color: #2dcfe7;
-        }
-    }
-    &.tag-eur {
-        .tag-icon,
-        .tag {
-            color: #e85e2d;
-        }
-    }
-    &.tag-matr {
         .tag-icon,
         .tag {
             color: #02cc98;
         }
     }
+    &.tag-eur {
+        .tag-icon,
+        .tag {
+            color: #e75f2d;
+        }
+    }
+    &.tag-matr {
+        .tag-icon,
+        .tag {
+            color: #2ab9ca;
+        }
+    }
     .tag-icon {
-        float: left;
-        margin-top: 3px;
-        margin-right: 3px;
-        transform: rotate(90deg);
+        position: absolute;
+        top: 1px;
+        left: -2px;
+        height: 11px;
+        line-height: 11px;
+        &:before {
+            content: '\e912';
+            font-family: 'ioc-icons';
+            font-size: 18px;
+        }
     }
     .tag {
-        line-height: 21px;
-        font-size: 13px;
+        position: absolute;
+        left: 16px;
+        line-height: normal;
+        font-size: 9px;
+        font-weight: 500;
+        text-transform: uppercase;
         margin-bottom: 0;
     }
 }
 
 #news {
-    margin-top: 80px;
-    padding-top: 10px;
+    margin-top: 101px;
     .container {
         &.blog-featured {
             padding-left: 0;
             padding-right: 0;
-            font-size: 1em;
+            .title {
+                    > div {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                    h1 {
+                        font-size: 24px;
+                        font-weight: 600;
+                        text-align: left;
+                        padding-bottom: 2px;
+                        margin: 0;
+                        border-bottom: 2px solid $ioc-text2;
+                    }
+                }
+                .items-row {
+                    @include flexbox();
+                    width: 100%;
+                    margin-top: 59px;
+                    .item {
+                        width: 180px;
+                        margin-right: 36px;
+                        .news-text {
+                            h3 {
+                                color: $ioc-text2;
+                                font-size: 17px;
+                                line-height: normal;
+                                font-weight: 600;
+                                margin: 19.6px 0 13.9px 0;
+                            }
+
+                            .modified {
+                                color: $ioc-article-date;
+                                line-height: normal;
+                                font-size: 12px;
+                            }
+
+                            // styles for '...'
+                            .intro-featured-article {
+                                color: $ioc-featured-text;
+                                line-height: 1.36;
+                                font-size: 14px;
+                                padding-top: 21.3px;
+                                margin-top: 21.3px;
+                                overflow: hidden;
+                                p {
+                                    display: inline-block;
+                                    margin: 0;
+                                }
+                            }
+
+                            .readmore {
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                text-transform: uppercase;
+                                margin-bottom: 0;
+                                margin-top: 15px;
+                                a {
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                    &.btn {
+                                        padding: 0;
+                                    }
+                                    position: relative;
+                                    text-transform: uppercase;
+                                    color: $ioc-text;
+                                    line-height: normal;
+                                    font-size: 11px;
+                                    font-weight: 500;
+                                    margin-top: 5px;
+                                    letter-spacing: .8px;
+                                    .custom-icon {
+                                        position: absolute;
+                                        top: -2px;
+                                        right: -20px;
+                                        width: 16px;
+                                        height: 16px;
+                                        &.final {
+                                            &:before {
+                                                content: '\e90b';
+                                                font-family: 'ioc-icons';
+                                                font-size: 16px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.link_items {
+                            margin-right: 0;
+                            h3 {
+                                color: $ioc-text2;
+                                font-size: 17px;
+                                font-weight: 600;
+                                margin: 0 0 20px 0;
+                            }
+                            padding-right: 0;
+                            .extra-new {
+                                @include flexbox();
+                                align-items: self-start;
+                                margin-bottom: 12px;
+                                .more-news-icon {
+                                    width: 17px;
+                                    position: relative;
+                                    .custom-icon {
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        width: 16px;
+                                        height: 16px;
+                                        &.fletxa {
+                                            &:before {
+                                                content: '\e90f';
+                                                font-family: 'ioc-icons';
+                                                font-size: 16px;
+                                            }
+                                        }
+                                    }
+                                }
+                                .more-news-title {
+                                    width: 162px;
+                                    line-height: 1.29;
+                                }
+                                a {
+                                    color: $ioc-text;
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
             .modified {
                 font-size: 13px;
                 color: $ioc-article-date;
             }
-            h2 {
-                font-size: 1.6em;
-            }
-            h3 {
-                font-size: 20px;
-            }
-            div.pagination {
+            .content-pagination {
                 width: 100%;
-            }
-            ul.pagination {
-                text-align: center;
-                li {
-                    &:first-child {
-                        a {
-                            margin-left: 0;
-                            border-radius: 0;
+                margin: 78px 0 106px 0;
+                .pagination {
+                    text-align: center;
+                    margin: 0;
+                    li {
+                        &:first-child {
+                            a {
+                                margin-left: 0;
+                                border-radius: 0;
+                            }
                         }
-                    }
-                    &.start,
-                    &.previous,
-                    &.next,
-                    &.end {
+                        &.start,
+                        &.previous,
+                        &.next,
+                        &.end {
+                            a {
+                                &:hover {
+                                    background-color: $ioc-bg-footer-t;
+                                    color: #fff;
+                                }
+                                background-color: $ioc-bg-pagination;
+                                border-color: $ioc-bg-pagination;
+                                width: auto;
+                            }
+                        }
+                        &.start,
+                        &.end {
+                            a {
+                                font-size: 12px;
+                                font-weight: 500;
+                                letter-spacing: 1.26px;
+                                padding-top: 11px;
+                            }
+                        }
+                        &.previous,
+                        &.next {
+                            &.disabled {
+                                a {
+                                    &:hover {
+                                        color: $ioc-text;
+                                    }
+                                    border-color: $ioc-footer-bottom;
+                                    background-color: #fff;
+                                }
+                            }
+                            a {
+                                position: relative;
+                                &:hover {
+                                    // background-image: url('../images/arrow-left.svg');
+                                }
+                                &:before {
+                                    content: '\e90d';
+                                    font-family: 'ioc-icons';
+                                    font-size: 22px;
+                                    position: absolute;
+                                    top: 3px;
+                                    left: 9px;
+                                }
+                                // background-image: url('../images/arrow-mini-left.png');
+                                // background-position: center center;
+                                background-size: 8px 15px;
+                                background-repeat: no-repeat;
+                                width: 40px;
+                                height: 40px;
+                            }
+                        }
+                        &.previous {
+                            a {
+                                transform: rotate(180deg);
+                            }
+                        }
                         a {
                             &:hover {
-                                background-color: $ioc-bg-footer-t;
-                                color: #fff;
+                                border-color: $ioc-footer-bottom;
+                                background-color: #fff;
                             }
-                            background-color: $ioc-bg-pagination;
-                            width: auto;
+                            font-size: 15px;
+                            font-weight: 400;
+                            color: $ioc-text;
+                            border-color: $ioc-bd-pagination;
+                            background-color: #fff;
+                            margin-left: 8px;
+                            padding: 9px 10px;
+                            width: 40px;
+                            height: 40px;
+                            text-transform: uppercase;
                         }
                     }
-                    &.start,
-                    &.end {
+                    .active {
+                        a {
+                            &:hover {
+                                border-color: $ioc-bg-pagination;
+                                background-color: $ioc-bg-pagination;
+                            }
+                            background-color: $ioc-bg-pagination;
+                            border-color: $ioc-bg-pagination;
+                            font-size: 19px;
+                            margin-top: -3px;
+                            width: 46px;
+                            height: 46px;
+                        }
+                    }
+                    .disabled {
                         a {
                             font-size: 12px;
                             font-weight: 500;
                             letter-spacing: 1.26px;
-                            padding-top: 10px;
-                        }
-                    }
-                    &.previous,
-                    &.next {
-                        &.disabled {
-                            a {
-                                &:hover {
-                                    background-image: url('../images/arrow-mini-left.png');
-                                }
-                                border-color: $ioc-footer-bottom;
-                                background-color: #fff;
-                            }
-                        }
-                        a {
-                            &:hover {
-                                background-image: url('../images/arrow-left.svg');
-                            }
-                            background-image: url('../images/arrow-mini-left.png');
-                            background-position: center center;
-                            background-size: 8px 15px;
-                            background-repeat: no-repeat;
-                            width: 40px;
-                            height: 40px;
-                        }
-                    }
-                    &.next {
-                        a {
-                            transform: rotate(180deg);
-                        }
-                    }
-                    a {
-                        &:hover {
                             border-color: $ioc-footer-bottom;
-                            background-color: #fff;
+                            width: auto;
+                            padding-top: 10px;
+                            border-radius: 0;
                         }
-                        font-size: 15px;
-                        font-weight: 400;
-                        color: $ioc-text;
-                        border-color: $ioc-bg-pagination;
-                        background-color: #fff;
-                        margin-left: 8px;
-                        padding: 9px 10px;
-                        width: 40px;
-                        height: 40px;
-                        text-transform: uppercase;
                     }
                 }
-                .active {
-                    a {
-                        &:hover {
-                            border-color: $ioc-bg-pagination;
-                            background-color: $ioc-bg-pagination;
-                        }
-                        background-color: $ioc-bg-pagination;
-                        font-size: 19px;
-                        margin-top: -3px;
-                        width: 46px;
-                        height: 46px;
-                    }
-                }
-                .disabled {
-                    a {
-                        font-size: 12px;
-                        font-weight: 500;
-                        letter-spacing: 1.26px;
-                        border-color: $ioc-footer-bottom;
-                        width: auto;
-                        padding-top: 10px;
-                        border-radius: 0;
-                    }
-                }
-            }
-            .readmore {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                text-transform: uppercase;
-                margin-top: 1em;
-                a.btn {
-                    padding-left: 0;
-                }
-            }
-        }
-    }
-    .title {
-        margin-bottom: 120px;
-        > div {
-            padding-left: 0;
-            padding-right: 0;
-        }
-        h1 {
-            font-size: 30px;
-            font-weight: 600;
-            text-align: left;
-            padding-bottom: 2px;
-            border-bottom: 1px solid $ioc-text2;
-        }
-    }
-    .items-row {
-        margin-left: -15px;
-        margin-right: -15px;
-        .news-text {
-            position: relative;
-            h3 {
-                color: $ioc-text2;
-                line-height: 25px;
-                letter-spacing: 0px;
-                font-size: 20px;
-                font-weight: 600;
-                margin: 20px 0 10px 0;
-            }
-
-            .modified {
-                color: $ioc-article-date;
-                line-height: 21px;
-                font-size: 13px;
-                bottom: 54px;
-                left: 30px;
-            }
-
-            // styles for '...'
-            .intro-featured-article {
-                color: $ioc-featured-text;
-                line-height: 21px;
-                font-size: 15px;
-                padding-top: 20px;
-                overflow: hidden;
-                p {
-                    display: inline-block;
-                }
-            }
-
-            .readmore a {
-                &:hover {
-                    text-decoration: underline;
-                }
-                font-weight: 600;
-                text-transform: uppercase;
-                color: $ioc-text;
-                line-height: 21px;
-                font-size: 13px;
-                margin-top: 5px;
-                letter-spacing: 1px;
-                .custom-icon {
-                    width: 9px;
-                    height: 9px;
-                    margin-left: 3px;
-                    &.triangle {
-                        background-image: url('../images/triangle.png');
-                    }
-                }
-            }
-        }
-    }
-    .link_items {
-        h3 {
-            color: $ioc-text2;
-            line-height: 25px;
-            letter-spacing: 0px;
-            font-size: 20px;
-            font-weight: 600;
-            margin: 0 0 20px 0;
-        }
-        padding-right: 0;
-        .extra-new {
-            margin-bottom: 13px;
-            .more-news-icon {
-                padding-top: 5px;
-            }
-            .more-news-title {
-                padding-left: 5px;
-                padding-right: 0;
-            }
-            .custom-icon {
-                width: 8px;
-                &.triangle {
-                    background-image: url('../images/triangle.png');
-                }
-            }
-            a {
-                color: #364958;
-                line-height: 21px;
-                letter-spacing: 0px;
-                font-size: 15px;
-                font-weight: 500;
-                margin: 0;
-                padding-bottom: 6px;
             }
         }
     }
@@ -2172,18 +2206,26 @@ body {
         .control-next {
             display: block;
             position: absolute;
-            top: 25px;
+            top: 30px;
             right: 283px;
             width: 20px;
             height: 20px;
             line-height: 14px;
-            background: url('../images/arrow-mini-left.png');
-            background-size: contain;
-            background-repeat: no-repeat;
+            // background: url('../images/arrow-mini-left.png');
+            // background-size: contain;
+            // background-repeat: no-repeat;
+            &:after {
+                content: '\e90c';
+                font-family: 'ioc-icons';
+                font-size: 25px;
+            }
+        }
+        .control-prev {
+            transform: rotate(-180deg);
+            top: 25px;
         }
         .control-next {
             right: 20px;
-            transform: rotate(-180deg);
         }
     }
     .avisos-mobile {
@@ -2658,14 +2700,14 @@ body {
             clear: both;
         }
         .studies {
-            //padding-top: 1em;
             .title {
                 h1 {
-                    font-size: 37px;
+                    font-size: 30px;
                     font-weight: 600;
-                    letter-spacing: -0.7px;
+                    letter-spacing: -0.6px;
                     text-align: center;
-                    margin-bottom: 41px;
+                    margin-top: 41px;
+                    margin-bottom: 16px;
                 }
             }
             .studies-content {
@@ -2715,7 +2757,7 @@ body {
                                     }
                                     &.ges {
                                         img {
-                                            transform: translate(0, -186px);
+                                            transform: translate(0, -39%);
                                         }
                                     }
                                     &.miniops {
@@ -2776,7 +2818,7 @@ body {
                                 }
                                 &.ges {
                                     img {
-                                        transform: translate(-186px, 0);
+                                        transform: translate(-39%, 0);
                                     }
                                 }
                                 &.miniops {

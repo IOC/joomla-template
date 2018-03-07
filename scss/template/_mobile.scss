@@ -466,187 +466,75 @@
             }
         }
     }
-    // .layout-employment {
-    //     background-image: url('../images/laboral-bck-mobile.jpg');
-    //     margin-top: 0;
-    //     height: 687px;
-    //     .title {
-    //         position: absolute;
-    //         bottom: 500px;
-    //         margin: 0;
-    //         width: 100%;
-    //         padding: 0 22px;
-    //         h1 {
-    //             font-size: 15px;
-    //             letter-spacing: 0.4px;
-    //             text-align: center;
-    //             line-height: 20px;
-    //         }
-    //     }
-    //     .employment-content {
-    //         bottom: 47px;
-    //         .navbar-nav {
-    //             padding: 0 6px;
-    //             max-width: 320px;
-    //             float: none;
-    //             li {
-    //                 width: 153px;
-    //                 height: 152px;
-    //                 padding: 0 15px;
-    //                 margin-top: 0;
-    //                 a {
-    //                     font-size: 12px;
-    //                     font-weight: 500;
-    //                     line-height: 1.25;
-    //                     letter-spacing: 0.9px;
-    //                     .element-img {
-    //                         margin: 27px auto 22px auto;
-    //                         width: 43px;
-    //                         height: 47px;
-    //                     }
-    //                     &.office {
-    //                         .element-img {
-    //                             background-image: url('../images/fct_44x54px.svg');
-    //                         }
-    //                     }
-    //                     &.checklist {
-    //                         .element-img {
-    //                             background-image: url('../images/assessorament_44x54px.svg');
-    //                         }
-    //                     }
-    //                     &.diferencia {
-    //                         .element-img {
-    //                             background-image: url('../images/collectius_singulars_44x54px.svg');
-    //                         }
-    //                     }
-    //                     &.cv {
-    //                         .element-img {
-    //                             background-image: url('../images/borsa_treball_44x54px');
-    //                         }
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
+    .layout-employment {
+        margin-top: 39px;
+        .employment-content {
+            .navbar-nav {
+                padding: 0;
+                justify-content: center;
+                li {
+                    width: 142px;
+                    height: 142px;
+                    margin-top: 0;
+                    border: none;
+                    a {
+                        font-size: 11px;
+                        font-weight: 500;
+                        line-height: 1.18;
+                        .element-img {
+                            top: 24px;
+                            height: 48px;
+                            width: 43px;
+                        }
+                        .element-title {
+                            top: 82px;
+                            width: 100%;
+                            p {
+                                width: 69%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     #news {
         .container {
             &.blog-featured {
                 .items-row {
-                    .link_items {
-                        padding: 14px 0 0 15px;
-                        clear: both;
-                        h3 {
-                            font-size: 13px;
-                            font-weight: 500;
-                            line-height: 1.38;
-                            text-align: left;
-                            margin-bottom: 13px;
-                        }
-                        .extra-new {
-                            margin: 0 0 4px 0;
-                            a {
-                                font-size: 13px;
-                            }
-                            .more-news-icon {
-                                display: none;
-                            }
-                            .more-news-title {
-                                background-color: $ioc-bg-employment;
-                                width: 100%;
-                                height: 44px;
-                                padding: 0;
-                                a {
-                                    @include flexbox();
-                                    align-items: center;
-                                    width: 100%;
-                                    height: 100%;
-                                    font-size: 12px;
-                                    font-weight: normal;
-                                    line-height: 1.25;
-                                    padding: 0 61px 0 16px;
+                    .item {
+                        &.link_items {
+                            .link-elements {
+                                .extra-new {
+                                    .more-news-icon {
+                                        display: none;
+                                    }
+                                    .more-news-title {
+                                        position: relative;
+                                        width: 100%;
+                                        background-color: $ioc-bg-panel;
+                                        height: 44px;
+                                        a {
+                                            @include flexbox();
+                                            align-items: center;
+                                            width: 100%;
+                                            height: 100%;
+                                            &:after {
+                                                content: '\e90d';
+                                                font-family: 'ioc-icons';
+                                                font-size: 22px;
+                                                color: $ioc-article-arrow;
+                                                position: absolute;
+                                                right: 26.7px;
+                                                top: 7.5px;
+                                                width: 18px;
+                                                height: 18px;
+                                            }
+
+                                        }
+                                    }
                                 }
                             }
-                        }
-                        .extra-new + .extra-new {
-                            margin: 4px 0;
-                        }
-                    }
-                }
-                ul.pagination {
-                    li {
-                        &.pagenumber {
-                            display: none;
-                        }
-                        &:first-child,
-                        &.previous,
-                        &.next,
-                        &.active,
-                        &.start,
-                        &.end {
-                            a {
-                                height: 36px;
-                                width: 36px;
-                                margin: 0 -1px;
-                                border: 1px solid $ioc-bg-pagination;
-                                &:hover {
-                                    border-color: $ioc-bg-footer-t;
-                                }
-                            }
-                        }
-                        &:first-child,
-                        &.last-child,
-                        &.start,
-                        &.end {
-                            a {
-                                background-size: 11px 12px;
-                                background-repeat: no-repeat;
-                                background-position: center;
-                            }
-                        }
-                        &:first-child,
-                        &.start {
-                            a {
-                                text-indent: -120vw;
-                                background-image: url('../images/icona-inici-mobile.svg');
-                            }
-                        }
-                        &:last-child,
-                        &.end {
-                            a {
-                                text-indent: 120vw;
-                                background-image: url('../images/icona-final-mobile.svg');
-                            }
-                        }
-                        &.previous,
-                        &.next {
-                            a {
-                                background-color: $ioc-white;
-                                background-size: 5.4px 10.2px;
-                            }
-                        }
-                        &.previous.disabled,
-                        &.next.disabled {
-                            a {
-                                border: 1px solid $ioc-bg-pagination;
-                            }
-                        }
-                        &.active {
-                            a {
-                                background-color: #fff;
-                                font-size: 13px;
-                                &:hover {
-                                    background-color: #fff;
-                                }
-                            }
-                        }
-                        a {
-                            margin: 0;
-                            height: 36px;
-                            width: 36px;
-                            padding: 8px;
-                            border: 1px solid $ioc-bg-pagination;
-                            font-size: 13px;
                         }
                     }
                 }
@@ -654,6 +542,16 @@
         }
     }
     #myCarousel {
+        .carousel-inner {
+            .carousel-caption {
+                h2 {
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    text-align: center;
+                }
+            }
+        }
         .carousel-control {
             &.left,
             &.right {
@@ -1204,58 +1102,6 @@
             }
         }
     }
-
-    #myCarousel {
-        .carousel-inner {
-            height: 206px;
-            .carousel-caption {
-                bottom: auto;
-                h2 {
-                    width: 70%;
-                    color: $ioc-white;
-                    position: absolute;
-                    top: 78px;
-                    left: 15%;
-                    max-height: 100px;
-                    z-index: 100;
-                    letter-spacing: 0;
-                    line-height: 1.23;
-                    font-size: 13px;
-                    font-weight: normal;
-                    text-align: center;
-                }
-            }
-            .item {
-                height: 230px;
-                &.welcome {
-                    .carousel-caption {
-                        h2 {
-                            color: $ioc-white;
-                        }
-                    }
-                }
-                .logo-ioc-large {
-                    img {
-                        width: 180px;
-                        top: 136px;
-                        left: -1px;
-                    }
-                }
-                .carousel-transparency {
-                    background-image: url('../images/hero-image.jpg');
-                    background-size: cover;
-                    background-position: center;
-                    width: 100%;
-                    img {
-                        display: none;
-                    }
-                }
-                video {
-                    display: none;
-                }
-            }
-        }
-    }
     /* Customization for studies, Parallax, Banners, layouts */
     #main-box {
         div.item-page-study {
@@ -1630,61 +1476,6 @@
             margin-top: 47px;
         }
     }
-    .layout-employment {
-        margin-top: 39px;
-        background-image: url('../images/laboral-bck-mobile.jpg');
-        height: 658px;
-        .title {
-            top: 252px;
-            left: 0;
-            width: 100%;
-            h1 {
-                font-size: 12px;
-                letter-spacing: 0.3px;
-                color: $ioc-white;
-                line-height: normal;
-                text-align: center;
-                width: 90%;
-                margin: 0 auto;
-            }
-        }
-        .employment-content {
-            bottom: 36px;
-            .navbar-nav {
-                width: 290px;
-                padding: 0;
-                justify-content: center;
-                li {
-                    width: 142px;
-                    height: 142px;
-                    margin-top: 0;
-                    margin-bottom: 6px;
-                    margin-right: 0;
-                    border: none;
-                    &:nth-child(2n+1) {
-                        margin-right: 6px;
-                    }
-                    a {
-                        font-size: 11px;
-                        font-weight: 500;
-                        line-height: 1.18;
-                        .element-img {
-                            top: 24px;
-                            height: 48px;
-                            width: 43px;
-                        }
-                        .element-title {
-                            top: 82px;
-                            width: 100%;
-                            p {
-                                width: 69%;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
     .item-page-faqs {
         .title {
             h2 {
@@ -1799,6 +1590,55 @@
             }
         }
     }
+    #myCarousel {
+        .carousel-inner {
+            height: 206px;
+            .carousel-caption {
+                bottom: auto;
+                h2 {
+                    width: 70%;
+                    color: $ioc-white;
+                    top: 78px;
+                    max-height: 100px;
+                    z-index: 100;
+                    letter-spacing: 0;
+                    line-height: 1.23;
+                    font-size: 13px;
+                    font-weight: normal;
+                    text-align: center;
+                }
+            }
+            .item {
+                height: 230px;
+                &.welcome {
+                    .carousel-caption {
+                        h2 {
+                            color: $ioc-white;
+                        }
+                    }
+                }
+                .logo-ioc-large {
+                    img {
+                        width: 180px;
+                        top: 136px;
+                        left: -1px;
+                    }
+                }
+                .carousel-transparency {
+                    background-image: url('../images/hero-image.jpg');
+                    background-size: cover;
+                    background-position: center;
+                    width: 100%;
+                    img {
+                        display: none;
+                    }
+                }
+                video {
+                    display: none;
+                }
+            }
+        }
+    }
     #container {
         .fluid-container {
             &.page-header {
@@ -1862,27 +1702,33 @@
         }
     }
     #news {
-        margin-top: 61px;
+        margin-top: 53px;
         padding: 0;
         .container {
             &.blog-featured {
+                padding-left: 15px;
+                padding-right: 15px;
                 .title {
-                    margin-bottom: 50px;
+                    margin-bottom: 28px;
                     h1 {
-                        font-size: 19px;
+                        font-size: 16px;
                         font-weight: 600;
-                        letter-spacing: -0.4px;
-                        margin-left: 15px;
-                        margin-right: 15px;
+                        letter-spacing: -0.3px;
                         margin-top: 0;
+                        border-width: 1px;
                     }
                 }
                 .items-row {
                     margin-left: 0;
                     margin-right: 0;
+                    margin-top: 0;
                     .item {
-                        padding-bottom: 15px;
+                        width: 100%;
+                        min-height: 153px;
+                        margin-bottom: 12.5px;
+                        margin-right: 0;
                         .news-text {
+                            position: relative;
                             z-index: 1;
                             h3 {
                                 font-size: 18px;
@@ -1906,7 +1752,7 @@
                                 }
                                 position: absolute;
                                 bottom: 30px;
-                                left: 19px;
+                                left: 16px;
                                 width: 85%;
                                 height: 30px;
                                 @include flexbox();
@@ -1920,23 +1766,201 @@
                             .modified {
                                 position: absolute;
                                 font-size: 10px;
-                                bottom: 7px;
-                                left: 19px;
+                                bottom: 10px;
+                                left: 16px;
                             }
                             .ioctags {
-                                bottom: 33px;
+                                position: absolute;
+                                left: 150px;
+                                bottom: 10px;
                                 .tag-icon {
-                                    position: absolute;
-                                    bottom: -15px;
-                                    left: 19px;
+                                    display: none;
                                 }
                                 .tag {
-                                    position: absolute;
-                                    bottom: -30px;
-                                    left: 38px;
+                                    position: relative;
+                                    &:before {
+                                        content: '|';
+                                        color: $ioc-tag-separator;
+                                        margin-right: 5.5px;
+                                    }
                                 }
                             }
                         }
+                        &.link_items {
+                            margin-top: 15px;
+                            h3 {
+                                font-size: 13px;
+                                font-weight: 500;
+                                line-height: 1.38;
+                                margin: 0 0 11px 0;
+                            }
+                            padding-right: 0;
+                            .extra-new {
+                                margin-bottom: 12px;
+                                margin-right: -15px;
+                                .more-news-icon {
+                                    width: 17px;
+                                }
+                                .more-news-title {
+                                    width: 162px;
+                                    line-height: 1.29;
+                                    a {
+                                        font-size: 12px;
+                                        font-weight: normal;
+                                        line-height: 1.25;
+                                        padding: 0 61px 0 16px;
+                                    }
+                                }
+                                .custom-icon {
+                                    width: 7px;
+                                    height: 7px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .content-pagination {
+                    margin: 14px 0 45px 0;
+                    .pagination {
+                        li {
+                            &.pagenumber {
+                                display: none;
+                            }
+                            &:first-child,
+                            &.previous,
+                            &.next,
+                            &.active,
+                            &.start,
+                            &.end {
+                                a {
+                                    height: 36px;
+                                    width: 36px;
+                                    margin: 0 -1px;
+                                    border: 1px solid $ioc-bg-pagination;
+                                    &:hover {
+                                        border-color: $ioc-bg-footer-t;
+                                    }
+                                }
+                            }
+                            &:first-child,
+                            &.start {
+                                a {
+                                    position: relative;
+                                    text-indent: -200vw;
+                                    transform: rotate(180deg);
+                                    &:before {
+                                        content: '\e90b';
+                                        font-family: 'ioc-icons';
+                                        font-size: 22px;
+                                        text-indent: 0;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 7px;
+                                    }
+                                }
+                            }
+                            &:last-child,
+                            &.end {
+                                a {
+                                    position: relative;
+                                    text-indent: 200vw;
+                                    &:before {
+                                        content: '\e90b';
+                                        font-family: 'ioc-icons';
+                                        font-size: 22px;
+                                        text-indent: 0;
+                                        position: absolute;
+                                        top: 2px;
+                                        left: 7px;
+                                    }
+                                }
+                            }
+                            &.previous,
+                            &.next {
+                                a {
+                                    background-color: #fff;
+                                    &:before {
+                                        top: 0;
+                                        left: 6px;
+                                    }
+                                }
+                            }
+                            &.next {
+                                a {
+                                    &:before {
+                                        top: 2px;
+                                    }
+                                }
+                            }
+                            &:first-child,
+                            &.previous,
+                            &.next,
+                            &:last-child {
+                                &.disabled {
+                                    a {
+                                        border: 1px solid $ioc-bg-pagination;
+                                        &:hover {
+                                            border: 1px solid $ioc-bg-pagination;
+                                        }
+                                    }
+                                }
+                            }
+                            &.active {
+                                a {
+                                    background-color: #fff;
+                                    font-size: 13px;
+                                    &:hover {
+                                        background-color: #fff;
+                                        border: 1px solid $ioc-bd-pagination;
+                                    }
+                                }
+                            }
+                            a {
+                                margin: 0;
+                                height: 36px;
+                                width: 36px;
+                                padding: 8px;
+                                border: 1px solid $ioc-bg-pagination;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .layout-employment {
+        margin-top: 39px;
+        background-image: url('../images/laboral-bck-mobile.jpg');
+        height: 658px;
+        .title {
+            top: 252px;
+            left: 0;
+            width: 100%;
+            h1 {
+                font-size: 12px;
+                letter-spacing: 0.3px;
+                color: $ioc-white;
+                line-height: normal;
+                text-align: center;
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+        .employment-content {
+            bottom: 36px;
+            .navbar-nav {
+                width: 290px;
+                li {
+                    width: 142px;
+                    height: 142px;
+                    margin-top: 0;
+                    margin-bottom: 6px;
+                    margin-right: 0;
+                    border: none;
+                    &:nth-child(2n+1) {
+                        margin-right: 6px;
                     }
                 }
             }
@@ -2358,44 +2382,44 @@
             }
         }
     }
-    #myCarousel {
-        .item {
-            height: 360px;
-            .logo-ioc-large {
-                img {
-                    width: 240px;
-                    top: 268px;
-                    left: 0;
-                }
-            }
-            .carousel-transparency {
-                background-image: url('../images/hero-image.jpg');
-                background-size: cover;
-                background-position: center;
-                width: 100%;
-                img {
-                    display: none;
-                }
-            }
-            video {
-                display: none;
-            }
-        }
-        .carousel-caption {
-            h2 {
-                width: 70%;
-                font-weight: 300;
-                color: #07FDDD;
-                position: absolute;
-                top: 155px;
-                left: 15%;
-                z-index: 100;
-                letter-spacing: .8px;
-                line-height: 36px;
-                font-size: 20px;
-            }
-        }
-    }
+    // #myCarousel {
+    //     .item {
+    //         height: 360px;
+    //         .logo-ioc-large {
+    //             img {
+    //                 width: 240px;
+    //                 top: 268px;
+    //                 left: 0;
+    //             }
+    //         }
+    //         .carousel-transparency {
+    //             background-image: url('../images/hero-image.jpg');
+    //             background-size: cover;
+    //             background-position: center;
+    //             width: 100%;
+    //             img {
+    //                 display: none;
+    //             }
+    //         }
+    //         video {
+    //             display: none;
+    //         }
+    //     }
+    //     .carousel-caption {
+    //         h2 {
+    //             width: 70%;
+    //             font-weight: 300;
+    //             color: #07FDDD;
+    //             position: absolute;
+    //             top: 155px;
+    //             left: 15%;
+    //             z-index: 100;
+    //             letter-spacing: .8px;
+    //             line-height: 36px;
+    //             font-size: 20px;
+    //         }
+    //     }
+    // }
     .container {
         &.all-studies {
             .substudies {
@@ -2538,12 +2562,12 @@
             //max-width: 85%;
         }
     }
-    .layout-employment {
-        height: 1000px;
-        .title {
-            bottom: 400px;
-        }
-    }
+    // .layout-employment {
+    //     height: 1000px;
+    //     .title {
+    //         bottom: 400px;
+    //     }
+    // }
     .subpagebody {
         background-size: 100vw 146px;
     }
@@ -2584,9 +2608,9 @@
 }
 
 @media all and (min-width: 768px) and (max-width: 991px) {
-    @include max-width-article(626px, 626px);
+    @include max-width-article(629px, 629px);
     .container {
-        width: 626px;
+        width: 629px;
     }
     h1 {
         font-size: 23px;
@@ -2743,6 +2767,23 @@
         }
     }
     #myCarousel {
+        .item {
+            height: 510px;
+            .carousel-caption {
+                h2 {
+                    font-size: 23px;
+                    font-weight: 300;
+                    line-height: 1.35;
+                    top: 125px;
+                }
+            }
+            .logo-ioc-large {
+                img {
+                    top: 383px;
+                    width: 316px;
+                }
+            }
+        }
         .carousel-indicators {
             li {
                 border-color: $ioc-link-navbar;
@@ -2757,14 +2798,6 @@
             position: absolute;
             top: 520px;
             height: 15px;
-        }
-        .item {
-            height: 510px;
-            .logo-ioc-large {
-                img {
-                    width: 420px;
-                }
-            }
         }
     }
 
@@ -2790,11 +2823,11 @@
                     .navbar-nav {
                         li {
                             height: 218px;
-                            width: 156px;
+                            width: 157px;
                             a {
                                 .element-img {
-                                    height: 156px;
-                                    width: 156px;
+                                    height: 157px;
+                                    width: 157px;
                                 }
                                 p {
                                     font-size: 12px;
@@ -2806,26 +2839,139 @@
             }
         }
     }
-
     #news {
+        margin-top: 68.8px;
         .container {
             &.blog-featured {
+                .title {
+                    h1 {
+                        font-size: 19px;
+                    }
+                }
                 .items-row {
+                    margin-top: 45.5px;
                     .item {
+                        width: 196px;
+                        margin-right: 20px;
                         .news-text {
-                            .item-title,
+                            h3 {
+                                font-size: 14px;
+                                margin: 17.9px 0 15.2px 0;
+                            }
                             .modified {
-                                position: static;
+                                font-size: 11px;
                             }
-                            .news-layer {
-                                display: none;
+                            .intro-featured-article {
+                                line-height: 1.5;
+                                font-size: 12px;
+                                padding-top: 22.9px;
                             }
-                            .ioctags {
-                                position: static;
-                                .tag,
-                                .tag-icon {
-                                    position: static;
+                            .readmore {
+                                a {
+                                    font-size: 9px;
+                                    font-weight: 500;
+                                    letter-spacing: 0.7px;
+                                    .custom-icon {
+                                        top: 0;
+                                        right: -16px;
+                                        &.final {
+                                            &:before {
+                                                font-size: 11px;
+                                            }
+                                        }
+                                    }
                                 }
+                            }
+                        }
+                        &:nth-child(3n) {
+                            margin-right: 0;
+                        }
+                        &.link_items {
+                            width: 100%;
+                            margin-top: 54px;
+                            h3 {
+                                font-size: 13px;
+                                font-weight: 500;
+                                margin-bottom: 13px;
+                            }
+                            .link-elements {
+                                @include flexbox();
+                                .extra-new {
+                                    width: 303px;
+                                    margin-bottom: 4px;
+                                    &:nth-child(2n) {
+                                        margin-left: 11px;
+                                    }
+                                    .more-news-icon {
+                                        display: none;
+                                    }
+                                    .more-news-title {
+                                        padding: 0 50px 0 16.7px;
+                                        a {
+                                            font-size: 12px;
+                                            font-weight: normal;
+                                            line-height: 1.25;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .content-pagination {
+                    margin: 71px 0 73.1px 0;
+                    .pagination {
+                        li {
+                            &:first-child,
+                            &.start,
+                            &:last-child,
+                            &.end {
+                                a {
+                                    font-size: 10px;
+                                    font-weight: 500;
+                                    padding-top: 9px;
+                                }
+                            }
+                            &.previous,
+                            &.next {
+                                a {
+                                    height: 33px;
+                                    width: 33px;
+                                    &:before {
+                                        top: 0;
+                                        left: 5px;
+                                    }
+                                }
+                            }
+                            &:first-child,
+                            &.start,
+                            &:last-child,
+                            &.end,
+                            &.previous,
+                            &.next {
+                                &.disabled {
+                                    a {
+                                        border: 1px solid $ioc-bg-pagination;
+                                        &:hover {
+                                            border: 1px solid $ioc-bg-pagination;
+                                        }
+                                    }
+                                }
+                            }
+                            &.active {
+                                a {
+                                    font-size: 16px;
+                                    width: 37.7px;
+                                    height: 37.7px;
+                                }
+                            }
+                            a {
+                                margin-left: 7px;
+                                height: 33px;
+                                width: 33px;
+                                padding: 8px;
+                                border: 1px solid $ioc-bg-pagination;
+                                font-size: 13px;
                             }
                         }
                     }
@@ -2833,15 +2979,35 @@
             }
         }
     }
+    .ioctags {
+        margin-top: 6.9px;
+        .tag-icon {
+            &:before {
+                font-size: 16px;
+            }
+        }
+        .tag {
+            font-size: 8px;
+            letter-spacing: .8px;
+            left: 14px;
+        }
+    }
     .layout-employment {
-        height: 1120px;
-        margin-top: 60px;
+        height: 558px;
+        .title {
+            left: 58px;
+            width: 410px;
+            h1 {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+        }
         .employment-content {
+            bottom: 62px;
             .navbar-nav {
-                max-width: 400px;
+                max-width: 652px;
                 li {
-                    width: 190px;
-                    height: 190px;
+                    margin-right: 28px;
                 }
             }
         }
@@ -3068,12 +3234,6 @@
             }
         }
     }
-    .blog-featured {
-        .item {
-            padding: 20px 15px;
-            height: 650px;
-        }
-    }
     // .container.all-studies .studies .studies-content li,
     // .container.all-studies .substudies .studies-content li {
     //     //min-height: 320px;
@@ -3098,13 +3258,6 @@
             &.left,
             &.right {
                 display: none;
-            }
-        }
-    }
-    #news {
-        .container.blog-featured {
-            .pagination {
-                margin-top: 40px;
             }
         }
     }
@@ -3389,20 +3542,6 @@
             border-top: none;
         }
     }
-    .submenu,
-    .substudies {
-        .submenu-content,
-        .substudies-content {
-            .navbar-nav {
-                //max-width: 568px;
-            }
-        }
-    }
-    // .modal-modules {
-    //     .content-modal-modules {
-    //         max-width: 630px;
-    //     }
-    // }
 }
 
 @media all and (min-width: 1199px) {
@@ -3441,10 +3580,71 @@
         }
     }
     #news {
-        .container.blog-featured {
-            .pagination {
-                margin-top: 20px;
+        .container {
+            &.blog-featured {
+                .title {
+                    h1 {
+                        font-size: 28px;
+                    }
+                }
+                .items-row {
+                    margin-top: 83px;
+                    .item {
+                        width: 248px;
+                        margin-right: 59px;
+                        .news-text {
+                            h3 {
+                                font-size: 20px;
+                                margin: 34px 0 15px 0;
+                            }
+                            .modified {
+                                font-size: 13px;
+                            }
+                            .intro-featured-article {
+                                line-height: 1.4;
+                                font-size: 15px;
+                                padding-top: 24px;
+                                padding-top: 24px;
+                            }
+                        }
+                        &.link_items {
+                            h3 {
+                                font-size: 20px;
+                                margin-bottom: 23px;
+                            }
+                            .extra-new {
+                                margin-bottom: 17px;
+                                .more-news-icon {
+                                    width: 23px;
+                                    .custom-icon {
+                                        top: -4px;
+                                        left: -6px;
+                                        width: 22px;
+                                        height: 22px;
+                                        &.fletxa {
+                                            &:before {
+                                                font-size: 22px;
+                                            }
+                                        }
+                                    }
+                                }
+                                .more-news-title {
+                                    width: 222px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .content-pagination {
+                    margin: 86px 0 128px 0;
+                }
             }
+        }
+    }
+    .ioctags {
+        margin-top: 9px;
+        .tag {
+            font-size: 9.5px;
         }
     }
     .ioc-news-container {
@@ -3493,6 +3693,13 @@
     .container {
         &.all-studies {
             .studies {
+                .title {
+                    h1 {
+                        font-size: 32px;
+                        margin-top: 67px;
+                        margin-bottom: 41px;
+                    }
+                }
                 .studies-content {
                     .navbar-nav {
                         li {
@@ -3518,7 +3725,6 @@
     }
     .layout-employment {
         height: 1047px;
-        margin-top: 60px;
         .title {
             top: 63px;
             left: 135px;

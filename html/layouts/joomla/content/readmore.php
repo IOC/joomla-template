@@ -28,7 +28,6 @@ $item = $displayData['item'];
             echo JText::_('COM_CONTENT_READ_MORE_TITLE');
             //echo JHtml::_('string.truncate', ($item->title), $params->get('readmore_limit'));
         endif; ?>
-        <!-- <span class="glyphicon glyphicon-triangle-right"></span> -->
-        <span class="custom-icon triangle"></span>
+        <span class="custom-icon final"></span>
     </a>
 </p>

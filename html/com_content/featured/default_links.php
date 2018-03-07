@@ -10,12 +10,11 @@
 defined('_JEXEC') or die;
 ?>
 <?php foreach ($this->link_items as &$item) : ?>
-    <div class="row extra-new">
-        <div class="more-news-icon col-xs-1 col-md-1">
-            <!-- <span class="glyphicon glyphicon-triangle-right"></span> -->
-            <span class="custom-icon triangle"></span>
+    <div class="extra-new">
+        <div class="more-news-icon">
+            <span class="custom-icon fletxa"></span>
         </div>
-        <div class="more-news-title col-xs-11 col-md-8">
+        <div class="more-news-title">
             <a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($item->slug, $item->catid, $item->language)); ?>">
                 <?php echo $item->title; ?>
             </a>

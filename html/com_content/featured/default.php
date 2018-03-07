@@ -161,11 +161,9 @@ $menuitems = array();
 
 <?php if ($this->params->get('show_page_heading') != 0) : ?>
   <div class="title">
-    <div class="col-xs-12">
-      <h1>
-        <?php echo $this->escape($this->params->get('page_heading')); ?>
-      </h1>
-    </div>
+    <h1>
+      <?php echo $this->escape($this->params->get('page_heading')); ?>
+    </h1>
   </div>
 <?php endif; ?>
 
@@ -187,24 +185,15 @@ $menuitems = array();
 </div>
 <?php endif; ?>
 <?php
-	$introcount = (count($this->intro_items));
 	$counter = 0;
 ?>
 <?php if (!empty($this->intro_items)) : ?>
 	<?php foreach ($this->intro_items as $key => &$item) : ?>
-
 		<?php
-		$key = ($key - $leadingcount) + 1;
-		$rowcount = (((int) $key - 1) % (int) $this->columns) + 1;
-		$row = $counter / $this->columns;
-    $columns = !empty($this->link_items) ? $this->columns + 1 : $this->columns;
-    $collg = (int) 12/ $columns;
-
-		if ($rowcount == 1) : ?>
-
-		<div class="items-row cols-<?php echo (int) $this->columns;?> <?php echo 'row-' . $row; ?> row-fluid">
+		if ($counter == 0) : ?>
+  		<div class="items-row">
 		<?php endif; ?>
-			<div class="col-lg-<?php echo $collg;?> col-md-3 col-sm-4 col-xs-12 item column-<?php echo $rowcount;?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?> span<?php echo round((12 / $this->columns));?>"
+			<div class="item <?php echo $item->state == 0 ? ' system-unpublished' : null; ?> "
 				itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
 			<?php
 					$this->item = &$item;
@@ -213,11 +202,13 @@ $menuitems = array();
 			</div>
 			<?php $counter++; ?>
 
-			<?php if (($rowcount == $this->columns) or ($counter == $introcount)) : ?>
+			<?php if ($counter == 3) : ?>
         <?php if (!empty($this->link_items)) : ?>
-          <div class="link_items items-more col-lg-<?php echo $collg;?> col-md-3 col-sm-12 item column-<?php echo $rowcount+1;?>">
-          <h3><?php echo JText::_('TPL_IOC_READ_MORE_NEWS_TITLE'); ?></h3>
-          <?php echo $this->loadTemplate('links'); ?>
+          <div class="item link_items items-more">
+            <h3><?php echo JText::_('TPL_IOC_READ_MORE_NEWS_TITLE'); ?></h3>
+            <div class="link-elements">
+              <?php echo $this->loadTemplate('links'); ?>
+            </div>
           </div>
         <?php endif; ?>
         </div>
@@ -228,7 +219,7 @@ $menuitems = array();
 
 <?php if ($this->params->def('show_pagination', 2) == 1  || ($this->params->get('show_pagination') == 2 && $this->pagination->pagesTotal > 1)) : ?>
     <div class="text-center">
-    	<div class="pagination">
+    	<div class="content-pagination">
 
     		<?php if ($this->params->def('show_pagination_results', 1)) : ?>
     			<p class="counter pull-right">

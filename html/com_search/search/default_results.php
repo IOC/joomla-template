@@ -41,7 +41,7 @@ defined('_JEXEC') or die;
 </dl>
 
 <div class="text-center">
-    <div class="pagination">
+    <div class="content-pagination">
         <?php echo $this->pagination->getPagesLinks(); ?>
     </div>
 </div>
