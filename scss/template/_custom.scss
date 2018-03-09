@@ -1023,7 +1023,7 @@ header.headroom--not-top {
         margin: 194px auto 0 auto;
     }
     div.item-page-default {
-        margin: 50px auto 0 auto;
+        margin: 78px auto 88px auto;
         max-width: 1170px;
         .page-header {
             h2 {
@@ -1163,6 +1163,7 @@ header.headroom--not-top {
                     padding: 0;
                     width: 100%;
                     height: 100%;
+                    z-index: 1;
                     &:focus,
                     &:hover {
                         text-decoration: underline;
@@ -1977,6 +1978,7 @@ header.headroom--not-top {
             }
             .content-pagination {
                 width: 100%;
+                text-align: center;
                 margin: 78px 0 106px 0;
                 .pagination {
                     text-align: center;
@@ -2002,13 +2004,16 @@ header.headroom--not-top {
                                 width: auto;
                             }
                         }
+                        &:first-child,
                         &.start,
-                        &.end {
+                        &.end,
+                        &:last-child {
                             a {
                                 font-size: 12px;
                                 font-weight: 500;
                                 letter-spacing: 1.26px;
                                 padding-top: 11px;
+                                width: 68px;
                             }
                         }
                         &.previous,
@@ -2059,7 +2064,7 @@ header.headroom--not-top {
                             border-color: $ioc-bd-pagination;
                             background-color: #fff;
                             margin-left: 8px;
-                            padding: 9px 10px;
+                            padding: 9px 0;
                             width: 40px;
                             height: 40px;
                             text-transform: uppercase;
@@ -2782,53 +2787,53 @@ body {
                                 background-position: center center;
                                 &.acfgs {
                                     img {
-                                        transform: scale(1) translate(28%, 28%);
+                                        transform: scale(.7) translate(8%, 6%);
                                     }
                                 }
                                 &.btx {
                                     img {
-                                        transform: scale(1) translate(-41%, 32%);
+                                        transform: scale(.7) translate(-62%, 10%)
                                     }
                                 }
                                 &.competic {
                                     img {
-                                        transform: translate(0, 0);
+                                        transform: scale(.7) translate(-22%, -22%);
                                     }
                                 }
                                 &.eoi {
                                     img {
-                                        transform: translate(0px, 39%);
+                                        transform: scale(.75) translate(-22%, 19%);
                                     }
                                 }
                                 &.fesp {
-                                        img {
-                                            transform: translate(0, 0);
-                                        }
+                                    img {
+                                        transform: scale(.7) translate(-23%, -22%);
+                                    }
                                 }
 
                                 &.fp {
-                                        img {
-                                            transform: scale(1) translate(30%, 33%);
-                                        }
+                                    img {
+                                        transform: scale(.7) translate(8%, 13%);
+                                    }
                                 }
                                 &.fpd {
-                                        img {
-                                            transform: scale(1) translate(64%, 16%);
-                                        }
+                                    img {
+                                        transform: scale(.7) translate(43%, -5%);
+                                    }
                                 }
                                 &.ges {
                                     img {
-                                        transform: translate(-39%, 0);
+                                        transform: scale(.7) translate(-59%, -21%);
                                     }
                                 }
                                 &.miniops {
                                     img {
-                                        transform: scale(1) translate(48%, -56%);
+                                        transform: scale(.7) translate(27%, -77%);
                                     }
                                 }
                                 &.pau {
                                     img {
-                                        transform: translate(0, 0);
+                                        transform: scale(.7) translate(-22%, -21%);
                                     }
                                 }
                                 img {

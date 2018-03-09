@@ -2039,6 +2039,10 @@
             }
         }
     }
+    #main-box div.item-page-default {
+        margin-top: 69px;
+        margin-bottom: 77px;
+    }
     .item-page-study {
         &.acfgs,
         &.btx {
@@ -2726,6 +2730,10 @@
             }
         }
     }
+    #main-box div.item-page-default {
+        margin-top: 78px;
+        margin-bottom: 90px;
+    }
     .item-page-study {
         &.acfgs,
         &.btx {
@@ -2828,6 +2836,62 @@
                                 .element-img {
                                     height: 157px;
                                     width: 157px;
+                                    transform: scale(1);
+                                    &.acfgs {
+                                        img {
+                                            transform: scale(.525) translate(-15%, -16%);
+                                        }
+                                    }
+                                    &.btx {
+                                        img {
+                                            transform: scale(.525) translate(-85%, -13%)
+                                        }
+                                    }
+                                    &.competic {
+                                        img {
+                                            transform: scale(.525) translate(-45%, -45%);
+                                        }
+                                    }
+                                    &.eoi {
+                                        img {
+                                            transform: scale(.55) translate(-41%, -3%);
+                                        }
+                                    }
+                                    &.fesp {
+                                        img {
+                                            transform: scale(.53) translate(-45%, -45%);
+                                        }
+                                    }
+
+                                    &.fp {
+                                        img {
+                                            transform: scale(.525) translate(-13%, -12%);
+                                        }
+                                    }
+                                    &.fpd {
+                                        img {
+                                            transform: scale(.525) translate(20%, -28%);
+                                        }
+                                    }
+                                    &.ges {
+                                        img {
+                                            transform: scale(.525) translate(-82%, -45%);
+                                        }
+                                    }
+                                    &.miniops {
+                                        img {
+                                            transform: scale(.525) translate(3%, -101%);
+                                        }
+                                    }
+                                    &.pau {
+                                        img {
+                                            transform: scale(.53) translate(-45%, -44%);
+                                        }
+                                    }
+                                    img {
+                                        transition: transform .2s ease-out;
+                                        max-width: inherit;
+                                    }
                                 }
                                 p {
                                     font-size: 12px;
@@ -2930,6 +2994,7 @@
                                     font-size: 10px;
                                     font-weight: 500;
                                     padding-top: 9px;
+                                    width: 56px;
                                 }
                             }
                             &.previous,
@@ -2969,7 +3034,7 @@
                                 margin-left: 7px;
                                 height: 33px;
                                 width: 33px;
-                                padding: 8px;
+                                padding: 8px 0;
                                 border: 1px solid $ioc-bg-pagination;
                                 font-size: 13px;
                             }
@@ -3708,6 +3773,62 @@
                                 .element-img {
                                     height: 292px;
                                     width: 292px;
+                                    transform: scale(1);
+                                    &.acfgs {
+                                        img {
+                                            transform: translate(28%, 28%);
+                                        }
+                                    }
+                                    &.btx {
+                                        img {
+                                            transform: translate(-41%, 32%);
+                                        }
+                                    }
+                                    &.competic {
+                                        img {
+                                            transform: translate(0, 0);
+                                        }
+                                    }
+                                    &.eoi {
+                                        img {
+                                            transform: translate(0, 39%);
+                                        }
+                                    }
+                                    &.fesp {
+                                            img {
+                                                transform: translate(0, 0);
+                                            }
+                                    }
+
+                                    &.fp {
+                                            img {
+                                                transform: translate(30%, 33%);
+                                            }
+                                    }
+                                    &.fpd {
+                                            img {
+                                                transform: translate(64%, 16%);
+                                            }
+                                    }
+                                    &.ges {
+                                        img {
+                                            transform: translate(-39%, 0);
+                                        }
+                                    }
+                                    &.miniops {
+                                        img {
+                                            transform: translate(48%, -56%);
+                                        }
+                                    }
+                                    &.pau {
+                                        img {
+                                            transform: translate(0, 0);
+                                        }
+                                    }
+                                    img {
+                                        transition: transform .2s ease-out;
+                                        max-width: inherit;
+                                    }
                                 }
                                 p {
                                     font-size: 16px;
@@ -3772,6 +3893,10 @@
                 }
             }
         }
+    }
+    #main-box div.item-page-default {
+        margin-top: 110px;
+        margin-bottom: 122px;
     }
     .item-page-study {
         &.acfgs,
