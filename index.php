@@ -25,16 +25,19 @@ if ($menu->getActive() == $menu->getDefault($lang->getTag())
 } else {
     $frontpage = '';
 }
+$pageclass = '';
 $imgpath = 'templates/' . $app->getTemplate() . '/images/';
 $itemid = JRequest::getVar('Itemid');
-$active = $menu->getItem($itemid);
-$params = $menu->getParams( $active->id );
-$pageclass = $params->get( 'pageclass_sfx' );
-$suffixes = array(
-    'logo_',
-    'subpage_'
-);
-$pageclass = str_replace($suffixes, '', $pageclass);
+if ($itemid) {
+    $active = $menu->getItem($itemid);
+    $params = $menu->getParams( $active->id );
+    $pageclass = $params->get( 'pageclass_sfx' );
+    $suffixes = array(
+        'logo_',
+        'subpage_'
+    );
+    $pageclass = str_replace($suffixes, '', $pageclass);
+}
 ?>
 <body class="<?php echo $frontpage;?>">
 <?php

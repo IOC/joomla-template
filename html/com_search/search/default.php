@@ -10,18 +10,12 @@
 defined('_JEXEC') or die;
 JHtml::_('formbehavior.chosen', 'select');
 ?>
-
-<div class="search<?php echo $this->pageclass_sfx; ?> container">
-<?php if ($this->params->get('show_page_heading')) : ?>
-<h1 class="page-title">
-    <?php if ($this->escape($this->params->get('page_heading'))) :?>
-        <?php echo $this->escape($this->params->get('page_heading')); ?>
-    <?php else : ?>
-        <?php echo $this->escape($this->params->get('page_title')); ?>
-    <?php endif; ?>
-</h1>
-<?php endif; ?>
-
+<div class="fluid-container page-header default ">
+    <div class="container">
+        <h1><?php echo $this->escape($this->params->get('page_title')); ?></h1>
+    </div>
+</div>
+<div class="item-page-default search<?php echo $this->pageclass_sfx; ?> container">
 <?php echo $this->loadTemplate('form'); ?>
 <?php if ($this->error == null && count($this->results) > 0) :
     echo $this->loadTemplate('results');

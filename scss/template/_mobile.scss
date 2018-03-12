@@ -52,6 +52,13 @@
             margin-left: auto;
             margin-right: auto;
         }
+        &.search {
+            div, span, p, dd {
+                width: auto;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
     }
     @if ($maxcustom) {
         .item-page-default {
@@ -174,6 +181,11 @@
         .tiny-campus {
             button {
                 margin-top: 9px;
+            }
+        }
+        & ~ section {
+            .form-search {
+                top: 54px;
             }
         }
     }
@@ -927,6 +939,42 @@
             }
         }
     }
+    .error {
+        .error-text {
+            .errorcode {
+                top: 95px;
+                font-size: 65px;
+            }
+            .errormessage {
+                font-size: 20px;
+            }
+        }
+        .error-search {
+            background-size: 100vw 230px;
+            .form-inline {
+                height: 40px;
+                .search-query {
+                    width: 100%;
+                    height: 40px;
+                    font-size: 14px;
+                    padding: 6px 12px;
+                }
+                .btn-search {
+                    height: 40px;
+                    width: 40px;
+                    &:before {
+                        top: 12px;
+                        left: 12px;
+                    }
+                }
+            }
+            .btn-primary {
+                height: 40px;
+                line-height: 40px;
+                font-size: 14px;
+            }
+        }
+    }
 }
 
 @media all and (max-width: 480px) {
@@ -942,7 +990,7 @@
         margin-top: 30px;
         margin-bottom: 19px;
     }
-    h3, h4, h5 {
+    h3, h4, h5, legend {
         font-size: 15px;
         font-weight: 500;
         margin-top: 27px;
@@ -1518,6 +1566,27 @@
             }
         }
     }
+    .search {
+            .btn-group.pull-left {
+                max-width: 84%;
+            }
+            .btn {
+                position: relative;
+                width: 40px;
+                text-indent: 100px;
+                color: transparent;
+                padding: 0;
+                &:hover {
+                    color: $ioc-white;
+                }
+                &:before {
+                    position: absolute;
+                    top: 10px;
+                    left: 12px;
+                    text-indent: 0;
+                }
+        }
+    }
     .footer {
         .mobile {
             text-align: center;
@@ -1746,13 +1815,17 @@
                                 position: absolute;
                                 bottom: 0;
                             }
+                            .item-title,
+                            .modified,
+                            .ioctags {
+                                left: 16px;
+                            }
                             .item-title {
                                 &:hover {
                                     text-decoration: underline;
                                 }
                                 position: absolute;
-                                bottom: 30px;
-                                left: 16px;
+                                bottom: 37px;
                                 width: 85%;
                                 height: 30px;
                                 @include flexbox();
@@ -1766,24 +1839,11 @@
                             .modified {
                                 position: absolute;
                                 font-size: 10px;
-                                bottom: 10px;
-                                left: 16px;
+                                bottom: 20px;
                             }
                             .ioctags {
                                 position: absolute;
-                                left: 150px;
-                                bottom: 10px;
-                                .tag-icon {
-                                    display: none;
-                                }
-                                .tag {
-                                    position: relative;
-                                    &:before {
-                                        content: '|';
-                                        color: $ioc-tag-separator;
-                                        margin-right: 5.5px;
-                                    }
-                                }
+                                bottom: 15px;
                             }
                         }
                         &.link_items {
@@ -1819,112 +1879,118 @@
                         }
                     }
                 }
-                .content-pagination {
-                    margin: 14px 0 45px 0;
-                    .pagination {
-                        li {
-                            &.pagenumber {
-                                display: none;
-                            }
-                            &:first-child,
-                            &.previous,
-                            &.next,
-                            &.active,
-                            &.start,
-                            &.end {
-                                a {
-                                    height: 36px;
-                                    width: 36px;
-                                    margin: 0 -1px;
-                                    border: 1px solid $ioc-bg-pagination;
-                                    &:hover {
-                                        border-color: $ioc-bg-footer-t;
-                                    }
-                                }
-                            }
-                            &:first-child,
-                            &.start {
-                                a {
-                                    position: relative;
-                                    text-indent: -200vw;
-                                    transform: rotate(180deg);
-                                    &:before {
-                                        content: '\e90b';
-                                        font-family: 'ioc-icons';
-                                        font-size: 22px;
-                                        text-indent: 0;
-                                        position: absolute;
-                                        top: 0;
-                                        left: 7px;
-                                    }
-                                }
-                            }
-                            &:last-child,
-                            &.end {
-                                a {
-                                    position: relative;
-                                    text-indent: 200vw;
-                                    &:before {
-                                        content: '\e90b';
-                                        font-family: 'ioc-icons';
-                                        font-size: 22px;
-                                        text-indent: 0;
-                                        position: absolute;
-                                        top: 2px;
-                                        left: 7px;
-                                    }
-                                }
-                            }
-                            &.previous,
-                            &.next {
-                                a {
-                                    background-color: #fff;
-                                    &:before {
-                                        top: 0;
-                                        left: 6px;
-                                    }
-                                }
-                            }
-                            &.next {
-                                a {
-                                    &:before {
-                                        top: 2px;
-                                    }
-                                }
-                            }
-                            &:first-child,
-                            &.previous,
-                            &.next,
-                            &:last-child {
-                                &.disabled {
-                                    a {
-                                        border: 1px solid $ioc-bg-pagination;
-                                        &:hover {
-                                            border: 1px solid $ioc-bg-pagination;
-                                        }
-                                    }
-                                }
-                            }
-                            &.active {
-                                a {
-                                    background-color: #fff;
-                                    font-size: 13px;
-                                    &:hover {
-                                        background-color: #fff;
-                                        border: 1px solid $ioc-bd-pagination;
-                                    }
-                                }
-                            }
-                            a {
-                                margin: 0;
-                                height: 36px;
-                                width: 36px;
-                                padding: 8px;
+            }
+        }
+    }
+    .search {
+        .content-pagination {
+            margin: 45px 0 0 0;
+        }
+    }
+    .content-pagination {
+        margin: 14px 0 45px 0;
+        .pagination {
+            li {
+                &.pagenumber {
+                    display: none;
+                }
+                &:first-child,
+                &:last-child,
+                &.previous,
+                &.next,
+                &.active,
+                &.start,
+                &.end {
+                    a {
+                        height: 36px;
+                        width: 36px;
+                        margin: 0 -1px;
+                        border: 1px solid $ioc-bg-pagination;
+                        &:hover {
+                            border-color: $ioc-bg-footer-t;
+                        }
+                    }
+                }
+                &:first-child,
+                &.start {
+                    a {
+                        position: relative;
+                        text-indent: -200vw;
+                        transform: rotate(180deg);
+                        &:before {
+                            content: '\e90b';
+                            font-family: 'ioc-icons';
+                            font-size: 22px;
+                            text-indent: 0;
+                            position: absolute;
+                            top: 0;
+                            left: 7px;
+                        }
+                    }
+                }
+                &:last-child,
+                &.end {
+                    a {
+                        position: relative;
+                        text-indent: 200vw;
+                        &:before {
+                            content: '\e90b';
+                            font-family: 'ioc-icons';
+                            font-size: 22px;
+                            text-indent: 0;
+                            position: absolute;
+                            top: 2px;
+                            left: 7px;
+                        }
+                    }
+                }
+                &.previous,
+                &.next {
+                    a {
+                        background-color: #fff;
+                        &:before {
+                            top: 0;
+                            left: 6px;
+                        }
+                    }
+                }
+                &.next {
+                    a {
+                        &:before {
+                            top: 2px;
+                        }
+                    }
+                }
+                &:first-child,
+                &.previous,
+                &.next,
+                &:last-child {
+                    &.disabled {
+                        a {
+                            border: 1px solid $ioc-bg-pagination;
+                            &:hover {
                                 border: 1px solid $ioc-bg-pagination;
-                                font-size: 13px;
                             }
                         }
                     }
+                }
+                &.active {
+                    a {
+                        background-color: #fff;
+                        font-size: 13px;
+                        &:hover {
+                            background-color: #fff;
+                            border: 1px solid $ioc-bd-pagination;
+                        }
+                    }
+                }
+                a {
+                    margin: 0;
+                    height: 36px;
+                    width: 36px;
+                    padding: 8px;
+                    border: 1px solid $ioc-bg-pagination;
+                    font-size: 13px;
                 }
             }
         }
@@ -2326,7 +2392,7 @@
         margin-top: 52px;
         margin-bottom: 26px;
     }
-    h3, h4, h5 {
+    h3, h4, h5, legend {
         font-size: 19px;
         font-weight: 500;
         margin-top: 44px;
@@ -2627,7 +2693,7 @@
         margin-top: 52px;
         margin-bottom: 26px;
     }
-    h3, h4, h5 {
+    h3, h4, h5, legend {
         font-size: 19px;
         font-weight: 500;
         margin-top: 44px;
@@ -2970,11 +3036,11 @@
                                         display: none;
                                     }
                                     .more-news-title {
-                                        padding: 0 50px 0 16.7px;
                                         a {
                                             font-size: 12px;
                                             font-weight: normal;
                                             line-height: 1.25;
+                                            padding: 0 50px 0 16.7px;
                                         }
                                     }
                                 }
@@ -2982,64 +3048,64 @@
                         }
                     }
                 }
-                .content-pagination {
-                    margin: 71px 0 73.1px 0;
-                    .pagination {
-                        li {
-                            &:first-child,
-                            &.start,
-                            &:last-child,
-                            &.end {
-                                a {
-                                    font-size: 10px;
-                                    font-weight: 500;
-                                    padding-top: 9px;
-                                    width: 56px;
-                                }
-                            }
-                            &.previous,
-                            &.next {
-                                a {
-                                    height: 33px;
-                                    width: 33px;
-                                    &:before {
-                                        top: 0;
-                                        left: 5px;
-                                    }
-                                }
-                            }
-                            &:first-child,
-                            &.start,
-                            &:last-child,
-                            &.end,
-                            &.previous,
-                            &.next {
-                                &.disabled {
-                                    a {
-                                        border: 1px solid $ioc-bg-pagination;
-                                        &:hover {
-                                            border: 1px solid $ioc-bg-pagination;
-                                        }
-                                    }
-                                }
-                            }
-                            &.active {
-                                a {
-                                    font-size: 16px;
-                                    width: 37.7px;
-                                    height: 37.7px;
-                                }
-                            }
-                            a {
-                                margin-left: 7px;
-                                height: 33px;
-                                width: 33px;
-                                padding: 8px 0;
+            }
+        }
+    }
+    .content-pagination {
+        margin: 71px 0 73.1px 0;
+        .pagination {
+            li {
+                &:first-child,
+                &.start,
+                &:last-child,
+                &.end {
+                    a {
+                        font-size: 10px;
+                        font-weight: 500;
+                        padding-top: 9px;
+                        width: 56px;
+                    }
+                }
+                &.previous,
+                &.next {
+                    a {
+                        height: 33px;
+                        width: 33px;
+                        &:before {
+                            top: 0;
+                            left: 5px;
+                        }
+                    }
+                }
+                &:first-child,
+                &.start,
+                &:last-child,
+                &.end,
+                &.previous,
+                &.next {
+                    &.disabled {
+                        a {
+                            border: 1px solid $ioc-bg-pagination;
+                            &:hover {
                                 border: 1px solid $ioc-bg-pagination;
-                                font-size: 13px;
                             }
                         }
                     }
+                }
+                &.active {
+                    a {
+                        font-size: 16px;
+                        width: 37.7px;
+                        height: 37.7px;
+                    }
+                }
+                a {
+                    margin-left: 6px;
+                    height: 33px;
+                    width: 33px;
+                    padding: 8px 0;
+                    border: 1px solid $ioc-bg-pagination;
+                    font-size: 13px;
                 }
             }
         }
@@ -3219,6 +3285,11 @@
                 margin-top: 46px;
                 &.in {
                     margin-top: 21px;
+                    .filter-text {
+                        &:after {
+                            transform: rotate(270deg);
+                        }
+                    }
                 }
                 .filter-text {
                     height: 28px;
@@ -3226,9 +3297,11 @@
                     font-size: 10px;
                     padding: 6px 16px 6px 6px;
                     &:after {
-                        height: 8px;
+                        font-size: 8px;
+                        height: 14px;
                         width: 8px;
-                        top: 11px;
+                        top: 6px;
+                        right: 11px;
                     }
 
                 }
@@ -3700,11 +3773,11 @@
                         }
                     }
                 }
-                .content-pagination {
-                    margin: 86px 0 128px 0;
-                }
             }
         }
+    }
+    .content-pagination {
+        margin: 86px 0 128px 0;
     }
     .ioctags {
         margin-top: 9px;

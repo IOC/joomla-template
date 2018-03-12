@@ -20,24 +20,23 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
   <link rel="stylesheet" href="<?php echo $tpath; ?>/css/template.min.css" type="text/css" />
   <link rel="shortcut icon" href="<?php echo $tpath; ?>/favicon.ico" type="image/vnd.microsoft.icon" />
 </head>
-<body class="error">
-  <div class="fluid-container">
+<body>
+  <div class="fluid-container error">
     <div class="error-bg">
       <div class="error-text">
-        <img src="<?php echo $tpath; ?>/images/ioc_logo.png" />
-        <h3><?php echo htmlspecialchars($app->getCfg('sitename')); ?></h3>
-        <h1> <?php echo $this->error->getCode(); ?></h1>
-        <h3><?php echo $this->error->getMessage(); ?></h3>
+        <img class="sitelogo" src="<?php echo $tpath; ?>/images/ioc_logo.png" />
+        <div class="errorcode"> <?php echo $this->error->getCode(); ?></div>
+        <div class="errormessage"><?php echo $this->error->getMessage(); ?></div>
       </div>
     </div>
-    <div class="container error-search">
-        <?php // Render module mod_search.
-            $module = JModuleHelper::getModule('mod_search');
-            echo JModuleHelper::renderModule($module);
-        ?>
-    </div>
-    <div class="container">
-        <a class="btn btn-primary btn-lg" href="<?php echo $this->baseurl; ?>/" title="<?php echo JText::_('HOME'); ?>"><?php echo JText::_('JERROR_LAYOUT_GO_TO_THE_HOME_PAGE'); ?></a>
+    <div class="error-search">
+      <div class="container">
+          <?php // Render module mod_search.
+              $module = JModuleHelper::getModule('mod_search');
+              echo JModuleHelper::renderModule($module);
+          ?>
+          <a class="btn btn-primary btn-lg" href="<?php echo $this->baseurl; ?>/" title="<?php echo JText::_('HOME'); ?>"><?php echo JText::_('JERROR_LAYOUT_GO_TO_THE_HOME_PAGE'); ?></a>
+      </div>
     </div>
     <div id="footer" class="footer">
         <?php // Render module footer.
@@ -47,4 +46,15 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
     </div>
   </div>
 </body>
+<script type="text/javascript">
+  var node = document.getElementById('deleteinputcontent');
+  var input;
+  if (node) {
+    node.addEventListener('click', function() {
+      input = document.getElementById('mod-search-searchword');
+      input.value = '';
+      input.focus();
+    });
+  }
+</script>
 </html>

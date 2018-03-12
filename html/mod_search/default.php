@@ -32,7 +32,7 @@ else
             $output .= '<input name="searchword" id="mod-search-searchword" maxlength="' . $maxlength . '"  class="inputbox search-query" type="search"' . $width;
             $output .= ' placeholder="' . $text . '" />';
             //$output .= '<button type="reset" title="Esborra" class="btn btn-default btn-reset-search"><span class="glyphicon glyphicon-remove"></span></button>';
-            $output .= '<span class="custom-icon delete visible-xs visible-sm"></span>';
+            $output .= '<span id="deleteinputcontent" class="custom-icon delete visible-xs visible-sm"></span>';
             if ($button) :
                 if ($imagebutton) :
                     $btn_output = ' <input type="image" alt="' . $button_text . '" class="button" src="' . $img . '" onclick="this.form.searchword.focus();"/>';
