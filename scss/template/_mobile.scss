@@ -46,18 +46,11 @@
     .item-page-default,
     .page-default {
         h1, h2, h3, p, ul, ol, table,
-        div, span, dd {
+        div, span, dd, dl, fieldset {
             max-width: $maxdefault;
-            width: 100%;
+            //width: 100%;
             margin-left: auto;
             margin-right: auto;
-        }
-        &.search {
-            div, span, p, dd {
-                width: auto;
-                margin-left: 0;
-                margin-right: 0;
-            }
         }
     }
     @if ($maxcustom) {
@@ -1152,6 +1145,19 @@
     }
     /* Customization for studies, Parallax, Banners, layouts */
     #main-box {
+        div.item-page-default {
+            &.search {
+                .search-results {
+                    .result-data {
+                        .result-category {
+                            .small {
+                                font-size: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         div.item-page-study {
             padding-top: 30px;
             margin-top: -$ioc-header-margin;
@@ -1566,27 +1572,6 @@
             }
         }
     }
-    .search {
-            .btn-group.pull-left {
-                max-width: 84%;
-            }
-            .btn {
-                position: relative;
-                width: 40px;
-                text-indent: 100px;
-                color: transparent;
-                padding: 0;
-                &:hover {
-                    color: $ioc-white;
-                }
-                &:before {
-                    position: absolute;
-                    top: 10px;
-                    left: 12px;
-                    text-indent: 0;
-                }
-        }
-    }
     .footer {
         .mobile {
             text-align: center;
@@ -1882,9 +1867,27 @@
             }
         }
     }
-    .search {
-        .content-pagination {
-            margin: 45px 0 0 0;
+    #main-box {
+        div {
+            &.item-page-default {
+                &.search {
+                    .btn-group.pull-left {
+                        max-width: 84%;
+                        .inputbox {
+                            width: 100%;
+                        }
+                    }
+                    .btn {
+                        padding: 0;
+                        &:hover {
+                            color: $ioc-white;
+                        }
+                    }
+                    .content-pagination {
+                        margin: 45px 0 0 0;
+                    }
+                }
+            }
         }
     }
     .content-pagination {

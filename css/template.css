@@ -1092,6 +1092,21 @@ header.headroom--not-top .navbar-default .login-clone-campus {
 .ioc-front-page .headroom--top .navbar-default .ioc-logo, .ioc-front-page .headroom--top .navbar-default .login-clone-campus {
   display: none;
 }
+.ioc-front-page .navbar-default .login-clone-campus:hover {
+  color: #01c1b9;
+}
+.ioc-front-page .navbar-default .navbar-collapse .navbar-nav li a:hover {
+  color: #01c1b9;
+}
+.ioc-front-page .login-clone-campus:hover .custom-icon, .ioc-front-page .tiny-campus:hover .custom-icon {
+  color: #01c1b9;
+}
+.ioc-front-page .tiny-search button[aria-expanded="true"], .ioc-front-page .tiny-campus button[aria-expanded="true"], .ioc-front-page .tiny-search button:hover, .ioc-front-page .tiny-campus button:hover {
+  color: #01c1b9;
+}
+.ioc-front-page .ioc-search button:hover span, .ioc-front-page .tiny-search button:hover span, .ioc-front-page .ioc-search button:hover .custom-icon, .ioc-front-page .tiny-search button:hover .custom-icon {
+  color: #01c1b9;
+}
 .ioc-front-page #wrap .container {
   max-width: 1170px;
 }
@@ -1300,7 +1315,7 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   border-style: solid;
 }
 .navbar-default .login-clone-campus:hover {
-  color: #01c1b9;
+  color: #63749d;
   text-decoration: none;
 }
 .navbar-default .login-clone-campus .custom-icon {
@@ -1377,7 +1392,7 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   font-weight: 400;
 }
 .navbar-default .navbar-collapse .navbar-nav li a:hover {
-  color: #01c1b9;
+  color: #63749d;
 }
 .navbar-default .navbar-collapse .navbar-nav li.active {
   font-weight: 600;
@@ -1417,20 +1432,126 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   font-weight: 600;
 }
 #main-box div.item-page-default.search {
-  margin-top: 5px;
+  margin-top: 112px;
+  padding: 0 15px;
+}
+#main-box div.item-page-default.search .page-title {
+  text-align: center;
+  margin-bottom: 67px;
+}
+#main-box div.item-page-default.search .phrases legend {
+  margin-top: 30px;
+}
+#main-box div.item-page-default.search .searchintro {
+  background-color: #f2f6f9;
+  text-align: center;
+  padding: 37px 0 27px 0;
+  margin-top: 50px;
+}
+#main-box div.item-page-default.search .searchintro .total_results {
+  font-weight: 600;
+}
+#main-box div.item-page-default.search .searchintro .form-limit {
+  margin-bottom: 29px;
+  font-size: 14px;
+}
+#main-box div.item-page-default.search .searchintro .form-limit label {
+  display: inline;
+}
+#main-box div.item-page-default.search .searchintro .form-limit .chzn-container .chzn-single {
+  min-width: 69px;
+}
+#main-box div.item-page-default.search .searchintro p {
+  margin-bottom: 29px;
 }
 #main-box div.item-page-default.search .searchintro p strong {
   vertical-align: middle;
 }
-#main-box div.item-page-default.search .search-results .result-title {
-  border-top: 1px solid #ddd;
-  padding-top: 1em;
-  margin-top: 0.5em;
+#main-box div.item-page-default.search .searchintro .counter {
+  margin: 0;
+  font-size: 14px;
 }
-#main-box div.item-page-default.search .search-results .result-title:first-child {
+#main-box div.item-page-default.search .ordering-box label {
+  display: inline-block;
+}
+#main-box div.item-page-default.search .ordering-box .chzn-container-single .chzn-single {
+  width: auto;
+}
+#main-box div.item-page-default.search .chzn-container {
+  display: inline-block;
+  width: auto !important;
+}
+#main-box div.item-page-default.search .chzn-container .chzn-drop {
+  width: auto;
+}
+#main-box div.item-page-default.search .chzn-container .chzn-single {
+  height: 40px;
+  width: auto;
+  border-radius: 0;
+  border: 1px solid #202b47;
+  background-color: white;
+  background-image: none;
+  padding: 0;
+  margin: 0 3px;
+}
+#main-box div.item-page-default.search .chzn-container .chzn-single span {
+  font-size: 14px;
+  vertical-align: middle;
+  line-height: 40px;
+  margin-right: 30px;
+  padding: 0 10px;
+}
+#main-box div.item-page-default.search .chzn-container .chzn-single div {
+  width: 31px;
+}
+#main-box div.item-page-default.search .chzn-container .chzn-single div b {
+  position: relative;
+  background-color: #202b47;
+  background-image: none;
+}
+#main-box div.item-page-default.search .chzn-container .chzn-single div b:before {
+  content: '\e90c';
+  font-family: 'ioc-icons';
+  font-size: 10px;
+  color: #fff;
+  transform: rotate(90deg);
+  position: absolute;
+  top: 5px;
+  left: 12px;
+}
+#main-box div.item-page-default.search .search-results .result-data {
+  border-top: 1px solid #d7d9de;
+  padding: 27.5px 24px 0 24px;
+  margin-top: 23.5px;
+}
+#main-box div.item-page-default.search .search-results .result-data:first-child {
   border-top: none;
   padding-top: 0;
-  margin-top: 0;
+  margin-top: 62px;
+}
+#main-box div.item-page-default.search .search-results .result-data a {
+  color: #354959;
+  text-decoration: none;
+}
+#main-box div.item-page-default.search .search-results .result-data .result-title {
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 11px;
+  line-height: 1.53;
+}
+#main-box div.item-page-default.search .search-results .result-data .result-category {
+  margin-top: 17.5px;
+}
+#main-box div.item-page-default.search .search-results .result-data .result-category .small {
+  text-transform: uppercase;
+  background-color: #f2f6f9;
+  padding: 0 10px;
+  font-size: 9.5px;
+  font-weight: 500;
+  letter-spacing: 0.9px;
+  height: 20px;
+  line-height: 20px;
+  display: inline-block;
 }
 #main-box div.item-page-default.search .content-pagination {
   text-align: center;
@@ -1445,18 +1566,26 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   background-color: #202b47;
 }
 #main-box div.item-page-default.search .inputbox {
+  float: left;
   height: 40px;
-  width: 100%;
+  width: -webkit-calc(100% - 40px);
+  width: -moz-calc(100% - 40px);
+  width: calc(100% - 40px);
+  max-width: 100%;
   border-color: #202b47;
 }
-#main-box div.item-page-default.search .btn-toolbar {
-  max-width: 100%;
+#main-box div.item-page-default.search .btn-toolbar .btn-group {
+  width: 100%;
+  margin: 0;
 }
 #main-box div.item-page-default.search .btn {
+  position: relative;
   height: 40px;
+  width: 40px;
+  text-indent: 100px;
+  color: transparent;
   border: none;
   background-color: #202b47;
-  color: #fff;
   border-radius: 0;
   font-size: 16px;
 }
@@ -1464,6 +1593,10 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   content: '\e906';
   font-family: 'ioc-icons';
   color: #dee3e7;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  text-indent: 0;
 }
 #main-box div.item-page-default.search .btn:hover {
   color: #4bcdaf;
@@ -1473,9 +1606,6 @@ header.headroom--not-top .navbar-default .login-clone-campus {
 }
 #main-box div.item-page-default.search .btn .icon-search {
   display: none;
-}
-#main-box div.item-page-default.search .chzn-container-single .chzn-single div {
-  width: 18px;
 }
 #main {
   padding-top: 0;
@@ -5938,7 +6068,7 @@ div[class*="item-page-fp-"] .subpagebody {
   margin-top: 10px;
 }
 .tiny-search button[aria-expanded="true"], .tiny-campus button[aria-expanded="true"], .tiny-search button:hover, .tiny-campus button:hover {
-  color: #01c1b9;
+  color: #63749d;
 }
 .custom-icon {
   display: inline-block;
@@ -5948,7 +6078,7 @@ div[class*="item-page-fp-"] .subpagebody {
   background-size: contain;
 }
 .ioc-search button:hover span, .tiny-search button:hover span, .ioc-search button:hover .custom-icon, .tiny-search button:hover .custom-icon {
-  color: #01c1b9;
+  color: #63749d;
 }
 .ioc-search .custom-icon:before, .tiny-search .custom-icon:before {
   content: '\e906';
@@ -5976,7 +6106,7 @@ div[class*="item-page-fp-"] .subpagebody {
    }*/
 }
 .login-clone-campus:hover .custom-icon, .tiny-campus:hover .custom-icon {
-  color: #01c1b9;
+  color: #63749d;
 }
 .login-clone-campus .custom-icon:before, .tiny-campus .custom-icon:before {
   content: '\e910';
@@ -7491,16 +7621,10 @@ div[class*="item-page-"] table p {
 }
 @media all and (max-width: 480px) {
   /* Customization for studies, Parallax, Banners, layouts */
-  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span, .item-page-default dd, .page-default dd {
+  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span, .item-page-default dd, .page-default dd, .item-page-default dl, .page-default dl, .item-page-default fieldset, .page-default fieldset {
     max-width: 290px;
-    width: 100%;
     margin-left: auto;
     margin-right: auto;
-  }
-  .item-page-default.search div, .page-default.search div, .item-page-default.search span, .page-default.search span, .item-page-default.search p, .page-default.search p, .item-page-default.search dd, .page-default.search dd {
-    width: auto;
-    margin-left: 0;
-    margin-right: 0;
   }
   .item-page-default.resource h1, .item-page-default.resource h2, .item-page-default.resource h3, .item-page-default.resource p, .item-page-default.resource ul, .item-page-default.resource ol, .item-page-default.resource table, .item-page-default.resource div, .item-page-default.resource span, .item-page-default.resource dd {
     max-width: 100%;
@@ -7628,6 +7752,9 @@ div[class*="item-page-"] table p {
     color: #fff;
     left: 0;
     padding: 0 10px;
+  }
+  #main-box div.item-page-default.search .search-results .result-data .result-category .small {
+    font-size: 8px;
   }
   #main-box div.item-page-study {
     padding-top: 30px;
@@ -8086,25 +8213,6 @@ div[class*="item-page-"] table p {
     padding: 15px 0;
     max-width: 85%;
   }
-  .search .btn-group.pull-left {
-    max-width: 84%;
-  }
-  .search .btn {
-    position: relative;
-    width: 40px;
-    text-indent: 100px;
-    color: transparent;
-    padding: 0;
-  }
-  .search .btn:hover {
-    color: #fff;
-  }
-  .search .btn:before {
-    position: absolute;
-    top: 10px;
-    left: 12px;
-    text-indent: 0;
-  }
   .footer .mobile {
     text-align: center;
     padding: 0 10px;
@@ -8137,16 +8245,10 @@ div[class*="item-page-"] table p {
   }
 }
 @media all and (min-width: 648px) {
-  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span, .item-page-default dd, .page-default dd {
+  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span, .item-page-default dd, .page-default dd, .item-page-default dl, .page-default dl, .item-page-default fieldset, .page-default fieldset {
     max-width: 626px;
-    width: 100%;
     margin-left: auto;
     margin-right: auto;
-  }
-  .item-page-default.search div, .page-default.search div, .item-page-default.search span, .page-default.search span, .item-page-default.search p, .page-default.search p, .item-page-default.search dd, .page-default.search dd {
-    width: auto;
-    margin-left: 0;
-    margin-right: 0;
   }
   .item-page-default.resource h1, .item-page-default.resource h2, .item-page-default.resource h3, .item-page-default.resource p, .item-page-default.resource ul, .item-page-default.resource ol, .item-page-default.resource table, .item-page-default.resource div, .item-page-default.resource span, .item-page-default.resource dd {
     max-width: 626px;
@@ -8371,7 +8473,19 @@ div[class*="item-page-"] table p {
     width: 7px;
     height: 7px;
   }
-  .search .content-pagination {
+  #main-box div.item-page-default.search .btn-group.pull-left {
+    max-width: 84%;
+  }
+  #main-box div.item-page-default.search .btn-group.pull-left .inputbox {
+    width: 100%;
+  }
+  #main-box div.item-page-default.search .btn {
+    padding: 0;
+  }
+  #main-box div.item-page-default.search .btn:hover {
+    color: #fff;
+  }
+  #main-box div.item-page-default.search .content-pagination {
     margin: 45px 0 0 0;
   }
   .content-pagination {
@@ -8966,16 +9080,10 @@ div[class*="item-page-"] table p {
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
-  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span, .item-page-default dd, .page-default dd {
+  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span, .item-page-default dd, .page-default dd, .item-page-default dl, .page-default dl, .item-page-default fieldset, .page-default fieldset {
     max-width: 629px;
-    width: 100%;
     margin-left: auto;
     margin-right: auto;
-  }
-  .item-page-default.search div, .page-default.search div, .item-page-default.search span, .page-default.search span, .item-page-default.search p, .page-default.search p, .item-page-default.search dd, .page-default.search dd {
-    width: auto;
-    margin-left: 0;
-    margin-right: 0;
   }
   .item-page-default.resource h1, .item-page-default.resource h2, .item-page-default.resource h3, .item-page-default.resource p, .item-page-default.resource ul, .item-page-default.resource ol, .item-page-default.resource table, .item-page-default.resource div, .item-page-default.resource span, .item-page-default.resource dd {
     max-width: 629px;
@@ -9485,16 +9593,10 @@ div[class*="item-page-"] table p {
 }
 /* Medium Devices, Desktops */
 @media all and (min-width: 992px) {
-  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span, .item-page-default dd, .page-default dd {
+  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span, .item-page-default dd, .page-default dd, .item-page-default dl, .page-default dl, .item-page-default fieldset, .page-default fieldset {
     max-width: 676px;
-    width: 100%;
     margin-left: auto;
     margin-right: auto;
-  }
-  .item-page-default.search div, .page-default.search div, .item-page-default.search span, .page-default.search span, .item-page-default.search p, .page-default.search p, .item-page-default.search dd, .page-default.search dd {
-    width: auto;
-    margin-left: 0;
-    margin-right: 0;
   }
   .item-page-default.resource h1, .item-page-default.resource h2, .item-page-default.resource h3, .item-page-default.resource p, .item-page-default.resource ul, .item-page-default.resource ol, .item-page-default.resource table, .item-page-default.resource div, .item-page-default.resource span, .item-page-default.resource dd {
     max-width: 830px;
@@ -9726,16 +9828,10 @@ div[class*="item-page-"] table p {
   }
 }
 @media all and (min-width: 1199px) {
-  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span, .item-page-default dd, .page-default dd {
+  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span, .item-page-default dd, .page-default dd, .item-page-default dl, .page-default dl, .item-page-default fieldset, .page-default fieldset {
     max-width: 676px;
-    width: 100%;
     margin-left: auto;
     margin-right: auto;
-  }
-  .item-page-default.search div, .page-default.search div, .item-page-default.search span, .page-default.search span, .item-page-default.search p, .page-default.search p, .item-page-default.search dd, .page-default.search dd {
-    width: auto;
-    margin-left: 0;
-    margin-right: 0;
   }
   .item-page-default.resource h1, .item-page-default.resource h2, .item-page-default.resource h3, .item-page-default.resource p, .item-page-default.resource ul, .item-page-default.resource ol, .item-page-default.resource table, .item-page-default.resource div, .item-page-default.resource span, .item-page-default.resource dd {
     max-width: 1180px;
