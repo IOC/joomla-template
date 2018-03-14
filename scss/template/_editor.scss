@@ -267,8 +267,12 @@ $ioc-accent:    #01c1b9;
         background-color: #aaa;
     }
 
-    .modal-modules {
+    .modal-modules,
+    .modal-resources {
         @include borderioc(1px, $custom_red);
+        .pretitle {
+            @include borderioc(1px, $custom_red);
+        }
         .title {
             h1 {
                 @include borderioc(1px, $custom_red);
@@ -525,6 +529,72 @@ $ioc-accent:    #01c1b9;
             }
             &:before {
                 @include removeelement($custom_red);
+            }
+        }
+    }
+    .panel-modal-resources {
+        pointer-events: none;
+        position: relative;
+        @include borderioc(2px, $custom_red);
+        max-width: 100%;
+        &:after {
+            @include addelement($custom_red);
+        }
+        .panel-heading {
+            background-color: transparent;
+            .custom-icon {
+                &.plus {
+                    display: none;
+                }
+            }
+            a {
+                @include borderioc(1px, $custom_red);
+                color: $ioc-text;
+                &:before,
+                &:after {
+                    border: 0;
+                }
+            }
+        }
+        .panel-body {
+            pointer-events: none;
+            position: relative;
+            @include borderioc(2px, $custom_red);
+            max-width: 100%;
+            &:after {
+                @include addelement($custom_red);
+            }
+            .modal-resource {
+                position: relative;
+                &:before {
+                    @include removeelement($custom_red);
+                }
+                &:first-child {
+                    &:before {
+                        content: '';
+                    }
+                }
+            }
+        }
+        .modal-resource {
+            @include borderioc(1px, $custom_red);
+            pointer-events: none;
+            margin: 20px 0;
+            div,
+            img,
+            a,
+            .icon-text {
+                @include borderioc(1px, $custom_red);
+            }
+            .icon-text {
+                width: 100%;
+            }
+            a {
+                padding: 0;
+                pointer-events: auto;
+            }
+            .bottom-modal-resource {
+                text-align: center;
             }
         }
     }

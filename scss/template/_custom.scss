@@ -441,16 +441,23 @@
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
 }
-
 body {
     font-family: "Montserrat", sans-serif;
     font-size: 17px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    padding-right: 0 !important;
     //min-width: 320px;
     color: $ioc-text2;
+    height: auto;
     &.modal-open {
         overflow: hidden;
+    }
+    #wrap {
+        section {
+            padding-top: 0;
+            margin-top: 0;
+        }
     }
 }
 
@@ -1816,6 +1823,7 @@ header.headroom--not-top {
         .panel {
             border: none;
             box-shadow: none;
+            margin-bottom: 5px;
             .panel-heading {
                 height: 40px;
                 color: $ioc-text;
@@ -2321,17 +2329,6 @@ header.headroom--not-top {
         }
     }
 }
-
-body {
-    padding-right: 0 !important;
-    #wrap {
-        section {
-            padding-top: 0;
-            margin-top: 0;
-        }
-    }
-}
-
 
 #myCarousel {
     margin-top: 0;
@@ -4798,9 +4795,8 @@ div[class*="item-page-fp-"] {
         }
     }
     .contacte {
-        margin-top: 64px;
         border-top: 1px solid $ioc-footer-bottom;
-        padding-top: 34px;
+        padding-top: 47px;
         .custom-icon {
             &.correu {
                 &:hover {
@@ -4816,6 +4812,8 @@ div[class*="item-page-fp-"] {
 
     }
     .horari {
+        height: 159px;
+        overflow: hidden;
         a {
             font-weight: 600;
         }

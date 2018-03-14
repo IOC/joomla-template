@@ -874,6 +874,9 @@
                 display: none;
             }
         }
+        .horari {
+            height: auto;
+        }
         .bottom {
             margin-top: 32px;
             padding-bottom: 36px;
@@ -3415,7 +3418,6 @@
                                 padding-left: 5px;
                             }
                         }
-                        margin-top: 11px;
                     }
                     .horari {
                         div {
@@ -4158,9 +4160,10 @@
                 .top-col {
                     width: 267px;
                     .contacte {
-                        margin-top: 57px;
+                        padding-top: 30px;
                     }
                     .horari {
+                        height: 173px;
                         div + div{
                             margin-top: 0;
                         }
