@@ -20,8 +20,8 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
   <link rel="stylesheet" href="<?php echo $tpath; ?>/css/template.min.css" type="text/css" />
   <link rel="shortcut icon" href="<?php echo $tpath; ?>/favicon.ico" type="image/vnd.microsoft.icon" />
 </head>
-<body>
-  <div class="fluid-container error">
+<body class="error">
+  <div class="fluid-container">
     <div class="error-bg">
       <div class="error-text">
         <img class="sitelogo" src="<?php echo $tpath; ?>/images/ioc_logo.png" />
@@ -37,12 +37,12 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
           ?>
           <a class="btn btn-primary btn-lg" href="<?php echo $this->baseurl; ?>/" title="<?php echo JText::_('HOME'); ?>"><?php echo JText::_('JERROR_LAYOUT_GO_TO_THE_HOME_PAGE'); ?></a>
       </div>
-    </div>
-    <div id="footer" class="footer">
-        <?php // Render module footer.
-          $module = JModuleHelper::getModule('footer');
-          echo JModuleHelper::renderModule($module);
-        ?>
+      <div id="footer" class="footer">
+          <?php // Render module footer.
+            $module = JModuleHelper::getModule('footer');
+            echo JModuleHelper::renderModule($module);
+          ?>
+      </div>
     </div>
   </div>
 </body>

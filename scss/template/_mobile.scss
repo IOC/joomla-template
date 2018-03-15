@@ -1342,6 +1342,30 @@
         }
     }
     .modal-resources {
+        margin-top: 0;
+        margin-bottom: 60px;
+        .title {
+            margin-bottom: 45px;
+            h1 {
+                margin-bottom: 0;
+            }
+        }
+        .panel-modal-resources {
+            .panel {
+                .panel-body {
+                    width: 270px;
+                    padding: 25px 0;
+                    .modal-resource {
+                        width: 130px;
+                        margin-right: 5px;
+                        margin-bottom: 15px;
+                        &:nth-child(2n) {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
         .body-modal-resources {
             .modal-resource {
                 &.modal-dialog {
@@ -2383,6 +2407,27 @@
             }
         }
     }
+    .modal-resources {
+        .panel-modal-resources {
+            .panel {
+                .panel-heading {
+                    a {
+                        padding-left: 18px;
+                        .custom-icon {
+                            &.pdf,
+                            &.web,
+                            &.zip {
+                                display: none;
+                            }
+                            &.plus {
+                                right: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* Small Devices, Tablets */
@@ -2679,6 +2724,32 @@
     div[class*="item-page-fp-"] {
         .subpagebody {
             background-size: 88vw 132px;
+        }
+    }
+    .modal-resources {
+        margin-top: 0;
+        margin-bottom: 40px;
+        .title {
+            margin-bottom: 45px;
+            h1 {
+                margin-bottom: 0;
+            }
+        }
+        .panel-modal-resources {
+            .panel {
+                .panel-body {
+                    width: 280px;
+                    padding: 37px 0;
+                    .modal-resource {
+                        width: 135px;
+                        margin-right: 10px;
+                        margin-bottom: 15px;
+                        &:nth-child(2n) {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -3336,6 +3407,28 @@
     }
     .modal-modules {
         padding: 0;
+    }
+    .modal-resources {
+        margin-top: 0;
+        margin-bottom: 40px;
+        .title {
+            margin-bottom: 45px;
+            h1 {
+                margin-bottom: 0;
+            }
+        }
+        .panel-modal-resources {
+            .panel {
+                .panel-body {
+                    width: 589px;
+                    .modal-resource {
+                        width: 135px;
+                        margin-right: 15px;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -4067,6 +4160,15 @@
             }
         }
     }
+    .item-page-default {
+        &.resource {
+            .modal-resources {
+                .panel-modal-resources {
+                    max-width: 830px;
+                }
+            }
+        }
+    }
     .study-panel {
         .study-data {
             .study-col + .study-col {
@@ -4201,6 +4303,11 @@
                     background-size: 100vw 500px;
                 }
             }
+        }
+    }
+    .item-page-study.btx-ioc {
+        .subpage-bigbanner {
+            background-position: center -3.5vw;
         }
     }
 }

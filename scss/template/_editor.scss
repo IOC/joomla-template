@@ -541,7 +541,11 @@ $ioc-accent:    #01c1b9;
             @include addelement($custom_red);
         }
         .panel-heading {
+            position: relative;
             background-color: transparent;
+            &:after {
+                @include removeelement($custom_red);
+            }
             .custom-icon {
                 &.plus {
                     display: none;
@@ -556,11 +560,20 @@ $ioc-accent:    #01c1b9;
                 }
             }
         }
+        .panel {
+            &:first-child {
+                .panel-heading {
+                    &:after {
+                        content: '';
+                    }
+                }
+            }
+        }
         .panel-body {
             pointer-events: none;
             position: relative;
             @include borderioc(2px, $custom_red);
-            max-width: 100%;
+            width: 100%;
             &:after {
                 @include addelement($custom_red);
             }

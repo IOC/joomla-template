@@ -420,9 +420,8 @@
             height: 18px;
             width: 18px;
             color: $color;
-            transform: rotate(-45deg) translate(7px, -4px);
+            transform: rotate(-45deg);
             transition: all .35s linear;
-            transform-origin: bottom right;
             &:before {
                 content: '\e913';
                 font-family: 'ioc-icons';
@@ -739,16 +738,21 @@ header.headroom--not-top {
             z-index: 2;
             color: #fff;
             cursor: pointer;
-            transition: background-color 0.4s ease-out;
+            transition: all 0.4s ease-out;
             &:hover {
                 background-color: $ioc-link2-carousel;
                 text-decoration: none;
             }
             &.first {
                 &:hover {
-                    background-color: $ioc-link-carousel;
+                    //background-color: $ioc-link-carousel;
+                    .custom-icon,
+                    .login-text {
+                        color: $ioc-link-carousel;
+                    }
+
                 }
-                border: 3px solid $ioc-link-carousel;
+                border: 3px solid $ioc-white;
                 background-color: rgba(0,0,0,0);
             }
             .custom-icon {
@@ -1657,19 +1661,19 @@ header.headroom--not-top {
                             margin-left: 15px;
                         }
                         .custom-icon {
-                            height: 45px;
-                            width: 45px;
+                            height: 54px;
+                            width: 44px;
                             display: block;
                             margin: 27px auto 21px;
                             background-position: center;
                             &.pdf {
-                                background-image: url('../images/pdf-icon.svg');
+                                background-image: url('../images/arxiu_pdf_44x54px.svg');
                             }
                             &.web {
-                                background-image: url('../images/pdf-icon.svg');
+                                background-image: url('../images/format_web_44x54px.svg');
                             }
                             &.zip {
-                                background-image: url('../images/pdf-icon.svg');
+                                background-image: url('../images/arxiu_zip_44x54px.svg');
                             }
                         }
                         .icon-text {
@@ -1820,6 +1824,7 @@ header.headroom--not-top {
         }
     }
     .panel-modal-resources {
+        max-width: 830px;
         .panel {
             border: none;
             box-shadow: none;
@@ -1830,6 +1835,11 @@ header.headroom--not-top {
                 background-color: $ioc-bg-panel-res;
                 padding: 0;
                 border-radius: 0;
+                .panel-title {
+                    @include flexbox(row, nowrap);
+                    align-items: center;
+                    height: 40px;
+                }
                 a {
                     &:hover {
                         text-decoration: none;
@@ -1849,18 +1859,20 @@ header.headroom--not-top {
                         &.zip {
                             position: absolute;
                             top: 8px;
-                            height: 24px;
-                            width: 24px;
-                            background-color: #31525a;
+                            height: 25px;
+                            width: 20px;
                         }
                         &.pdf {
-                            right: 134px;
+                            right: 145px;
+                            background-image: url('../images/arxiu_pdf_34x44px.svg');
                         }
                         &.web {
-                            right: 104px;
+                            right: 115px;
+                            background-image: url('../images/format_web_34x44px.svg');
                         }
                         &.zip {
-                            right: 74px;
+                            right: 85px;
+                            background-image: url('../images/arxiu_zip_34x44px.svg');
                         }
                     }
                     .tooltip {
@@ -1883,19 +1895,19 @@ header.headroom--not-top {
             .panel-body {
                 @include flexbox();
                 padding: 43px 0 50px 0;
-                max-width: 93%;
+                width: 752px;
+                margin: 0 auto;
                 border: none;
                 &:before {
                     display: none;
                 }
-                &:after {
-                    content: '';
-                    display: block;
-                    flex: auto;
-                }
                 .modal-resource {
-                    max-width: 158px;
+                    width: 158px;
                     cursor: pointer;
+                    margin: 0 40px 27px 0;
+                    &:nth-child(4n) {
+                        margin-right: 0;
+                    }
                     img {
                         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.19);
                     }
@@ -1910,7 +1922,7 @@ header.headroom--not-top {
                         font-weight: 500;
                         letter-spacing: 1.4px;
                         color: $ioc-bottom-res;
-                        margin-top: 9px;
+                        margin-top: 7px;
                     }
                 }
             }
@@ -2336,6 +2348,7 @@ header.headroom--not-top {
         &.welcome {
             .logo-ioc-large {
                 display: block;
+                color: transparent;
             }
             .carousel-caption {
                 max-height: 240px;
@@ -3451,7 +3464,7 @@ header.headroom--not-top {
     }
 
     .subpage-bigbanner {
-            background-size: 100vw 100%;
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: center top;
             margin-top: -106px;
@@ -4457,7 +4470,7 @@ div[class*="item-page-fp-"] {
             max-width: 350px;
             min-width: 280px;
             color: $ioc-text;
-            margin: 100px auto;
+            margin: 100px auto 0;
             .modal-content {
                 border-radius: 2px;
                 background-color: $ioc-bg-form-login;
@@ -5045,12 +5058,14 @@ div[class*="item-page-fp-"] {
 
 .error {
     font-family: "Montserrat", sans-serif;
-    height: 100%;
+    min-height: 100%;
     overflow: visible;
+    position: relative;
     .element-invisible {
         display: none;
     }
     .container {
+        display: block;
         padding: 20px 0;
     }
     .error-bg {
@@ -5096,10 +5111,9 @@ div[class*="item-page-fp-"] {
     .error-search {
         margin: 0 auto;
         padding: 50px 0;
-        min-height: 178px;
-        height: 40%;
+        min-height: 350px;
         background-image: url('../images/cicles-top-bck.svg');
-        background-size: 100vw 90%;
+        background-size: 100vw 270px;
         background-repeat: no-repeat;
         .container {
             padding: 0 15px;
@@ -5171,8 +5185,11 @@ div[class*="item-page-fp-"] {
         }
     }
     .footer {
-        height: 40%;
-        min-height: 224px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
     }
 }
 

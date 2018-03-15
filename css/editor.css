@@ -585,7 +585,21 @@
   z-index: 100;
 }
 #tinymce .panel-modal-resources .panel-heading {
+  position: relative;
   background-color: transparent;
+}
+#tinymce .panel-modal-resources .panel-heading:after {
+  content: '\2212';
+  font-family: 'Glyphicons Halflings';
+  background-color: #d9534f;
+  color: #fff;
+  cursor: pointer;
+  padding: 0 2px;
+  pointer-events: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
 }
 #tinymce .panel-modal-resources .panel-heading .custom-icon.plus {
   display: none;
@@ -600,6 +614,9 @@
 #tinymce .panel-modal-resources .panel-heading a:before, #tinymce .panel-modal-resources .panel-heading a:after {
   border: 0;
 }
+#tinymce .panel-modal-resources .panel:first-child .panel-heading:after {
+  content: '';
+}
 #tinymce .panel-modal-resources .panel-body {
   pointer-events: none;
   position: relative;
@@ -607,7 +624,7 @@
   border: 2px dashed #d9534f;
   padding: 10px;
   background-color: #fafafa;
-  max-width: 100%;
+  width: 100%;
 }
 #tinymce .panel-modal-resources .panel-body:after {
   content: '\002b';
