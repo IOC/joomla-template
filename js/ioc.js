@@ -196,13 +196,13 @@
         $(document).on('change', '.filter-select', function(e) {
             var keyword = $(this).val();
             if (keyword != 'all') {
-                var $nodes = $('.substudies .nav.navbar-nav');
+                var $nodes = $('.substudies .nav.navbar-nav').addClass('filtering');
                 var $selected = $nodes.find("li[data-meta-keyword='" + keyword + "']");
                 $nodes.find('li').not($selected).hide(800, function(){
                     $selected.show(800);
                 });
             } else {
-                $('.substudies .nav.navbar-nav li').show(800);
+                $('.substudies .nav.navbar-nav').removeClass('filtering').find('li').removeClass('third').show(800);
             }
         });
 
@@ -351,11 +351,21 @@
             if ($(this).hasClass('ioc-keyword-selected') && keyword) {
                 var $nodes = $('.substudies .nav.navbar-nav').addClass('filtering');
                 var $selected = $nodes.find("li[data-meta-keyword='" + keyword + "']");
-                $nodes.find('li').not($selected).hide(800, function(){
+                $nodes.find('li').removeClass('third').not($selected).hide(800, function(){
                     $selected.show(800);
                 });
+                $.each($nodes, function( index, node) {
+                    $selected = $(node).find("li[data-meta-keyword='" + keyword + "']");
+                    if ($selected.size() > 2) {
+                        $.each($selected, function( index, node) {
+                            if ((index + 1) % 3 == 0 ) {
+                                $(node).addClass('third');
+                            }
+                        });
+                    }
+                });
             } else {
-                $('.substudies .nav.navbar-nav').removeClass('filtering').find('li').show(800);
+                $('.substudies .nav.navbar-nav').removeClass('filtering').find('li').removeClass('third').show(800);
             }
         });
 

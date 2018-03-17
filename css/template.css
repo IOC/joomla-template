@@ -3193,7 +3193,7 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
   justify-content: flex-start;
   float: none;
   margin: 0 auto;
-  max-width: 827px;
+  max-width: 828px;
   margin: 0 auto;
 }
 .layout-employment .employment-content .navbar-nav li {
@@ -3847,6 +3847,12 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
 }
 .submenu .submenu-content .navbar-nav.filtering, .substudies .submenu-content .navbar-nav.filtering, .submenu .substudies-content .navbar-nav.filtering, .substudies .substudies-content .navbar-nav.filtering {
   justify-content: flex-start;
+}
+.submenu .submenu-content .navbar-nav.filtering li:nth-child(3n), .substudies .submenu-content .navbar-nav.filtering li:nth-child(3n), .submenu .substudies-content .navbar-nav.filtering li:nth-child(3n), .substudies .substudies-content .navbar-nav.filtering li:nth-child(3n) {
+  margin-right: 24px;
+}
+.submenu .submenu-content .navbar-nav.filtering .third, .substudies .submenu-content .navbar-nav.filtering .third, .submenu .substudies-content .navbar-nav.filtering .third, .substudies .substudies-content .navbar-nav.filtering .third {
+  margin-right: 0;
 }
 .submenu .submenu-content .navbar-nav.fewelements:after, .substudies .submenu-content .navbar-nav.fewelements:after, .submenu .substudies-content .navbar-nav.fewelements:after, .substudies .substudies-content .navbar-nav.fewelements:after {
   display: none;
@@ -8687,6 +8693,9 @@ div[class*="item-page-"] table p {
     max-width: 100vw;
     flex-direction: column;
   }
+  .substudies .substudies-content .substudies-elements .navbar-nav.filtering li:nth-child(3n), .submenu .substudies-content .substudies-elements .navbar-nav.filtering li:nth-child(3n), .substudies .submenu-content .substudies-elements .navbar-nav.filtering li:nth-child(3n), .submenu .submenu-content .substudies-elements .navbar-nav.filtering li:nth-child(3n), .substudies .substudies-content div .navbar-nav.filtering li:nth-child(3n), .submenu .substudies-content div .navbar-nav.filtering li:nth-child(3n), .substudies .submenu-content div .navbar-nav.filtering li:nth-child(3n), .submenu .submenu-content div .navbar-nav.filtering li:nth-child(3n) {
+    margin-right: 0;
+  }
   .substudies .substudies-content .substudies-elements .navbar-nav li, .submenu .substudies-content .substudies-elements .navbar-nav li, .substudies .submenu-content .substudies-elements .navbar-nav li, .submenu .submenu-content .substudies-elements .navbar-nav li, .substudies .substudies-content div .navbar-nav li, .submenu .substudies-content div .navbar-nav li, .substudies .submenu-content div .navbar-nav li, .submenu .submenu-content div .navbar-nav li {
     width: 100%;
     height: 139px;
@@ -9507,7 +9516,7 @@ div[class*="item-page-"] table p {
     bottom: 62px;
   }
   .layout-employment .employment-content .navbar-nav {
-    max-width: 652px;
+    max-width: 653px;
   }
   .layout-employment .employment-content .navbar-nav li {
     margin-right: 28px;
