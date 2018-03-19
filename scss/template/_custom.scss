@@ -1080,10 +1080,20 @@ header.headroom--not-top {
     div.item-page-study {
         margin: 194px auto 0 auto;
     }
-    div.item-page-default {
+    div.item-page-news {
+        .page-header {
+            margin-top: 0;
+            h2 {
+                margin-top: 0;
+            }
+        }
+    }
+    div.item-page-default,
+    div.item-page-news {
         margin: 78px auto 88px auto;
         max-width: 1170px;
         .page-header {
+            border-bottom: none;
             h2 {
                 margin-bottom: 0;
                 font-weight: 600;
@@ -1277,6 +1287,9 @@ header.headroom--not-top {
                 }
             }
         }
+        .resource {
+            margin: 0 auto;
+        }
     }
 }
 
@@ -1314,6 +1327,7 @@ header.headroom--not-top {
             right: 100%;
             width: 100%;
             line-height: 18px;
+            height: 18px;
         }
     }
     .ioc-breadcrumb {
@@ -1682,6 +1696,7 @@ header.headroom--not-top {
                             font-weight: 500;
                             letter-spacing: 1.1px;
                             text-align: center;
+                            text-transform: uppercase;
                             bottom: 30px;
                             margin: 0 auto;
                             width: 65%;
@@ -1825,6 +1840,8 @@ header.headroom--not-top {
     }
     .panel-modal-resources {
         max-width: 830px;
+        margin-left: auto;
+        margin-right: auto;
         .panel {
             border: none;
             box-shadow: none;
@@ -2324,6 +2341,7 @@ header.headroom--not-top {
             a {
                 &:hover {
                     border-color: $ioc-bg-pagination;
+                    color: $ioc-text;
                     background-color: $ioc-bg-pagination;
                 }
                 background-color: $ioc-bg-pagination;
@@ -2392,7 +2410,7 @@ header.headroom--not-top {
         }
         video {
             position: absolute;
-            top: 0;
+            bottom: 0;
             left: 0;
             width: 100%;
             height: 100%;
@@ -2651,7 +2669,8 @@ header.headroom--not-top {
             padding-bottom: 0;
             border-bottom: 0;
             margin-bottom: $ioc-header-margin;
-            &.default {
+            &.default,
+            &.iocnewsarticle {
                 height: 282px;
                 h1 {
                     width: 100%;
@@ -2682,16 +2701,16 @@ header.headroom--not-top {
             }
             &.iocnewsarticle {
                 background-image: url('../images/iocnewsarticle-header-bck.jpg');
-                .container {
-                    h1 {
-                        font-size: 26px;
-                        font-weight: 600;
-                        line-height: 0.85;
-                        text-align: left;
-                        margin-left: 0;
-                        bottom: -2px;
-                    }
-                }
+                // .container {
+                //     h1 {
+                //         font-size: 26px;
+                //         font-weight: 600;
+                //         line-height: 0.85;
+                //         text-align: left;
+                //         margin-left: 0;
+                //         bottom: -2px;
+                //     }
+                // }
                 & + .container {
                     padding: 0;
                     .modified {
@@ -3246,6 +3265,42 @@ header.headroom--not-top {
         // background-size: 100vw 190px;
         // background-repeat: no-repeat;
     }
+    .subpage-only-buttons,
+    .subpage-only-text,
+    .subpage-text-buttons,
+    .subpage-text-buttons-banner,
+    .subpage-buttons-filter {
+        background-repeat: no-repeat;
+        background-position: center top;
+        .subpage-text {
+            p {
+                margin: 0 auto;
+            }
+            margin-bottom: 86px;
+        }
+        .subpage-buttons,
+        .subpage-content-text {
+            max-width: 720px;
+            padding-bottom: 138px;
+            margin: 263px auto 0 auto;
+            .subpage-group-buttons {
+                @include flexbox($justify-content: flex-end);
+                .subpage-button {
+                    flex-grow: 1;
+                    height: 190px;
+                    min-width: 156px;
+                    max-width: 190px;
+                    margin: auto;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        .study-buttons {
+            margin-top: 0;
+        }
+    }
     .subpage-only-buttons {
         background-image: url('../images/seccio-botons-bck.svg');
         background-size: 100vw 100%;
@@ -3253,6 +3308,23 @@ header.headroom--not-top {
         margin-top: 157px;
         & + .study-tabs {
             margin-top: -95px;
+        }
+    }
+    .subpage-only-text {
+        background-image: url('../images/seccio-text-botons-bck.svg');
+        background-size: 100vw 100%;
+        margin-top: -173px;
+        .subpage-content-text {
+            padding-bottom: 0;
+            .subpage-text {
+                text-align: center;
+                font-size: 16px;
+                line-height: 1.56;
+                p {
+                    width: 78%;
+                    text-align: center;
+                }
+            }
         }
     }
     .subpage-text-buttons {
@@ -3304,7 +3376,7 @@ header.headroom--not-top {
         .subpage-filter {
             margin-top: 206px;
             background-image: url('../images/fp-banner-filter-bck.jpg');
-            background-size: 100vw 100%;
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: center top;
             clear: both;
@@ -3553,41 +3625,6 @@ header.headroom--not-top {
             }
         }
     }
-
-    .subpage-only-buttons,
-    .subpage-text-buttons,
-    .subpage-text-buttons-banner,
-    .subpage-buttons-filter {
-        background-repeat: no-repeat;
-        background-position: center top;
-        .subpage-text {
-            p {
-                margin: 0 auto;
-            }
-            margin-bottom: 86px;
-        }
-        .subpage-buttons {
-            max-width: 720px;
-            padding-bottom: 138px;
-            margin: 263px auto 0 auto;
-            .subpage-group-buttons {
-                @include flexbox($justify-content: flex-end);
-                .subpage-button {
-                    flex-grow: 1;
-                    height: 190px;
-                    min-width: 156px;
-                    max-width: 190px;
-                    margin: auto;
-                    &:last-child {
-                        margin-right: 0;
-                    }
-                }
-            }
-        }
-        .study-buttons {
-            margin-top: 0;
-        }
-    }
 //}
 
 .study-buttons + p {
@@ -3720,16 +3757,16 @@ header.headroom--not-top {
     margin-top: -$ioc-header-margin;
 }
 
-.item-page-news {
-    .page-header {
-        border-bottom: 0;
-        h2 {
-            font-size: 37px;
-            font-weight: 500;
-            color: $ioc-text;
-        }
-    }
-}
+// .item-page-news {
+//     .page-header {
+//         border-bottom: 0;
+//         h2 {
+//             font-size: 37px;
+//             font-weight: 500;
+//             color: $ioc-text;
+//         }
+//     }
+// }
 
 /* Customization for studies, Parallax, Banners, layouts */
 .item-page-study {
@@ -4653,11 +4690,11 @@ div[class*="item-page-fp-"] {
 
 .ioc-news-container {
     margin-top: 38px;
-    font-size: 17px;
-    font-weight: 300;
-    line-height: 1.65;
+    //font-size: 17px;
+    //font-weight: 300;
+    //line-height: 1.65;
     color: $ioc-text2;
-    margin-bottom: 98px;
+    //margin-bottom: 98px;
     .ioc-news {
         .imatge-noticia {
             width: 100%;
@@ -4665,14 +4702,15 @@ div[class*="item-page-fp-"] {
                 height: auto;
                 max-width: 100%;
             }
-            figcaption {
-                clear: left;
-                float: left;
-                font-size: 14px;
-                line-height: 1.36;
-                width: 100%;
-                margin: 10px 15px 0 0;
-            }
+        }
+        figcaption {
+            clear: left;
+            float: left;
+            font-size: 14px;
+            line-height: 1.36;
+            color: $ioc-figcaption;
+            width: 100%;
+            margin: 10px 15px 0 0;
         }
         .ioc-news-content {
             width: 60%;

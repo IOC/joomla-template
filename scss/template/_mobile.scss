@@ -43,6 +43,7 @@
 }
 
 @mixin max-width-article($maxdefault, $maxcustom: null) {
+    .item-page-news
     .item-page-default,
     .page-default {
         h1, h2, h3, p, ul, ol, table,
@@ -54,6 +55,7 @@
         }
     }
     @if ($maxcustom) {
+        .item-page-news,
         .item-page-default {
             &.resource {
                 h1, h2, h3, p, ul, ol, table,
@@ -323,10 +325,6 @@
         .fluid-container {
             &.page-header {
                 &.iocnewsarticle {
-                    height: 100px;
-                    h1 {
-                        padding: 0;
-                    }
                     > .container {
                         padding: 0;
                     }
@@ -375,7 +373,6 @@
         .page-header,
         .modified,
         .ioctags {
-            padding: 0 15px;
             h2 {
                 margin-top: 10px;
                 font-size: 19px;
@@ -403,7 +400,6 @@
         }
         .container + .container {
             margin-top: 16px;
-            padding: 0 15px;
         }
     }
     .item-page-study {
@@ -619,9 +615,19 @@
         }
     }
     .subpage-only-buttons,
+    .subpage-only-text,
     .subpage-text-buttons,
     .subpage-text-buttons-banner,
     .subpage-buttons-filter {
+        .subpage-content-text {
+            p {
+                font-size: 13px;
+                font-weight: 300;
+                line-height: 1.54;
+            }
+            margin-bottom: 54px;
+            margin-top: 100px;
+        }
         .subpage-text {
             p {
                 font-size: 13px;
@@ -642,6 +648,7 @@
             }
         }
     }
+    .subpage-only-text,
     .subpage-text-buttons {
         margin-top: -50px;
     }
@@ -1211,7 +1218,8 @@
     #container {
         .fluid-container {
             &.page-header {
-                &.default {
+                &.default,
+                &.iocnewsarticle {
                     height: 147px;
                     h1 {
                         bottom: 33px;
@@ -1303,14 +1311,6 @@
 
     .ioc-news-container {
         .ioc-news {
-            .imatge-noticia {
-                //margin-left: -15px;
-                //width: 100vw;
-                figcaption {
-                    margin-bottom: 15px;
-                    font-size: 11px;
-                }
-            }
             img {
                 width: 100%;
             }
@@ -1405,6 +1405,7 @@
         background-size: 80vw 82px;
     }
     .subpage-only-buttons,
+    .subpage-only-text,
     .subpage-text-buttons,
     .subpage-text-buttons-banner,
     .subpage-buttons-filter {
@@ -1464,6 +1465,7 @@
             }
         }
     }
+    .subpage-only-text,
     .subpage-text-buttons {
         background-image: url('../images/seccio-text-botons-bck-mobile.svg');
     }
@@ -1724,11 +1726,21 @@
         .fluid-container {
             &.page-header {
                 height: 147px;
-                &.default {
+                &.default,
+                &.iocnewsarticle {
                     height: 147px;
                     h1 {
                         bottom: 33px;
                     }
+                    + .container {
+                        .modified {
+                            font-size: 9px;
+                            letter-spacing: 0.9px;
+                        }
+                    }
+                }
+                &.iocnewsarticle {
+                    margin-bottom: 0;
                 }
                 h1 {
                     left: 15px;
@@ -1782,6 +1794,16 @@
             }
         }
     }
+    .ioc-news-container {
+        .ioc-news {
+            figcaption {
+                margin-top: 9.6px;
+                margin-bottom: 15px;
+                font-size: 11px;
+            }
+        }
+    }
+
     #news {
         margin-top: 53px;
         padding: 0;
@@ -2140,9 +2162,15 @@
             }
         }
     }
-    #main-box div.item-page-default {
-        margin-top: 69px;
-        margin-bottom: 77px;
+    #main-box {
+        div.item-page-default {
+            margin-top: 69px;
+            margin-bottom: 77px;
+        }
+        div.item-page-news {
+            margin-top: 30px;
+            margin-bottom: 42px;
+        }
     }
     .item-page-study {
         &.acfgs,
@@ -2659,11 +2687,10 @@
     }
 
     .ioc-news {
-        .imatge-noticia {
-            figcaption {
-                margin-bottom: 15px;
-            }
+        figcaption {
+            margin-bottom: 15px;
         }
+
         img {
             width: 100%;
         }
@@ -2697,8 +2724,10 @@
     .subpagebody {
         background-size: 100vw 146px;
     }
+    .subpage-only-text,
     .subpage-text-buttons {
-        .subpage-buttons {
+        .subpage-buttons,
+        .subpage-content-text {
             margin-top: 119px;
             max-width: 100%;
             padding-left: 15px;
@@ -2713,6 +2742,14 @@
             }
             .subpage-group-buttons {
                 justify-content: space-between;
+            }
+        }
+    }
+    .subpage-only-text {
+        .subpage-content-text {
+            .subpage-text {
+                margin-left: auto;
+                margin-right: auto;
             }
         }
     }
@@ -2855,7 +2892,8 @@
                         }
                     }
                 }
-                &.default {
+                &.default,
+                &.iocnewsarticle {
                     height: 191px;
                     .container {
                         padding: 0;
@@ -2863,6 +2901,11 @@
                             bottom: 56px;
                             font-size: 23px;
                             letter-spacing: 0;
+                        }
+                    }
+                    & + .container {
+                        .modified {
+                            font-size: 10px;
                         }
                     }
                 }
@@ -2878,9 +2921,30 @@
             }
         }
     }
-    #main-box div.item-page-default {
-        margin-top: 78px;
-        margin-bottom: 90px;
+    #main-box {
+        div.item-page-default {
+            margin-top: 78px;
+            margin-bottom: 90px;
+        }
+        div.item-page-news {
+            margin-top: 63px;
+            margin-bottom: 58px;
+        }
+    }
+    .item-page-news {
+        .page-header,
+        .modified,
+        .ioctags {
+            padding: 0;
+        }
+    }
+    .ioc-news-container {
+        .ioc-news {
+            figcaption {
+                margin-top: 10px;
+                font-size: 13px;
+            }
+        }
     }
     .item-page-study {
         &.acfgs,
@@ -3596,7 +3660,8 @@
             padding: 0;
         }
     }
-    .item-page-default {
+    .item-page-default,
+    .item-page-news {
         .container {
             padding: 0;
         }
@@ -3814,6 +3879,11 @@
                     top: 485px;
                     width: 593px;
                 }
+            }
+            video {
+                height: auto;
+                top: 0;
+                margin: auto 0;
             }
         }
         .avisos {
@@ -4070,9 +4140,12 @@
             }
         }
     }
-    #main-box div.item-page-default {
-        margin-top: 110px;
-        margin-bottom: 122px;
+    #main-box {
+        div.item-page-default,
+        div.item-page-news {
+            margin-top: 110px;
+            margin-bottom: 122px;
+        }
     }
     .item-page-study {
         &.acfgs,

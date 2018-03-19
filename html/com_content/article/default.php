@@ -151,6 +151,8 @@ JHtml::_('behavior.caption');
             $customclass = 'subpagebody';
         } else if ($pageclass == 'default') {
             $customclass = 'article-default';
+        } else if (strpos($pageclass, 'resource') !== false) {
+            $customclass = 'resource';
         }
     ?>
     <div itemprop="articleBody" class="<?php echo $customclass;?>">

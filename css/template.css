@@ -1429,68 +1429,77 @@ header.headroom--not-top .navbar-default .login-clone-campus {
 #main-box div.item-page-study {
   margin: 194px auto 0 auto;
 }
-#main-box div.item-page-default {
+#main-box div.item-page-news .page-header {
+  margin-top: 0;
+}
+#main-box div.item-page-news .page-header h2 {
+  margin-top: 0;
+}
+#main-box div.item-page-default, #main-box div.item-page-news {
   margin: 78px auto 88px auto;
   max-width: 1170px;
 }
-#main-box div.item-page-default .page-header h2 {
+#main-box div.item-page-default .page-header, #main-box div.item-page-news .page-header {
+  border-bottom: none;
+}
+#main-box div.item-page-default .page-header h2, #main-box div.item-page-news .page-header h2 {
   margin-bottom: 0;
   font-weight: 600;
 }
-#main-box div.item-page-default.search {
+#main-box div.item-page-default.search, #main-box div.item-page-news.search {
   margin-top: 112px;
   padding: 0 15px;
 }
-#main-box div.item-page-default.search .page-title {
+#main-box div.item-page-default.search .page-title, #main-box div.item-page-news.search .page-title {
   text-align: center;
   margin-bottom: 67px;
 }
-#main-box div.item-page-default.search .phrases legend {
+#main-box div.item-page-default.search .phrases legend, #main-box div.item-page-news.search .phrases legend {
   margin-top: 30px;
 }
-#main-box div.item-page-default.search .searchintro {
+#main-box div.item-page-default.search .searchintro, #main-box div.item-page-news.search .searchintro {
   background-color: #f2f6f9;
   text-align: center;
   padding: 37px 0 27px 0;
   margin-top: 50px;
 }
-#main-box div.item-page-default.search .searchintro .total_results {
+#main-box div.item-page-default.search .searchintro .total_results, #main-box div.item-page-news.search .searchintro .total_results {
   font-weight: 600;
 }
-#main-box div.item-page-default.search .searchintro .form-limit {
+#main-box div.item-page-default.search .searchintro .form-limit, #main-box div.item-page-news.search .searchintro .form-limit {
   margin-bottom: 29px;
   font-size: 14px;
 }
-#main-box div.item-page-default.search .searchintro .form-limit label {
+#main-box div.item-page-default.search .searchintro .form-limit label, #main-box div.item-page-news.search .searchintro .form-limit label {
   display: inline;
 }
-#main-box div.item-page-default.search .searchintro .form-limit .chzn-container .chzn-single {
+#main-box div.item-page-default.search .searchintro .form-limit .chzn-container .chzn-single, #main-box div.item-page-news.search .searchintro .form-limit .chzn-container .chzn-single {
   min-width: 69px;
 }
-#main-box div.item-page-default.search .searchintro p {
+#main-box div.item-page-default.search .searchintro p, #main-box div.item-page-news.search .searchintro p {
   margin-bottom: 29px;
 }
-#main-box div.item-page-default.search .searchintro p strong {
+#main-box div.item-page-default.search .searchintro p strong, #main-box div.item-page-news.search .searchintro p strong {
   vertical-align: middle;
 }
-#main-box div.item-page-default.search .searchintro .counter {
+#main-box div.item-page-default.search .searchintro .counter, #main-box div.item-page-news.search .searchintro .counter {
   margin: 0;
   font-size: 14px;
 }
-#main-box div.item-page-default.search .ordering-box label {
+#main-box div.item-page-default.search .ordering-box label, #main-box div.item-page-news.search .ordering-box label {
   display: inline-block;
 }
-#main-box div.item-page-default.search .ordering-box .chzn-container-single .chzn-single {
+#main-box div.item-page-default.search .ordering-box .chzn-container-single .chzn-single, #main-box div.item-page-news.search .ordering-box .chzn-container-single .chzn-single {
   width: auto;
 }
-#main-box div.item-page-default.search .chzn-container {
+#main-box div.item-page-default.search .chzn-container, #main-box div.item-page-news.search .chzn-container {
   display: inline-block;
   width: auto !important;
 }
-#main-box div.item-page-default.search .chzn-container .chzn-drop {
+#main-box div.item-page-default.search .chzn-container .chzn-drop, #main-box div.item-page-news.search .chzn-container .chzn-drop {
   width: auto;
 }
-#main-box div.item-page-default.search .chzn-container .chzn-single {
+#main-box div.item-page-default.search .chzn-container .chzn-single, #main-box div.item-page-news.search .chzn-container .chzn-single {
   height: 40px;
   width: auto;
   border-radius: 0;
@@ -1500,22 +1509,22 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   padding: 0;
   margin: 0 3px;
 }
-#main-box div.item-page-default.search .chzn-container .chzn-single span {
+#main-box div.item-page-default.search .chzn-container .chzn-single span, #main-box div.item-page-news.search .chzn-container .chzn-single span {
   font-size: 14px;
   vertical-align: middle;
   line-height: 40px;
   margin-right: 30px;
   padding: 0 10px;
 }
-#main-box div.item-page-default.search .chzn-container .chzn-single div {
+#main-box div.item-page-default.search .chzn-container .chzn-single div, #main-box div.item-page-news.search .chzn-container .chzn-single div {
   width: 31px;
 }
-#main-box div.item-page-default.search .chzn-container .chzn-single div b {
+#main-box div.item-page-default.search .chzn-container .chzn-single div b, #main-box div.item-page-news.search .chzn-container .chzn-single div b {
   position: relative;
   background-color: #202b47;
   background-image: none;
 }
-#main-box div.item-page-default.search .chzn-container .chzn-single div b:before {
+#main-box div.item-page-default.search .chzn-container .chzn-single div b:before, #main-box div.item-page-news.search .chzn-container .chzn-single div b:before {
   content: '\e90c';
   font-family: 'ioc-icons';
   font-size: 10px;
@@ -1525,30 +1534,30 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   top: 5px;
   left: 12px;
 }
-#main-box div.item-page-default.search .search-results .result-data {
+#main-box div.item-page-default.search .search-results .result-data, #main-box div.item-page-news.search .search-results .result-data {
   border-top: 1px solid #d7d9de;
   padding: 27.5px 24px 0 24px;
   margin-top: 23.5px;
 }
-#main-box div.item-page-default.search .search-results .result-data:first-child {
+#main-box div.item-page-default.search .search-results .result-data:first-child, #main-box div.item-page-news.search .search-results .result-data:first-child {
   border-top: none;
   padding-top: 0;
   margin-top: 62px;
 }
-#main-box div.item-page-default.search .search-results .result-data a {
+#main-box div.item-page-default.search .search-results .result-data a, #main-box div.item-page-news.search .search-results .result-data a {
   color: #354959;
   text-decoration: none;
 }
-#main-box div.item-page-default.search .search-results .result-data .result-title {
+#main-box div.item-page-default.search .search-results .result-data .result-title, #main-box div.item-page-news.search .search-results .result-data .result-title {
   display: inline-block;
   font-weight: 600;
   margin-bottom: 11px;
   line-height: 1.53;
 }
-#main-box div.item-page-default.search .search-results .result-data .result-category {
+#main-box div.item-page-default.search .search-results .result-data .result-category, #main-box div.item-page-news.search .search-results .result-data .result-category {
   margin-top: 17.5px;
 }
-#main-box div.item-page-default.search .search-results .result-data .result-category .small {
+#main-box div.item-page-default.search .search-results .result-data .result-category .small, #main-box div.item-page-news.search .search-results .result-data .result-category .small {
   text-transform: uppercase;
   background-color: #f2f6f9;
   padding: 0 10px;
@@ -1559,19 +1568,19 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   line-height: 20px;
   display: inline-block;
 }
-#main-box div.item-page-default.search .content-pagination {
+#main-box div.item-page-default.search .content-pagination, #main-box div.item-page-news.search .content-pagination {
   text-align: center;
   width: 100%;
   max-width: 100%;
 }
-#main-box div.item-page-default.search .content-pagination .pagination {
+#main-box div.item-page-default.search .content-pagination .pagination, #main-box div.item-page-news.search .content-pagination .pagination {
   width: auto;
   max-width: 100%;
 }
-#main-box div.item-page-default.search .badge {
+#main-box div.item-page-default.search .badge, #main-box div.item-page-news.search .badge {
   background-color: #202b47;
 }
-#main-box div.item-page-default.search .inputbox {
+#main-box div.item-page-default.search .inputbox, #main-box div.item-page-news.search .inputbox {
   float: left;
   height: 40px;
   width: -webkit-calc(100% - 40px);
@@ -1580,11 +1589,11 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   max-width: 100%;
   border-color: #202b47;
 }
-#main-box div.item-page-default.search .btn-toolbar .btn-group {
+#main-box div.item-page-default.search .btn-toolbar .btn-group, #main-box div.item-page-news.search .btn-toolbar .btn-group {
   width: 100%;
   margin: 0;
 }
-#main-box div.item-page-default.search .btn {
+#main-box div.item-page-default.search .btn, #main-box div.item-page-news.search .btn {
   position: relative;
   height: 40px;
   width: 40px;
@@ -1595,7 +1604,7 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   border-radius: 0;
   font-size: 16px;
 }
-#main-box div.item-page-default.search .btn:before {
+#main-box div.item-page-default.search .btn:before, #main-box div.item-page-news.search .btn:before {
   content: '\e906';
   font-family: 'ioc-icons';
   color: #dee3e7;
@@ -1604,14 +1613,17 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   left: 12px;
   text-indent: 0;
 }
-#main-box div.item-page-default.search .btn:hover {
+#main-box div.item-page-default.search .btn:hover, #main-box div.item-page-news.search .btn:hover {
   color: #4bcdaf;
 }
-#main-box div.item-page-default.search .btn:hover:before {
+#main-box div.item-page-default.search .btn:hover:before, #main-box div.item-page-news.search .btn:hover:before {
   color: #4bcdaf;
 }
-#main-box div.item-page-default.search .btn .icon-search {
+#main-box div.item-page-default.search .btn .icon-search, #main-box div.item-page-news.search .btn .icon-search {
   display: none;
+}
+#main-box div.item-page-default .resource, #main-box div.item-page-news .resource {
+  margin: 0 auto;
 }
 #main {
   padding-top: 0;
@@ -3131,6 +3143,7 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
   right: 100%;
   width: 100%;
   line-height: 18px;
+  height: 18px;
 }
 .ioc-parent-breadcrumb .ioc-breadcrumb {
   display: inline-block;
@@ -3546,6 +3559,7 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
   font-weight: 500;
   letter-spacing: 1.1px;
   text-align: center;
+  text-transform: uppercase;
   bottom: 30px;
   margin: 0 auto;
   width: 65%;
@@ -3683,6 +3697,8 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
 }
 .modal-resources .panel-modal-resources {
   max-width: 830px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .modal-resources .panel-modal-resources .panel {
   border: none;
@@ -4240,6 +4256,7 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
 }
 .content-pagination .pagination .active a:hover {
   border-color: #e7ecf1;
+  color: #354959;
   background-color: #e7ecf1;
 }
 .content-pagination .pagination .disabled a {
@@ -4295,7 +4312,7 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
 }
 #myCarousel .item video {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -4530,10 +4547,10 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
   background-size: cover;
   background-position: top;
 }
-#container .fluid-container.page-header.default {
+#container .fluid-container.page-header.default, #container .fluid-container.page-header.iocnewsarticle {
   height: 282px;
 }
-#container .fluid-container.page-header.default h1 {
+#container .fluid-container.page-header.default h1, #container .fluid-container.page-header.iocnewsarticle h1 {
   width: 100%;
 }
 #container .fluid-container.page-header.fullmap {
@@ -4557,14 +4574,6 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
 }
 #container .fluid-container.page-header.iocnewsarticle {
   background-image: url('../images/iocnewsarticle-header-bck.jpg');
-}
-#container .fluid-container.page-header.iocnewsarticle .container h1 {
-  font-size: 26px;
-  font-weight: 600;
-  line-height: 0.85;
-  text-align: left;
-  margin-left: 0;
-  bottom: -2px;
 }
 #container .fluid-container.page-header.iocnewsarticle + .container {
   padding: 0;
@@ -5069,6 +5078,44 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
 .study-panel .study-data .study-col + .study-col {
   margin-left: 14px;
 }
+.subpage-only-buttons, .subpage-only-text, .subpage-text-buttons, .subpage-text-buttons-banner, .subpage-buttons-filter {
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+.subpage-only-buttons .subpage-text, .subpage-only-text .subpage-text, .subpage-text-buttons .subpage-text, .subpage-text-buttons-banner .subpage-text, .subpage-buttons-filter .subpage-text {
+  margin-bottom: 86px;
+}
+.subpage-only-buttons .subpage-text p, .subpage-only-text .subpage-text p, .subpage-text-buttons .subpage-text p, .subpage-text-buttons-banner .subpage-text p, .subpage-buttons-filter .subpage-text p {
+  margin: 0 auto;
+}
+.subpage-only-buttons .subpage-buttons, .subpage-only-text .subpage-buttons, .subpage-text-buttons .subpage-buttons, .subpage-text-buttons-banner .subpage-buttons, .subpage-buttons-filter .subpage-buttons, .subpage-only-buttons .subpage-content-text, .subpage-only-text .subpage-content-text, .subpage-text-buttons .subpage-content-text, .subpage-text-buttons-banner .subpage-content-text, .subpage-buttons-filter .subpage-content-text {
+  max-width: 720px;
+  padding-bottom: 138px;
+  margin: 263px auto 0 auto;
+}
+.subpage-only-buttons .subpage-buttons .subpage-group-buttons, .subpage-only-text .subpage-buttons .subpage-group-buttons, .subpage-text-buttons .subpage-buttons .subpage-group-buttons, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons, .subpage-only-buttons .subpage-content-text .subpage-group-buttons, .subpage-only-text .subpage-content-text .subpage-group-buttons, .subpage-text-buttons .subpage-content-text .subpage-group-buttons, .subpage-text-buttons-banner .subpage-content-text .subpage-group-buttons, .subpage-buttons-filter .subpage-content-text .subpage-group-buttons {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 0 auto;
+  justify-content: flex-end;
+}
+.subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-only-text .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-only-buttons .subpage-content-text .subpage-group-buttons .subpage-button, .subpage-only-text .subpage-content-text .subpage-group-buttons .subpage-button, .subpage-text-buttons .subpage-content-text .subpage-group-buttons .subpage-button, .subpage-text-buttons-banner .subpage-content-text .subpage-group-buttons .subpage-button, .subpage-buttons-filter .subpage-content-text .subpage-group-buttons .subpage-button {
+  flex-grow: 1;
+  height: 190px;
+  min-width: 156px;
+  max-width: 190px;
+  margin: auto;
+}
+.subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button:last-child, .subpage-only-text .subpage-buttons .subpage-group-buttons .subpage-button:last-child, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button:last-child, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button:last-child, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button:last-child, .subpage-only-buttons .subpage-content-text .subpage-group-buttons .subpage-button:last-child, .subpage-only-text .subpage-content-text .subpage-group-buttons .subpage-button:last-child, .subpage-text-buttons .subpage-content-text .subpage-group-buttons .subpage-button:last-child, .subpage-text-buttons-banner .subpage-content-text .subpage-group-buttons .subpage-button:last-child, .subpage-buttons-filter .subpage-content-text .subpage-group-buttons .subpage-button:last-child {
+  margin-right: 0;
+}
+.subpage-only-buttons .study-buttons, .subpage-only-text .study-buttons, .subpage-text-buttons .study-buttons, .subpage-text-buttons-banner .study-buttons, .subpage-buttons-filter .study-buttons {
+  margin-top: 0;
+}
 .subpage-only-buttons {
   background-image: url('../images/seccio-botons-bck.svg');
   background-size: 100vw 100%;
@@ -5077,6 +5124,23 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
 }
 .subpage-only-buttons + .study-tabs {
   margin-top: -95px;
+}
+.subpage-only-text {
+  background-image: url('../images/seccio-text-botons-bck.svg');
+  background-size: 100vw 100%;
+  margin-top: -173px;
+}
+.subpage-only-text .subpage-content-text {
+  padding-bottom: 0;
+}
+.subpage-only-text .subpage-content-text .subpage-text {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.56;
+}
+.subpage-only-text .subpage-content-text .subpage-text p {
+  width: 78%;
+  text-align: center;
 }
 .subpage-text-buttons {
   background-image: url('../images/seccio-text-botons-bck.svg');
@@ -5126,7 +5190,7 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
 .subpage-text-buttons-banner .subpage-filter, .subpage-buttons-filter .subpage-filter {
   margin-top: 206px;
   background-image: url('../images/fp-banner-filter-bck.jpg');
-  background-size: 100vw 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
   clear: both;
@@ -5385,44 +5449,6 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
   color: #fff;
   text-decoration: none;
 }
-.subpage-only-buttons, .subpage-text-buttons, .subpage-text-buttons-banner, .subpage-buttons-filter {
-  background-repeat: no-repeat;
-  background-position: center top;
-}
-.subpage-only-buttons .subpage-text, .subpage-text-buttons .subpage-text, .subpage-text-buttons-banner .subpage-text, .subpage-buttons-filter .subpage-text {
-  margin-bottom: 86px;
-}
-.subpage-only-buttons .subpage-text p, .subpage-text-buttons .subpage-text p, .subpage-text-buttons-banner .subpage-text p, .subpage-buttons-filter .subpage-text p {
-  margin: 0 auto;
-}
-.subpage-only-buttons .subpage-buttons, .subpage-text-buttons .subpage-buttons, .subpage-text-buttons-banner .subpage-buttons, .subpage-buttons-filter .subpage-buttons {
-  max-width: 720px;
-  padding-bottom: 138px;
-  margin: 263px auto 0 auto;
-}
-.subpage-only-buttons .subpage-buttons .subpage-group-buttons, .subpage-text-buttons .subpage-buttons .subpage-group-buttons, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: row wrap;
-  flex: 1 0 auto;
-  justify-content: flex-end;
-}
-.subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button {
-  flex-grow: 1;
-  height: 190px;
-  min-width: 156px;
-  max-width: 190px;
-  margin: auto;
-}
-.subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button:last-child, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button:last-child, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button:last-child, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button:last-child {
-  margin-right: 0;
-}
-.subpage-only-buttons .study-buttons, .subpage-text-buttons .study-buttons, .subpage-text-buttons-banner .study-buttons, .subpage-buttons-filter .study-buttons {
-  margin-top: 0;
-}
 .study-buttons + p {
   margin: 0;
 }
@@ -5542,14 +5568,6 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
   min-height: -moz-calc(100vh - 60px);
   min-height: calc(100vh - 60px);
   margin-top: -50px;
-}
-.item-page-news .page-header {
-  border-bottom: 0;
-}
-.item-page-news .page-header h2 {
-  font-size: 37px;
-  font-weight: 500;
-  color: #354959;
 }
 /* Customization for studies, Parallax, Banners, layouts */
 .item-page-study.acfgs .container.study-main, .item-page-study.btx .container.study-main {
@@ -6416,11 +6434,7 @@ div[class*="item-page-fp-"] .subpagebody {
 }
 .ioc-news-container {
   margin-top: 38px;
-  font-size: 17px;
-  font-weight: 300;
-  line-height: 1.65;
   color: #364958;
-  margin-bottom: 98px;
 }
 .ioc-news-container .ioc-news .imatge-noticia {
   width: 100%;
@@ -6429,11 +6443,12 @@ div[class*="item-page-fp-"] .subpagebody {
   height: auto;
   max-width: 100%;
 }
-.ioc-news-container .ioc-news .imatge-noticia figcaption {
+.ioc-news-container .ioc-news figcaption {
   clear: left;
   float: left;
   font-size: 14px;
   line-height: 1.36;
+  color: #849fa6;
   width: 100%;
   margin: 10px 15px 0 0;
 }
@@ -7141,12 +7156,6 @@ div[class*="item-page-"] table p {
   #login-campus.login-form-campus .modal-dialog .modal-content .modal-footer {
     margin-bottom: 11px;
   }
-  #container .fluid-container.page-header.iocnewsarticle {
-    height: 100px;
-  }
-  #container .fluid-container.page-header.iocnewsarticle h1 {
-    padding: 0;
-  }
   #container .fluid-container.page-header.iocnewsarticle > .container {
     padding: 0;
   }
@@ -7171,9 +7180,6 @@ div[class*="item-page-"] table p {
   }
   #main-box div.item-page-study {
     margin-top: 0;
-  }
-  .item-page-news .page-header, .item-page-news .modified, .item-page-news .ioctags {
-    padding: 0 15px;
   }
   .item-page-news .page-header h2, .item-page-news .modified h2, .item-page-news .ioctags h2 {
     margin-top: 10px;
@@ -7201,7 +7207,6 @@ div[class*="item-page-"] table p {
   }
   .item-page-news .container + .container {
     margin-top: 16px;
-    padding: 0 15px;
   }
   .item-page-study.acfgs .container.study-main, .item-page-study.btx .container.study-main {
     padding: 0;
@@ -7359,24 +7364,33 @@ div[class*="item-page-"] table p {
     font-size: 14px;
     line-height: 1.43;
   }
-  .subpage-only-buttons .subpage-text, .subpage-text-buttons .subpage-text, .subpage-text-buttons-banner .subpage-text, .subpage-buttons-filter .subpage-text {
+  .subpage-only-buttons .subpage-content-text, .subpage-only-text .subpage-content-text, .subpage-text-buttons .subpage-content-text, .subpage-text-buttons-banner .subpage-content-text, .subpage-buttons-filter .subpage-content-text {
     margin-bottom: 54px;
+    margin-top: 100px;
   }
-  .subpage-only-buttons .subpage-text p, .subpage-text-buttons .subpage-text p, .subpage-text-buttons-banner .subpage-text p, .subpage-buttons-filter .subpage-text p {
+  .subpage-only-buttons .subpage-content-text p, .subpage-only-text .subpage-content-text p, .subpage-text-buttons .subpage-content-text p, .subpage-text-buttons-banner .subpage-content-text p, .subpage-buttons-filter .subpage-content-text p {
     font-size: 13px;
     font-weight: 300;
     line-height: 1.54;
   }
-  .subpage-only-buttons .subpage-buttons, .subpage-text-buttons .subpage-buttons, .subpage-text-buttons-banner .subpage-buttons, .subpage-buttons-filter .subpage-buttons {
+  .subpage-only-buttons .subpage-text, .subpage-only-text .subpage-text, .subpage-text-buttons .subpage-text, .subpage-text-buttons-banner .subpage-text, .subpage-buttons-filter .subpage-text {
+    margin-bottom: 54px;
+  }
+  .subpage-only-buttons .subpage-text p, .subpage-only-text .subpage-text p, .subpage-text-buttons .subpage-text p, .subpage-text-buttons-banner .subpage-text p, .subpage-buttons-filter .subpage-text p {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.54;
+  }
+  .subpage-only-buttons .subpage-buttons, .subpage-only-text .subpage-buttons, .subpage-text-buttons .subpage-buttons, .subpage-text-buttons-banner .subpage-buttons, .subpage-buttons-filter .subpage-buttons {
     margin-top: 173px;
     padding-bottom: 31px;
   }
-  .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button {
+  .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-only-text .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button {
     height: 174px;
     width: 174px;
     max-width: 174px;
   }
-  .subpage-text-buttons {
+  .subpage-only-text, .subpage-text-buttons {
     margin-top: -50px;
   }
   .study-tabs {
@@ -7652,15 +7666,15 @@ div[class*="item-page-"] table p {
 }
 @media all and (max-width: 480px) {
   /* Customization for studies, Parallax, Banners, layouts */
-  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span, .item-page-default dd, .page-default dd, .item-page-default dl, .page-default dl, .item-page-default fieldset, .page-default fieldset {
+  .item-page-news .item-page-default h1, .page-default h1, .item-page-news .item-page-default h2, .page-default h2, .item-page-news .item-page-default h3, .page-default h3, .item-page-news .item-page-default p, .page-default p, .item-page-news .item-page-default ul, .page-default ul, .item-page-news .item-page-default ol, .page-default ol, .item-page-news .item-page-default table, .page-default table, .item-page-news .item-page-default div, .page-default div, .item-page-news .item-page-default span, .page-default span, .item-page-news .item-page-default dd, .page-default dd, .item-page-news .item-page-default dl, .page-default dl, .item-page-news .item-page-default fieldset, .page-default fieldset {
     max-width: 290px;
     margin-left: auto;
     margin-right: auto;
   }
-  .item-page-default.resource h1, .item-page-default.resource h2, .item-page-default.resource h3, .item-page-default.resource p, .item-page-default.resource ul, .item-page-default.resource ol, .item-page-default.resource table, .item-page-default.resource div, .item-page-default.resource span, .item-page-default.resource dd {
+  .item-page-news.resource h1, .item-page-default.resource h1, .item-page-news.resource h2, .item-page-default.resource h2, .item-page-news.resource h3, .item-page-default.resource h3, .item-page-news.resource p, .item-page-default.resource p, .item-page-news.resource ul, .item-page-default.resource ul, .item-page-news.resource ol, .item-page-default.resource ol, .item-page-news.resource table, .item-page-default.resource table, .item-page-news.resource div, .item-page-default.resource div, .item-page-news.resource span, .item-page-default.resource span, .item-page-news.resource dd, .item-page-default.resource dd {
     max-width: 100%;
   }
-  .item-page-default.resource .modal {
+  .item-page-news.resource .modal, .item-page-default.resource .modal {
     max-width: 100%;
   }
   h1 {
@@ -7971,10 +7985,10 @@ div[class*="item-page-"] table p {
   div[class*="item-page-fp-"] .subpagebody {
     background-size: 88vw 82px;
   }
-  #container .fluid-container.page-header.default {
+  #container .fluid-container.page-header.default, #container .fluid-container.page-header.iocnewsarticle {
     height: 147px;
   }
-  #container .fluid-container.page-header.default h1 {
+  #container .fluid-container.page-header.default h1, #container .fluid-container.page-header.iocnewsarticle h1 {
     bottom: 33px;
   }
   #container .container.study-main {
@@ -8043,10 +8057,6 @@ div[class*="item-page-"] table p {
   }
   .item-page-news .container .page-header, .item-page-news .container dd {
     padding: 0;
-  }
-  .ioc-news-container .ioc-news .imatge-noticia figcaption {
-    margin-bottom: 15px;
-    font-size: 11px;
   }
   .ioc-news-container .ioc-news img {
     width: 100%;
@@ -8120,18 +8130,18 @@ div[class*="item-page-"] table p {
   .subpagebody {
     background-size: 80vw 82px;
   }
-  .subpage-only-buttons, .subpage-text-buttons, .subpage-text-buttons-banner, .subpage-buttons-filter {
+  .subpage-only-buttons, .subpage-only-text, .subpage-text-buttons, .subpage-text-buttons-banner, .subpage-buttons-filter {
     background-position: center bottom;
     background-size: 100vw 95%;
   }
-  .subpage-only-buttons .subpage-buttons, .subpage-text-buttons .subpage-buttons, .subpage-text-buttons-banner .subpage-buttons, .subpage-buttons-filter .subpage-buttons {
+  .subpage-only-buttons .subpage-buttons, .subpage-only-text .subpage-buttons, .subpage-text-buttons .subpage-buttons, .subpage-text-buttons-banner .subpage-buttons, .subpage-buttons-filter .subpage-buttons {
     margin-top: 55px;
     padding-bottom: 0;
   }
-  .subpage-only-buttons .subpage-buttons .subpage-text, .subpage-text-buttons .subpage-buttons .subpage-text, .subpage-text-buttons-banner .subpage-buttons .subpage-text, .subpage-buttons-filter .subpage-buttons .subpage-text, .subpage-only-buttons .subpage-buttons .subpage-group-buttons, .subpage-text-buttons .subpage-buttons .subpage-group-buttons, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons {
+  .subpage-only-buttons .subpage-buttons .subpage-text, .subpage-only-text .subpage-buttons .subpage-text, .subpage-text-buttons .subpage-buttons .subpage-text, .subpage-text-buttons-banner .subpage-buttons .subpage-text, .subpage-buttons-filter .subpage-buttons .subpage-text, .subpage-only-buttons .subpage-buttons .subpage-group-buttons, .subpage-only-text .subpage-buttons .subpage-group-buttons, .subpage-text-buttons .subpage-buttons .subpage-group-buttons, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons {
     justify-content: space-between;
   }
-  .subpage-only-buttons .subpage-buttons .subpage-text p, .subpage-text-buttons .subpage-buttons .subpage-text p, .subpage-text-buttons-banner .subpage-buttons .subpage-text p, .subpage-buttons-filter .subpage-buttons .subpage-text p, .subpage-only-buttons .subpage-buttons .subpage-group-buttons p, .subpage-text-buttons .subpage-buttons .subpage-group-buttons p, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons p, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons p {
+  .subpage-only-buttons .subpage-buttons .subpage-text p, .subpage-only-text .subpage-buttons .subpage-text p, .subpage-text-buttons .subpage-buttons .subpage-text p, .subpage-text-buttons-banner .subpage-buttons .subpage-text p, .subpage-buttons-filter .subpage-buttons .subpage-text p, .subpage-only-buttons .subpage-buttons .subpage-group-buttons p, .subpage-only-text .subpage-buttons .subpage-group-buttons p, .subpage-text-buttons .subpage-buttons .subpage-group-buttons p, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons p, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons p {
     width: 100%;
     text-align: center;
     float: none;
@@ -8139,40 +8149,40 @@ div[class*="item-page-"] table p {
     font-weight: 300;
     line-height: 1.54;
   }
-  .subpage-only-buttons .subpage-buttons .subpage-text p .ioc-accent, .subpage-text-buttons .subpage-buttons .subpage-text p .ioc-accent, .subpage-text-buttons-banner .subpage-buttons .subpage-text p .ioc-accent, .subpage-buttons-filter .subpage-buttons .subpage-text p .ioc-accent, .subpage-only-buttons .subpage-buttons .subpage-group-buttons p .ioc-accent, .subpage-text-buttons .subpage-buttons .subpage-group-buttons p .ioc-accent, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons p .ioc-accent, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons p .ioc-accent {
+  .subpage-only-buttons .subpage-buttons .subpage-text p .ioc-accent, .subpage-only-text .subpage-buttons .subpage-text p .ioc-accent, .subpage-text-buttons .subpage-buttons .subpage-text p .ioc-accent, .subpage-text-buttons-banner .subpage-buttons .subpage-text p .ioc-accent, .subpage-buttons-filter .subpage-buttons .subpage-text p .ioc-accent, .subpage-only-buttons .subpage-buttons .subpage-group-buttons p .ioc-accent, .subpage-only-text .subpage-buttons .subpage-group-buttons p .ioc-accent, .subpage-text-buttons .subpage-buttons .subpage-group-buttons p .ioc-accent, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons p .ioc-accent, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons p .ioc-accent {
     color: #354959;
     font-weight: 500;
   }
-  .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button {
+  .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button, .subpage-only-text .subpage-buttons .subpage-text .subpage-button, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-only-text .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button {
     max-width: 93px !important;
     min-width: 93px !important;
     height: 116px !important;
     margin: 0 0 7px 0;
   }
-  .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .custom-icon, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .custom-icon, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon {
+  .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon, .subpage-only-text .subpage-buttons .subpage-text .subpage-button .custom-icon, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .custom-icon, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .custom-icon, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon, .subpage-only-text .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon {
     height: 43px;
     width: 28px;
   }
-  .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.certificats, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.certificats, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .custom-icon.certificats, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .custom-icon.certificats, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.certificats, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.certificats, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.certificats, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.certificats, .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.competencies, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.competencies, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .custom-icon.competencies, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .custom-icon.competencies, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.competencies, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.competencies, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.competencies, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.competencies, .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.ambit, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.ambit, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .custom-icon.ambit, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .custom-icon.ambit, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.ambit, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.ambit, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.ambit, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.ambit, .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.itinerari, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.itinerari, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .custom-icon.itinerari, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .custom-icon.itinerari, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.itinerari, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.itinerari, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.itinerari, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.itinerari, .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.metodologia, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.metodologia, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .custom-icon.metodologia, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .custom-icon.metodologia, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.metodologia, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.metodologia, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.metodologia, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.metodologia {
+  .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.certificats, .subpage-only-text .subpage-buttons .subpage-text .subpage-button .custom-icon.certificats, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.certificats, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .custom-icon.certificats, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .custom-icon.certificats, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.certificats, .subpage-only-text .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.certificats, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.certificats, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.certificats, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.certificats, .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.competencies, .subpage-only-text .subpage-buttons .subpage-text .subpage-button .custom-icon.competencies, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.competencies, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .custom-icon.competencies, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .custom-icon.competencies, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.competencies, .subpage-only-text .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.competencies, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.competencies, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.competencies, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.competencies, .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.ambit, .subpage-only-text .subpage-buttons .subpage-text .subpage-button .custom-icon.ambit, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.ambit, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .custom-icon.ambit, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .custom-icon.ambit, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.ambit, .subpage-only-text .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.ambit, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.ambit, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.ambit, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.ambit, .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.itinerari, .subpage-only-text .subpage-buttons .subpage-text .subpage-button .custom-icon.itinerari, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.itinerari, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .custom-icon.itinerari, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .custom-icon.itinerari, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.itinerari, .subpage-only-text .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.itinerari, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.itinerari, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.itinerari, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.itinerari, .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.metodologia, .subpage-only-text .subpage-buttons .subpage-text .subpage-button .custom-icon.metodologia, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.metodologia, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .custom-icon.metodologia, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .custom-icon.metodologia, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.metodologia, .subpage-only-text .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.metodologia, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.metodologia, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.metodologia, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.metodologia {
     top: 25px !important;
   }
-  .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .icon-text, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .icon-text, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .icon-text, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .icon-text, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .icon-text, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .icon-text, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .icon-text, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .icon-text {
+  .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .icon-text, .subpage-only-text .subpage-buttons .subpage-text .subpage-button .icon-text, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .icon-text, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .icon-text, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .icon-text, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .icon-text, .subpage-only-text .subpage-buttons .subpage-group-buttons .subpage-button .icon-text, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .icon-text, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .icon-text, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .icon-text {
     bottom: 21px !important;
     font-size: 8px !important;
     letter-spacing: 1.1px !important;
     max-width: 100%;
   }
-  .subpage-only-buttons .subpage-buttons .subpage-text, .subpage-text-buttons .subpage-buttons .subpage-text, .subpage-text-buttons-banner .subpage-buttons .subpage-text, .subpage-buttons-filter .subpage-buttons .subpage-text {
+  .subpage-only-buttons .subpage-buttons .subpage-text, .subpage-only-text .subpage-buttons .subpage-text, .subpage-text-buttons .subpage-buttons .subpage-text, .subpage-text-buttons-banner .subpage-buttons .subpage-text, .subpage-buttons-filter .subpage-buttons .subpage-text {
     margin-bottom: 30px;
     margin-top: 45px;
     max-width: 288px;
   }
-  .subpage-only-buttons .subpage-buttons .subpage-group-buttons, .subpage-text-buttons .subpage-buttons .subpage-group-buttons, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons {
+  .subpage-only-buttons .subpage-buttons .subpage-group-buttons, .subpage-only-text .subpage-buttons .subpage-group-buttons, .subpage-text-buttons .subpage-buttons .subpage-group-buttons, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons {
     max-width: 290px;
     margin-bottom: 30px;
     margin-top: 15px;
   }
-  .subpage-text-buttons {
+  .subpage-only-text, .subpage-text-buttons {
     background-image: url('../images/seccio-text-botons-bck-mobile.svg');
   }
   .subpage-text-buttons-banner, .subpage-buttons-filter {
@@ -8298,15 +8308,15 @@ div[class*="item-page-"] table p {
   }
 }
 @media all and (min-width: 648px) {
-  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span, .item-page-default dd, .page-default dd, .item-page-default dl, .page-default dl, .item-page-default fieldset, .page-default fieldset {
+  .item-page-news .item-page-default h1, .page-default h1, .item-page-news .item-page-default h2, .page-default h2, .item-page-news .item-page-default h3, .page-default h3, .item-page-news .item-page-default p, .page-default p, .item-page-news .item-page-default ul, .page-default ul, .item-page-news .item-page-default ol, .page-default ol, .item-page-news .item-page-default table, .page-default table, .item-page-news .item-page-default div, .page-default div, .item-page-news .item-page-default span, .page-default span, .item-page-news .item-page-default dd, .page-default dd, .item-page-news .item-page-default dl, .page-default dl, .item-page-news .item-page-default fieldset, .page-default fieldset {
     max-width: 626px;
     margin-left: auto;
     margin-right: auto;
   }
-  .item-page-default.resource h1, .item-page-default.resource h2, .item-page-default.resource h3, .item-page-default.resource p, .item-page-default.resource ul, .item-page-default.resource ol, .item-page-default.resource table, .item-page-default.resource div, .item-page-default.resource span, .item-page-default.resource dd {
+  .item-page-news.resource h1, .item-page-default.resource h1, .item-page-news.resource h2, .item-page-default.resource h2, .item-page-news.resource h3, .item-page-default.resource h3, .item-page-news.resource p, .item-page-default.resource p, .item-page-news.resource ul, .item-page-default.resource ul, .item-page-news.resource ol, .item-page-default.resource ol, .item-page-news.resource table, .item-page-default.resource table, .item-page-news.resource div, .item-page-default.resource div, .item-page-news.resource span, .item-page-default.resource span, .item-page-news.resource dd, .item-page-default.resource dd {
     max-width: 626px;
   }
-  .item-page-default.resource .modal {
+  .item-page-news.resource .modal, .item-page-default.resource .modal {
     max-width: 100%;
   }
   .container {
@@ -8367,11 +8377,18 @@ div[class*="item-page-"] table p {
   #container .fluid-container.page-header {
     height: 147px;
   }
-  #container .fluid-container.page-header.default {
+  #container .fluid-container.page-header.default, #container .fluid-container.page-header.iocnewsarticle {
     height: 147px;
   }
-  #container .fluid-container.page-header.default h1 {
+  #container .fluid-container.page-header.default h1, #container .fluid-container.page-header.iocnewsarticle h1 {
     bottom: 33px;
+  }
+  #container .fluid-container.page-header.default + .container .modified, #container .fluid-container.page-header.iocnewsarticle + .container .modified {
+    font-size: 9px;
+    letter-spacing: 0.9px;
+  }
+  #container .fluid-container.page-header.iocnewsarticle {
+    margin-bottom: 0;
   }
   #container .fluid-container.page-header h1 {
     left: 15px;
@@ -8410,6 +8427,11 @@ div[class*="item-page-"] table p {
   }
   .header.acfgs ~ section #container, .header.btx ~ section #container {
     min-height: auto;
+  }
+  .ioc-news-container .ioc-news figcaption {
+    margin-top: 9.6px;
+    margin-bottom: 15px;
+    font-size: 11px;
   }
   #news {
     margin-top: 53px;
@@ -8730,6 +8752,10 @@ div[class*="item-page-"] table p {
   #main-box div.item-page-default {
     margin-top: 69px;
     margin-bottom: 77px;
+  }
+  #main-box div.item-page-news {
+    margin-top: 30px;
+    margin-bottom: 42px;
   }
   .item-page-study.acfgs + .all-studies .substudies, .item-page-study.btx + .all-studies .substudies {
     background-image: none;
@@ -9100,7 +9126,7 @@ div[class*="item-page-"] table p {
     color: #fff;
     padding: 0 10px;
   }
-  .ioc-news .imatge-noticia figcaption {
+  .ioc-news figcaption {
     margin-bottom: 15px;
   }
   .ioc-news img {
@@ -9118,21 +9144,25 @@ div[class*="item-page-"] table p {
   .subpagebody {
     background-size: 100vw 146px;
   }
-  .subpage-text-buttons .subpage-buttons {
+  .subpage-only-text .subpage-buttons, .subpage-text-buttons .subpage-buttons, .subpage-only-text .subpage-content-text, .subpage-text-buttons .subpage-content-text {
     margin-top: 119px;
     max-width: 100%;
     padding-left: 15px;
     padding-right: 15px;
   }
-  .subpage-text-buttons .subpage-buttons .subpage-text, .subpage-text-buttons .subpage-buttons .subpage-group-buttons {
+  .subpage-only-text .subpage-buttons .subpage-text, .subpage-text-buttons .subpage-buttons .subpage-text, .subpage-only-text .subpage-content-text .subpage-text, .subpage-text-buttons .subpage-content-text .subpage-text, .subpage-only-text .subpage-buttons .subpage-group-buttons, .subpage-text-buttons .subpage-buttons .subpage-group-buttons, .subpage-only-text .subpage-content-text .subpage-group-buttons, .subpage-text-buttons .subpage-content-text .subpage-group-buttons {
     min-width: 290px;
     max-width: 85%;
   }
-  .subpage-text-buttons .subpage-buttons .subpage-text p, .subpage-text-buttons .subpage-buttons .subpage-group-buttons p {
+  .subpage-only-text .subpage-buttons .subpage-text p, .subpage-text-buttons .subpage-buttons .subpage-text p, .subpage-only-text .subpage-content-text .subpage-text p, .subpage-text-buttons .subpage-content-text .subpage-text p, .subpage-only-text .subpage-buttons .subpage-group-buttons p, .subpage-text-buttons .subpage-buttons .subpage-group-buttons p, .subpage-only-text .subpage-content-text .subpage-group-buttons p, .subpage-text-buttons .subpage-content-text .subpage-group-buttons p {
     font-size: 13px;
   }
-  .subpage-text-buttons .subpage-buttons .subpage-group-buttons {
+  .subpage-only-text .subpage-buttons .subpage-group-buttons, .subpage-text-buttons .subpage-buttons .subpage-group-buttons, .subpage-only-text .subpage-content-text .subpage-group-buttons, .subpage-text-buttons .subpage-content-text .subpage-group-buttons {
     justify-content: space-between;
+  }
+  .subpage-only-text .subpage-content-text .subpage-text {
+    margin-left: auto;
+    margin-right: auto;
   }
   .subpage-text-buttons-banner .subpage-text p {
     max-width: 66%;
@@ -9167,15 +9197,15 @@ div[class*="item-page-"] table p {
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
-  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span, .item-page-default dd, .page-default dd, .item-page-default dl, .page-default dl, .item-page-default fieldset, .page-default fieldset {
+  .item-page-news .item-page-default h1, .page-default h1, .item-page-news .item-page-default h2, .page-default h2, .item-page-news .item-page-default h3, .page-default h3, .item-page-news .item-page-default p, .page-default p, .item-page-news .item-page-default ul, .page-default ul, .item-page-news .item-page-default ol, .page-default ol, .item-page-news .item-page-default table, .page-default table, .item-page-news .item-page-default div, .page-default div, .item-page-news .item-page-default span, .page-default span, .item-page-news .item-page-default dd, .page-default dd, .item-page-news .item-page-default dl, .page-default dl, .item-page-news .item-page-default fieldset, .page-default fieldset {
     max-width: 629px;
     margin-left: auto;
     margin-right: auto;
   }
-  .item-page-default.resource h1, .item-page-default.resource h2, .item-page-default.resource h3, .item-page-default.resource p, .item-page-default.resource ul, .item-page-default.resource ol, .item-page-default.resource table, .item-page-default.resource div, .item-page-default.resource span, .item-page-default.resource dd {
+  .item-page-news.resource h1, .item-page-default.resource h1, .item-page-news.resource h2, .item-page-default.resource h2, .item-page-news.resource h3, .item-page-default.resource h3, .item-page-news.resource p, .item-page-default.resource p, .item-page-news.resource ul, .item-page-default.resource ul, .item-page-news.resource ol, .item-page-default.resource ol, .item-page-news.resource table, .item-page-default.resource table, .item-page-news.resource div, .item-page-default.resource div, .item-page-news.resource span, .item-page-default.resource span, .item-page-news.resource dd, .item-page-default.resource dd {
     max-width: 629px;
   }
-  .item-page-default.resource .modal {
+  .item-page-news.resource .modal, .item-page-default.resource .modal {
     max-width: 100%;
   }
   .container {
@@ -9251,16 +9281,19 @@ div[class*="item-page-"] table p {
     font-size: 18px;
     font-weight: 400;
   }
-  #container .fluid-container.page-header.default {
+  #container .fluid-container.page-header.default, #container .fluid-container.page-header.iocnewsarticle {
     height: 191px;
   }
-  #container .fluid-container.page-header.default .container {
+  #container .fluid-container.page-header.default .container, #container .fluid-container.page-header.iocnewsarticle .container {
     padding: 0;
   }
-  #container .fluid-container.page-header.default .container h1 {
+  #container .fluid-container.page-header.default .container h1, #container .fluid-container.page-header.iocnewsarticle .container h1 {
     bottom: 56px;
     font-size: 23px;
     letter-spacing: 0;
+  }
+  #container .fluid-container.page-header.default + .container .modified, #container .fluid-container.page-header.iocnewsarticle + .container .modified {
+    font-size: 10px;
   }
   #container .fluid-container.page-header.subpage .container h1 {
     font-size: 18px;
@@ -9270,6 +9303,17 @@ div[class*="item-page-"] table p {
   #main-box div.item-page-default {
     margin-top: 78px;
     margin-bottom: 90px;
+  }
+  #main-box div.item-page-news {
+    margin-top: 63px;
+    margin-bottom: 58px;
+  }
+  .item-page-news .page-header, .item-page-news .modified, .item-page-news .ioctags {
+    padding: 0;
+  }
+  .ioc-news-container .ioc-news figcaption {
+    margin-top: 10px;
+    font-size: 13px;
   }
   .item-page-study.acfgs + .all-studies .substudies, .item-page-study.btx + .all-studies .substudies {
     background-size: 100vw 265px;
@@ -9698,15 +9742,15 @@ div[class*="item-page-"] table p {
 }
 /* Medium Devices, Desktops */
 @media all and (min-width: 992px) {
-  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span, .item-page-default dd, .page-default dd, .item-page-default dl, .page-default dl, .item-page-default fieldset, .page-default fieldset {
+  .item-page-news .item-page-default h1, .page-default h1, .item-page-news .item-page-default h2, .page-default h2, .item-page-news .item-page-default h3, .page-default h3, .item-page-news .item-page-default p, .page-default p, .item-page-news .item-page-default ul, .page-default ul, .item-page-news .item-page-default ol, .page-default ol, .item-page-news .item-page-default table, .page-default table, .item-page-news .item-page-default div, .page-default div, .item-page-news .item-page-default span, .page-default span, .item-page-news .item-page-default dd, .page-default dd, .item-page-news .item-page-default dl, .page-default dl, .item-page-news .item-page-default fieldset, .page-default fieldset {
     max-width: 676px;
     margin-left: auto;
     margin-right: auto;
   }
-  .item-page-default.resource h1, .item-page-default.resource h2, .item-page-default.resource h3, .item-page-default.resource p, .item-page-default.resource ul, .item-page-default.resource ol, .item-page-default.resource table, .item-page-default.resource div, .item-page-default.resource span, .item-page-default.resource dd {
+  .item-page-news.resource h1, .item-page-default.resource h1, .item-page-news.resource h2, .item-page-default.resource h2, .item-page-news.resource h3, .item-page-default.resource h3, .item-page-news.resource p, .item-page-default.resource p, .item-page-news.resource ul, .item-page-default.resource ul, .item-page-news.resource ol, .item-page-default.resource ol, .item-page-news.resource table, .item-page-default.resource table, .item-page-news.resource div, .item-page-default.resource div, .item-page-news.resource span, .item-page-default.resource span, .item-page-news.resource dd, .item-page-default.resource dd {
     max-width: 830px;
   }
-  .item-page-default.resource .modal {
+  .item-page-news.resource .modal, .item-page-default.resource .modal {
     max-width: 100%;
   }
   .container {
@@ -9789,7 +9833,7 @@ div[class*="item-page-"] table p {
   .page-header .container {
     padding: 0;
   }
-  .item-page-default .container {
+  .item-page-default .container, .item-page-news .container {
     padding: 0;
   }
   .item-page-study.acfgs .container.study-main .study-overview-menu, .item-page-study.btx .container.study-main .study-overview-menu {
@@ -9930,15 +9974,15 @@ div[class*="item-page-"] table p {
   }
 }
 @media all and (min-width: 1199px) {
-  .item-page-default h1, .page-default h1, .item-page-default h2, .page-default h2, .item-page-default h3, .page-default h3, .item-page-default p, .page-default p, .item-page-default ul, .page-default ul, .item-page-default ol, .page-default ol, .item-page-default table, .page-default table, .item-page-default div, .page-default div, .item-page-default span, .page-default span, .item-page-default dd, .page-default dd, .item-page-default dl, .page-default dl, .item-page-default fieldset, .page-default fieldset {
+  .item-page-news .item-page-default h1, .page-default h1, .item-page-news .item-page-default h2, .page-default h2, .item-page-news .item-page-default h3, .page-default h3, .item-page-news .item-page-default p, .page-default p, .item-page-news .item-page-default ul, .page-default ul, .item-page-news .item-page-default ol, .page-default ol, .item-page-news .item-page-default table, .page-default table, .item-page-news .item-page-default div, .page-default div, .item-page-news .item-page-default span, .page-default span, .item-page-news .item-page-default dd, .page-default dd, .item-page-news .item-page-default dl, .page-default dl, .item-page-news .item-page-default fieldset, .page-default fieldset {
     max-width: 676px;
     margin-left: auto;
     margin-right: auto;
   }
-  .item-page-default.resource h1, .item-page-default.resource h2, .item-page-default.resource h3, .item-page-default.resource p, .item-page-default.resource ul, .item-page-default.resource ol, .item-page-default.resource table, .item-page-default.resource div, .item-page-default.resource span, .item-page-default.resource dd {
+  .item-page-news.resource h1, .item-page-default.resource h1, .item-page-news.resource h2, .item-page-default.resource h2, .item-page-news.resource h3, .item-page-default.resource h3, .item-page-news.resource p, .item-page-default.resource p, .item-page-news.resource ul, .item-page-default.resource ul, .item-page-news.resource ol, .item-page-default.resource ol, .item-page-news.resource table, .item-page-default.resource table, .item-page-news.resource div, .item-page-default.resource div, .item-page-news.resource span, .item-page-default.resource span, .item-page-news.resource dd, .item-page-default.resource dd {
     max-width: 1180px;
   }
-  .item-page-default.resource .modal {
+  .item-page-news.resource .modal, .item-page-default.resource .modal {
     max-width: 100%;
   }
   .container {
@@ -9958,6 +10002,11 @@ div[class*="item-page-"] table p {
   #myCarousel .item .logo-ioc-large img {
     top: 485px;
     width: 593px;
+  }
+  #myCarousel .item video {
+    height: auto;
+    top: 0;
+    margin: auto 0;
   }
   #myCarousel .avisos {
     top: 611px;
@@ -10138,7 +10187,7 @@ div[class*="item-page-"] table p {
     font-size: 13px;
     height: 85px;
   }
-  #main-box div.item-page-default {
+  #main-box div.item-page-default, #main-box div.item-page-news {
     margin-top: 110px;
     margin-bottom: 122px;
   }

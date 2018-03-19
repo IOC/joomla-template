@@ -28,7 +28,7 @@ if ($menu->getActive() == $menu->getDefault($lang->getTag())
 $pageclass = '';
 $imgpath = 'templates/' . $app->getTemplate() . '/images/';
 $itemid = JRequest::getVar('Itemid');
-if ($itemid) {
+if ($itemid && JRequest::getCmd('view') != 'search') {
     $active = $menu->getItem($itemid);
     $params = $menu->getParams( $active->id );
     $pageclass = $params->get( 'pageclass_sfx' );
