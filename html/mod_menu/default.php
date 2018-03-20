@@ -14,9 +14,13 @@ defined('_JEXEC') or die;
 <?php // The menu class is deprecated. Use nav instead. ?>
 <?php
 
+$topmenu = false;
+$featured = (JRequest::getCmd('view') == 'featured'); // Front page
+
 if ($params->get('menutype') == 'topmenu') {
 	$class = "nav navbar-nav";
 	$menunavclass = "";
+	$topmenu = true;
 } else {
 	$class = "nav navbar-nav";
 	$menunavclass = "";
@@ -64,6 +68,11 @@ $specialstyle = in_array($params->get('style'), $specialstyles);
 
 foreach ($list as $i => &$item)
 {
+	if ($topmenu) {
+		if (($featured && $item->alias == 'ioc-estudis') || (!$featured && $item->alias == 'ioc-news')) {
+			continue;
+		}
+	}
 	$dataattr = '';
 
 	if ($item->params->get('menu-meta_keywords')) {

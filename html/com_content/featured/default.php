@@ -24,6 +24,17 @@ $menuitems = array();
 ?>
 
 <?php if (!empty($this->important)) : ?>
+<?php
+  //Force ioc-welcome to be first page regardless of ordering
+  usort($this->important, function( $a, $b) {
+    if ($a->alias == 'ioc-welcome') {
+      return ~PHP_INT_MAX;
+    } else if ($b->alias == 'ioc-welcome') {
+      return PHP_INT_MAX;
+    }
+    return $a->ordering - $b->ordering;
+  });
+?>
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
   <!-- Indicators -->
   <ol class="carousel-indicators hidden">
