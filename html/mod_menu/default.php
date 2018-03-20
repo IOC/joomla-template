@@ -69,7 +69,8 @@ $specialstyle = in_array($params->get('style'), $specialstyles);
 foreach ($list as $i => &$item)
 {
 	if ($topmenu) {
-		if (($featured && $item->alias == 'ioc-estudis') || (!$featured && $item->alias == 'ioc-news')) {
+		if (($featured && ($item->alias == 'ioc-estudis' || $item->alias == 'ioc-studies'))
+			|| (!$featured && ($item->alias == 'ioc-noticies' || $item->alias == 'ioc-news'))) {
 			continue;
 		}
 	}

@@ -614,6 +614,34 @@
             }
         }
     }
+    .subpage-text-buttons {
+        .subpage-buttons {
+            .subpage-group-buttons {
+                .subpage-button {
+                    margin: 0 auto 10px auto;
+                    .custom-icon {
+                        &.certificats,
+                        &.competencies,
+                        &.ambit,
+                        &.itinerari {
+                            top: 32px;
+                        }
+                    }
+                    .icon-text {
+                        bottom: 24px;
+                        font-size: 9px;
+                        font-weight: 500;
+                        letter-spacing: 1.2px;
+                    }
+                }
+            }
+        }
+        .subpage-text {
+            p {
+                width: 79%;
+            }
+        }
+    }
     .subpage-only-buttons,
     .subpage-only-text,
     .subpage-text-buttons,
@@ -639,11 +667,11 @@
         .subpage-buttons {
             margin-top: 173px;
             padding-bottom: 31px;
+            max-width: 626px;
             .subpage-group-buttons {
                 .subpage-button {
-                    height: 174px;
-                    width: 174px;
-                    max-width: 174px;
+                    height: 140px;
+                    width: 140px;
                 }
             }
         }
@@ -1418,7 +1446,6 @@
             .subpage-group-buttons {
                 justify-content: space-between;
                 p {
-                    width: 100%;
                     text-align: center;
                     float: none;
                     font-size: 13px;
@@ -1427,29 +1454,6 @@
                     .ioc-accent {
                         color: $ioc-text;
                         font-weight: 500;
-                    }
-                }
-                .subpage-button {
-                    max-width: 93px !important;
-                    min-width: 93px !important;
-                    height: 116px !important;
-                    margin: 0 0 7px 0;
-                    .custom-icon {
-                        height: 43px;
-                        width: 28px;
-                        &.certificats,
-                        &.competencies,
-                        &.ambit,
-                        &.itinerari,
-                        &.metodologia {
-                            top: 25px !important;
-                        }
-                    }
-                    .icon-text {
-                        bottom: 21px !important;
-                        font-size: 8px !important;
-                        letter-spacing: 1.1px !important;
-                        max-width: 100%;
                     }
                 }
             }
@@ -2220,10 +2224,8 @@
     .study-buttons {
         margin-top: 73px;
     }
-    .study-buttons,
-    .subpage-buttons {
-        .study-button,
-        .subpage-button {
+    .study-buttons {
+        .study-button {
             width: 94px;
             height: 116px;
             .custom-icon {
@@ -2270,28 +2272,15 @@
     }
     .subpage-text-buttons {
         .subpage-buttons {
-            .subpage-text,
-            .subpage-group-buttons {
-                .subpage-button {
-                    max-width: 140px;
-                    min-width: 140px;
-                    height: 140px;
-                    margin: 0 0 7px 0;
-                    .custom-icon {
-                        &.certificats,
-                        &.competencies,
-                        &.ambit,
-                        &.itinerari {
-                            top: 32px;
-                        }
-                    }
-                    .icon-text {
-                        bottom: 24px;
-                        font-size: 9px;
-                        font-weight: 500;
-                        letter-spacing: 1.2px;
-                    }
+            max-width: 290px;
+            .subpage-text {
+                p {
+                    text-align: center;
+                    width: 100%;
                 }
+            }
+            .subpage-group-buttons {
+                justify-content: space-between;
             }
         }
     }
@@ -2724,27 +2713,27 @@
     .subpagebody {
         background-size: 100vw 146px;
     }
-    .subpage-only-text,
-    .subpage-text-buttons {
-        .subpage-buttons,
-        .subpage-content-text {
-            margin-top: 119px;
-            max-width: 100%;
-            padding-left: 15px;
-            padding-right: 15px;
-            .subpage-text,
-            .subpage-group-buttons {
-                min-width: 290px;
-                max-width: 85%;
-                p {
-                    font-size: 13px;
-                }
-            }
-            .subpage-group-buttons {
-                justify-content: space-between;
-            }
-        }
-    }
+    // .subpage-only-text,
+    // .subpage-text-buttons {
+    //     .subpage-buttons,
+    //     .subpage-content-text {
+    //         margin-top: 119px;
+    //         max-width: 100%;
+    //         padding-left: 15px;
+    //         padding-right: 15px;
+    //         .subpage-text,
+    //         .subpage-group-buttons {
+    //             min-width: 290px;
+    //             max-width: 85%;
+    //             p {
+    //                 font-size: 13px;
+    //             }
+    //         }
+    //         .subpage-group-buttons {
+    //             justify-content: space-between;
+    //         }
+    //     }
+    // }
     .subpage-only-text {
         .subpage-content-text {
             .subpage-text {
@@ -3880,11 +3869,6 @@
                     width: 593px;
                 }
             }
-            video {
-                height: auto;
-                top: 0;
-                margin: auto 0;
-            }
         }
         .avisos {
             top: 611px;
@@ -4294,6 +4278,41 @@
             }
         }
     }
+    .subpage-only-buttons,
+    .subpage-only-text,
+    .subpage-text-buttons,
+    .subpage-text-buttons-banner,
+    .subpage-buttons-filter {
+        background-repeat: no-repeat;
+        background-position: center top;
+        .subpage-text {
+            p {
+                margin: 0 auto;
+            }
+            margin-bottom: 86px;
+        }
+        .subpage-buttons {
+            max-width: 829px;
+            padding-bottom: 138px;
+            margin: 263px auto 0 auto;
+            .subpage-group-buttons {
+                .subpage-button {
+                    height: 190px;
+                    width: 190px;
+                }
+            }
+        }
+        .study-buttons {
+            margin-top: 0;
+        }
+    }
+    .subpage-text-buttons {
+        .subpage-text {
+            p {
+                width: 72%;
+            }
+        }
+    }
     #container {
         .modal-modules {
             max-width: 1180px;
@@ -4368,6 +4387,15 @@
 }
 
 @media all and (min-width: 1445px) {
+    #myCarousel {
+        .item {
+            video {
+                height: auto;
+                top: 0;
+                margin: auto 0;
+            }
+        }
+    }
     .subpage-text-buttons-banner .subpage-banner,
     .subpage-buttons-filter .subpage-banner {
         height: 406px;

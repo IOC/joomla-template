@@ -222,6 +222,9 @@
     }
     .button-registration {
         background-color: get-color($colors, button);
+        &:hover {
+            color: get-color($colors, navbar-hover);
+        }
     }
     .modal-modules {
         .content-modal-modules,
@@ -3280,16 +3283,15 @@ header.headroom--not-top {
         }
         .subpage-buttons,
         .subpage-content-text {
-            max-width: 720px;
+            //max-width: 720px;
+            max-width: 690px;
             padding-bottom: 138px;
             margin: 263px auto 0 auto;
             .subpage-group-buttons {
                 @include flexbox($justify-content: flex-end);
                 .subpage-button {
-                    flex-grow: 1;
-                    height: 190px;
-                    min-width: 156px;
-                    max-width: 190px;
+                    height: 189px;
+                    width: 156px;
                     margin: auto;
                     &:last-child {
                         margin-right: 0;
@@ -3336,7 +3338,7 @@ header.headroom--not-top {
             text-align: right;
             margin-bottom: 131px;
             p {
-                width: 78%;
+                width: 80%;
                 font-size: 16px;
                 line-height: 1.56;
                 text-align: right;
@@ -4662,11 +4664,11 @@ div[class*="item-page-fp-"] {
     left: 0;
     top: $ioc-header-mini;
     iframe {
-        left:1em;
-        top:0;
-        height:100%;
-        width:99%;
-        position:absolute;
+        left: 11px;
+        top: 0;
+        height: 100%;
+        width: 99%;
+        position: absolute;
         border: 0;
     }
     .ioclegend {

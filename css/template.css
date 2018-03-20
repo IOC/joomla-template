@@ -1709,6 +1709,9 @@ header.headroom--top.acfgs .navbar-default .social .custom-icon:hover {
 .item-page-study.acfgs .button-registration {
   background-color: #26727d;
 }
+.item-page-study.acfgs .button-registration:hover {
+  color: #5eabc5;
+}
 .item-page-study.acfgs .modal-modules .content-modal-modules .modal-module, .item-page-study.acfgs .modal-modules .body-modal-modules .modal-module {
   border-color: inherit;
 }
@@ -1808,6 +1811,9 @@ header.headroom--top.btx .navbar-default .social .custom-icon:hover {
 }
 .item-page-study.btx .button-registration {
   background-color: #6462a9;
+}
+.item-page-study.btx .button-registration:hover {
+  color: #9696ea;
 }
 .item-page-study.btx .modal-modules .content-modal-modules .modal-module, .item-page-study.btx .modal-modules .body-modal-modules .modal-module {
   border-color: inherit;
@@ -1909,6 +1915,9 @@ header.headroom--top.btx-ioc .navbar-default .social .custom-icon:hover {
 .item-page-study.btx-ioc .button-registration {
   background-color: #6462a9;
 }
+.item-page-study.btx-ioc .button-registration:hover {
+  color: #9696ea;
+}
 .item-page-study.btx-ioc .modal-modules .content-modal-modules .modal-module, .item-page-study.btx-ioc .modal-modules .body-modal-modules .modal-module {
   border-color: inherit;
 }
@@ -2008,6 +2017,9 @@ header.headroom--top.btx-mat .navbar-default .social .custom-icon:hover {
 }
 .item-page-study.btx-mat .button-registration {
   background-color: #41b0c8;
+}
+.item-page-study.btx-mat .button-registration:hover {
+  color: #70e6ff;
 }
 .item-page-study.btx-mat .modal-modules .content-modal-modules .modal-module, .item-page-study.btx-mat .modal-modules .body-modal-modules .modal-module {
   border-color: inherit;
@@ -2109,6 +2121,9 @@ header.headroom--top.cas .navbar-default .social .custom-icon:hover {
 .item-page-study.cas .button-registration {
   background-color: #26727d;
 }
+.item-page-study.cas .button-registration:hover {
+  color: #5eabc5;
+}
 .item-page-study.cas .modal-modules .content-modal-modules .modal-module, .item-page-study.cas .modal-modules .body-modal-modules .modal-module {
   border-color: inherit;
 }
@@ -2208,6 +2223,9 @@ header.headroom--top.competic .navbar-default .social .custom-icon:hover {
 }
 .item-page-study.competic .button-registration {
   background-color: #2f49ca;
+}
+.item-page-study.competic .button-registration:hover {
+  color: #01c1b9;
 }
 .item-page-study.competic .modal-modules .content-modal-modules .modal-module, .item-page-study.competic .modal-modules .body-modal-modules .modal-module {
   border-color: inherit;
@@ -2309,6 +2327,9 @@ div[class*="item-page-eoi-"] .study-tabs .tab-content .button-tab-nav:hover, div
 div[class*="item-page-eoi-"] .button-registration {
   background-color: #f6ad03;
 }
+div[class*="item-page-eoi-"] .button-registration:hover {
+  color: #b97100;
+}
 div[class*="item-page-eoi-"] .modal-modules .content-modal-modules .modal-module, div[class*="item-page-eoi-"] .modal-modules .body-modal-modules .modal-module {
   border-color: #fc9601;
 }
@@ -2402,6 +2423,9 @@ header.headroom--top.eoi .navbar-default .social .custom-icon:hover {
 }
 .item-page-study.eoi .button-registration {
   background-color: #f6ad03;
+}
+.item-page-study.eoi .button-registration:hover {
+  color: #b97100;
 }
 .item-page-study.eoi .modal-modules .content-modal-modules .modal-module, .item-page-study.eoi .modal-modules .body-modal-modules .modal-module {
   border-color: #fc9601;
@@ -2503,6 +2527,9 @@ header.headroom--top.fesp .navbar-default .social .custom-icon:hover {
 .item-page-study.fesp .button-registration {
   background-color: #a03a59;
 }
+.item-page-study.fesp .button-registration:hover {
+  color: #c86885;
+}
 .item-page-study.fesp .modal-modules .content-modal-modules .modal-module, .item-page-study.fesp .modal-modules .body-modal-modules .modal-module {
   border-color: inherit;
 }
@@ -2603,6 +2630,9 @@ div[class*="item-page-fp-"] .study-tabs .tab-content .button-tab-nav:hover, div[
 div[class*="item-page-fp-"] .button-registration {
   background-color: #27a680;
 }
+div[class*="item-page-fp-"] .button-registration:hover {
+  color: #128862;
+}
 div[class*="item-page-fp-"] .modal-modules .content-modal-modules .modal-module, div[class*="item-page-fp-"] .modal-modules .body-modal-modules .modal-module {
   border-color: #0f9e73;
 }
@@ -2696,6 +2726,9 @@ header.headroom--top.fp .navbar-default .social .custom-icon:hover {
 }
 .item-page-study.fp .button-registration {
   background-color: #27a680;
+}
+.item-page-study.fp .button-registration:hover {
+  color: #128862;
 }
 .item-page-study.fp .modal-modules .content-modal-modules .modal-module, .item-page-study.fp .modal-modules .body-modal-modules .modal-module {
   border-color: #0f9e73;
@@ -2797,6 +2830,9 @@ header.headroom--top.fpd .navbar-default .social .custom-icon:hover {
 .item-page-study.fpd .button-registration {
   background-color: #f6ad03;
 }
+.item-page-study.fpd .button-registration:hover {
+  color: #01c1b9;
+}
 .item-page-study.fpd .modal-modules .content-modal-modules .modal-module, .item-page-study.fpd .modal-modules .body-modal-modules .modal-module {
   border-color: inherit;
 }
@@ -2896,6 +2932,9 @@ header.headroom--top.ges .navbar-default .social .custom-icon:hover {
 }
 .item-page-study.ges .button-registration {
   background-color: #e15064;
+}
+.item-page-study.ges .button-registration:hover {
+  color: #01c1b9;
 }
 .item-page-study.ges .modal-modules .content-modal-modules .modal-module, .item-page-study.ges .modal-modules .body-modal-modules .modal-module {
   border-color: inherit;
@@ -2997,6 +3036,9 @@ header.headroom--top.pacfgs .navbar-default .social .custom-icon:hover {
 .item-page-study.pacfgs .button-registration {
   background-color: #26727d;
 }
+.item-page-study.pacfgs .button-registration:hover {
+  color: #5eabc5;
+}
 .item-page-study.pacfgs .modal-modules .content-modal-modules .modal-module, .item-page-study.pacfgs .modal-modules .body-modal-modules .modal-module {
   border-color: inherit;
 }
@@ -3036,26 +3078,26 @@ header.headroom--top.pau ~ section .form-search .container .search-query {
   border-color: #2d5958;
 }
 header.headroom--top.pau .navbar-default .login-clone-campus:hover, header.headroom--top.pau .navbar-default .tiny-campus:hover, header.headroom--top.pau .navbar-default .tiny-search:hover, header.headroom--top.pau .navbar-default .navbar-toggle:hover {
-  color: #01c1b9;
+  color: #2b5453;
 }
 header.headroom--top.pau .navbar-default .login-clone-campus:hover .custom-icon, header.headroom--top.pau .navbar-default .tiny-campus:hover .custom-icon, header.headroom--top.pau .navbar-default .tiny-search:hover .custom-icon, header.headroom--top.pau .navbar-default .navbar-toggle:hover .custom-icon {
-  color: #01c1b9;
+  color: #2b5453;
 }
 header.headroom--top.pau .navbar-default .login-clone-campus:hover .icon-bar, header.headroom--top.pau .navbar-default .tiny-campus:hover .icon-bar, header.headroom--top.pau .navbar-default .tiny-search:hover .icon-bar, header.headroom--top.pau .navbar-default .navbar-toggle:hover .icon-bar {
-  background-color: #01c1b9;
+  background-color: #2b5453;
 }
 header.headroom--top.pau .navbar-default .navbar-collapse .navbar-nav button:hover .custom-icon, header.headroom--top.pau .navbar-default .navbar-collapse .navbar-nav button:hover span {
-  color: #01c1b9;
+  color: #2b5453;
 }
 header.headroom--top.pau .navbar-default .navbar-collapse .navbar-nav li a:hover {
-  color: #01c1b9;
+  color: #2b5453;
 }
 header.headroom--top.pau .navbar-default .login-clone-campus {
   background-color: #386d6c;
   border-color: #2d5958;
 }
 header.headroom--top.pau .navbar-default .social .custom-icon:hover {
-  color: #01c1b9;
+  color: #2b5453;
 }
 #container .fluid-container.page-header.pau {
   background-color: #508d90;
@@ -3096,6 +3138,9 @@ header.headroom--top.pau .navbar-default .social .custom-icon:hover {
 }
 .item-page-study.pau .button-registration {
   background-color: #508d90;
+}
+.item-page-study.pau .button-registration:hover {
+  color: #2b5453;
 }
 .item-page-study.pau .modal-modules .content-modal-modules .modal-module, .item-page-study.pau .modal-modules .body-modal-modules .modal-module {
   border-color: inherit;
@@ -5089,7 +5134,7 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
   margin: 0 auto;
 }
 .subpage-only-buttons .subpage-buttons, .subpage-only-text .subpage-buttons, .subpage-text-buttons .subpage-buttons, .subpage-text-buttons-banner .subpage-buttons, .subpage-buttons-filter .subpage-buttons, .subpage-only-buttons .subpage-content-text, .subpage-only-text .subpage-content-text, .subpage-text-buttons .subpage-content-text, .subpage-text-buttons-banner .subpage-content-text, .subpage-buttons-filter .subpage-content-text {
-  max-width: 720px;
+  max-width: 690px;
   padding-bottom: 138px;
   margin: 263px auto 0 auto;
 }
@@ -5104,10 +5149,8 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
   justify-content: flex-end;
 }
 .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-only-text .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-only-buttons .subpage-content-text .subpage-group-buttons .subpage-button, .subpage-only-text .subpage-content-text .subpage-group-buttons .subpage-button, .subpage-text-buttons .subpage-content-text .subpage-group-buttons .subpage-button, .subpage-text-buttons-banner .subpage-content-text .subpage-group-buttons .subpage-button, .subpage-buttons-filter .subpage-content-text .subpage-group-buttons .subpage-button {
-  flex-grow: 1;
-  height: 190px;
-  min-width: 156px;
-  max-width: 190px;
+  height: 189px;
+  width: 156px;
   margin: auto;
 }
 .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button:last-child, .subpage-only-text .subpage-buttons .subpage-group-buttons .subpage-button:last-child, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button:last-child, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button:last-child, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button:last-child, .subpage-only-buttons .subpage-content-text .subpage-group-buttons .subpage-button:last-child, .subpage-only-text .subpage-content-text .subpage-group-buttons .subpage-button:last-child, .subpage-text-buttons .subpage-content-text .subpage-group-buttons .subpage-button:last-child, .subpage-text-buttons-banner .subpage-content-text .subpage-group-buttons .subpage-button:last-child, .subpage-buttons-filter .subpage-content-text .subpage-group-buttons .subpage-button:last-child {
@@ -5152,7 +5195,7 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
   margin-bottom: 131px;
 }
 .subpage-text-buttons .subpage-text p {
-  width: 78%;
+  width: 80%;
   font-size: 16px;
   line-height: 1.56;
   text-align: right;
@@ -6408,7 +6451,7 @@ div[class*="item-page-fp-"] .subpagebody {
   top: 60px;
 }
 .map-responsive iframe {
-  left: 1em;
+  left: 11px;
   top: 0;
   height: 100%;
   width: 99%;
@@ -7364,6 +7407,21 @@ div[class*="item-page-"] table p {
     font-size: 14px;
     line-height: 1.43;
   }
+  .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button {
+    margin: 0 auto 10px auto;
+  }
+  .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.certificats, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.competencies, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.ambit, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.itinerari {
+    top: 32px;
+  }
+  .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .icon-text {
+    bottom: 24px;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+  }
+  .subpage-text-buttons .subpage-text p {
+    width: 79%;
+  }
   .subpage-only-buttons .subpage-content-text, .subpage-only-text .subpage-content-text, .subpage-text-buttons .subpage-content-text, .subpage-text-buttons-banner .subpage-content-text, .subpage-buttons-filter .subpage-content-text {
     margin-bottom: 54px;
     margin-top: 100px;
@@ -7384,11 +7442,11 @@ div[class*="item-page-"] table p {
   .subpage-only-buttons .subpage-buttons, .subpage-only-text .subpage-buttons, .subpage-text-buttons .subpage-buttons, .subpage-text-buttons-banner .subpage-buttons, .subpage-buttons-filter .subpage-buttons {
     margin-top: 173px;
     padding-bottom: 31px;
+    max-width: 626px;
   }
   .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-only-text .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button {
-    height: 174px;
-    width: 174px;
-    max-width: 174px;
+    height: 140px;
+    width: 140px;
   }
   .subpage-only-text, .subpage-text-buttons {
     margin-top: -50px;
@@ -8142,7 +8200,6 @@ div[class*="item-page-"] table p {
     justify-content: space-between;
   }
   .subpage-only-buttons .subpage-buttons .subpage-text p, .subpage-only-text .subpage-buttons .subpage-text p, .subpage-text-buttons .subpage-buttons .subpage-text p, .subpage-text-buttons-banner .subpage-buttons .subpage-text p, .subpage-buttons-filter .subpage-buttons .subpage-text p, .subpage-only-buttons .subpage-buttons .subpage-group-buttons p, .subpage-only-text .subpage-buttons .subpage-group-buttons p, .subpage-text-buttons .subpage-buttons .subpage-group-buttons p, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons p, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons p {
-    width: 100%;
     text-align: center;
     float: none;
     font-size: 13px;
@@ -8152,25 +8209,6 @@ div[class*="item-page-"] table p {
   .subpage-only-buttons .subpage-buttons .subpage-text p .ioc-accent, .subpage-only-text .subpage-buttons .subpage-text p .ioc-accent, .subpage-text-buttons .subpage-buttons .subpage-text p .ioc-accent, .subpage-text-buttons-banner .subpage-buttons .subpage-text p .ioc-accent, .subpage-buttons-filter .subpage-buttons .subpage-text p .ioc-accent, .subpage-only-buttons .subpage-buttons .subpage-group-buttons p .ioc-accent, .subpage-only-text .subpage-buttons .subpage-group-buttons p .ioc-accent, .subpage-text-buttons .subpage-buttons .subpage-group-buttons p .ioc-accent, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons p .ioc-accent, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons p .ioc-accent {
     color: #354959;
     font-weight: 500;
-  }
-  .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button, .subpage-only-text .subpage-buttons .subpage-text .subpage-button, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-only-text .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button {
-    max-width: 93px !important;
-    min-width: 93px !important;
-    height: 116px !important;
-    margin: 0 0 7px 0;
-  }
-  .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon, .subpage-only-text .subpage-buttons .subpage-text .subpage-button .custom-icon, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .custom-icon, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .custom-icon, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon, .subpage-only-text .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon {
-    height: 43px;
-    width: 28px;
-  }
-  .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.certificats, .subpage-only-text .subpage-buttons .subpage-text .subpage-button .custom-icon.certificats, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.certificats, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .custom-icon.certificats, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .custom-icon.certificats, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.certificats, .subpage-only-text .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.certificats, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.certificats, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.certificats, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.certificats, .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.competencies, .subpage-only-text .subpage-buttons .subpage-text .subpage-button .custom-icon.competencies, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.competencies, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .custom-icon.competencies, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .custom-icon.competencies, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.competencies, .subpage-only-text .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.competencies, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.competencies, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.competencies, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.competencies, .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.ambit, .subpage-only-text .subpage-buttons .subpage-text .subpage-button .custom-icon.ambit, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.ambit, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .custom-icon.ambit, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .custom-icon.ambit, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.ambit, .subpage-only-text .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.ambit, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.ambit, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.ambit, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.ambit, .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.itinerari, .subpage-only-text .subpage-buttons .subpage-text .subpage-button .custom-icon.itinerari, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.itinerari, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .custom-icon.itinerari, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .custom-icon.itinerari, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.itinerari, .subpage-only-text .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.itinerari, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.itinerari, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.itinerari, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.itinerari, .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.metodologia, .subpage-only-text .subpage-buttons .subpage-text .subpage-button .custom-icon.metodologia, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.metodologia, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .custom-icon.metodologia, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .custom-icon.metodologia, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.metodologia, .subpage-only-text .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.metodologia, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.metodologia, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.metodologia, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.metodologia {
-    top: 25px !important;
-  }
-  .subpage-only-buttons .subpage-buttons .subpage-text .subpage-button .icon-text, .subpage-only-text .subpage-buttons .subpage-text .subpage-button .icon-text, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .icon-text, .subpage-text-buttons-banner .subpage-buttons .subpage-text .subpage-button .icon-text, .subpage-buttons-filter .subpage-buttons .subpage-text .subpage-button .icon-text, .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button .icon-text, .subpage-only-text .subpage-buttons .subpage-group-buttons .subpage-button .icon-text, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .icon-text, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button .icon-text, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button .icon-text {
-    bottom: 21px !important;
-    font-size: 8px !important;
-    letter-spacing: 1.1px !important;
-    max-width: 100%;
   }
   .subpage-only-buttons .subpage-buttons .subpage-text, .subpage-only-text .subpage-buttons .subpage-text, .subpage-text-buttons .subpage-buttons .subpage-text, .subpage-text-buttons-banner .subpage-buttons .subpage-text, .subpage-buttons-filter .subpage-buttons .subpage-text {
     margin-bottom: 30px;
@@ -8799,43 +8837,43 @@ div[class*="item-page-"] table p {
   .study-buttons {
     margin-top: 73px;
   }
-  .study-buttons .study-button, .subpage-buttons .study-button, .study-buttons .subpage-button, .subpage-buttons .subpage-button {
+  .study-buttons .study-button {
     width: 94px;
     height: 116px;
   }
-  .study-buttons .study-button .custom-icon, .subpage-buttons .study-button .custom-icon, .study-buttons .subpage-button .custom-icon, .subpage-buttons .subpage-button .custom-icon {
+  .study-buttons .study-button .custom-icon {
     top: 22px;
     height: 44px;
     width: 34px;
   }
-  .study-buttons .study-button .custom-icon.access, .subpage-buttons .study-button .custom-icon.access, .study-buttons .subpage-button .custom-icon.access, .subpage-buttons .subpage-button .custom-icon.access {
+  .study-buttons .study-button .custom-icon.access {
     background-image: url('../images/requisits-34x44px.svg');
   }
-  .study-buttons .study-button .custom-icon.ambit, .subpage-buttons .study-button .custom-icon.ambit, .study-buttons .subpage-button .custom-icon.ambit, .subpage-buttons .subpage-button .custom-icon.ambit {
+  .study-buttons .study-button .custom-icon.ambit {
     background-image: url('../images/ambit-professional-34x44px.svg');
   }
-  .study-buttons .study-button .custom-icon.certificats, .subpage-buttons .study-button .custom-icon.certificats, .study-buttons .subpage-button .custom-icon.certificats, .subpage-buttons .subpage-button .custom-icon.certificats {
+  .study-buttons .study-button .custom-icon.certificats {
     background-image: url('../images/certificats-34x44px.svg');
   }
-  .study-buttons .study-button .custom-icon.competencies, .subpage-buttons .study-button .custom-icon.competencies, .study-buttons .subpage-button .custom-icon.competencies, .subpage-buttons .subpage-button .custom-icon.competencies {
+  .study-buttons .study-button .custom-icon.competencies {
     background-image: url('../images/competencies-34x44px.svg');
   }
-  .study-buttons .study-button .custom-icon.itinerari, .subpage-buttons .study-button .custom-icon.itinerari, .study-buttons .subpage-button .custom-icon.itinerari, .subpage-buttons .subpage-button .custom-icon.itinerari {
+  .study-buttons .study-button .custom-icon.itinerari {
     background-image: url('../images/itinerari-34x44px.svg');
   }
-  .study-buttons .study-button .custom-icon.matricula, .subpage-buttons .study-button .custom-icon.matricula, .study-buttons .subpage-button .custom-icon.matricula, .subpage-buttons .subpage-button .custom-icon.matricula {
+  .study-buttons .study-button .custom-icon.matricula {
     background-image: url('../images/matriculam-34x44px.svg');
   }
-  .study-buttons .study-button .custom-icon.metodologia, .subpage-buttons .study-button .custom-icon.metodologia, .study-buttons .subpage-button .custom-icon.metodologia, .subpage-buttons .subpage-button .custom-icon.metodologia {
+  .study-buttons .study-button .custom-icon.metodologia {
     background-image: url('../images/metodologia-34x44px.svg');
   }
-  .study-buttons .study-button .custom-icon.suport, .subpage-buttons .study-button .custom-icon.suport, .study-buttons .subpage-button .custom-icon.suport, .subpage-buttons .subpage-button .custom-icon.suport {
+  .study-buttons .study-button .custom-icon.suport {
     background-image: url('../images/centres-suport-34x44px.svg');
   }
-  .study-buttons .study-button + .study-button, .subpage-buttons .study-button + .study-button {
+  .study-buttons .study-button + .study-button {
     margin-left: 2px;
   }
-  .study-buttons .icon-text, .subpage-buttons .icon-text {
+  .study-buttons .icon-text {
     font-size: 8px;
     font-weight: 500;
     letter-spacing: 1.1px;
@@ -8843,20 +8881,15 @@ div[class*="item-page-"] table p {
     padding: 0;
     max-width: 91%;
   }
-  .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button {
-    max-width: 140px;
-    min-width: 140px;
-    height: 140px;
-    margin: 0 0 7px 0;
+  .subpage-text-buttons .subpage-buttons {
+    max-width: 290px;
   }
-  .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.certificats, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.certificats, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.competencies, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.competencies, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.ambit, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.ambit, .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .custom-icon.itinerari, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .custom-icon.itinerari {
-    top: 32px;
+  .subpage-text-buttons .subpage-buttons .subpage-text p {
+    text-align: center;
+    width: 100%;
   }
-  .subpage-text-buttons .subpage-buttons .subpage-text .subpage-button .icon-text, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .icon-text {
-    bottom: 24px;
-    font-size: 9px;
-    font-weight: 500;
-    letter-spacing: 1.2px;
+  .subpage-text-buttons .subpage-buttons .subpage-group-buttons {
+    justify-content: space-between;
   }
   .subpage-bigbanner {
     height: 227px;
@@ -9143,22 +9176,6 @@ div[class*="item-page-"] table p {
   }
   .subpagebody {
     background-size: 100vw 146px;
-  }
-  .subpage-only-text .subpage-buttons, .subpage-text-buttons .subpage-buttons, .subpage-only-text .subpage-content-text, .subpage-text-buttons .subpage-content-text {
-    margin-top: 119px;
-    max-width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .subpage-only-text .subpage-buttons .subpage-text, .subpage-text-buttons .subpage-buttons .subpage-text, .subpage-only-text .subpage-content-text .subpage-text, .subpage-text-buttons .subpage-content-text .subpage-text, .subpage-only-text .subpage-buttons .subpage-group-buttons, .subpage-text-buttons .subpage-buttons .subpage-group-buttons, .subpage-only-text .subpage-content-text .subpage-group-buttons, .subpage-text-buttons .subpage-content-text .subpage-group-buttons {
-    min-width: 290px;
-    max-width: 85%;
-  }
-  .subpage-only-text .subpage-buttons .subpage-text p, .subpage-text-buttons .subpage-buttons .subpage-text p, .subpage-only-text .subpage-content-text .subpage-text p, .subpage-text-buttons .subpage-content-text .subpage-text p, .subpage-only-text .subpage-buttons .subpage-group-buttons p, .subpage-text-buttons .subpage-buttons .subpage-group-buttons p, .subpage-only-text .subpage-content-text .subpage-group-buttons p, .subpage-text-buttons .subpage-content-text .subpage-group-buttons p {
-    font-size: 13px;
-  }
-  .subpage-only-text .subpage-buttons .subpage-group-buttons, .subpage-text-buttons .subpage-buttons .subpage-group-buttons, .subpage-only-text .subpage-content-text .subpage-group-buttons, .subpage-text-buttons .subpage-content-text .subpage-group-buttons {
-    justify-content: space-between;
   }
   .subpage-only-text .subpage-content-text .subpage-text {
     margin-left: auto;
@@ -10003,11 +10020,6 @@ div[class*="item-page-"] table p {
     top: 485px;
     width: 593px;
   }
-  #myCarousel .item video {
-    height: auto;
-    top: 0;
-    margin: auto 0;
-  }
   #myCarousel .avisos {
     top: 611px;
   }
@@ -10297,6 +10309,31 @@ div[class*="item-page-"] table p {
   .submenu .submenu-content .navbar-nav li .element-title, .substudies .submenu-content .navbar-nav li .element-title, .submenu .substudies-content .navbar-nav li .element-title, .substudies .substudies-content .navbar-nav li .element-title {
     line-height: 124px;
   }
+  .subpage-only-buttons, .subpage-only-text, .subpage-text-buttons, .subpage-text-buttons-banner, .subpage-buttons-filter {
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+  .subpage-only-buttons .subpage-text, .subpage-only-text .subpage-text, .subpage-text-buttons .subpage-text, .subpage-text-buttons-banner .subpage-text, .subpage-buttons-filter .subpage-text {
+    margin-bottom: 86px;
+  }
+  .subpage-only-buttons .subpage-text p, .subpage-only-text .subpage-text p, .subpage-text-buttons .subpage-text p, .subpage-text-buttons-banner .subpage-text p, .subpage-buttons-filter .subpage-text p {
+    margin: 0 auto;
+  }
+  .subpage-only-buttons .subpage-buttons, .subpage-only-text .subpage-buttons, .subpage-text-buttons .subpage-buttons, .subpage-text-buttons-banner .subpage-buttons, .subpage-buttons-filter .subpage-buttons {
+    max-width: 829px;
+    padding-bottom: 138px;
+    margin: 263px auto 0 auto;
+  }
+  .subpage-only-buttons .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-only-text .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-text-buttons-banner .subpage-buttons .subpage-group-buttons .subpage-button, .subpage-buttons-filter .subpage-buttons .subpage-group-buttons .subpage-button {
+    height: 190px;
+    width: 190px;
+  }
+  .subpage-only-buttons .study-buttons, .subpage-only-text .study-buttons, .subpage-text-buttons .study-buttons, .subpage-text-buttons-banner .study-buttons, .subpage-buttons-filter .study-buttons {
+    margin-top: 0;
+  }
+  .subpage-text-buttons .subpage-text p {
+    width: 72%;
+  }
   #container .modal-modules {
     max-width: 1180px;
   }
@@ -10353,6 +10390,11 @@ div[class*="item-page-"] table p {
   }
 }
 @media all and (min-width: 1445px) {
+  #myCarousel .item video {
+    height: auto;
+    top: 0;
+    margin: auto 0;
+  }
   .subpage-text-buttons-banner .subpage-banner, .subpage-buttons-filter .subpage-banner {
     height: 406px;
     background-position: center;
