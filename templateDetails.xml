@@ -110,6 +110,11 @@
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
+                <!-- SASS-->
+                <field name="refresh_media_version" type="radio" class="btn-group" default="0" label="Refresh media version" description="Refresh media version to reload media files">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
 			</fieldset>
 			<!-- LOGO-->
 			<fieldset  name="logo" type="upload_func" label="Logo">

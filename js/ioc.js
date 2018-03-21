@@ -206,7 +206,6 @@
             }
         });
 
-
         $(document).on('click', PLUGINVARS.SELECTORS.TABNAVBUTTON, function(e) {
             tabnavigation($(this).hasClass('next'));
         });
@@ -315,7 +314,7 @@
             $('.back-to-top').attr('href', '#');
         });
 
-        $(document).on('click', '.study-buttons a[href*=#], .study-tabs .tab-content a[href*=#], .subpage-group-buttons a[href*=#]' , function(e) {
+        $(document).on('click', '.study-buttons a[href*=#], .study-tabs .tab-content a[href*=#], .subpage-group-buttons a[href*=#], .panel-body a[href*=#]' , function(e) {
             e.preventDefault();
             linkhash = '#' + $(this).prop('hash').replace(/[^a-zA-Z0-9_-]*/g, '');
             isapanel = $(this).closest('.panel-group, .study-tabs').hasClass('panel-group');
@@ -379,7 +378,7 @@
                 $("html, body").animate({ scrollTop: position.top}, 800);
             }
             if (!$(linkhash).hasClass('in')) {
-                $('.panel-group a[href="' + linkhash +'"]').trigger('click');
+                $('.panel-group .panel-heading a[href="' + linkhash +'"]').trigger('click');
             }
             var position = $(linkhash).position();
             console.log(position);

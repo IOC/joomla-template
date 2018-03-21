@@ -11,6 +11,10 @@ if ($params->get('compile_sass', '0') === '1')
 {
 	require_once "includes/sass.php";
 }
+if ($params->get('refresh_media_version', '0') === '1')
+{
+    JFactory::getApplication()->flushAssets();
+}
 ?>
 <!DOCTYPE html>
 <html lang="ca">
