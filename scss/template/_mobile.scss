@@ -890,7 +890,74 @@
             }
         }
     }
-
+    .item-page-faqs {
+        .title {
+            h2 {
+                margin-top: 31px;
+                margin-bottom: 7px;
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+        .faqsindex {
+            display: none;
+        }
+        .panel-faqs {
+            margin-top: 45px;
+            .panel-section-info {
+                margin-top: 0;
+                .panel.panel-default {
+                    .panel-heading {
+                        .panel-title {
+                            a {
+                                &.collapsed {
+                                    .custom-icon {
+                                        &.plus {
+                                            transform: rotate(0deg);
+                                        }
+                                    }
+                                }
+                                .custom-icon {
+                                    &.plus {
+                                        position: absolute;
+                                        top: 17px;
+                                        right: 18px;
+                                        height: 18px;
+                                        width: 18px;
+                                        color: $ioc-text2;
+                                        transform: rotate(-45deg);
+                                        transition: all .35s linear;
+                                        &:before {
+                                            content: '\e913';
+                                            font-family: 'ioc-icons';
+                                            font-size: 18px;
+                                        }
+                                    }
+                                }
+                                padding-right: 43px;
+                                font-size: 11px;
+                                font-weight: 600;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                    .panel-collapse {
+                        .panel-body {
+                            margin: 0 auto;
+                            padding: 15px 0;
+                            max-width: 85%;
+                            font-size: 13px;
+                            line-height: 1.54;
+                            h1, h2, h3, h4 {
+                                font-size: 14px;
+                                margin-top: 37px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     .footer {
         .container {
             .top {
@@ -1247,7 +1314,8 @@
         .fluid-container {
             &.page-header {
                 &.default,
-                &.iocnewsarticle {
+                &.iocnewsarticle,
+                &.faqs {
                     height: 147px;
                     h1 {
                         bottom: 33px;
@@ -1563,48 +1631,6 @@
             margin-top: 47px;
         }
     }
-    .item-page-faqs {
-        .title {
-            h2 {
-                font-size: 20px;
-                font-weight: 600;
-            }
-        }
-        .faqsindex {
-            ul {
-                li {
-                    margin-right: 0;
-                    width: 100%;
-                    a {
-                        font-size: 14px;
-                        font-weight: 600;
-                    }
-                }
-            }
-        }
-        .panel-faqs {
-            .panel-section-info {
-                .panel.panel-default {
-                    .panel-heading {
-                        .panel-title {
-                            a {
-                                font-size: 11px;
-                                font-weight: 600;
-                                text-transform: uppercase;
-                            }
-                        }
-                    }
-                    .panel-collapse {
-                        .panel-body {
-                            margin: 0 auto;
-                            padding: 15px 0;
-                            max-width: 85%;
-                        }
-                    }
-                }
-            }
-        }
-    }
     .footer {
         .mobile {
             text-align: center;
@@ -1731,7 +1757,8 @@
             &.page-header {
                 height: 147px;
                 &.default,
-                &.iocnewsarticle {
+                &.iocnewsarticle,
+                &.faqs {
                     height: 147px;
                     h1 {
                         bottom: 33px;
@@ -2381,17 +2408,6 @@
             }
         }
     }
-    .item-page-faqs {
-        .faqsindex {
-            ul {
-                li {
-                    a {
-                        font-size: 14px;
-                    }
-                }
-            }
-        }
-    }
     .study-panel {
         .study-data {
             .study-col {
@@ -2882,7 +2898,8 @@
                     }
                 }
                 &.default,
-                &.iocnewsarticle {
+                &.iocnewsarticle,
+                &.faqs {
                     height: 191px;
                     .container {
                         padding: 0;

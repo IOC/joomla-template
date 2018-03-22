@@ -314,7 +314,7 @@
             $('.back-to-top').attr('href', '#');
         });
 
-        $(document).on('click', '.study-buttons a[href*=#], .study-tabs .tab-content a[href*=#], .subpage-group-buttons a[href*=#], .panel-body a[href*=#]' , function(e) {
+        $(document).on('click', '.study-buttons a[href*=#], .study-tabs .tab-content a[href*=#], .subpage-group-buttons a[href*=#], .panel-body a[href*=#], .faqsindex a[href*=#]' , function(e) {
             e.preventDefault();
             linkhash = '#' + $(this).prop('hash').replace(/[^a-zA-Z0-9_-]*/g, '');
             isapanel = $(this).closest('.panel-group, .study-tabs').hasClass('panel-group');

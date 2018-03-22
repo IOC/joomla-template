@@ -507,6 +507,40 @@ $ioc-accent:    #01c1b9;
             }
         }
     }
+    .faqsindex {
+        li {
+            @include borderioc(1px, $custom_red);
+        }
+    }
+    .panel-faqs {
+        #panel-sections {
+            &:after {
+                display: none;
+            }
+            .panel-heading {
+                @include borderioc(1px, $custom_red);
+                a {
+                    pointer-events: auto;
+                }
+            }
+            .panel-collapse {
+                .panel-body {
+                    @include borderioc(1px, $custom_red);;
+                }
+            }
+            .panel.panel-default {
+                pointer-events: auto;
+                &:first-child{
+                    &:before {
+                        display: none;
+                    }
+                }
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
     #panel-sections {
         pointer-events: none;
         position: relative;

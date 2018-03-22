@@ -519,6 +519,39 @@
 #tinymce .study-more-info .panel-title a {
   padding: 5px;
 }
+#tinymce .faqsindex li {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
+#tinymce .panel-faqs #panel-sections:after {
+  display: none;
+}
+#tinymce .panel-faqs #panel-sections .panel-heading {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
+#tinymce .panel-faqs #panel-sections .panel-heading a {
+  pointer-events: auto;
+}
+#tinymce .panel-faqs #panel-sections .panel-collapse .panel-body {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
+#tinymce .panel-faqs #panel-sections .panel.panel-default {
+  pointer-events: auto;
+}
+#tinymce .panel-faqs #panel-sections .panel.panel-default:first-child:before {
+  display: none;
+}
+#tinymce .panel-faqs #panel-sections .panel.panel-default:before {
+  display: none;
+}
 #tinymce #panel-sections {
   pointer-events: none;
   position: relative;

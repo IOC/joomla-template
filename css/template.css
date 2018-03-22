@@ -5801,8 +5801,18 @@ div[class*="item-page-fp-"] .subpagebody {
   background-color: #ecf3f7;
 }
 .item-page-faqs .faqsindex ul li a {
-  display: block;
-  line-height: 71px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 0 auto;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  line-height: 1.1;
   font-size: 16px;
   color: #364958;
 }
@@ -5823,6 +5833,11 @@ div[class*="item-page-fp-"] .subpagebody {
 .item-page-faqs .panel-faqs .panel-section-info .panel.panel-default .panel-collapse .panel-body {
   border: 0;
   padding: 39px 103px 68px 85px;
+  font-size: 16px;
+  line-height: 1.63;
+}
+.item-page-faqs .panel-faqs .panel-section-info .panel.panel-default .panel-collapse .panel-body h1, .item-page-faqs .panel-faqs .panel-section-info .panel.panel-default .panel-collapse .panel-body h2, .item-page-faqs .panel-faqs .panel-section-info .panel.panel-default .panel-collapse .panel-body h3, .item-page-faqs .panel-faqs .panel-section-info .panel.panel-default .panel-collapse .panel-body h4 {
+  font-size: 16px;
 }
 .item-page-faqs .panel-faqs .panel-section-info .panel.panel-default .panel-heading {
   padding: 0;
@@ -5833,10 +5848,20 @@ div[class*="item-page-fp-"] .subpagebody {
   height: 51px;
 }
 .item-page-faqs .panel-faqs .panel-section-info .panel.panel-default .panel-heading .panel-title a {
-  display: block;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 0 auto;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  height: 100%;
   font-size: 17px;
   font-weight: 400;
-  line-height: 51px;
+  line-height: 1.1;
   padding-left: 21px;
   color: #354959;
 }
@@ -6133,7 +6158,7 @@ div[class*="item-page-fp-"] .subpagebody {
 }
 .study-more-info .panel-section-info .panel.panel-default .panel-body, .study-tabs .panel-section-info .panel.panel-default .panel-body {
   font-size: 15px;
-  line-height: 22px;
+  line-height: 1.63;
 }
 .study-more-info .panel-section-info .panel.panel-default .panel-body p, .study-tabs .panel-section-info .panel.panel-default .panel-body p {
   margin: 0 0 20px;
@@ -7615,6 +7640,56 @@ div[class*="item-page-"] table p {
     top: 0;
     left: 2px;
   }
+  .item-page-faqs .title h2 {
+    margin-top: 31px;
+    margin-bottom: 7px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .item-page-faqs .faqsindex {
+    display: none;
+  }
+  .item-page-faqs .panel-faqs {
+    margin-top: 45px;
+  }
+  .item-page-faqs .panel-faqs .panel-section-info {
+    margin-top: 0;
+  }
+  .item-page-faqs .panel-faqs .panel-section-info .panel.panel-default .panel-heading .panel-title a {
+    padding-right: 43px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .item-page-faqs .panel-faqs .panel-section-info .panel.panel-default .panel-heading .panel-title a.collapsed .custom-icon.plus {
+    transform: rotate(0deg);
+  }
+  .item-page-faqs .panel-faqs .panel-section-info .panel.panel-default .panel-heading .panel-title a .custom-icon.plus {
+    position: absolute;
+    top: 17px;
+    right: 18px;
+    height: 18px;
+    width: 18px;
+    color: #364958;
+    transform: rotate(-45deg);
+    transition: all 0.35s linear;
+  }
+  .item-page-faqs .panel-faqs .panel-section-info .panel.panel-default .panel-heading .panel-title a .custom-icon.plus:before {
+    content: '\e913';
+    font-family: 'ioc-icons';
+    font-size: 18px;
+  }
+  .item-page-faqs .panel-faqs .panel-section-info .panel.panel-default .panel-collapse .panel-body {
+    margin: 0 auto;
+    padding: 15px 0;
+    max-width: 85%;
+    font-size: 13px;
+    line-height: 1.54;
+  }
+  .item-page-faqs .panel-faqs .panel-section-info .panel.panel-default .panel-collapse .panel-body h1, .item-page-faqs .panel-faqs .panel-section-info .panel.panel-default .panel-collapse .panel-body h2, .item-page-faqs .panel-faqs .panel-section-info .panel.panel-default .panel-collapse .panel-body h3, .item-page-faqs .panel-faqs .panel-section-info .panel.panel-default .panel-collapse .panel-body h4 {
+    font-size: 14px;
+    margin-top: 37px;
+  }
   .footer .container .top {
     display: block;
   }
@@ -8043,10 +8118,10 @@ div[class*="item-page-"] table p {
   div[class*="item-page-fp-"] .subpagebody {
     background-size: 88vw 82px;
   }
-  #container .fluid-container.page-header.default, #container .fluid-container.page-header.iocnewsarticle {
+  #container .fluid-container.page-header.default, #container .fluid-container.page-header.iocnewsarticle, #container .fluid-container.page-header.faqs {
     height: 147px;
   }
-  #container .fluid-container.page-header.default h1, #container .fluid-container.page-header.iocnewsarticle h1 {
+  #container .fluid-container.page-header.default h1, #container .fluid-container.page-header.iocnewsarticle h1, #container .fluid-container.page-header.faqs h1 {
     bottom: 33px;
   }
   #container .container.study-main {
@@ -8292,28 +8367,6 @@ div[class*="item-page-"] table p {
   .study-more-info .panel-section-info {
     margin-top: 47px;
   }
-  .item-page-faqs .title h2 {
-    font-size: 20px;
-    font-weight: 600;
-  }
-  .item-page-faqs .faqsindex ul li {
-    margin-right: 0;
-    width: 100%;
-  }
-  .item-page-faqs .faqsindex ul li a {
-    font-size: 14px;
-    font-weight: 600;
-  }
-  .item-page-faqs .panel-faqs .panel-section-info .panel.panel-default .panel-heading .panel-title a {
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-  .item-page-faqs .panel-faqs .panel-section-info .panel.panel-default .panel-collapse .panel-body {
-    margin: 0 auto;
-    padding: 15px 0;
-    max-width: 85%;
-  }
   .footer .mobile {
     text-align: center;
     padding: 0 10px;
@@ -8415,13 +8468,13 @@ div[class*="item-page-"] table p {
   #container .fluid-container.page-header {
     height: 147px;
   }
-  #container .fluid-container.page-header.default, #container .fluid-container.page-header.iocnewsarticle {
+  #container .fluid-container.page-header.default, #container .fluid-container.page-header.iocnewsarticle, #container .fluid-container.page-header.faqs {
     height: 147px;
   }
-  #container .fluid-container.page-header.default h1, #container .fluid-container.page-header.iocnewsarticle h1 {
+  #container .fluid-container.page-header.default h1, #container .fluid-container.page-header.iocnewsarticle h1, #container .fluid-container.page-header.faqs h1 {
     bottom: 33px;
   }
-  #container .fluid-container.page-header.default + .container .modified, #container .fluid-container.page-header.iocnewsarticle + .container .modified {
+  #container .fluid-container.page-header.default + .container .modified, #container .fluid-container.page-header.iocnewsarticle + .container .modified, #container .fluid-container.page-header.faqs + .container .modified {
     font-size: 9px;
     letter-spacing: 0.9px;
   }
@@ -8980,9 +9033,6 @@ div[class*="item-page-"] table p {
   .subpage-buttons-filter .subpage-filter .filter-dropdown .filter-select {
     display: block;
   }
-  .item-page-faqs .faqsindex ul li a {
-    font-size: 14px;
-  }
   .study-panel .study-data .study-col .study-dates {
     height: auto;
     padding: 17px 24px;
@@ -9298,18 +9348,18 @@ div[class*="item-page-"] table p {
     font-size: 18px;
     font-weight: 400;
   }
-  #container .fluid-container.page-header.default, #container .fluid-container.page-header.iocnewsarticle {
+  #container .fluid-container.page-header.default, #container .fluid-container.page-header.iocnewsarticle, #container .fluid-container.page-header.faqs {
     height: 191px;
   }
-  #container .fluid-container.page-header.default .container, #container .fluid-container.page-header.iocnewsarticle .container {
+  #container .fluid-container.page-header.default .container, #container .fluid-container.page-header.iocnewsarticle .container, #container .fluid-container.page-header.faqs .container {
     padding: 0;
   }
-  #container .fluid-container.page-header.default .container h1, #container .fluid-container.page-header.iocnewsarticle .container h1 {
+  #container .fluid-container.page-header.default .container h1, #container .fluid-container.page-header.iocnewsarticle .container h1, #container .fluid-container.page-header.faqs .container h1 {
     bottom: 56px;
     font-size: 23px;
     letter-spacing: 0;
   }
-  #container .fluid-container.page-header.default + .container .modified, #container .fluid-container.page-header.iocnewsarticle + .container .modified {
+  #container .fluid-container.page-header.default + .container .modified, #container .fluid-container.page-header.iocnewsarticle + .container .modified, #container .fluid-container.page-header.faqs + .container .modified {
     font-size: 10px;
   }
   #container .fluid-container.page-header.subpage .container h1 {

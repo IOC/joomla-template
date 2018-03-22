@@ -3988,8 +3988,11 @@ div[class*="item-page-fp-"] {
                     background-color: $ioc-submenu;
                 }
                 a {
-                    display: block;
-                    line-height: 71px;
+                    @include flexbox();
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    line-height: 1.1;
                     font-size: 16px;
                     color: $ioc-text2;
                     &:hover {
@@ -4012,6 +4015,11 @@ div[class*="item-page-fp-"] {
                         .panel-body {
                             border: 0;
                             padding: 39px 103px 68px 85px;
+                            font-size: 16px;
+                            line-height: 1.63;
+                            h1, h2, h3, h4 {
+                                font-size: 16px;
+                            }
                         }
                     }
                     .panel-heading {
@@ -4021,10 +4029,13 @@ div[class*="item-page-fp-"] {
                         .panel-title {
                             height: 51px;
                             a {
-                                display: block;
+                                @include flexbox();
+                                align-items: center;
+                                position: relative;
+                                height: 100%;
                                 font-size: 17px;
                                 font-weight: 400;
-                                line-height: 51px;
+                                line-height: 1.1;
                                 padding-left: 21px;
                                 color: $ioc-text;
                                 &:hover {
@@ -4326,7 +4337,7 @@ div[class*="item-page-fp-"] {
                 .panel-body {
                     //padding: 24px 48px;
                     font-size: 15px;
-                    line-height: 22px;
+                    line-height: 1.63;
                     p {
                         margin: 0 0 20px;
                     }
