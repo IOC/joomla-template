@@ -3351,6 +3351,20 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
   text-align: center;
   color: #364958;
 }
+.columns {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 0 auto;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.columns > div {
+  max-width: 40%;
+}
 .modal-modules .title, .modal-resources .title {
   width: 100%;
   text-align: center;
@@ -3775,7 +3789,7 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
   font-weight: 500;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  padding: 14px 33px;
+  padding: 14px 175px 14px 33px;
   display: inline-block;
   width: 100%;
 }
@@ -6922,7 +6936,7 @@ div[class*="item-page-fp-"] .subpagebody {
   padding: 20px 0;
 }
 .error .error-bg {
-  background-image: url('../images/carousel-default.jpg');
+  background-image: url('../images/default-error.jpg');
   background-color: #374464;
   background-size: cover;
   background-repeat: no-repeat;
@@ -7403,6 +7417,13 @@ div[class*="item-page-"] table p {
   }
   .ioc-parent-breadcrumb {
     display: none;
+  }
+  .columns {
+    flex-direction: column;
+  }
+  .columns > div {
+    max-width: 100%;
+    margin-bottom: 42px;
   }
   .study-panel {
     margin: 50px 0 0 0;
@@ -9048,6 +9069,7 @@ div[class*="item-page-"] table p {
   }
   .modal-resources .panel-modal-resources .panel .panel-heading a {
     padding-left: 18px;
+    padding-right: 33px;
   }
   .modal-resources .panel-modal-resources .panel .panel-heading a .custom-icon.pdf, .modal-resources .panel-modal-resources .panel .panel-heading a .custom-icon.web, .modal-resources .panel-modal-resources .panel .panel-heading a .custom-icon.zip {
     display: none;

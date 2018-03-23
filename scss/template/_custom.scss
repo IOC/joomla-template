@@ -1495,6 +1495,14 @@ header.headroom--not-top {
     }
 }
 
+.columns {
+    @include flexbox($justify-content: space-between);
+    margin-top: 50px;
+    & > div {
+        max-width: 40%;
+    }
+}
+
 .modal-modules,
 .modal-resources {
     @include module-title(21, $ioc-title-module, transparent, 81, 86, 30);
@@ -1870,7 +1878,7 @@ header.headroom--not-top {
                     font-weight: 500;
                     letter-spacing: 1.5px;
                     text-transform: uppercase;
-                    padding: 14px 33px;
+                    padding: 14px 175px 14px 33px;
                     display: inline-block;
                     width: 100%;
                     .custom-icon {
@@ -5126,7 +5134,7 @@ div[class*="item-page-fp-"] {
         padding: 20px 0;
     }
     .error-bg {
-        background-image: url('../images/carousel-default.jpg');
+        background-image: url('../images/default-error.jpg');
         background-color: $ioc-bg-header-mat;
         background-size: cover;
         background-repeat: no-repeat;

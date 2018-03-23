@@ -65,7 +65,7 @@ $menuitems = array();
             $link = JRoute::_(ContentHelperRoute::getArticleRoute($article->id, $article->catid, $article->language));
             array_push($menuitems, array($article->title, $link));
             $welcome = $article->alias == 'ioc-welcome';
-            $src = $imgpath . '/carousel-default.jpg';
+            $src = $imgpath . '/default-news.jpg';
             if ($welcome) {
               if ($welcome = preg_match('~<h2>(.*?)</h2>~', $article->introtext, $matches)) {
                 $article->introtext = preg_replace('~<h2>(.*?)</h2>~', '', $article->introtext, 1);

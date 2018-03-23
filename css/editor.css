@@ -716,6 +716,18 @@
 #tinymce .panel-modal-resources .modal-resource .bottom-modal-resource {
   text-align: center;
 }
+#tinymce .columns {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
+#tinymce .columns .column {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
 #tinymce .col-md-1, #tinymce .col-md-2, #tinymce .col-md-3, #tinymce .col-md-4, #tinymce .col-md-5, #tinymce .col-md-6, #tinymce .col-md-7, #tinymce .col-md-8, #tinymce .col-md-9, #tinymce .col-md-10, #tinymce .col-md-11, #tinymce .col-md-12 {
   float: left;
 }

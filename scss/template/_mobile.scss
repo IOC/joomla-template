@@ -583,6 +583,13 @@
         display: none;
     }
 
+    .columns {
+        flex-direction: column;
+        & > div {
+            max-width: 100%;
+            margin-bottom: 42px;
+        }
+    }
     .study-panel {
         margin: 50px 0 0 0;
     }
@@ -2451,6 +2458,7 @@
                 .panel-heading {
                     a {
                         padding-left: 18px;
+                        padding-right: 33px;
                         .custom-icon {
                             &.pdf,
                             &.web,
