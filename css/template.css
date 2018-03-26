@@ -1431,6 +1431,8 @@ header.headroom--not-top .navbar-default .login-clone-campus {
 }
 #main-box div.item-page-news .page-header {
   margin-top: 0;
+  margin-bottom: 12px;
+  padding-bottom: 0;
 }
 #main-box div.item-page-news .page-header h2 {
   margin-top: 0;
@@ -4054,32 +4056,24 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
   margin-top: 0;
   margin-bottom: 49px;
 }
-.ioctags {
+.news-text .ioctags {
   position: relative;
   margin-top: 4px;
+  max-height: 48px;
+  overflow: hidden;
 }
-.ioctags.tag-news .tag-icon, .ioctags.tag-news .tag {
-  color: #02cc98;
+.news-text .ioctags .custom-icon-tag {
+  position: relative;
+  height: 16px;
 }
-.ioctags.tag-eur .tag-icon, .ioctags.tag-eur .tag {
-  color: #e75f2d;
-}
-.ioctags.tag-matr .tag-icon, .ioctags.tag-matr .tag {
-  color: #2ab9ca;
-}
-.ioctags .tag-icon {
+.news-text .ioctags .tag-icon {
   position: absolute;
   top: 1px;
   left: -2px;
   height: 11px;
   line-height: 11px;
 }
-.ioctags .tag-icon:before {
-  content: '\e912';
-  font-family: 'ioc-icons';
-  font-size: 18px;
-}
-.ioctags .tag {
+.news-text .ioctags .tag {
   position: absolute;
   left: 16px;
   line-height: normal;
@@ -4087,6 +4081,20 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
   font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 0;
+}
+.ioctags .tag-news .tag-icon, .ioctags .tag-news .tag {
+  color: #02cc98;
+}
+.ioctags .tag-eur .tag-icon, .ioctags .tag-eur .tag {
+  color: #e75f2d;
+}
+.ioctags .tag-matr .tag-icon, .ioctags .tag-matr .tag {
+  color: #2ab9ca;
+}
+.ioctags .tag-icon:before {
+  content: '\e912';
+  font-family: 'ioc-icons';
+  font-size: 18px;
 }
 #news {
   margin-top: 101px;
@@ -4638,6 +4646,7 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
   padding: 0;
 }
 #container .fluid-container.page-header.iocnewsarticle + .container .modified {
+  display: inline-block;
   font-size: 10.5px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -4645,20 +4654,35 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
   font-weight: 400;
 }
 #container .fluid-container.page-header.iocnewsarticle + .container .ioctags {
-  float: left;
+  display: inline-block;
   margin-top: 0;
   margin-left: 16px;
-  padding-left: 16px;
+  padding-left: 14px;
   border-left: 1px solid #7b8f94;
-  height: 16px;
+  height: 15px;
+  line-height: 15px;
 }
-#container .fluid-container.page-header.iocnewsarticle + .container .ioctags .tag {
-  margin-top: -1px;
+#container .fluid-container.page-header.iocnewsarticle + .container .ioctags .custom-icon-tag {
+  height: 100%;
+  display: inline-block;
+}
+#container .fluid-container.page-header.iocnewsarticle + .container .ioctags .custom-icon-tag .tag-icon {
+  height: 100%;
+  width: 16px;
+  line-height: 15px;
+  vertical-align: middle;
+}
+#container .fluid-container.page-header.iocnewsarticle + .container .ioctags .custom-icon-tag .tag-icon:before {
+  font-size: 20px;
+}
+#container .fluid-container.page-header.iocnewsarticle + .container .ioctags .custom-icon-tag .tag {
+  display: inline-block;
+  margin-bottom: 0;
   font-size: 10.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-}
-#container .fluid-container.page-header.iocnewsarticle + .container .ioctags .tag-icon {
-  height: 10px;
+  height: 100%;
+  line-height: 15px;
 }
 #container .fluid-container.page-header .logo_estudi {
   max-width: 174px;
@@ -7079,6 +7103,19 @@ div[class*="item-page-"] table td {
 div[class*="item-page-"] table p {
   margin: 0;
 }
+#main div.attachmentsContainer {
+  margin-top: 50px;
+  border-top: 1px solid #354959;
+}
+#main div.attachmentsContainer caption {
+  font-size: 1em;
+}
+#main div.attachmentsContainer div.attachmentsList table tbody tr.even, #main div.attachmentsContainer div.attachmentsList table tbody td {
+  background-color: transparent;
+}
+#main div.attachmentsContainer div.attachmentsList a.at_url:hover {
+  color: #337ab7;
+}
 @media all and (max-width: 991px) {
   #navigation .navbar-header {
     float: none;
@@ -7275,14 +7312,6 @@ div[class*="item-page-"] table p {
     float: none;
     font-size: 9px;
     margin-bottom: 0;
-  }
-  .item-page-news .ioctags {
-    float: none;
-    border-left: 0;
-    margin-left: 0;
-  }
-  .item-page-news .ioctags .tag {
-    font-size: 9px;
   }
   .item-page-news .container {
     padding: 0;
@@ -8496,6 +8525,28 @@ div[class*="item-page-"] table p {
     bottom: 33px;
   }
   #container .fluid-container.page-header.default + .container .modified, #container .fluid-container.page-header.iocnewsarticle + .container .modified, #container .fluid-container.page-header.faqs + .container .modified {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 0.9px;
+  }
+  #container .fluid-container.page-header.default + .container .ioctags, #container .fluid-container.page-header.iocnewsarticle + .container .ioctags, #container .fluid-container.page-header.faqs + .container .ioctags {
+    border-left: none;
+    padding: 0;
+    margin: 0;
+  }
+  #container .fluid-container.page-header.default + .container .ioctags .custom-icon-tag, #container .fluid-container.page-header.iocnewsarticle + .container .ioctags .custom-icon-tag, #container .fluid-container.page-header.faqs + .container .ioctags .custom-icon-tag {
+    height: 9px;
+  }
+  #container .fluid-container.page-header.default + .container .ioctags .custom-icon-tag .tag-icon, #container .fluid-container.page-header.iocnewsarticle + .container .ioctags .custom-icon-tag .tag-icon, #container .fluid-container.page-header.faqs + .container .ioctags .custom-icon-tag .tag-icon {
+    width: 15px;
+    margin: 0;
+    line-height: 11px;
+  }
+  #container .fluid-container.page-header.default + .container .ioctags .custom-icon-tag .tag-icon:before, #container .fluid-container.page-header.iocnewsarticle + .container .ioctags .custom-icon-tag .tag-icon:before, #container .fluid-container.page-header.faqs + .container .ioctags .custom-icon-tag .tag-icon:before {
+    font-size: 16px;
+  }
+  #container .fluid-container.page-header.default + .container .ioctags .custom-icon-tag .tag, #container .fluid-container.page-header.iocnewsarticle + .container .ioctags .custom-icon-tag .tag, #container .fluid-container.page-header.faqs + .container .ioctags .custom-icon-tag .tag {
+    margin-left: 0;
     font-size: 9px;
     letter-spacing: 0.9px;
   }
@@ -8576,6 +8627,7 @@ div[class*="item-page-"] table p {
   }
   #news .container.blog-featured .items-row .item .news-text {
     position: relative;
+    overflow: hidden;
     z-index: 1;
   }
   #news .container.blog-featured .items-row .item .news-text h3 {
@@ -8627,7 +8679,24 @@ div[class*="item-page-"] table p {
   }
   #news .container.blog-featured .items-row .item .news-text .ioctags {
     position: absolute;
-    bottom: 15px;
+    bottom: 0;
+    white-space: nowrap;
+    max-width: 90%;
+    overflow: hidden;
+  }
+  #news .container.blog-featured .items-row .item .news-text .ioctags .custom-icon-tag {
+    display: inline-block;
+    position: relative;
+  }
+  #news .container.blog-featured .items-row .item .news-text .ioctags .tag-icon {
+    width: 15px;
+    margin-left: -2px;
+  }
+  #news .container.blog-featured .items-row .item .news-text .ioctags .tag-icon, #news .container.blog-featured .items-row .item .news-text .ioctags .tag {
+    position: relative;
+    display: inline-block;
+    left: 0;
+    vertical-align: middle;
   }
   #news .container.blog-featured .items-row .item.link_items {
     margin-top: 15px;
@@ -9381,8 +9450,14 @@ div[class*="item-page-"] table p {
     font-size: 23px;
     letter-spacing: 0;
   }
-  #container .fluid-container.page-header.default + .container .modified, #container .fluid-container.page-header.iocnewsarticle + .container .modified, #container .fluid-container.page-header.faqs + .container .modified {
+  #container .fluid-container.page-header.default + .container .modified, #container .fluid-container.page-header.iocnewsarticle + .container .modified, #container .fluid-container.page-header.faqs + .container .modified, #container .fluid-container.page-header.default + .container .ioctags .tag, #container .fluid-container.page-header.iocnewsarticle + .container .ioctags .tag, #container .fluid-container.page-header.faqs + .container .ioctags .tag {
     font-size: 10px;
+  }
+  #container .fluid-container.page-header.default + .container .ioctags, #container .fluid-container.page-header.iocnewsarticle + .container .ioctags, #container .fluid-container.page-header.faqs + .container .ioctags {
+    height: 14px;
+  }
+  #container .fluid-container.page-header.default + .container .ioctags .tag-icon:before, #container .fluid-container.page-header.iocnewsarticle + .container .ioctags .tag-icon:before, #container .fluid-container.page-header.faqs + .container .ioctags .tag-icon:before {
+    font-size: 18px;
   }
   #container .fluid-container.page-header.subpage .container h1 {
     font-size: 18px;
@@ -9623,13 +9698,13 @@ div[class*="item-page-"] table p {
     border: 1px solid #e7ecf1;
     font-size: 13px;
   }
-  .ioctags {
+  .news-text .ioctags {
     margin-top: 6.9px;
   }
-  .ioctags .tag-icon:before {
+  .news-text .ioctags .tag-icon:before {
     font-size: 16px;
   }
-  .ioctags .tag {
+  .news-text .ioctags .tag {
     font-size: 8px;
     letter-spacing: 0.8px;
     left: 14px;
@@ -10143,10 +10218,10 @@ div[class*="item-page-"] table p {
   .content-pagination {
     margin: 86px 0 128px 0;
   }
-  .ioctags {
+  .news-text .ioctags {
     margin-top: 9px;
   }
-  .ioctags .tag {
+  .news-text .ioctags .tag {
     font-size: 9.5px;
   }
   .ioc-news-container .ioc-news .ioc-news-content {
@@ -10274,6 +10349,9 @@ div[class*="item-page-"] table p {
   #main-box div.item-page-default, #main-box div.item-page-news {
     margin-top: 110px;
     margin-bottom: 122px;
+  }
+  #main-box div.item-page-default .page-header, #main-box div.item-page-news .page-header {
+    margin-bottom: 16px;
   }
   .item-page-study.acfgs .container.study-main .study-overview-menu, .item-page-study.btx .container.study-main .study-overview-menu {
     max-width: 570px;

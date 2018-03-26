@@ -112,7 +112,7 @@ JHtml::_('behavior.caption');
         <?php echo JLayoutHelper::render('joomla.content.info_block.modify_date', array('item' => $this->item, 'params' => $params, 'position' => 'above')); ?>
     <?php endif; ?>
 
-    <?php if ($info == 0 && $params->get('show_tags', 1) && !empty($this->item->tags->itemTags)) : ?>
+    <?php if ($info == 0 && $params->get('show_tags', 1) && (!empty($this->item->tags->itemTags))  || $pageclass == 'news') : ?>
         <?php $this->item->tagLayout = new JLayoutFile('joomla.content.tags'); ?>
 
         <?php echo $this->item->tagLayout->render($this->item->tags->itemTags); ?>

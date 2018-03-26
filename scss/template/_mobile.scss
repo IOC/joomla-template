@@ -387,14 +387,6 @@
             font-size: 9px;
             margin-bottom: 0;
         }
-        .ioctags {
-            float: none;
-            border-left: 0;
-            margin-left: 0;
-            .tag {
-                font-size: 9px;
-            }
-        }
         .container {
             padding: 0;
         }
@@ -1772,8 +1764,30 @@
                     }
                     + .container {
                         .modified {
+                            display: block;
                             font-size: 9px;
                             letter-spacing: 0.9px;
+                        }
+                        .ioctags {
+                            border-left: none;
+                            padding: 0;
+                            margin: 0;
+                            .custom-icon-tag {
+                                height: 9px;
+                                .tag-icon {
+                                    width: 15px;
+                                    margin: 0;
+                                    line-height: 11px;
+                                    &:before {
+                                        font-size: 16px;
+                                    }
+                                }
+                                .tag {
+                                    margin-left: 0;
+                                    font-size: 9px;
+                                    letter-spacing: 0.9px;
+                                }
+                            }
                         }
                     }
                 }
@@ -1870,6 +1884,7 @@
                         margin-right: 0;
                         .news-text {
                             position: relative;
+                            overflow: hidden;
                             z-index: 1;
                             h3 {
                                 font-size: 18px;
@@ -1915,7 +1930,25 @@
                             }
                             .ioctags {
                                 position: absolute;
-                                bottom: 15px;
+                                bottom: 0;
+                                white-space: nowrap;
+                                max-width: 90%;
+                                overflow: hidden;
+                                .custom-icon-tag {
+                                    display: inline-block;
+                                    position: relative;
+                                }
+                                .tag-icon {
+                                    width: 15px;
+                                    margin-left: -2px;
+                                }
+                                .tag-icon,
+                                .tag {
+                                    position: relative;
+                                    display: inline-block;
+                                    left: 0;
+                                    vertical-align: middle;
+                                }
                             }
                         }
                         &.link_items {
@@ -2918,8 +2951,17 @@
                         }
                     }
                     & + .container {
-                        .modified {
+                        .modified,
+                        .ioctags .tag {
                             font-size: 10px;
+                        }
+                        .ioctags {
+                            height: 14px;
+                            .tag-icon {
+                                &:before {
+                                    font-size: 18px;
+                                }
+                            }
                         }
                     }
                 }
@@ -3270,17 +3312,19 @@
             }
         }
     }
-    .ioctags {
-        margin-top: 6.9px;
-        .tag-icon {
-            &:before {
-                font-size: 16px;
+    .news-text {
+        .ioctags {
+            margin-top: 6.9px;
+            .tag-icon {
+                &:before {
+                    font-size: 16px;
+                }
             }
-        }
-        .tag {
-            font-size: 8px;
-            letter-spacing: .8px;
-            left: 14px;
+            .tag {
+                font-size: 8px;
+                letter-spacing: .8px;
+                left: 14px;
+            }
         }
     }
     .layout-employment {
@@ -3961,10 +4005,12 @@
     .content-pagination {
         margin: 86px 0 128px 0;
     }
-    .ioctags {
-        margin-top: 9px;
-        .tag {
-            font-size: 9.5px;
+    .news-text {
+        .ioctags {
+            margin-top: 9px;
+            .tag {
+                font-size: 9.5px;
+            }
         }
     }
     .ioc-news-container {
@@ -4154,6 +4200,9 @@
         div.item-page-news {
             margin-top: 110px;
             margin-bottom: 122px;
+            .page-header{
+                margin-bottom: 16px;
+            }
         }
     }
     .item-page-study {
