@@ -22,7 +22,7 @@ $imgpath = JURI::base() . 'templates/' . $template . '/images/';
 $articlenews = array('latest-news', 'featured');
 $newsclass = (in_array($this->item->category_alias , $articlenews) ? 'iocnewsarticle' : '');
 $pageclass = (!empty($this->pageclass_sfx) ? $this->pageclass_sfx : 'default');
-$container = (!empty($this->pageclass_sfx) ? '' : 'container');
+$container = (!empty($this->pageclass_sfx) && strpos($this->pageclass_sfx, 'default') === false ? '' : 'container');
 $studylogo = strpos($pageclass, 'logo_') !== false;
 $subpage = (strpos($pageclass, 'subpage_') !== false ? ' subpage':'');
 $currentstudy = ' ';

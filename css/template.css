@@ -3623,7 +3623,7 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
   text-transform: uppercase;
   bottom: 30px;
   margin: 0 auto;
-  width: 65%;
+  width: 80%;
   color: #354959;
 }
 .modal-modules .content-modal-modules .modal-module.modal-dialog .bottom-modal-module, .modal-resources .content-modal-modules .modal-module.modal-dialog .bottom-modal-module, .modal-modules .body-modal-modules .modal-module.modal-dialog .bottom-modal-module, .modal-resources .body-modal-modules .modal-module.modal-dialog .bottom-modal-module, .modal-modules .body-modal-resources .modal-module.modal-dialog .bottom-modal-module, .modal-resources .body-modal-resources .modal-module.modal-dialog .bottom-modal-module, .modal-modules .content-modal-modules .modal-resource.modal-dialog .bottom-modal-module, .modal-resources .content-modal-modules .modal-resource.modal-dialog .bottom-modal-module, .modal-modules .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module, .modal-resources .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module, .modal-modules .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module, .modal-resources .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module {
@@ -4085,7 +4085,7 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
 .ioctags .tag-news .tag-icon, .ioctags .tag-news .tag {
   color: #02cc98;
 }
-.ioctags .tag-eur .tag-icon, .ioctags .tag-eur .tag {
+.ioctags .tag-proj .tag-icon, .ioctags .tag-proj .tag {
   color: #e75f2d;
 }
 .ioctags .tag-matr .tag-icon, .ioctags .tag-matr .tag {
@@ -7105,9 +7105,9 @@ div[class*="item-page-"] table p {
 }
 #main div.attachmentsContainer {
   margin-top: 50px;
-  border-top: 1px solid #354959;
 }
 #main div.attachmentsContainer caption {
+  border-top: 1px solid #354959;
   font-size: 1em;
 }
 #main div.attachmentsContainer div.attachmentsList table tbody tr.even, #main div.attachmentsContainer div.attachmentsList table tbody td {

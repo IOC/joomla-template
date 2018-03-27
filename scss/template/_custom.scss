@@ -1712,7 +1712,7 @@ header.headroom--not-top {
                             text-transform: uppercase;
                             bottom: 30px;
                             margin: 0 auto;
-                            width: 65%;
+                            width: 80%;
                             color: $ioc-text;
                         }
                     }
@@ -2100,7 +2100,7 @@ header.headroom--not-top {
             color: #02cc98;
         }
     }
-    .tag-eur {
+    .tag-proj {
         .tag-icon,
         .tag {
             color: #e75f2d;
@@ -5320,15 +5320,17 @@ div[class*="item-page-"] {
 #main {
     div.attachmentsContainer {
         margin-top: 50px;
-        border-top: 1px solid $ioc-text;
         caption {
+            border-top: 1px solid $ioc-text;
             font-size: 1em;
         }
         div.attachmentsList {
-            table tbody {
-                tr.even,
-                td {
-                    background-color: transparent;
+            table {
+                tbody {
+                    tr.even,
+                    td {
+                        background-color: transparent;
+                    }
                 }
             }
             a.at_url:hover {
