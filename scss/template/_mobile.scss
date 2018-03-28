@@ -321,7 +321,7 @@
             }
         }
     }
-    #container {
+    //#container {
         .fluid-container {
             &.page-header {
                 &.iocnewsarticle {
@@ -363,7 +363,7 @@
                 }
             }
         }
-    }
+    //}
     #main-box {
         div.item-page-study {
             margin-top: 0;
@@ -556,7 +556,7 @@
         }
     }
 
-    #container {
+    //#container {
         .container {
             &.study-main {
                 flex-direction: column;
@@ -569,7 +569,7 @@
                 }
             }
         }
-    }
+    //}
 
     .ioc-parent-breadcrumb {
         display: none;
@@ -1309,11 +1309,12 @@
             background-size: 88vw 82px;
         }
     }
-    #container {
+    //#container {
         .fluid-container {
             &.page-header {
                 &.default,
                 &.iocnewsarticle,
+                &.iocpage,
                 &.faqs {
                     height: 147px;
                     h1 {
@@ -1329,15 +1330,22 @@
                     .study-overview-headline,
                     .study-overview-text {
                         font-size: 14px;
-                        font-weight: 400;
                         line-height: 1.43;
                         color: $ioc-text2;
                         &:after {
                             display: none;
                         }
                     }
+                    .study-overview-headline {
+                        .ioc-accent,
+                        strong,
+                        b {
+                            font-weight: 500;
+                        }
+                    }
                     .study-overview-text {
                         font-size: 12px;
+                        font-weight: 400;
                         line-height: 1.5;
                     }
                 }
@@ -1392,7 +1400,7 @@
                 }
             }
         }
-    }
+    //}
 
     .item-page-news {
         .container {
@@ -1577,7 +1585,6 @@
     }
     .button-registration {
         height: 28px;
-        line-height: 28px;
         font-size: 10.5px;
     }
     .study-more-info,
@@ -1628,6 +1635,14 @@
         }
         .panel-section-info {
             margin-top: 47px;
+        }
+    }
+    .item-page-iocpage {
+        .top-banner {
+            min-height: 388px;
+            height: 122vw;
+            max-height: 582px;
+            background-image: url('../images/ioc-top-banner-mobile.png');
         }
     }
     .footer {
@@ -1751,12 +1766,13 @@
             }
         }
     }
-    #container {
+    //#container {
         .fluid-container {
             &.page-header {
                 height: 147px;
                 &.default,
                 &.iocnewsarticle,
+                &.iocpage,
                 &.faqs {
                     height: 147px;
                     h1 {
@@ -1834,6 +1850,7 @@
                 }
             }
         }
+    #container {
         .container {
             padding: 0 15px;
         }
@@ -2507,6 +2524,66 @@
             }
         }
     }
+    .item-page-iocpage {
+        .top-banner {
+            .intro-text {
+                font-size: 13.5px;
+                top: 30px;
+                width: 290px;
+                text-align: center;
+            }
+        }
+        .ioc-zigzag {
+            margin-top: 50px;
+            margin-bottom: 35px;
+            .ioc-section {
+                height: 100%;
+                .ioc-section-text {
+                    align-items: center;
+                    min-height: 212px;
+                    height: 80vw;
+                    max-height: 230px;
+                    .title {
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                    .content {
+                        font-size: 13.5px;
+                        line-height: 1.48;
+                        color: $ioc-text2;
+                        font-weight: normal;
+                        max-width: 290px;
+                        text-align: center;
+                    }
+                    .link-button {
+                        width: 141px;
+                        height: 32px;
+                        font-size: 10px;
+                    }
+                }
+                .ioc-section-image {
+                    position: relative;
+                    max-width: 100%;
+                    margin-top: 43px;
+                    text-align: center;
+                    img {
+                        max-height: 100%;
+                    }
+                }
+                &:nth-child(2n) {
+                    .ioc-section-text {
+                        align-items: center;
+                        .content {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            .ioc-section + .ioc-section {
+                margin-top: 56px;
+            }
+        }
+    }
 }
 
 /* Small Devices, Tablets */
@@ -2840,6 +2917,12 @@
             }
         }
     }
+    .item-page-iocpage {
+        .top-banner {
+            min-height: 568px;
+            max-height: 767px;
+        }
+    }
 }
 
 @media all and (min-width: 768px) and (max-width: 991px) {
@@ -2907,7 +2990,7 @@
         }
     }
 
-    #container {
+    //#container {
         .fluid-container {
             &.page-header {
                 height: 146px;
@@ -2940,6 +3023,7 @@
                 }
                 &.default,
                 &.iocnewsarticle,
+                &.iocpage,
                 &.faqs {
                     height: 191px;
                     .container {
@@ -2976,7 +3060,7 @@
                 }
             }
         }
-    }
+    //}
     #main-box {
         div.item-page-default {
             margin-top: 78px;
@@ -3557,6 +3641,47 @@
             }
         }
     }
+    .item-page-iocpage {
+        .top-banner {
+            min-height: 568px;
+            max-height: 767px;
+            .intro-text {
+                font-size: 15px;
+                top: 75px;
+                width: 548px;
+            }
+        }
+        .ioc-zigzag {
+            margin-top: 123px;
+            margin-bottom: 92px;
+            .ioc-section {
+                height: 222px;
+                .ioc-section-text {
+                    .title {
+                        font-size: 15px;
+                    }
+                    .content {
+                        font-size: 12px;
+                        max-width: 265px;
+                    }
+                    .link-button {
+                        width: 120px;
+                        height: 24px;
+                        font-size: 8px;
+                    }
+                }
+                .ioc-section-image {
+                    max-width: 338px;
+                    img {
+                        max-height: 222px;
+                    }
+                }
+            }
+            .ioc-section + .ioc-section {
+                margin-top: 144px;
+            }
+        }
+    }
 }
 
 /* Medium Devices, Desktops */
@@ -3565,7 +3690,7 @@
     .container {
         width: 830px;
     }
-    #container {
+    //#container {
         .fluid-container {
             &.page-header {
                 &.subpage {
@@ -3579,7 +3704,7 @@
                 }
             }
         }
-    }
+    //}
     #navigation {
         .container {
             padding: 0;
@@ -3683,7 +3808,7 @@
             }
         }
     }
-    #container {
+    //#container {
         .fluid-container.page-header {
             .container {
                 h1 {
@@ -3712,7 +3837,7 @@
 
             }
         }
-    }
+    //}
     .page-header {
         .container {
             padding: 0;
@@ -4021,7 +4146,7 @@
             }
         }
     }
-    #container {
+    //#container {
         .fluid-container.page-header {
             .container {
                 h1 {
@@ -4037,7 +4162,7 @@
                 }
             }
         }
-    }
+    //}
     .page-header {
         &  + .item-page-study {
             &.btx,
@@ -4387,7 +4512,7 @@
             }
         }
     }
-    #container {
+    //#container {
         .modal-modules {
             max-width: 1180px;
             .title {
@@ -4418,7 +4543,7 @@
                 }
             }
         }
-    }
+    //}
     .study-more-info {
         .title {
             h4 {
@@ -4427,6 +4552,52 @@
             }
         }
     }
+    .item-page-iocpage {
+        .top-banner {
+            height: 1065px;
+            background-image: url('../images/ioc-top-banner-big.png');
+            .intro-text {
+                top: 147px;
+                font-size: 23px;
+                line-height: 1.48;
+                width: 1028px;
+            }
+        }
+        .ioc-zigzag {
+            margin-top: 169px;
+            margin-bottom: 151px;
+            .ioc-section {
+                height: 437px;
+                .ioc-section-text {
+                    .title {
+                        font-size: 29px;
+                    }
+                    .content {
+                        font-size: 20px;
+                        font-weight: 300;
+                        line-height: 1.55;
+                        max-width: 506px;
+                    }
+                    .link-button {
+                        width: 192px;
+                        height: 40px;
+                        font-size: 13px;
+                        letter-spacing: 1.2px;
+                    }
+                }
+                .ioc-section-image {
+                    max-width: 667px;
+                    img {
+                        max-height: 438px;
+                    }
+                }
+            }
+            .ioc-section + .ioc-section {
+                margin-top: 236px;
+            }
+        }
+    }
+
     .footer {
         .container {
             .top {
@@ -4488,6 +4659,24 @@
     .item-page-study.btx-ioc {
         .subpage-bigbanner {
             background-position: center -3.5vw;
+        }
+    }
+    .item-page-iocpage {
+        .top-banner {
+            height: 1068px;
+            background-image: url('../images/ioc-top-banner-bigger.png');
+            background-position: bottom center;
+            background-size: contain;
+        }
+        .ioc-zigzag {
+            margin: 166px auto 151px;
+            max-width: 1436px;
+            .ioc-section {
+                .container {
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
         }
     }
 }
