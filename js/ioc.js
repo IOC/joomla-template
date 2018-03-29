@@ -295,9 +295,9 @@
                         responseText = responseText.substr(0,20) + '...';
                     }
                     $(".login-text").text(responseText);
-                    $(".login-campus").attr('data-target', '').on('click', function() {window.location ='/campus/my';});
-                    $(".login-clone-campus").attr('data-target', '').on('click', function() {window.location ='/campus/my';});
-                    $(".login-campus-mobile button").attr('title', responseText).attr('data-target', '').on('click', function() {window.location ='/campus/my';});
+                    $(".login-campus").attr('data-target', '').on('click', function(e) {e.stopPropagation();e.preventDefault();window.location ='/campus/my';});
+                    $(".login-clone-campus").attr('data-target', '').on('click', function(e) {e.stopPropagation();e.preventDefault();window.location ='/campus/my';});
+                    $(".login-campus-mobile button").attr('title', responseText).attr('data-target', '').on('click', function(e) {e.stopPropagation();e.preventDefault();window.location ='/campus/my';});
                 }
             }
         });

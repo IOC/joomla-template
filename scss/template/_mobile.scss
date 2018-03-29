@@ -1773,6 +1773,7 @@
                 &.default,
                 &.iocnewsarticle,
                 &.iocpage,
+                &.ioclocation,
                 &.faqs {
                     height: 147px;
                     h1 {
@@ -3024,6 +3025,7 @@
                 &.default,
                 &.iocnewsarticle,
                 &.iocpage,
+                &.ioclocation,
                 &.faqs {
                     height: 191px;
                     .container {
@@ -4595,6 +4597,92 @@
             .ioc-section + .ioc-section {
                 margin-top: 236px;
             }
+        }
+    }
+    .item-page-ioclocation {
+        background-size: 100vw 352px;
+        .container {
+            .title {
+                margin-top: 195px;
+                h1 {
+                    font-size: 28px;
+                }
+            }
+            .location-content {
+                @include flexbox($justify-content: space-between);
+                margin-top: 200px;
+                .location-map {
+                    width: 50%;
+                    height: 422px;
+                    a {
+                        .location-address {
+                            height: 61px;
+                            .custom-icon.address {
+                            }
+                            .text-address {
+                            }
+                        }
+                    }
+                }
+                .location-transport {
+                    width: 48%;
+                    min-width: 555px;
+                    .title {
+                        text-align: left;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                        h2 {
+                            font-size: 13px;
+                            letter-spacing: 0.5px;
+                            margin-top: 0;
+                            margin-bottom: 0;
+                            text-transform: uppercase;
+                        }
+                    }
+                    .transports {
+                        margin-top: 52px;
+                        .transport {
+                            @include flexbox();
+                            width: 50%;
+                            margin-bottom: 83px;
+                            .transport-image {
+                                width: 39px;
+                                height: 28px;
+                                &:before {
+                                    top: -3px;
+                                    font-size: 28px;
+                                }
+                                &.bicing {
+                                    &:before {
+                                        position: absolute;
+                                        top: -10px;
+                                        font-size: 30px;
+                                    }
+                                }
+                            }
+                            .transport-content {
+                                margin-top: 0;
+                                margin-left: 13px;
+                                width: 220px;
+                                .transport-name {
+                                    font-size: 15px;
+                                    letter-spacing: -0.1px;
+                                }
+                                .transport-text {
+                                    margin-top: 17px;
+                                    p {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .location-bottom {
+            background-size: 100vw 536px;
+            height: 536px;
+            margin-top: 150px;
         }
     }
 

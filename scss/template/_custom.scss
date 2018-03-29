@@ -2697,13 +2697,15 @@ header.headroom--not-top {
             margin-bottom: $ioc-header-margin;
             &.default,
             &.iocnewsarticle,
-            &.iocpage {
+            &.iocpage,
+            &.ioclocation {
                 height: 282px;
                 h1 {
                     width: 100%;
                 }
             }
-            &.iocpage {
+            &.iocpage,
+            &.ioclocation {
                 margin-bottom: 0;
             }
             &.fullmap {
@@ -4098,6 +4100,218 @@ div[class*="item-page-fp-"] {
         }
         .ioc-section + .ioc-section {
             margin-top: 192px;
+        }
+    }
+}
+
+.item-page-ioclocation {
+    background-image: url('../images/location-top-bck.svg');
+    background-position: top right;
+    background-size: 100vw 251px;
+    background-repeat: no-repeat;
+    .container {
+        padding: 0;
+        .title {
+            margin-top: 94px;
+            text-align: center;
+            h1 {
+                font-size: 26px;
+                font-weight: 500;
+                letter-spacing: -0.2px;
+            }
+        }
+        .location-content {
+            margin-top: 103px;
+            .location-map {
+                width: 100%;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+                border: solid 1px $ioc-submenu;
+                a {
+                    width: 100%;
+                    height: 100%;
+                    color: $ioc-text;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                    img {
+                        width: 100%;
+                    }
+                    .location-address {
+                        @include flexbox($justify-content: center);
+                        align-items: center;
+                        width: 100%;
+                        height: 85px;
+                        .custom-icon.address {
+                            background-image: url('../images/localitzacio_44x54px.svg');
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            width: 37px;
+                            height: 40px;
+                        }
+                        .text-address {
+                            font-size: 11px;
+                            font-weight: 500;
+                            line-height: 1.45;
+                            letter-spacing: 0.3px;
+                            width: 108px;
+                            margin-left: 29px;
+                        }
+                    }
+                }
+            }
+            .location-transport {
+                .title {
+                    text-align: left;
+                    margin-top: 130px;
+                    margin-bottom: 60px;
+                    h2 {
+                        font-size: 21px;
+                        font-weight: 500;
+                        letter-spacing: -0.1px;
+                        padding-bottom: 3px;
+                        border-bottom: 1px solid $ioc-text;
+                    }
+                }
+                .transports {
+                    @include flexbox($justify-content: space-between);
+                    .transport {
+                        width: 50%;
+                        margin-bottom: 65px;
+                        .transport-image {
+                            position: relative;
+                            width: 60px;
+                            height: 50px;
+                            &:before {
+                                font-family: 'ioc-icons';
+                                font-size: 33px;
+                                color: $ioc-accent;
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                            }
+                            &.metro {
+                                &:before {
+                                    content: '\e907';
+                                }
+                            }
+                            &.bus {
+                                &:before {
+                                    content: '\e908';
+                                }
+                            }
+                            &.bicing {
+                                &:before {
+                                    content: '\e917';
+                                    font-size: 50px;
+                                }
+                            }
+                            &.parking {
+                                &:before {
+                                    content: '\e916';
+                                }
+                            }
+                        }
+                        .transport-content {
+                            margin-top: 10px;
+                            .transport-name {
+                                font-size: 17px;
+                                font-weight: 500;
+                                letter-spacing: -0.2px;
+                            }
+                            .transport-text {
+                                margin-top: 17px;
+                                p {
+                                    font-size: 13px;
+                                    margin-bottom: 5px;
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .location-bottom {
+        background-image: url('../images/location-bottom-bck.svg');
+        background-position: bottom left;
+        background-size: 100vw 469px;
+        background-repeat: no-repeat;
+        height: 469px;
+        margin-top: 20px;
+        .study-buttons {
+            margin-top: 50px;
+            .study-button {
+                width: 190px;
+                height: 170px;
+                cursor: pointer;
+                .custom-icon {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    width: 62px;
+                    height: 51px;
+                    &.address {
+                        background-image: url('../images/correu_44x54px.svg')
+                    }
+                }
+                .icon-text {
+                    text-transform: lowercase;
+                }
+            }
+        }
+        .modal-modules {
+            .body-modal-modules {
+                .modal-module.modal-dialog {
+                    background-image: none;
+                    .body-modal-module {
+                        padding-bottom: 33.5px;
+                        .body-modal-content {
+                            margin-bottom: 0;
+                            .title {
+                                font-size: 18px;
+                                font-weight: 500;
+                                margin-top: 27px;
+                                margin-bottom: 0;
+                                padding-bottom: 24px;
+                                border-bottom: 1px solid rgba(135, 147, 156, 0.21);
+                            }
+                            .ioc-study-address {
+                                font-size: 10px;
+                                line-height: 1.8;
+                                letter-spacing: 0.9px;
+                                color: rgba(54, 73, 88, 0.6);
+                                margin-top: 17px;
+                                .ioc-address {
+                                    font-size: 12px;
+                                    font-weight: 500;
+                                    line-height: 1.5;
+                                    color: $ioc-text2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .location-bottom-text {
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 1.4;
+            text-align: center;
+            margin-top: 47px;
+            .ioc-accent {
+                margin-top: 12px;
+            }
+        }
+    }
+}
+
+#main {
+    .item-page-ioclocation {
+        .attachmentsContainer {
+            margin: 0;
         }
     }
 }

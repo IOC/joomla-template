@@ -4614,13 +4614,13 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
   background-size: cover;
   background-position: top;
 }
-.fluid-container.page-header.default, .fluid-container.page-header.iocnewsarticle, .fluid-container.page-header.iocpage {
+.fluid-container.page-header.default, .fluid-container.page-header.iocnewsarticle, .fluid-container.page-header.iocpage, .fluid-container.page-header.ioclocation {
   height: 282px;
 }
-.fluid-container.page-header.default h1, .fluid-container.page-header.iocnewsarticle h1, .fluid-container.page-header.iocpage h1 {
+.fluid-container.page-header.default h1, .fluid-container.page-header.iocnewsarticle h1, .fluid-container.page-header.iocpage h1, .fluid-container.page-header.ioclocation h1 {
   width: 100%;
 }
-.fluid-container.page-header.iocpage {
+.fluid-container.page-header.iocpage, .fluid-container.page-header.ioclocation {
   margin-bottom: 0;
 }
 .fluid-container.page-header.fullmap {
@@ -5916,6 +5916,211 @@ div[class*="item-page-fp-"] .subpagebody {
 }
 .item-page-iocpage .ioc-zigzag .ioc-section + .ioc-section {
   margin-top: 192px;
+}
+.item-page-ioclocation {
+  background-image: url('../images/location-top-bck.svg');
+  background-position: top right;
+  background-size: 100vw 251px;
+  background-repeat: no-repeat;
+}
+.item-page-ioclocation .container {
+  padding: 0;
+}
+.item-page-ioclocation .container .title {
+  margin-top: 94px;
+  text-align: center;
+}
+.item-page-ioclocation .container .title h1 {
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+}
+.item-page-ioclocation .container .location-content {
+  margin-top: 103px;
+}
+.item-page-ioclocation .container .location-content .location-map {
+  width: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  border: solid 1px #ecf3f7;
+}
+.item-page-ioclocation .container .location-content .location-map a {
+  width: 100%;
+  height: 100%;
+  color: #354959;
+}
+.item-page-ioclocation .container .location-content .location-map a:hover {
+  text-decoration: none;
+}
+.item-page-ioclocation .container .location-content .location-map a img {
+  width: 100%;
+}
+.item-page-ioclocation .container .location-content .location-map a .location-address {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 0 auto;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 85px;
+}
+.item-page-ioclocation .container .location-content .location-map a .location-address .custom-icon.address {
+  background-image: url('../images/localitzacio_44x54px.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 37px;
+  height: 40px;
+}
+.item-page-ioclocation .container .location-content .location-map a .location-address .text-address {
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0.3px;
+  width: 108px;
+  margin-left: 29px;
+}
+.item-page-ioclocation .container .location-content .location-transport .title {
+  text-align: left;
+  margin-top: 130px;
+  margin-bottom: 60px;
+}
+.item-page-ioclocation .container .location-content .location-transport .title h2 {
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: -0.1px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #354959;
+}
+.item-page-ioclocation .container .location-content .location-transport .transports {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 0 auto;
+  justify-content: space-between;
+}
+.item-page-ioclocation .container .location-content .location-transport .transports .transport {
+  width: 50%;
+  margin-bottom: 65px;
+}
+.item-page-ioclocation .container .location-content .location-transport .transports .transport .transport-image {
+  position: relative;
+  width: 60px;
+  height: 50px;
+}
+.item-page-ioclocation .container .location-content .location-transport .transports .transport .transport-image:before {
+  font-family: 'ioc-icons';
+  font-size: 33px;
+  color: #01c1b9;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.item-page-ioclocation .container .location-content .location-transport .transports .transport .transport-image.metro:before {
+  content: '\e907';
+}
+.item-page-ioclocation .container .location-content .location-transport .transports .transport .transport-image.bus:before {
+  content: '\e908';
+}
+.item-page-ioclocation .container .location-content .location-transport .transports .transport .transport-image.bicing:before {
+  content: '\e917';
+  font-size: 50px;
+}
+.item-page-ioclocation .container .location-content .location-transport .transports .transport .transport-image.parking:before {
+  content: '\e916';
+}
+.item-page-ioclocation .container .location-content .location-transport .transports .transport .transport-content {
+  margin-top: 10px;
+}
+.item-page-ioclocation .container .location-content .location-transport .transports .transport .transport-content .transport-name {
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+}
+.item-page-ioclocation .container .location-content .location-transport .transports .transport .transport-content .transport-text {
+  margin-top: 17px;
+}
+.item-page-ioclocation .container .location-content .location-transport .transports .transport .transport-content .transport-text p {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+.item-page-ioclocation .location-bottom {
+  background-image: url('../images/location-bottom-bck.svg');
+  background-position: bottom left;
+  background-size: 100vw 469px;
+  background-repeat: no-repeat;
+  height: 469px;
+  margin-top: 20px;
+}
+.item-page-ioclocation .location-bottom .study-buttons {
+  margin-top: 50px;
+}
+.item-page-ioclocation .location-bottom .study-buttons .study-button {
+  width: 190px;
+  height: 170px;
+  cursor: pointer;
+}
+.item-page-ioclocation .location-bottom .study-buttons .study-button .custom-icon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 62px;
+  height: 51px;
+}
+.item-page-ioclocation .location-bottom .study-buttons .study-button .custom-icon.address {
+  background-image: url('../images/correu_44x54px.svg');
+}
+.item-page-ioclocation .location-bottom .study-buttons .study-button .icon-text {
+  text-transform: lowercase;
+}
+.item-page-ioclocation .location-bottom .modal-modules .body-modal-modules .modal-module.modal-dialog {
+  background-image: none;
+}
+.item-page-ioclocation .location-bottom .modal-modules .body-modal-modules .modal-module.modal-dialog .body-modal-module {
+  padding-bottom: 33.5px;
+}
+.item-page-ioclocation .location-bottom .modal-modules .body-modal-modules .modal-module.modal-dialog .body-modal-module .body-modal-content {
+  margin-bottom: 0;
+}
+.item-page-ioclocation .location-bottom .modal-modules .body-modal-modules .modal-module.modal-dialog .body-modal-module .body-modal-content .title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 27px;
+  margin-bottom: 0;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(135, 147, 156, 0.21);
+}
+.item-page-ioclocation .location-bottom .modal-modules .body-modal-modules .modal-module.modal-dialog .body-modal-module .body-modal-content .ioc-study-address {
+  font-size: 10px;
+  line-height: 1.8;
+  letter-spacing: 0.9px;
+  color: rgba(54, 73, 88, 0.6);
+  margin-top: 17px;
+}
+.item-page-ioclocation .location-bottom .modal-modules .body-modal-modules .modal-module.modal-dialog .body-modal-module .body-modal-content .ioc-study-address .ioc-address {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #364958;
+}
+.item-page-ioclocation .location-bottom .location-bottom-text {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.4;
+  text-align: center;
+  margin-top: 47px;
+}
+.item-page-ioclocation .location-bottom .location-bottom-text .ioc-accent {
+  margin-top: 12px;
+}
+#main .item-page-ioclocation .attachmentsContainer {
+  margin: 0;
 }
 .item-page-faqs .title h2 {
   font-size: 32px;
@@ -8647,34 +8852,34 @@ div[class*="item-page-"] table p {
   .fluid-container.page-header {
     height: 147px;
   }
-  .fluid-container.page-header.default, .fluid-container.page-header.iocnewsarticle, .fluid-container.page-header.iocpage, .fluid-container.page-header.faqs {
+  .fluid-container.page-header.default, .fluid-container.page-header.iocnewsarticle, .fluid-container.page-header.iocpage, .fluid-container.page-header.ioclocation, .fluid-container.page-header.faqs {
     height: 147px;
   }
-  .fluid-container.page-header.default h1, .fluid-container.page-header.iocnewsarticle h1, .fluid-container.page-header.iocpage h1, .fluid-container.page-header.faqs h1 {
+  .fluid-container.page-header.default h1, .fluid-container.page-header.iocnewsarticle h1, .fluid-container.page-header.iocpage h1, .fluid-container.page-header.ioclocation h1, .fluid-container.page-header.faqs h1 {
     bottom: 33px;
   }
-  .fluid-container.page-header.default + .container .modified, .fluid-container.page-header.iocnewsarticle + .container .modified, .fluid-container.page-header.iocpage + .container .modified, .fluid-container.page-header.faqs + .container .modified {
+  .fluid-container.page-header.default + .container .modified, .fluid-container.page-header.iocnewsarticle + .container .modified, .fluid-container.page-header.iocpage + .container .modified, .fluid-container.page-header.ioclocation + .container .modified, .fluid-container.page-header.faqs + .container .modified {
     display: block;
     font-size: 9px;
     letter-spacing: 0.9px;
   }
-  .fluid-container.page-header.default + .container .ioctags, .fluid-container.page-header.iocnewsarticle + .container .ioctags, .fluid-container.page-header.iocpage + .container .ioctags, .fluid-container.page-header.faqs + .container .ioctags {
+  .fluid-container.page-header.default + .container .ioctags, .fluid-container.page-header.iocnewsarticle + .container .ioctags, .fluid-container.page-header.iocpage + .container .ioctags, .fluid-container.page-header.ioclocation + .container .ioctags, .fluid-container.page-header.faqs + .container .ioctags {
     border-left: none;
     padding: 0;
     margin: 0;
   }
-  .fluid-container.page-header.default + .container .ioctags .custom-icon-tag, .fluid-container.page-header.iocnewsarticle + .container .ioctags .custom-icon-tag, .fluid-container.page-header.iocpage + .container .ioctags .custom-icon-tag, .fluid-container.page-header.faqs + .container .ioctags .custom-icon-tag {
+  .fluid-container.page-header.default + .container .ioctags .custom-icon-tag, .fluid-container.page-header.iocnewsarticle + .container .ioctags .custom-icon-tag, .fluid-container.page-header.iocpage + .container .ioctags .custom-icon-tag, .fluid-container.page-header.ioclocation + .container .ioctags .custom-icon-tag, .fluid-container.page-header.faqs + .container .ioctags .custom-icon-tag {
     height: 9px;
   }
-  .fluid-container.page-header.default + .container .ioctags .custom-icon-tag .tag-icon, .fluid-container.page-header.iocnewsarticle + .container .ioctags .custom-icon-tag .tag-icon, .fluid-container.page-header.iocpage + .container .ioctags .custom-icon-tag .tag-icon, .fluid-container.page-header.faqs + .container .ioctags .custom-icon-tag .tag-icon {
+  .fluid-container.page-header.default + .container .ioctags .custom-icon-tag .tag-icon, .fluid-container.page-header.iocnewsarticle + .container .ioctags .custom-icon-tag .tag-icon, .fluid-container.page-header.iocpage + .container .ioctags .custom-icon-tag .tag-icon, .fluid-container.page-header.ioclocation + .container .ioctags .custom-icon-tag .tag-icon, .fluid-container.page-header.faqs + .container .ioctags .custom-icon-tag .tag-icon {
     width: 15px;
     margin: 0;
     line-height: 11px;
   }
-  .fluid-container.page-header.default + .container .ioctags .custom-icon-tag .tag-icon:before, .fluid-container.page-header.iocnewsarticle + .container .ioctags .custom-icon-tag .tag-icon:before, .fluid-container.page-header.iocpage + .container .ioctags .custom-icon-tag .tag-icon:before, .fluid-container.page-header.faqs + .container .ioctags .custom-icon-tag .tag-icon:before {
+  .fluid-container.page-header.default + .container .ioctags .custom-icon-tag .tag-icon:before, .fluid-container.page-header.iocnewsarticle + .container .ioctags .custom-icon-tag .tag-icon:before, .fluid-container.page-header.iocpage + .container .ioctags .custom-icon-tag .tag-icon:before, .fluid-container.page-header.ioclocation + .container .ioctags .custom-icon-tag .tag-icon:before, .fluid-container.page-header.faqs + .container .ioctags .custom-icon-tag .tag-icon:before {
     font-size: 16px;
   }
-  .fluid-container.page-header.default + .container .ioctags .custom-icon-tag .tag, .fluid-container.page-header.iocnewsarticle + .container .ioctags .custom-icon-tag .tag, .fluid-container.page-header.iocpage + .container .ioctags .custom-icon-tag .tag, .fluid-container.page-header.faqs + .container .ioctags .custom-icon-tag .tag {
+  .fluid-container.page-header.default + .container .ioctags .custom-icon-tag .tag, .fluid-container.page-header.iocnewsarticle + .container .ioctags .custom-icon-tag .tag, .fluid-container.page-header.iocpage + .container .ioctags .custom-icon-tag .tag, .fluid-container.page-header.ioclocation + .container .ioctags .custom-icon-tag .tag, .fluid-container.page-header.faqs + .container .ioctags .custom-icon-tag .tag {
     margin-left: 0;
     font-size: 9px;
     letter-spacing: 0.9px;
@@ -9626,24 +9831,24 @@ div[class*="item-page-"] table p {
     font-size: 18px;
     font-weight: 400;
   }
-  .fluid-container.page-header.default, .fluid-container.page-header.iocnewsarticle, .fluid-container.page-header.iocpage, .fluid-container.page-header.faqs {
+  .fluid-container.page-header.default, .fluid-container.page-header.iocnewsarticle, .fluid-container.page-header.iocpage, .fluid-container.page-header.ioclocation, .fluid-container.page-header.faqs {
     height: 191px;
   }
-  .fluid-container.page-header.default .container, .fluid-container.page-header.iocnewsarticle .container, .fluid-container.page-header.iocpage .container, .fluid-container.page-header.faqs .container {
+  .fluid-container.page-header.default .container, .fluid-container.page-header.iocnewsarticle .container, .fluid-container.page-header.iocpage .container, .fluid-container.page-header.ioclocation .container, .fluid-container.page-header.faqs .container {
     padding: 0;
   }
-  .fluid-container.page-header.default .container h1, .fluid-container.page-header.iocnewsarticle .container h1, .fluid-container.page-header.iocpage .container h1, .fluid-container.page-header.faqs .container h1 {
+  .fluid-container.page-header.default .container h1, .fluid-container.page-header.iocnewsarticle .container h1, .fluid-container.page-header.iocpage .container h1, .fluid-container.page-header.ioclocation .container h1, .fluid-container.page-header.faqs .container h1 {
     bottom: 56px;
     font-size: 23px;
     letter-spacing: 0;
   }
-  .fluid-container.page-header.default + .container .modified, .fluid-container.page-header.iocnewsarticle + .container .modified, .fluid-container.page-header.iocpage + .container .modified, .fluid-container.page-header.faqs + .container .modified, .fluid-container.page-header.default + .container .ioctags .tag, .fluid-container.page-header.iocnewsarticle + .container .ioctags .tag, .fluid-container.page-header.iocpage + .container .ioctags .tag, .fluid-container.page-header.faqs + .container .ioctags .tag {
+  .fluid-container.page-header.default + .container .modified, .fluid-container.page-header.iocnewsarticle + .container .modified, .fluid-container.page-header.iocpage + .container .modified, .fluid-container.page-header.ioclocation + .container .modified, .fluid-container.page-header.faqs + .container .modified, .fluid-container.page-header.default + .container .ioctags .tag, .fluid-container.page-header.iocnewsarticle + .container .ioctags .tag, .fluid-container.page-header.iocpage + .container .ioctags .tag, .fluid-container.page-header.ioclocation + .container .ioctags .tag, .fluid-container.page-header.faqs + .container .ioctags .tag {
     font-size: 10px;
   }
-  .fluid-container.page-header.default + .container .ioctags, .fluid-container.page-header.iocnewsarticle + .container .ioctags, .fluid-container.page-header.iocpage + .container .ioctags, .fluid-container.page-header.faqs + .container .ioctags {
+  .fluid-container.page-header.default + .container .ioctags, .fluid-container.page-header.iocnewsarticle + .container .ioctags, .fluid-container.page-header.iocpage + .container .ioctags, .fluid-container.page-header.ioclocation + .container .ioctags, .fluid-container.page-header.faqs + .container .ioctags {
     height: 14px;
   }
-  .fluid-container.page-header.default + .container .ioctags .tag-icon:before, .fluid-container.page-header.iocnewsarticle + .container .ioctags .tag-icon:before, .fluid-container.page-header.iocpage + .container .ioctags .tag-icon:before, .fluid-container.page-header.faqs + .container .ioctags .tag-icon:before {
+  .fluid-container.page-header.default + .container .ioctags .tag-icon:before, .fluid-container.page-header.iocnewsarticle + .container .ioctags .tag-icon:before, .fluid-container.page-header.iocpage + .container .ioctags .tag-icon:before, .fluid-container.page-header.ioclocation + .container .ioctags .tag-icon:before, .fluid-container.page-header.faqs + .container .ioctags .tag-icon:before {
     font-size: 18px;
   }
   .fluid-container.page-header.subpage .container h1 {
@@ -10781,6 +10986,94 @@ div[class*="item-page-"] table p {
   }
   .item-page-iocpage .ioc-zigzag .ioc-section + .ioc-section {
     margin-top: 236px;
+  }
+  .item-page-ioclocation {
+    background-size: 100vw 352px;
+  }
+  .item-page-ioclocation .container .title {
+    margin-top: 195px;
+  }
+  .item-page-ioclocation .container .title h1 {
+    font-size: 28px;
+  }
+  .item-page-ioclocation .container .location-content {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 0 auto;
+    justify-content: space-between;
+    margin-top: 200px;
+  }
+  .item-page-ioclocation .container .location-content .location-map {
+    width: 50%;
+    height: 422px;
+  }
+  .item-page-ioclocation .container .location-content .location-map a .location-address {
+    height: 61px;
+  }
+  .item-page-ioclocation .container .location-content .location-transport {
+    width: 48%;
+    min-width: 555px;
+  }
+  .item-page-ioclocation .container .location-content .location-transport .title {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .item-page-ioclocation .container .location-content .location-transport .title h2 {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+  .item-page-ioclocation .container .location-content .location-transport .transports {
+    margin-top: 52px;
+  }
+  .item-page-ioclocation .container .location-content .location-transport .transports .transport {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 0 auto;
+    justify-content: flex-start;
+    width: 50%;
+    margin-bottom: 83px;
+  }
+  .item-page-ioclocation .container .location-content .location-transport .transports .transport .transport-image {
+    width: 39px;
+    height: 28px;
+  }
+  .item-page-ioclocation .container .location-content .location-transport .transports .transport .transport-image:before {
+    top: -3px;
+    font-size: 28px;
+  }
+  .item-page-ioclocation .container .location-content .location-transport .transports .transport .transport-image.bicing:before {
+    position: absolute;
+    top: -10px;
+    font-size: 30px;
+  }
+  .item-page-ioclocation .container .location-content .location-transport .transports .transport .transport-content {
+    margin-top: 0;
+    margin-left: 13px;
+    width: 220px;
+  }
+  .item-page-ioclocation .container .location-content .location-transport .transports .transport .transport-content .transport-name {
+    font-size: 15px;
+    letter-spacing: -0.1px;
+  }
+  .item-page-ioclocation .container .location-content .location-transport .transports .transport .transport-content .transport-text {
+    margin-top: 17px;
+  }
+  .item-page-ioclocation .location-bottom {
+    background-size: 100vw 536px;
+    height: 536px;
+    margin-top: 150px;
   }
   .footer .container .top .top-col {
     width: 267px;
