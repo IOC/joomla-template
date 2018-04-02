@@ -1555,7 +1555,7 @@
     .subpage-text-buttons-banner {
         margin-top: 73px;
         margin-bottom: 0;
-         background-size: 200vw 75%;
+         background-size: 100vw 75%;
         background-position: left 25px;
         .subpage-text {
             margin: 58px auto 0;
@@ -1926,9 +1926,6 @@
                                 left: 16px;
                             }
                             .item-title {
-                                &:hover {
-                                    text-decoration: underline;
-                                }
                                 position: absolute;
                                 bottom: 37px;
                                 width: 85%;
@@ -1948,7 +1945,7 @@
                             }
                             .ioctags {
                                 position: absolute;
-                                bottom: 0;
+                                bottom: 2px;
                                 white-space: nowrap;
                                 max-width: 90%;
                                 overflow: hidden;
@@ -2582,6 +2579,114 @@
             }
             .ioc-section + .ioc-section {
                 margin-top: 56px;
+            }
+        }
+    }
+    .item-page-ioclocation {
+        background-image: url('../images/location-top-bck-mobile.svg');
+        background-size: 100vw 92px;
+        .container {
+            .title {
+                margin-top: 41px;
+                h1 {
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+            }
+            .location-content {
+                margin-top: 39px;
+                .location-map {
+                    min-height: 228px;
+                    a {
+                        .location-address {
+                            height: 52px;
+                            .custom-icon.address {
+                                width: 24px;
+                                height: 28px;
+                            }
+                            .text-address {
+                                font-size: 10px;
+                                margin-left: 20px;
+                                line-height: 1.4;
+                            }
+                        }
+                    }
+                }
+                .location-transport {
+                    .title {
+                        margin-top: 61px;
+                        margin-bottom: 37px;
+                        h2 {
+                            font-size: 16px;
+                            letter-spacing: 0;
+                        }
+                    }
+                    .transports {
+                        margin-top: 37px;
+                        .transport {
+                            @include flexbox();
+                            width: 100%;
+                            margin-bottom: 17px;
+                            .transport-image {
+                                width: 25px;
+                                height: 20px;
+                                &:before {
+                                    top: 0;
+                                    font-size: 20px;
+                                }
+                                &.bicing {
+                                    &:before {
+                                        position: absolute;
+                                        top: -6px;
+                                        font-size: 23px;
+                                    }
+                                }
+                            }
+                            .transport-content {
+                                margin-top: 0;
+                                margin-left: 20px;
+                                width: 80%;
+                                .transport-name {
+                                    font-size: 13.5px;
+                                    letter-spacing: -0.1px;
+                                }
+                                .transport-text {
+                                    margin-top: 6px;
+                                    line-height: 1.54;
+                                    p {
+                                        font-size: 13px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .location-bottom {
+            background-image: url('../images/location-bottom-bck-mobile.svg');
+            background-size: 100vw 214px;
+            height: 214px;
+            margin-top: 85.5px;
+            .study-buttons {
+                margin-top: -16.5px;
+                .study-button {
+                    width: 128px;
+                    height: 109px;
+                    .custom-icon {
+                        width: 38px;
+                        height: 31px;
+                    }
+                    .icon-text {
+                        font-size: 11px;
+                        font-weight: 500;
+                        letter-spacing: 0.7px;
+                    }
+                }
+            }
+            .location-bottom-text {
+                font-size: 13px;
+                line-height: 1.38;
             }
         }
     }
@@ -3684,6 +3789,104 @@
             }
         }
     }
+    .item-page-ioclocation {
+        background-size: 100vw 187px;
+        .container {
+            .title {
+                margin-top: 91px;
+                h1 {
+                    font-size: 21px;
+                }
+            }
+            .location-content {
+                margin-top: 74px;
+                .location-map {
+                    height: 444px;
+                    a {
+                        .location-address {
+                            height: 64px;
+                            .custom-icon.address {
+                                width: 27px;
+                                height: 31px;
+                            }
+                            .text-address {
+                                font-size: 10px;
+                                margin-left: 22px;
+                                line-height: 1.6;
+                            }
+                        }
+                    }
+                }
+                .location-transport {
+                    .title {
+                        margin-top: 121px;
+                        margin-bottom: 43px;
+                        h2 {
+                            font-size: 17px;
+                            letter-spacing: 0;
+                        }
+                    }
+                    .transports {
+                        margin-top: 45px;
+                        .transport {
+                            margin-bottom: 70px;
+                            .transport-image {
+                                width: 50px;
+                                height: 30px;
+                                &:before {
+                                    font-size: 30px;
+                                }
+                                &.bicing {
+                                    &:before {
+                                        font-size: 40px;
+                                    }
+                                }
+                            }
+                            .transport-content {
+                                margin-top: 28px;
+                                .transport-name {
+                                    font-size: 15px;
+                                    letter-spacing: 0;
+                                }
+                                .transport-text {
+                                    line-height: 1.75;
+                                    p {
+                                        font-size: 12px;
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .location-bottom {
+            background-size: 100vw 320px;
+            height: 320px;
+            margin-top: 113px;
+            .study-buttons {
+                margin-top: 10px;
+                .study-button {
+                    width: 154px;
+                    height: 138px;
+                    .custom-icon {
+                        width: 44px;
+                        height: 36px;
+                    }
+                    .icon-text {
+                        font-size: 12px;
+                        font-weight: 500;
+                        letter-spacing: 0.8px;
+                    }
+                }
+            }
+            .location-bottom-text {
+                font-size: 16px;
+                line-height: 1.13;
+            }
+        }
+    }
 }
 
 /* Medium Devices, Desktops */
@@ -4766,5 +4969,8 @@
                 }
             }
         }
+    }
+    .layout-employment {
+        background-image: url('../images/laboral-bck-hd.jpg');
     }
 }

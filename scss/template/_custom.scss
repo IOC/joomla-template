@@ -675,7 +675,7 @@ header.headroom--not-top {
     .navbar-default {
         .login-clone-campus {
             &:hover {
-                color: $ioc-accent;
+                color: $ioc-lnk-nb-frpage;
             }
         }
         .navbar-collapse {
@@ -683,7 +683,7 @@ header.headroom--not-top {
                 li {
                     a {
                         &:hover {
-                            color: $ioc-accent;
+                            color: $ioc-lnk-nb-frpage;
                         }
                     }
                 }
@@ -694,7 +694,7 @@ header.headroom--not-top {
     .tiny-campus {
         &:hover {
             .custom-icon {
-                color: $ioc-accent;
+                color: $ioc-lnk-nb-frpage;
             }
         }
     }
@@ -703,7 +703,7 @@ header.headroom--not-top {
         button {
             &[aria-expanded="true"],
             &:hover {
-                color: $ioc-accent;
+                color: $ioc-lnk-nb-frpage;
             }
         }
     }
@@ -714,7 +714,7 @@ header.headroom--not-top {
             &:hover {
                 span,
                 .custom-icon {
-                    color: $ioc-accent;
+                    color: $ioc-lnk-nb-frpage;
                 }
             }
         }
@@ -749,9 +749,10 @@ header.headroom--not-top {
             &.first {
                 &:hover {
                     //background-color: $ioc-link-carousel;
+                    border-color: $ioc-lnk-nb-frpage;
                     .custom-icon,
                     .login-text {
-                        color: $ioc-link-carousel;
+                        color: $ioc-lnk-nb-frpage;
                     }
 
                 }
@@ -772,6 +773,13 @@ header.headroom--not-top {
                 text-transform: uppercase;
                 letter-spacing: .7px;
                 padding-top: 18px;
+            }
+        }
+    }
+    .social {
+        .custom-icon {
+            &:hover {
+                color: $ioc-lnk-nb-frpage;
             }
         }
     }
@@ -4220,9 +4228,10 @@ div[class*="item-page-fp-"] {
                             }
                             .transport-text {
                                 margin-top: 17px;
+                                line-height: 1.62;
                                 p {
                                     font-size: 13px;
-                                    margin-bottom: 5px;
+                                    margin-bottom: 0;
                                 }
 
                             }
@@ -4302,6 +4311,7 @@ div[class*="item-page-fp-"] {
             text-align: center;
             margin-top: 47px;
             .ioc-accent {
+                display: block;
                 margin-top: 12px;
             }
         }
@@ -5126,6 +5136,7 @@ div[class*="item-page-fp-"] {
     padding: 0 10px;
     text-align: left;
     transition: right 1s ease-in-out;
+    z-index: 1;
     &.slidein {
         right: 0;
     }
