@@ -4560,25 +4560,25 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
   bottom: 0;
   left: 0;
   z-index: 2;
-  margin: 10px 0 0;
+  margin: 30px -124px 6px;
   overflow: hidden;
-  text-align: center;
+  text-align: right;
   width: 100%;
 }
 #myCarousel .carousel-indicators li, #myCarousel .carousel-indicators a {
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  background-color: transparent;
-  border: 1px solid #fff;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, .3);
+  border: none;
   color: #fff;
   display: inline-block;
-  height: 10px;
+  height: 6px;
   margin: 0 !important;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 10px;
-  text-indent: -999px;
+  width: 46px;
+  text-indent: -100vw;
   padding: 0;
 }
 #myCarousel .carousel-indicators li.active, #myCarousel .carousel-indicators a.active {
@@ -4586,13 +4586,13 @@ div[class*="item-page-pau"] .ioc-breadcrumb {
   text-decoration: none;
 }
 #myCarousel .carousel-indicators li:first-child, #myCarousel .carousel-indicators a:first-child {
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  border: 1px solid #fff;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: none;
 }
 #myCarousel .carousel-indicators li:last-child, #myCarousel .carousel-indicators a:last-child {
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
 #navigation {
   box-shadow: none;
