@@ -43,27 +43,22 @@
 }
 
 @mixin max-width-article($maxdefault, $maxcustom: null) {
-    .item-page-news
-    .item-page-default,
-    .page-default {
-        h1, h2, h3, p, ul, ol, table,
-        div, span, dd, dl, fieldset {
+    #main-box {
+        div.item-page-news,
+        div.item-page-default,
+        div.page-default,
+        div.page-default.search {
             max-width: $maxdefault;
-            //width: 100%;
             margin-left: auto;
             margin-right: auto;
+            .container {
+                max-width: 100%;
+            }
         }
-    }
-    @if ($maxcustom) {
-        .item-page-news,
-        .item-page-default {
-            &.resource {
-                h1, h2, h3, p, ul, ol, table,
-                div, span, dd {
+        @if ($maxcustom) {
+            div.item-page-default {
+                &.resource {
                     max-width: $maxcustom;
-                }
-                .modal {
-                    max-width: 100%;
                 }
             }
         }
@@ -430,7 +425,7 @@
                 line-height: 1.54;
                 margin: 26px 0 42px 0;
                 padding: 0 15px;
-                margin: 50px auto 0 auto;
+                //margin: 50px auto 0 auto;
                 p:last-child,
                 div:last-child {
                     &:after {
@@ -493,7 +488,7 @@
     }
     #news {
         .container {
-            &.blog-featured {
+            &.blog-featurednews {
                 .items-row {
                     .item {
                         &.link_items {
@@ -1418,7 +1413,7 @@
                 width: 100%;
             }
             .ioc-news-content {
-                margin: 50px auto 0 auto;
+                //margin: 50px auto 0 auto;
             }
         }
     }
@@ -1779,7 +1774,7 @@
                     h1 {
                         bottom: 33px;
                     }
-                    + .container {
+                    + .item-page-news {
                         .modified {
                             display: block;
                             font-size: 9px;
@@ -1878,7 +1873,7 @@
         margin-top: 53px;
         padding: 0;
         .container {
-            &.blog-featured {
+            &.blog-featurednews {
                 padding-left: 15px;
                 padding-right: 15px;
                 .title {
@@ -1909,6 +1904,9 @@
                             }
                             dl {
                                 margin-bottom: 0;
+                            }
+                            .img-responsive {
+                                max-height: inherit;
                             }
                             .heading-img img {
                                 width: 100%;
@@ -2690,6 +2688,15 @@
             }
         }
     }
+    .footer {
+        .location {
+            .map {
+                .map-image {
+                    background-image: url('../images/mapa-ioc-mobile.svg');
+                }
+            }
+        }
+    }
 }
 
 /* Small Devices, Tablets */
@@ -3141,7 +3148,7 @@
                             letter-spacing: 0;
                         }
                     }
-                    & + .container {
+                    & + .item-page-news {
                         .modified,
                         .ioctags .tag {
                             font-size: 10px;
@@ -3365,7 +3372,7 @@
     #news {
         margin-top: 68.8px;
         .container {
-            &.blog-featured {
+            &.blog-featurednews {
                 .title {
                     h1 {
                         font-size: 19px;
@@ -3380,6 +3387,9 @@
                             h3 {
                                 font-size: 14px;
                                 margin: 17.9px 0 15.2px 0;
+                            }
+                            .img-responsive {
+                                max-height: 112.9px;
                             }
                             .modified {
                                 font-size: 11px;
@@ -4133,7 +4143,7 @@
     .ioc-news-container {
         .ioc-news {
             .ioc-news-content {
-                margin: 50px auto 0 auto;
+                //margin: 50px auto 0 auto;
                 max-width: 654px;
                 width: 100%;
             }
@@ -4239,10 +4249,10 @@
 }
 
 @media all and (min-width: 1199px) {
-    @include max-width-article(676px, 1180px);
     .container {
         width: 1180px;
     }
+    @include max-width-article(676px, 1180px);
     .form-search {
         .container {
             .form-inline {
@@ -4275,7 +4285,7 @@
     }
     #news {
         .container {
-            &.blog-featured {
+            &.blog-featurednews {
                 .title {
                     h1 {
                         font-size: 28px;
@@ -4290,6 +4300,9 @@
                             h3 {
                                 font-size: 20px;
                                 margin: 34px 0 15px 0;
+                            }
+                            .img-responsive {
+                                max-height: 143px;
                             }
                             .modified {
                                 font-size: 13px;
@@ -4346,7 +4359,7 @@
     .ioc-news-container {
         .ioc-news {
             .ioc-news-content {
-                margin: 50px auto 0 131px;
+                //margin: 50px auto 0 131px;
                 max-width: 676px;
             }
         }

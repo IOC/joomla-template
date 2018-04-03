@@ -66,6 +66,7 @@ $menuitems = array();
             array_push($menuitems, array($article->title, $link));
             $welcome = $article->alias == 'ioc-welcome';
             $src = $imgpath . '/default-news.jpg';
+            $fallbackclass = 'fallbackdefault';
             if ($welcome) {
               if ($welcome = preg_match('~<h2>(.*?)</h2>~', $article->introtext, $matches)) {
                 $article->introtext = preg_replace('~<h2>(.*?)</h2>~', '', $article->introtext, 1);
@@ -78,6 +79,9 @@ $menuitems = array();
                 if (isset($matches[1])) {
                     $src = $matches[1];
                     $article->introtext = preg_replace('/\s*<img[^>]*>\s*/', '', $article->introtext, 1);
+                    if (preg_match('/slide(\d+)/', $src, $matches)) {
+                      $fallbackclass = 'fallback' . $matches[1];
+                    }
                 }
               }
             }
@@ -89,7 +93,7 @@ $menuitems = array();
                 </div>
                 <?php echo $article->introtext; ?>
             <?php else : ?>
-              <div class="item <?php if (!$key) { ?> active <?php } ?>" style="background-image: url('<?php echo $src;?>')">
+              <div class="item <?php if (!$key) { ?> active <?php } ?> <?php echo $fallbackclass; ?>" style="background-image: url('<?php echo $src;?>')">
             <?php endif; ?>
             <div class="container logo-ioc-large">
               <img src="<?php echo $imgpath; ?>/logo-ioc-gran.svg" alt="Institut Obert de Catalunya">

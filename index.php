@@ -41,6 +41,9 @@ if ($itemid && JRequest::getCmd('view') != 'search') {
         'subpage_'
     );
     $pageclass = str_replace($suffixes, '', $pageclass);
+    if ($pageclass == 'news' && !empty($frontpage)) {
+        $pageclass = '';
+    }
 }
 ?>
 <body class="<?php echo $frontpage;?>">

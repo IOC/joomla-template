@@ -29,7 +29,7 @@ $imgpath = JURI::base() . 'templates/' . $template . '/images';
 <?php endif; ?>
 
 <?php
-$src = $imgpath . '/news_small.jpg';
+$src = $imgpath . '/news-small.jpg';
 
 if (preg_match('~<figure class="imatge-noticia">(.*?)</figure>~s', $this->item->introtext, $matches)) {
     $tagimg = $matches[1];
