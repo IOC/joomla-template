@@ -47,7 +47,8 @@
         div.item-page-news,
         div.item-page-default,
         div.page-default,
-        div.page-default.search {
+        div.page-default.search,
+        .attachmentsContainer {
             max-width: $maxdefault;
             margin-left: auto;
             margin-right: auto;
@@ -143,9 +144,8 @@
     }
 }
 
-@media all and (max-width: 991px){
+@media all and (max-width: 991px) {
     @include custom-navbar-nav();
-    //@include max-width-article(676px, 100%);
     body {
         font-size: 16px;
     }
@@ -551,20 +551,18 @@
         }
     }
 
-    //#container {
-        .container {
-            &.study-main {
-                flex-direction: column;
-                margin-top: 42px;
-                font-size: 13px;
-                .study-panel {
-                    .study-data {
-                        justify-content: center;
-                    }
+    .container {
+        &.study-main {
+            flex-direction: column;
+            margin-top: 42px;
+            font-size: 13px;
+            .study-panel {
+                .study-data {
+                    justify-content: center;
                 }
             }
         }
-    //}
+    }
 
     .ioc-parent-breadcrumb {
         display: none;
@@ -1024,7 +1022,6 @@
                     a {
                         text-align: center;
                         padding-bottom: 18px;
-                        //border-bottom: 1px solid transparentize($ioc-footer-bottom, 0.8);
                     }
                     margin-bottom: 18px;
                 }
@@ -1304,98 +1301,96 @@
             background-size: 88vw 82px;
         }
     }
-    //#container {
-        .fluid-container {
-            &.page-header {
-                &.default,
-                &.iocnewsarticle,
-                &.iocpage,
-                &.faqs {
-                    height: 147px;
-                    h1 {
-                        bottom: 33px;
-                    }
+    .fluid-container {
+        &.page-header {
+            &.default,
+            &.iocnewsarticle,
+            &.iocpage,
+            &.faqs {
+                height: 147px;
+                h1 {
+                    bottom: 33px;
                 }
             }
         }
-        .container {
-            &.study-main {
-                margin-top: 0;
-                .study-overview {
-                    .study-overview-headline,
-                    .study-overview-text {
-                        font-size: 14px;
-                        line-height: 1.43;
-                        color: $ioc-text2;
-                        &:after {
+    }
+    .container {
+        &.study-main {
+            margin-top: 0;
+            .study-overview {
+                .study-overview-headline,
+                .study-overview-text {
+                    font-size: 14px;
+                    line-height: 1.43;
+                    color: $ioc-text2;
+                    &:after {
+                        display: none;
+                    }
+                }
+                .study-overview-headline {
+                    .ioc-accent,
+                    strong,
+                    b {
+                        font-weight: 500;
+                    }
+                }
+                .study-overview-text {
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 1.5;
+                }
+            }
+            .study-panel {
+                width: 88%;
+                margin-left: auto;
+                margin-right: auto;
+                .study-data {
+                    flex-direction: column;
+                    .study-col {
+                        &:first-child {
+                            &:after {
+                                height: 0;
+                            }
+                        }
+                        margin: 0 auto;
+                        border: none;
+                        width: 100%;
+                        max-width: 100%;
+                        h4 {
+                            font-size: 10.5px;
+                            font-weight: 500;
+                            height: 27px;
+                            line-height: 27px;
+                        }
+                        .header-icon {
                             display: none;
                         }
-                    }
-                    .study-overview-headline {
-                        .ioc-accent,
-                        strong,
-                        b {
-                            font-weight: 500;
+                        &:after {
+                            height: 5px;
                         }
-                    }
-                    .study-overview-text {
-                        font-size: 12px;
-                        font-weight: 400;
-                        line-height: 1.5;
-                    }
-                }
-                .study-panel {
-                    width: 88%;
-                    margin-left: auto;
-                    margin-right: auto;
-                    .study-data {
-                        flex-direction: column;
-                        .study-col {
-                            &:first-child {
-                                &:after {
-                                    height: 0;
-                                }
-                            }
-                            margin: 0 auto;
-                            border: none;
-                            width: 100%;
-                            max-width: 100%;
-                            h4 {
-                                font-size: 10.5px;
-                                font-weight: 500;
-                                height: 27px;
-                                line-height: 27px;
-                            }
-                            .header-icon {
+                        .study-dates {
+                            height: auto;
+                            padding: 10px 0;
+                            h3 {
                                 display: none;
                             }
-                            &:after {
-                                height: 5px;
-                            }
-                            .study-dates {
-                                height: auto;
-                                padding: 10px 0;
-                                h3 {
-                                    display: none;
+                            .study-block {
+                                .semiheader {
+                                    font-size: 8.5px;
                                 }
-                                .study-block {
-                                    .semiheader {
-                                        font-size: 8.5px;
-                                    }
-                                    .study-date {
-                                        font-size: 11px;
-                                    }
+                                .study-date {
+                                    font-size: 11px;
                                 }
                             }
                         }
-                        .study-col + .study-col {
-                            margin-left: auto;
-                        }
+                    }
+                    .study-col + .study-col {
+                        margin-left: auto;
                     }
                 }
             }
         }
-    //}
+    }
 
     .item-page-news {
         .container {
@@ -1637,7 +1632,7 @@
             min-height: 388px;
             height: 122vw;
             max-height: 582px;
-            background-image: url('../images/ioc-top-banner-mobile.png');
+            background-image: url('../images/ioc-top-banner-mobile.jpg');
         }
     }
     .footer {
@@ -1761,91 +1756,90 @@
             }
         }
     }
-    //#container {
-        .fluid-container {
-            &.page-header {
+    .fluid-container {
+        &.page-header {
+            height: 147px;
+            &.default,
+            &.iocnewsarticle,
+            &.iocpage,
+            &.ioclocation,
+            &.faqs {
                 height: 147px;
-                &.default,
-                &.iocnewsarticle,
-                &.iocpage,
-                &.ioclocation,
-                &.faqs {
-                    height: 147px;
-                    h1 {
-                        bottom: 33px;
+                h1 {
+                    bottom: 33px;
+                }
+                + .item-page-news {
+                    .modified {
+                        display: block;
+                        font-size: 9px;
+                        letter-spacing: 0.9px;
                     }
-                    + .item-page-news {
-                        .modified {
-                            display: block;
-                            font-size: 9px;
-                            letter-spacing: 0.9px;
-                        }
-                        .ioctags {
-                            border-left: none;
-                            padding: 0;
-                            margin: 0;
-                            .custom-icon-tag {
-                                height: 9px;
-                                .tag-icon {
-                                    width: 15px;
-                                    margin: 0;
-                                    line-height: 11px;
-                                    &:before {
-                                        font-size: 16px;
-                                    }
+                    .ioctags {
+                        border-left: none;
+                        padding: 0;
+                        margin: 0;
+                        .custom-icon-tag {
+                            height: 9px;
+                            .tag-icon {
+                                width: 15px;
+                                margin: 0;
+                                line-height: 11px;
+                                &:before {
+                                    font-size: 16px;
                                 }
-                                .tag {
-                                    margin-left: 0;
-                                    font-size: 9px;
-                                    letter-spacing: 0.9px;
-                                }
+                            }
+                            .tag {
+                                margin-left: 0;
+                                font-size: 9px;
+                                letter-spacing: 0.9px;
                             }
                         }
                     }
                 }
-                &.iocnewsarticle {
-                    margin-bottom: 0;
-                }
+            }
+            &.iocnewsarticle {
+                margin-bottom: 0;
+            }
+            h1 {
+                left: 15px;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 1.29;
+                text-align: center;
+                padding: 11px 0;
+                margin: 0;
+            }
+            .logo_estudi {
+                display: none;
+            }
+            .container {
                 h1 {
-                    left: 15px;
-                    font-size: 14px;
-                    font-weight: 600;
-                    line-height: 1.29;
-                    text-align: center;
-                    padding: 11px 0;
-                    margin: 0;
-                }
-                .logo_estudi {
-                    display: none;
-                }
-                .container {
-                    h1 {
-                        font-size: 20px;
+                    font-size: 20px;
+                    font-weight: 400;
+                    letter-spacing: 0;
+                    &.study {
+                        font-size: 16px;
                         font-weight: 400;
-                        letter-spacing: 0;
-                        &.study {
-                            font-size: 16px;
-                            font-weight: 400;
-                            left: 0;
-                            right: 0;
-                            margin: auto;
-                            bottom: 30px;
-                            padding: 0;
-                            max-width: 70%;
-                        }
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        bottom: 30px;
+                        padding: 0;
+                        max-width: 70%;
                     }
                 }
-                &.subpage {
-                    .container {
-                        h1 {
-                            font-size: 16px;
-                            font-weight: normal;
-                            bottom: 28px;
-                        }
+            }
+            &.subpage {
+                .container {
+                    h1 {
+                        font-size: 16px;
+                        font-weight: normal;
+                        bottom: 28px;
                     }
                 }
             }
         }
+    }
     #container {
         .container {
             padding: 0 15px;
@@ -2203,7 +2197,6 @@
                 .navbar-nav {
                     max-width: 100vw;
                     flex-direction: column;
-                    //padding: 0 15px;
                     &.filtering {
                         li:nth-child(3n) {
                             margin-right: 0;
@@ -2219,8 +2212,6 @@
                             .element-img {
                                 min-height: 139px;
                                 background-size: cover;
-                                //background-size: 100vw;
-                                //background-position: top;
                             }
                             .element-title {
                                 position: absolute;
@@ -2297,9 +2288,6 @@
         }
         @include navbar-nav-menu-choice-color('acfgs', rgba(53, 92, 103, 0.81), $ioc-acfgs-menu-mbl);
         @include navbar-nav-menu-choice-color('btx', rgba(100, 98, 169, 0.91), $ioc-btx-menu-mbl);
-        // .container {
-        //     padding: 0;
-        // }
     }
     .study-buttons {
         margin-top: 73px;
@@ -2772,44 +2760,6 @@
             }
         }
     }
-    // #myCarousel {
-    //     .item {
-    //         height: 360px;
-    //         .logo-ioc-large {
-    //             img {
-    //                 width: 240px;
-    //                 top: 268px;
-    //                 left: 0;
-    //             }
-    //         }
-    //         .carousel-transparency {
-    //             background-image: url('../images/hero-image.jpg');
-    //             background-size: cover;
-    //             background-position: center;
-    //             width: 100%;
-    //             img {
-    //                 display: none;
-    //             }
-    //         }
-    //         video {
-    //             display: none;
-    //         }
-    //     }
-    //     .carousel-caption {
-    //         h2 {
-    //             width: 70%;
-    //             font-weight: 300;
-    //             color: #07FDDD;
-    //             position: absolute;
-    //             top: 155px;
-    //             left: 15%;
-    //             z-index: 100;
-    //             letter-spacing: .8px;
-    //             line-height: 36px;
-    //             font-size: 20px;
-    //         }
-    //     }
-    // }
     .container {
         &.all-studies {
             .substudies {
@@ -2817,7 +2767,6 @@
                     .navbar-nav {
                         margin: 33px 0 0 0;
                         li {
-                            // min-height: auto;
                             .element-img {
                                 &:hover {
                                     background-size: cover;
@@ -2948,39 +2897,11 @@
         }
         .content-modal-modules {
             margin-top: 28px;
-            //max-width: 85%;
         }
     }
-    // .layout-employment {
-    //     height: 1000px;
-    //     .title {
-    //         bottom: 400px;
-    //     }
-    // }
     .subpagebody {
         background-size: 100vw 146px;
     }
-    // .subpage-only-text,
-    // .subpage-text-buttons {
-    //     .subpage-buttons,
-    //     .subpage-content-text {
-    //         margin-top: 119px;
-    //         max-width: 100%;
-    //         padding-left: 15px;
-    //         padding-right: 15px;
-    //         .subpage-text,
-    //         .subpage-group-buttons {
-    //             min-width: 290px;
-    //             max-width: 85%;
-    //             p {
-    //                 font-size: 13px;
-    //             }
-    //         }
-    //         .subpage-group-buttons {
-    //             justify-content: space-between;
-    //         }
-    //     }
-    // }
     .subpage-only-text {
         .subpage-content-text {
             .subpage-text {
@@ -3034,6 +2955,11 @@
         .top-banner {
             min-height: 568px;
             max-height: 767px;
+        }
+    }
+    #main-box {
+        .attachmentsContainer {
+            padding: 0 15px;
         }
     }
 }
@@ -3103,78 +3029,76 @@
         }
     }
 
-    //#container {
-        .fluid-container {
-            &.page-header {
-                height: 146px;
+    .fluid-container {
+        &.page-header {
+            height: 146px;
+            h1 {
+                left: 15px;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 1.29;
+                text-align: center;
+                margin: 0;
+                bottom: 56px;
+            }
+            .logo_estudi {
+                display: block;
+                max-width: 109px;
+                margin-top: 58px;
+            }
+            .container {
+                padding: 0;
                 h1 {
-                    left: 15px;
-                    font-size: 14px;
-                    font-weight: 600;
-                    line-height: 1.29;
-                    text-align: center;
-                    margin: 0;
-                    bottom: 56px;
+                    font-size: 23px;
+                    font-weight: 400;
+                    letter-spacing: 0;
+                    &.study {
+                        left: 125px;
+                        font-size: 18px;
+                        font-weight: 400;
+                    }
                 }
-                .logo_estudi {
-                    display: block;
-                    max-width: 109px;
-                    margin-top: 58px;
-                }
+            }
+            &.default,
+            &.iocnewsarticle,
+            &.iocpage,
+            &.ioclocation,
+            &.faqs {
+                height: 191px;
                 .container {
                     padding: 0;
                     h1 {
+                        bottom: 56px;
                         font-size: 23px;
-                        font-weight: 400;
                         letter-spacing: 0;
-                        &.study {
-                            left: 125px;
-                            font-size: 18px;
-                            font-weight: 400;
-                        }
                     }
                 }
-                &.default,
-                &.iocnewsarticle,
-                &.iocpage,
-                &.ioclocation,
-                &.faqs {
-                    height: 191px;
-                    .container {
-                        padding: 0;
-                        h1 {
-                            bottom: 56px;
-                            font-size: 23px;
-                            letter-spacing: 0;
-                        }
+                & + .item-page-news {
+                    .modified,
+                    .ioctags .tag {
+                        font-size: 10px;
                     }
-                    & + .item-page-news {
-                        .modified,
-                        .ioctags .tag {
-                            font-size: 10px;
-                        }
-                        .ioctags {
-                            height: 14px;
-                            .tag-icon {
-                                &:before {
-                                    font-size: 18px;
-                                }
+                    .ioctags {
+                        height: 14px;
+                        .tag-icon {
+                            &:before {
+                                font-size: 18px;
                             }
                         }
                     }
                 }
-                &.subpage {
-                    .container {
-                        h1 {
-                            font-size: 18px;
-                            font-weight: normal;
-                            bottom: 37px;
-                        }
+            }
+            &.subpage {
+                .container {
+                    h1 {
+                        font-size: 18px;
+                        font-weight: normal;
+                        bottom: 37px;
                     }
                 }
             }
         }
-    //}
+    }
     #main-box {
         div.item-page-default {
             margin-top: 78px;
@@ -3905,21 +3829,19 @@
     .container {
         width: 830px;
     }
-    //#container {
-        .fluid-container {
-            &.page-header {
-                &.subpage {
-                    .container {
-                        h1 {
-                            font-size: 23px;
-                            font-weight: normal;
-                            bottom: 67px;
-                        }
+    .fluid-container {
+        &.page-header {
+            &.subpage {
+                .container {
+                    h1 {
+                        font-size: 23px;
+                        font-weight: normal;
+                        bottom: 67px;
                     }
                 }
             }
         }
-    //}
+    }
     #navigation {
         .container {
             padding: 0;
@@ -3938,20 +3860,6 @@
             }
         }
     }
-    // .container.all-studies .studies .studies-content li,
-    // .container.all-studies .substudies .studies-content li {
-    //     //min-height: 320px;
-    //     .element-img {
-    //         //height: 240px;
-    //     }
-    //     p {
-    //         font-size: 16px;
-    //         font-weight: 500;
-    //         max-width: 240px;
-    //         line-height: 18px;
-    //         padding-top: 10px;
-    //     }
-    // }
     #myCarousel {
         .carousel-caption {
             h2 {
@@ -4023,36 +3931,34 @@
             }
         }
     }
-    //#container {
-        .fluid-container.page-header {
-            .container {
-                h1 {
-                    font-size: 35px;
+    .fluid-container.page-header {
+        .container {
+            h1 {
+                font-size: 35px;
+                font-weight: 300;
+                letter-spacing: 0.1px;
+                left: 0;
+                &.study {
+                    left: 200px;
+                    font-size: 23px;
                     font-weight: 300;
-                    letter-spacing: 0.1px;
-                    left: 0;
-                    &.study {
-                        left: 200px;
-                        font-size: 23px;
-                        font-weight: 300;
-                        letter-spacing: 0;
-                    }
+                    letter-spacing: 0;
                 }
             }
         }
-        .modal-modules {
-            max-width: 830px;
-            padding: 0;
-            .content-modal-modules {
-                .modal-module {
-                    &:nth-child(4n) {
-                        margin-right: 0;
-                    }
+    }
+    .modal-modules {
+        max-width: 830px;
+        padding: 0;
+        .content-modal-modules {
+            .modal-module {
+                &:nth-child(4n) {
+                    margin-right: 0;
                 }
+            }
 
-            }
         }
-    //}
+    }
     .page-header {
         .container {
             padding: 0;
@@ -4127,19 +4033,6 @@
             background-size: 88vw 189px;
         }
     }
-    // .layout-employment {
-    //     height: 1368px;
-    //     background-image: url('../images/laboral-bck-tablet.jpg');
-    //     .employment-content {
-    //         .navbar-nav {
-    //             //max-width: 1000px;
-    //             li {
-    //                 width: 260px;
-    //                 height: 321px;
-    //             }
-    //         }
-    //     }
-    // }
     .ioc-news-container {
         .ioc-news {
             .ioc-news-content {
@@ -4359,28 +4252,25 @@
     .ioc-news-container {
         .ioc-news {
             .ioc-news-content {
-                //margin: 50px auto 0 131px;
                 max-width: 676px;
             }
         }
     }
-    //#container {
-        .fluid-container.page-header {
-            .container {
-                h1 {
-                    font-size: 35px;
-                    font-weight: 300;
-                    letter-spacing: 0.1px;
-                    left: 0;
-                    &.study {
-                        left: 200px;
-                        font-size: 26px;
-                        font-weight: 300px;
-                    }
+    .fluid-container.page-header {
+        .container {
+            h1 {
+                font-size: 35px;
+                font-weight: 300;
+                letter-spacing: 0.1px;
+                left: 0;
+                &.study {
+                    left: 200px;
+                    font-size: 26px;
+                    font-weight: 300px;
                 }
             }
         }
-    //}
+    }
     .page-header {
         &  + .item-page-study {
             &.btx,
@@ -4730,38 +4620,36 @@
             }
         }
     }
-    //#container {
-        .modal-modules {
-            max-width: 1180px;
-            .title {
-                margin-top: 113px;
-                margin-bottom: 82px;
-                h1 {
-                    font-size: 26px;
-                }
-
+    .modal-modules {
+        max-width: 1180px;
+        .title {
+            margin-top: 113px;
+            margin-bottom: 82px;
+            h1 {
+                font-size: 26px;
             }
-            .content-modal-modules {
-                max-width: 100%;
-                .modal-module {
-                    width: 280px;
-                    margin-right: 20px;
-                    img {
-                        height: 160px;
-                    }
-                    .text-modal-module {
-                        margin: 0;
-                        line-height: 128px;
-                        max-height: 128px;
-                    }
-                    .bottom-modal-module {
-                        height: 39px;
-                        line-height: 39px;
-                    }
+
+        }
+        .content-modal-modules {
+            max-width: 100%;
+            .modal-module {
+                width: 280px;
+                margin-right: 20px;
+                img {
+                    height: 160px;
+                }
+                .text-modal-module {
+                    margin: 0;
+                    line-height: 128px;
+                    max-height: 128px;
+                }
+                .bottom-modal-module {
+                    height: 39px;
+                    line-height: 39px;
                 }
             }
         }
-    //}
+    }
     .study-more-info {
         .title {
             h4 {
@@ -4773,7 +4661,6 @@
     .item-page-iocpage {
         .top-banner {
             height: 1065px;
-            background-image: url('../images/ioc-top-banner-big.png');
             .intro-text {
                 top: 147px;
                 font-size: 23px;
@@ -4968,7 +4855,7 @@
     .item-page-iocpage {
         .top-banner {
             height: 1068px;
-            background-image: url('../images/ioc-top-banner-bigger.png');
+            background-image: url('../images/ioc-top-banner-big.jpg');
             background-position: bottom center;
             background-size: contain;
         }

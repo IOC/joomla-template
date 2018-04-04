@@ -1165,7 +1165,7 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   letter-spacing: 0.7px;
   padding-top: 18px;
 }
-.ioc-front-page .social .custom-icon:hover {
+.ioc-front-page .header .social .custom-icon:hover {
   color: #2cc4ec;
 }
 .headroom--top .ioc-departament {
@@ -3740,10 +3740,6 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   font-size: 12px;
   color: #354959;
   min-height: 59px;
-  /*                    &:before {
-   width: 37px;
-   height: 30px;
-   }*/
 }
 .modal-modules .content-modal-modules .modal-module.modal-dialog .bottom-modal-module:before, .modal-resources .content-modal-modules .modal-module.modal-dialog .bottom-modal-module:before, .modal-modules .body-modal-modules .modal-module.modal-dialog .bottom-modal-module:before, .modal-resources .body-modal-modules .modal-module.modal-dialog .bottom-modal-module:before, .modal-modules .body-modal-resources .modal-module.modal-dialog .bottom-modal-module:before, .modal-resources .body-modal-resources .modal-module.modal-dialog .bottom-modal-module:before, .modal-modules .content-modal-modules .modal-resource.modal-dialog .bottom-modal-module:before, .modal-resources .content-modal-modules .modal-resource.modal-dialog .bottom-modal-module:before, .modal-modules .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module:before, .modal-resources .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module:before, .modal-modules .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module:before, .modal-resources .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module:before {
   display: none;
@@ -4519,8 +4515,10 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  max-width: none;
+  max-height: 100%;
+  min-width: 100%;
+  min-height: 100%;
   object-fit: cover;
   z-index: -1;
 }
@@ -5949,7 +5947,7 @@ div[class*="item-page-fp-"] .subpagebody {
   min-height: 767px;
   height: 74vw;
   max-height: 1065px;
-  background-image: url('../images/ioc-top-banner.png');
+  background-image: url('../images/ioc-top-banner.jpg');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -6399,7 +6397,7 @@ div[class*="item-page-fp-"] .subpagebody {
   margin-bottom: 0;
 }
 .study-tabs .nav-tabs li {
-  flex: 1 0 auto;
+  flex: 1 0 0;
   text-align: center;
   background-color: #f2f6f9;
   height: 58px;
@@ -6561,23 +6559,6 @@ div[class*="item-page-fp-"] .subpagebody {
 .study-more-info .title h4 {
   display: inline-block;
   position: relative;
-  /*&:before,
-   &:after {
-   content: "";
-   position: absolute;
-   height: 2px;
-   border-top: 1px solid $ioc-accent;
-   top: 14px;
-   width: 52px;
-   }
-   &:before {
-   margin-right: 14px;
-   right: 100%;
-   }
-   &:after {
-   margin-left: 14px;
-   left: 100%;
-   }*/
   margin: 0;
   font-size: 29px;
   font-weight: 500;
@@ -6700,19 +6681,6 @@ div[class*="item-page-fp-"] .subpagebody {
   font-family: 'ioc-icons';
   font-size: 17px;
   font-weight: 600;
-}
-.login-clone-campus, .tiny-campus {
-  /*button {
-   .custom-icon {
-   &:before {
-   content: '\e910';
-   font-family: 'ioc-icons';
-   font-size: 16px;
-   font-weight: 300;
-   line-height: 23px;
-   }
-   }
-   }*/
 }
 .login-clone-campus:hover .custom-icon, .tiny-campus:hover .custom-icon {
   color: #63749d;
@@ -7569,7 +7537,7 @@ div[class*="item-page-"] table p {
   margin: 0;
 }
 #main div.attachmentsContainer {
-  margin-top: 50px;
+  margin: 50px auto 30px auto;
 }
 #main div.attachmentsContainer caption {
   border-top: 1px solid #354959;
@@ -8313,12 +8281,12 @@ div[class*="item-page-"] table p {
 }
 @media all and (max-width: 480px) {
   /* Customization for studies, Parallax, Banners, layouts */
-  #main-box div.item-page-news, #main-box div.item-page-default, #main-box div.page-default, #main-box div.page-default.search {
+  #main-box div.item-page-news, #main-box div.item-page-default, #main-box div.page-default, #main-box div.page-default.search, #main-box .attachmentsContainer {
     max-width: 290px;
     margin-left: auto;
     margin-right: auto;
   }
-  #main-box div.item-page-news .container, #main-box div.item-page-default .container, #main-box div.page-default .container, #main-box div.page-default.search .container {
+  #main-box div.item-page-news .container, #main-box div.item-page-default .container, #main-box div.page-default .container, #main-box div.page-default.search .container, #main-box .attachmentsContainer .container {
     max-width: 100%;
   }
   #main-box div.item-page-default.resource {
@@ -8884,7 +8852,7 @@ div[class*="item-page-"] table p {
     min-height: 388px;
     height: 122vw;
     max-height: 582px;
-    background-image: url('../images/ioc-top-banner-mobile.png');
+    background-image: url('../images/ioc-top-banner-mobile.jpg');
   }
   .footer .mobile {
     text-align: center;
@@ -8918,12 +8886,12 @@ div[class*="item-page-"] table p {
   }
 }
 @media all and (min-width: 648px) {
-  #main-box div.item-page-news, #main-box div.item-page-default, #main-box div.page-default, #main-box div.page-default.search {
+  #main-box div.item-page-news, #main-box div.item-page-default, #main-box div.page-default, #main-box div.page-default.search, #main-box .attachmentsContainer {
     max-width: 626px;
     margin-left: auto;
     margin-right: auto;
   }
-  #main-box div.item-page-news .container, #main-box div.item-page-default .container, #main-box div.page-default .container, #main-box div.page-default.search .container {
+  #main-box div.item-page-news .container, #main-box div.item-page-default .container, #main-box div.page-default .container, #main-box div.page-default.search .container, #main-box .attachmentsContainer .container {
     max-width: 100%;
   }
   #main-box div.item-page-default.resource {
@@ -9990,14 +9958,17 @@ div[class*="item-page-"] table p {
     min-height: 568px;
     max-height: 767px;
   }
+  #main-box .attachmentsContainer {
+    padding: 0 15px;
+  }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
-  #main-box div.item-page-news, #main-box div.item-page-default, #main-box div.page-default, #main-box div.page-default.search {
+  #main-box div.item-page-news, #main-box div.item-page-default, #main-box div.page-default, #main-box div.page-default.search, #main-box .attachmentsContainer {
     max-width: 629px;
     margin-left: auto;
     margin-right: auto;
   }
-  #main-box div.item-page-news .container, #main-box div.item-page-default .container, #main-box div.page-default .container, #main-box div.page-default.search .container {
+  #main-box div.item-page-news .container, #main-box div.item-page-default .container, #main-box div.page-default .container, #main-box div.page-default.search .container, #main-box .attachmentsContainer .container {
     max-width: 100%;
   }
   #main-box div.item-page-default.resource {
@@ -10673,12 +10644,12 @@ div[class*="item-page-"] table p {
 }
 /* Medium Devices, Desktops */
 @media all and (min-width: 992px) {
-  #main-box div.item-page-news, #main-box div.item-page-default, #main-box div.page-default, #main-box div.page-default.search {
+  #main-box div.item-page-news, #main-box div.item-page-default, #main-box div.page-default, #main-box div.page-default.search, #main-box .attachmentsContainer {
     max-width: 676px;
     margin-left: auto;
     margin-right: auto;
   }
-  #main-box div.item-page-news .container, #main-box div.item-page-default .container, #main-box div.page-default .container, #main-box div.page-default.search .container {
+  #main-box div.item-page-news .container, #main-box div.item-page-default .container, #main-box div.page-default .container, #main-box div.page-default.search .container, #main-box .attachmentsContainer .container {
     max-width: 100%;
   }
   #main-box div.item-page-default.resource {
@@ -10907,12 +10878,12 @@ div[class*="item-page-"] table p {
   .container {
     width: 1180px;
   }
-  #main-box div.item-page-news, #main-box div.item-page-default, #main-box div.page-default, #main-box div.page-default.search {
+  #main-box div.item-page-news, #main-box div.item-page-default, #main-box div.page-default, #main-box div.page-default.search, #main-box .attachmentsContainer {
     max-width: 676px;
     margin-left: auto;
     margin-right: auto;
   }
-  #main-box div.item-page-news .container, #main-box div.item-page-default .container, #main-box div.page-default .container, #main-box div.page-default.search .container {
+  #main-box div.item-page-news .container, #main-box div.item-page-default .container, #main-box div.page-default .container, #main-box div.page-default.search .container, #main-box .attachmentsContainer .container {
     max-width: 100%;
   }
   #main-box div.item-page-default.resource {
@@ -11287,7 +11258,6 @@ div[class*="item-page-"] table p {
   }
   .item-page-iocpage .top-banner {
     height: 1065px;
-    background-image: url('../images/ioc-top-banner-big.png');
   }
   .item-page-iocpage .top-banner .intro-text {
     top: 147px;
@@ -11454,7 +11424,7 @@ div[class*="item-page-"] table p {
   }
   .item-page-iocpage .top-banner {
     height: 1068px;
-    background-image: url('../images/ioc-top-banner-bigger.png');
+    background-image: url('../images/ioc-top-banner-big.jpg');
     background-position: bottom center;
     background-size: contain;
   }

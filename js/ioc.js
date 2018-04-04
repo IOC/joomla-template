@@ -64,7 +64,7 @@
             });
         }
 
-        var faqsblockpanels = function (width = false) {
+        var faqsblockpanels = function (width) {
             if (!width) {
                 width = $(window).width();
             }
@@ -80,7 +80,7 @@
         };
 
         if ($faqs) {
-            faqsblockpanels();
+            faqsblockpanels(false);
         }
 
         /**
@@ -88,7 +88,10 @@
          * @param  mov 'click, true, false'
          * @param  tab which element is in use
          */
-        var tabnavigation = function (mov = 'click', tab = true) {
+        var tabnavigation = function (mov, tab) {
+            mov = typeof mov !== 'undefined' ? mov : 'click';
+            tab = typeof tab !== 'undefined' ? tab : true;
+
             var total = $(PLUGINVARS.SELECTORS.STUDYTABS).length;
             var pos = $(PLUGINVARS.SELECTORS.STUDYTABACT).index();
             var anchor;
@@ -263,14 +266,6 @@
             $('.form-search .btn-search').removeClass('big');
         });
 
-/*        $(document).on('click', '.container .panel-heading a', function(e) {
-            $('.panel-heading').removeClass('active');
-            var $parent = $(this).parent().parent();
-            if ($parent.siblings('.panel-collapse').attr('aria-expanded') == 'true') {
-                $parent.addClass('active');
-            }
-        });*/
-
         $( window ).resize(function() {
             var $header = $('header');
             if ($faqs) {
@@ -321,7 +316,6 @@
             gotopanel(linkhash);
             if ($(this).closest('.study-tabs').length) {
                 $('.back-to-top').attr('href', $('#tabs > li.active a').attr('href'));
-                //$('.back-to-top span').removeClass('glyphicon-chevron-up').addClass('glyphicon-link');
             }
         });
 
@@ -377,11 +371,14 @@
                 var position = $(linkhash).position();
                 $("html, body").animate({ scrollTop: position.top}, 800);
             }
-            if (!$(linkhash).hasClass('in')) {
-                $('.panel-group .panel-heading a[href="' + linkhash +'"]').trigger('click');
+            if ($(linkhash).hasClass('tab-pane') && !$(linkhash).hasClass('active')) {
+                $('.nav-tabs li a[href="' + linkhash +'"]').trigger('click');
+            } else {
+                if ($(linkhash).hasClass('panel-collapse') && !$(linkhash).hasClass('in')) {
+                    $('.panel-group .panel-heading a[href="' + linkhash +'"]').trigger('click');
+                }
             }
             var position = $(linkhash).position();
-            console.log(position);
             var adjust = (isapanel ? 105 : 170);
             $("html, body").animate({ scrollTop: position.top - adjust}, 800);
         };
