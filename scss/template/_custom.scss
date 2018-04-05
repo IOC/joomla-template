@@ -91,7 +91,7 @@
 
 @mixin hover-module() {
     cursor: pointer;
-    transition: filter .3s;
+    @include transition(filter, .3s, ease);
     filter: contrast(.84) grayscale(5%) hue-rotate(-20deg);
     .element-img {
         @include transform(scale(1.2));
@@ -433,7 +433,7 @@
             width: 18px;
             color: $color;
             @include transform(rotate(-45deg));
-            transition: all .35s linear;
+            @include transition(all, .35s, linear);
             &:before {
                 content: '\e913';
                 font-family: 'ioc-icons';
@@ -579,7 +579,7 @@ header.headroom--not-top {
     &.big {
         .fake-menu-bg {
             height: $ioc-header-big;
-            transition: all 0.3s cubic-bezier(.8,.04,.84,.77);
+            @include transition(all, 0.3s, cubic-bezier(.8,.04,.84,.77));
         }
     }
     &.big ~ section {
@@ -591,7 +591,7 @@ header.headroom--not-top {
                         border-top: solid 1px $ioc-bg-header;
                         border-right: solid 1px $ioc-bg-header;
                         border-bottom: solid 1px $ioc-bg-header;
-                        transition: all 0.3s cubic-bezier(.8,.04,.84,.77);
+                        @include transition(all, 0.3s, cubic-bezier(.8,.04,.84,.77));
                         &:before {
                             color: $ioc-bg-header;
                         }
@@ -610,7 +610,7 @@ header.headroom--not-top {
         display: block;
         background-color: $ioc-bg-header;
         @include transform(translateY(0));
-        transition: all 0.3s cubic-bezier(.8,.04,.84,.77);
+        @include transition(all, 0.3s, cubic-bezier(.8,.04,.84,.77));
         box-shadow: 0px 1px 5px rgba(0,0,0,.4);
     }
     .ioc-departament,
@@ -658,12 +658,12 @@ header.headroom--not-top {
             }
             .fake-menu-bg {
                 @include transform(translateY(0));
-                transition: transform 0s;
+                @include transition(transform, 0s, ease);
             }
         }
         .fake-menu-bg {
             @include transform(translateY(-65px));
-            transition: all .3s cubic-bezier(.5,.04,.84,.77);
+            @include transition(all, .3s, cubic-bezier(.5,.04,.84,.77));
         }
         .ioc-departament,
         .social {
@@ -745,14 +745,13 @@ header.headroom--not-top {
             z-index: 2;
             color: #fff;
             cursor: pointer;
-            transition: all 0.4s ease-out;
+            @include transition(all, .4s, ease-out);
             &:hover {
                 background-color: $ioc-link2-carousel;
                 text-decoration: none;
             }
             &.first {
                 &:hover {
-                    //background-color: $ioc-link-carousel;
                     border-color: $ioc-lnk-nb-frpage;
                     .custom-icon,
                     .login-text {
@@ -770,6 +769,7 @@ header.headroom--not-top {
                 margin-right: 20px;
                 width: 24px;
                 height: 24px;
+                @include transition(all, .4s, ease-out);
             }
             p {
                 font-size: 14px;
@@ -777,6 +777,7 @@ header.headroom--not-top {
                 text-transform: uppercase;
                 letter-spacing: .7px;
                 padding-top: 18px;
+                @include transition(all, .4s, ease-out);
             }
         }
     }
@@ -799,12 +800,12 @@ header.headroom--not-top {
     .fake-menu-bg {
         display: block;
         @include transform(translateY(-65px));
-        transition: all .3s cubic-bezier(.5,.04,.84,.77);
+        @include transition(all, .3s, cubic-bezier(.5,.04,.84,.77));
     }
     &.bck-displayed {
         .fake-menu-bg {
             @include transform(translateY(0));
-            transition: transform 0s;
+            @include transition(transform, 0s, ease);
         }
     }
     .fake-menu-bg {
@@ -858,7 +859,7 @@ header.headroom--not-top {
         &:hover {
             background-color: transparent;
             .icon-bar {
-                background-color: $ioc-link-navbar;
+                background-color: $ioc-accent-mat;
             }
         }
         &:focus,
@@ -880,10 +881,7 @@ header.headroom--not-top {
             border-radius: 0;
             display: block;
             @include transform(rotate(0deg));
-            -webkit-transition: .35s ease-in-out;
-            -moz-transition: .35s ease-in-out;
-            -o-transition: .35s ease-in-out;
-            transition: .35s ease-in-out;
+            @include transition(all, .35s, ease-in-out);
             margin: 0;
             &:nth-child(2) {
                 top: 14px;
@@ -2035,7 +2033,7 @@ header.headroom--not-top {
                 min-height: 172px;
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
-                transition: all .3s ease-in-out;
+                @include transition(all, .3s, ease-in-out);
             }
         }
     }
@@ -2076,7 +2074,7 @@ header.headroom--not-top {
     figure {
         overflow: hidden;
         img {
-            transition: all .3s ease-in-out;
+            @include transition(all, .3s, ease-in-out);
         }
     }
     .img-responsive {
@@ -3141,7 +3139,7 @@ header.headroom--not-top {
                                     }
                                 }
                                 img {
-                                    transition: transform .2s ease-out;
+                                    @include transition(transform, .2s, ease-out);
                                     max-width: inherit;
                                 }
                             }
@@ -3439,7 +3437,7 @@ header.headroom--not-top {
             position: relative;
             margin-top: 67px;
             text-align: center;
-            transition: all .5s ease-in-out;
+            @include transition(all, .5s, ease-in-out);
             &.in {
                 margin-top: 31px;
                 .filter-elements {
@@ -3493,7 +3491,7 @@ header.headroom--not-top {
                     right: 12px;
                     top: 10px;
                     @include transform(rotate(90deg));
-                    transition: all .5s ease-in-out;
+                    @include transition(all, .5s, ease-in-out);
                 }
             }
             .filter-elements {
@@ -3501,7 +3499,7 @@ header.headroom--not-top {
                 width: 100%;
                 margin-top: 22px;
                 text-align: center;
-                transition: all .5s ease-in-out;
+                @include transition(all, .5s, ease-in-out);
                 opacity: 0;
                 visibility: hidden;
                 ul {
@@ -4749,7 +4747,6 @@ div[class*="item-page-fp-"] {
 }
 
 .login-clone-campus {
-    transition: border 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77), background-color 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
     position: relative;
     .custom-icon {
         &:before {
@@ -4768,7 +4765,7 @@ div[class*="item-page-fp-"] {
     text-align: right;
     padding-top: 0;
     &.collapsing {
-        transition: all 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
+        @include transition(all, .3s, cubic-bezier(0.8, 0.04, 0.84, 0.77));
     }
     .container {
         padding: 0;
@@ -5075,7 +5072,7 @@ div[class*="item-page-fp-"] {
     background-color: $ioc-bg-back-to-top;
     padding: 0 10px;
     text-align: left;
-    transition: right 1s ease-in-out;
+    @include transition(right, 1s, ease-in-out);
     z-index: 1;
     &.slidein {
         right: 0;

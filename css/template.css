@@ -1032,6 +1032,10 @@ header.headroom--not-top {
 }
 header.headroom--not-top.big .fake-menu-bg {
   height: 130px;
+  -webkit-transition: all 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
+  -moz-transition: all 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
+  -ms-transition: all 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
+  -o-transition: all 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
   transition: all 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
 }
 header.headroom--not-top.big ~ section .form-search .container .form-inline .btn-search {
@@ -1039,6 +1043,10 @@ header.headroom--not-top.big ~ section .form-search .container .form-inline .btn
   border-top: solid 1px #202b47;
   border-right: solid 1px #202b47;
   border-bottom: solid 1px #202b47;
+  -webkit-transition: all 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
+  -moz-transition: all 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
+  -ms-transition: all 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
+  -o-transition: all 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
   transition: all 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
 }
 header.headroom--not-top.big ~ section .form-search .container .form-inline .btn-search:before {
@@ -1055,6 +1063,10 @@ header.headroom--not-top .fake-menu-bg {
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
   transform: translateY(0);
+  -webkit-transition: all 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
+  -moz-transition: all 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
+  -ms-transition: all 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
+  -o-transition: all 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
   transition: all 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
   box-shadow: 0px 1px 5px rgba(0, 0, 0, .4);
 }
@@ -1094,7 +1106,11 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
   transform: translateY(0);
-  transition: transform 0s;
+  -webkit-transition: transform 0s ease;
+  -moz-transition: transform 0s ease;
+  -ms-transition: transform 0s ease;
+  -o-transition: transform 0s ease;
+  transition: transform 0s ease;
 }
 .ioc-front-page .headroom--top .fake-menu-bg {
   -webkit-transform: translateY(-65px);
@@ -1102,6 +1118,10 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   -ms-transform: translateY(-65px);
   -o-transform: translateY(-65px);
   transform: translateY(-65px);
+  -webkit-transition: all 0.3s cubic-bezier(0.5, 0.04, 0.84, 0.77);
+  -moz-transition: all 0.3s cubic-bezier(0.5, 0.04, 0.84, 0.77);
+  -ms-transition: all 0.3s cubic-bezier(0.5, 0.04, 0.84, 0.77);
+  -o-transition: all 0.3s cubic-bezier(0.5, 0.04, 0.84, 0.77);
   transition: all 0.3s cubic-bezier(0.5, 0.04, 0.84, 0.77);
 }
 .ioc-front-page .headroom--top .ioc-departament, .ioc-front-page .headroom--top .social {
@@ -1146,6 +1166,10 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   z-index: 2;
   color: #fff;
   cursor: pointer;
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
 .ioc-front-page .login-campus .login-campus-body:hover {
@@ -1169,6 +1193,11 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   margin-right: 20px;
   width: 24px;
   height: 24px;
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
 .ioc-front-page .login-campus .login-campus-body p {
   font-size: 14px;
@@ -1176,6 +1205,11 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   text-transform: uppercase;
   letter-spacing: 0.7px;
   padding-top: 18px;
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
 .ioc-front-page .header .social .custom-icon:hover {
   color: #2cc4ec;
@@ -1190,6 +1224,10 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   -ms-transform: translateY(-65px);
   -o-transform: translateY(-65px);
   transform: translateY(-65px);
+  -webkit-transition: all 0.3s cubic-bezier(0.5, 0.04, 0.84, 0.77);
+  -moz-transition: all 0.3s cubic-bezier(0.5, 0.04, 0.84, 0.77);
+  -ms-transition: all 0.3s cubic-bezier(0.5, 0.04, 0.84, 0.77);
+  -o-transition: all 0.3s cubic-bezier(0.5, 0.04, 0.84, 0.77);
   transition: all 0.3s cubic-bezier(0.5, 0.04, 0.84, 0.77);
 }
 .headroom--top.bck-displayed .fake-menu-bg {
@@ -1198,7 +1236,11 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
   transform: translateY(0);
-  transition: transform 0s;
+  -webkit-transition: transform 0s ease;
+  -moz-transition: transform 0s ease;
+  -ms-transition: transform 0s ease;
+  -o-transition: transform 0s ease;
+  transition: transform 0s ease;
 }
 .headroom--top .fake-menu-bg {
   background-color: #202b47;
@@ -1244,7 +1286,7 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   background-color: transparent;
 }
 .navbar-default .navbar-toggle:hover .icon-bar {
-  background-color: #4bcdaf;
+  background-color: #63749d;
 }
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:active {
   background-color: transparent;
@@ -1268,10 +1310,11 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   -ms-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: 0.35s ease-in-out;
-  -moz-transition: 0.35s ease-in-out;
-  -o-transition: 0.35s ease-in-out;
-  transition: 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
   margin: 0;
 }
 .navbar-default .navbar-toggle .icon-bar:nth-child(2) {
@@ -2198,26 +2241,26 @@ header.headroom--top.competic ~ section .form-search .container .search-query {
   border-color: #112fb9;
 }
 header.headroom--top.competic .navbar-default .login-clone-campus:hover, header.headroom--top.competic .navbar-default .tiny-campus:hover, header.headroom--top.competic .navbar-default .tiny-search:hover, header.headroom--top.competic .navbar-default .navbar-toggle:hover {
-  color: #01c1b9;
+  color: #0a26a3;
 }
 header.headroom--top.competic .navbar-default .login-clone-campus:hover .custom-icon, header.headroom--top.competic .navbar-default .tiny-campus:hover .custom-icon, header.headroom--top.competic .navbar-default .tiny-search:hover .custom-icon, header.headroom--top.competic .navbar-default .navbar-toggle:hover .custom-icon {
-  color: #01c1b9;
+  color: #0a26a3;
 }
 header.headroom--top.competic .navbar-default .login-clone-campus:hover .icon-bar, header.headroom--top.competic .navbar-default .tiny-campus:hover .icon-bar, header.headroom--top.competic .navbar-default .tiny-search:hover .icon-bar, header.headroom--top.competic .navbar-default .navbar-toggle:hover .icon-bar {
-  background-color: #01c1b9;
+  background-color: #0a26a3;
 }
 header.headroom--top.competic .navbar-default .navbar-collapse .navbar-nav button:hover .custom-icon, header.headroom--top.competic .navbar-default .navbar-collapse .navbar-nav button:hover span {
-  color: #01c1b9;
+  color: #0a26a3;
 }
 header.headroom--top.competic .navbar-default .navbar-collapse .navbar-nav li a:hover {
-  color: #01c1b9;
+  color: #0a26a3;
 }
 header.headroom--top.competic .navbar-default .login-clone-campus {
   background-color: rgba(47, 73, 202, 0.81);
   border-color: #112fb9;
 }
 header.headroom--top.competic .navbar-default .social .custom-icon:hover {
-  color: #01c1b9;
+  color: #0a26a3;
 }
 .fluid-container.page-header.competic {
   background-color: #5874f6;
@@ -2260,7 +2303,7 @@ header.headroom--top.competic .navbar-default .social .custom-icon:hover {
   background-color: #2f49ca;
 }
 .item-page-study.competic .button-registration:hover {
-  color: #01c1b9;
+  color: #0a26a3;
 }
 .item-page-study.competic .modal-modules .content-modal-modules .modal-module, .item-page-study.competic .modal-modules .body-modal-modules .modal-module {
   border-color: inherit;
@@ -2292,13 +2335,13 @@ div[class*="item-page-competic"] .ioc-breadcrumb {
   background-color: #2f3b5c;
 }
 header.headroom--top[class*="eoi-"] ~ section .form-search .container .form-inline .btn-search {
-  background-color: #fcebc9;
+  background-color: #c47200;
 }
 header.headroom--top[class*="eoi-"] ~ section .form-search .container .form-inline .btn-search:before {
   color: #fff;
 }
 header.headroom--top[class*="eoi-"] ~ section .form-search .container .search-query {
-  border-color: #fcebc9;
+  border-color: #c47200;
 }
 header.headroom--top[class*="eoi-"] .navbar-default .login-clone-campus:hover, header.headroom--top[class*="eoi-"] .navbar-default .tiny-campus:hover, header.headroom--top[class*="eoi-"] .navbar-default .tiny-search:hover, header.headroom--top[class*="eoi-"] .navbar-default .navbar-toggle:hover {
   color: #b97100;
@@ -2317,7 +2360,7 @@ header.headroom--top[class*="eoi-"] .navbar-default .navbar-collapse .navbar-nav
 }
 header.headroom--top[class*="eoi-"] .navbar-default .login-clone-campus {
   background-color: #e89619;
-  border-color: #fcebc9;
+  border-color: #c47200;
 }
 header.headroom--top[class*="eoi-"] .navbar-default .social .custom-icon:hover {
   color: #b97100;
@@ -2389,13 +2432,13 @@ div[class*="item-page-eoi-"] .study-more-info .title h4 {
   color: #f6ad03;
 }
 header.headroom--top.eoi ~ section .form-search .container .form-inline .btn-search {
-  background-color: #fcebc9;
+  background-color: #c47200;
 }
 header.headroom--top.eoi ~ section .form-search .container .form-inline .btn-search:before {
   color: #fff;
 }
 header.headroom--top.eoi ~ section .form-search .container .search-query {
-  border-color: #fcebc9;
+  border-color: #c47200;
 }
 header.headroom--top.eoi .navbar-default .login-clone-campus:hover, header.headroom--top.eoi .navbar-default .tiny-campus:hover, header.headroom--top.eoi .navbar-default .tiny-search:hover, header.headroom--top.eoi .navbar-default .navbar-toggle:hover {
   color: #b97100;
@@ -2414,7 +2457,7 @@ header.headroom--top.eoi .navbar-default .navbar-collapse .navbar-nav li a:hover
 }
 header.headroom--top.eoi .navbar-default .login-clone-campus {
   background-color: #e89619;
-  border-color: #fcebc9;
+  border-color: #c47200;
 }
 header.headroom--top.eoi .navbar-default .social .custom-icon:hover {
   color: #b97100;
@@ -3577,7 +3620,11 @@ div[class*="item-page-news"] .ioc-breadcrumb {
 }
 .modal-modules .content-modal-modules .modal-module:hover, .modal-resources .content-modal-modules .modal-module:hover, .modal-modules .body-modal-modules .modal-module:hover, .modal-resources .body-modal-modules .modal-module:hover, .modal-modules .body-modal-resources .modal-module:hover, .modal-resources .body-modal-resources .modal-module:hover, .modal-modules .content-modal-modules .modal-resource:hover, .modal-resources .content-modal-modules .modal-resource:hover, .modal-modules .body-modal-modules .modal-resource:hover, .modal-resources .body-modal-modules .modal-resource:hover, .modal-modules .body-modal-resources .modal-resource:hover, .modal-resources .body-modal-resources .modal-resource:hover {
   cursor: pointer;
-  transition: filter 0.3s;
+  -webkit-transition: filter 0.3s ease;
+  -moz-transition: filter 0.3s ease;
+  -ms-transition: filter 0.3s ease;
+  -o-transition: filter 0.3s ease;
+  transition: filter 0.3s ease;
   filter: contrast(0.84) grayscale(5%) hue-rotate(-20deg);
 }
 .modal-modules .content-modal-modules .modal-module:hover .element-img, .modal-resources .content-modal-modules .modal-module:hover .element-img, .modal-modules .body-modal-modules .modal-module:hover .element-img, .modal-resources .body-modal-modules .modal-module:hover .element-img, .modal-modules .body-modal-resources .modal-module:hover .element-img, .modal-resources .body-modal-resources .modal-module:hover .element-img, .modal-modules .content-modal-modules .modal-resource:hover .element-img, .modal-resources .content-modal-modules .modal-resource:hover .element-img, .modal-modules .body-modal-modules .modal-resource:hover .element-img, .modal-resources .body-modal-modules .modal-resource:hover .element-img, .modal-modules .body-modal-resources .modal-resource:hover .element-img, .modal-resources .body-modal-resources .modal-resource:hover .element-img {
@@ -3956,6 +4003,10 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
+  -webkit-transition: all 0.35s linear;
+  -moz-transition: all 0.35s linear;
+  -ms-transition: all 0.35s linear;
+  -o-transition: all 0.35s linear;
   transition: all 0.35s linear;
 }
 .modal-resources .panel-modal-resources .panel .panel-heading a .custom-icon.plus:before {
@@ -4096,7 +4147,11 @@ div[class*="item-page-news"] .ioc-breadcrumb {
 }
 .submenu .submenu-content .navbar-nav li:hover, .substudies .submenu-content .navbar-nav li:hover, .submenu .substudies-content .navbar-nav li:hover, .substudies .substudies-content .navbar-nav li:hover {
   cursor: pointer;
-  transition: filter 0.3s;
+  -webkit-transition: filter 0.3s ease;
+  -moz-transition: filter 0.3s ease;
+  -ms-transition: filter 0.3s ease;
+  -o-transition: filter 0.3s ease;
+  transition: filter 0.3s ease;
   filter: contrast(0.84) grayscale(5%) hue-rotate(-20deg);
 }
 .submenu .submenu-content .navbar-nav li:hover .element-img, .substudies .submenu-content .navbar-nav li:hover .element-img, .submenu .substudies-content .navbar-nav li:hover .element-img, .substudies .substudies-content .navbar-nav li:hover .element-img {
@@ -4132,6 +4187,10 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   min-height: 172px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .submenu {
@@ -4229,6 +4288,10 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   overflow: hidden;
 }
 .news-text figure img {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .news-text .img-responsive {
@@ -5268,6 +5331,10 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   transform: scale(0.7) translate(-22%, -21%);
 }
 .container.all-studies .studies .studies-content .navbar-nav li a .element-img img {
+  -webkit-transition: transform 0.2s ease-out;
+  -moz-transition: transform 0.2s ease-out;
+  -ms-transition: transform 0.2s ease-out;
+  -o-transition: transform 0.2s ease-out;
   transition: transform 0.2s ease-out;
   max-width: inherit;
 }
@@ -5577,6 +5644,10 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   position: relative;
   margin-top: 67px;
   text-align: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 .subpage-text-buttons-banner .subpage-filter .filter-dropdown.in, .subpage-buttons-filter .subpage-filter .filter-dropdown.in {
@@ -5653,6 +5724,10 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 .subpage-text-buttons-banner .subpage-filter .filter-dropdown .filter-elements, .subpage-buttons-filter .subpage-filter .filter-dropdown .filter-elements {
@@ -5660,6 +5735,10 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   width: 100%;
   margin-top: 22px;
   text-align: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   opacity: 0;
   visibility: hidden;
@@ -6797,6 +6876,10 @@ div[class*="item-page-fp-"] .subpagebody {
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
+  -webkit-transition: all 0.35s linear;
+  -moz-transition: all 0.35s linear;
+  -ms-transition: all 0.35s linear;
+  -o-transition: all 0.35s linear;
   transition: all 0.35s linear;
 }
 .study-more-info .panel-section-info .panel.panel-default .panel-heading .panel-title a .custom-icon.plus:before, .study-tabs .panel-section-info .panel.panel-default .panel-heading .panel-title a .custom-icon.plus:before {
@@ -6859,7 +6942,6 @@ div[class*="item-page-fp-"] .subpagebody {
   line-height: 1.4;
 }
 .login-clone-campus {
-  transition: border 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77), background-color 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
   position: relative;
 }
 .login-clone-campus .custom-icon:before {
@@ -6876,6 +6958,10 @@ div[class*="item-page-fp-"] .subpagebody {
   padding-top: 0;
 }
 .form-search.collapsing {
+  -webkit-transition: all 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
+  -moz-transition: all 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
+  -ms-transition: all 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
+  -o-transition: all 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
   transition: all 0.3s cubic-bezier(0.8, 0.04, 0.84, 0.77);
 }
 .form-search .container {
@@ -7192,6 +7278,10 @@ div[class*="item-page-fp-"] .subpagebody {
   background-color: #08191d;
   padding: 0 10px;
   text-align: left;
+  -webkit-transition: right 1s ease-in-out;
+  -moz-transition: right 1s ease-in-out;
+  -ms-transition: right 1s ease-in-out;
+  -o-transition: right 1s ease-in-out;
   transition: right 1s ease-in-out;
   z-index: 1;
 }
@@ -7532,6 +7622,10 @@ div[class*="item-page-fp-"] .subpagebody {
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
+  -webkit-transition: all 0.35s linear;
+  -moz-transition: all 0.35s linear;
+  -ms-transition: all 0.35s linear;
+  -o-transition: all 0.35s linear;
   transition: all 0.35s linear;
 }
 .footer #footer-collapse .panel-group .panel-default .panel-heading h3 a .custom-icon.plus:before {
@@ -8343,6 +8437,10 @@ div[class*="item-page-"] table p {
     -ms-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
+    -webkit-transition: all 0.35s linear;
+    -moz-transition: all 0.35s linear;
+    -ms-transition: all 0.35s linear;
+    -o-transition: all 0.35s linear;
     transition: all 0.35s linear;
   }
   .item-page-faqs .panel-faqs .panel-section-info .panel.panel-default .panel-heading .panel-title a .custom-icon.plus:before {
@@ -10430,6 +10528,10 @@ div[class*="item-page-"] table p {
     transform: scale(0.53) translate(-45%, -44%);
   }
   .container.all-studies .studies .studies-content .navbar-nav li a .element-img img {
+    -webkit-transition: transform 0.2s ease-out;
+    -moz-transition: transform 0.2s ease-out;
+    -ms-transition: transform 0.2s ease-out;
+    -o-transition: transform 0.2s ease-out;
     transition: transform 0.2s ease-out;
     max-width: inherit;
   }
@@ -11314,6 +11416,10 @@ div[class*="item-page-"] table p {
     transform: translate(0, 0);
   }
   .container.all-studies .studies .studies-content .navbar-nav li a .element-img img {
+    -webkit-transition: transform 0.2s ease-out;
+    -moz-transition: transform 0.2s ease-out;
+    -ms-transition: transform 0.2s ease-out;
+    -o-transition: transform 0.2s ease-out;
     transition: transform 0.2s ease-out;
     max-width: inherit;
   }

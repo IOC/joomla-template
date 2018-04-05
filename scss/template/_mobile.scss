@@ -1,3 +1,11 @@
+@mixin transition($property, $duration, $timing-function) {
+    -webkit-transition: $property $duration $timing-function;
+       -moz-transition: $property $duration $timing-function;
+        -ms-transition: $property $duration $timing-function;
+         -o-transition: $property $duration $timing-function;
+            transition: $property $duration $timing-function;
+}
+
 @mixin transform($property) {
     -webkit-transform: $property;
        -moz-transform: $property;
@@ -926,7 +934,7 @@
                                         width: 18px;
                                         color: $ioc-text2;
                                         @include transform(rotate(-45deg));
-                                        transition: all .35s linear;
+                                        @include transition(all, .35s, linear);
                                         &:before {
                                             content: '\e913';
                                             font-family: 'ioc-icons';
@@ -3291,7 +3299,7 @@
                                         }
                                     }
                                     img {
-                                        transition: transform .2s ease-out;
+                                        @include transition(transform, .2s, ease-out);
                                         max-width: inherit;
                                     }
                                 }
@@ -4372,7 +4380,7 @@
                                         }
                                     }
                                     img {
-                                        transition: transform .2s ease-out;
+                                        @include transition(transform, .2s, ease-out);
                                         max-width: inherit;
                                     }
                                 }
