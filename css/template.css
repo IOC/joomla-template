@@ -2880,26 +2880,26 @@ header.headroom--top.ges ~ section .form-search .container .search-query {
   border-color: #9a1b2d;
 }
 header.headroom--top.ges .navbar-default .login-clone-campus:hover, header.headroom--top.ges .navbar-default .tiny-campus:hover, header.headroom--top.ges .navbar-default .tiny-search:hover, header.headroom--top.ges .navbar-default .navbar-toggle:hover {
-  color: #01c1b9;
+  color: #9a1b2d;
 }
 header.headroom--top.ges .navbar-default .login-clone-campus:hover .custom-icon, header.headroom--top.ges .navbar-default .tiny-campus:hover .custom-icon, header.headroom--top.ges .navbar-default .tiny-search:hover .custom-icon, header.headroom--top.ges .navbar-default .navbar-toggle:hover .custom-icon {
-  color: #01c1b9;
+  color: #9a1b2d;
 }
 header.headroom--top.ges .navbar-default .login-clone-campus:hover .icon-bar, header.headroom--top.ges .navbar-default .tiny-campus:hover .icon-bar, header.headroom--top.ges .navbar-default .tiny-search:hover .icon-bar, header.headroom--top.ges .navbar-default .navbar-toggle:hover .icon-bar {
-  background-color: #01c1b9;
+  background-color: #9a1b2d;
 }
 header.headroom--top.ges .navbar-default .navbar-collapse .navbar-nav button:hover .custom-icon, header.headroom--top.ges .navbar-default .navbar-collapse .navbar-nav button:hover span {
-  color: #01c1b9;
+  color: #9a1b2d;
 }
 header.headroom--top.ges .navbar-default .navbar-collapse .navbar-nav li a:hover {
-  color: #01c1b9;
+  color: #9a1b2d;
 }
 header.headroom--top.ges .navbar-default .login-clone-campus {
   background-color: #ba2f43;
   border-color: #9a1b2d;
 }
 header.headroom--top.ges .navbar-default .social .custom-icon:hover {
-  color: #01c1b9;
+  color: #9a1b2d;
 }
 .fluid-container.page-header.ges {
   background-color: #d14c5e;
@@ -2942,7 +2942,7 @@ header.headroom--top.ges .navbar-default .social .custom-icon:hover {
   background-color: #e15064;
 }
 .item-page-study.ges .button-registration:hover {
-  color: #01c1b9;
+  color: #9a1b2d;
 }
 .item-page-study.ges .modal-modules .content-modal-modules .modal-module, .item-page-study.ges .modal-modules .body-modal-modules .modal-module {
   border-color: inherit;
@@ -5688,10 +5688,11 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
   border: solid 1px #ecf3f7;
   background-color: #fff;
+  overflow: hidden;
 }
-.study-buttons .study-button:hover, .body-modal-modules .study-button:hover, .subpage-buttons .study-button:hover, .study-buttons .file-modal-module:hover, .body-modal-modules .file-modal-module:hover, .subpage-buttons .file-modal-module:hover, .study-buttons .subpage-button:hover, .body-modal-modules .subpage-button:hover, .subpage-buttons .subpage-button:hover {
-  background-color: #ecf3f7;
-  opacity: 0.8;
+.study-buttons .study-button a:hover:after, .body-modal-modules .study-button a:hover:after, .subpage-buttons .study-button a:hover:after, .study-buttons .file-modal-module a:hover:after, .body-modal-modules .file-modal-module a:hover:after, .subpage-buttons .file-modal-module a:hover:after, .study-buttons .subpage-button a:hover:after, .body-modal-modules .subpage-button a:hover:after, .subpage-buttons .subpage-button a:hover:after {
+  content: url('../images/button-hover.svg');
+  opacity: 0.25;
 }
 .study-buttons .study-button .custom-icon, .body-modal-modules .study-button .custom-icon, .subpage-buttons .study-button .custom-icon, .study-buttons .file-modal-module .custom-icon, .body-modal-modules .file-modal-module .custom-icon, .subpage-buttons .file-modal-module .custom-icon, .study-buttons .subpage-button .custom-icon, .body-modal-modules .subpage-button .custom-icon, .subpage-buttons .subpage-button .custom-icon {
   display: inline-block;
@@ -7110,7 +7111,7 @@ div[class*="item-page-fp-"] .subpagebody {
   margin-bottom: 31px;
 }
 .footer .top-col ul li {
-  line-height: 26px;
+  line-height: 1.77;
   float: none;
   margin: 0;
 }
@@ -7299,7 +7300,7 @@ div[class*="item-page-fp-"] .subpagebody {
   padding: 14px 0;
 }
 .footer #footer-collapse .panel-collapse .navbar-nav li {
-  line-height: 26px;
+  line-height: 2.17;
   float: none;
   margin: 0;
 }
@@ -7375,6 +7376,13 @@ div[class*="item-page-fp-"] .subpagebody {
 .footer #footer-collapse .panel-group .panel-default .panel-collapse .date {
   margin-left: 0;
   margin-top: 5px;
+}
+.footer #footer-collapse .location .map {
+  width: 100%;
+}
+.footer #footer-collapse .location .map .map-image {
+  width: 100%;
+  min-height: 172px;
 }
 .ioc-keyword-selected button {
   background-color: rgba(176, 53, 0, 0.7) !important;
@@ -9074,10 +9082,11 @@ div[class*="item-page-"] table p {
     margin-bottom: 0;
   }
   #news .container.blog-featurednews .items-row .item .news-text .img-responsive {
-    max-height: inherit;
+    max-height: 153px;
   }
   #news .container.blog-featurednews .items-row .item .news-text .heading-img img {
     width: 100%;
+    object-fit: cover;
   }
   #news .container.blog-featurednews .items-row .item .news-text .news-layer {
     width: 100%;

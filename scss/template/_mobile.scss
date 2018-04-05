@@ -1900,10 +1900,11 @@
                                 margin-bottom: 0;
                             }
                             .img-responsive {
-                                max-height: inherit;
+                                max-height: 153px;
                             }
                             .heading-img img {
                                 width: 100%;
+                                object-fit: cover;
                             }
                             .news-layer {
                                 width: 100%;

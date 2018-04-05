@@ -3674,9 +3674,14 @@ header.headroom--not-top {
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
         border: solid 1px $ioc-submenu;
         background-color: $ioc-white;
-        &:hover {
-            background-color: $ioc-submenu;
-            opacity: 0.8;
+        overflow: hidden;
+        a {
+            &:hover {
+                &:after {
+                    content: url('../images/button-hover.svg');
+                    opacity: .25;
+                }
+            }
         }
         .custom-icon {
             display: inline-block;
@@ -5138,7 +5143,7 @@ div[class*="item-page-fp-"] {
         }
         ul {
             li {
-                line-height: 26px;
+                line-height: 1.77;
                 float: none;
                 margin: 0;
                 a {
@@ -5338,7 +5343,7 @@ div[class*="item-page-fp-"] {
                 margin: 0 31px;
                 padding: 14px 0;
                 li {
-                    line-height: 26px;
+                    line-height: 2.17;
                     float: none;
                     margin: 0;
                     a {
@@ -5392,6 +5397,15 @@ div[class*="item-page-fp-"] {
                         margin-left: 0;
                         margin-top: 5px;
                     }
+                }
+            }
+        }
+        .location {
+            .map {
+                width: 100%;
+                .map-image {
+                    width: 100%;
+                    min-height: 172px;
                 }
             }
         }

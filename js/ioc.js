@@ -14,6 +14,7 @@
         var $filter = $('.filter-dropdown');
         var currenthash = '#' + window.location.hash.replace(/[^a-zA-Z0-9_-]*/g, '');
         var $faqs = $('.panel-faqs');
+        var originwidth = $(window).width();
         var PLUGINVARS = {
             HTML: {
                 PREVIOUS:       '<div class="button-tab-nav prev">Pas anterior</div>',
@@ -69,13 +70,13 @@
                 width = $(window).width();
             }
             if (width > 990) {
-                $faqs.find('.panel-collapse').addClass('in').css('height', 'auto');
+                $faqs.find('.panel-collapse').addClass('in').css('height', 'auto').attr('aria-expanded','true');
                 $faqs.find('.panel-heading a').removeClass('collapsed');
-                $faqs.find('.panel-heading a').attr('data-toggle','');
+                $faqs.find('.panel-heading a').attr('data-toggle', '').attr('aria-expanded','true');
             } else {
-                $faqs.find('.panel-collapse').removeClass('in').css('height', '0px');
+                $faqs.find('.panel-collapse').removeClass('in').css('height', '0px').attr('aria-expanded','false');;
                 $faqs.find('.panel-heading a').addClass('collapsed');
-                $faqs.find('.panel-heading a').attr('data-toggle','collapse');
+                $faqs.find('.panel-heading a').attr('data-toggle', 'collapse').attr('aria-expanded','false');
             }
         };
 
@@ -94,7 +95,7 @@
 
             var total = $(PLUGINVARS.SELECTORS.STUDYTABS).length;
             var pos = $(PLUGINVARS.SELECTORS.STUDYTABACT).index();
-            var anchor;
+            var $anchor;
             // Toggle buttons depends on tab position
             if (mov == 'click' && tab) {
                 $(PLUGINVARS.SELECTORS.TABNAVBUTTON + '.next').show();
@@ -267,17 +268,20 @@
         });
 
         $( window ).resize(function() {
-            var $header = $('header');
-            if ($faqs) {
-                faqsblockpanels($(this).width());
-            }
-            if ($(this).width() > 990 && $header.hasClass('bck-displayed')) {
-                $header.removeClass('bck-displayed');
-                $('.social, .ioc-languages').removeClass('bck-displayed');
-            } else {
-                if ($menu.hasClass('in') && $(this).width() < 991 && !$header.hasClass('bck-displayed')) {
-                    $header.addClass('bck-displayed');
-                    $('.social, .ioc-languages').addClass('bck-displayed');
+            if ($(window).width() != originwidth) {
+                originwidth = $(window).width();
+                var $header = $('header');
+                if ($faqs) {
+                    faqsblockpanels($(this).width());
+                }
+                if ($(this).width() > 990 && $header.hasClass('bck-displayed')) {
+                    $header.removeClass('bck-displayed');
+                    $('.social, .ioc-languages').removeClass('bck-displayed');
+                } else {
+                    if ($menu.hasClass('in') && $(this).width() < 991 && !$header.hasClass('bck-displayed')) {
+                        $header.addClass('bck-displayed');
+                        $('.social, .ioc-languages').addClass('bck-displayed');
+                    }
                 }
             }
         });
@@ -309,7 +313,7 @@
             $('.back-to-top').attr('href', '#');
         });
 
-        $(document).on('click', '.study-buttons a[href^=#], .study-tabs .tab-content a[href^=#], .subpage-group-buttons a[href^=#], .panel-body a[href^=#], .faqsindex a[href^=#]' , function(e) {
+        $(document).on('click', '.study-buttons a[href^=#], .study-tabs .tab-content a[href^=#], .subpage-group-buttons a[href^=#], .panel-body a[href^=#], .faqsindex .panel-heading a[href^=#]' , function(e) {
             e.preventDefault();
             linkhash = '#' + $(this).prop('hash').replace(/[^a-zA-Z0-9_-]*/g, '');
             isapanel = $(this).closest('.panel-group, .study-tabs').hasClass('panel-group');
@@ -319,10 +323,13 @@
             }
         });
 
-        $(document).on('click', '#collapse-tabs .panel-title a[href^=#], #panel-sections .panel-title a[href^=#], .study-tabs .nav-tabs li a[href^=#], .panel-modal-resources a[href^=#], .faqsindex a[href^=#]', function(e) {
+        $(document).on('click', '#collapse-tabs .panel-title a[href^=#], #panel-sections .panel-title a[href^=#], .study-tabs .nav-tabs li a[href^=#], .panel-modal-resources a[href^=#], .faqsindex .panel-heading a[href^=#]', function(e) {
             e.preventDefault();
             isapanel = $(this).closest('.panel-group, .study-tabs').hasClass('panel-group');
             linkhash = $(this).prop('hash');
+            if (history.pushState) {
+                history.pushState({}, '', window.location.href.replace(window.location.hash, '') + linkhash);
+            }
         });
 
         $(document).on('shown.bs.collapse', '#collapse-other-info, #collapse-tabs, #panel-sections, .panel-modal-resources, .faqsindex', function(e) {
@@ -441,7 +448,6 @@
             $(this).toggleClass('open');
         });
         $(document).on('click', '.modal-dialog', function(e) {
-            var offset = $(this).offset();
             if (e.offsetY < 0) {
                 $(this).closest('.modal').modal('hide');
             }

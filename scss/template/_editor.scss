@@ -645,6 +645,26 @@ $ioc-accent:    #01c1b9;
             }
         }
     }
+    .location-content {
+        @include borderioc(1px, $custom_red);
+        .location-map,
+        .location-address {
+            @include borderioc(1px, $custom_red);
+        }
+        .location-transport {
+            @include borderioc(1px, $custom_red);
+            .title {
+                @include borderioc(1px, $custom_red);
+            }
+            .transport {
+                .transport-content,
+                .transport-name,
+                .transport-text {
+                    @include borderioc(1px, $custom_red);
+                }
+            }
+        }
+    }
     .columns {
         @include borderioc(1px, $custom_red);
         .column {

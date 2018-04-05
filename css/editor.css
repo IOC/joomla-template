@@ -716,6 +716,36 @@
 #tinymce .panel-modal-resources .modal-resource .bottom-modal-resource {
   text-align: center;
 }
+#tinymce .location-content {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
+#tinymce .location-content .location-map, #tinymce .location-content .location-address {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
+#tinymce .location-content .location-transport {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
+#tinymce .location-content .location-transport .title {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
+#tinymce .location-content .location-transport .transport .transport-content, #tinymce .location-content .location-transport .transport .transport-name, #tinymce .location-content .location-transport .transport .transport-text {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
 #tinymce .columns {
   box-sizing: border-box;
   border: 1px dashed #d9534f;
