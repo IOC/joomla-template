@@ -1,3 +1,19 @@
+@mixin transition($property, $duration, $timing-function) {
+    -webkit-transition: $property $duration $timing-function;
+       -moz-transition: $property $duration $timing-function;
+        -ms-transition: $property $duration $timing-function;
+         -o-transition: $property $duration $timing-function;
+            transition: $property $duration $timing-function;
+}
+
+@mixin transform($property) {
+    -webkit-transform: $property;
+       -moz-transform: $property;
+        -ms-transform: $property;
+         -o-transform: $property;
+            transform: $property;
+}
+
 @mixin tabcolor($background, $color) {
     .nav-tabs {
         li a:hover {
@@ -77,6 +93,9 @@
     cursor: pointer;
     transition: filter .3s;
     filter: contrast(.84) grayscale(5%) hue-rotate(-20deg);
+    .element-img {
+        @include transform(scale(1.2));
+    }
 }
 
 @mixin no-hover-module() {
@@ -401,7 +420,7 @@
     &.collapsed {
         .custom-icon {
             &.plus {
-                transform: rotate(0deg);
+                @include transform(rotate(0deg));
             }
         }
     }
@@ -413,7 +432,7 @@
             height: 18px;
             width: 18px;
             color: $color;
-            transform: rotate(-45deg);
+            @include transform(rotate(-45deg));
             transition: all .35s linear;
             &:before {
                 content: '\e913';
@@ -590,7 +609,7 @@ header.headroom--not-top {
     .fake-menu-bg {
         display: block;
         background-color: $ioc-bg-header;
-        transform: translateY(0px);
+        @include transform(translateY(0));
         transition: all 0.3s cubic-bezier(.8,.04,.84,.77);
         box-shadow: 0px 1px 5px rgba(0,0,0,.4);
     }
@@ -638,12 +657,12 @@ header.headroom--not-top {
                 }
             }
             .fake-menu-bg {
-                transform: translateY(0);
+                @include transform(translateY(0));
                 transition: transform 0s;
             }
         }
         .fake-menu-bg {
-            transform: translateY(-65px);
+            @include transform(translateY(-65px));
             transition: all .3s cubic-bezier(.5,.04,.84,.77);
         }
         .ioc-departament,
@@ -779,12 +798,12 @@ header.headroom--not-top {
     }
     .fake-menu-bg {
         display: block;
-        transform: translateY(-65px);
+        @include transform(translateY(-65px));
         transition: all .3s cubic-bezier(.5,.04,.84,.77);
     }
     &.bck-displayed {
         .fake-menu-bg {
-            transform: translateY(0);
+            @include transform(translateY(0));
             transition: transform 0s;
         }
     }
@@ -860,10 +879,7 @@ header.headroom--not-top {
             background-color: $ioc-white;
             border-radius: 0;
             display: block;
-            -webkit-transform: rotate(0deg);
-            -moz-transform: rotate(0deg);
-            -o-transform: rotate(0deg);
-            transform: rotate(0deg);
+            @include transform(rotate(0deg));
             -webkit-transition: .35s ease-in-out;
             -moz-transition: .35s ease-in-out;
             -o-transition: .35s ease-in-out;
@@ -892,10 +908,7 @@ header.headroom--not-top {
 
         &.open .icon-bar:nth-child(2) {
             top: 19px;
-            -webkit-transform: rotate(135deg);
-            -moz-transform: rotate(135deg);
-            -o-transform: rotate(135deg);
-            transform: rotate(135deg);
+            @include transform(rotate(135deg));
         }
 
         &.open .icon-bar:nth-child(3) {
@@ -905,10 +918,7 @@ header.headroom--not-top {
 
         &.open .icon-bar:nth-child(4) {
             top: 19px;
-            -webkit-transform: rotate(-135deg);
-            -moz-transform: rotate(-135deg);
-            -o-transform: rotate(-135deg);
-            transform: rotate(-135deg);
+            @include transform(rotate(-135deg));
         }
     }
     .ioc-languages {
@@ -1180,7 +1190,7 @@ header.headroom--not-top {
                                 font-family: 'ioc-icons';
                                 font-size: 10px;
                                 color: $ioc-white;
-                                transform: rotate(90deg);
+                                @include transform(rotate(90deg));
                                 position: absolute;
                                 top: 5px;
                                 left: 12px;
@@ -2002,6 +2012,9 @@ header.headroom--not-top {
                     padding: 0;
                     color: $ioc-text;
                 }
+                .element-img-container {
+                    overflow: hidden;
+                }
                 .element-title {
                     line-height:89px;
                     p {
@@ -2022,6 +2035,7 @@ header.headroom--not-top {
                 min-height: 172px;
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
+                transition: all .3s ease-in-out;
             }
         }
     }
@@ -2055,7 +2069,7 @@ header.headroom--not-top {
         &:hover {
             text-decoration: none;
             img {
-                transform: scale(1.2);
+                @include transform(scale(1.2));
             }
         }
     }
@@ -2350,7 +2364,7 @@ header.headroom--not-top {
             }
             &.previous {
                 a {
-                    transform: rotate(180deg);
+                    @include transform(rotate(180deg));
                 }
             }
             a {
@@ -2486,7 +2500,7 @@ header.headroom--not-top {
             line-height: 70px;
             top: 0;
             z-index: 2;
-            transform: translateX(314px);
+            @include transform(translateX(314px));
             font-size: 13px;
             letter-spacing: 0;
         }
@@ -2514,7 +2528,7 @@ header.headroom--not-top {
             }
         }
         .control-prev {
-            transform: rotate(-180deg);
+            @include transform(rotate(-180deg));
             top: 25px;
         }
         .control-next {
@@ -3017,52 +3031,52 @@ header.headroom--not-top {
                                 .element-img {
                                     &.acfgs {
                                         img {
-                                            transform: scale(1.5) translate(12%, -8%);
+                                            @include transform(scale(1.5) translate(12%, -8%));
                                         }
                                     }
                                     &.btx {
                                         img {
-                                            transform:scale(1.5) translate(10%, -8%);
+                                            @include transform(scale(1.5) translate(10%, -8%));
                                         }
                                     }
                                     &.competic {
                                         img {
-                                            transform: translate(-50%, 0);
+                                            @include transform(translate(-50%, 0));
                                         }
                                     }
                                     &.eoi {
                                         img {
-                                            transform: translate(0, -26%);
+                                            @include transform(translate(0, -26%));
                                         }
                                     }
                                     &.fesp {
                                         img {
-                                            transform: translate(-25%, -43.5%);
+                                            @include transform(translate(-25%, -43.5%));
                                         }
                                     }
                                     &.fp {
                                         img {
-                                            transform: scale(1.5) translate(-22%, -8%);
+                                            @include transform(scale(1.5) translate(-22%, -8%));
                                         }
                                     }
                                     &.fpd {
                                         img {
-                                            transform: scale(1.5) translate(12%, -8%);
+                                            @include transform(scale(1.5) translate(12%, -8%));
                                         }
                                     }
                                     &.ges {
                                         img {
-                                            transform: translate(0, -39%);
+                                            @include transform(translate(0, -39%));
                                         }
                                     }
                                     &.miniops {
                                         img {
-                                            transform: scale(1.5) translate(12%, -8%);
+                                            @include transform(scale(1.5) translate(12%, -8%));
                                         }
                                     }
                                     &.pau {
                                         img {
-                                           transform: translate(-38%, -38%);
+                                           @include transform(translate(-38%, -38%));
                                         }
                                     }
                                 }
@@ -3077,53 +3091,53 @@ header.headroom--not-top {
                                 background-position: center center;
                                 &.acfgs {
                                     img {
-                                        transform: scale(.7) translate(8%, 6%);
+                                        @include transform(scale(.7) translate(8%, 6%));
                                     }
                                 }
                                 &.btx {
                                     img {
-                                        transform: scale(.7) translate(-62%, 10%)
+                                        @include transform(scale(.7) translate(-62%, 10%));
                                     }
                                 }
                                 &.competic {
                                     img {
-                                        transform: scale(.7) translate(-22%, -22%);
+                                        @include transform(scale(.7) translate(-22%, -22%));
                                     }
                                 }
                                 &.eoi {
                                     img {
-                                        transform: scale(.75) translate(-22%, 19%);
+                                        @include transform(scale(.75) translate(-22%, 19%));
                                     }
                                 }
                                 &.fesp {
                                     img {
-                                        transform: scale(.7) translate(-23%, -22%);
+                                       @include  transform(scale(.7) translate(-23%, -22%));
                                     }
                                 }
 
                                 &.fp {
                                     img {
-                                        transform: scale(.7) translate(8%, 13%);
+                                        @include transform(scale(.7) translate(8%, 13%));
                                     }
                                 }
                                 &.fpd {
                                     img {
-                                        transform: scale(.7) translate(43%, -5%);
+                                        @include transform(scale(.7) translate(43%, -5%));
                                     }
                                 }
                                 &.ges {
                                     img {
-                                        transform: scale(.7) translate(-59%, -21%);
+                                        @include transform(scale(.7) translate(-59%, -21%));
                                     }
                                 }
                                 &.miniops {
                                     img {
-                                        transform: scale(.7) translate(27%, -77%);
+                                        @include transform(scale(.7) translate(27%, -77%));
                                     }
                                 }
                                 &.pau {
                                     img {
-                                        transform: scale(.7) translate(-22%, -21%);
+                                        @include transform(scale(.7) translate(-22%, -21%));
                                     }
                                 }
                                 img {
@@ -3435,7 +3449,7 @@ header.headroom--not-top {
                 .filter-text {
                     border: none;
                     &:after {
-                        transform: rotate(270deg);
+                        @include transform(rotate(270deg));
                     }
                 }
             }
@@ -3478,7 +3492,7 @@ header.headroom--not-top {
                     width: 18px;
                     right: 12px;
                     top: 10px;
-                    transform: rotate(90deg);
+                    @include transform(rotate(90deg));
                     transition: all .5s ease-in-out;
                 }
             }

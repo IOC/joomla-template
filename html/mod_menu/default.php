@@ -140,7 +140,7 @@ foreach ($list as $i => &$item)
 			$stylemobile = 'style="background-image: url(\''. join(DIRECTORY_SEPARATOR, array($path_parts['dirname'], $path_parts['filename'] . '-mobile.' . $path_parts['extension'])) . '\')"';
 			$style = 'style="background-image: url(\''. $item->menu_image .'\')"';
 		}
-		echo '<a href="'. $item->flink .'" class="'. $anchorcss .'"><div class="visible-xs element-img" '. $stylemobile . '></div><div class="hidden-xs element-img ' . $item->menu_image_css .'" '. $style . '>' . $hexagon . '</div>';
+		echo '<a href="'. $item->flink .'" class="'. $anchorcss .'"><div class="element-img-container"><div class="visible-xs element-img" '. $stylemobile . '></div><div class="hidden-xs element-img ' . $item->menu_image_css .'" '. $style . '>' . $hexagon . '</div></div>';
 	}
 
 	// Render the menu item.

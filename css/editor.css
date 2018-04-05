@@ -183,6 +183,10 @@
 #tinymce .study-buttons .icon-text {
   padding: 0;
 }
+#tinymce .study-buttons .study-button a:hover:after, #tinymce .body-modal-modules .study-button a:hover:after, #tinymce .subpage-buttons .study-button a:hover:after, #tinymce .study-buttons .file-modal-module a:hover:after, #tinymce .body-modal-modules .file-modal-module a:hover:after, #tinymce .subpage-buttons .file-modal-module a:hover:after, #tinymce .study-buttons .subpage-button a:hover:after, #tinymce .body-modal-modules .subpage-button a:hover:after, #tinymce .subpage-buttons .subpage-button a:hover:after {
+  content: '';
+  opacity: 1;
+}
 #tinymce .subpage-text-buttons .subpage-text, #tinymce .subpage-text-buttons-banner .subpage-text, #tinymce .subpage-bigbanner .subpage-text {
   box-sizing: border-box;
   border: 1px dashed #d9534f;
@@ -419,6 +423,7 @@
   border: 1px dashed #d9534f;
   padding: 10px;
   background-color: #fafafa;
+  padding: 15px;
 }
 #tinymce .study-tabs .nav-tabs li:first-child:after {
   content: '';
@@ -451,6 +456,8 @@
 #tinymce .study-tabs .nav-tabs li a {
   background-color: transparent;
   border-bottom: 0;
+  line-height: 1;
+  display: inline-block;
   cursor: pointer;
   pointer-events: auto;
   color: #23527c;
