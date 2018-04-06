@@ -92,7 +92,6 @@
 @mixin hover-module() {
     cursor: pointer;
     @include transition(filter, .3s, ease);
-    filter: contrast(.84) grayscale(5%) hue-rotate(-20deg);
     .element-img {
         @include transform(scale(1.2));
     }
@@ -153,6 +152,9 @@
         .navbar-collapse {
             .navbar-nav {
                 button {
+                    &[aria-expanded="true"] {
+                        color: get-color($colors, navbar-hover);
+                    }
                     &:hover {
                         .custom-icon,
                         span {
@@ -1144,6 +1146,11 @@ header.headroom--not-top {
                     margin: 0;
                     font-size: 14px;
                 }
+                select {
+                    float: none;
+                    min-width: 77px;
+                    max-width: 77px;
+                }
             }
             .ordering-box {
                 label {
@@ -1153,6 +1160,11 @@ header.headroom--not-top {
                     .chzn-single {
                         width: auto;
                     }
+                }
+                select {
+                    float: none;
+                    min-width: 174px;
+                    max-width: 174px;
                 }
             }
             .chzn-container {
@@ -1557,9 +1569,11 @@ header.headroom--not-top {
                 background-image: url('../images/modal-bck.svg');
                 background-repeat: no-repeat;
                 background-position: bottom left;
+                background-size: 100% 189px;
                 @include closemodalicon();
                 &.extended-bottom {
                     background-image: url('../images/modal-big-bck.svg');
+                    background-size: 100% 276px;
                     .bottom-modal-module {
                         p {
                             display: block;
@@ -1836,6 +1850,8 @@ header.headroom--not-top {
         text-transform: uppercase;
     }
     .title {
+        margin-top: 9px;
+        margin-bottom: 10px;
         h1 {
             font-size: 26px;
             font-weight: 500;
@@ -1855,7 +1871,7 @@ header.headroom--not-top {
             .panel-heading {
                 height: 40px;
                 color: $ioc-text;
-                background-color: $ioc-bg-panel-res;
+                background-color: $ioc-bg-panel;
                 padding: 0;
                 border-radius: 0;
                 .panel-title {
@@ -3373,7 +3389,6 @@ header.headroom--not-top {
     background-size: 100vw 100%;
     margin-top: -173px;
     .subpage-text {
-        // max-width: 686px;
         text-align: right;
         margin-bottom: 131px;
         p {
@@ -3658,7 +3673,6 @@ header.headroom--not-top {
             border-radius: 100px;
             border: 2px solid $ioc-bg-header;
             background-color: transparent;
-            box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.11);
             &:hover {
                 color: #fff;
                 text-decoration: none;
@@ -3776,7 +3790,7 @@ header.headroom--not-top {
     .icon-text {
         position: absolute;
         display: block;
-        bottom: 40px;
+        bottom: 30px;
         margin: 0 auto;
         font-size: 11px;
         font-weight: 500;
@@ -3785,6 +3799,7 @@ header.headroom--not-top {
         text-align: center;
         width: 100%;
         max-width: 70%;
+        height: auto;
         left: 0;
         right: 0;
         text-transform: uppercase;
@@ -4575,7 +4590,7 @@ div[class*="item-page-fp-"] {
     color: #fff;
     font-size: 11px;
     font-weight: 500;
-    line-height: 2;
+    line-height: 1;
     letter-spacing: 0.8px;
     text-transform: uppercase;
     text-align: center;

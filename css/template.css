@@ -1560,11 +1560,21 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   margin: 0;
   font-size: 14px;
 }
+#main-box div.item-page-default.search .searchintro select, #main-box div.item-page-news.search .searchintro select {
+  float: none;
+  min-width: 77px;
+  max-width: 77px;
+}
 #main-box div.item-page-default.search .ordering-box label, #main-box div.item-page-news.search .ordering-box label {
   display: inline-block;
 }
 #main-box div.item-page-default.search .ordering-box .chzn-container-single .chzn-single, #main-box div.item-page-news.search .ordering-box .chzn-container-single .chzn-single {
   width: auto;
+}
+#main-box div.item-page-default.search .ordering-box select, #main-box div.item-page-news.search .ordering-box select {
+  float: none;
+  min-width: 174px;
+  max-width: 174px;
 }
 #main-box div.item-page-default.search .chzn-container, #main-box div.item-page-news.search .chzn-container {
   display: inline-block;
@@ -1734,6 +1744,9 @@ header.headroom--top.acfgs .navbar-default .login-clone-campus:hover .custom-ico
 header.headroom--top.acfgs .navbar-default .login-clone-campus:hover .icon-bar, header.headroom--top.acfgs .navbar-default .tiny-campus:hover .icon-bar, header.headroom--top.acfgs .navbar-default .tiny-search:hover .icon-bar, header.headroom--top.acfgs .navbar-default .navbar-toggle:hover .icon-bar {
   background-color: #5eabc5;
 }
+header.headroom--top.acfgs .navbar-default .navbar-collapse .navbar-nav button[aria-expanded="true"] {
+  color: #5eabc5;
+}
 header.headroom--top.acfgs .navbar-default .navbar-collapse .navbar-nav button:hover .custom-icon, header.headroom--top.acfgs .navbar-default .navbar-collapse .navbar-nav button:hover span {
   color: #5eabc5;
 }
@@ -1836,6 +1849,9 @@ header.headroom--top.btx .navbar-default .login-clone-campus:hover .custom-icon,
 }
 header.headroom--top.btx .navbar-default .login-clone-campus:hover .icon-bar, header.headroom--top.btx .navbar-default .tiny-campus:hover .icon-bar, header.headroom--top.btx .navbar-default .tiny-search:hover .icon-bar, header.headroom--top.btx .navbar-default .navbar-toggle:hover .icon-bar {
   background-color: #9696ea;
+}
+header.headroom--top.btx .navbar-default .navbar-collapse .navbar-nav button[aria-expanded="true"] {
+  color: #9696ea;
 }
 header.headroom--top.btx .navbar-default .navbar-collapse .navbar-nav button:hover .custom-icon, header.headroom--top.btx .navbar-default .navbar-collapse .navbar-nav button:hover span {
   color: #9696ea;
@@ -1940,6 +1956,9 @@ header.headroom--top.btx-ioc .navbar-default .login-clone-campus:hover .custom-i
 header.headroom--top.btx-ioc .navbar-default .login-clone-campus:hover .icon-bar, header.headroom--top.btx-ioc .navbar-default .tiny-campus:hover .icon-bar, header.headroom--top.btx-ioc .navbar-default .tiny-search:hover .icon-bar, header.headroom--top.btx-ioc .navbar-default .navbar-toggle:hover .icon-bar {
   background-color: #9696ea;
 }
+header.headroom--top.btx-ioc .navbar-default .navbar-collapse .navbar-nav button[aria-expanded="true"] {
+  color: #9696ea;
+}
 header.headroom--top.btx-ioc .navbar-default .navbar-collapse .navbar-nav button:hover .custom-icon, header.headroom--top.btx-ioc .navbar-default .navbar-collapse .navbar-nav button:hover span {
   color: #9696ea;
 }
@@ -2042,6 +2061,9 @@ header.headroom--top.btx-mat .navbar-default .login-clone-campus:hover .custom-i
 }
 header.headroom--top.btx-mat .navbar-default .login-clone-campus:hover .icon-bar, header.headroom--top.btx-mat .navbar-default .tiny-campus:hover .icon-bar, header.headroom--top.btx-mat .navbar-default .tiny-search:hover .icon-bar, header.headroom--top.btx-mat .navbar-default .navbar-toggle:hover .icon-bar {
   background-color: #70e6ff;
+}
+header.headroom--top.btx-mat .navbar-default .navbar-collapse .navbar-nav button[aria-expanded="true"] {
+  color: #70e6ff;
 }
 header.headroom--top.btx-mat .navbar-default .navbar-collapse .navbar-nav button:hover .custom-icon, header.headroom--top.btx-mat .navbar-default .navbar-collapse .navbar-nav button:hover span {
   color: #70e6ff;
@@ -2146,6 +2168,9 @@ header.headroom--top.cas .navbar-default .login-clone-campus:hover .custom-icon,
 header.headroom--top.cas .navbar-default .login-clone-campus:hover .icon-bar, header.headroom--top.cas .navbar-default .tiny-campus:hover .icon-bar, header.headroom--top.cas .navbar-default .tiny-search:hover .icon-bar, header.headroom--top.cas .navbar-default .navbar-toggle:hover .icon-bar {
   background-color: #5eabc5;
 }
+header.headroom--top.cas .navbar-default .navbar-collapse .navbar-nav button[aria-expanded="true"] {
+  color: #5eabc5;
+}
 header.headroom--top.cas .navbar-default .navbar-collapse .navbar-nav button:hover .custom-icon, header.headroom--top.cas .navbar-default .navbar-collapse .navbar-nav button:hover span {
   color: #5eabc5;
 }
@@ -2248,6 +2273,9 @@ header.headroom--top.competic .navbar-default .login-clone-campus:hover .custom-
 }
 header.headroom--top.competic .navbar-default .login-clone-campus:hover .icon-bar, header.headroom--top.competic .navbar-default .tiny-campus:hover .icon-bar, header.headroom--top.competic .navbar-default .tiny-search:hover .icon-bar, header.headroom--top.competic .navbar-default .navbar-toggle:hover .icon-bar {
   background-color: #0a26a3;
+}
+header.headroom--top.competic .navbar-default .navbar-collapse .navbar-nav button[aria-expanded="true"] {
+  color: #0a26a3;
 }
 header.headroom--top.competic .navbar-default .navbar-collapse .navbar-nav button:hover .custom-icon, header.headroom--top.competic .navbar-default .navbar-collapse .navbar-nav button:hover span {
   color: #0a26a3;
@@ -2352,6 +2380,9 @@ header.headroom--top[class*="eoi-"] .navbar-default .login-clone-campus:hover .c
 header.headroom--top[class*="eoi-"] .navbar-default .login-clone-campus:hover .icon-bar, header.headroom--top[class*="eoi-"] .navbar-default .tiny-campus:hover .icon-bar, header.headroom--top[class*="eoi-"] .navbar-default .tiny-search:hover .icon-bar, header.headroom--top[class*="eoi-"] .navbar-default .navbar-toggle:hover .icon-bar {
   background-color: #b97100;
 }
+header.headroom--top[class*="eoi-"] .navbar-default .navbar-collapse .navbar-nav button[aria-expanded="true"] {
+  color: #b97100;
+}
 header.headroom--top[class*="eoi-"] .navbar-default .navbar-collapse .navbar-nav button:hover .custom-icon, header.headroom--top[class*="eoi-"] .navbar-default .navbar-collapse .navbar-nav button:hover span {
   color: #b97100;
 }
@@ -2448,6 +2479,9 @@ header.headroom--top.eoi .navbar-default .login-clone-campus:hover .custom-icon,
 }
 header.headroom--top.eoi .navbar-default .login-clone-campus:hover .icon-bar, header.headroom--top.eoi .navbar-default .tiny-campus:hover .icon-bar, header.headroom--top.eoi .navbar-default .tiny-search:hover .icon-bar, header.headroom--top.eoi .navbar-default .navbar-toggle:hover .icon-bar {
   background-color: #b97100;
+}
+header.headroom--top.eoi .navbar-default .navbar-collapse .navbar-nav button[aria-expanded="true"] {
+  color: #b97100;
 }
 header.headroom--top.eoi .navbar-default .navbar-collapse .navbar-nav button:hover .custom-icon, header.headroom--top.eoi .navbar-default .navbar-collapse .navbar-nav button:hover span {
   color: #b97100;
@@ -2552,6 +2586,9 @@ header.headroom--top.fesp .navbar-default .login-clone-campus:hover .custom-icon
 header.headroom--top.fesp .navbar-default .login-clone-campus:hover .icon-bar, header.headroom--top.fesp .navbar-default .tiny-campus:hover .icon-bar, header.headroom--top.fesp .navbar-default .tiny-search:hover .icon-bar, header.headroom--top.fesp .navbar-default .navbar-toggle:hover .icon-bar {
   background-color: #c86885;
 }
+header.headroom--top.fesp .navbar-default .navbar-collapse .navbar-nav button[aria-expanded="true"] {
+  color: #c86885;
+}
 header.headroom--top.fesp .navbar-default .navbar-collapse .navbar-nav button:hover .custom-icon, header.headroom--top.fesp .navbar-default .navbar-collapse .navbar-nav button:hover span {
   color: #c86885;
 }
@@ -2655,6 +2692,9 @@ header.headroom--top[class*="fp-"] .navbar-default .login-clone-campus:hover .cu
 header.headroom--top[class*="fp-"] .navbar-default .login-clone-campus:hover .icon-bar, header.headroom--top[class*="fp-"] .navbar-default .tiny-campus:hover .icon-bar, header.headroom--top[class*="fp-"] .navbar-default .tiny-search:hover .icon-bar, header.headroom--top[class*="fp-"] .navbar-default .navbar-toggle:hover .icon-bar {
   background-color: #128862;
 }
+header.headroom--top[class*="fp-"] .navbar-default .navbar-collapse .navbar-nav button[aria-expanded="true"] {
+  color: #128862;
+}
 header.headroom--top[class*="fp-"] .navbar-default .navbar-collapse .navbar-nav button:hover .custom-icon, header.headroom--top[class*="fp-"] .navbar-default .navbar-collapse .navbar-nav button:hover span {
   color: #128862;
 }
@@ -2752,6 +2792,9 @@ header.headroom--top.fp .navbar-default .login-clone-campus:hover .custom-icon, 
 header.headroom--top.fp .navbar-default .login-clone-campus:hover .icon-bar, header.headroom--top.fp .navbar-default .tiny-campus:hover .icon-bar, header.headroom--top.fp .navbar-default .tiny-search:hover .icon-bar, header.headroom--top.fp .navbar-default .navbar-toggle:hover .icon-bar {
   background-color: #128862;
 }
+header.headroom--top.fp .navbar-default .navbar-collapse .navbar-nav button[aria-expanded="true"] {
+  color: #128862;
+}
 header.headroom--top.fp .navbar-default .navbar-collapse .navbar-nav button:hover .custom-icon, header.headroom--top.fp .navbar-default .navbar-collapse .navbar-nav button:hover span {
   color: #128862;
 }
@@ -2838,35 +2881,38 @@ div[class*="item-page-fp"] .ioc-breadcrumb {
   background-color: #2f3b5c;
 }
 header.headroom--top.fpd ~ section .form-search .container .form-inline .btn-search {
-  background-color: #fff5e2;
+  background-color: #a27100;
 }
 header.headroom--top.fpd ~ section .form-search .container .form-inline .btn-search:before {
   color: #fff;
 }
 header.headroom--top.fpd ~ section .form-search .container .search-query {
-  border-color: #fff5e2;
+  border-color: #a27100;
 }
 header.headroom--top.fpd .navbar-default .login-clone-campus:hover, header.headroom--top.fpd .navbar-default .tiny-campus:hover, header.headroom--top.fpd .navbar-default .tiny-search:hover, header.headroom--top.fpd .navbar-default .navbar-toggle:hover {
-  color: #01c1b9;
+  color: #b67f00;
 }
 header.headroom--top.fpd .navbar-default .login-clone-campus:hover .custom-icon, header.headroom--top.fpd .navbar-default .tiny-campus:hover .custom-icon, header.headroom--top.fpd .navbar-default .tiny-search:hover .custom-icon, header.headroom--top.fpd .navbar-default .navbar-toggle:hover .custom-icon {
-  color: #01c1b9;
+  color: #b67f00;
 }
 header.headroom--top.fpd .navbar-default .login-clone-campus:hover .icon-bar, header.headroom--top.fpd .navbar-default .tiny-campus:hover .icon-bar, header.headroom--top.fpd .navbar-default .tiny-search:hover .icon-bar, header.headroom--top.fpd .navbar-default .navbar-toggle:hover .icon-bar {
-  background-color: #01c1b9;
+  background-color: #b67f00;
+}
+header.headroom--top.fpd .navbar-default .navbar-collapse .navbar-nav button[aria-expanded="true"] {
+  color: #b67f00;
 }
 header.headroom--top.fpd .navbar-default .navbar-collapse .navbar-nav button:hover .custom-icon, header.headroom--top.fpd .navbar-default .navbar-collapse .navbar-nav button:hover span {
-  color: #01c1b9;
+  color: #b67f00;
 }
 header.headroom--top.fpd .navbar-default .navbar-collapse .navbar-nav li a:hover {
-  color: #01c1b9;
+  color: #b67f00;
 }
 header.headroom--top.fpd .navbar-default .login-clone-campus {
-  background-color: #ecb023;
-  border-color: #fff5e2;
+  background-color: #ecaa0f;
+  border-color: #a27100;
 }
 header.headroom--top.fpd .navbar-default .social .custom-icon:hover {
-  color: #01c1b9;
+  color: #b67f00;
 }
 .fluid-container.page-header.fpd {
   background-color: #f6bb2f;
@@ -2909,7 +2955,7 @@ header.headroom--top.fpd .navbar-default .social .custom-icon:hover {
   background-color: #f6ad03;
 }
 .item-page-study.fpd .button-registration:hover {
-  color: #01c1b9;
+  color: #b67f00;
 }
 .item-page-study.fpd .modal-modules .content-modal-modules .modal-module, .item-page-study.fpd .modal-modules .body-modal-modules .modal-module {
   border-color: inherit;
@@ -2957,6 +3003,9 @@ header.headroom--top.ges .navbar-default .login-clone-campus:hover .custom-icon,
 }
 header.headroom--top.ges .navbar-default .login-clone-campus:hover .icon-bar, header.headroom--top.ges .navbar-default .tiny-campus:hover .icon-bar, header.headroom--top.ges .navbar-default .tiny-search:hover .icon-bar, header.headroom--top.ges .navbar-default .navbar-toggle:hover .icon-bar {
   background-color: #9a1b2d;
+}
+header.headroom--top.ges .navbar-default .navbar-collapse .navbar-nav button[aria-expanded="true"] {
+  color: #9a1b2d;
 }
 header.headroom--top.ges .navbar-default .navbar-collapse .navbar-nav button:hover .custom-icon, header.headroom--top.ges .navbar-default .navbar-collapse .navbar-nav button:hover span {
   color: #9a1b2d;
@@ -3061,6 +3110,9 @@ header.headroom--top.pacfgs .navbar-default .login-clone-campus:hover .custom-ic
 header.headroom--top.pacfgs .navbar-default .login-clone-campus:hover .icon-bar, header.headroom--top.pacfgs .navbar-default .tiny-campus:hover .icon-bar, header.headroom--top.pacfgs .navbar-default .tiny-search:hover .icon-bar, header.headroom--top.pacfgs .navbar-default .navbar-toggle:hover .icon-bar {
   background-color: #5eabc5;
 }
+header.headroom--top.pacfgs .navbar-default .navbar-collapse .navbar-nav button[aria-expanded="true"] {
+  color: #5eabc5;
+}
 header.headroom--top.pacfgs .navbar-default .navbar-collapse .navbar-nav button:hover .custom-icon, header.headroom--top.pacfgs .navbar-default .navbar-collapse .navbar-nav button:hover span {
   color: #5eabc5;
 }
@@ -3164,6 +3216,9 @@ header.headroom--top.pau .navbar-default .login-clone-campus:hover .custom-icon,
 header.headroom--top.pau .navbar-default .login-clone-campus:hover .icon-bar, header.headroom--top.pau .navbar-default .tiny-campus:hover .icon-bar, header.headroom--top.pau .navbar-default .tiny-search:hover .icon-bar, header.headroom--top.pau .navbar-default .navbar-toggle:hover .icon-bar {
   background-color: #2b5453;
 }
+header.headroom--top.pau .navbar-default .navbar-collapse .navbar-nav button[aria-expanded="true"] {
+  color: #2b5453;
+}
 header.headroom--top.pau .navbar-default .navbar-collapse .navbar-nav button:hover .custom-icon, header.headroom--top.pau .navbar-default .navbar-collapse .navbar-nav button:hover span {
   color: #2b5453;
 }
@@ -3266,6 +3321,9 @@ header.headroom--top.news .navbar-default .login-clone-campus:hover .custom-icon
 }
 header.headroom--top.news .navbar-default .login-clone-campus:hover .icon-bar, header.headroom--top.news .navbar-default .tiny-campus:hover .icon-bar, header.headroom--top.news .navbar-default .tiny-search:hover .icon-bar, header.headroom--top.news .navbar-default .navbar-toggle:hover .icon-bar {
   background-color: #b90050;
+}
+header.headroom--top.news .navbar-default .navbar-collapse .navbar-nav button[aria-expanded="true"] {
+  color: #b90050;
 }
 header.headroom--top.news .navbar-default .navbar-collapse .navbar-nav button:hover .custom-icon, header.headroom--top.news .navbar-default .navbar-collapse .navbar-nav button:hover span {
   color: #b90050;
@@ -3625,7 +3683,6 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   -ms-transition: filter 0.3s ease;
   -o-transition: filter 0.3s ease;
   transition: filter 0.3s ease;
-  filter: contrast(0.84) grayscale(5%) hue-rotate(-20deg);
 }
 .modal-modules .content-modal-modules .modal-module:hover .element-img, .modal-resources .content-modal-modules .modal-module:hover .element-img, .modal-modules .body-modal-modules .modal-module:hover .element-img, .modal-resources .body-modal-modules .modal-module:hover .element-img, .modal-modules .body-modal-resources .modal-module:hover .element-img, .modal-resources .body-modal-resources .modal-module:hover .element-img, .modal-modules .content-modal-modules .modal-resource:hover .element-img, .modal-resources .content-modal-modules .modal-resource:hover .element-img, .modal-modules .body-modal-modules .modal-resource:hover .element-img, .modal-resources .body-modal-modules .modal-resource:hover .element-img, .modal-modules .body-modal-resources .modal-resource:hover .element-img, .modal-resources .body-modal-resources .modal-resource:hover .element-img {
   -webkit-transform: scale(1.2);
@@ -3645,6 +3702,7 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   background-image: url('../images/modal-bck.svg');
   background-repeat: no-repeat;
   background-position: bottom left;
+  background-size: 100% 189px;
 }
 .modal-modules .content-modal-modules .modal-module.modal-dialog:before, .modal-resources .content-modal-modules .modal-module.modal-dialog:before, .modal-modules .body-modal-modules .modal-module.modal-dialog:before, .modal-resources .body-modal-modules .modal-module.modal-dialog:before, .modal-modules .body-modal-resources .modal-module.modal-dialog:before, .modal-resources .body-modal-resources .modal-module.modal-dialog:before, .modal-modules .content-modal-modules .modal-resource.modal-dialog:before, .modal-resources .content-modal-modules .modal-resource.modal-dialog:before, .modal-modules .body-modal-modules .modal-resource.modal-dialog:before, .modal-resources .body-modal-modules .modal-resource.modal-dialog:before, .modal-modules .body-modal-resources .modal-resource.modal-dialog:before, .modal-resources .body-modal-resources .modal-resource.modal-dialog:before {
   content: '\e903';
@@ -3660,6 +3718,7 @@ div[class*="item-page-news"] .ioc-breadcrumb {
 }
 .modal-modules .content-modal-modules .modal-module.modal-dialog.extended-bottom, .modal-resources .content-modal-modules .modal-module.modal-dialog.extended-bottom, .modal-modules .body-modal-modules .modal-module.modal-dialog.extended-bottom, .modal-resources .body-modal-modules .modal-module.modal-dialog.extended-bottom, .modal-modules .body-modal-resources .modal-module.modal-dialog.extended-bottom, .modal-resources .body-modal-resources .modal-module.modal-dialog.extended-bottom, .modal-modules .content-modal-modules .modal-resource.modal-dialog.extended-bottom, .modal-resources .content-modal-modules .modal-resource.modal-dialog.extended-bottom, .modal-modules .body-modal-modules .modal-resource.modal-dialog.extended-bottom, .modal-resources .body-modal-modules .modal-resource.modal-dialog.extended-bottom, .modal-modules .body-modal-resources .modal-resource.modal-dialog.extended-bottom, .modal-resources .body-modal-resources .modal-resource.modal-dialog.extended-bottom {
   background-image: url('../images/modal-big-bck.svg');
+  background-size: 100% 276px;
 }
 .modal-modules .content-modal-modules .modal-module.modal-dialog.extended-bottom .bottom-modal-module p, .modal-resources .content-modal-modules .modal-module.modal-dialog.extended-bottom .bottom-modal-module p, .modal-modules .body-modal-modules .modal-module.modal-dialog.extended-bottom .bottom-modal-module p, .modal-resources .body-modal-modules .modal-module.modal-dialog.extended-bottom .bottom-modal-module p, .modal-modules .body-modal-resources .modal-module.modal-dialog.extended-bottom .bottom-modal-module p, .modal-resources .body-modal-resources .modal-module.modal-dialog.extended-bottom .bottom-modal-module p, .modal-modules .content-modal-modules .modal-resource.modal-dialog.extended-bottom .bottom-modal-module p, .modal-resources .content-modal-modules .modal-resource.modal-dialog.extended-bottom .bottom-modal-module p, .modal-modules .body-modal-modules .modal-resource.modal-dialog.extended-bottom .bottom-modal-module p, .modal-resources .body-modal-modules .modal-resource.modal-dialog.extended-bottom .bottom-modal-module p, .modal-modules .body-modal-resources .modal-resource.modal-dialog.extended-bottom .bottom-modal-module p, .modal-resources .body-modal-resources .modal-resource.modal-dialog.extended-bottom .bottom-modal-module p {
   display: block;
@@ -3935,6 +3994,10 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   text-align: center;
   text-transform: uppercase;
 }
+.modal-resources .title {
+  margin-top: 9px;
+  margin-bottom: 10px;
+}
 .modal-resources .title h1 {
   font-size: 26px;
   font-weight: 500;
@@ -3955,7 +4018,7 @@ div[class*="item-page-news"] .ioc-breadcrumb {
 .modal-resources .panel-modal-resources .panel .panel-heading {
   height: 40px;
   color: #354959;
-  background-color: #e2e7f2;
+  background-color: #f2f6f9;
   padding: 0;
   border-radius: 0;
 }
@@ -4152,7 +4215,6 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   -ms-transition: filter 0.3s ease;
   -o-transition: filter 0.3s ease;
   transition: filter 0.3s ease;
-  filter: contrast(0.84) grayscale(5%) hue-rotate(-20deg);
 }
 .submenu .submenu-content .navbar-nav li:hover .element-img, .substudies .submenu-content .navbar-nav li:hover .element-img, .submenu .substudies-content .navbar-nav li:hover .element-img, .substudies .substudies-content .navbar-nav li:hover .element-img {
   -webkit-transform: scale(1.2);
@@ -5896,7 +5958,6 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   border-radius: 100px;
   border: 2px solid #202b47;
   background-color: transparent;
-  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.11);
 }
 .subpage-bigbanner .study-overview .subpage-button:hover {
   color: #fff;
@@ -6001,7 +6062,7 @@ div[class*="item-page-news"] .ioc-breadcrumb {
 .study-buttons .icon-text, .body-modal-modules .icon-text, .subpage-buttons .icon-text {
   position: absolute;
   display: block;
-  bottom: 40px;
+  bottom: 30px;
   margin: 0 auto;
   font-size: 11px;
   font-weight: 500;
@@ -6010,6 +6071,7 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   text-align: center;
   width: 100%;
   max-width: 70%;
+  height: auto;
   left: 0;
   right: 0;
   text-transform: uppercase;
@@ -6772,7 +6834,7 @@ div[class*="item-page-fp-"] .subpagebody {
   color: #fff;
   font-size: 11px;
   font-weight: 500;
-  line-height: 2;
+  line-height: 1;
   letter-spacing: 0.8px;
   text-transform: uppercase;
   text-align: center;
@@ -8175,7 +8237,7 @@ div[class*="item-page-"] table p {
   }
   .study-buttons .icon-text {
     font-size: 9px;
-    bottom: 30px;
+    bottom: 20px;
     max-width: 75%;
   }
   .subpage-text-buttons-banner {
@@ -8354,6 +8416,9 @@ div[class*="item-page-"] table p {
   }
   .modal-modules .body-modal-modules .modal-module.modal-dialog.extended-bottom, .modal-resources .body-modal-modules .modal-module.modal-dialog.extended-bottom, .modal-modules .body-modal-resources .modal-module.modal-dialog.extended-bottom, .modal-resources .body-modal-resources .modal-module.modal-dialog.extended-bottom, .modal-modules .body-modal-modules .modal-resource.modal-dialog.extended-bottom, .modal-resources .body-modal-modules .modal-resource.modal-dialog.extended-bottom, .modal-modules .body-modal-resources .modal-resource.modal-dialog.extended-bottom, .modal-resources .body-modal-resources .modal-resource.modal-dialog.extended-bottom {
     background-size: 100vw 60%;
+  }
+  .modal-resources .title {
+    margin-top: 9px;
   }
   .study-more-info {
     padding: 0 15px;

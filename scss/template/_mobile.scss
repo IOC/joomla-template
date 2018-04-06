@@ -606,7 +606,7 @@
         }
         .icon-text {
             font-size: 9px;
-            bottom: 30px;
+            bottom: 20px;
             max-width: 75%;
         }
     }
@@ -840,6 +840,11 @@
                     }
                 }
             }
+        }
+    }
+    .modal-resources {
+        .title {
+            margin-top: 9px;
         }
     }
     .study-more-info {
