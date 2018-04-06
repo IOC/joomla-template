@@ -397,7 +397,7 @@
   background-color: #fafafa;
   background-image: none;
 }
-#tinymce .study-tabs h2 {
+#tinymce .study-tabs > h2 {
   box-sizing: border-box;
   border: 2px dashed #d9534f;
   padding: 10px;
@@ -507,14 +507,14 @@
   padding: 10px;
   background-color: #fafafa;
 }
-#tinymce .study-more-info .panel-heading, #tinymce .study-more-info .panel-title, #tinymce .study-more-info .panel-body, #tinymce .study-more-info .more-section, #tinymce .study-more-info .more-section-content, #tinymce .study-more-info h4 {
+#tinymce .study-more-info .panel-heading, #tinymce .study-more-info .panel-title, #tinymce .study-more-info .panel-body, #tinymce .study-more-info .more-section, #tinymce .study-more-info .more-section-content, #tinymce .study-more-info > h4 {
   box-sizing: border-box;
   border: 1px dashed #d9534f;
   padding: 10px;
   background-color: #fafafa;
   color: #354959;
 }
-#tinymce .study-more-info .panel-heading:before, #tinymce .study-more-info .panel-title:before, #tinymce .study-more-info .panel-body:before, #tinymce .study-more-info .more-section:before, #tinymce .study-more-info .more-section-content:before, #tinymce .study-more-info h4:before, #tinymce .study-more-info .panel-heading:after, #tinymce .study-more-info .panel-title:after, #tinymce .study-more-info .panel-body:after, #tinymce .study-more-info .more-section:after, #tinymce .study-more-info .more-section-content:after, #tinymce .study-more-info h4:after {
+#tinymce .study-more-info .panel-heading:before, #tinymce .study-more-info .panel-title:before, #tinymce .study-more-info .panel-body:before, #tinymce .study-more-info .more-section:before, #tinymce .study-more-info .more-section-content:before, #tinymce .study-more-info > h4:before, #tinymce .study-more-info .panel-heading:after, #tinymce .study-more-info .panel-title:after, #tinymce .study-more-info .panel-body:after, #tinymce .study-more-info .more-section:after, #tinymce .study-more-info .more-section-content:after, #tinymce .study-more-info > h4:after {
   border: 0;
 }
 #tinymce .study-more-info .title-more-information {
@@ -558,6 +558,12 @@
 }
 #tinymce .panel-faqs #panel-sections .panel.panel-default:before {
   display: none;
+}
+#tinymce .panel-faqs #panel-sections .panel.panel-default .panel-body h4 {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
 }
 #tinymce #panel-sections {
   pointer-events: none;
@@ -735,6 +741,12 @@
   padding: 10px;
   background-color: #fafafa;
 }
+#tinymce .location-content .location-map .custom-icon, #tinymce .location-content .location-address .custom-icon {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
 #tinymce .location-content .location-transport {
   box-sizing: border-box;
   border: 1px dashed #d9534f;
@@ -748,6 +760,43 @@
   background-color: #fafafa;
 }
 #tinymce .location-content .location-transport .transport .transport-content, #tinymce .location-content .location-transport .transport .transport-name, #tinymce .location-content .location-transport .transport .transport-text {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
+#tinymce .location-bottom {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
+#tinymce .location-bottom .location-bottom-text {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
+#tinymce .location-bottom .location-bottom-text span {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+  display: inline-block;
+}
+#tinymce .location-bottom .body-modal-modules .title {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
+#tinymce .location-bottom .body-modal-modules .ioc-study-address {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
+#tinymce .location-bottom .body-modal-modules .ioc-study-address div {
   box-sizing: border-box;
   border: 1px dashed #d9534f;
   padding: 10px;

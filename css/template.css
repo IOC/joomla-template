@@ -3820,7 +3820,7 @@ div[class*="item-page-news"] .ioc-breadcrumb {
 }
 .modal-modules .content-modal-modules .modal-module.modal-dialog .body-modal-module .file-modal-module .icon-text, .modal-resources .content-modal-modules .modal-module.modal-dialog .body-modal-module .file-modal-module .icon-text, .modal-modules .body-modal-modules .modal-module.modal-dialog .body-modal-module .file-modal-module .icon-text, .modal-resources .body-modal-modules .modal-module.modal-dialog .body-modal-module .file-modal-module .icon-text, .modal-modules .body-modal-resources .modal-module.modal-dialog .body-modal-module .file-modal-module .icon-text, .modal-resources .body-modal-resources .modal-module.modal-dialog .body-modal-module .file-modal-module .icon-text, .modal-modules .content-modal-modules .modal-resource.modal-dialog .body-modal-module .file-modal-module .icon-text, .modal-resources .content-modal-modules .modal-resource.modal-dialog .body-modal-module .file-modal-module .icon-text, .modal-modules .body-modal-modules .modal-resource.modal-dialog .body-modal-module .file-modal-module .icon-text, .modal-resources .body-modal-modules .modal-resource.modal-dialog .body-modal-module .file-modal-module .icon-text, .modal-modules .body-modal-resources .modal-resource.modal-dialog .body-modal-module .file-modal-module .icon-text, .modal-resources .body-modal-resources .modal-resource.modal-dialog .body-modal-module .file-modal-module .icon-text, .modal-modules .content-modal-modules .modal-module.modal-dialog .body-modal-resource .file-modal-module .icon-text, .modal-resources .content-modal-modules .modal-module.modal-dialog .body-modal-resource .file-modal-module .icon-text, .modal-modules .body-modal-modules .modal-module.modal-dialog .body-modal-resource .file-modal-module .icon-text, .modal-resources .body-modal-modules .modal-module.modal-dialog .body-modal-resource .file-modal-module .icon-text, .modal-modules .body-modal-resources .modal-module.modal-dialog .body-modal-resource .file-modal-module .icon-text, .modal-resources .body-modal-resources .modal-module.modal-dialog .body-modal-resource .file-modal-module .icon-text, .modal-modules .content-modal-modules .modal-resource.modal-dialog .body-modal-resource .file-modal-module .icon-text, .modal-resources .content-modal-modules .modal-resource.modal-dialog .body-modal-resource .file-modal-module .icon-text, .modal-modules .body-modal-modules .modal-resource.modal-dialog .body-modal-resource .file-modal-module .icon-text, .modal-resources .body-modal-modules .modal-resource.modal-dialog .body-modal-resource .file-modal-module .icon-text, .modal-modules .body-modal-resources .modal-resource.modal-dialog .body-modal-resource .file-modal-module .icon-text, .modal-resources .body-modal-resources .modal-resource.modal-dialog .body-modal-resource .file-modal-module .icon-text {
   font-size: 9px;
-  bottom: 30px;
+  bottom: 17px;
 }
 .modal-modules .content-modal-modules .modal-module.modal-dialog .body-modal-module .files-modal-resource, .modal-resources .content-modal-modules .modal-module.modal-dialog .body-modal-module .files-modal-resource, .modal-modules .body-modal-modules .modal-module.modal-dialog .body-modal-module .files-modal-resource, .modal-resources .body-modal-modules .modal-module.modal-dialog .body-modal-module .files-modal-resource, .modal-modules .body-modal-resources .modal-module.modal-dialog .body-modal-module .files-modal-resource, .modal-resources .body-modal-resources .modal-module.modal-dialog .body-modal-module .files-modal-resource, .modal-modules .content-modal-modules .modal-resource.modal-dialog .body-modal-module .files-modal-resource, .modal-resources .content-modal-modules .modal-resource.modal-dialog .body-modal-module .files-modal-resource, .modal-modules .body-modal-modules .modal-resource.modal-dialog .body-modal-module .files-modal-resource, .modal-resources .body-modal-modules .modal-resource.modal-dialog .body-modal-module .files-modal-resource, .modal-modules .body-modal-resources .modal-resource.modal-dialog .body-modal-module .files-modal-resource, .modal-resources .body-modal-resources .modal-resource.modal-dialog .body-modal-module .files-modal-resource, .modal-modules .content-modal-modules .modal-module.modal-dialog .body-modal-resource .files-modal-resource, .modal-resources .content-modal-modules .modal-module.modal-dialog .body-modal-resource .files-modal-resource, .modal-modules .body-modal-modules .modal-module.modal-dialog .body-modal-resource .files-modal-resource, .modal-resources .body-modal-modules .modal-module.modal-dialog .body-modal-resource .files-modal-resource, .modal-modules .body-modal-resources .modal-module.modal-dialog .body-modal-resource .files-modal-resource, .modal-resources .body-modal-resources .modal-module.modal-dialog .body-modal-resource .files-modal-resource, .modal-modules .content-modal-modules .modal-resource.modal-dialog .body-modal-resource .files-modal-resource, .modal-resources .content-modal-modules .modal-resource.modal-dialog .body-modal-resource .files-modal-resource, .modal-modules .body-modal-modules .modal-resource.modal-dialog .body-modal-resource .files-modal-resource, .modal-resources .body-modal-modules .modal-resource.modal-dialog .body-modal-resource .files-modal-resource, .modal-modules .body-modal-resources .modal-resource.modal-dialog .body-modal-resource .files-modal-resource, .modal-resources .body-modal-resources .modal-resource.modal-dialog .body-modal-resource .files-modal-resource {
   display: -webkit-box;
@@ -6072,6 +6072,7 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   width: 100%;
   max-width: 70%;
   height: auto;
+  max-height: 40px;
   left: 0;
   right: 0;
   text-transform: uppercase;
@@ -6205,7 +6206,7 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   background-image: url('../images/fesp-parallax-img.jpg');
 }
 .item-page-study.fesp .subpage-banner {
-  background-image: url('../images/fesp-banner.png');
+  background-image: url('../images/fesp-banner.jpg');
 }
 .item-page-study.fp .study-parallax {
   background-image: url('../images/fp-parallax-img.jpg');
@@ -8237,7 +8238,7 @@ div[class*="item-page-"] table p {
   }
   .study-buttons .icon-text {
     font-size: 9px;
-    bottom: 20px;
+    bottom: 17px;
     max-width: 75%;
   }
   .subpage-text-buttons-banner {
@@ -8258,7 +8259,7 @@ div[class*="item-page-"] table p {
     top: 32px;
   }
   .subpage-text-buttons .subpage-buttons .subpage-group-buttons .subpage-button .icon-text {
-    bottom: 24px;
+    bottom: 17px;
     font-size: 9px;
     font-weight: 500;
     letter-spacing: 1.2px;
@@ -8398,24 +8399,6 @@ div[class*="item-page-"] table p {
     left: 223px;
     width: auto;
     margin: 0;
-  }
-  .modal-modules .body-modal-modules .modal-module.modal-dialog, .modal-resources .body-modal-modules .modal-module.modal-dialog, .modal-modules .body-modal-resources .modal-module.modal-dialog, .modal-resources .body-modal-resources .modal-module.modal-dialog, .modal-modules .body-modal-modules .modal-resource.modal-dialog, .modal-resources .body-modal-modules .modal-resource.modal-dialog, .modal-modules .body-modal-resources .modal-resource.modal-dialog, .modal-resources .body-modal-resources .modal-resource.modal-dialog {
-    max-width: 90%;
-  }
-  .modal-modules .body-modal-modules .modal-module.modal-dialog .bottom-modal-module, .modal-resources .body-modal-modules .modal-module.modal-dialog .bottom-modal-module, .modal-modules .body-modal-resources .modal-module.modal-dialog .bottom-modal-module, .modal-resources .body-modal-resources .modal-module.modal-dialog .bottom-modal-module, .modal-modules .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module, .modal-resources .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module, .modal-modules .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module, .modal-resources .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module {
-    flex-flow: column wrap;
-    align-content: center;
-  }
-  .modal-modules .body-modal-modules .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-resources .body-modal-modules .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-modules .body-modal-resources .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-resources .body-modal-resources .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-modules .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-resources .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-modules .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-resources .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock {
-    height: 20px;
-  }
-  .modal-modules .body-modal-modules .modal-module.modal-dialog:before, .modal-resources .body-modal-modules .modal-module.modal-dialog:before, .modal-modules .body-modal-resources .modal-module.modal-dialog:before, .modal-resources .body-modal-resources .modal-module.modal-dialog:before, .modal-modules .body-modal-modules .modal-resource.modal-dialog:before, .modal-resources .body-modal-modules .modal-resource.modal-dialog:before, .modal-modules .body-modal-resources .modal-resource.modal-dialog:before, .modal-resources .body-modal-resources .modal-resource.modal-dialog:before {
-    cursor: pointer;
-    right: 20px;
-    top: -40px;
-  }
-  .modal-modules .body-modal-modules .modal-module.modal-dialog.extended-bottom, .modal-resources .body-modal-modules .modal-module.modal-dialog.extended-bottom, .modal-modules .body-modal-resources .modal-module.modal-dialog.extended-bottom, .modal-resources .body-modal-resources .modal-module.modal-dialog.extended-bottom, .modal-modules .body-modal-modules .modal-resource.modal-dialog.extended-bottom, .modal-resources .body-modal-modules .modal-resource.modal-dialog.extended-bottom, .modal-modules .body-modal-resources .modal-resource.modal-dialog.extended-bottom, .modal-resources .body-modal-resources .modal-resource.modal-dialog.extended-bottom {
-    background-size: 100vw 60%;
   }
   .modal-resources .title {
     margin-top: 9px;
@@ -9092,7 +9075,8 @@ div[class*="item-page-"] table p {
     font-size: 8px;
     font-weight: 500;
     letter-spacing: 1.1px;
-    width: 91px;
+    width: 100%;
+    padding: 0 5px;
   }
   .subpagebody {
     background-size: 80vw 82px;
@@ -9819,7 +9803,7 @@ div[class*="item-page-"] table p {
     letter-spacing: 1.1px;
     top: 75px;
     padding: 0;
-    max-width: 91%;
+    max-width: 97%;
   }
   .subpage-text-buttons .subpage-buttons {
     max-width: 290px;
@@ -9932,6 +9916,37 @@ div[class*="item-page-"] table p {
   }
   .study-more-info .panel-section-info .panel.panel-default .panel-heading .panel-title a .custom-icon.plus, .study-tabs .panel-section-info .panel.panel-default .panel-heading .panel-title a .custom-icon.plus {
     right: 18px;
+  }
+  .modal-modules .body-modal-modules .modal-module.modal-dialog, .modal-resources .body-modal-modules .modal-module.modal-dialog, .modal-modules .body-modal-resources .modal-module.modal-dialog, .modal-resources .body-modal-resources .modal-module.modal-dialog, .modal-modules .body-modal-modules .modal-resource.modal-dialog, .modal-resources .body-modal-modules .modal-resource.modal-dialog, .modal-modules .body-modal-resources .modal-resource.modal-dialog, .modal-resources .body-modal-resources .modal-resource.modal-dialog {
+    max-width: 90%;
+  }
+  .modal-modules .body-modal-modules .modal-module.modal-dialog .bottom-modal-module, .modal-resources .body-modal-modules .modal-module.modal-dialog .bottom-modal-module, .modal-modules .body-modal-resources .modal-module.modal-dialog .bottom-modal-module, .modal-resources .body-modal-resources .modal-module.modal-dialog .bottom-modal-module, .modal-modules .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module, .modal-resources .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module, .modal-modules .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module, .modal-resources .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module {
+    flex-flow: column wrap;
+    align-content: center;
+  }
+  .modal-modules .body-modal-modules .modal-module.modal-dialog .bottom-modal-module > div, .modal-resources .body-modal-modules .modal-module.modal-dialog .bottom-modal-module > div, .modal-modules .body-modal-resources .modal-module.modal-dialog .bottom-modal-module > div, .modal-resources .body-modal-resources .modal-module.modal-dialog .bottom-modal-module > div, .modal-modules .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module > div, .modal-resources .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module > div, .modal-modules .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module > div, .modal-resources .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module > div {
+    max-width: 100%;
+  }
+  .modal-modules .body-modal-modules .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-resources .body-modal-modules .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-modules .body-modal-resources .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-resources .body-modal-resources .modal-module.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-modules .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-resources .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-modules .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock, .modal-resources .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module .custom-icon.clock {
+    height: 20px;
+    margin-bottom: 5px;
+  }
+  .modal-modules .body-modal-modules .modal-module.modal-dialog .bottom-modal-module p + p, .modal-resources .body-modal-modules .modal-module.modal-dialog .bottom-modal-module p + p, .modal-modules .body-modal-resources .modal-module.modal-dialog .bottom-modal-module p + p, .modal-resources .body-modal-resources .modal-module.modal-dialog .bottom-modal-module p + p, .modal-modules .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module p + p, .modal-resources .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module p + p, .modal-modules .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module p + p, .modal-resources .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module p + p {
+    margin-bottom: 5px;
+  }
+  .modal-modules .body-modal-modules .modal-module.modal-dialog .bottom-modal-module p + p:before, .modal-resources .body-modal-modules .modal-module.modal-dialog .bottom-modal-module p + p:before, .modal-modules .body-modal-resources .modal-module.modal-dialog .bottom-modal-module p + p:before, .modal-resources .body-modal-resources .modal-module.modal-dialog .bottom-modal-module p + p:before, .modal-modules .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module p + p:before, .modal-resources .body-modal-modules .modal-resource.modal-dialog .bottom-modal-module p + p:before, .modal-modules .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module p + p:before, .modal-resources .body-modal-resources .modal-resource.modal-dialog .bottom-modal-module p + p:before {
+    content: '';
+  }
+  .modal-modules .body-modal-modules .modal-module.modal-dialog:before, .modal-resources .body-modal-modules .modal-module.modal-dialog:before, .modal-modules .body-modal-resources .modal-module.modal-dialog:before, .modal-resources .body-modal-resources .modal-module.modal-dialog:before, .modal-modules .body-modal-modules .modal-resource.modal-dialog:before, .modal-resources .body-modal-modules .modal-resource.modal-dialog:before, .modal-modules .body-modal-resources .modal-resource.modal-dialog:before, .modal-resources .body-modal-resources .modal-resource.modal-dialog:before {
+    cursor: pointer;
+    right: 20px;
+    top: -40px;
+  }
+  .modal-modules .body-modal-modules .modal-module.modal-dialog.extended-bottom, .modal-resources .body-modal-modules .modal-module.modal-dialog.extended-bottom, .modal-modules .body-modal-resources .modal-module.modal-dialog.extended-bottom, .modal-resources .body-modal-resources .modal-module.modal-dialog.extended-bottom, .modal-modules .body-modal-modules .modal-resource.modal-dialog.extended-bottom, .modal-resources .body-modal-modules .modal-resource.modal-dialog.extended-bottom, .modal-modules .body-modal-resources .modal-resource.modal-dialog.extended-bottom, .modal-resources .body-modal-resources .modal-resource.modal-dialog.extended-bottom {
+    background-size: 100vw 60%;
+  }
+  .modal-modules .body-modal-modules .modal-module.modal-dialog.extended-bottom .bottom-modal-module > div, .modal-resources .body-modal-modules .modal-module.modal-dialog.extended-bottom .bottom-modal-module > div, .modal-modules .body-modal-resources .modal-module.modal-dialog.extended-bottom .bottom-modal-module > div, .modal-resources .body-modal-resources .modal-module.modal-dialog.extended-bottom .bottom-modal-module > div, .modal-modules .body-modal-modules .modal-resource.modal-dialog.extended-bottom .bottom-modal-module > div, .modal-resources .body-modal-modules .modal-resource.modal-dialog.extended-bottom .bottom-modal-module > div, .modal-modules .body-modal-resources .modal-resource.modal-dialog.extended-bottom .bottom-modal-module > div, .modal-resources .body-modal-resources .modal-resource.modal-dialog.extended-bottom .bottom-modal-module > div {
+    max-width: 100%;
   }
   .modal-resources .panel-modal-resources .panel .panel-heading a {
     padding-left: 18px;

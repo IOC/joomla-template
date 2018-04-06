@@ -332,49 +332,47 @@
             }
         }
     }
-    //#container {
-        .fluid-container {
-            &.page-header {
-                &.iocnewsarticle {
-                    > .container {
-                        padding: 0;
+    .fluid-container {
+        &.page-header {
+            &.iocnewsarticle {
+                > .container {
+                    padding: 0;
+                }
+            }
+            &.subpage {
+                height: 146px;
+            }
+        }
+    }
+    .container {
+        &.study-main {
+            .study-overview {
+                .study-overview-headline,
+                .study-overview-text {
+                    &:after {
+                        display: none;
                     }
                 }
-                &.subpage {
-                    height: 146px;
+                .study-overview-headline {
+                    font-size: 15px;
+                    line-height: 1.4;
+                    margin-bottom: 25px;
+                    padding-bottom: 6px;
+                }
+                .study-overview-text {
+                    font-size: 12px;
+                    line-height: 1.67;
+                }
+            }
+            .study-panel {
+                .study-data {
+                    .study-col {
+                        max-width: 50%;
+                    }
                 }
             }
         }
-        .container {
-            &.study-main {
-                .study-overview {
-                    .study-overview-headline,
-                    .study-overview-text {
-                        &:after {
-                            display: none;
-                        }
-                    }
-                    .study-overview-headline {
-                        font-size: 15px;
-                        line-height: 1.4;
-                        margin-bottom: 25px;
-                        padding-bottom: 6px;
-                    }
-                    .study-overview-text {
-                        font-size: 12px;
-                        line-height: 1.67;
-                    }
-                }
-                .study-panel {
-                    .study-data {
-                        .study-col {
-                            max-width: 50%;
-                        }
-                    }
-                }
-            }
-        }
-    //}
+    }
     #main-box {
         div.item-page-study {
             margin-top: 0;
@@ -606,7 +604,7 @@
         }
         .icon-text {
             font-size: 9px;
-            bottom: 20px;
+            bottom: 17px;
             max-width: 75%;
         }
     }
@@ -636,7 +634,7 @@
                         }
                     }
                     .icon-text {
-                        bottom: 24px;
+                        bottom: 17px;
                         font-size: 9px;
                         font-weight: 500;
                         letter-spacing: 1.2px;
@@ -816,28 +814,6 @@
                     left: 223px;
                     width: auto;
                     margin: 0;
-                }
-            }
-        }
-        .body-modal-modules,
-        .body-modal-resources {
-            .modal-module,
-            .modal-resource {
-                &.modal-dialog {
-                    max-width: 90%;
-                    .bottom-modal-module {
-                        flex-flow: column wrap;
-                        align-content: center;
-                        .custom-icon {
-                            &.clock {
-                                height: 20px;
-                            }
-                        }
-                    }
-                    @include closemodalmobileicon();
-                    &.extended-bottom {
-                        background-size: 100vw 60%;
-                    }
                 }
             }
         }
@@ -1507,7 +1483,8 @@
                                 font-size: 8px;
                                 font-weight: 500;
                                 letter-spacing: 1.1px;
-                                width: 91px;
+                                width: 100%;
+                                padding: 0 5px;
                             }
                         }
                     }
@@ -2360,7 +2337,7 @@
             letter-spacing: 1.1px;
             top: 75px;
             padding: 0;
-            max-width: 91%;
+            max-width: 97%;
         }
     }
     .subpage-text-buttons {
@@ -2504,6 +2481,46 @@
                                         right: 18px;
                                     }
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .modal-modules,
+    .modal-resources {
+        .body-modal-modules,
+        .body-modal-resources {
+            .modal-module,
+            .modal-resource {
+                &.modal-dialog {
+                    max-width: 90%;
+                    .bottom-modal-module {
+                        flex-flow: column wrap;
+                        align-content: center;
+                        & > div {
+                            max-width: 100%;
+                        }
+                        .custom-icon {
+                            &.clock {
+                                height: 20px;
+                                margin-bottom: 5px;
+                            }
+                        }
+                        p + p {
+                            margin-bottom: 5px;
+                            &:before {
+                                content: '';
+                            }
+                        }
+                    }
+                    @include closemodalmobileicon();
+                    &.extended-bottom {
+                        background-size: 100vw 60%;
+                        .bottom-modal-module {
+                            & > div {
+                                max-width: 100%;
                             }
                         }
                     }

@@ -426,7 +426,7 @@ $ioc-accent:    #01c1b9;
     .study-tabs {
         @include borderioc(2px, $custom_red);
         background-image: none;
-        h2 {
+        & > h2 {
             @include borderioc(2px, $custom_red);
             color: $ioc-text;
         }
@@ -502,7 +502,7 @@ $ioc-accent:    #01c1b9;
         .panel-body,
         .more-section,
         .more-section-content,
-        h4 {
+        & > h4 {
             @include borderioc(1px, $custom_red);
             color: $ioc-text;
             &:before,
@@ -557,6 +557,11 @@ $ioc-accent:    #01c1b9;
                 }
                 &:before {
                     display: none;
+                }
+                .panel-body {
+                    h4 {
+                        @include borderioc(1px, $custom_red);
+                    }
                 }
             }
         }
@@ -670,6 +675,9 @@ $ioc-accent:    #01c1b9;
         .location-map,
         .location-address {
             @include borderioc(1px, $custom_red);
+            .custom-icon {
+                @include borderioc(1px, $custom_red);
+            }
         }
         .location-transport {
             @include borderioc(1px, $custom_red);
@@ -684,6 +692,30 @@ $ioc-accent:    #01c1b9;
                 }
             }
         }
+    }
+    .location-bottom {
+        @include borderioc(1px, $custom_red);
+        .location-bottom-text {
+            @include borderioc(1px, $custom_red);
+            span {
+                @include borderioc(1px, $custom_red);
+                display: inline-block;
+            }
+
+        }
+        .body-modal-modules {
+            .title {
+                @include borderioc(1px, $custom_red);
+            }
+            .ioc-study-address {
+                @include borderioc(1px, $custom_red);
+                div {
+                    @include borderioc(1px, $custom_red);
+                }
+            }
+
+        }
+
     }
     .columns {
         @include borderioc(1px, $custom_red);
