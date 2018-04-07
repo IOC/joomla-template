@@ -160,6 +160,14 @@
     }
 }
 
+@mixin study-parallax-tablet($study) {
+     &.#{$study} {
+        .study-parallax {
+            background-image: url('../images/' + $study + '-parallax-img-tablet.jpg');
+        }
+    }
+}
+
 @media all and (max-width: 991px) {
     @include custom-navbar-nav();
     body {
@@ -4214,6 +4222,9 @@
                 }
             }
         }
+        .carousel-indicators {
+            bottom: 10px;
+        }
         .avisos {
             top: 611px;
         }
@@ -4914,5 +4925,27 @@
     }
     .layout-employment {
         background-image: url('../images/laboral-bck-hd.jpg');
+    }
+}
+
+/* Tablet customizations */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .item-page-study {
+        .study-parallax {
+            background-attachment: scroll;
+            background-size: cover;
+            width: 100vw;
+        }
+        @include study-parallax-tablet('btx-ioc');
+        @include study-parallax-tablet('btx-mat');
+        @include study-parallax-tablet('competic');
+        @include study-parallax-tablet('eoi');
+        @include study-parallax-tablet('fp');
+        @include study-parallax-tablet('fpd');
+        @include study-parallax-tablet('pacfgs');
+        @include study-parallax-tablet('pau');
     }
 }

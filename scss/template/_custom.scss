@@ -1903,15 +1903,15 @@ header.headroom--not-top {
                         }
                         &.pdf {
                             right: 145px;
-                            background-image: url('../images/arxiu_pdf_34x44px.svg');
+                            background-image: url('../images/arxiu_pdf_20x25px.svg');
                         }
                         &.web {
                             right: 115px;
-                            background-image: url('../images/format_web_34x44px.svg');
+                            background-image: url('../images/format_web_20x25px.svg');
                         }
                         &.zip {
                             right: 85px;
-                            background-image: url('../images/arxiu_zip_34x44px.svg');
+                            background-image: url('../images/arxiu_zip_20x25px.svg');
                         }
                     }
                     .tooltip {
@@ -2664,11 +2664,13 @@ header.headroom--not-top {
             position: absolute;
             bottom: 0;
             left: 0;
+            right: 0;
+            bottom: 5px;
             z-index: 2;
-            margin: 30px -124px 6px;
+            margin: 0 0 0 auto;
             overflow: hidden;
-            text-align: right;
-            width: 100%;
+            text-align: left;
+            width: 323px;
             li, a {
                 &.active {
                     background-color: $ioc-white;

@@ -4085,15 +4085,15 @@ div[class*="item-page-news"] .ioc-breadcrumb {
 }
 .modal-resources .panel-modal-resources .panel .panel-heading a .custom-icon.pdf {
   right: 145px;
-  background-image: url('../images/arxiu_pdf_34x44px.svg');
+  background-image: url('../images/arxiu_pdf_20x25px.svg');
 }
 .modal-resources .panel-modal-resources .panel .panel-heading a .custom-icon.web {
   right: 115px;
-  background-image: url('../images/format_web_34x44px.svg');
+  background-image: url('../images/format_web_20x25px.svg');
 }
 .modal-resources .panel-modal-resources .panel .panel-heading a .custom-icon.zip {
   right: 85px;
-  background-image: url('../images/arxiu_zip_34x44px.svg');
+  background-image: url('../images/arxiu_zip_20x25px.svg');
 }
 .modal-resources .panel-modal-resources .panel .panel-heading a .tooltip {
   max-width: 100px;
@@ -4883,11 +4883,13 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   position: absolute;
   bottom: 0;
   left: 0;
+  right: 0;
+  bottom: 5px;
   z-index: 2;
-  margin: 30px -124px 6px;
+  margin: 0 0 0 auto;
   overflow: hidden;
-  text-align: right;
-  width: 100%;
+  text-align: left;
+  width: 323px;
 }
 #myCarousel .carousel-indicators li, #myCarousel .carousel-indicators a {
   -webkit-border-radius: 0;
@@ -11331,6 +11333,9 @@ div[class*="item-page-"] table p {
     top: 485px;
     width: 593px;
   }
+  #myCarousel .carousel-indicators {
+    bottom: 10px;
+  }
   #myCarousel .avisos {
     top: 611px;
   }
@@ -11913,5 +11918,37 @@ div[class*="item-page-"] table p {
   }
   .layout-employment {
     background-image: url('../images/laboral-bck-hd.jpg');
+  }
+}
+/* Tablet customizations */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  .item-page-study .study-parallax {
+    background-attachment: scroll;
+    background-size: cover;
+    width: 100vw;
+  }
+  .item-page-study.btx-ioc .study-parallax {
+    background-image: url('../images/btx-ioc-parallax-img-tablet.jpg');
+  }
+  .item-page-study.btx-mat .study-parallax {
+    background-image: url('../images/btx-mat-parallax-img-tablet.jpg');
+  }
+  .item-page-study.competic .study-parallax {
+    background-image: url('../images/competic-parallax-img-tablet.jpg');
+  }
+  .item-page-study.eoi .study-parallax {
+    background-image: url('../images/eoi-parallax-img-tablet.jpg');
+  }
+  .item-page-study.fp .study-parallax {
+    background-image: url('../images/fp-parallax-img-tablet.jpg');
+  }
+  .item-page-study.fpd .study-parallax {
+    background-image: url('../images/fpd-parallax-img-tablet.jpg');
+  }
+  .item-page-study.pacfgs .study-parallax {
+    background-image: url('../images/pacfgs-parallax-img-tablet.jpg');
+  }
+  .item-page-study.pau .study-parallax {
+    background-image: url('../images/pau-parallax-img-tablet.jpg');
   }
 }

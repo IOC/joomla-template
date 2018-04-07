@@ -406,7 +406,9 @@
                 $avisos.find('.prev').hide();
                 $('.login-campus-body').addClass('first');
             } else {
-                $avisos.find('.prev').show();
+                if (numavisos > 2) {
+                    $avisos.find('.prev').show();
+                }
                 $('.login-campus-body').removeClass('first');
             }
             $avisos.find('.prev div').remove();
