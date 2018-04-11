@@ -20,7 +20,7 @@ var parser      = new xml2js.Parser();
 
 var extPath      = '.';
 var assetsPath = '.';
-var templateName = 'masterbootstrap';
+var templateName = 'ioc';
 
 var wwwPath = config.wwwDir + '/templates/' + templateName;
 
@@ -88,8 +88,12 @@ function compileSassFile(src, destinationFolder, options)
 
 // Sass
 gulp.task('sass', function () {
-	return compileSassFile(
+	compileSassFile(
 		assetsPath + '/scss/template.scss',
+		'css'
+	);
+	return compileSassFile(
+		assetsPath + '/scss/editor.scss',
 		'css'
 	);
 });
@@ -112,11 +116,18 @@ function compileScripts(src, ouputFileName, destinationFolder) {
 
 // Minify scripts
 gulp.task('scripts', function () {
-	return compileScripts(
+	compileScripts(
 		[
 			assetsPath + '/js/template.js'
 		],
 		'template.js',
+		'js'
+	);
+	return compileScripts(
+		[
+			assetsPath + '/js/ioc.js'
+		],
+		'ioc.js',
 		'js'
 	);
 });
@@ -156,7 +167,8 @@ gulp.task('watch:sass',
 gulp.task('watch:scripts',
 	function() {
 		gulp.watch([
-			extPath + '/js/template.js'
+			extPath + '/js/template.js',
+			extPath + '/js/ioc.js'
 			],
 			['scripts']
 		);
