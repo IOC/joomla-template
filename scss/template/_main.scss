@@ -333,7 +333,7 @@ img {max-width: 100% }
     padding-bottom: 10px;
     padding-top: 20px;
 }
-.page-header {margin: 10px 0 20px!important; }
+.page-header {margin: 10px 0 20px; }
 .hasTooltip {display: inline !important; }
 .noMainbody {display: none !important; }
 ul.unstyled,
@@ -656,13 +656,13 @@ background:#363636;
 }
 /*for headroom.js*/
 .headroom {
-    transition: transform 200ms linear;
+//    transition: transform 200ms linear;
 }
 .headroom--pinned {
-    transform: translateY(0%);
+//    transform: translateY(0%);
 }
 .headroom--unpinned {
-    transform: translateY(-100%);
+//    transform: translateY(-100%);
 }
 .header {
     background-color: inherit;
@@ -708,8 +708,6 @@ background:#363636;
 @media (max-width: 768px) {
 .navbar-nav > li > a {
     line-height: 30px !important;
-    padding-bottom: 5px !important;
-    padding-top: 5px !important;
 }
 .layout-boxed .header--fixed {
     width: 100%!important;
