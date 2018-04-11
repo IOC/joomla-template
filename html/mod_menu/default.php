@@ -12,7 +12,30 @@ defined('_JEXEC') or die;
 // Note. It is important to remove spaces between elements.
 ?>
 <?php // The menu class is deprecated. Use nav instead. ?>
-<ul class="nav menu<?php echo $class_sfx;?>"<?php
+<?php
+
+$topmenu = false;
+$featured = (JRequest::getCmd('view') == 'featured'); // Front page
+
+if ($params->get('menutype') == 'topmenu') {
+	$class = "nav navbar-nav";
+	$menunavclass = "";
+	$topmenu = true;
+} else {
+	$class = "nav navbar-nav";
+	$menunavclass = "";
+
+/*	$class = "panel-group";
+	$menunavclass = "panel panel-default";*/
+}
+
+$numelements = count($list);
+if ($numelements < 4) {
+	$class .= ' fewelements';
+}
+
+?>
+<ul class="<?php echo $class;?>"<?php
 	$tag = '';
 
 	if ($params->get('tag_id') != null)
@@ -22,9 +45,42 @@ defined('_JEXEC') or die;
 	}
 ?>>
 <?php
+
+$specialstyles = array (
+	'Ioc-studies',
+	'Ioc-employment',
+);
+
+$specialclass = '';
+// if (in_array($params->get('style'), $specialstyles)) {
+// 	$col = 3;
+// 	$colsmall = 6;
+// 	if ($numelements < 4) {
+// 		$col = 12 / $numelements;
+// 	}
+// 	$specialclass = "list-group-item col-lg-$col col-md-$col col-sm-$col col-xs-$colsmall ";
+// }
+
+array_push($specialstyles, 'Ioc-sub_studies');
+array_push($specialstyles, 'Ioc-sub_menu');
+
+$specialstyle = in_array($params->get('style'), $specialstyles);
+
 foreach ($list as $i => &$item)
 {
-	$class = 'item-' . $item->id;
+	if ($topmenu) {
+		if (($featured && ($item->alias == 'ioc-estudis' || $item->alias == 'ioc-studies'))
+			|| (!$featured && ($item->alias == 'ioc-noticies' || $item->alias == 'ioc-news'))) {
+			continue;
+		}
+	}
+	$dataattr = '';
+
+	if ($item->params->get('menu-meta_keywords')) {
+		$dataattr = 'data-meta-keyword="' . $item->params->get('menu-meta_keywords') . '"';
+	}
+
+	$class = $menunavclass . $specialclass . 'item-' . $item->id;
 
 	if (($item->id == $active_id) OR ($item->type == 'alias' AND $item->params->get('aliasoptions') == $active_id))
 	{
@@ -69,7 +125,23 @@ foreach ($list as $i => &$item)
 		$class = ' class="' . trim($class) . '"';
 	}
 
-	echo '<li' . $class . '>';
+	echo '<li' . $class . ' ' . $dataattr . '>';
+
+	if ($specialstyle) {
+		$anchorcss = !empty($item->anchor_css) ? $item->anchor_css : '';
+		$style = '';
+		$stylemobile = '';
+		$hexagon = '';
+		if ($item->menu_image) {
+			$path_parts = pathinfo($item->menu_image);
+			if ($params->get('style') == 'Ioc-studies') {
+				$hexagon = '<img src="' . join(DIRECTORY_SEPARATOR, array($path_parts['dirname'], $path_parts['filename'] . '-hexagon.svg')) . '" alt="" />';
+			}
+			$stylemobile = 'style="background-image: url(\''. join(DIRECTORY_SEPARATOR, array($path_parts['dirname'], $path_parts['filename'] . '-mobile.' . $path_parts['extension'])) . '\')"';
+			$style = 'style="background-image: url(\''. $item->menu_image .'\')"';
+		}
+		echo '<a href="'. $item->flink .'" class="'. $anchorcss .'"><div class="element-img-container"><div class="visible-xs element-img" '. $stylemobile . '></div><div class="hidden-xs element-img ' . $item->menu_image_css .'" '. $style . '>' . $hexagon . '</div></div>';
+	}
 
 	// Render the menu item.
 	switch ($item->type) :
@@ -85,6 +157,12 @@ foreach ($list as $i => &$item)
 			break;
 	endswitch;
 
+	if ($specialstyle) {
+		echo '</a>';
+		if (!empty($item->params->get('menu-meta_description'))) {
+			echo '<div class="meta-separator hidden-sm hidden-xs"></div><div class="meta-description hidden-sm hidden-xs">'. $item->params->get('menu-meta_description') .'</div>';
+		}
+	}
 	// The next item is deeper.
 	if ($item->deeper)
 	{
