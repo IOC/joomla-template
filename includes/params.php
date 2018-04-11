@@ -17,12 +17,14 @@
 	$this->params->get('rightColumnWidth', 3);
 	// Add javascript files
 	// Include all compiled plugins (below), or include individual files as needed
-	$doc->addScript('templates/' . $this->template . '/js/holder.js');
-	$doc->addScript('templates/' . $this->template . '/js/headroom.min.js');
+	$doc->addScript('templates/' . $this->template . '/js/responsive-tabs.js', array('version' => 'auto'));
+	$doc->addScript('templates/' . $this->template . '/js/ioc.min.js', array('version' => 'auto'));
+	$doc->addScript('templates/' . $this->template . '/js/holder.js', array('version' => 'auto'));
+	$doc->addScript('templates/' . $this->template . '/js/headroom.min.js', array('version' => 'auto'));
 	// Add Stylesheets
-	$doc->addStyleSheet('templates/' . $this->template . '/css/bootstrap.min.css');
-	$doc->addStyleSheet('templates/' . $this->template . '/css/icons.css');
-	$doc->addStyleSheet('templates/' . $this->template . '/css/template.min.css');
+	$doc->addStyleSheet('templates/' . $this->template . '/css/bootstrap.min.css', array('version' => 'auto'));
+	$doc->addStyleSheet('templates/' . $this->template . '/css/icons.css', array('version' => 'auto'));
+	$doc->addStyleSheet('templates/' . $this->template . '/css/template.min.css', array('version' => 'auto'));
 	// Variables
 	$headdata = $doc->getHeadData();
 	$menu = $app->getMenu();
@@ -41,6 +43,8 @@
 	$pattern = $this->params->get('pattern');
 	// Generator tag
 	$this->setGenerator(null);
+	// Set viewport
+	$doc->setMetadata('viewport', 'width=device-width, initial-scale=1.0, shrink-to-fit=no');
 	// Force latest IE & chrome frame
 	$doc->setMetadata('x-ua-compatible', 'IE=edge,chrome=1');
 	// Add javascripts
