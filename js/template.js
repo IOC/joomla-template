@@ -8,10 +8,13 @@
 			$('.parent > a').append('<b class="caret"></b>');
 			$('.parent > ul').addClass('dropdown-menu');
 		}
+var offset = 100;
 // grab an element
 var myElement = document.querySelector("header");
 // construct an instance of Headroom, passing the element
-var headroom  = new Headroom(myElement);
+var headroom  = new Headroom(myElement, {
+	"offset": offset
+ });
 // initialise
 headroom.init();
 		// Fix hide dropdown
@@ -23,18 +26,29 @@ headroom.init();
 			html: true
 		});
 		// To top
-		var offset = 220;
 		var duration = 500;
 		$(window).scroll(function() {
 			if ($(this).scrollTop() > offset) {
-				$('.back-to-top').fadeIn(duration);
+				//$('.back-to-top').fadeIn(duration);
+				$('.back-to-top').addClass('slidein');
 			} else {
-				$('.back-to-top').fadeOut(duration);
+				//$('.back-to-top').fadeOut(duration);
+				$('.back-to-top').removeClass('slidein');
 			}
 		});
 		$('.back-to-top').click(function(event) {
 			event.preventDefault();
-			$('html, body').animate({scrollTop: 0}, duration);
+			var position = 0;
+			// Link inside tabs, return to active tab
+			if ($(this).attr('href') != '#') {
+				var node = $('#tabs li.active');
+				if (node.length) {
+					position = node.offset().top - $('#navigation').outerHeight(true);
+				}
+				$(this).attr('href', '#');
+				$(this).find('span').removeClass('glyphicon-link').addClass('glyphicon-chevron-up');
+			}
+			$('html, body').animate({scrollTop: position}, duration);
 			return false;
 		});
 
@@ -54,5 +68,7 @@ headroom.init();
 				}
 			});
 		}
+
+		fakewaffle.responsiveTabs();
 	});
 })(jQuery);
