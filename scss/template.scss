@@ -5,6 +5,9 @@
  */
 
 // Variables
+@import "template/fonts";
+
+// Variables
 @import "template/variables";
 
 // Template elements
@@ -14,3 +17,4 @@
 
 // User customisations
 @import "template/custom";
+@import "template/mobile";
