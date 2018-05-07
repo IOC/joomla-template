@@ -55,10 +55,10 @@ $menuitems = array();
   <div class="carousel-inner" role="listbox">
     <?php  if (count(JModuleHelper::getModules('login-campus')) > 0) : ?>
       <div class="container login-campus">
-        <div id="login-campus-large" class="login-campus-body first hidden-xs hidden-sm" data-toggle="modal" data-target="#login-campus" tabindex="1">
-            <span class="custom-icon"></span>
-            <p class="login-text"><?php echo JText::_('TPL_IOC_LOGIN_CAMPUS') . ' ';?></p>
-        </div>
+        <button id="login-campus-large" class="login-campus-body first hidden-xs hidden-sm" data-toggle="modal" data-target="#login-campus" tabindex="1">
+            <span class="custom-icon" aria-hidden="true"></span>
+            <?php echo JText::_('TPL_IOC_LOGIN_CAMPUS') . ' ';?>
+        </button>
       </div>
     <?php  endif; ?>
     <?php foreach ($this->important as $key => $article) :

@@ -639,7 +639,8 @@ header.headroom--not-top {
             }
         }
         .login-clone-campus {
-            display: inline-block;
+            @include flexbox($justify-content: center);
+            align-items: center;
             float: right;
             border-color: $ioc-bd-campus;
             background-color: $ioc-bg-header;
@@ -749,17 +750,27 @@ header.headroom--not-top {
     .login-campus {
         position: relative;
         .login-campus-body {
-            width: 244px;
-            height: 60px;
+            @include flexbox($justify-content: center);
+            align-items: center;
+            width: 258px;
+            height: 61px;
             border: 3px solid $ioc-link2-carousel;
             background-color: $ioc-login-bg;
             position: absolute;
             top: 135px;
             right: 0;
-            display: block;
             z-index: 2;
             color: $ioc-white;
             cursor: pointer;
+            padding: 0;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
             @include transition(all, .4s, ease-out);
             &:hover {
                 background-color: $ioc-link2-carousel;
@@ -767,6 +778,7 @@ header.headroom--not-top {
             }
             &.first {
                 &:hover {
+                    color: $ioc-lnk-nb-frpage;
                     border-color: $ioc-lnk-nb-frpage;
                     .custom-icon,
                     .login-text {
@@ -778,24 +790,9 @@ header.headroom--not-top {
                 background-color: rgba(0,0,0,0);
             }
             .custom-icon {
-                float: left;
-                margin-top: 15px;
-                margin-left: 20px;
-                margin-right: 20px;
-                width: 24px;
-                height: 24px;
-                @include transition(all, .4s, ease-out);
-            }
-            p {
-                font-size: 14px;
-                font-weight: 500;
-                text-transform: uppercase;
-                letter-spacing: .7px;
-                padding-top: 18px;
-                padding-right: 20px;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                overflow: hidden;
+                margin-right: 23px;
+                width: 25px;
+                height: 25px;
                 @include transition(all, .4s, ease-out);
             }
         }
@@ -979,32 +976,29 @@ header.headroom--not-top {
         color: $ioc-white;
         cursor: pointer;
         min-width: 198px;
-        padding: 7.5px 15px;
+        padding: 0;
         height: 36px;
-        padding: 9px 14px;
+        padding: 0;
         border-width: 3px;
         border-style: solid;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: .8px;
+        line-height: 13px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
         &:hover {
             color: $ioc-accent-mat;
             text-decoration: none;
         }
         .custom-icon {
-            float: left;
             margin-right: 10px;
             width: 17px;
             height: 18px;
         }
-        p {
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: .8px;
-            margin: 0;
-            line-height: 13px;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
-        }
+//        p {
+//        }
     }
 
 
@@ -4779,8 +4773,9 @@ div[class*="item-page-fp-"] {
         &:before {
             content: '\e910';
             font-family: 'ioc-icons';
-            font-size: 17px;
-            font-weight: 600;
+            font-size: 23px;
+            font-weight: 500;
+            line-height: 1em;
         }
     }
 }
