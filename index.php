@@ -90,10 +90,10 @@ if ($itemid && JRequest::getCmd('view') != 'search') {
     </div>
 </div>
 <?php  if ($this->countModules('login-campus')) : ?>
-    <div id="login-campus-medium" class="hidden-xs hidden-sm login-clone-campus" data-toggle="modal" data-target="#login-campus">
-        <span class="custom-icon"></span>
-        <p class="login-text"><?php echo JText::_('TPL_IOC_LOGIN_CAMPUS') . ' ';?></p>
-    </div>
+    <button id="login-campus-medium" class="hidden-xs hidden-sm login-clone-campus" data-toggle="modal" data-target="#login-campus">
+        <span class="custom-icon" aria-hidden="true"></span>
+        <span class="login-text"><?php echo JText::_('TPL_IOC_LOGIN_CAMPUS') . ' ';?></span>
+    </button>
 <?php  endif; ?>
 <div class="social hidden-sm hidden-xs text-left">
         <a href="https://es.linkedin.com/in/ioc-institut-obert-de-catalunya-bb4805b1" target="_blank">
