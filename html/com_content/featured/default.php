@@ -13,6 +13,10 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 
 JHtml::_('behavior.caption');
 
+if (!defined('MAXFEATUREDLENGHT')) {
+    define('MAXFEATUREDLENGHT', 260);
+}
+
 // If the page class is defined, add to class as suffix.
 // It will be a separate class if the user starts it with a space
 
@@ -55,10 +59,10 @@ $menuitems = array();
   <div class="carousel-inner" role="listbox">
     <?php  if (count(JModuleHelper::getModules('login-campus')) > 0) : ?>
       <div class="container login-campus">
-        <div id="login-campus-large" class="login-campus-body first hidden-xs hidden-sm" data-toggle="modal" data-target="#login-campus" tabindex="1">
-            <span class="custom-icon"></span>
-            <p class="login-text"><?php echo JText::_('TPL_IOC_LOGIN_CAMPUS') . ' ';?></p>
-        </div>
+        <button id="login-campus-large" class="login-campus-body first hidden-xs hidden-sm" data-toggle="modal" data-target="#login-campus" tabindex="1">
+            <span class="custom-icon" aria-hidden="true"></span>
+            <span class="login-text"><?php echo JText::_('TPL_IOC_LOGIN_CAMPUS') . ' ';?></span>
+        </button>
       </div>
     <?php  endif; ?>
     <?php foreach ($this->important as $key => $article) :
@@ -107,6 +111,19 @@ $menuitems = array();
                   <h2><?php echo $article->title;?></h2>
                 <?php else : ?>
                   <h2><a href="<?php echo $link;?>"><?php echo $article->title;?></a></h2>
+                    <?php
+                      $cleanintrotext = strip_tags($article->introtext);
+                      $cleanintrotext = str_replace('’', '\'', $cleanintrotext);
+                      if (mb_strlen($article->introtext) > MAXFEATUREDLENGHT) {
+                          $cleanintrotext = substr($cleanintrotext, 0, MAXFEATUREDLENGHT) . ' . . .';
+                      }
+                    ?>
+                    <div class="carousel-introtext">
+                      <?php echo $cleanintrotext;?>
+                      <div class="link-button">
+                        <a href="<?php echo $link;?>"><?php echo JText::_('TPL_IOC_JUMP_TO_NEW');?></a>
+                      </div>
+                    </div>
                 <?php endif; ?>
         	    </div>
             </div>
