@@ -44,6 +44,7 @@ $this->item->introtext = preg_replace('~\s*<img[^>]*>\s*~', '', $this->item->int
 $this->item->introtext = preg_replace('~\s*<video[^>]*>.*?</video>\s*~s', '', $this->item->introtext);
 
 $this->item->introtext = strip_tags($this->item->introtext);
+$this->item->introtext = str_replace('’', '\'', $this->item->introtext);
 $articlelength = mb_strlen($this->item->introtext);
 $introclass = 'intro-featured-article hidden-xs';
 
