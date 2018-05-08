@@ -248,6 +248,10 @@
             $('.social, .ioc-languages').removeClass('bck-displayed');
         });
 
+        $(document).on('shown.bs.tooltip', '.login-campus', function(e) {
+            $(this).find('.tooltip').css('top', '100px');
+        });
+
         $(document).on('click', '.custom-icon.delete', function(e) {
             var $node = $(this).siblings('input');
             $node.val('');

@@ -49,7 +49,7 @@ $articlelength = mb_strlen($this->item->introtext);
 $introclass = 'intro-featured-article hidden-xs';
 
 if ($articlelength > MAXARTICLELENGHT) {
-    $this->item->introtext = '<p>' . substr($this->item->introtext, 0, MAXARTICLELENGHT) . ' . . .</p>';
+    $this->item->introtext = '<p>' . substr($this->item->introtext, 0, MAXARTICLELENGHT) . ' (&#8230;)</p>';
 }
 
 ?>

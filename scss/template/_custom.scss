@@ -825,6 +825,39 @@ header.headroom--not-top {
                 @include transition(all, .4s, ease-out);
             }
         }
+        .ioc-warning {
+            @include flexbox($justify-content: center);
+            align-items: center;
+            font-size: 20px;
+            font-weight: 600;
+            position: absolute;
+            top: 121px;
+            right: 8px;
+            z-index: 3;
+            height: 29px;
+            width: 29px;
+            background-color: #ff5151;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+            border-radius: 50%;
+            color: $ioc-white;
+            cursor: pointer;
+        }
+            .tooltip {
+                width: 258px;
+                @include transform(translateY(100px));
+            }
+            .tooltip > .tooltip-inner {
+                background-color: $ioc-white;
+                color: $ioc-text;
+                border: solid 1px #e3eef7;
+                font-family: "Montserrat", sans-serif;
+                font-size: 11px;
+            }
+            .tooltip-arrow {
+                border-bottom-width: 6px;
+                border-bottom-color: $ioc-white;
+                width: 11px;
+            }
     }
     .header {
         .social {

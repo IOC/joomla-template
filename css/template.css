@@ -1185,6 +1185,50 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   -o-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
+.ioc-front-page .login-campus .ioc-warning {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 0 auto;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  top: 121px;
+  right: 8px;
+  z-index: 3;
+  height: 29px;
+  width: 29px;
+  background-color: #ff5151;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+}
+.ioc-front-page .login-campus .tooltip {
+  width: 258px;
+  -webkit-transform: translateY(100px);
+  -moz-transform: translateY(100px);
+  -ms-transform: translateY(100px);
+  -o-transform: translateY(100px);
+  transform: translateY(100px);
+}
+.ioc-front-page .login-campus .tooltip > .tooltip-inner {
+  background-color: #fff;
+  color: #354959;
+  border: solid 1px #e3eef7;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+}
+.ioc-front-page .login-campus .tooltip-arrow {
+  border-bottom-width: 6px;
+  border-bottom-color: #fff;
+  width: 11px;
+}
 .ioc-front-page .header .social .custom-icon:hover {
   color: #2cc4ec;
 }
