@@ -36,7 +36,7 @@
             }
         };
 
-        $('[data-toggle="tooltip"]').tooltip();
+        $('[data-toggle="tooltip"]').tooltip({trigger: 'hover click'});
 
         if ($filtering) {
             $filtering.removeClass('hidden');
@@ -64,6 +64,25 @@
                 togglefilter($filter);
             });
         }
+
+        var showavisos = function () {
+            var next = ((current + 1) > numavisos - 1) ? 0 : current + 1;
+            var prev = ((current - 1) < 0) ? numavisos - 1 : current - 1;
+
+            if (current == 0) {
+                $avisos.find('.prev').hide();
+                $('.login-campus-body').addClass('first');
+            } else {
+                if (numavisos > 2) {
+                    $avisos.find('.prev').show();
+                }
+                $('.login-campus-body').removeClass('first');
+            }
+            $avisos.find('.prev div').remove();
+            $avisos.find('.next div').remove();
+            $(nodesavisos[prev]).appendTo($avisos.find('.prev'));
+            $(nodesavisos[next]).appendTo($avisos.find('.next'));
+        };
 
         var faqsblockpanels = function (width) {
             if (!width) {
@@ -282,6 +301,9 @@
                         $header.addClass('bck-displayed');
                         $('.social, .ioc-languages').addClass('bck-displayed');
                     }
+                    if ($(this).width() < 991 && $avisos.length > 0 && !$('#myCarousel').find('.carousel-indicators li').eq(0).hasClass('active')) {
+                        $('#myCarousel').find('.carousel-indicators li').eq(0).click();
+                    }
                 }
             }
         });
@@ -397,25 +419,6 @@
         if ($('.avisos')) {
             $('.avisos').addClass('display');
         }
-
-        var showavisos = function () {
-            var next = ((current + 1) > numavisos - 1) ? 0 : current + 1;
-            var prev = ((current - 1) < 0) ? numavisos - 1 : current - 1;
-
-            if (current == 0) {
-                $avisos.find('.prev').hide();
-                $('.login-campus-body').addClass('first');
-            } else {
-                if (numavisos > 2) {
-                    $avisos.find('.prev').show();
-                }
-                $('.login-campus-body').removeClass('first');
-            }
-            $avisos.find('.prev div').remove();
-            $avisos.find('.next div').remove();
-            $(nodesavisos[prev]).appendTo($avisos.find('.prev'));
-            $(nodesavisos[next]).appendTo($avisos.find('.next'));
-        };
 
         if ($avisos) {
             nodesavisos = $avisos.find('.next div').detach();

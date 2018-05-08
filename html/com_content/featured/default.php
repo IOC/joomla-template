@@ -58,7 +58,18 @@ $menuitems = array();
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <?php  if (count(JModuleHelper::getModules('login-campus')) > 0) : ?>
+      <?php 
+        $iocwarning = JModuleHelper::getModules('avis_campus');
+        if (count($iocwarning) > 0) {
+          $warningmessage = trim(strip_tags(JModuleHelper::renderModule(array_shift($iocwarning))));
+        } else {
+          $warningmessage = '';
+        }
+      ?>
       <div class="container login-campus">
+        <?php if (!empty($warningmessage)) : ?>
+          <span class="ioc-warning" data-toggle="tooltip" data-original-title="<?php echo $warningmessage; ?>" data-placement="bottom"></span>
+        <?php endif; ?>
         <button id="login-campus-large" class="login-campus-body first hidden-xs hidden-sm" data-toggle="modal" data-target="#login-campus" tabindex="1">
             <span class="custom-icon" aria-hidden="true"></span>
             <span class="login-text"><?php echo JText::_('TPL_IOC_LOGIN_CAMPUS') . ' ';?></span>
@@ -115,7 +126,7 @@ $menuitems = array();
                       $cleanintrotext = strip_tags($article->introtext);
                       $cleanintrotext = str_replace('’', '\'', $cleanintrotext);
                       if (mb_strlen($article->introtext) > MAXFEATUREDLENGHT) {
-                          $cleanintrotext = substr($cleanintrotext, 0, MAXFEATUREDLENGHT) . ' . . .';
+                          $cleanintrotext = substr($cleanintrotext, 0, MAXFEATUREDLENGHT) . ' (&#8230;)';
                       }
                     ?>
                     <div class="carousel-introtext">
@@ -145,9 +156,14 @@ $menuitems = array();
       <span class="control-next" aria-hidden="true"></span>
     </a>
   </div>
+  <?php if(!empty($warningmessage)) : ?>
+  <div class="warning-mobile visible-sm visible-xs">
+    <h2><?php echo JText::_('TPL_IOC_WARNINGS');?></h2>
+      <div class="warning-message"><?php echo $warningmessage; ?></div>
+  </div>
+  <?php endif; ?>
   <div class="avisos-mobile visible-sm visible-xs">
-    <h2>Novetats</h2>
-    <!-- <a class="next" href="#myCarousel" role="button" data-slide="next"> -->
+    <h2><?php echo JText::_('TPL_IOC_FEATURED');?></h2>
       <?php foreach ($menuitems as $k => $item) :?>
         <?php
           if ($k == 0) {

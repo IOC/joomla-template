@@ -825,6 +825,60 @@ header.headroom--not-top {
                 @include transition(all, .4s, ease-out);
             }
         }
+        .ioc-warning {
+            position: absolute;
+            top: 121px;
+            right: 8px;
+            z-index: 3;
+            height: 29px;
+            width: 29px;
+            background-color: $ioc-campus-warn;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+            border-radius: 50%;
+            cursor: pointer;
+            &:before {
+                content: '\e918';
+                font-family: 'ioc-icons';
+                font-size: 26px;
+                font-weight: 600;
+                line-height: 1em;
+                color: $ioc-white;
+                @include flexbox($justify-content: center);
+                align-items: center;
+                height: 100%;
+                width: 100%;
+            }
+            &:hover,
+            &[aria-describedby] {
+                background-color: $ioc-campus-hv-warn;
+            }
+        }
+        .tooltip {
+            width: 258px;
+            &.bottom {
+                top: 203px !important;
+                left: 572px;
+            }
+        }
+        .tooltip > .tooltip-inner {
+            background-color: $ioc-white;
+            color: $ioc-text;
+            border: solid 1px $ioc-tooltip-bd;
+            font-family: "Montserrat", sans-serif;
+            font-size: 11px;
+            max-width: 258px;
+            text-align: left;
+            padding: 7px 11px;
+        }
+        .tooltip-arrow {
+            top: -3px;
+            left: 90% !important;
+            border-bottom-width: 9px;
+            border-right-width: 9px;
+            border-left-width: 9px;
+            border-bottom-color: $ioc-white;
+            width: 9px;
+        }
     }
     .header {
         .social {
@@ -1987,7 +2041,7 @@ header.headroom--not-top {
                     .tooltip > .tooltip-inner {
                         background-color: $ioc-white;
                         color: $ioc-text;
-                        border: solid 1px #e3eef7;
+                        border: solid 1px $ioc-tooltip-bd;
                         font-family: "Montserrat", sans-serif;
                         font-size: 11px;
                     }
@@ -2611,15 +2665,18 @@ header.headroom--not-top {
             right: 20px;
         }
     }
-    .avisos-mobile {
-        margin-top: 37px;
+    .avisos-mobile,
+    .warning-mobile {
+        margin-top: 14px;
         margin-right: 0;
         margin-bottom: 48px;
         h2 {
             font-size: 10px;
             font-weight: 600;
+            margin-top: 0;
             margin-right: 13px;
             margin-bottom: 8px;
+            padding-bottom: 2px;
             text-align: right;
             color: $ioc-featured-news;
             border-bottom: 1px solid $ioc-featured-news;
@@ -2628,18 +2685,53 @@ header.headroom--not-top {
         div {
             background-color: $ioc-bg-panel;
             width: 100%;
-            padding: 6px 44px 6px 17px;
             margin-left: 20px;
             margin-right: 1px;
             a {
+                @include flexbox();
+                align-items: center;
+                position: relative;
                 font-size: 11.5px;
                 font-weight: normal;
                 line-height: 1.39;
                 color: $ioc-text2;
+                text-decoration: none;
+                &:after {
+                    content: '\e90d';
+                    font-family: 'ioc-icons';
+                    font-size: 22px;
+                    color: $ioc-article-arrow;
+                    position: absolute;
+                    right: 0;
+                    top: 7.5px;
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+            &.warning-message {
+                font-size: 11.5px;
+                line-height: 1.39;
+                background-color: $ioc-warning-msg;
             }
         }
         div + div {
             margin-top: 4px;
+        }
+    }
+    .avisos-mobile {
+        div {
+            padding: 0 44px 0 17px;
+            height: 44px;
+            a {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .warning-mobile {
+        margin-bottom: 17px;
+        div {
+            padding: 6px 42px 9px 17px;
         }
     }
     .carousel-control {
