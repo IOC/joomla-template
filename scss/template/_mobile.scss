@@ -340,6 +340,12 @@
             }
         }
     }
+    .login-campus {
+        .ioc-warning,
+        .tooltip {
+            display: none !important;
+        }
+    }
     .fluid-container {
         &.page-header {
             &.iocnewsarticle {
@@ -540,7 +546,6 @@
                                                 width: 18px;
                                                 height: 18px;
                                             }
-
                                         }
                                     }
                                 }
@@ -4200,6 +4205,11 @@
 }
 
 @media all and (max-width: 1198px) {
+    .login-campus {
+        .tooltip.bottom {
+            left: 572px !important;
+        }
+    }
     .footer {
         .contacte {
             border-top: none;
@@ -4250,6 +4260,11 @@
         }
         .avisos {
             top: 611px;
+        }
+    }
+    .login-campus {
+        .tooltip.bottom {
+            left: 912px !important;
         }
     }
     #news {
