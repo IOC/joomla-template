@@ -1108,6 +1108,9 @@ header.headroom--not-top .navbar-default .login-clone-campus {
 .ioc-front-page .headroom--top .ioc-search button:hover span, .ioc-front-page .headroom--top .tiny-search button:hover span, .ioc-front-page .headroom--top .ioc-search button:hover .custom-icon, .ioc-front-page .headroom--top .tiny-search button:hover .custom-icon {
   color: #2cc4ec;
 }
+.ioc-front-page .headroom--top .megaphone a:hover #main_shape, .ioc-front-page .headroom--top .megaphone a:hover #line, .ioc-front-page .headroom--top .megaphone a:hover #handler, .ioc-front-page .headroom--top .megaphone a:hover #oval, .ioc-front-page .headroom--top .megaphone a:hover #wave_one, .ioc-front-page .headroom--top .megaphone a:hover #wave_two, .ioc-front-page .headroom--top .megaphone a:hover #wave_three {
+  fill: #2cc4ec;
+}
 .ioc-front-page #wrap .container {
   max-width: 1170px;
 }
@@ -1529,6 +1532,121 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   letter-spacing: 0.8px;
   font-weight: 600;
 }
+.navbar-default .megaphone {
+  float: right;
+  margin-top: 17px;
+  -webkit-transform: rotate(-23deg);
+  -moz-transform: rotate(-23deg);
+  -ms-transform: rotate(-23deg);
+  -o-transform: rotate(-23deg);
+  transform: rotate(-23deg);
+  /* KEYFRAMES */
+}
+.navbar-default .megaphone #wave_one {
+  -webkit-animation-name: waving1;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: waving1;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+.navbar-default .megaphone #wave_two {
+  -webkit-animation-name: waving2;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: waving2;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+.navbar-default .megaphone #wave_three {
+  -webkit-animation-name: waving3;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: waving3;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes waving1 {
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+@keyframes waving1 {
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes waving2 {
+  25% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+  }
+}
+@keyframes waving2 {
+  25% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes waving3 {
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes waving3 {
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.navbar-default .megaphone a:hover #main_shape, .navbar-default .megaphone a:hover #line, .navbar-default .megaphone a:hover #handler, .navbar-default .megaphone a:hover #oval, .navbar-default .megaphone a:hover #wave_one, .navbar-default .megaphone a:hover #wave_two, .navbar-default .megaphone a:hover #wave_three {
+  fill: #63749d;
+}
 #top {
   height: 40px;
   padding: 5px 0;
@@ -1806,6 +1924,9 @@ header.headroom--top.acfgs .navbar-default .login-clone-campus {
 header.headroom--top.acfgs .navbar-default .social .custom-icon:hover {
   color: #5eabc5;
 }
+header.headroom--top.acfgs .navbar-default .megaphone a:hover #main_shape, header.headroom--top.acfgs .navbar-default .megaphone a:hover #line, header.headroom--top.acfgs .navbar-default .megaphone a:hover #handler, header.headroom--top.acfgs .navbar-default .megaphone a:hover #oval, header.headroom--top.acfgs .navbar-default .megaphone a:hover #wave_one, header.headroom--top.acfgs .navbar-default .megaphone a:hover #wave_two, header.headroom--top.acfgs .navbar-default .megaphone a:hover #wave_three {
+  fill: #5eabc5;
+}
 .fluid-container.page-header.acfgs {
   background-color: #476f7c;
 }
@@ -1914,6 +2035,9 @@ header.headroom--top.btx .navbar-default .login-clone-campus {
 }
 header.headroom--top.btx .navbar-default .social .custom-icon:hover {
   color: #9696ea;
+}
+header.headroom--top.btx .navbar-default .megaphone a:hover #main_shape, header.headroom--top.btx .navbar-default .megaphone a:hover #line, header.headroom--top.btx .navbar-default .megaphone a:hover #handler, header.headroom--top.btx .navbar-default .megaphone a:hover #oval, header.headroom--top.btx .navbar-default .megaphone a:hover #wave_one, header.headroom--top.btx .navbar-default .megaphone a:hover #wave_two, header.headroom--top.btx .navbar-default .megaphone a:hover #wave_three {
+  fill: #9696ea;
 }
 .fluid-container.page-header.btx {
   background-color: #6e6ca2;
@@ -2024,6 +2148,9 @@ header.headroom--top.btx-ioc .navbar-default .login-clone-campus {
 header.headroom--top.btx-ioc .navbar-default .social .custom-icon:hover {
   color: #9696ea;
 }
+header.headroom--top.btx-ioc .navbar-default .megaphone a:hover #main_shape, header.headroom--top.btx-ioc .navbar-default .megaphone a:hover #line, header.headroom--top.btx-ioc .navbar-default .megaphone a:hover #handler, header.headroom--top.btx-ioc .navbar-default .megaphone a:hover #oval, header.headroom--top.btx-ioc .navbar-default .megaphone a:hover #wave_one, header.headroom--top.btx-ioc .navbar-default .megaphone a:hover #wave_two, header.headroom--top.btx-ioc .navbar-default .megaphone a:hover #wave_three {
+  fill: #9696ea;
+}
 .fluid-container.page-header.btx-ioc {
   background-color: #6e6ca2;
 }
@@ -2132,6 +2259,9 @@ header.headroom--top.btx-mat .navbar-default .login-clone-campus {
 }
 header.headroom--top.btx-mat .navbar-default .social .custom-icon:hover {
   color: #70e6ff;
+}
+header.headroom--top.btx-mat .navbar-default .megaphone a:hover #main_shape, header.headroom--top.btx-mat .navbar-default .megaphone a:hover #line, header.headroom--top.btx-mat .navbar-default .megaphone a:hover #handler, header.headroom--top.btx-mat .navbar-default .megaphone a:hover #oval, header.headroom--top.btx-mat .navbar-default .megaphone a:hover #wave_one, header.headroom--top.btx-mat .navbar-default .megaphone a:hover #wave_two, header.headroom--top.btx-mat .navbar-default .megaphone a:hover #wave_three {
+  fill: #70e6ff;
 }
 .fluid-container.page-header.btx-mat {
   background-color: #41b0c8;
@@ -2242,6 +2372,9 @@ header.headroom--top.cas .navbar-default .login-clone-campus {
 header.headroom--top.cas .navbar-default .social .custom-icon:hover {
   color: #5eabc5;
 }
+header.headroom--top.cas .navbar-default .megaphone a:hover #main_shape, header.headroom--top.cas .navbar-default .megaphone a:hover #line, header.headroom--top.cas .navbar-default .megaphone a:hover #handler, header.headroom--top.cas .navbar-default .megaphone a:hover #oval, header.headroom--top.cas .navbar-default .megaphone a:hover #wave_one, header.headroom--top.cas .navbar-default .megaphone a:hover #wave_two, header.headroom--top.cas .navbar-default .megaphone a:hover #wave_three {
+  fill: #5eabc5;
+}
 .fluid-container.page-header.cas {
   background-color: #476f7c;
 }
@@ -2350,6 +2483,9 @@ header.headroom--top.competic .navbar-default .login-clone-campus {
 }
 header.headroom--top.competic .navbar-default .social .custom-icon:hover {
   color: #0a26a3;
+}
+header.headroom--top.competic .navbar-default .megaphone a:hover #main_shape, header.headroom--top.competic .navbar-default .megaphone a:hover #line, header.headroom--top.competic .navbar-default .megaphone a:hover #handler, header.headroom--top.competic .navbar-default .megaphone a:hover #oval, header.headroom--top.competic .navbar-default .megaphone a:hover #wave_one, header.headroom--top.competic .navbar-default .megaphone a:hover #wave_two, header.headroom--top.competic .navbar-default .megaphone a:hover #wave_three {
+  fill: #0a26a3;
 }
 .fluid-container.page-header.competic {
   background-color: #5874f6;
@@ -2460,6 +2596,9 @@ header.headroom--top[class*="eoi-"] .navbar-default .login-clone-campus {
 header.headroom--top[class*="eoi-"] .navbar-default .social .custom-icon:hover {
   color: #b97100;
 }
+header.headroom--top[class*="eoi-"] .navbar-default .megaphone a:hover #main_shape, header.headroom--top[class*="eoi-"] .navbar-default .megaphone a:hover #line, header.headroom--top[class*="eoi-"] .navbar-default .megaphone a:hover #handler, header.headroom--top[class*="eoi-"] .navbar-default .megaphone a:hover #oval, header.headroom--top[class*="eoi-"] .navbar-default .megaphone a:hover #wave_one, header.headroom--top[class*="eoi-"] .navbar-default .megaphone a:hover #wave_two, header.headroom--top[class*="eoi-"] .navbar-default .megaphone a:hover #wave_three {
+  fill: #b97100;
+}
 .fluid-container.page-header[class*="eoi-"] {
   background-color: #f3a22d;
 }
@@ -2562,6 +2701,9 @@ header.headroom--top.eoi .navbar-default .login-clone-campus {
 }
 header.headroom--top.eoi .navbar-default .social .custom-icon:hover {
   color: #b97100;
+}
+header.headroom--top.eoi .navbar-default .megaphone a:hover #main_shape, header.headroom--top.eoi .navbar-default .megaphone a:hover #line, header.headroom--top.eoi .navbar-default .megaphone a:hover #handler, header.headroom--top.eoi .navbar-default .megaphone a:hover #oval, header.headroom--top.eoi .navbar-default .megaphone a:hover #wave_one, header.headroom--top.eoi .navbar-default .megaphone a:hover #wave_two, header.headroom--top.eoi .navbar-default .megaphone a:hover #wave_three {
+  fill: #b97100;
 }
 .fluid-container.page-header.eoi {
   background-color: #f3a22d;
@@ -2672,6 +2814,9 @@ header.headroom--top.fesp .navbar-default .login-clone-campus {
 header.headroom--top.fesp .navbar-default .social .custom-icon:hover {
   color: #c86885;
 }
+header.headroom--top.fesp .navbar-default .megaphone a:hover #main_shape, header.headroom--top.fesp .navbar-default .megaphone a:hover #line, header.headroom--top.fesp .navbar-default .megaphone a:hover #handler, header.headroom--top.fesp .navbar-default .megaphone a:hover #oval, header.headroom--top.fesp .navbar-default .megaphone a:hover #wave_one, header.headroom--top.fesp .navbar-default .megaphone a:hover #wave_two, header.headroom--top.fesp .navbar-default .megaphone a:hover #wave_three {
+  fill: #c86885;
+}
 .fluid-container.page-header.fesp {
   background-color: #ab3f5f;
 }
@@ -2781,6 +2926,9 @@ header.headroom--top[class*="fp-"] .navbar-default .login-clone-campus {
 header.headroom--top[class*="fp-"] .navbar-default .social .custom-icon:hover {
   color: #128862;
 }
+header.headroom--top[class*="fp-"] .navbar-default .megaphone a:hover #main_shape, header.headroom--top[class*="fp-"] .navbar-default .megaphone a:hover #line, header.headroom--top[class*="fp-"] .navbar-default .megaphone a:hover #handler, header.headroom--top[class*="fp-"] .navbar-default .megaphone a:hover #oval, header.headroom--top[class*="fp-"] .navbar-default .megaphone a:hover #wave_one, header.headroom--top[class*="fp-"] .navbar-default .megaphone a:hover #wave_two, header.headroom--top[class*="fp-"] .navbar-default .megaphone a:hover #wave_three {
+  fill: #128862;
+}
 .fluid-container.page-header[class*="fp-"] {
   background-color: #0fa175;
 }
@@ -2883,6 +3031,9 @@ header.headroom--top.fp .navbar-default .login-clone-campus {
 }
 header.headroom--top.fp .navbar-default .social .custom-icon:hover {
   color: #128862;
+}
+header.headroom--top.fp .navbar-default .megaphone a:hover #main_shape, header.headroom--top.fp .navbar-default .megaphone a:hover #line, header.headroom--top.fp .navbar-default .megaphone a:hover #handler, header.headroom--top.fp .navbar-default .megaphone a:hover #oval, header.headroom--top.fp .navbar-default .megaphone a:hover #wave_one, header.headroom--top.fp .navbar-default .megaphone a:hover #wave_two, header.headroom--top.fp .navbar-default .megaphone a:hover #wave_three {
+  fill: #128862;
 }
 .fluid-container.page-header.fp {
   background-color: #0fa175;
@@ -2993,6 +3144,9 @@ header.headroom--top.fpd .navbar-default .login-clone-campus {
 header.headroom--top.fpd .navbar-default .social .custom-icon:hover {
   color: #b67f00;
 }
+header.headroom--top.fpd .navbar-default .megaphone a:hover #main_shape, header.headroom--top.fpd .navbar-default .megaphone a:hover #line, header.headroom--top.fpd .navbar-default .megaphone a:hover #handler, header.headroom--top.fpd .navbar-default .megaphone a:hover #oval, header.headroom--top.fpd .navbar-default .megaphone a:hover #wave_one, header.headroom--top.fpd .navbar-default .megaphone a:hover #wave_two, header.headroom--top.fpd .navbar-default .megaphone a:hover #wave_three {
+  fill: #b67f00;
+}
 .fluid-container.page-header.fpd {
   background-color: #f6bb2f;
 }
@@ -3101,6 +3255,9 @@ header.headroom--top.ges .navbar-default .login-clone-campus {
 }
 header.headroom--top.ges .navbar-default .social .custom-icon:hover {
   color: #9a1b2d;
+}
+header.headroom--top.ges .navbar-default .megaphone a:hover #main_shape, header.headroom--top.ges .navbar-default .megaphone a:hover #line, header.headroom--top.ges .navbar-default .megaphone a:hover #handler, header.headroom--top.ges .navbar-default .megaphone a:hover #oval, header.headroom--top.ges .navbar-default .megaphone a:hover #wave_one, header.headroom--top.ges .navbar-default .megaphone a:hover #wave_two, header.headroom--top.ges .navbar-default .megaphone a:hover #wave_three {
+  fill: #9a1b2d;
 }
 .fluid-container.page-header.ges {
   background-color: #d14c5e;
@@ -3211,6 +3368,9 @@ header.headroom--top.pacfgs .navbar-default .login-clone-campus {
 header.headroom--top.pacfgs .navbar-default .social .custom-icon:hover {
   color: #5eabc5;
 }
+header.headroom--top.pacfgs .navbar-default .megaphone a:hover #main_shape, header.headroom--top.pacfgs .navbar-default .megaphone a:hover #line, header.headroom--top.pacfgs .navbar-default .megaphone a:hover #handler, header.headroom--top.pacfgs .navbar-default .megaphone a:hover #oval, header.headroom--top.pacfgs .navbar-default .megaphone a:hover #wave_one, header.headroom--top.pacfgs .navbar-default .megaphone a:hover #wave_two, header.headroom--top.pacfgs .navbar-default .megaphone a:hover #wave_three {
+  fill: #5eabc5;
+}
 .fluid-container.page-header.pacfgs {
   background-color: #476f7c;
 }
@@ -3320,6 +3480,9 @@ header.headroom--top.pau .navbar-default .login-clone-campus {
 header.headroom--top.pau .navbar-default .social .custom-icon:hover {
   color: #2b5453;
 }
+header.headroom--top.pau .navbar-default .megaphone a:hover #main_shape, header.headroom--top.pau .navbar-default .megaphone a:hover #line, header.headroom--top.pau .navbar-default .megaphone a:hover #handler, header.headroom--top.pau .navbar-default .megaphone a:hover #oval, header.headroom--top.pau .navbar-default .megaphone a:hover #wave_one, header.headroom--top.pau .navbar-default .megaphone a:hover #wave_two, header.headroom--top.pau .navbar-default .megaphone a:hover #wave_three {
+  fill: #2b5453;
+}
 .fluid-container.page-header.pau {
   background-color: #508d90;
 }
@@ -3428,6 +3591,9 @@ header.headroom--top.news .navbar-default .login-clone-campus {
 }
 header.headroom--top.news .navbar-default .social .custom-icon:hover {
   color: #b90050;
+}
+header.headroom--top.news .navbar-default .megaphone a:hover #main_shape, header.headroom--top.news .navbar-default .megaphone a:hover #line, header.headroom--top.news .navbar-default .megaphone a:hover #handler, header.headroom--top.news .navbar-default .megaphone a:hover #oval, header.headroom--top.news .navbar-default .megaphone a:hover #wave_one, header.headroom--top.news .navbar-default .megaphone a:hover #wave_two, header.headroom--top.news .navbar-default .megaphone a:hover #wave_three {
+  fill: #b90050;
 }
 .fluid-container.page-header.news {
   background-color: #fd2175;
@@ -11306,7 +11472,7 @@ div[class*="item-page-"] table p {
     max-width: 1170px;
   }
   #navigation .navbar-header {
-    padding: 0 40px 0 0;
+    padding: 0;
   }
   .form-search .container .form-inline .search-query {
     width: 480px;

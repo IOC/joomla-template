@@ -180,6 +180,21 @@
                 color: get-color($colors, navbar-hover);
             }
         }
+        .megaphone {
+            a {
+                &:hover {
+                    #main_shape,
+                    #line,
+                    #handler,
+                    #oval,
+                    #wave_one,
+                    #wave_two,
+                    #wave_three {
+                        fill: get-color($colors, navbar-hover);
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -483,6 +498,20 @@
             }
         }
 }
+
+@mixin animation($name, $duration, $timing-function, $iteration-count, $fill-mode) {
+    -webkit-animation-name: $name;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-timing-function: $timing-function;
+    -webkit-animation-iteration-count: $iteration-count;
+    -webkit-animation-fill-mode: $fill-mode;
+    animation-name: $name;
+    animation-duration: $duration;
+    animation-timing-function: $timing-function;
+    animation-iteration-count: $iteration-count;
+    animation-fill-mode: $fill-mode;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     font-size: 17px;
@@ -759,6 +788,21 @@ header.headroom--not-top {
                     span,
                     .custom-icon {
                         color: $ioc-lnk-nb-frpage;
+                    }
+                }
+            }
+        }
+        .megaphone {
+            a {
+                &:hover {
+                    #main_shape,
+                    #line,
+                    #handler,
+                    #oval,
+                    #wave_one,
+                    #wave_two,
+                    #wave_three {
+                        fill: $ioc-lnk-nb-frpage;
                     }
                 }
             }
@@ -1162,6 +1206,72 @@ header.headroom--not-top {
                     font-size: 13px;
                     letter-spacing: 0.8px;
                     font-weight: 600;
+                }
+            }
+        }
+    }
+    .megaphone {
+        float: right;
+        margin-top: 17px;
+        @include transform(rotate(-23deg));
+        #wave_one {
+            @include animation(waving1, 6s, ease-in-out, infinite, forwards);
+        }
+
+        #wave_two {
+            @include animation(waving2, 6s, ease-in-out, infinite, forwards);
+        }
+
+        #wave_three {
+            @include animation(waving3, 6s, ease-in-out, infinite, forwards);
+        }
+        /* KEYFRAMES */
+
+        @-webkit-keyframes waving1 {
+          20%   { opacity: 1; }
+          30%   { opacity: 0; }
+          40%   { opacity: 1; }
+        }
+
+        @keyframes waving1 {
+          20%   { opacity: 1; }
+          30%   { opacity: 0; }
+          40%   { opacity: 1; }
+        }
+
+        @-webkit-keyframes waving2 {
+          25%   { opacity: 1; }
+          35%   { opacity: 0; }
+          45%   { opacity: 1; }
+        }
+
+        @keyframes waving2 {
+          25%   { opacity: 1; }
+          35%   { opacity: 0; }
+          45%   { opacity: 1; }
+        }
+
+        @-webkit-keyframes waving3 {
+          30%   { opacity: 1; }
+          40%   { opacity: 0; }
+          50%   { opacity: 1; }
+        }
+
+        @keyframes waving3 {
+          30%   { opacity: 1; }
+          40%   { opacity: 0; }
+          50%   { opacity: 1; }
+        }
+        a {
+            &:hover {
+                #main_shape,
+                #line,
+                #handler,
+                #oval,
+                #wave_one,
+                #wave_two,
+                #wave_three {
+                    fill: $ioc-accent-mat;
                 }
             }
         }
