@@ -68,12 +68,12 @@ $specialstyle = in_array($params->get('style'), $specialstyles);
 
 foreach ($list as $i => &$item)
 {
-	if ($topmenu) {
-		if (($featured && ($item->alias == 'ioc-estudis' || $item->alias == 'ioc-studies'))
-			|| (!$featured && ($item->alias == 'ioc-noticies' || $item->alias == 'ioc-news'))) {
-			continue;
-		}
-	}
+	// if ($topmenu) {
+	// 	if (($featured && ($item->alias == 'ioc-estudis' || $item->alias == 'ioc-studies'))
+	// 		|| (!$featured && ($item->alias == 'ioc-noticies' || $item->alias == 'ioc-news'))) {
+	// 		continue;
+	// 	}
+	// }
 	$dataattr = '';
 
 	if ($item->params->get('menu-meta_keywords')) {
