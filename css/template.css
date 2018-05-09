@@ -1529,6 +1529,14 @@ header.headroom--not-top .navbar-default .login-clone-campus {
   letter-spacing: 0.8px;
   font-weight: 600;
 }
+.navbar-default .navbar-collapse .navbar-nav li .megaphone {
+  margin-top: -5px;
+  -webkit-transform: rotate(-23deg);
+  -moz-transform: rotate(-23deg);
+  -ms-transform: rotate(-23deg);
+  -o-transform: rotate(-23deg);
+  transform: rotate(-23deg);
+}
 #top {
   height: 40px;
   padding: 5px 0;
@@ -11306,7 +11314,7 @@ div[class*="item-page-"] table p {
     max-width: 1170px;
   }
   #navigation .navbar-header {
-    padding: 0 40px 0 0;
+    padding: 0;
   }
   .form-search .container .form-inline .search-query {
     width: 480px;

@@ -1163,6 +1163,10 @@ header.headroom--not-top {
                     letter-spacing: 0.8px;
                     font-weight: 600;
                 }
+                .megaphone {
+                    margin-top: -5px;
+                    @include transform(rotate(-23deg));
+                }
             }
         }
     }
