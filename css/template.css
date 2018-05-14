@@ -6420,7 +6420,7 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   font-size: 11px;
   font-weight: 500;
   line-height: 1.45;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   text-align: center;
   width: 100%;
   max-width: 70%;
@@ -8226,7 +8226,7 @@ div[class*="item-page-"] table th {
   text-transform: uppercase;
 }
 div[class*="item-page-"] table td {
-  background-color: rgba(185, 213, 234, 0.16);
+  background-color: rgba(195, 214, 224, 0.25);
   text-align: left;
 }
 div[class*="item-page-"] table p {
