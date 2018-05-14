@@ -538,9 +538,17 @@ label, input, button, select, textarea, a {
 
 a {
     color: $ioc-link;
-    outline: 0;
     &:hover {
         text-decoration: underline;
+    }
+    &:focus {
+        outline: thin solid $ioc-outline !important;
+    }
+}
+
+button {
+    &:focus {
+        outline: thin solid $ioc-outline !important;
     }
 }
 
@@ -602,9 +610,9 @@ p {
     margin-bottom: 21px;
 }
 
-button:focus {
-    outline: 0 !important;
-}
+// button:focus {
+//     outline: 0 !important;
+// }
 
 .ioc-accent {
     color: $ioc-text;
@@ -1011,7 +1019,7 @@ header.headroom--not-top {
         &:focus,
         &:active {
             background-color: transparent;
-            outline: none;
+            //outline: none;
             .icon-bar {
                 background-color: $ioc-white;
             }
@@ -1769,7 +1777,8 @@ header.headroom--not-top {
             cursor: pointer;
             margin-top: 34px;
             margin-right: 10px;
-            &:hover {
+            &:hover,
+            &:focus {
                 @include hover-module();
             }
             &.modal-dialog {
@@ -2250,10 +2259,12 @@ header.headroom--not-top {
                 &:last-child {
                     margin-right: auto;
                 }
-                &:hover {
-                    @include hover-module();
-                }
                 a {
+                    &:hover,
+                    &:focus {
+                        @include hover-module();
+                    }
+                    height: 100%;
                     padding: 0;
                     color: $ioc-text;
                 }
@@ -3304,7 +3315,8 @@ header.headroom--not-top {
                         height: 287px;
                         margin-bottom: 0;
                         a {
-                            &:hover {
+                            &:hover,
+                            &:focus {
                                 .element-img {
                                     &.acfgs {
                                         img {
@@ -3740,9 +3752,9 @@ header.headroom--not-top {
                 font-size: 11px;
                 font-weight: 500;
                 box-shadow: none;
-                &:focus {
-                    outline: none;
-                }
+                // &:focus {
+                //     outline: none;
+                // }
             }
             .filter-text {
                 display: inline-block;
@@ -4916,7 +4928,7 @@ div[class*="item-page-fp-"] {
                             letter-spacing: 1px;
                             color: $ioc-text2;
                             text-decoration: none;
-                            outline: none;
+                            //outline: none;
                             padding: 14px 43px 14px 30px;
                             display: inline-block;
                             width: 100%;
@@ -5083,7 +5095,7 @@ div[class*="item-page-fp-"] {
                 height: 40px;
                 &:focus {
                     border: 1px solid $ioc-bg-header;
-                    outline: 0 none;
+                    //outline: 0 none;
                 }
                 max-width:         calc(100% - 40px);
                 max-width: -webkit-calc(100% - 40px);
@@ -5331,7 +5343,7 @@ div[class*="item-page-fp-"] {
 
 .back-to-top {
     display: block;
-    outline: none;
+    //outline: none;
     height: 26px;
     right: -100%;
     bottom: 13px;

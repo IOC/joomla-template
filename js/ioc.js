@@ -36,7 +36,7 @@
             }
         };
 
-        $('[data-toggle="tooltip"]').tooltip({trigger: 'hover click'});
+        $('[data-toggle="tooltip"]').tooltip({trigger: 'hover click focus'});
 
         if ($filtering) {
             $filtering.removeClass('hidden');
@@ -82,6 +82,8 @@
             $avisos.find('.next div').remove();
             $(nodesavisos[prev]).appendTo($avisos.find('.prev'));
             $(nodesavisos[next]).appendTo($avisos.find('.next'));
+            $avisos.find('.prev').attr('aria-label', $(nodesavisos[prev]).text());
+            $avisos.find('.next').attr('aria-label', $(nodesavisos[next]).text());
         };
 
         var faqsblockpanels = function (width) {
@@ -148,7 +150,6 @@
                     if (mov) {
                         if (pos + 1 < total) {
                             $anchor = $(PLUGINVARS.SELECTORS.PANELS).eq( pos ).find(PLUGINVARS.SELECTORS.PANELTITLE);
-                            //gotopanel($anchor.attr('href'));
                             $anchor = $(PLUGINVARS.SELECTORS.PANELS).eq( pos + 1 ).find(PLUGINVARS.SELECTORS.PANELTITLE);
                             gotopanel($anchor.attr('href'));
                         }
@@ -156,7 +157,6 @@
                         // Move to previous panel
                         if (pos - 1 >= 0) {
                             $anchor = $(PLUGINVARS.SELECTORS.PANELS).eq( pos ).find(PLUGINVARS.SELECTORS.PANELTITLE);
-                            //gotopanel($anchor.attr('href'));
                             $anchor = $(PLUGINVARS.SELECTORS.PANELS).eq( pos - 1 ).find(PLUGINVARS.SELECTORS.PANELTITLE);
                             gotopanel($anchor.attr('href'));
                         }

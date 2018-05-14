@@ -68,9 +68,9 @@ $menuitems = array();
       ?>
       <div class="container login-campus">
         <?php if (!empty($warningmessage)) : ?>
-          <span class="ioc-warning" data-toggle="tooltip" data-original-title="<?php echo $warningmessage; ?>" data-placement="bottom"></span>
+          <span class="ioc-warning" data-toggle="tooltip" data-original-title="<?php echo $warningmessage; ?>" data-placement="bottom" aria-label="<?php echo JText::_('TPL_IOC_WARNING_CAMPUS');?>" tabindex="0"></span>
         <?php endif; ?>
-        <button id="login-campus-large" class="login-campus-body first hidden-xs hidden-sm" data-toggle="modal" data-target="#login-campus" tabindex="1">
+        <button id="login-campus-large" class="login-campus-body first hidden-xs hidden-sm" data-toggle="modal" data-target="#login-campus" tabindex="12">
             <span class="custom-icon" aria-hidden="true"></span>
             <span class="login-text"><?php echo JText::_('TPL_IOC_LOGIN_CAMPUS') . ' ';?></span>
         </button>
