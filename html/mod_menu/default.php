@@ -74,6 +74,10 @@ foreach ($list as $i => &$item)
 	// 		continue;
 	// 	}
 	// }
+	$item->tabindex = 0;
+	if ($topmenu) {
+		$item->tabindex = $i + 3;
+	}
 	$dataattr = '';
 
 	if ($item->params->get('menu-meta_keywords')) {

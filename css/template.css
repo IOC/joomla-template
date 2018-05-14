@@ -898,10 +898,15 @@ label, input, button, select, textarea, a {
 }
 a {
   color: #337ab7;
-  outline: 0;
 }
 a:hover {
   text-decoration: underline;
+}
+a:focus {
+  outline: thin solid rgba(255, 255, 255, .3) !important;
+}
+button:focus {
+  outline: thin solid rgba(255, 255, 255, .3) !important;
 }
 h1, h2, h3, h4, h5, legend {
   font-family: "Montserrat", sans-serif;
@@ -953,9 +958,6 @@ ol li:before {
 }
 p {
   margin-bottom: 21px;
-}
-button:focus {
-  outline: 0 !important;
 }
 .ioc-accent {
   color: #354959;
@@ -1336,7 +1338,6 @@ header.headroom--not-top .navbar-default .login-clone-campus {
 }
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:active {
   background-color: transparent;
-  outline: none;
 }
 .navbar-default .navbar-toggle:focus .icon-bar, .navbar-default .navbar-toggle:active .icon-bar {
   background-color: #fff;
@@ -3936,7 +3937,7 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   margin-top: 34px;
   margin-right: 10px;
 }
-.modal-modules .content-modal-modules .modal-module:hover, .modal-resources .content-modal-modules .modal-module:hover, .modal-modules .body-modal-modules .modal-module:hover, .modal-resources .body-modal-modules .modal-module:hover, .modal-modules .body-modal-resources .modal-module:hover, .modal-resources .body-modal-resources .modal-module:hover, .modal-modules .content-modal-modules .modal-resource:hover, .modal-resources .content-modal-modules .modal-resource:hover, .modal-modules .body-modal-modules .modal-resource:hover, .modal-resources .body-modal-modules .modal-resource:hover, .modal-modules .body-modal-resources .modal-resource:hover, .modal-resources .body-modal-resources .modal-resource:hover {
+.modal-modules .content-modal-modules .modal-module:hover, .modal-resources .content-modal-modules .modal-module:hover, .modal-modules .body-modal-modules .modal-module:hover, .modal-resources .body-modal-modules .modal-module:hover, .modal-modules .body-modal-resources .modal-module:hover, .modal-resources .body-modal-resources .modal-module:hover, .modal-modules .content-modal-modules .modal-resource:hover, .modal-resources .content-modal-modules .modal-resource:hover, .modal-modules .body-modal-modules .modal-resource:hover, .modal-resources .body-modal-modules .modal-resource:hover, .modal-modules .body-modal-resources .modal-resource:hover, .modal-resources .body-modal-resources .modal-resource:hover, .modal-modules .content-modal-modules .modal-module:focus, .modal-resources .content-modal-modules .modal-module:focus, .modal-modules .body-modal-modules .modal-module:focus, .modal-resources .body-modal-modules .modal-module:focus, .modal-modules .body-modal-resources .modal-module:focus, .modal-resources .body-modal-resources .modal-module:focus, .modal-modules .content-modal-modules .modal-resource:focus, .modal-resources .content-modal-modules .modal-resource:focus, .modal-modules .body-modal-modules .modal-resource:focus, .modal-resources .body-modal-modules .modal-resource:focus, .modal-modules .body-modal-resources .modal-resource:focus, .modal-resources .body-modal-resources .modal-resource:focus {
   cursor: pointer;
   -webkit-transition: filter 0.1s ease;
   -moz-transition: filter 0.1s ease;
@@ -3944,7 +3945,7 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   -o-transition: filter 0.1s ease;
   transition: filter 0.1s ease;
 }
-.modal-modules .content-modal-modules .modal-module:hover .element-img, .modal-resources .content-modal-modules .modal-module:hover .element-img, .modal-modules .body-modal-modules .modal-module:hover .element-img, .modal-resources .body-modal-modules .modal-module:hover .element-img, .modal-modules .body-modal-resources .modal-module:hover .element-img, .modal-resources .body-modal-resources .modal-module:hover .element-img, .modal-modules .content-modal-modules .modal-resource:hover .element-img, .modal-resources .content-modal-modules .modal-resource:hover .element-img, .modal-modules .body-modal-modules .modal-resource:hover .element-img, .modal-resources .body-modal-modules .modal-resource:hover .element-img, .modal-modules .body-modal-resources .modal-resource:hover .element-img, .modal-resources .body-modal-resources .modal-resource:hover .element-img {
+.modal-modules .content-modal-modules .modal-module:hover .element-img, .modal-resources .content-modal-modules .modal-module:hover .element-img, .modal-modules .body-modal-modules .modal-module:hover .element-img, .modal-resources .body-modal-modules .modal-module:hover .element-img, .modal-modules .body-modal-resources .modal-module:hover .element-img, .modal-resources .body-modal-resources .modal-module:hover .element-img, .modal-modules .content-modal-modules .modal-resource:hover .element-img, .modal-resources .content-modal-modules .modal-resource:hover .element-img, .modal-modules .body-modal-modules .modal-resource:hover .element-img, .modal-resources .body-modal-modules .modal-resource:hover .element-img, .modal-modules .body-modal-resources .modal-resource:hover .element-img, .modal-resources .body-modal-resources .modal-resource:hover .element-img, .modal-modules .content-modal-modules .modal-module:focus .element-img, .modal-resources .content-modal-modules .modal-module:focus .element-img, .modal-modules .body-modal-modules .modal-module:focus .element-img, .modal-resources .body-modal-modules .modal-module:focus .element-img, .modal-modules .body-modal-resources .modal-module:focus .element-img, .modal-resources .body-modal-resources .modal-module:focus .element-img, .modal-modules .content-modal-modules .modal-resource:focus .element-img, .modal-resources .content-modal-modules .modal-resource:focus .element-img, .modal-modules .body-modal-modules .modal-resource:focus .element-img, .modal-resources .body-modal-modules .modal-resource:focus .element-img, .modal-modules .body-modal-resources .modal-resource:focus .element-img, .modal-resources .body-modal-resources .modal-resource:focus .element-img {
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);
   -ms-transform: scale(1.05);
@@ -4480,7 +4481,12 @@ div[class*="item-page-news"] .ioc-breadcrumb {
 .submenu .submenu-content .navbar-nav li:last-child, .substudies .submenu-content .navbar-nav li:last-child, .submenu .substudies-content .navbar-nav li:last-child, .substudies .substudies-content .navbar-nav li:last-child {
   margin-right: auto;
 }
-.submenu .submenu-content .navbar-nav li:hover, .substudies .submenu-content .navbar-nav li:hover, .submenu .substudies-content .navbar-nav li:hover, .substudies .substudies-content .navbar-nav li:hover {
+.submenu .submenu-content .navbar-nav li a, .substudies .submenu-content .navbar-nav li a, .submenu .substudies-content .navbar-nav li a, .substudies .substudies-content .navbar-nav li a {
+  height: 100%;
+  padding: 0;
+  color: #354959;
+}
+.submenu .submenu-content .navbar-nav li a:hover, .substudies .submenu-content .navbar-nav li a:hover, .submenu .substudies-content .navbar-nav li a:hover, .substudies .substudies-content .navbar-nav li a:hover, .submenu .submenu-content .navbar-nav li a:focus, .substudies .submenu-content .navbar-nav li a:focus, .submenu .substudies-content .navbar-nav li a:focus, .substudies .substudies-content .navbar-nav li a:focus {
   cursor: pointer;
   -webkit-transition: filter 0.1s ease;
   -moz-transition: filter 0.1s ease;
@@ -4488,16 +4494,12 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   -o-transition: filter 0.1s ease;
   transition: filter 0.1s ease;
 }
-.submenu .submenu-content .navbar-nav li:hover .element-img, .substudies .submenu-content .navbar-nav li:hover .element-img, .submenu .substudies-content .navbar-nav li:hover .element-img, .substudies .substudies-content .navbar-nav li:hover .element-img {
+.submenu .submenu-content .navbar-nav li a:hover .element-img, .substudies .submenu-content .navbar-nav li a:hover .element-img, .submenu .substudies-content .navbar-nav li a:hover .element-img, .substudies .substudies-content .navbar-nav li a:hover .element-img, .submenu .submenu-content .navbar-nav li a:focus .element-img, .substudies .submenu-content .navbar-nav li a:focus .element-img, .submenu .substudies-content .navbar-nav li a:focus .element-img, .substudies .substudies-content .navbar-nav li a:focus .element-img {
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);
   -ms-transform: scale(1.05);
   -o-transform: scale(1.05);
   transform: scale(1.05);
-}
-.submenu .submenu-content .navbar-nav li a, .substudies .submenu-content .navbar-nav li a, .submenu .substudies-content .navbar-nav li a, .substudies .substudies-content .navbar-nav li a {
-  padding: 0;
-  color: #354959;
 }
 .submenu .submenu-content .navbar-nav li .element-img-container, .substudies .submenu-content .navbar-nav li .element-img-container, .submenu .substudies-content .navbar-nav li .element-img-container, .substudies .substudies-content .navbar-nav li .element-img-container {
   overflow: hidden;
@@ -5591,70 +5593,70 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   margin-bottom: 0;
   padding: 0;
 }
-.container.all-studies .studies .studies-content .navbar-nav li a:hover .element-img.acfgs img {
+.container.all-studies .studies .studies-content .navbar-nav li a:hover .element-img.acfgs img, .container.all-studies .studies .studies-content .navbar-nav li a:focus .element-img.acfgs img {
   -webkit-transform: scale(1.5) translate(12%, -8%);
   -moz-transform: scale(1.5) translate(12%, -8%);
   -ms-transform: scale(1.5) translate(12%, -8%);
   -o-transform: scale(1.5) translate(12%, -8%);
   transform: scale(1.5) translate(12%, -8%);
 }
-.container.all-studies .studies .studies-content .navbar-nav li a:hover .element-img.btx img {
+.container.all-studies .studies .studies-content .navbar-nav li a:hover .element-img.btx img, .container.all-studies .studies .studies-content .navbar-nav li a:focus .element-img.btx img {
   -webkit-transform: scale(1.5) translate(10%, -8%);
   -moz-transform: scale(1.5) translate(10%, -8%);
   -ms-transform: scale(1.5) translate(10%, -8%);
   -o-transform: scale(1.5) translate(10%, -8%);
   transform: scale(1.5) translate(10%, -8%);
 }
-.container.all-studies .studies .studies-content .navbar-nav li a:hover .element-img.competic img {
+.container.all-studies .studies .studies-content .navbar-nav li a:hover .element-img.competic img, .container.all-studies .studies .studies-content .navbar-nav li a:focus .element-img.competic img {
   -webkit-transform: translate(-50%, 0);
   -moz-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
   -o-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
 }
-.container.all-studies .studies .studies-content .navbar-nav li a:hover .element-img.eoi img {
+.container.all-studies .studies .studies-content .navbar-nav li a:hover .element-img.eoi img, .container.all-studies .studies .studies-content .navbar-nav li a:focus .element-img.eoi img {
   -webkit-transform: translate(0, -26%);
   -moz-transform: translate(0, -26%);
   -ms-transform: translate(0, -26%);
   -o-transform: translate(0, -26%);
   transform: translate(0, -26%);
 }
-.container.all-studies .studies .studies-content .navbar-nav li a:hover .element-img.fesp img {
+.container.all-studies .studies .studies-content .navbar-nav li a:hover .element-img.fesp img, .container.all-studies .studies .studies-content .navbar-nav li a:focus .element-img.fesp img {
   -webkit-transform: translate(-25%, -43.5%);
   -moz-transform: translate(-25%, -43.5%);
   -ms-transform: translate(-25%, -43.5%);
   -o-transform: translate(-25%, -43.5%);
   transform: translate(-25%, -43.5%);
 }
-.container.all-studies .studies .studies-content .navbar-nav li a:hover .element-img.fp img {
+.container.all-studies .studies .studies-content .navbar-nav li a:hover .element-img.fp img, .container.all-studies .studies .studies-content .navbar-nav li a:focus .element-img.fp img {
   -webkit-transform: scale(1.5) translate(-22%, -8%);
   -moz-transform: scale(1.5) translate(-22%, -8%);
   -ms-transform: scale(1.5) translate(-22%, -8%);
   -o-transform: scale(1.5) translate(-22%, -8%);
   transform: scale(1.5) translate(-22%, -8%);
 }
-.container.all-studies .studies .studies-content .navbar-nav li a:hover .element-img.fpd img {
+.container.all-studies .studies .studies-content .navbar-nav li a:hover .element-img.fpd img, .container.all-studies .studies .studies-content .navbar-nav li a:focus .element-img.fpd img {
   -webkit-transform: scale(1.5) translate(12%, -8%);
   -moz-transform: scale(1.5) translate(12%, -8%);
   -ms-transform: scale(1.5) translate(12%, -8%);
   -o-transform: scale(1.5) translate(12%, -8%);
   transform: scale(1.5) translate(12%, -8%);
 }
-.container.all-studies .studies .studies-content .navbar-nav li a:hover .element-img.ges img {
+.container.all-studies .studies .studies-content .navbar-nav li a:hover .element-img.ges img, .container.all-studies .studies .studies-content .navbar-nav li a:focus .element-img.ges img {
   -webkit-transform: translate(0, -39%);
   -moz-transform: translate(0, -39%);
   -ms-transform: translate(0, -39%);
   -o-transform: translate(0, -39%);
   transform: translate(0, -39%);
 }
-.container.all-studies .studies .studies-content .navbar-nav li a:hover .element-img.miniops img {
+.container.all-studies .studies .studies-content .navbar-nav li a:hover .element-img.miniops img, .container.all-studies .studies .studies-content .navbar-nav li a:focus .element-img.miniops img {
   -webkit-transform: scale(1.5) translate(12%, -8%);
   -moz-transform: scale(1.5) translate(12%, -8%);
   -ms-transform: scale(1.5) translate(12%, -8%);
   -o-transform: scale(1.5) translate(12%, -8%);
   transform: scale(1.5) translate(12%, -8%);
 }
-.container.all-studies .studies .studies-content .navbar-nav li a:hover .element-img.pau img {
+.container.all-studies .studies .studies-content .navbar-nav li a:hover .element-img.pau img, .container.all-studies .studies .studies-content .navbar-nav li a:focus .element-img.pau img {
   -webkit-transform: translate(-38%, -38%);
   -moz-transform: translate(-38%, -38%);
   -ms-transform: translate(-38%, -38%);
@@ -6088,9 +6090,6 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   font-size: 11px;
   font-weight: 500;
   box-shadow: none;
-}
-.subpage-text-buttons-banner .subpage-filter .filter-dropdown .filter-select:focus, .subpage-buttons-filter .subpage-filter .filter-dropdown .filter-select:focus {
-  outline: none;
 }
 .subpage-text-buttons-banner .subpage-filter .filter-dropdown .filter-text, .subpage-buttons-filter .subpage-filter .filter-dropdown .filter-text {
   display: inline-block;
@@ -7268,7 +7267,6 @@ div[class*="item-page-fp-"] .subpagebody {
   letter-spacing: 1px;
   color: #364958;
   text-decoration: none;
-  outline: none;
   padding: 14px 43px 14px 30px;
   display: inline-block;
   width: 100%;
@@ -7446,7 +7444,6 @@ div[class*="item-page-fp-"] .subpagebody {
 }
 .form-search .container .form-inline .search-query:focus {
   border: 1px solid #202b47;
-  outline: 0 none;
 }
 #login-campus.login-form-campus .modal-dialog {
   max-width: 350px;
@@ -7689,7 +7686,6 @@ div[class*="item-page-fp-"] .subpagebody {
 }
 .back-to-top {
   display: block;
-  outline: none;
   height: 26px;
   right: -100%;
   bottom: 13px;
@@ -8365,10 +8361,10 @@ div[class*="item-page-"] table p {
     z-index: 1;
   }
   .bck-displayed.ioc-languages {
-    top: 235px;
+    top: 275px;
   }
   .bck-displayed.social {
-    top: 245px;
+    top: 285px;
   }
   .bck-displayed.social a + a {
     margin-left: 20px;

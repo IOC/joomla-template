@@ -25,19 +25,19 @@ else
     $width = '';
 }
 ?>
-<div class="search<?php echo $moduleclass_sfx ?>">
+<div class="search<?php echo $moduleclass_sfx ?>" aria-labelledby="search-button" role="dialog">
     <form action="<?php echo JRoute::_('index.php');?>" method="post" class="form-inline">
         <?php
             $output = '<label for="mod-search-searchword" class="element-invisible">' . $label . '</label> ';
             $output .= '<input name="searchword" id="mod-search-searchword" maxlength="' . $maxlength . '"  class="inputbox search-query" type="search"' . $width;
-            $output .= ' placeholder="' . $text . '" />';
+            $output .= ' placeholder="' . $text . '" tabindex="0"/>';
             //$output .= '<button type="reset" title="Esborra" class="btn btn-default btn-reset-search"><span class="glyphicon glyphicon-remove"></span></button>';
             $output .= '<span id="deleteinputcontent" class="custom-icon delete visible-xs visible-sm"></span>';
             if ($button) :
                 if ($imagebutton) :
                     $btn_output = ' <input type="image" alt="' . $button_text . '" class="button" src="' . $img . '" onclick="this.form.searchword.focus();"/>';
                 else :
-                    $btn_output = ' <button class="btn-search" onclick="this.form.searchword.focus();">&nbsp;</button>';
+                    $btn_output = ' <button class="btn-search" onclick="this.form.searchword.focus();" tabindex="0">&nbsp;</button>';
                 endif;
 
                 switch ($button_pos) :

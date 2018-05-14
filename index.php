@@ -6,10 +6,10 @@
 # Website http://www.gsuez.cl
 -------------------------------------------------------------------------*/	// no direct access
 defined('_JEXEC') or die;
-include 'includes/params.php';
+require_once('includes/params.php');
 if ($params->get('compile_sass', '0') === '1')
 {
-	require_once "includes/sass.php";
+    require_once("includes/sass.php");
 }
 if ($params->get('refresh_media_version', '0') === '1')
 {
@@ -19,7 +19,7 @@ if ($params->get('refresh_media_version', '0') === '1')
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>">
 <?php
- include 'includes/head.php';
+require_once('includes/head.php');
 $app = JFactory::getApplication();
 $menu = $app->getMenu();
 $lang = JFactory::getLanguage();
@@ -66,10 +66,10 @@ if ($itemid && JRequest::getCmd('view') != 'search') {
 <span class="icon-bar"></span>
 </button>
     <div id="brand">
-        <a href="http://ensenyament.gencat.cat" class="ioc-departament">
+        <a href="http://ensenyament.gencat.cat" class="ioc-departament" tabindex="1">
             <img class=" logo" src="<?php echo $imgpath; ?>logo-dep-ens.svg" alt="Departament d'Ensenyament" />
         </a>
-        <a href="<?php  echo $this->params->get('logo_link')   ?>" class="ioc-logo">
+        <a href="<?php echo $this->params->get('logo_link');?>" class="ioc-logo" tabindex="1">
             <img class="logo" src="<?php echo $imgpath; ?>logo-ioc-petit.svg" alt="Institut Obert de Catalunya" />
         </a>
     </div>
@@ -84,7 +84,6 @@ if ($itemid && JRequest::getCmd('view') != 'search') {
     <!-- Search -->
     <div class="visible-xs visible-sm tiny-search">
         <button type="button" class="btn-lg" data-toggle="collapse" data-target="#search">
-            <!-- <span class="glyphicon glyphicon-search" aria-hidden="true"></span> -->
             <span class="custom-icon"></span>
         </button>
     </div>
@@ -96,13 +95,13 @@ if ($itemid && JRequest::getCmd('view') != 'search') {
     </button>
 <?php  endif; ?>
 <div class="social hidden-sm hidden-xs text-left">
-        <a href="https://es.linkedin.com/in/ioc-institut-obert-de-catalunya-bb4805b1" target="_blank">
+        <a href="https://es.linkedin.com/in/ioc-institut-obert-de-catalunya-bb4805b1" target="_blank" aria-label="<?php echo JText::_('TPL_IOC_LINKEDIN');?>" tabindex="9">
             <span class="linkedin custom-icon"></span>
         </a>
-        <a href="http://twitter.com/ioc" target="_blank">
+        <a href="http://twitter.com/ioc" target="_blank" aria-label="<?php echo JText::_('TPL_IOC_TWITTER');?>" tabindex="10">
             <span class="twitter custom-icon"></span>
         </a>
-        <a href="https://vimeo.com/institutobert" target="_blank">
+        <a href="https://vimeo.com/institutobert" target="_blank" aria-label="<?php echo JText::_('TPL_IOC_VIMEO');?>" tabindex="11">
             <span class="vimeo custom-icon"></span>
         </a>
 </div>
@@ -115,8 +114,7 @@ if ($itemid && JRequest::getCmd('view') != 'search') {
     <ul class="nav navbar-nav search">
         <li>
             <span class="hidden-md hidden-sm hidden-xs">|</span>
-            <button type="button" class="btn-md" data-toggle="collapse" data-target="#search">
-                <!-- <span class="glyphicon glyphicon-search white" aria-hidden="true"></span> -->
+            <button id="search-button" type="button" class="btn-md" data-toggle="collapse" data-target="#search" tabindex="8">
                 <span class="custom-icon" aria-hidden="true"></span>
                 <span class="string-search hidden-md hidden-sm hidden-xs"><?php echo JText::_('JSEARCH_FILTER_SUBMIT');?></span>
             </button>
@@ -129,7 +127,7 @@ if ($itemid && JRequest::getCmd('view') != 'search') {
                         <?php  endif; ?>
 </div>
 <div class="megaphone hidden-xs hidden-sm">
-    <a href="/educacio/#news">
+    <a href="/educacio/#news" aria-label="<?php echo JText::_('TPL_IOC_LINK_NEWS');?>" tabindex="2" title="<?php echo JText::_('TPL_IOC_TAG_NEWS');?>">
         <svg width="32px" height="22px" viewBox="0 0 32 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="ioc-news-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 <path d="M18,3.12132034 L16.5606602,4.56066017 C15.6454749,5.4758454 14.224626,6.08478065 12.2941742,6.47087101 L12.1485293,6.5 L5,6.5 C3.61928813,6.5 2.5,7.61928813 2.5,9 L2.5,11 C2.5,12.3807119 3.61928813,13.5 5,13.5 L12.1846584,13.5 L12.3638034,13.5447862 C13.9629043,13.9445615 15.3698519,14.7485315 16.5606602,15.9393398 L18,17.3786797 L18,3.12132034 Z M19.5,18 C19.5,18.3333333 19.3333333,18.6666667 19,19 C18.5,19.5 17.5,19 17.5,19 L15.5,17 C14.5,16 13.3333333,15.3333333 12,15 L5,15 C2.790861,15 1,13.209139 1,11 L1,9 C1,6.790861 2.790861,5 5,5 L12,5 C13.6666667,4.66666667 14.8333333,4.16666667 15.5,3.5 L17.5,1.5 C18.1666667,1.16666667 18.6666667,1.16666667 19,1.5 C19.3333333,1.83333333 19.5,2.16666667 19.5,2.5 L19.5,18 Z" id="main_shape" fill="white" fill-rule="nonzero"></path>
@@ -224,7 +222,7 @@ if ($itemid && JRequest::getCmd('view') != 'search') {
 <div id="main-box">
 
 <jdoc:include type="message" />
-<div class="collapse form-search search-top" id="search" aria-labelledby="search" aria-hidden="true">
+<div class="collapse form-search search-top" id="search" aria-labelledby="search">
     <div class="container">
         <jdoc:include type="modules" name="search" style="modules" />
     </div>
@@ -236,7 +234,7 @@ if ($itemid && JRequest::getCmd('view') != 'search') {
     </div>
 <?php  endif; ?>
 <?php  if ($this->countModules('login-campus')) : ?>
-<div class="modal fade login-form-campus" id="login-campus" tabindex="-1" role="dialog" aria-labelledby="login-campus-large login-campus-medium login-campus-small" aria-hidden="true">
+<div class="modal fade login-form-campus" id="login-campus" role="dialog" aria-labelledby="form-title">
     <div class="modal-dialog">
         <div class="modal-dialog modal-md">
             <div class="modal-content">
@@ -359,7 +357,7 @@ if ($itemid && JRequest::getCmd('view') != 'search') {
 </div><!-- end panelnav -->
 <?php  endif;// end panelnav  ?>
 <!-- menu slide -->
-<a href="#" class="back-to-top"><span class="custom-icon"></span><span class="hidden-xs hidden-sm text"><?php echo JText::_('TPL_IOC_BACKTOTOP'); ?></span></a>
+<a href="#" class="back-to-top" tabindex="0"><span class="custom-icon"></span><span class="hidden-xs hidden-sm text"><?php echo JText::_('TPL_IOC_BACKTOTOP'); ?></span></a>
 <jdoc:include type="modules" name="debug" />
 </section></div>
 <?php
