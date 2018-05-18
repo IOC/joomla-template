@@ -273,6 +273,12 @@
             $node.focus();
         });
 
+        $(document).on('click', '#form-error-campus', function(e) {
+            $(this).hide();
+            $('#sigin').removeClass('form-error');
+            $('#username').focus();
+        });
+
         $(document).on('show.bs.collapse', '.form-search', function(e) {
             $('header').addClass('big');
             $('.form-search .btn-search').addClass('big');
@@ -457,6 +463,27 @@
                 $(this).closest('.modal').modal('hide');
             }
         });
+
+        if(window.location.search.length > 0) {
+            var matches = window.location.search.match(/errorcode\=(\d)/);
+            var missatge = '';
+            if (matches && matches.length > 1) {
+                if(matches[1] == 1) {
+                    missatge = Joomla.JText._('TPL_IOC_ERROR_CAMPUS_1');
+                } else if(matches[1] == 2) {
+                    missatge = Joomla.JText._('TPL_IOC_ERROR_CAMPUS_2');
+                } else if(matches[1] == 3) {
+                    missatge = Joomla.JText._('TPL_IOC_ERROR_CAMPUS_3');
+                } else if(matches[1] == 4) {
+                    missatge = Joomla.JText._('TPL_IOC_ERROR_CAMPUS_4');
+                }
+                if (missatge.length > 0) {
+                    $('#form-error-campus').text(missatge);
+                    $('#sigin').addClass('form-error');
+                    $('button[data-target="#login-campus"]').click();
+                }
+            }
+        }
 
         // Google Analytics
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

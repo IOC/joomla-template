@@ -365,6 +365,12 @@ if ($itemid && JRequest::getCmd('view') != 'search') {
 </div>
   <?php  } ?>
 <!-- page -->
+<?php
+JText::script('TPL_IOC_ERROR_CAMPUS_1');
+JText::script('TPL_IOC_ERROR_CAMPUS_2');
+JText::script('TPL_IOC_ERROR_CAMPUS_3');
+JText::script('TPL_IOC_ERROR_CAMPUS_4');
+?>
 <!-- JS -->
 <script type="text/javascript" src="<?php echo $tpath; ?>/js/template.min.js"></script>
 <!-- JS -->

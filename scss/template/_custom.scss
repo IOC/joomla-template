@@ -2338,6 +2338,7 @@ header.headroom--not-top {
     .img-responsive {
         margin: 0;
         max-height: 103.7px;
+        width: 100%;
     }
     .ioctags {
         position: relative;
@@ -5115,6 +5116,7 @@ div[class*="item-page-fp-"] {
             color: $ioc-text;
             margin: 100px auto 0;
             .modal-content {
+                position: relative;
                 border-radius: 2px;
                 background-color: $ioc-bg-form-login;
                 .modal-body {
@@ -5153,6 +5155,36 @@ div[class*="item-page-fp-"] {
                     text-transform: uppercase;
                 }
                 form {
+                    &.form-error {
+                        margin-top: 75px;
+                        .form-error-campus {
+                            position: absolute;
+                            background-color: $ioc-error-campus-bg;
+                            font-size: 12px;
+                            font-weight: 500;
+                            line-height: 1.33;
+                            height: 45px;
+                            width: 100%;
+                            @include flexbox($flex-wrap: nowrap);
+                            align-items: center;
+                            color: $ioc-error-campus;
+                            padding: 7px 52px 7px 81px;
+                            top: 180px;
+                            left: 0;
+                            overflow: hidden;
+                            pointer-events: none;
+                            &:before {
+                                content: '\e900';
+                                font-family: 'ioc-icons';
+                                font-size: 24px;
+                                color: $ioc-error-campus;
+                                cursor: pointer;
+                                pointer-events: auto;
+                                margin-left: -41px;
+                                margin-right: 15px;
+                            }
+                        }
+                    }
                     margin-top: 34px;
                     .input-group {
                         position: relative;
@@ -5204,6 +5236,9 @@ div[class*="item-page-fp-"] {
                             &:focus {
                                 box-shadow: none;
                                 border-color: $ioc-study-button;
+                            }
+                            &:invalid {
+                                border-color: $ioc-title-ges;
                             }
                         }
                         .custom-icon {

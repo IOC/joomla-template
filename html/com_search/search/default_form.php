@@ -43,25 +43,25 @@ $upper_limit = $lang->getUpperLimitSearchWord();
             </div>
         </fieldset>
     <?php endif; ?>
-    <div class="searchintro<?php echo $this->params->get('pageclass_sfx'); ?>">
-        <?php if (!empty($this->searchword)) : ?>
+    <?php if (!empty($this->searchword)) : ?>
+        <div class="searchintro<?php echo $this->params->get('pageclass_sfx'); ?>">
             <p>
                 <?php echo JText::plural('TPL_IOC_SEARCH_KEYWORD_N_RESULTS', '<span class="total_results">' . $this->total . '</span>'); ?>
             </p>
-        <?php endif; ?>
-        <?php if ($this->total > 0) : ?>
-        <div class="form-limit">
-            <label for="limit">
-                <?php echo JText::_('TPL_IOC_DISPLAY_NUM'); ?>
-            </label>
-            <?php echo $this->pagination->getLimitBox(); ?>
-            <span>
-                <?php echo JText::_('TPL_IOC_RESULTS_PAGE'); ?>
-            </span>
+            <?php if ($this->total > 0) : ?>
+                <div class="form-limit">
+                    <label for="limit">
+                        <?php echo JText::_('TPL_IOC_DISPLAY_NUM'); ?>
+                    </label>
+                    <?php echo $this->pagination->getLimitBox(); ?>
+                    <span>
+                        <?php echo JText::_('TPL_IOC_RESULTS_PAGE'); ?>
+                    </span>
+                </div>
+                <p class="counter">
+                    <?php echo $this->pagination->getPagesCounter(); ?>
+                </p>
+            <?php endif; ?>
         </div>
-        <p class="counter">
-            <?php echo $this->pagination->getPagesCounter(); ?>
-        </p>
     <?php endif; ?>
-    </div>
 </form>

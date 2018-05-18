@@ -329,6 +329,14 @@
                             width: 100%;
                             margin: 0;
                         }
+                        &.form-error {
+                            .form-error-campus {
+                                top: 110px;
+                                &:before {
+                                    margin-left: -55px;
+                                }
+                            }
+                        }
                     }
                     .form-title {
                         margin-top: 60px;
