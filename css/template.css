@@ -4633,6 +4633,7 @@ div[class*="item-page-news"] .ioc-breadcrumb {
 .news-text .img-responsive {
   margin: 0;
   max-height: 103.7px;
+  width: 100%;
 }
 .news-text .ioctags {
   position: relative;
@@ -7464,6 +7465,7 @@ div[class*="item-page-fp-"] .subpagebody {
   cursor: pointer;
 }
 #login-campus.login-form-campus .modal-dialog .modal-content {
+  position: relative;
   border-radius: 2px;
   background-color: #f8faff;
 }
@@ -7504,6 +7506,43 @@ div[class*="item-page-fp-"] .subpagebody {
 }
 #login-campus.login-form-campus .modal-dialog .modal-content form {
   margin-top: 34px;
+}
+#login-campus.login-form-campus .modal-dialog .modal-content form.form-error {
+  margin-top: 75px;
+}
+#login-campus.login-form-campus .modal-dialog .modal-content form.form-error .form-error-campus {
+  position: absolute;
+  background-color: #f75555;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33;
+  height: 45px;
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  flex: 1 0 auto;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fae5e5;
+  padding: 7px 52px 7px 81px;
+  top: 180px;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+#login-campus.login-form-campus .modal-dialog .modal-content form.form-error .form-error-campus:before {
+  content: '\e900';
+  font-family: 'ioc-icons';
+  font-size: 24px;
+  color: #fae5e5;
+  cursor: pointer;
+  pointer-events: auto;
+  margin-left: -41px;
+  margin-right: 15px;
 }
 #login-campus.login-form-campus .modal-dialog .modal-content form .input-group {
   position: relative;
@@ -7562,6 +7601,9 @@ div[class*="item-page-fp-"] .subpagebody {
 #login-campus.login-form-campus .modal-dialog .modal-content form .input-group input:focus {
   box-shadow: none;
   border-color: #005578;
+}
+#login-campus.login-form-campus .modal-dialog .modal-content form .input-group input:invalid {
+  border-color: #eb5066;
 }
 #login-campus.login-form-campus .modal-dialog .modal-content form .input-group .custom-icon {
   position: absolute;
@@ -8393,6 +8435,12 @@ div[class*="item-page-"] table p {
     text-align: center;
     width: 100%;
     margin: 0;
+  }
+  #login-campus.login-form-campus .modal-dialog .modal-content form.form-error .form-error-campus {
+    top: 110px;
+  }
+  #login-campus.login-form-campus .modal-dialog .modal-content form.form-error .form-error-campus:before {
+    margin-left: -55px;
   }
   #login-campus.login-form-campus .modal-dialog .modal-content .form-title {
     margin-top: 60px;
