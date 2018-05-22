@@ -1054,42 +1054,6 @@
             }
         }
     }
-    .error {
-        .error-text {
-            .errorcode {
-                top: 95px;
-                font-size: 65px;
-            }
-            .errormessage {
-                font-size: 20px;
-            }
-        }
-        .error-search {
-            background-size: 100vw 230px;
-            .form-inline {
-                height: 40px;
-                .search-query {
-                    width: 100%;
-                    height: 40px;
-                    font-size: 14px;
-                    padding: 6px 12px;
-                }
-                .btn-search {
-                    height: 40px;
-                    width: 40px;
-                    &:before {
-                        top: 12px;
-                        left: 12px;
-                    }
-                }
-            }
-            .btn-primary {
-                height: 40px;
-                line-height: 40px;
-                font-size: 14px;
-            }
-        }
-    }
 }
 
 @media all and (max-width: 480px) {
