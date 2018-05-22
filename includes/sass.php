@@ -31,6 +31,7 @@ try
 	$scss->compileFile($scssFolder . '/template.scss', $cssFolder . '/template.min.css', FileCompiler::FORMATTER_COMPRESSED);
     $scss->compileFile($scssFolder . '/editor.scss', $cssFolder . '/editor.css', FileCompiler::FORMATTER_EXPANDED);
     $scss->compileFile($scssFolder . '/editor.scss', $cssFolder . '/editor.min.css', FileCompiler::FORMATTER_COMPRESSED);
+    $scss->compileFile($scssFolder . '/error.scss', $cssFolder . '/error.css', FileCompiler::FORMATTER_EXPANDED);
 }
 catch (Exception $e)
 {

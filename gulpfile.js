@@ -92,8 +92,12 @@ gulp.task('sass', function () {
 		assetsPath + '/scss/template.scss',
 		'css'
 	);
-	return compileSassFile(
+	compileSassFile(
 		assetsPath + '/scss/editor.scss',
+		'css'
+	);
+	return compileSassFile(
+		assetsPath + '/scss/error.scss',
 		'css'
 	);
 });
