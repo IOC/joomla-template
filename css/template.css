@@ -3804,6 +3804,24 @@ div[class*="item-page-news"] .ioc-breadcrumb {
 .layout-employment .employment-content .navbar-nav li a.checklist .element-img {
   background-image: url('../images/assessorament_44x54px.svg');
 }
+.layout-employment .employment-content .navbar-nav li a.checklist:before, .layout-employment .employment-content .navbar-nav li a.checklist:after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: auto;
+  height: 38px;
+  width: 202px;
+}
+.layout-employment .employment-content .navbar-nav li a.checklist:before {
+  top: 7px;
+  background-image: url('../images/ribbon-a.png');
+}
+.layout-employment .employment-content .navbar-nav li a.checklist:after {
+  top: 44px;
+  background-image: url('../images/ribbon-r.png');
+}
 .layout-employment .employment-content .navbar-nav li a.diferencia .element-img {
   background-image: url('../images/collectius_singulars_44x54px.svg');
 }
@@ -8434,6 +8452,17 @@ div[class*="item-page-"] table p {
   .layout-employment .employment-content .navbar-nav li a .element-title p {
     width: 69%;
   }
+  .layout-employment .employment-content .navbar-nav li a.checklist:before, .layout-employment .employment-content .navbar-nav li a.checklist:after {
+    height: 34px;
+    width: 147px;
+  }
+  .layout-employment .employment-content .navbar-nav li a.checklist:before {
+    background-image: url('../images/ribbon-a-mobile.png');
+  }
+  .layout-employment .employment-content .navbar-nav li a.checklist:after {
+    top: 38px;
+    background-image: url('../images/ribbon-r-mobile.png');
+  }
   #news .container.blog-featurednews .items-row .item.link_items .link-elements .extra-new .more-news-icon {
     display: none;
   }
@@ -11823,6 +11852,17 @@ div[class*="item-page-"] table p {
   .layout-employment .employment-content .navbar-nav li a .element-title p {
     height: 54px;
     line-height: 1.2;
+  }
+  .layout-employment .employment-content .navbar-nav li a.checklist:before, .layout-employment .employment-content .navbar-nav li a.checklist:after {
+    height: 46px;
+    width: 262px;
+  }
+  .layout-employment .employment-content .navbar-nav li a.checklist:before {
+    background-image: url('../images/ribbon-a-big.png');
+  }
+  .layout-employment .employment-content .navbar-nav li a.checklist:after {
+    top: 54px;
+    background-image: url('../images/ribbon-r-big.png');
   }
   .layout-employment .employment-content .navbar-nav li .meta-separator {
     top: 188px;

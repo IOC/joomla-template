@@ -1677,6 +1677,25 @@ header.headroom--not-top {
                         .element-img {
                             background-image: url('../images/assessorament_44x54px.svg');
                         }
+                        &:before,
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            left: -2px;
+                            background-repeat: no-repeat;
+                            background-position: top center;
+                            background-size: auto;
+                            height: 38px;
+                            width: 202px;
+                        }
+                        &:before {
+                            top: 7px;
+                            background-image: url('../images/ribbon-a.png');
+                        }
+                        &:after {
+                            top: 44px;
+                            background-image: url('../images/ribbon-r.png');
+                        }
                     }
                     &.diferencia {
                         .element-img {

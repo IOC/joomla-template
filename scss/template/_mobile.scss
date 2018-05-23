@@ -517,6 +517,20 @@
                                 width: 69%;
                             }
                         }
+                        &.checklist {
+                            &:before,
+                            &:after {
+                                height: 34px;
+                                width: 147px;
+                            }
+                            &:before {
+                                background-image: url('../images/ribbon-a-mobile.png');
+                            }
+                            &:after {
+                                top: 38px;
+                                background-image: url('../images/ribbon-r-mobile.png');
+                            }
+                        }
                     }
                 }
             }
@@ -4475,6 +4489,20 @@
                             p {
                                 height: 54px;
                                 line-height: 1.2;
+                            }
+                        }
+                        &.checklist {
+                            &:before,
+                            &:after {
+                                height: 46px;
+                                width: 262px;
+                            }
+                            &:before {
+                                background-image: url('../images/ribbon-a-big.png');
+                            }
+                            &:after {
+                                top: 54px;
+                                background-image: url('../images/ribbon-r-big.png');
                             }
                         }
                     }
