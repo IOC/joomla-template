@@ -355,8 +355,11 @@
             e.preventDefault();
             isapanel = $(this).closest('.panel-group, .study-tabs').hasClass('panel-group');
             linkhash = $(this).prop('hash');
+        });
+
+        $(document).on('hidden.bs.collapse', '#collapse-tabs, #panel-sections, .study-tabs, .panel-modal-resources, .faqsindex', function(e) {
             if (history.pushState) {
-                history.pushState({}, '', window.location.href.replace(window.location.hash, '') + linkhash);
+                history.pushState({}, '', window.location.href.replace(window.location.hash, ''));
             }
         });
 
@@ -366,6 +369,9 @@
             if (position) {
                 adjust = (isapanel ? 105 : 170);
                 $("html, body").animate({ scrollTop: position.top - adjust}, 800);
+            }
+            if (history.pushState) {
+                history.pushState({}, '', window.location.href.replace(window.location.hash, '') + linkhash);
             }
             linkhash = '';
             isapanel = false;
@@ -481,6 +487,9 @@
                     $('#form-error-campus').text(missatge);
                     $('#sigin').addClass('form-error');
                     $('button[data-target="#login-campus"]').click();
+                    if(history.pushState) {
+                        history.pushState({}, '', window.location.href.replace(window.location.search, ''));
+                    }
                 }
             }
         }
