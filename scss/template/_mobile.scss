@@ -1690,6 +1690,16 @@
             }
         }
     }
+    .contact-ioc {
+        label {
+            font-size: 13.5px;
+        }
+        .contact-files {
+            legend {
+                font-size: 15px;
+            }
+        }
+    }
 }
 
 @media all and (min-width: 648px) {
@@ -3018,6 +3028,10 @@
         .attachmentsContainer {
             padding: 0 15px;
         }
+    }
+    .contact-ioc {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 
