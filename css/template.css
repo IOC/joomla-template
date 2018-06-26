@@ -876,6 +876,45 @@ div#jform_catid_chzn.chzn-container, div#jform_catid_chzn.chzn-container div.chz
  * @param  $study:  null               Nom de l'estudi
  * @param  $colors: null               Colors de cada element de l'estudi
  */
+#main-box div.item-page-default.search .chzn-container .chzn-single, #main-box div.item-page-news.search .chzn-container .chzn-single, .contact-ioc .chzn-container .chzn-single {
+  height: 40px;
+  width: auto;
+  border-radius: 0;
+  border: 1px solid #202b47;
+  background-color: white;
+  background-image: none;
+  padding: 0;
+  margin: 5px 3px 0 3px;
+}
+#main-box div.item-page-default.search .chzn-container .chzn-single span, #main-box div.item-page-news.search .chzn-container .chzn-single span, .contact-ioc .chzn-container .chzn-single span {
+  font-size: 14px;
+  vertical-align: middle;
+  line-height: 40px;
+  margin-right: 30px;
+  padding: 0 10px;
+}
+#main-box div.item-page-default.search .chzn-container .chzn-single div, #main-box div.item-page-news.search .chzn-container .chzn-single div, .contact-ioc .chzn-container .chzn-single div {
+  width: 31px;
+}
+#main-box div.item-page-default.search .chzn-container .chzn-single div b, #main-box div.item-page-news.search .chzn-container .chzn-single div b, .contact-ioc .chzn-container .chzn-single div b {
+  position: relative;
+  background-color: #202b47;
+  background-image: none;
+}
+#main-box div.item-page-default.search .chzn-container .chzn-single div b:before, #main-box div.item-page-news.search .chzn-container .chzn-single div b:before, .contact-ioc .chzn-container .chzn-single div b:before {
+  content: '\e90c';
+  font-family: 'ioc-icons';
+  font-size: 10px;
+  color: #fff;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  position: absolute;
+  top: 5px;
+  left: 12px;
+}
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 17px;
@@ -1747,45 +1786,6 @@ header.headroom--not-top .navbar-default .login-clone-campus {
 }
 #main-box div.item-page-default.search .chzn-container .chzn-drop, #main-box div.item-page-news.search .chzn-container .chzn-drop {
   width: auto;
-}
-#main-box div.item-page-default.search .chzn-container .chzn-single, #main-box div.item-page-news.search .chzn-container .chzn-single {
-  height: 40px;
-  width: auto;
-  border-radius: 0;
-  border: 1px solid #202b47;
-  background-color: white;
-  background-image: none;
-  padding: 0;
-  margin: 0 3px;
-}
-#main-box div.item-page-default.search .chzn-container .chzn-single span, #main-box div.item-page-news.search .chzn-container .chzn-single span {
-  font-size: 14px;
-  vertical-align: middle;
-  line-height: 40px;
-  margin-right: 30px;
-  padding: 0 10px;
-}
-#main-box div.item-page-default.search .chzn-container .chzn-single div, #main-box div.item-page-news.search .chzn-container .chzn-single div {
-  width: 31px;
-}
-#main-box div.item-page-default.search .chzn-container .chzn-single div b, #main-box div.item-page-news.search .chzn-container .chzn-single div b {
-  position: relative;
-  background-color: #202b47;
-  background-image: none;
-}
-#main-box div.item-page-default.search .chzn-container .chzn-single div b:before, #main-box div.item-page-news.search .chzn-container .chzn-single div b:before {
-  content: '\e90c';
-  font-family: 'ioc-icons';
-  font-size: 10px;
-  color: #fff;
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
-  position: absolute;
-  top: 5px;
-  left: 12px;
 }
 #main-box div.item-page-default.search .search-results .result-data, #main-box div.item-page-news.search .search-results .result-data {
   border-top: 1px solid #d7d9de;
@@ -8169,6 +8169,172 @@ div[class*="item-page-"] table p {
 #main div.attachmentsContainer div.attachmentsList a.at_url:hover {
   color: #337ab7;
 }
+.contact-ioc .contact-type label {
+  display: inline-block;
+  margin-right: 20px;
+}
+.contact-ioc select, .contact-ioc input, .contact-ioc textarea {
+  border-radius: 0;
+  max-width: 100%;
+  border-color: #202b47;
+  margin-top: 5px;
+}
+.contact-ioc label {
+  font-size: 16px;
+}
+.contact-ioc select, .contact-ioc input[type="text"], .contact-ioc input[type="email"] {
+  font-size: 15px;
+  height: 40px;
+  display: block;
+}
+.contact-ioc textarea.form-control {
+  font-size: 15px;
+  height: 120px;
+}
+.contact-ioc input[type="file"] {
+  white-space: pre-line;
+}
+.contact-ioc div {
+  margin-bottom: 15px;
+}
+.contact-ioc .required {
+  color: #eb5066;
+  font-size: 20px;
+  font-weight: 400;
+}
+.contact-ioc .clarification {
+  font-size: 12px;
+  margin-top: 3px;
+}
+.contact-ioc .clarification.error {
+  color: #eb5066;
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+.contact-ioc .contact-files legend {
+  font-size: 20px;
+  margin-top: 20px;
+}
+.contact-ioc .contact-submit {
+  text-align: center;
+}
+.contact-ioc .contact-submit {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 0 auto;
+  justify-content: center;
+  align-items: center;
+  width: 172px;
+  height: 32px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+  background-color: #202b47;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.17);
+  margin: 66px auto;
+  letter-spacing: 1.2px;
+}
+.contact-ioc .contact-submit:hover {
+  text-decoration: none;
+  color: #01c1b9;
+}
+.contact-ioc .chzn-container {
+  margin: 0;
+}
+.contact-ioc .chzn-container .chzn-drop {
+  width: 100%;
+}
+.contact-ioc .chzn-container .chzn-single.input-required {
+  border-color: #eb5066;
+}
+.contact-ioc .chzn-container .chzn-single span {
+  font-size: 15px;
+}
+.contact-ioc .chzn-container .chzn-results li {
+  font-size: 15px;
+  line-height: 1em;
+}
+.contact-ioc .contact-loader, .contact-ioc .contact-loader:before, .contact-ioc .contact-loader:after {
+  background: #fff;
+  -webkit-animation-name: load1;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: load1;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  width: 1em;
+  height: 4em;
+}
+.contact-ioc .contact-loader {
+  color: #fff;
+  text-indent: -9999em;
+  margin: 5px auto 0;
+  position: relative;
+  font-size: 4px;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.contact-ioc .contact-loader:before, .contact-ioc .contact-loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.contact-ioc .contact-loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.contact-ioc .contact-loader:after {
+  left: 1.5em;
+}
+@-webkit-keyframes load1 {
+  0%, 80%, 100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%, 80%, 100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+.contact-ioc .contact-gohome {
+  display: block;
+  margin-top: 50px;
+  text-decoration: underline;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: -0.3px;
+  color: rgba(53, 73, 89, 0.88);
+}
 @media all and (max-width: 991px) {
   #navigation .navbar-header {
     float: none;
@@ -9501,6 +9667,12 @@ div[class*="item-page-"] table p {
   .footer #footer-collapse .panel-group .panel-default .panel-heading h3 a .custom-icon.plus {
     right: 18px;
   }
+  .contact-ioc label {
+    font-size: 13.5px;
+  }
+  .contact-ioc .contact-files legend {
+    font-size: 15px;
+  }
 }
 @media all and (min-width: 648px) {
   #main-box div.item-page-news, #main-box div.item-page-default, #main-box div.page-default, #main-box div.page-default.search, #main-box .attachmentsContainer {
@@ -10621,6 +10793,10 @@ div[class*="item-page-"] table p {
   }
   #main-box .attachmentsContainer {
     padding: 0 15px;
+  }
+  .contact-ioc {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {

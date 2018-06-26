@@ -512,6 +512,42 @@
     animation-fill-mode: $fill-mode;
 }
 
+%custom-select {
+    height: 40px;
+    width: auto;
+    border-radius: 0;
+    border: 1px solid $ioc-bg-header;
+    background-color: white;
+    background-image: none;
+    padding: 0;
+    margin: 5px 3px 0 3px;
+    span {
+        font-size: 14px;
+        vertical-align: middle;
+        line-height: 40px;
+        margin-right: 30px;
+        padding: 0 10px;
+    }
+    div {
+        width: 31px;
+        b {
+            position: relative;
+            background-color: $ioc-bg-header;
+            background-image: none;
+            &:before {
+                content: '\e90c';
+                font-family: 'ioc-icons';
+                font-size: 10px;
+                color: $ioc-white;
+                @include transform(rotate(90deg));
+                position: absolute;
+                top: 5px;
+                left: 12px;
+            }
+        }
+    }
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     font-size: 17px;
@@ -1395,39 +1431,7 @@ header.headroom--not-top {
                     width: auto;
                 }
                 .chzn-single {
-                    height: 40px;
-                    width: auto;
-                    border-radius: 0;
-                    border: 1px solid $ioc-bg-header;
-                    background-color: white;
-                    background-image: none;
-                    padding: 0;
-                    margin: 0 3px;
-                    span {
-                        font-size: 14px;
-                        vertical-align: middle;
-                        line-height: 40px;
-                        margin-right: 30px;
-                        padding: 0 10px;
-                    }
-                    div {
-                        width: 31px;
-                        b {
-                            position: relative;
-                            background-color: $ioc-bg-header;
-                            background-image: none;
-                            &:before {
-                                content: '\e90c';
-                                font-family: 'ioc-icons';
-                                font-size: 10px;
-                                color: $ioc-white;
-                                @include transform(rotate(90deg));
-                                position: absolute;
-                                top: 5px;
-                                left: 12px;
-                            }
-                        }
-                    }
+                    @extend %custom-select;
                 }
             }
             .search-results {
@@ -5813,5 +5817,170 @@ div[class*="item-page-"] {
                 color: $ioc-link;
             }
         }
+    }
+}
+
+.contact-ioc {
+    .contact-type {
+        label {
+            display: inline-block;
+            margin-right: 20px;
+        }
+    }
+    select, input, textarea {
+        border-radius: 0;
+        max-width: 100%;
+        border-color: $ioc-bg-header;
+        margin-top: 5px;
+    }
+    label {
+        font-size: 16px;
+    }
+    select, input[type="text"], input[type="email"] {
+        font-size: 15px;
+        height: 40px;
+        display: block;
+    }
+    textarea.form-control {
+        font-size: 15px;
+        height: 120px;
+    }
+    input[type="file"] {
+        white-space: pre-line;
+    }
+    div {
+        margin-bottom: 15px;
+    }
+    .required {
+        color: $ioc-error-input;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .clarification {
+        font-size: 12px;
+        margin-top: 3px;
+        &.error {
+            color: $ioc-error-input;
+            margin-bottom: 0;
+            margin-left: 5px;
+        }
+    }
+    .contact-files {
+        legend {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    }
+    .contact-submit {
+        text-align: center;
+    }
+    .contact-submit {
+        @include  flexbox($justify-content: center);
+        align-items: center;
+        width: 172px;
+        height: 32px;
+        color: $ioc-white;
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        text-align: center;
+        border: none;
+        border-radius: 3px;
+        background-color: $ioc-bg-header;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.17);
+        margin: 66px auto;
+        letter-spacing: 1.2px;
+        &:hover {
+            text-decoration: none;
+            color: $ioc-accent;
+        }
+    }
+    .chzn-container {
+        margin: 0;
+        .chzn-drop {
+            width: 100%;
+        }
+        .chzn-single {
+            @extend %custom-select;
+            &.input-required {
+                border-color: $ioc-error-input;
+            }
+            span {
+                font-size: 15px;
+            }
+        }
+        .chzn-results {
+            li {
+                font-size: 15px;
+                line-height: 1em;
+            }
+        }
+    }
+    .contact-loader,
+    .contact-loader:before,
+    .contact-loader:after {
+        background: $ioc-white;
+        @include animation(load1, 1s, ease-in-out, infinite, forwards);
+        width: 1em;
+        height: 4em;
+    }
+    .contact-loader {
+        color: $ioc-white;
+        text-indent: -9999em;
+        margin: 5px auto 0;
+        position: relative;
+        font-size: 4px;
+        @include transform(translateZ(0));
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+    }
+    .contact-loader:before,
+    .contact-loader:after {
+        content: '';
+        position: absolute;
+        top: 0;
+    }
+    .contact-loader:before {
+        left: -1.5em;
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+    }
+    .contact-loader:after {
+        left: 1.5em;
+    }
+    @-webkit-keyframes load1 {
+        0%,
+        80%,
+        100% {
+            box-shadow: 0 0;
+            height: 4em;
+        }
+        40% {
+            box-shadow: 0 -2em;
+            height: 5em;
+        }
+    }
+    @keyframes load1 {
+        0%,
+        80%,
+        100% {
+            box-shadow: 0 0;
+            height: 4em;
+        }
+        40% {
+            box-shadow: 0 -2em;
+            height: 5em;
+        }
+    }
+    .contact-gohome {
+        display: block;
+        margin-top: 50px;
+        text-decoration: underline;
+        text-align: center;
+        font-size: 14px;
+        letter-spacing: -0.3px;
+        color: rgba($ioc-text, 0.88);
     }
 }
