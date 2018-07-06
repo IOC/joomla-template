@@ -38,6 +38,13 @@
 
         $('[data-toggle="tooltip"]').tooltip({trigger: 'hover click focus'});
 
+        if ($('#myCarousel video').length) {
+            if (originwidth > 990) {
+                $('#myCarousel video').attr('autoplay', 'autoplay');
+            } else {
+                $('#myCarousel video').removeAttr('autoplay');
+            }
+        }
         if ($filtering) {
             $filtering.removeClass('hidden');
         }
@@ -298,6 +305,13 @@
                 var $header = $('header');
                 if ($faqs) {
                     faqsblockpanels($(this).width());
+                }
+                if ($('#myCarousel video').length) {
+                    if (originwidth > 990) {
+                        $('#myCarousel video').attr('autoplay', 'autoplay');
+                    } else {
+                        $('#myCarousel video').removeAttr('autoplay');
+                    }
                 }
                 if ($(this).width() > 990 && $header.hasClass('bck-displayed')) {
                     $header.removeClass('bck-displayed');
