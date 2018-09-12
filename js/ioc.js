@@ -36,7 +36,7 @@
             }
         };
 
-        $('[data-toggle="tooltip"]').tooltip({trigger: 'hover click focus'});
+        $('[data-toggle="tooltip"]').tooltip({trigger: 'hover focus'});
 
         if ($('#myCarousel video').length) {
             if (originwidth > 990) {
