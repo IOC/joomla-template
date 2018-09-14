@@ -29,6 +29,7 @@ if ($menu->getActive() == $menu->getDefault($lang->getTag())
 } else {
     $frontpage = '';
 }
+$multilang = ($this->language != 'ca-es');
 $pageclass = '';
 $imgpath = 'templates/' . $app->getTemplate() . '/images/';
 $itemid = JRequest::getVar('Itemid');
@@ -46,7 +47,7 @@ if ($itemid && JRequest::getCmd('view') != 'search') {
     }
 }
 ?>
-<body class="<?php echo $frontpage;?>">
+<body class="<?php echo $frontpage; echo $multilang ? ' multilang' : '';?>">
 <?php
  if($layout=='boxed'){ ?>
 <div class="layout-boxed">
@@ -82,11 +83,13 @@ if ($itemid && JRequest::getCmd('view') != 'search') {
         </div>
     <?php endif; ?>
     <!-- Search -->
-    <div class="visible-xs visible-sm tiny-search">
-        <button type="button" class="btn-lg" data-toggle="collapse" data-target="#search">
-            <span class="custom-icon"></span>
-        </button>
-    </div>
+    <?php if(!$multilang) : ?>
+        <div class="visible-xs visible-sm tiny-search">
+            <button type="button" class="btn-lg" data-toggle="collapse" data-target="#search">
+                <span class="custom-icon"></span>
+            </button>
+        </div>
+    <?php endif; ?>
 </div>
 <?php  if ($this->countModules('login-campus')) : ?>
     <button id="login-campus-medium" class="hidden-xs hidden-sm login-clone-campus" data-toggle="modal" data-target="#login-campus">
@@ -110,22 +113,26 @@ if ($itemid && JRequest::getCmd('view') != 'search') {
     <jdoc:include type="modules" name="lang-menu" style="none" />
 </div>
 <?php endif; ?>
-<div class="navbar-collapse collapse col-md-1 col-lg-1 col-sm-1 hidden-xs ioc-search">
-    <ul class="nav navbar-nav search">
-        <li>
-            <span class="hidden-md hidden-sm hidden-xs">|</span>
-            <button id="search-button" type="button" class="btn-md" data-toggle="collapse" data-target="#search" tabindex="8">
-                <span class="custom-icon" aria-hidden="true"></span>
-                <span class="string-search hidden-md hidden-sm hidden-xs"><?php echo JText::_('JSEARCH_FILTER_SUBMIT');?></span>
-            </button>
-        </li>
-    </ul>
-</div>
+    <div class="navbar-collapse collapse col-md-1 col-lg-1 col-sm-1 hidden-xs ioc-search">
+        <?php if (!$multilang): ?>
+            <ul class="nav navbar-nav search">
+                <li>
+                    <span class="hidden-md hidden-sm hidden-xs">|</span>
+                    <button id="search-button" type="button" class="btn-md" data-toggle="collapse" data-target="#search" tabindex="8">
+                        <span class="custom-icon" aria-hidden="true"></span>
+                        <span class="string-search hidden-md hidden-sm hidden-xs"><?php echo JText::_('JSEARCH_FILTER_SUBMIT');?></span>
+                    </button>
+                </li>
+            </ul>
+        <?php endif; ?>
+    </div>
+
 <div class="navbar-collapse collapse ioc-menu col-sm-6 col-md-8 col-lg-9" aria-expanded="false">
 <?php  if ($this->countModules('navigation')) : ?>
                         <jdoc:include type="modules" name="navigation" style="none" />
                         <?php  endif; ?>
 </div>
+<?php if (!$multilang) : ?>
 <div class="megaphone hidden-xs hidden-sm">
     <a href="/educacio/#news" aria-label="<?php echo JText::_('TPL_IOC_LINK_NEWS');?>" tabindex="2" title="<?php echo JText::_('TPL_IOC_TAG_NEWS');?>">
         <svg width="32px" height="22px" viewBox="0 0 32 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -141,6 +148,7 @@ if ($itemid && JRequest::getCmd('view') != 'search') {
     </svg>
     </a>
 </div>
+<?php  endif; ?>
 </div></div>
 </div>
 </header>
@@ -370,6 +378,8 @@ JText::script('TPL_IOC_ERROR_CAMPUS_1');
 JText::script('TPL_IOC_ERROR_CAMPUS_2');
 JText::script('TPL_IOC_ERROR_CAMPUS_3');
 JText::script('TPL_IOC_ERROR_CAMPUS_4');
+JText::script('TPL_IOC_TAB_NEXT');
+JText::script('TPL_IOC_TAB_PREVIOUS');
 ?>
 <!-- JS -->
 <script type="text/javascript" src="<?php echo $tpath; ?>/js/template.min.js"></script>

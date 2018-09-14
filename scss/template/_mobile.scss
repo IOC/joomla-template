@@ -173,6 +173,43 @@
     body {
         font-size: 16px;
     }
+    .multilang {
+        .bck-displayed {
+            &.social {
+                top: 200px;
+            }
+        }
+        .container.study-main {
+            .study-overview {
+                .study-overview-headline,
+                .study-overview-text {
+                    max-width: 523px;
+                }
+                .study-overview-headline {
+                    line-height: 1.87;
+                    padding-bottom: 48px;
+                    margin-bottom: 48px;
+                    &:after {
+                        display: block;
+                    }
+                }
+                .study-overview-text {
+                    line-height: 2.08;
+
+                }
+            }
+        }
+        .subpage-text-banner {
+            padding-top: 277px;
+            .subpage-text {
+                margin-top: 109px;
+                margin-bottom: 112px;
+                p {
+                    max-width: 513px;
+                }
+            }
+        }
+    }
     .headroom--not-top,
     .bck-displayed {
         #navigation {
@@ -575,6 +612,9 @@
                         }
                     }
                 }
+                .nonews {
+                    margin-top: -11px;
+                }
             }
         }
     }
@@ -647,8 +687,16 @@
             max-width: 75%;
         }
     }
+    .study-multilang-buttons {
+        margin-top: 50px;
+        .subpage-button {
+            width: 160px;
+            height: 160px;
+        }
+    }
 
-    .subpage-text-buttons-banner {
+    .subpage-text-buttons-banner,
+    .subpage-text-banner {
         margin-bottom: 0;
         .subpage-text {
             margin-top: 79px;
@@ -657,6 +705,12 @@
                 font-size: 14px;
                 line-height: 1.43;
             }
+        }
+    }
+    .subpage-text-banner {
+        margin-top: 17px;
+        .subpage-text {
+            margin-top: 132px;
         }
     }
     .subpage-text-buttons {
@@ -691,6 +745,7 @@
     .subpage-only-text,
     .subpage-text-buttons,
     .subpage-text-buttons-banner,
+    .subpage-text-banner,
     .subpage-buttons-filter {
         .subpage-content-text {
             p {
@@ -1103,6 +1158,40 @@
             }
         }
     }
+    .multilang {
+        .container.study-main {
+            .study-overview {
+                .study-overview-headline,
+                .study-overview-text {
+                    max-width: 100%;
+                }
+                .study-overview-headline {
+                    line-height: 1.48;
+                    padding-bottom: 0;
+                    margin-bottom: 37px;
+                    &:after {
+                        display: none;
+                    }
+                }
+                .study-overview-text {
+                    line-height: 1.5;
+
+                }
+            }
+        }
+        .subpage-text-banner {
+            padding-top: 196px;
+            margin-top: -154px;
+            .subpage-text {
+                margin-top: 44px;
+                margin-bottom: 52px;
+                padding-bottom: 0;
+            }
+            .subpage-banner {
+                height: 60vw;
+            }
+        }
+    }
     .header {
         .navbar-default {
             .navbar-header {
@@ -1379,7 +1468,7 @@
                             height: auto;
                             padding: 10px 0;
                             h3 {
-                                display: none;
+                                font-size: 10px;
                             }
                             .study-block {
                                 .semiheader {
@@ -1509,6 +1598,7 @@
     .subpage-only-text,
     .subpage-text-buttons,
     .subpage-text-buttons-banner,
+    .subpage-text-banner,
     .subpage-buttons-filter {
         background-position: center bottom;
         background-size: 100vw 95%;
@@ -1547,13 +1637,15 @@
         background-image: url('../images/seccio-text-botons-bck-mobile.svg');
     }
     .subpage-text-buttons-banner,
+    .subpage-text-banner,
     .subpage-buttons-filter {
         background-image: url('../images/cicles-bck-mobile.svg');
     }
-    .subpage-text-buttons-banner {
+    .subpage-text-buttons-banner,
+    .subpage-text-banner {
         margin-top: 73px;
         margin-bottom: 0;
-         background-size: 100vw 75%;
+        background-size: 100vw 75%;
         background-position: left 25px;
         .subpage-text {
             margin: 58px auto 0;
@@ -1568,6 +1660,12 @@
             margin-top: 0;
             height: 70vw;
             background-size: 100%;
+        }
+    }
+    .subpage-text-banner {
+        margin-top: -139px;
+        .subpage-text {
+            margin-top: 189px;
         }
     }
     .subpage-bigbanner {
@@ -1858,6 +1956,13 @@
             }
         }
     }
+    .multilang {
+        .container {
+            &.all-studies {
+                margin-top: 30px;
+            }
+        }
+    }
     #container {
         .container {
             padding: 0 15px;
@@ -2009,6 +2114,10 @@
                             }
                         }
                     }
+                }
+                .nonews {
+                    margin-top: 0;
+                    margin-bottom: 53px;
                 }
             }
         }
@@ -2365,6 +2474,27 @@
             max-width: 97%;
         }
     }
+    .study-multilang-buttons {
+        margin: 30px auto 0;
+        max-width: 330px;
+        justify-content: center;
+        .subpage-button {
+            height: 140px;
+            width: 140px;
+            margin: 0 10px 10px 0;
+            .custom-icon {
+                top: 30px;
+            }
+            .icon-text {
+                font-size: 9px;
+                font-weight: 500;
+                letter-spacing: 1.2px;
+                top: 101px;
+                padding: 0;
+                max-width: 97%;
+            }
+        }
+    }
     .subpage-text-buttons {
         .subpage-buttons {
             max-width: 290px;
@@ -2377,6 +2507,11 @@
             .subpage-group-buttons {
                 justify-content: space-between;
             }
+        }
+    }
+    .multilang {
+        .subpage-bigbanner {
+            margin-bottom: 0;
         }
     }
     .subpage-bigbanner {
@@ -2977,7 +3112,8 @@
             }
         }
     }
-    .subpage-text-buttons-banner {
+    .subpage-text-buttons-banner,
+    .subpage-text-banner {
         .subpage-text {
             p {
                 max-width: 66%;
@@ -4222,6 +4358,15 @@
         width: 1180px;
     }
     @include max-width-article(676px, 1180px);
+    .multilang {
+        .subpage-text-banner {
+            padding-top: 422px;
+            .subpage-text {
+                margin-top: 188px;
+                margin-bottom: 178px;
+            }
+        }
+    }
     .form-search {
         .container {
             .form-inline {
@@ -4483,7 +4628,7 @@
         .employment-content {
             bottom: 86px;
             .navbar-nav {
-                max-width: 1169px;
+                max-width: 1170px;
                 li {
                     width: 260px;
                     height: 321px;
@@ -4694,6 +4839,7 @@
     .subpage-only-text,
     .subpage-text-buttons,
     .subpage-text-buttons-banner,
+    .subpage-text-banner,
     .subpage-buttons-filter {
         background-repeat: no-repeat;
         background-position: center top;
@@ -4941,6 +5087,7 @@
         }
     }
     .subpage-text-buttons-banner .subpage-banner,
+    .subpage-text-banner .subpage-banner,
     .subpage-buttons-filter .subpage-banner {
         height: 406px;
         background-position: center;

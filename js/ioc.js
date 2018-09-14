@@ -17,8 +17,8 @@
         var originwidth = $(window).width();
         var PLUGINVARS = {
             HTML: {
-                PREVIOUS:       '<div class="button-tab-nav prev">Pas anterior</div>',
-                NEXT:           '<div class="button-tab-nav next">Pas següent</div>',
+                PREVIOUS:       '<div class="button-tab-nav prev">' + Joomla.JText._('TPL_IOC_TAB_PREVIOUS') + '</div>',
+                NEXT:           '<div class="button-tab-nav next">' + Joomla.JText._('TPL_IOC_TAB_NEXT') + '</div>',
                 BUTTONDIV:      '<div class="button-div panel-body"></div>'
             },
             SELECTORS: {
@@ -373,7 +373,7 @@
 
         $(document).on('hidden.bs.collapse', '#collapse-tabs, #panel-sections, .study-tabs, .panel-modal-resources, .faqsindex', function(e) {
             if (history.pushState) {
-                history.pushState({}, '', window.location.href.replace(window.location.hash, ''));
+                history.replaceState({}, '', window.location.href.replace(window.location.hash, ''));
             }
         });
 
@@ -385,7 +385,7 @@
                 $("html, body").animate({ scrollTop: position.top - adjust}, 800);
             }
             if (history.pushState) {
-                history.pushState({}, '', window.location.href.replace(window.location.hash, '') + linkhash);
+                history.replaceState({}, '', window.location.href.replace(window.location.hash, '') + linkhash);
             }
             linkhash = '';
             isapanel = false;
@@ -414,6 +414,12 @@
                 });
             } else {
                 $('.substudies .nav.navbar-nav').removeClass('filtering').find('li').removeClass('third').show(800);
+            }
+        });
+
+        $(document).on('click', '.nav.navbar-nav a', function(e) {
+            if ($(this).attr('aria-disabled') == 'true') {
+                e.preventDefault();
             }
         });
 

@@ -19,7 +19,7 @@ defined('_JEXEC') or die;
         </div>
         <div class="col-sm-12 col-md-10 col-lg-10">
             <p>
-                <a href="avis-legal">Avís legal</a>: La Generalitat de Catalunya<sup>©</sup> permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+                <a href="avis-legal"><?php echo JText::_('TPL_IOC_LEGAL_NOTICE'); ?></a>: <?php echo JText::_('TPL_IOC_LEGAL_MESSAGE'); ?>
             </p>
         </div>
     </div>

@@ -21,7 +21,7 @@ $ownstyles = array (
 );
 
 if (in_array($params->get('style'), $ownstyles)) {
-    echo '<p>' . $item->title . '</p>';
+    echo '<div class="element-title"><p>' . $item->title . '</p></div>';
     return;
 }
 

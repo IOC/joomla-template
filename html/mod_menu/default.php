@@ -25,13 +25,6 @@ if ($params->get('menutype') == 'topmenu') {
 	$class = "nav navbar-nav";
 	$menunavclass = "";
 
-/*	$class = "panel-group";
-	$menunavclass = "panel panel-default";*/
-}
-
-$numelements = count($list);
-if ($numelements < 4) {
-	$class .= ' fewelements';
 }
 
 ?>
@@ -52,14 +45,6 @@ $specialstyles = array (
 );
 
 $specialclass = '';
-// if (in_array($params->get('style'), $specialstyles)) {
-// 	$col = 3;
-// 	$colsmall = 6;
-// 	if ($numelements < 4) {
-// 		$col = 12 / $numelements;
-// 	}
-// 	$specialclass = "list-group-item col-lg-$col col-md-$col col-sm-$col col-xs-$colsmall ";
-// }
 
 array_push($specialstyles, 'Ioc-sub_studies');
 array_push($specialstyles, 'Ioc-sub_menu');
@@ -68,12 +53,6 @@ $specialstyle = in_array($params->get('style'), $specialstyles);
 
 foreach ($list as $i => &$item)
 {
-	// if ($topmenu) {
-	// 	if (($featured && ($item->alias == 'ioc-estudis' || $item->alias == 'ioc-studies'))
-	// 		|| (!$featured && ($item->alias == 'ioc-noticies' || $item->alias == 'ioc-news'))) {
-	// 		continue;
-	// 	}
-	// }
 	$item->tabindex = 0;
 	if ($topmenu) {
 		$item->tabindex = $i + 3;
@@ -136,6 +115,7 @@ foreach ($list as $i => &$item)
 		$style = '';
 		$stylemobile = '';
 		$hexagon = '';
+		$ariaattribute = $anchorcss == 'noclickable' ? 'aria-disabled="true" ' : ' ';
 		if ($item->menu_image) {
 			$path_parts = pathinfo($item->menu_image);
 			if ($params->get('style') == 'Ioc-studies') {
@@ -144,7 +124,7 @@ foreach ($list as $i => &$item)
 			$stylemobile = 'style="background-image: url(\''. join(DIRECTORY_SEPARATOR, array($path_parts['dirname'], $path_parts['filename'] . '-mobile.' . $path_parts['extension'])) . '\')"';
 			$style = 'style="background-image: url(\''. $item->menu_image .'\')"';
 		}
-		echo '<a href="'. $item->flink .'" class="'. $anchorcss .'"><div class="element-img-container"><div class="visible-xs element-img" '. $stylemobile . '></div><div class="hidden-xs element-img ' . $item->menu_image_css .'" '. $style . '>' . $hexagon . '</div></div>';
+		echo '<a href="'. $item->flink .'" class="'. $anchorcss .'" '. $ariaattribute .'><div class="element-img-container"><div class="visible-xs element-img" '. $stylemobile . '></div><div class="hidden-xs element-img ' . $item->menu_image_css .'" '. $style . '>' . $hexagon . '</div></div>';
 	}
 
 	// Render the menu item.

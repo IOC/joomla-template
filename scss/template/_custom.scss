@@ -100,6 +100,9 @@
 @mixin no-hover-module() {
     cursor: default;
     filter: none;
+    .element-img {
+        @include transform(scale(1));
+    }
 }
 
 @mixin filter-background-icon ($cicle) {
@@ -580,6 +583,10 @@ a {
     &:focus {
         outline: thin solid $ioc-outline !important;
     }
+    &.noclickable {
+        cursor: not-allowed !important;
+        pointer-events: none;
+    }
 }
 
 button {
@@ -886,7 +893,7 @@ header.headroom--not-top {
                 white-space: nowrap;
                 text-overflow: ellipsis;
                 overflow: hidden;
-                max-width: 162px;
+                max-width: 163px;
             }
             @include transition(all, .4s, ease-out);
             &:hover {
@@ -1770,11 +1777,6 @@ header.headroom--not-top {
             content: '';
             flex: auto;
         }
-        &.fewelements {
-            &:after {
-                display: none;
-            }
-        }
 
         .modal-module {
             width: 200px;
@@ -2231,6 +2233,54 @@ header.headroom--not-top {
         }
     }
 }
+.multilang {
+    .study-overview,
+    .study-overview-menu {
+        .study-overview-headline,
+        .study-overview-text {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 639px;
+        }
+        .study-overview-headline {
+            padding-bottom: 66px;
+            margin-bottom: 66px;
+            &:after {
+                width: 71px;
+            }
+        }
+    }
+    .subpage-text-banner {
+        margin-top: -177px;
+        margin-bottom: 0;
+        padding-top: 330px;
+        background-size: 100vw 100%;
+        .subpage-text {
+            margin-top: 153px;
+            margin-bottom: 172px;
+            p {
+                max-width: 716px;
+            }
+        }
+    }
+    .submenu,
+    .substudies {
+        .submenu-content,
+        .substudies-content {
+            .navbar-nav {
+                li {
+                    box-shadow: none;
+                     a {
+                        &:hover,
+                        &:focus {
+                            @include no-hover-module();
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 .submenu,
 .substudies {
@@ -2565,6 +2615,32 @@ header.headroom--not-top {
             .modified {
                 font-size: 13px;
                 color: $ioc-article-date;
+            }
+            .nonews {
+                position: relative;
+                background-color: $ioc-bg-header-mat;
+                margin: -42px auto 58px;
+                width: 12px;
+                height: 6.93px;
+                &:before,
+                &:after {
+                  content: "";
+                  position: absolute;
+                  width: 0;
+                  border-left: 6px solid transparent;
+                  border-right: 6px solid transparent;
+                }
+
+                &:before {
+                  bottom: 100%;
+                  border-bottom: 3.46px solid $ioc-bg-header-mat;
+                }
+
+                &:after {
+                  top: 100%;
+                  width: 0;
+                  border-top: 3.46px solid $ioc-bg-header-mat;
+                }
             }
         }
     }
@@ -3627,6 +3703,7 @@ header.headroom--not-top {
 .subpage-only-text,
 .subpage-text-buttons,
 .subpage-text-buttons-banner,
+.subpage-text-banner,
 .subpage-buttons-filter {
     background-repeat: no-repeat;
     background-position: center top;
@@ -3699,10 +3776,12 @@ header.headroom--not-top {
         }
     }
 }
-.subpage-text-buttons-banner {
+.subpage-text-buttons-banner,
+.subpage-text-banner {
     background-size: 100vw 83%;
 }
 .subpage-text-buttons-banner,
+.subpage-text-banner,
 .subpage-buttons-filter {
     background-image: url('../images/cicles-bck.svg');
     margin-top: 140px;
@@ -3890,6 +3969,14 @@ header.headroom--not-top {
         }
     }
 }
+
+.subpage-text-banner {
+    margin-top: 27px;
+    .subpage-text {
+        margin-top: 232px;
+    }
+}
+
 .subpage-buttons-filter {
     margin-bottom: 0;
     padding-bottom: 136px;
@@ -3985,6 +4072,7 @@ header.headroom--not-top {
 }
 
 .study-buttons,
+.study-multilang-buttons,
 .body-modal-modules,
 .subpage-buttons {
     @include flexbox($justify-content: center);
@@ -4111,6 +4199,21 @@ header.headroom--not-top {
         text-transform: uppercase;
         color: $ioc-text;
     }
+}
+
+.study-multilang-buttons {
+    justify-content: flex-end;
+    margin-top: 0;
+    max-width: 500px;
+    .subpage-button {
+        width: 190px;
+        height: 190px;
+        margin: 0 26px 26px 0;
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+    }
+
 }
 
 .body-modal-modules {
@@ -5376,8 +5479,8 @@ div[class*="item-page-fp-"] {
             ul {
                 display: inline-block;
             }
-            p:last-child,
-            div:last-child {
+            & > p:last-child,
+            & > div:last-child {
                 display: inline-block !important;
                 &:after {
                     content: '';
@@ -5797,6 +5900,13 @@ div[class*="item-page-"] {
     }
 }
 
+.multilang {
+    #main {
+        div.attachmentsContainer {
+            margin: 0;
+        }
+    }
+}
 #main {
     div.attachmentsContainer {
         margin: 50px auto 30px auto;

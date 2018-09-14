@@ -21,6 +21,8 @@ if (!defined('MAXFEATUREDLENGHT')) {
 // It will be a separate class if the user starts it with a space
 
 $imgpath = JURI::base() . 'templates/' . $template . '/images';
+$lang = JFactory::getLanguage();
+$multilang = $lang->getTag() != 'ca-ES';
 ?>
 
 <?php
@@ -39,21 +41,24 @@ $menuitems = array();
     return $a->ordering - $b->ordering;
   });
 ?>
+
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
   <!-- Indicators -->
-  <ol class="carousel-indicators hidden">
-  	<?php foreach ($this->important as $key => $article) : ?>
-        <li data-target="#myCarousel" data-slide-to="<?php echo $key;?>" <?php if (!$key) { ?>class="active" <?php } ?>><?php //echo $article->title;?></li>
-  	<?php endforeach; ?>
-  </ol>
-  <noscript>
-    <div class="carousel-indicators">
-      <?php foreach ($this->important as $key => $article) : ?>
-          <?php $link = JRoute::_(ContentHelperRoute::getArticleRoute($article->id, $article->catid, $article->language)); ?>
-          <a href="<?php echo $link;?>" title="<?php echo $article->title;?>"><?php echo $article->title;?></a>
-      <?php endforeach; ?>
-    </div>
-  </noscript>
+  <?php if (!empty($this->intro_items) && !$multilang) : ?>
+    <ol class="carousel-indicators hidden">
+    	<?php foreach ($this->important as $key => $article) : ?>
+          <li data-target="#myCarousel" data-slide-to="<?php echo $key;?>" <?php if (!$key) { ?>class="active" <?php } ?>><?php //echo $article->title;?></li>
+    	<?php endforeach; ?>
+    </ol>
+    <noscript>
+      <div class="carousel-indicators">
+        <?php foreach ($this->important as $key => $article) : ?>
+            <?php $link = JRoute::_(ContentHelperRoute::getArticleRoute($article->id, $article->catid, $article->language)); ?>
+            <a href="<?php echo $link;?>" title="<?php echo $article->title;?>"><?php echo $article->title;?></a>
+        <?php endforeach; ?>
+      </div>
+    </noscript>
+  <?php endif; ?>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
@@ -119,7 +124,7 @@ $menuitems = array();
                   $link = JRoute::_(ContentHelperRoute::getArticleRoute($article->id, $article->catid, $article->language));
                 ?>
                 <?php if ($welcome) : ?>
-                  <h2><?php echo $article->title;?></h2>
+                  <h2><?php echo str_replace('{TPL_IOC_MAIN_WELCOME_IOC}', JText::_('TPL_IOC_MAIN_WELCOME_IOC'), $article->title);?></h2>
                 <?php else : ?>
                   <h2><a href="<?php echo $link;?>"><?php echo $article->title;?></a></h2>
                     <?php
@@ -140,39 +145,43 @@ $menuitems = array();
             </div>
     <?php endforeach; ?>
   </div>
-  <div class="avisos hidden-sm hidden-xs">
-    <a class="prev" href="#myCarousel" role="button" data-slide="prev">
-      <span class="control-prev" aria-hidden="true"></span>
-    </a>
-    <a class="next" href="#myCarousel" role="button" data-slide="next">
-      <?php foreach ($menuitems as $k => $item) :?>
-        <?php
-          if ($k == 0) {
-            $item = array(JText::_('JLIB_HTML_START'), '');
-          }
-        ?>
-        <div><?php echo $item[0]; ?></div>
-      <?php endforeach; ?>
-      <span class="control-next" aria-hidden="true"></span>
-    </a>
-  </div>
+  <?php if (!empty($this->intro_items) && !$multilang) : ?>
+    <div class="avisos hidden-sm hidden-xs">
+      <a class="prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="control-prev" aria-hidden="true"></span>
+      </a>
+      <a class="next" href="#myCarousel" role="button" data-slide="next">
+        <?php foreach ($menuitems as $k => $item) :?>
+          <?php
+            if ($k == 0) {
+              $item = array(JText::_('JLIB_HTML_START'), '');
+            }
+          ?>
+          <div><?php echo $item[0]; ?></div>
+        <?php endforeach; ?>
+        <span class="control-next" aria-hidden="true"></span>
+      </a>
+    </div>
+  <?php endif; ?>
   <?php if(!empty($warningmessage)) : ?>
   <div class="warning-mobile visible-sm visible-xs">
     <h2><?php echo JText::_('TPL_IOC_WARNINGS');?></h2>
       <div class="warning-message"><?php echo $warningmessage; ?></div>
   </div>
   <?php endif; ?>
-  <div class="avisos-mobile visible-sm visible-xs">
-    <h2><?php echo JText::_('TPL_IOC_FEATURED');?></h2>
-      <?php foreach ($menuitems as $k => $item) :?>
-        <?php
-          if ($k == 0) {
-            continue;
-          }
-        ?>
-        <div><a href="<?php echo $item[1];?>"><?php echo $item[0]; ?></a></div>
-      <?php endforeach; ?>
-  </div>
+  <?php if (!empty($this->intro_items) && !$multilang) : ?>
+    <div class="avisos-mobile visible-sm visible-xs">
+      <h2><?php echo JText::_('TPL_IOC_FEATURED');?></h2>
+        <?php foreach ($menuitems as $k => $item) :?>
+          <?php
+            if ($k == 0) {
+              continue;
+            }
+          ?>
+          <div><a href="<?php echo $item[1];?>"><?php echo $item[0]; ?></a></div>
+        <?php endforeach; ?>
+    </div>
+  <?php endif; ?>
 
   <!-- Left and right controls -->
   <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -263,6 +272,8 @@ $menuitems = array();
 		  <?php endif; ?>
 
 	<?php endforeach; ?>
+  <?php else: ?>
+    <div class="nonews"></div>
 <?php endif; ?>
 
 <?php if ($this->params->def('show_pagination', 2) == 1  || ($this->params->get('show_pagination') == 2 && $this->pagination->pagesTotal > 1)) : ?>
