@@ -72,6 +72,10 @@ JHtml::_('behavior.caption');
 	?>
 
 	<?php if (!empty($this->intro_items)) : ?>
+		<?php
+			$app = JFactory::getApplication();
+			$app->redirect(JRoute::_('index.php'));
+		?>
 		<?php foreach ($this->intro_items as $key => &$item) : ?>
 			<?php $rowcount = ((int) $key % (int) $this->columns) + 1; ?>
 			<?php if ($rowcount == 1) : ?>
