@@ -4095,13 +4095,21 @@
                         }
                     }
                     .horari {
+                        position: relative;
+                        & > div {
+                            &:first-child {
+                                max-height: 110px;
+                                overflow: hidden;
+                            }
+                        }
                         div {
                             .icons {
                                 padding-left: 5px;
                             }
                         }
                         div + div {
-                            margin-top: 50px;
+                            position: absolute;
+                            bottom: 0;
                         }
                     }
                 }
@@ -5054,7 +5062,7 @@
                     .horari {
                         height: 173px;
                         div + div{
-                            margin-top: 0;
+                            position: relative;
                         }
                     }
                 }
