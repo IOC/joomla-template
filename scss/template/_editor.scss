@@ -731,4 +731,32 @@ $ioc-accent:    #01c1b9;
     .col-md-4 {
         width: 33.33333333%;
     }
+    .study-matricula {
+        .slide-hidden {
+          display: block !important;
+        }
+        .slide-container {
+            @include borderioc(1px, $custom_red);
+            .slide-content {
+                h3,
+                p,
+                ul {
+                    @include borderioc(1px, $custom_red);
+                }
+            }
+        }
+        .button-row,
+        .button-column {
+            @include borderioc(1px, $custom_red);
+            button {
+                @include borderioc(1px, $custom_red);
+                img {
+                    margin-top: 0;
+                }
+                span {
+                    @include borderioc(1px, $custom_red);
+                }
+            }
+        }
+    }
 }

@@ -822,3 +822,39 @@
 #tinymce .col-md-4 {
   width: 33.33333%;
 }
+#tinymce .study-matricula .slide-hidden {
+  display: block !important;
+}
+#tinymce .study-matricula .slide-container {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
+#tinymce .study-matricula .slide-container .slide-content h3, #tinymce .study-matricula .slide-container .slide-content p, #tinymce .study-matricula .slide-container .slide-content ul {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
+#tinymce .study-matricula .button-row, #tinymce .study-matricula .button-column {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
+#tinymce .study-matricula .button-row button, #tinymce .study-matricula .button-column button {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}
+#tinymce .study-matricula .button-row button img, #tinymce .study-matricula .button-column button img {
+  margin-top: 0;
+}
+#tinymce .study-matricula .button-row button span, #tinymce .study-matricula .button-column button span {
+  box-sizing: border-box;
+  border: 1px dashed #d9534f;
+  padding: 10px;
+  background-color: #fafafa;
+}

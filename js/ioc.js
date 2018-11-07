@@ -490,6 +490,16 @@
             }
         });
 
+        $(document).on('click', '.boto-inici, .boto-enrere, .button-squared, .button-rectangular', function(e) {
+            e.preventDefault();
+            var orig = $(this).closest('.slide-container');
+            var dest = $(this).data('target');
+            orig.removeClass('slide-active').addClass('slide-hidden');
+            $('#' + dest).removeClass('slide-hidden').addClass('slide-active');
+            var position = $('#matricula .slide-active').position();
+            $("html, body").animate({ scrollTop: position.top - 70}, 800);
+        });
+
         if(window.location.search.length > 0) {
             var matches = window.location.search.match(/errorcode\=(\d)/);
             var missatge = '';
