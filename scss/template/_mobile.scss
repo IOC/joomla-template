@@ -1059,6 +1059,7 @@
         }
         .panel-group {
             .contacte,
+            .contacte-gran,
             .social {
                 display: none;
             }
@@ -1746,6 +1747,7 @@
             text-align: center;
             padding: 0 10px;
             .contacte,
+            .contacte-gran,
             .social {
                 float: none;
             }
@@ -4171,7 +4173,8 @@
             .top {
                 .top-col {
                     width: 189px;
-                    .contacte {
+                    .contacte,
+                    .contacte-gran {
                         div {
                             .icons {
                                 padding-left: 5px;
@@ -4439,7 +4442,8 @@
         }
     }
     .footer {
-        .contacte {
+        .contacte,
+        .contacte-gran {
             border-top: none;
         }
     }
@@ -5141,7 +5145,10 @@
                 .top-col {
                     width: 267px;
                     .contacte {
-                        padding-top: 30px;
+                        padding-top: 10px;
+                    }
+                    .contacte-gran {
+                        padding: 10px 0;
                     }
                     .horari {
                         height: 173px;

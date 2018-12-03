@@ -312,7 +312,7 @@ if ($itemid && JRequest::getCmd('view') != 'search') {
     </div>
     <div class="visible-xs visible-sm container mobile">
         <div class="social">
-            <span class="text">Segueix-nos:</span>
+            <span class="text"><?php echo JText::_('TPL_IOC_FOLLOWUS'); ?></span>
             <a href="https://es.linkedin.com/in/ioc-institut-obert-de-catalunya-bb4805b1">
                 <span class="custom-icon linkedin"></span>
             </a>
@@ -320,10 +320,18 @@ if ($itemid && JRequest::getCmd('view') != 'search') {
             <a href="https://vimeo.com/institutobert"><span class="custom-icon vimeo"></span></a>
         </div>
         <div class="contacte">
-            <span class="text">Contacta'ns:</span>
-            <a href="contacte#contacte">
-                <span class="custom-icon correu"></span>
-            </a>
+            <span class="text"><?php echo JText::_('TPL_IOC_CONTACTUS'); ?>
+                <a href="component/contactioc">
+                    <span class="custom-icon correu"></span>
+                </a>
+            </span>
+        </div>
+        <div class="contacte-gran">
+            <span class="text"><?php echo JText::_('TPL_IOC_CONTACT_ADVICE'); ?>
+                <a href="https://appe.isotools.org/wip/wip2015/registro.cfm?token=MEUwMENBRkJDRTU1QjM4OUZFMDlFNUNERjNBOTBGMkExNkMxRkRDREE5QTcxRkU4QjlCNzkyQkY1NjM4NkY1QzEzNUJCQjdENTI4Nw==" target="_blank">
+                    <span class="custom-icon correu"></span>
+                </a>
+            </span>
         </div>
     </div>
     <div class="bottom container">

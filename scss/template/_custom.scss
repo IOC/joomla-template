@@ -6011,10 +6011,12 @@ div[class*="item-page-fp-"] {
             }
         }
     }
-    .contacte {
+    .contacte,
+    .contacte-gran {
         border-top: 1px solid $ioc-footer-bottom;
         padding-top: 47px;
         .custom-icon {
+            font-weight: normal;
             &.correu {
                 &:hover {
                     color: $ioc-link-navbar;
@@ -6036,6 +6038,7 @@ div[class*="item-page-fp-"] {
         }
     }
     .contacte,
+    .contacte-gran,
     .horari {
         color: $ioc-footer-text;
         div {
@@ -6044,7 +6047,7 @@ div[class*="item-page-fp-"] {
             }
             .text {
                 font-weight: 600;
-                line-height: 30px;
+                line-height: 1.54;
                 height: 30px;
             }
             .icons {
@@ -6062,6 +6065,13 @@ div[class*="item-page-fp-"] {
                 height: 24px;
                 width: 26px;
                 text-align: center;
+            }
+        }
+    }
+    .contacte-gran {
+        div {
+            .text {
+                line-height: 1;
             }
         }
     }
@@ -6165,7 +6175,11 @@ div[class*="item-page-fp-"] {
         .contacte {
             float: right;
         }
+        .contacte-gran{
+            width: 100%;
+        }
         .contacte,
+        .contacte-gran,
         .social {
             margin-top: 26px;
             padding: 0 13px;
@@ -6183,6 +6197,7 @@ div[class*="item-page-fp-"] {
             font-size: 11px;
             font-weight: 600;
             text-transform: uppercase;
+            line-height: 1;
             letter-spacing: 0.8px;
             color: $ioc-footer-title;
         }
@@ -6241,6 +6256,7 @@ div[class*="item-page-fp-"] {
                 .panel-collapse {
                     background-color: $ioc-bg-collapse;
                     .contacte,
+                    .contacte-gran,
                     .horari,
                     .location {
                         padding: 15px;
