@@ -649,10 +649,6 @@ p {
     margin-bottom: 21px;
 }
 
-// button:focus {
-//     outline: 0 !important;
-// }
-
 .ioc-accent {
     color: $ioc-text;
     font-weight: 600;
@@ -1058,7 +1054,6 @@ header.headroom--not-top {
         &:focus,
         &:active {
             background-color: transparent;
-            //outline: none;
             .icon-bar {
                 background-color: $ioc-white;
             }
@@ -1546,6 +1541,7 @@ header.headroom--not-top {
 @include custom-color-study('btx-ioc',  $ioc-btxioc-colors);
 @include custom-color-study('btx-mat',  $ioc-btxmat-colors);
 @include custom-color-study('cas',      $ioc-acfgs-colors);
+@include custom-color-study('cre',      $ioc-cre-colors);
 @include custom-color-study('competic', $ioc-competic-colors);
 @include custom-color-study('eoi',      $ioc-eoi-colors, true);
 @include custom-color-study('fesp',     $ioc-fesp-colors);
@@ -3251,6 +3247,9 @@ header.headroom--not-top {
         &.btx-mat {
             background-image: url('../images/btx-mat-header-bck.jpg');
         }
+        &.cre {
+            background-image: url('../images/cre-header-bck.jpg');
+        }
         &.competic {
             background-image: url('../images/competic-header-bck.jpg');
         }
@@ -3448,6 +3447,11 @@ header.headroom--not-top {
                                             @include transform(scale(1.5) translate(10%, -8%));
                                         }
                                     }
+                                    &.cre {
+                                        img {
+                                            @include transform(scale(1.5) translate(0, -39%));
+                                        }
+                                    }
                                     &.competic {
                                         img {
                                             @include transform(translate(-50%, 0));
@@ -3508,6 +3512,11 @@ header.headroom--not-top {
                                         @include transform(scale(.7) translate(-62%, 10%));
                                     }
                                 }
+                                &.cre {
+                                    img {
+                                        @include transform(scale(.7) translate(-59%, -21%));
+                                    }
+                                }
                                 &.competic {
                                     img {
                                         @include transform(scale(.7) translate(-22%, -22%));
@@ -3523,7 +3532,6 @@ header.headroom--not-top {
                                        @include  transform(scale(.7) translate(-23%, -22%));
                                     }
                                 }
-
                                 &.fp {
                                     img {
                                         @include transform(scale(.7) translate(8%, 13%));
@@ -3875,9 +3883,6 @@ header.headroom--not-top {
                 font-size: 11px;
                 font-weight: 500;
                 box-shadow: none;
-                // &:focus {
-                //     outline: none;
-                // }
             }
             .filter-text {
                 display: inline-block;
@@ -4336,6 +4341,14 @@ header.headroom--not-top {
         }
         .subpage-banner {
             background-image: url('../images/cas-banner.png');
+        }
+    }
+    &.cre {
+        .study-parallax {
+            background-image: url('../images/cre-parallax-img.jpg');
+        }
+        .subpage-banner {
+            background-image: url('../images/cre-banner.png');
         }
     }
     &.competic {
@@ -5455,7 +5468,6 @@ div[class*="item-page-fp-"] {
                             letter-spacing: 1px;
                             color: $ioc-text2;
                             text-decoration: none;
-                            //outline: none;
                             padding: 14px 43px 14px 30px;
                             display: inline-block;
                             width: 100%;
@@ -5622,7 +5634,6 @@ div[class*="item-page-fp-"] {
                 height: 40px;
                 &:focus {
                     border: 1px solid $ioc-bg-header;
-                    //outline: 0 none;
                 }
                 max-width:         calc(100% - 40px);
                 max-width: -webkit-calc(100% - 40px);
@@ -5904,7 +5915,6 @@ div[class*="item-page-fp-"] {
 
 .back-to-top {
     display: block;
-    //outline: none;
     height: 26px;
     right: -100%;
     bottom: 13px;

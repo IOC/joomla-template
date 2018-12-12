@@ -2451,6 +2451,118 @@ div[class*="item-page-cas"] .container:before {
 div[class*="item-page-cas"] .ioc-breadcrumb {
   background-color: #2f3b5c;
 }
+header.headroom--top.cre ~ section .form-search .container .form-inline .btn-search {
+  background-color: #0e5e62;
+}
+header.headroom--top.cre ~ section .form-search .container .form-inline .btn-search:before {
+  color: #eafdff;
+}
+header.headroom--top.cre ~ section .form-search .container .search-query {
+  border-color: #0e5e62;
+}
+header.headroom--top.cre .navbar-default .login-clone-campus:hover, header.headroom--top.cre .navbar-default .tiny-campus:hover, header.headroom--top.cre .navbar-default .tiny-search:hover, header.headroom--top.cre .navbar-default .navbar-toggle:hover {
+  color: #04565a;
+}
+header.headroom--top.cre .navbar-default .login-clone-campus:hover .custom-icon, header.headroom--top.cre .navbar-default .tiny-campus:hover .custom-icon, header.headroom--top.cre .navbar-default .tiny-search:hover .custom-icon, header.headroom--top.cre .navbar-default .navbar-toggle:hover .custom-icon {
+  color: #04565a;
+}
+header.headroom--top.cre .navbar-default .login-clone-campus:hover .icon-bar, header.headroom--top.cre .navbar-default .tiny-campus:hover .icon-bar, header.headroom--top.cre .navbar-default .tiny-search:hover .icon-bar, header.headroom--top.cre .navbar-default .navbar-toggle:hover .icon-bar {
+  background-color: #04565a;
+}
+header.headroom--top.cre .navbar-default .navbar-collapse .navbar-nav button[aria-expanded="true"] {
+  color: #04565a;
+}
+header.headroom--top.cre .navbar-default .navbar-collapse .navbar-nav button:hover .custom-icon, header.headroom--top.cre .navbar-default .navbar-collapse .navbar-nav button:hover span {
+  color: #04565a;
+}
+header.headroom--top.cre .navbar-default .navbar-collapse .navbar-nav li a:hover {
+  color: #04565a;
+}
+header.headroom--top.cre .navbar-default .login-clone-campus {
+  background-color: rgba(14, 94, 98, 0.48);
+  border-color: #0e5e62;
+}
+header.headroom--top.cre .navbar-default .social .custom-icon:hover {
+  color: #04565a;
+}
+header.headroom--top.cre .navbar-default .megaphone a:hover #main_shape, header.headroom--top.cre .navbar-default .megaphone a:hover #line, header.headroom--top.cre .navbar-default .megaphone a:hover #handler, header.headroom--top.cre .navbar-default .megaphone a:hover #oval, header.headroom--top.cre .navbar-default .megaphone a:hover #wave_one, header.headroom--top.cre .navbar-default .megaphone a:hover #wave_two, header.headroom--top.cre .navbar-default .megaphone a:hover #wave_three {
+  fill: #04565a;
+}
+.fluid-container.page-header.cre {
+  background-color: #42adb5;
+}
+.fluid-container.page-header.cre .container h1 {
+  color: #eafdff;
+}
+.item-page-study.cre .ioc-parent-breadcrumb .container:before {
+  background-color: inherit;
+}
+.item-page-study.cre .ioc-parent-breadcrumb .container .ioc-breadcrumb {
+  background-color: inherit;
+}
+.item-page-study.cre .study-overview .study-overview-headline::after, .item-page-study.cre .study-overview-menu .study-overview-headline::after {
+  border-color: #1a898e;
+}
+.item-page-study.cre .study-panel .study-data .study-col h4 {
+  background-color: #e7ebec;
+}
+.item-page-study.cre .study-panel .study-data .study-col:after {
+  background-color: #e7ebec;
+}
+.item-page-study.cre .study-panel .study-data .study-col .study-dates {
+  border-color: #e7ebec;
+}
+.item-page-study.cre .study-panel .study-data .study-col .study-dates .study-block .semiheader {
+  color: #5fa9ae;
+}
+.item-page-study.cre .study-tabs .nav-tabs li.active a {
+  color: #116b6f;
+  border-bottom-color: #1a898e;
+}
+.item-page-study.cre .study-tabs .nav-tabs li a:hover {
+  color: #116b6f;
+}
+.item-page-study.cre .study-tabs .tab-content .button-tab-nav:hover, .item-page-study.cre .study-tabs .panel-body .button-tab-nav:hover {
+  color: #116b6f;
+}
+.item-page-study.cre .button-registration {
+  background-color: #1a898e;
+}
+.item-page-study.cre .button-registration:hover {
+  color: #04565a;
+}
+.item-page-study.cre .modal-modules .content-modal-modules .modal-module, .item-page-study.cre .modal-modules .body-modal-modules .modal-module {
+  border-color: inherit;
+}
+.item-page-study.cre .modal-modules .content-modal-modules .modal-module .text-modal-module, .item-page-study.cre .modal-modules .body-modal-modules .modal-module .text-modal-module, .item-page-study.cre .modal-modules .content-modal-modules .modal-module .bottom-modal-title, .item-page-study.cre .modal-modules .body-modal-modules .modal-module .bottom-modal-title, .item-page-study.cre .modal-modules .content-modal-modules .modal-module .modal-color, .item-page-study.cre .modal-modules .body-modal-modules .modal-module .modal-color, .item-page-study.cre .modal-modules .content-modal-modules .modal-module .bck-modal-module ~ p, .item-page-study.cre .modal-modules .body-modal-modules .modal-module .bck-modal-module ~ p {
+  color: inherit;
+}
+.item-page-study.cre .modal-modules .content-modal-modules .modal-module:before {
+  background-color: inherit;
+}
+.item-page-study.cre .subpage-bigbanner .title {
+  background-color: inherit;
+  background-image: inherit;
+}
+.item-page-study.cre .subpage-bigbanner .title:before {
+  background-color: inherit;
+}
+.item-page-study.cre .subpage-bigbanner .study-overview .study-overview-headline .ioc-accent {
+  color: inherit;
+}
+.item-page-study.cre .subpage-bigbanner .study-overview .subpage-button {
+  color: inherit;
+  border-color: inherit;
+}
+.item-page-study.cre .study-more-info .title h4 {
+  color: #1a898e;
+}
+div[class*="item-page-cre"] .container:before {
+  background-color: #2f3b5c;
+}
+div[class*="item-page-cre"] .ioc-breadcrumb {
+  background-color: #2f3b5c;
+}
 header.headroom--top.competic ~ section .form-search .container .form-inline .btn-search {
   background-color: #112fb9;
 }
@@ -5523,6 +5635,9 @@ div[class*="item-page-news"] .ioc-breadcrumb {
 .fluid-container.page-header.btx-mat {
   background-image: url('../images/btx-mat-header-bck.jpg');
 }
+.fluid-container.page-header.cre {
+  background-image: url('../images/cre-header-bck.jpg');
+}
 .fluid-container.page-header.competic {
   background-image: url('../images/competic-header-bck.jpg');
 }
@@ -5721,6 +5836,13 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   -o-transform: scale(1.5) translate(10%, -8%);
   transform: scale(1.5) translate(10%, -8%);
 }
+.container.all-studies .studies .studies-content .navbar-nav li a:hover .element-img.cre img, .container.all-studies .studies .studies-content .navbar-nav li a:focus .element-img.cre img {
+  -webkit-transform: scale(1.5) translate(0, -39%);
+  -moz-transform: scale(1.5) translate(0, -39%);
+  -ms-transform: scale(1.5) translate(0, -39%);
+  -o-transform: scale(1.5) translate(0, -39%);
+  transform: scale(1.5) translate(0, -39%);
+}
 .container.all-studies .studies .studies-content .navbar-nav li a:hover .element-img.competic img, .container.all-studies .studies .studies-content .navbar-nav li a:focus .element-img.competic img {
   -webkit-transform: translate(-50%, 0);
   -moz-transform: translate(-50%, 0);
@@ -5799,6 +5921,13 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   -ms-transform: scale(0.7) translate(-62%, 10%);
   -o-transform: scale(0.7) translate(-62%, 10%);
   transform: scale(0.7) translate(-62%, 10%);
+}
+.container.all-studies .studies .studies-content .navbar-nav li a .element-img.cre img {
+  -webkit-transform: scale(0.7) translate(-59%, -21%);
+  -moz-transform: scale(0.7) translate(-59%, -21%);
+  -ms-transform: scale(0.7) translate(-59%, -21%);
+  -o-transform: scale(0.7) translate(-59%, -21%);
+  transform: scale(0.7) translate(-59%, -21%);
 }
 .container.all-studies .studies .studies-content .navbar-nav li a .element-img.competic img {
   -webkit-transform: scale(0.7) translate(-22%, -22%);
@@ -6653,6 +6782,12 @@ div[class*="item-page-news"] .ioc-breadcrumb {
 }
 .item-page-study.cas .subpage-banner {
   background-image: url('../images/cas-banner.png');
+}
+.item-page-study.cre .study-parallax {
+  background-image: url('../images/cre-parallax-img.jpg');
+}
+.item-page-study.cre .subpage-banner {
+  background-image: url('../images/cre-banner.png');
 }
 .item-page-study.competic .study-parallax {
   background-image: url('../images/competic-parallax-img.jpg');
@@ -9680,9 +9815,6 @@ div[class*="item-page-"] table p {
   #login-campus.login-form-campus .modal-dialog .modal-content form .login-help a {
     font-size: 11px;
   }
-  .container.all-studies .studies .studies-content .navbar-nav, .container.all-studies .substudies .studies-content .navbar-nav {
-    justify-content: center;
-  }
   .container.all-studies .studies {
     margin-top: 0;
   }
@@ -9787,6 +9919,15 @@ div[class*="item-page-"] table p {
   }
   #main-box .item-page-study.cas .subpage-banner {
     background-image: url('../images/cas-banner-mobile.png');
+  }
+  #main-box .fluid-container.page-header.cre {
+    background-image: url('../images/cre-header-bck-mobile.jpg');
+  }
+  #main-box .item-page-study.cre .study-parallax {
+    background-image: url('../images/cre-parallax-img-mobile.jpg');
+  }
+  #main-box .item-page-study.cre .subpage-banner {
+    background-image: url('../images/cre-banner-mobile.png');
   }
   #main-box .fluid-container.page-header.competic {
     background-image: url('../images/competic-header-bck-mobile.jpg');
@@ -11658,6 +11799,13 @@ div[class*="item-page-"] table p {
     -o-transform: scale(0.525) translate(-85%, -13%);
     transform: scale(0.525) translate(-85%, -13%);
   }
+  .container.all-studies .studies .studies-content .navbar-nav li a .element-img.cre img {
+    -webkit-transform: scale(0.525) translate(-82%, -45%);
+    -moz-transform: scale(0.525) translate(-82%, -45%);
+    -ms-transform: scale(0.525) translate(-82%, -45%);
+    -o-transform: scale(0.525) translate(-82%, -45%);
+    transform: scale(0.525) translate(-82%, -45%);
+  }
   .container.all-studies .studies .studies-content .navbar-nav li a .element-img.competic img {
     -webkit-transform: scale(0.525) translate(-45%, -45%);
     -moz-transform: scale(0.525) translate(-45%, -45%);
@@ -12577,6 +12725,13 @@ div[class*="item-page-"] table p {
     -o-transform: translate(-41%, 32%);
     transform: translate(-41%, 32%);
   }
+  .container.all-studies .studies .studies-content .navbar-nav li a .element-img.cre img {
+    -webkit-transform: translate(-39%, 0);
+    -moz-transform: translate(-39%, 0);
+    -ms-transform: translate(-39%, 0);
+    -o-transform: translate(-39%, 0);
+    transform: translate(-39%, 0);
+  }
   .container.all-studies .studies .studies-content .navbar-nav li a .element-img.competic img {
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
@@ -13085,6 +13240,9 @@ div[class*="item-page-"] table p {
   }
   .item-page-study.competic .study-parallax {
     background-image: url('../images/competic-parallax-img-tablet.jpg');
+  }
+  .item-page-study.cre .study-parallax {
+    background-image: url('../images/cre-parallax-img-tablet.jpg');
   }
   .item-page-study.eoi .study-parallax {
     background-image: url('../images/eoi-parallax-img-tablet.jpg');

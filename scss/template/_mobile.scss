@@ -267,7 +267,6 @@
                     margin-top: 0;
                     .logo {
                         padding-top: 11px;
-                        // width: 100px;
                     }
                 }
             }
@@ -498,7 +497,6 @@
                 line-height: 1.54;
                 margin: 26px 0 42px 0;
                 padding: 0 15px;
-                //margin: 50px auto 0 auto;
                 p:last-child,
                 div:last-child {
                     &:after {
@@ -1265,18 +1263,6 @@
     }
     .container {
         &.all-studies {
-            .studies,
-            .substudies {
-                .studies-content {
-                    .navbar-nav {
-                        justify-content: center;
-                    }
-                }
-            }
-        }
-    }
-    .container {
-        &.all-studies {
             .studies {
                 margin-top: 0;
                 .title {
@@ -1361,6 +1347,7 @@
         @include study-mobile-images(btx-ioc);
         @include study-mobile-images(btx-mat);
         @include study-mobile-images(cas);
+        @include study-mobile-images(cre);
         @include study-mobile-images(competic);
         @include study-mobile-images(default);
         @include study-mobile-images(eoi);
@@ -1503,9 +1490,6 @@
         .ioc-news {
             img {
                 width: 100%;
-            }
-            .ioc-news-content {
-                //margin: 50px auto 0 auto;
             }
         }
     }
@@ -3530,6 +3514,11 @@
                                             @include transform(scale(.525) translate(-85%, -13%));
                                         }
                                     }
+                                    &.cre {
+                                        img {
+                                            @include transform(scale(.525) translate(-82%, -45%));
+                                        }
+                                    }
                                     &.competic {
                                         img {
                                             @include transform(scale(.525) translate(-45%, -45%));
@@ -4338,7 +4327,6 @@
     .ioc-news-container {
         .ioc-news {
             .ioc-news-content {
-                //margin: 50px auto 0 auto;
                 max-width: 654px;
                 width: 100%;
             }
@@ -4648,6 +4636,11 @@
                                     &.btx {
                                         img {
                                             @include transform(translate(-41%, 32%));
+                                        }
+                                    }
+                                    &.cre {
+                                        img {
+                                            @include transform(translate(-39%, 0));
                                         }
                                     }
                                     &.competic {
@@ -5243,6 +5236,7 @@
         @include study-parallax-tablet('btx-ioc');
         @include study-parallax-tablet('btx-mat');
         @include study-parallax-tablet('competic');
+        @include study-parallax-tablet('cre');
         @include study-parallax-tablet('eoi');
         @include study-parallax-tablet('fp');
         @include study-parallax-tablet('fpd');
