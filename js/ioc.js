@@ -490,7 +490,7 @@
             }
         });
 
-        $(document).on('click', '.boto-inici, .boto-enrere, .button-squared, .button-rectangular', function(e) {
+        $(document).on('click', '.study-matricula .slide-container [data-target]', function(e) {
             e.preventDefault();
             var orig = $(this).closest('.slide-container');
             var dest = $(this).data('target');

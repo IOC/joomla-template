@@ -7667,7 +7667,7 @@ div[class*="item-page-fp-"] .subpagebody {
   text-align: center;
   border-radius: 100px;
   background-color: #202b47;
-  background-image: url(../images/enrere.svg);
+  background-image: url('../images/enrere.svg');
   background-repeat: no-repeat;
   background-position: 14px 10px;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.17);
@@ -7705,7 +7705,7 @@ div[class*="item-page-fp-"] .subpagebody {
   text-align: center;
   border-radius: 100px;
   background-color: #202b47;
-  background-image: url(../images/replay-icon.svg);
+  background-image: url('../images/replay-icon.svg');
   background-repeat: no-repeat;
   background-position: 10px 9.5px;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.17);
@@ -7723,6 +7723,9 @@ div[class*="item-page-fp-"] .subpagebody {
   font-weight: 400;
   margin-top: 8px;
   text-align: center;
+}
+.study-matricula .anchor-jump {
+  cursor: pointer;
 }
 .study-matricula .ruta {
   background-color: #ecf3f7;
