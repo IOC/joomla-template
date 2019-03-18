@@ -2260,7 +2260,7 @@ header.headroom--not-top {
         }
     }
     .submenu,
-    .substudies {
+    :not(.all-studies) > .substudies {
         .submenu-content,
         .substudies-content {
             .navbar-nav {

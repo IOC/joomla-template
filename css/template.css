@@ -4586,32 +4586,32 @@ div[class*="item-page-news"] .ioc-breadcrumb {
 .multilang .subpage-text-banner .subpage-text p {
   max-width: 716px;
 }
-.multilang .submenu .submenu-content .navbar-nav li, .multilang .substudies .submenu-content .navbar-nav li, .multilang .submenu .substudies-content .navbar-nav li, .multilang .substudies .substudies-content .navbar-nav li {
+.multilang .submenu .submenu-content .navbar-nav li, .multilang :not(.all-studies) > .substudies .submenu-content .navbar-nav li, .multilang .submenu .substudies-content .navbar-nav li, .multilang :not(.all-studies) > .substudies .substudies-content .navbar-nav li {
   box-shadow: none;
 }
-.multilang .submenu .submenu-content .navbar-nav li a, .multilang .substudies .submenu-content .navbar-nav li a, .multilang .submenu .substudies-content .navbar-nav li a, .multilang .substudies .substudies-content .navbar-nav li a {
+.multilang .submenu .submenu-content .navbar-nav li a, .multilang :not(.all-studies) > .substudies .submenu-content .navbar-nav li a, .multilang .submenu .substudies-content .navbar-nav li a, .multilang :not(.all-studies) > .substudies .substudies-content .navbar-nav li a {
   cursor: not-allowed !important;
   pointer-events: none;
 }
-.multilang .submenu .submenu-content .navbar-nav li a:hover, .multilang .substudies .submenu-content .navbar-nav li a:hover, .multilang .submenu .substudies-content .navbar-nav li a:hover, .multilang .substudies .substudies-content .navbar-nav li a:hover, .multilang .submenu .submenu-content .navbar-nav li a:focus, .multilang .substudies .submenu-content .navbar-nav li a:focus, .multilang .submenu .substudies-content .navbar-nav li a:focus, .multilang .substudies .substudies-content .navbar-nav li a:focus {
+.multilang .submenu .submenu-content .navbar-nav li a:hover, .multilang :not(.all-studies) > .substudies .submenu-content .navbar-nav li a:hover, .multilang .submenu .substudies-content .navbar-nav li a:hover, .multilang :not(.all-studies) > .substudies .substudies-content .navbar-nav li a:hover, .multilang .submenu .submenu-content .navbar-nav li a:focus, .multilang :not(.all-studies) > .substudies .submenu-content .navbar-nav li a:focus, .multilang .submenu .substudies-content .navbar-nav li a:focus, .multilang :not(.all-studies) > .substudies .substudies-content .navbar-nav li a:focus {
   cursor: default;
   filter: none;
 }
-.multilang .submenu .submenu-content .navbar-nav li a:hover .element-img, .multilang .substudies .submenu-content .navbar-nav li a:hover .element-img, .multilang .submenu .substudies-content .navbar-nav li a:hover .element-img, .multilang .substudies .substudies-content .navbar-nav li a:hover .element-img, .multilang .submenu .submenu-content .navbar-nav li a:focus .element-img, .multilang .substudies .submenu-content .navbar-nav li a:focus .element-img, .multilang .submenu .substudies-content .navbar-nav li a:focus .element-img, .multilang .substudies .substudies-content .navbar-nav li a:focus .element-img {
+.multilang .submenu .submenu-content .navbar-nav li a:hover .element-img, .multilang :not(.all-studies) > .substudies .submenu-content .navbar-nav li a:hover .element-img, .multilang .submenu .substudies-content .navbar-nav li a:hover .element-img, .multilang :not(.all-studies) > .substudies .substudies-content .navbar-nav li a:hover .element-img, .multilang .submenu .submenu-content .navbar-nav li a:focus .element-img, .multilang :not(.all-studies) > .substudies .submenu-content .navbar-nav li a:focus .element-img, .multilang .submenu .substudies-content .navbar-nav li a:focus .element-img, .multilang :not(.all-studies) > .substudies .substudies-content .navbar-nav li a:focus .element-img {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   -o-transform: scale(1);
   transform: scale(1);
 }
-.multilang .submenu.clickable .submenu-content .navbar-nav li, .multilang .substudies.clickable .submenu-content .navbar-nav li, .multilang .submenu.clickable .substudies-content .navbar-nav li, .multilang .substudies.clickable .substudies-content .navbar-nav li {
+.multilang .submenu.clickable .submenu-content .navbar-nav li, .multilang :not(.all-studies) > .substudies.clickable .submenu-content .navbar-nav li, .multilang .submenu.clickable .substudies-content .navbar-nav li, .multilang :not(.all-studies) > .substudies.clickable .substudies-content .navbar-nav li {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
 }
-.multilang .submenu.clickable .submenu-content .navbar-nav a, .multilang .substudies.clickable .submenu-content .navbar-nav a, .multilang .submenu.clickable .substudies-content .navbar-nav a, .multilang .substudies.clickable .substudies-content .navbar-nav a {
+.multilang .submenu.clickable .submenu-content .navbar-nav a, .multilang :not(.all-studies) > .substudies.clickable .submenu-content .navbar-nav a, .multilang .submenu.clickable .substudies-content .navbar-nav a, .multilang :not(.all-studies) > .substudies.clickable .substudies-content .navbar-nav a {
   cursor: pointer !important;
   pointer-events: auto;
 }
-.multilang .submenu.clickable .submenu-content .navbar-nav a:hover, .multilang .substudies.clickable .submenu-content .navbar-nav a:hover, .multilang .submenu.clickable .substudies-content .navbar-nav a:hover, .multilang .substudies.clickable .substudies-content .navbar-nav a:hover, .multilang .submenu.clickable .submenu-content .navbar-nav a:focus, .multilang .substudies.clickable .submenu-content .navbar-nav a:focus, .multilang .submenu.clickable .substudies-content .navbar-nav a:focus, .multilang .substudies.clickable .substudies-content .navbar-nav a:focus {
+.multilang .submenu.clickable .submenu-content .navbar-nav a:hover, .multilang :not(.all-studies) > .substudies.clickable .submenu-content .navbar-nav a:hover, .multilang .submenu.clickable .substudies-content .navbar-nav a:hover, .multilang :not(.all-studies) > .substudies.clickable .substudies-content .navbar-nav a:hover, .multilang .submenu.clickable .submenu-content .navbar-nav a:focus, .multilang :not(.all-studies) > .substudies.clickable .submenu-content .navbar-nav a:focus, .multilang .submenu.clickable .substudies-content .navbar-nav a:focus, .multilang :not(.all-studies) > .substudies.clickable .substudies-content .navbar-nav a:focus {
   cursor: pointer;
   -webkit-transition: filter 0.1s ease;
   -moz-transition: filter 0.1s ease;
@@ -4619,7 +4619,7 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   -o-transition: filter 0.1s ease;
   transition: filter 0.1s ease;
 }
-.multilang .submenu.clickable .submenu-content .navbar-nav a:hover .element-img, .multilang .substudies.clickable .submenu-content .navbar-nav a:hover .element-img, .multilang .submenu.clickable .substudies-content .navbar-nav a:hover .element-img, .multilang .substudies.clickable .substudies-content .navbar-nav a:hover .element-img, .multilang .submenu.clickable .submenu-content .navbar-nav a:focus .element-img, .multilang .substudies.clickable .submenu-content .navbar-nav a:focus .element-img, .multilang .submenu.clickable .substudies-content .navbar-nav a:focus .element-img, .multilang .substudies.clickable .substudies-content .navbar-nav a:focus .element-img {
+.multilang .submenu.clickable .submenu-content .navbar-nav a:hover .element-img, .multilang :not(.all-studies) > .substudies.clickable .submenu-content .navbar-nav a:hover .element-img, .multilang .submenu.clickable .substudies-content .navbar-nav a:hover .element-img, .multilang :not(.all-studies) > .substudies.clickable .substudies-content .navbar-nav a:hover .element-img, .multilang .submenu.clickable .submenu-content .navbar-nav a:focus .element-img, .multilang :not(.all-studies) > .substudies.clickable .submenu-content .navbar-nav a:focus .element-img, .multilang .submenu.clickable .substudies-content .navbar-nav a:focus .element-img, .multilang :not(.all-studies) > .substudies.clickable .substudies-content .navbar-nav a:focus .element-img {
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);
   -ms-transform: scale(1.05);
