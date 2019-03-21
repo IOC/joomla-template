@@ -8766,6 +8766,9 @@ div[class*="item-page-"] table p {
 .multilang #main div.attachmentsContainer {
   margin: 0;
 }
+.multilang .item-page-iocpage .ioc-zigzag .ioc-section .ioc-section-text .link-button {
+  border-color: transparent;
+}
 #main div.attachmentsContainer {
   margin: 50px auto 30px auto;
 }

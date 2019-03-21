@@ -6336,6 +6336,17 @@ div[class*="item-page-"] {
             margin: 0;
         }
     }
+    .item-page-iocpage {
+        .ioc-zigzag {
+            .ioc-section {
+                .ioc-section-text {
+                    .link-button {
+                        border-color: transparent;
+                    }
+                }
+            }
+        }
+    }
 }
 #main {
     div.attachmentsContainer {
