@@ -1107,38 +1107,6 @@ header.headroom--not-top {
             @include transform(rotate(-135deg));
         }
     }
-    .ioc-languages {
-        float: right;
-        padding: 0;
-        margin-top: 20px;
-        max-width: 90px;
-        .mod-languages {
-            .lang-active {
-                font-weight: 600;
-            }
-
-            li + li {
-                border-left: 1px solid $ioc-separator;
-            }
-            li {
-                &:first-child {
-                    padding-right: 4px;
-                }
-                font-size: 11px;
-                letter-spacing: 2px;
-                font-weight: 500;
-                padding: 0 9px;
-                margin: 0;
-                a {
-                    &:hover {
-                        color: $ioc-link-navbar;
-                    }
-                    color: $ioc-white;
-                    text-transform: uppercase;
-                }
-            }
-        }
-    }
     .login-clone-campus {
         display: none;
         overflow: hidden;
@@ -5976,11 +5944,56 @@ div[class*="item-page-fp-"] {
             padding: 0;
         }
     }
+    .ioc-languages {
+        padding: 0;
+        margin-top: 75px;
+        .mod-languages {
+            text-align: center;
+            margin-bottom: 21px;
+            .pretext {
+                display: inline-block;
+                font-size: 13px;
+                font-weight: 600;
+                color: $ioc-footer-text;
+                margin: 0 8px 0 0;
+                p {
+                    margin-bottom: 0;
+                }
+            }
+            .lang-inline {
+                display: -webkit-inline-box;
+                display: -ms-inline-flexbox;
+                display:        inline-flex;
+                li {
+                    font-size: 11px;
+                    letter-spacing: .8px;
+                    font-weight: 600;
+                    padding: 0 2px;
+                    margin: 0;
+                    a {
+                        &:hover {
+                            background-color: $ioc-footer-bottom;
+                        }
+                        padding: 4px 8px;
+                        border: 1px solid $ioc-footer-bottom;
+                        border-radius: 3px;
+                        color: $ioc-white;
+                        text-transform: uppercase;
+                    }
+                    &.lang-active {
+                        a {
+                            background-color: $ioc-footer-bottom;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .bottom {
         text-align: center;
         vertical-align: bottom;
         padding: 0 15px 50px 15px;
-        margin-top: 75px;
+        margin-top: 0px;
         .ioc-banners {
             > div {
                 &:before {

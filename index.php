@@ -108,24 +108,19 @@ if ($itemid && JRequest::getCmd('view') != 'search') {
             <span class="vimeo custom-icon"></span>
         </a>
 </div>
-<?php  if ($this->countModules('lang-menu')) : ?>
-<div class="col-md-1 col-sm-1 hidden-sm hidden-xs ioc-languages">
-    <jdoc:include type="modules" name="lang-menu" style="none" />
+<div class="navbar-collapse collapse col-md-1 col-lg-1 col-sm-1 hidden-xs ioc-search">
+    <?php if (!$multilang): ?>
+        <ul class="nav navbar-nav search">
+            <li>
+                <span class="hidden-md hidden-sm hidden-xs">|</span>
+                <button id="search-button" type="button" class="btn-md" data-toggle="collapse" data-target="#search" tabindex="8">
+                    <span class="custom-icon" aria-hidden="true"></span>
+                    <span class="string-search hidden-md hidden-sm hidden-xs"><?php echo JText::_('JSEARCH_FILTER_SUBMIT');?></span>
+                </button>
+            </li>
+        </ul>
+    <?php endif; ?>
 </div>
-<?php endif; ?>
-    <div class="navbar-collapse collapse col-md-1 col-lg-1 col-sm-1 hidden-xs ioc-search">
-        <?php if (!$multilang): ?>
-            <ul class="nav navbar-nav search">
-                <li>
-                    <span class="hidden-md hidden-sm hidden-xs">|</span>
-                    <button id="search-button" type="button" class="btn-md" data-toggle="collapse" data-target="#search" tabindex="8">
-                        <span class="custom-icon" aria-hidden="true"></span>
-                        <span class="string-search hidden-md hidden-sm hidden-xs"><?php echo JText::_('JSEARCH_FILTER_SUBMIT');?></span>
-                    </button>
-                </li>
-            </ul>
-        <?php endif; ?>
-    </div>
 
 <div class="navbar-collapse collapse ioc-menu col-sm-6 col-md-8 col-lg-9" aria-expanded="false">
 <?php  if ($this->countModules('navigation')) : ?>
@@ -334,6 +329,11 @@ if ($itemid && JRequest::getCmd('view') != 'search') {
             </span>
         </div>
     </div>
+    <?php  if ($this->countModules('lang-menu')) : ?>
+        <div class="container ioc-languages">
+            <jdoc:include type="modules" name="lang-menu" style="none" />
+        </div>
+    <?php endif; ?>
     <div class="bottom container">
         <div class="ioc-banners">
             <div class="col-xs-3 col-sm-3 col-md-3 col-1">

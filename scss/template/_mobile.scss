@@ -311,7 +311,6 @@
         }
     }
     .bck-displayed {
-        &.ioc-languages,
         &.social {
             display: block !important;
             position: absolute;
@@ -320,9 +319,6 @@
             text-align: center;
             left: 0;
             z-index: 1;
-        }
-        &.ioc-languages {
-            top: 275px;
         }
         &.social {
             top: 285px;
@@ -1065,8 +1061,10 @@
         .horari {
             height: auto;
         }
-        .bottom {
+        .ioc-languages {
             margin-top: 32px;
+        }
+        .bottom {
             padding-bottom: 36px;
             width: 100vw;
             padding-left: 0;
@@ -1737,6 +1735,15 @@
             }
             .social {
                 padding: 0;
+            }
+        }
+        .ioc-languages {
+            .mod-languages {
+                .pretext {
+                    p {
+                        margin-bottom: 17px;
+                    }
+                }
             }
         }
         .footer2 {
@@ -4166,7 +4173,7 @@
                     .contacte-gran {
                         div {
                             .icons {
-                                padding-left: 5px;
+                                padding-left: 2px;
                             }
                         }
                     }
