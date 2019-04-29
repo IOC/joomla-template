@@ -5290,7 +5290,7 @@ div[class*="item-page-news"] .ioc-breadcrumb {
   font-size: 22px;
   color: #aab4bc;
   position: absolute;
-  right: 0;
+  right: -12px;
   top: 7.5px;
   width: 18px;
   height: 18px;
