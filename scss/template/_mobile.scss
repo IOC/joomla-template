@@ -1790,6 +1790,18 @@
                 font-size: 15px;
             }
         }
+        .iocagree-text {
+            .text-row {
+                span {
+                    width: 100%;
+                    text-align: center;
+                    border-right: none;
+                }
+                span + span {
+                    text-align: left;
+                }
+            }
+        }
     }
     .study-matricula {
         h2 {

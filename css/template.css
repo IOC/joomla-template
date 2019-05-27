@@ -8988,6 +8988,10 @@ div[class*="item-page-"] table p {
 .contact-ioc input[type="file"] {
   white-space: pre-line;
 }
+.contact-ioc input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+}
 .contact-ioc div {
   margin-bottom: 15px;
 }
@@ -9004,6 +9008,65 @@ div[class*="item-page-"] table p {
   color: #eb5066;
   margin-bottom: 0;
   margin-left: 5px;
+}
+.contact-ioc .iocagree-text {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1 0 auto;
+  justify-content: flex-start;
+  font-size: 0.9em;
+  margin: 40px 0 5px;
+  background-color: #f8fbfd;
+}
+.contact-ioc .iocagree-text h3 {
+  text-align: center;
+  margin-top: 20px;
+}
+.contact-ioc .iocagree-text .text-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 0 auto;
+  justify-content: flex-start;
+  border-top: 1px solid #fff;
+  margin-bottom: 0;
+}
+.contact-ioc .iocagree-text span {
+  width: 20%;
+  margin-left: 15px;
+  font-weight: 500;
+  padding: 15px 0;
+  border-right: 1px solid #fff;
+}
+.contact-ioc .iocagree-text span + span {
+  width: 70%;
+  margin-right: 15px;
+  font-weight: 400;
+  border-right: none;
+}
+.contact-ioc .iocagree {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 0 auto;
+  justify-content: flex-start;
+  align-items: center;
+}
+.contact-ioc .iocagree .required {
+  margin-left: 5px;
+}
+.contact-ioc .iocagree input {
+  margin-left: 8px;
 }
 .contact-ioc .contact-files legend {
   font-size: 20px;
@@ -10549,6 +10612,14 @@ div[class*="item-page-"] table p {
   }
   .contact-ioc .contact-files legend {
     font-size: 15px;
+  }
+  .contact-ioc .iocagree-text .text-row span {
+    width: 100%;
+    text-align: center;
+    border-right: none;
+  }
+  .contact-ioc .iocagree-text .text-row span + span {
+    text-align: left;
   }
   .study-matricula h2 {
     margin: 42px auto;
